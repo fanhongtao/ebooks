@@ -1,0 +1,26 @@
+% 定义本书中使用到的格式
+
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+
+\usepackage{enumitem}
+
+% 绘制带圈的数字
+\usepackage{tikz}
+\usepackage{etoolbox}
+\newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
+    {\node[shape = circle, draw, inner sep = 1pt]
+    (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
+    \node at (char.center) {\makebox[0pt][c]{#2}};}}
+\robustify{\circled}
+
+\newcommand{\lianxi}{\textbf{练\quad 习}}
+\newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
+
+\renewcommand{\thesection}{\chinese{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black}

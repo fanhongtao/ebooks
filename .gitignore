@@ -3,5 +3,7 @@
 *.fls
 *.gz
 *.log
+*.out
 *.pdf
+*.toc
 temp/
