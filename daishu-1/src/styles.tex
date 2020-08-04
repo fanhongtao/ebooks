@@ -1,10 +1,14 @@
 % 定义本书中使用到的格式
 
 \usepackage{amsmath}
-\usepackage{geometry}
-\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+\usepackage{amssymb}
+\usepackage{caption}
+\captionsetup[figure]{labelsep=none}
 
 \usepackage{enumitem}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+\usepackage{wrapfig}
 
 % 绘制带圈的数字
 \usepackage{tikz}
@@ -18,9 +22,30 @@
 \newcommand{\lianxi}{\textbf{练\quad 习}}
 \newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
 
+\setcounter{secnumdepth}{3}
 \renewcommand{\thesection}{\chinese{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
+
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=black}
+
+\newcommand{\kongji}{\varnothing}
+\newcounter{cntliti}[subsection]           % 例题的计数器
+\newcommand{\liti}{ % 例题的标题
+  \stepcounter{cntliti}
+  \textbf{例\thecntliti}
+}
+
+\newcommand{\jie}{\textbf{解: }}
+
+% 修改数学公式与上下文的距离
+\makeatletter
+\renewcommand\normalsize{%
+    \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
+    \belowdisplayskip \abovedisplayskip
+}
+\makeatother
