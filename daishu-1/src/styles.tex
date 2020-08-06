@@ -6,19 +6,21 @@
 \captionsetup[figure]{labelsep=none}
 
 \usepackage{enumitem}
+\usepackage{etoolbox}
 \usepackage{geometry}
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
 \usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
 % 绘制带圈的数字
-\usepackage{tikz}
-\usepackage{etoolbox}
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
     {\node[shape = circle, draw, inner sep = 1pt]
     (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
     \node at (char.center) {\makebox[0pt][c]{#2}};}}
 \robustify{\circled}
 
+\newcommand{\gongshishangyi}{\setlength\abovedisplayskip{-1.5em}} % 当 “解:” 后直接写公式时，为了“解”与公式水平对齐所需要的偏移。
 \newcommand{\lianxi}{\textbf{练\quad 习}}
 \newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
 
@@ -41,6 +43,31 @@
 }
 
 \newcommand{\jie}{\textbf{解: }}
+
+\newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
+\newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
+
+\newenvironment{xiaotis}{ % “小题” 环境
+  \newcommand{\xiaoti}[1] { % 小题的标题
+    \stepcounter{cntxiaoti}
+    \hangafter 1\setlength{\hangindent}{3.2em}{\labelxiaoti ##1}
+  }
+  \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }  % 1. 2. 3. ……
+}{%
+}
+
+\newenvironment{xiaoxiaotis}{ % “小小题” 环境
+  \newcommand{\xiaoxiaoti}[1] { % 小小题的标题
+    \stepcounter{cntxiaoxiaoti}
+    \hangafter 1\setlength{\hangindent}{5.4em}{\hspace{1em}\labelxiaoxiaoti##1}
+  }
+  \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）} % （1） （2） （3） ……
+}{%
+}
+
+\newcommand{\twoInLine}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} #2 & #3\end{tabular}}
+\newcommand{\threeInLine}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} #2 & #3 & #4\end{tabular}}
+\newcommand{\fourInLine} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} #2 & #3 & #4 & #5\end{tabular}}
 
 % 修改数学公式与上下文的距离
 \makeatletter
