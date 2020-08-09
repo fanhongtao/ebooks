@@ -12,6 +12,8 @@
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{patterns.meta}
 
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
@@ -35,7 +37,6 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=black}
 
-\newcommand{\kongji}{\varnothing}
 \newcounter{cntliti}[subsection]           % 例题的计数器
 \newcommand{\liti}{ % 例题的标题
   \stepcounter{cntliti}
@@ -76,3 +77,40 @@
     \belowdisplayskip \abovedisplayskip
 }
 \makeatother
+
+
+%----------------------------------
+% （重）定义一些数学符号
+%  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
+\newcommand{\kongji}{\varnothing}      % 空集
+\newcommand{\buji}{\overline}          % 补集
+
+%----------------------------------
+% 图形相关的项
+% 需要 TexLive 2020 版本
+
+% 自定义填充格式，用于实现绘制阴影
+\tikzdeclarepattern{
+    name=lines,
+    parameters={
+        \pgfkeysvalueof{/pgf/pattern keys/size},
+        \pgfkeysvalueof{/pgf/pattern keys/angle},
+        \pgfkeysvalueof{/pgf/pattern keys/line width},
+    },
+    bounding box={(-.1pt,-.1pt) and
+        (\pgfkeysvalueof{/pgf/pattern keys/size}+.1pt,
+        \pgfkeysvalueof{/pgf/pattern keys/size}+.1pt)},
+    tile size={(\pgfkeysvalueof{/pgf/pattern keys/size},
+                \pgfkeysvalueof{/pgf/pattern keys/size})},
+    tile transformation={rotate=\pgfkeysvalueof{/pgf/pattern keys/angle}},
+    defaults={
+        size/.initial=7pt,
+        angle/.initial=0,
+        line width/.initial=.4pt,
+    },
+    code={
+        \draw[line width=\pgfkeysvalueof{/pgf/pattern keys/line width}]
+            (0,0) -- (\pgfkeysvalueof{/pgf/pattern keys/size},
+                      \pgfkeysvalueof{/pgf/pattern keys/size});
+    }
+}
