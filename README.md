@@ -20,7 +20,7 @@
 
 | 序号 | 书名 | 进度 |
 |:--:|:--|:--|
-| 1 | 代数 第一册 | 录入中 |
+| 1 | 代数 第一册 | 录入中 (2020-08-03 ~ ) |
 | 2 | 物理 第一册 | NA |
 | 3 | 化学 第一册 | NA |
 | 4 | 平面解析几何 全一册 | NA |
@@ -31,3 +31,7 @@
 | 9 | 代数 第三册 | NA |
 | 10 | 物理 第三册 | NA |
 | 11 | 化学 第三册 | NA |
+
+# 其它
+
+本项目依赖于 [TexLive](http://tug.org/texlive/) 2020，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
