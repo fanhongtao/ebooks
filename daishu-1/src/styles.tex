@@ -45,6 +45,16 @@
 
 \newcommand{\jie}{\textbf{解: }}
 
+\newcounter{cntxiti}                       % “习题”的计数器
+\newcommand{\xiti}{%
+  \stepcounter{cntxiti}
+  \setcounter{cntxiaoti}{0}
+  \vspace{1em}
+  \begin{center}
+    \textbf{习题 \chinese{cntxiti}}
+  \end{center}
+}
+
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
 
