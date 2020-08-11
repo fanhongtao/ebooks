@@ -11,9 +11,12 @@
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
 \usepackage{wrapfig}
 \usepackage{tikz}
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{patterns.meta}
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  patterns,
+  patterns.meta,
+}
 
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
@@ -26,9 +29,11 @@
 \newcommand{\lianxi}{\textbf{练\quad 习}}
 \newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
 
+\counterwithout*{subsection}{section}
+\counterwithin*{subsection}{chapter}
 \setcounter{secnumdepth}{3}
 \renewcommand{\thesection}{\chinese{section}}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}

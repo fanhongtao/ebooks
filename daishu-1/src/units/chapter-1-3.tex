@@ -1,0 +1,141 @@
+\subsection{映射}
+
+在初中我们已学习过对应的例子。例如，对于任何一个实数 $a$，数轴上都有唯一的一点 $A$ 和它对应；
+坐标平面内的任何一个点 $P$，都有唯一的有序实数对 $(x,y)$ 和它对应。现在我们学习一种特殊的对应——映射。
+
+先看两个集合 $A$，$B$ 的元素之间的一些对应的例子（图\ref{fig:1-5}）。为简单起见，这里的 $A$，$B$ 都是有限集。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=1cm, y radius=3cm];
+        \node at (-0.7,0) {$A$};
+        \node at (0,2) {9};
+        \node at (0,0) {4};
+        \node at (0,-2) {1};
+    
+        \draw (3,0) circle [x radius=1cm, y radius=3cm];
+        \node at (3.7,0) {$B$};
+        \node at (3,2.5) {3};
+        \node at (3,1.5) {-3};
+        \node at (3,0.5) {2};
+        \node at (3,-0.5) {-2};
+        \node at (3,-1.5) {1};
+        \node at (3,-2.5) {-1};
+    
+        \draw [->] (0.2,2) .. controls(1,2.6) and (1.5, 3) .. (2.8,2.5);
+        \draw [->] (0.2,2) .. controls(1,2.1) and (2, 2.4) .. (2.6,1.5);
+        \draw [->] (0.2,0) .. controls(1,0.6) and (1.5, 1) .. (2.6,0.5);
+        \draw [->] (0.2,0) .. controls(1,0.1) and (2, 0.4) .. (2.6,-0.5);
+        \draw [->] (0.2,-2) .. controls(1,-1.4) and (1.5, -1) .. (2.6,-1.5);
+        \draw [->] (0.2,-2) .. controls(1,-1.9) and (2, -1.6) .. (2.7,-2.5);
+    \end{tikzpicture}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=1cm, y radius=3cm];
+        \node at (-0.7,0) {$A$};
+        \node at (0,2) {$30^\circ$};
+        \node at (0,0.6) {$60^\circ$};
+        \node at (0,-0.6) {$120^\circ$};
+        \node at (0,-2) {$150^\circ$};
+
+        \draw (3,0) circle [x radius=1cm, y radius=3cm];
+        \node at (3.7,0) {$B$};
+        \node [scale=1.5] at (3,2) {$\frac{\sqrt{3}}{2}$};
+        \node [scale=1.5] at (3,0.6) {$\frac{1}{2}$};
+        \node [scale=1.5] at (3,-0.6) {$-\frac{1}{2}$};
+        \node [scale=1.5] at (3,-2) {$-\frac{\sqrt{3}}{2}$};
+
+        \draw [->] (0.4,2) .. controls(1,2.3) and (1.5,2.5) .. (2.5,2);
+        \draw [->] (0.4,0.6) .. controls(1,0.9) and (1.5,1.1) .. (2.5,0.6);
+        \draw [->] (0.4,-0.6) .. controls(1,-0.3) and (1.5,-0.1) .. (2.5,-0.6);
+        \draw [->] (0.4,-2) .. controls(1,-1.7) and (1.5,-1.5) .. (2.5,-1.8);
+    \end{tikzpicture}
+    \caption*{（2）}
+    \end{minipage}
+
+    \begin{minipage}{8cm}
+        \centering
+        \begin{tikzpicture}[>=Stealth]
+            \draw (0,0) circle [x radius=1cm, y radius=3cm];
+            \node at (-0.7,0) {$A$};
+            \node at (0,2.5) {1};
+            \node at (0,1.5) {-1};
+            \node at (0,0.5) {2};
+            \node at (0,-0.5) {-2};
+            \node at (0,-1.5) {3};
+            \node at (0,-2.5) {-3};
+    
+            \draw (3,0) circle [x radius=1cm, y radius=3cm];
+            \node at (3.7,0) {$B$};
+            \node at (3,2) {1};
+            \node at (3,0) {4};
+            \node at (3,-2) {9};
+    
+            \draw [->] (0.2,2.5) .. controls(1,2.6) and (1.5,2.6) .. (2.8,2.1);
+            \draw [->] (0.2,1.5) .. controls(1,1.9) and (1.5,1.9) .. (2.8,1.9);
+            \draw [->] (0.2,0.5) .. controls(1,0.6) and (1.5,0.6) .. (2.8,0.1);
+            \draw [->] (0.2,-0.5) .. controls(1,-0.1) and (1.5,-0.1) .. (2.8,-0.1);
+            \draw [->] (0.2,-1.5) .. controls(1,-1.4) and (1.5,-1.4) .. (2.8,-1.9);
+            \draw [->] (0.2,-2.5) .. controls(1,-2.1) and (1.5,-2.1) .. (2.8,-2.1);
+        \end{tikzpicture}
+        \caption*{（3）}
+    \end{minipage}
+    \caption{}\label{fig:1-5}
+\end{figure}
+
+在（1）中，对应法则是“开平方”，即对于集合 $A$ 中的每一个正数 $x$ （如 $x=9$），集合 $B$ 中有两个平方根 $\pm \sqrt{x}$（即 $3$ 与 $-3$）和它对应；
+在（2）中，对应法则是“求余弦”，即对于集合 $A$ 中的每一个角 $\alpha$ （如 $\alpha = 120^\circ $），集合 $B$ 中有一个余弦值 $\cos\alpha$（即$-\dfrac{1}{2}$）和它对应；
+在（3）中，对应法则是“平方”，即对于集合 $A$ 中的每两个非零整数 $\pm m$（如 $2$ 和 $-2$），集合 $B$ 中有一个平方数 $m^2$ （即 $4$）和它们对应。
+
+一般地，对于一个集合中的一个或几个元素，可以按照某种对应法则，使另一个集合（也可以是原集合）中有一个或几个元素和它对应。
+
+图\ref{fig:1-5}中（2）与（3）这两个对应都有这样的特点：对于第一个集合（即 $A$）中的任何一个元素，第二个集合（即 $B$）中都有唯一的元素和它对应。
+
+一般地，设 $A$，$B$ 是两个集合，如果按照某种对应法则 $f$，对于集合 $A$ 中的任何一个元素，在集合 $B$ 中都有唯一的元素和它对应，这样的对应（包括集合 $A$，$B$ 及从 $A$ 到 $B$ 的对应法则 $f$）叫做从集合 $A$ 到集合 $B$ 的\textbf{映射}，记作
+$$f: A \to B\text{。}$$
+
+这样，图\ref{fig:1-5}中（2）与（3）这两个对应，都是从集合 $A$ 到集合 $B$ 的映射。又如，设 $A=\{1,2,3,4\}$，$B=\{3,4,5,6,7,8,9\}$，
+集合 $A$ 的元素 $x$ 按对应法则“乘2加1”和集合 $B$ 的元素 $2x+1$ 对应，这个对应也是从集合 $A$ 到集合 $B$ 的映射。
+
+对于图\ref{fig:1-5}中（1）这个对应，由于集合 $B$ 中有两个元素 $3$ 与 $-3$ 和集合 $A$ 中的一个元素 $9$ 对应，所以它不是从集合 $A$ 到集合 $B$ 的映射。
+
+如果给定一个从集合 $A$ 到集合 $B$ 的映射，那么，和 $A$ 中的元素 $a$ 对应的 $B$ 中的元素 $b$ 叫做 $a$ 的\textbf{象}，$a$ 叫做 $b$ 的 \textbf{原象}。
+例如图\ref{fig:1-5}中（2）这个映射，$B$ 中的元素 $\dfrac{1}{2}$ 和 $A$ 中的元素 $60^\circ$ 对应，这里  $\dfrac{1}{2}$ 是 $60^\circ$ 的象， $60^\circ$ 是 $\dfrac{1}{2}$ 的原象。
+$A$ 的元素的象的集合是 $\left\{ \dfrac{1}{2}, -\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}, -\dfrac{\sqrt{3}}{2} \right\} ( \subseteq B)$ 。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{画图表示从集合 $A$ 到集合 $B$ 的对应（集合 $A$ 各取四个元素），已知：}
+
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$A=N$，$B=N$，对应法则是“加倍”（即“乘2”）；}
+
+    \xiaoxiaoti{$A=R$，$B=R^+$，对应法则是“取绝对值”；}
+
+    \xiaoxiaoti{$A=\{x \mid x \in R \text{，且} x \neq 0\}$，$B=R$，对应法则是“取倒数”；}
+
+    \xiaoxiaoti{$A=\{x \mid x \in R \text{，且} x<1\}$，$B=\{ \alpha \mid 0^\circ < \alpha < 180^\circ\}$，对应法则是“求正弦值为 $x$ 的三角形内角 $\alpha$”。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{（口答）图\ref{fig:1-5}（1）中，对于正数 $4$，有几个平方根和它对应？
+    （2）中，对于 $150^\circ$ 角，有几个余弦值和它对应？
+    （3）中，对于整数 $-1$，有几个平方数和它对应？
+}
+
+\xiaoti{（口答）在第1题的四个对应中，哪些对应是从集合 $A$ 到集合 $B$ 的映射？}
+
+\xiaoti{在图\ref{fig:1-5}（2）中，元素 $30^\circ$ 的象是什么？元素 $\dfrac 1 2$ 的原象是什么？}
+
+\end{xiaotis}
