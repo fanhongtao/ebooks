@@ -1,0 +1,192 @@
+\subsection{函数}
+
+我们在初中已经学过函数，知道：如果在某变化过程中有两个变量$x$，$y$，并且对于 $x$ 在某个范围内的每一个确定的值，
+按照某个对应法则，$y$ 都有唯一确定的值和它对应，那么 $y$ 就是 $x$ 的\textbf{函数}，$x$ 叫做\textbf{自变量}，
+$x$ 的取值范围叫做函数的\textbf{定义域}，和 $x$ 的值对应的 $y$ 的值叫做 \textbf{函數值}，函数值的集合叫做函数的\textbf{值域}。
+
+从映射的概念可以知道，映射 $f: A \to B$ 包括三个部分：原象集合$A$，象所在的集合 $B$ 以及从$A$到$B$的对应法则$f$。
+当集合$A$，$B$都是非空的数的集合，且$B$的每一个元素都有原象时，这样的映射 $f: A \to B$ 就是定义域$A$到值域$B$上的函数。
+所以\textbf{函数}是由\textbf{定义域}、\textbf{值域}以及定义域到值域上的\textbf{对应法则}三部分组成的一类特殊的映射。
+
+例如，对于一次函数 $y=3x+2$，函数的定义域是实数集$R$，值域也是$R$，对应法则是“乘3加2”，这个函数是一个$R$到$R$上的映射。
+
+又如，对于二次函数 $y=2x^2+2$，函数的定义域是$R$，值域是 $\{y \mid y \geqslant 2\}$，对应法则是“平方乘2加2”，这个函数是一个$R$到 $\{y \mid y \geqslant 2\}$ 上的映射。
+
+在本书中，将把这类定义域$A$到值域$B$上的特殊的映射 $f : A \to B$ 都叫做函数，并记作
+$$y = f(x) \text{。}$$
+$x$ 在定义域 $A$ 内取一个确定的值 $a$ 时，对应的函数值记作 $f(a)$。
+
+例如，二次函数 $f(x)=x^2+2x-1$ 在 $x=0$，$x=1$，$x=2$ 时的函数值分别为 $f(0)=-1$，$f(1)=2$，$f(2)=7$。
+
+在同时研究两个或多个函数时，要用不同的符号来表示它们，除 $f(x)$ 外还常用 $F(x)$，$G(x)$，$g(x)$ 等符号。
+
+在研究函数时常常用到区间的概念。
+
+设 $a$，$b$ 是两个实数，而且$a<b$，我们
+把满足 $a \leqslant x \leqslant b$ 的实数 $x$ 的集合叫做\textbf{闭区间}，表示为$[a,b]$；
+把满足 $a < x < b$ 的实数 $x$ 的集合叫做\textbf{开区间}，表示为 $(a, b)$；
+把满足 $a \leqslant x < b$，$a < x \leqslant b$ 的实数 $x$ 的集合，都叫做\textbf{半开半闭区间}，分别表示为$[a,b)$，$(a,b]$。
+这里的实数 $a$ 与 $b$ 都叫做相应区间的\textbf{端点}。
+
+实数集 $R$ 也可以用区间表示为 $(-\infty, +\infty)$，“$\infty$”读作“无穷大”，“$-\infty$”读作“负无穷大"，
+“$+\\infty$"读作“正无穷大"。我们还把满足 $x \geqslant a$，$x > a$，$x \leqslant b$，$x < b$ 的实数 $x$
+的集合分别表示为 $[a, +\infty)$，$(a, +\infty)$，$(-\infty, b]$，$(-\infty, b)$。
+
+我们知道，正比例函数和一次函数的图象都是一条直线，二次函数的图象是一条平滑的曲线（抛物线），
+反比例函数的图象是两支平滑的曲线（双曲线）。此外，函数的图象也可以是一些点或几条线段等。
+
+\liti 某种茶杯，每个 0.5 元，买 $x$ 个茶杯的钱数（元）
+$$f(x) = 0.5x,\, x\in \buji{Z^-} \text{。}$$
+画出这个函数的图象。
+
+\jie 这个函数的图象由一些点组成，如图\ref{fig:1-6}所示
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw [->] (-0.5,0) -- (4.8,0) node[anchor=north] {$x$(个)};
+        \draw [->] (0,-0.5) -- (0,3.5) node[anchor=east] {$y$(元)};
+        \fill(0,0) circle(3pt) node[anchor=north east] {$O$};
+        \foreach \x in {1,...,4} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+            \fill (\x,\x /2) circle (3pt);
+        }
+        \foreach \y in {1,...,3}
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-6}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw [->] (-0.5,0) -- (4.8,0) node[anchor=north] {$x$(克重)};
+        \draw [->] (0,-0.5) -- (0,3.5) node[anchor=east] {$y$(分)};
+        \node[anchor=north east] at (0,0) {$O$};
+        \foreach \y in {8,16,24}
+            \draw (0.2,\y/8) -- (0,\y/8) node[anchor=east] {$\y$};
+        \foreach \x in {2,4} {
+            \draw (\x*0.75,0.2) -- (\x*0.75,0) node[anchor=north] {$\x0$};
+            \filldraw [fill=white] (\x*0.75-1.5, \x/2) circle (0.1) + (0.1,0) -- (\x*0.75,\x/2);
+        }
+    \end{tikzpicture}
+    \caption{}\label{fig:1-7}
+    \end{minipage}
+\end{figure}
+
+\liti 在国内投寄外埠平信，每封信不超过20克重付邮资8分，超过20克重而不超过40克重付邮资1角6分。那么，每封 $x (0 < x \leqslant 40)$ 克重的信应付邮资（分）
+$$
+f(x)=
+\begin{cases}
+    8, &x \in (0,20], \\
+    16, &x \in (20,40] \text{。}
+\end{cases}
+$$
+画出这个函数的图象。
+
+\jie 这个函数的图象是两条线段，如图\ref{fig:1-7}所示。
+
+当我们所研究的函数 $y=f(x)$ 是用一个式子表示时，如果不加说明，函数的定义域就是指能使这个式子有意义的实数 $x$ 的集合。
+
+\liti 求函数 $f(x) = \dfrac{1}{x -2}$ 的定义域。
+
+\jie 因为 $x-2=0$ 即 $x=2$ 时，$\dfrac{1}{x - 2}$ 没有意义，而 $x \neq 2$ 时，$\dfrac{1}{x - 2}$ 都有意义，所以这个函数的定义域是
+$\{x \mid x \in R \text{，且} x \neq 2\} \text{。}$
+
+\liti 求函数 $f(x) = \sqrt{3x+2}$ 的定义域。
+
+\jie 因为 $3x+2 \geqslant 0$ 即 $x \geqslant -\dfrac 2 3$ 时，$\sqrt{3x+2}$ 有意义，而 $x < -\dfrac 2 3$ 时，$\sqrt{3x+2}$ 没有意义，
+所以这个函数的定义域是$\left[ -\dfrac 2 3 , +\infty \right)$。
+
+\liti 求函数 $f(x) = \sqrt{x+1} + \sqrt{1-x} + 2$ 的定义域。
+
+\jie 使 $\sqrt{x+1}$ 有意义的实数 $x$ 的集合是 $[-1, +\infty)$，
+使 $\sqrt{1-x}$ 有意义的实数 $x$ 的集合是 $(-\infty, 1]$，所以这个函数的定义域是
+$$[-1, +\infty) \cap (-\infty, 1] = [-1, 1] \text{。}$$
+
+\lianxi
+
+\begin{xiaotis}
+
+\vspace{-2em}
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.65\linewidth}
+    \setlength{\parindent}{\defaultParIndent}
+
+    \xiaoti{（口答）如图，已知函数 $y=x^2$，圈内的数都是整数，求：}
+
+    \begin{xiaoxiaotis}
+
+        \xiaoxiaoti{函数的定义域、值域；}
+        
+        \xiaoxiaoti{和 $x=-2$ 对应的象；}
+
+        \xiaoxiaoti{$y=9$ 和什么原象对应。}
+
+    \end{xiaoxiaotis}
+
+    \xiaoti{已知函数 $f(x) = 2x - 3,\, x \in \{0,1,2,3,5\}$，求 $f(0)$，$f(2)$，$f(5)$ 及函数的值域。}
+
+    \xiaoti{画出下列函数的图象：}
+
+    \begin{xiaoxiaotis}
+        
+        \xiaoxiaoti{$f(x) = 2x,\, x \in Z \text{，且} |x| \leqslant 2$；}
+    
+        \xiaoxiaoti{$f(x) =
+            \begin{cases}
+                1, &x \in (0, +\infty), \\
+                -1, &x \in (-\infty, 0] \text{。}
+            \end{cases}$
+        }
+    
+    \end{xiaoxiaotis}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=1cm, y radius=3cm];
+        \node at (1.5,3) {平方};
+    
+        \node at (0,2.5) {$0$};
+        \node at (0.3,1.8) {$-3$};
+        \node at (-0.2,1.0) {$2$};
+        \node at (0.3,0.2) {$3$};
+        \node at (-0.5,-0.3) {$-1$};
+        \node at (0,-1.0) {$-2$};
+        \node at (0,-1.6) {$1$};
+        \node at (0,-2.2) {$\vdots$};
+    
+        \draw (3,0) circle [x radius=1cm, y radius=3cm];
+        \node at (3,2.2) {9};
+        \node at (3,1) {0};
+        \node at (3,-0.2) {4};
+        \node at (3,-1.4) {1};
+        \node at (3,-2.2) {$\vdots$};
+    
+        \draw [->] (0.2,2.5) .. controls(1,2.6) and (1.8,2.0) .. (2.8,1.1); % 0 -> 0
+        \draw [->] (0.6,1.8) .. controls(1,2.1) and (1.8,2.2) .. (2.8,2.2); % -3 -> 9
+        \draw [->] (0,1.0) .. controls(1,0.9) and (1.8,0.6) .. (2.8,0);     % 2 -> 4
+        \draw [->] (0.5,0.2) .. controls(1,0.8) and (1.8,1.6) .. (2.8,2.0); % 3 -> 9
+        \draw [->] (-0.1,-0.3) .. controls(1,-0.2) and (1.8,-0.8) .. (2.8,-1.4); % -1 -> 1
+        \draw [->] (0.4,-1.0) .. controls(1,-0.5) and (1.8,-0.2) .. (2.8,-0.2);  % -2 -> 4
+        \draw [->] (0.4,-1.6) .. controls(1,-1.4) and (1.8,-1.4) .. (2.8,-1.6);  % 1 -> 1
+    \end{tikzpicture}
+    \caption*{（第1题）}
+\end{minipage}
+\end{figure}
+
+\vspace{-2em}
+\xiaoti{求下列函数的定义域：}
+
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$f(x) = \dfrac 1 {4x + 7}$；\vspace{1em}}
+
+    \xiaoxiaoti{$f(x) = \sqrt{1 - x} + \sqrt{x + 3} - 1$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
