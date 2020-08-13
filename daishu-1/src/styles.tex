@@ -56,9 +56,11 @@
   \setcounter{cntxiaoti}{0}
   \vspace{1em}
   \begin{center}
-    \textbf{习题 \chinese{cntxiti}}
+    \subsection*{\labelxiti}
   \end{center}
+  \addcontentsline{toc}{subsection}{\labelxiti}
 }
+\newcommand{\labelxiti}{习题 \chinese{cntxiti}}
 
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
