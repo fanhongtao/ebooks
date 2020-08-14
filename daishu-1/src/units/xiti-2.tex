@@ -1,0 +1,301 @@
+\xiti
+
+\begin{xiaotis}
+
+\xiaoti{根据给定的对应法则，写出和 $x$ 对应的数值：}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=1cm, y radius=3cm];
+        \node at (0,3.3) {$x$};
+        \node at (1.5,3) {平方};
+    
+        \node at (0,2.5) {$0$};
+        \node at (0.3,1.8) {$-3$};
+        \node at (-0.2,1.0) {$2$};
+        \node at (0.3,0.2) {$3$};
+        \node at (-0.5,-0.3) {$-1$};
+        \node at (0,-1.0) {$-2$};
+        \node at (0,-1.6) {$1$};
+        \node at (0,-2.2) {$\vdots$};
+    
+        \draw (3,0) circle [x radius=1cm, y radius=3cm];
+        \node at (3,2.2) {9};
+        %\node at (3,1) {0};
+        %\node at (3,-0.2) {4};
+        %\node at (3,-1.4) {1};
+        \node at (3,-2.2) {$\vdots$};
+    
+        \draw [->] (0.2,2.5) .. controls(1,2.6) and (1.8,2.0) .. (2.8,1.1); % 0 -> 0
+        \draw [->] (0.6,1.8) .. controls(1,2.1) and (1.8,2.2) .. (2.8,2.2); % -3 -> 9
+        \draw [->] (0,1.0) .. controls(1,0.9) and (1.8,0.6) .. (2.8,0);     % 2 -> 4
+        \draw [->] (0.5,0.2) .. controls(1,0.8) and (1.8,1.6) .. (2.8,2.0); % 3 -> 9
+        \draw [->] (-0.1,-0.3) .. controls(1,-0.2) and (1.8,-0.8) .. (2.8,-1.4); % -1 -> 1
+        \draw [->] (0.4,-1.0) .. controls(1,-0.5) and (1.8,-0.2) .. (2.8,-0.2);  % -2 -> 4
+        \draw [->] (0.4,-1.6) .. controls(1,-1.4) and (1.8,-1.4) .. (2.8,-1.6);  % 1 -> 1
+    \end{tikzpicture}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=1cm, y radius=3cm];
+        \node at (0,3.3) {$x$};
+        \node at (1.5,3.2) {求倒数};
+        \node at (1.5,2.8) {的2倍};
+    
+        \node at (0,2.5) {$-3$};
+        \node at (-0.2,1.5) {$-2$};
+        \node at (0.3,0.5) {$-1$};
+        \node at (-0.5,-0.5) {$1$};
+        \node at (0.3,-1.5) {$2$};
+        \node at (0,-2.5) {$3$};
+    
+        \draw (3,0) circle [x radius=1cm, y radius=3cm];
+    
+        \draw [->] (0.3,2.5) -- (2.8,2.5); % -3
+        \draw [->] (0.2,1.5) -- (2.6,1.5); % -2
+        \draw [->] (0.6,0.5) -- (2.6,0.5); % -1
+        \draw [->] (-0.1,-0.5) -- (2.6,-0.5); % 1
+        \draw [->] (0.6,-1.5) -- (2.6,-1.5); % 2
+        \draw [->] (0.3,-2.5) -- (2.8,-2.5); % 3
+    \end{tikzpicture}
+    \end{minipage}
+    \caption*{（第1题）}
+\end{figure}
+
+\xiaoti{根据给定的对应法则，写出和 $x$ 对应的数值：}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) rectangle (7.4, 1);
+        \node at (4.0,0.5) {$3$};
+
+        \draw (0,2) rectangle (7.4, 3);
+        \node at (-0.5,2.5) {$x$};
+        \node at (0.3,2.5) {$-2$};
+        \node at (1.3,2.5) {$-\sqrt{3}$};
+        \node at (2.4,2.5) {$-\sqrt{2}$};
+        \node at (3.4,2.5) {$-1$};
+        \node at (4.1,2.5) {$0$};
+        \node at (4.7,2.5) {$1$};
+        \node at (5.4,2.5) {$\sqrt{2}$};
+        \node at (6.2,2.5) {$\sqrt{3}$};
+        \node at (7.0,2.5) {$2$};
+
+        \draw [->] (3.4,2.3) .. controls(3.3,1.6) and (3.4,1.3) .. (3.8,0.75); % -1 -> 3
+        \draw [->] (4.7,2.3) .. controls(4.7,1.6) and (4.6,1.3) .. (4.2,0.75); % 1 -> 3
+
+        \node at (3.6,3.5) {平方乘2加1};
+    \end{tikzpicture}
+    \caption*{（第2题）}
+\end{figure}
+
+\xiaoti{下列各图表示的对应是不是从第一个集合到第二个集合的映射，为什么？}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{4cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (0,1.35) {$a_1$};
+        \node at (0,0.45) {$a_3$};
+        \node at (0,-0.45) {$a_2$};
+        \node at (0,-1.35) {$a_4$};
+    
+        \draw (2,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (2,1.35) {$b_1$};
+        \node at (2,0.45) {$b_2$};
+        \node at (2,-0.45) {$b_3$};
+        \node at (2,-1.35) {$b_4$};
+    
+        \draw [->] (0.2,1.35) .. controls(0.6,1.5) and (1.2,1.5) .. (1.8,1.35);
+        \draw [->] (0.2,0.45) .. controls(0.6,-0.5) and (1.2,-1) .. (1.8,-1.35);
+        \draw [->] (0.2,-0.45) .. controls(0.6,-0.3) and (1.2,-0.3) .. (1.8,-0.45);
+        \draw [->] (0.2,-1.35) .. controls(0.8,-1.0) and (1.4,0.1) .. (1.8,1.25);
+    \end{tikzpicture}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{4cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (0,1.35) {$a_1$};
+        \node at (0,0.45) {$a_3$};
+        \node at (0,-0.45) {$a_2$};
+        \node at (0,-1.35) {$a_4$};
+    
+        \draw (2,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (2,1.35) {$b_1$};
+        \node at (2,0.45) {$b_2$};
+        \node at (2,-0.45) {$b_3$};
+        \node at (2,-1.35) {$b_4$};
+    
+        \draw [->] (0.2,1.35) .. controls(0.6,1.5) and (1.2,1.5) .. (1.8,1.35);
+        \draw [->] (0.2,0.45) .. controls(0.6,0.6) and (1.2,0.6) .. (1.8,0.45);
+        \draw [->] (0.2,-0.45) .. controls(0.6,-1.0) and (1.2,-1.3) .. (1.8,-1.35);
+        \draw [->] (0.2,-1.35) .. controls(0.6,-1.3) and (1.2,-0.9) .. (1.8,-0.45);
+    \end{tikzpicture}
+    \caption*{（2）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{4cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw (0,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (0,1.35) {$a_1$};
+        \node at (0.2,0.15) {$a_2$};
+        \node at (-0.3,0) {$a_3$};
+        \node at (0,-1.35) {$a_4$};
+    
+        \draw (2,0) circle [x radius=0.6cm, y radius=2cm];
+        \node at (2,1.35) {$b_1$};
+        \node at (2.3,0.15) {$b_2$};
+        \node at (1.8,0) {$b_3$};
+        \node at (2,-1.35) {$b_4$};
+    
+        \draw [->] (0.2,1.35) .. controls(0.6,1.5) and (1.2,1.5) .. (2.1,0.25);
+        \draw [->] (0.4,0.3) .. controls(0.6,0.8) and (1.2,1.2) .. (1.8,1.35);
+        \draw [->] (0.4,0.2) .. controls(0.6,0.3) and (1.2,0.2) .. (1.6,0);
+        \draw [->] (-0.1,-0.1) .. controls(0.6,-1.0) and (1.2,-1.3) .. (1.8,-1.35);
+        \draw [->] (0.2,-1.35) .. controls(0.6,-1.3) and (1.4,-1.0) .. (2.3,-0.1);
+    \end{tikzpicture}
+    \caption*{（3）}
+    \end{minipage}
+    \caption*{（第3题）}
+\end{figure}
+
+\xiaoti{下列对应是不是从 $A$ 到 $B$ 的映射，为什么？}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$A = R^+$，$B = R$，对应法则是“求常用对数”；}
+
+    \xiaoxiaoti{$A = \{\text{平面} M \text{内的点}\}$，$B = \{\text{平面} M \text{内的圆}\}$，对应法则是“以点 $P$ 为圆心画圆”；}
+
+    \xiaoxiaoti{$A = \{\alpha \mid 0^\circ \leqslant \alpha \leqslant 180^\circ\}$，$B = [0, 1]$，对应法则是“求余弦”；}
+
+    \xiaoxiaoti{$A = \{\text{平面} M \text{内的三角形}\}$，$B = \{\text{平面} M \text{内的圆}\}$，对应法则是“画三角形的外接圆”。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{在从集合 $A$ 到集合 $B$ 的映射中，}
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{对于集合 $A$ 中的任意一个元素 $a$，在集合 $B$ 中是不是有象？是不是只有一个象？}
+
+    \xiaoxiaoti{对于集合 $B$ 中的任意一个元素 $b$，在集合 $A$ 中是不是有原象？是不是只有一个原象？}
+
+\end{xiaoxiaotis}
+
+\xiaoti{如图，已知从集合 $A$ 到集合 $B$ 的对应法则是“乘2减3”，
+    从集合 $B$ 到集合 $C$ 的对应法则是“乘3减5”。
+    按对应法则写出集合 $B$，$C$ 中的对应元素。}
+
+\begin{figure}[htbp]
+    \center
+    \begin{tikzpicture}[>=Stealth]
+        \foreach \x in {0, 3, 6}
+            \draw (\x,0.2) -- (\x, 2.5) arc [start angle=180, end angle=0, radius=0.5cm]
+                     -- (\x+1,0.2) arc [start angle=0, end angle=-180, radius=0.5cm];
+        \draw [->] (0.8,2.6) -- (3.3,2.6);
+        \draw [->] (3.85,2.6) -- (6.3,2.6);
+
+        \node at (2,3) {乘2减3};
+        \node at (5,3) {乘3减5};
+        \node at (0.5,0.1) {$6$};
+        \node at (0.5,0.6) {$5$};
+        \node at (0.5,1.1) {$4$};
+        \node at (0.5,1.6) {$3$};
+        \node at (0.5,2.1) {$2$};
+        \node at (0.5,2.6) {$1$};
+        \node at (3.6,2.6) {$-1$};
+        \node at (6.6,2.6) {$-8$};
+    \end{tikzpicture}
+    \caption*{（第6题）}
+\end{figure}
+
+\xiaoti{已知函数 $f(x) = 3x+5,\, x\in R$，
+    求$f(-3)$，$f(-2)$，$f(0)$，$f(1)$，$f(2)$ 以及函数的值域。}
+
+\xiaoti{画出下列函数的图象，并说出函数的定义域、值域：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{正比例函数 $y = 3x$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{反比例函数 $y = \dfrac{8}{x}$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{一次函数 $y = -4x + 5$；}
+
+    \xiaoxiaoti{二次函数 $y = x^2 - 6x + 7$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{画出下列函数的图象：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$f(x) = x + 2,\, x \in Z \text{，且} |x| \leqslant 3$；}
+
+    \xiaoxiaoti{$f(x) = 3x - 5,\, x \in (2, 4]$；}
+
+    \xiaoxiaoti{$f(x) = -\sqrt{x},\, x \in [0, +\infty)$；}
+
+    \xiaoxiaoti{$f(x) = 2x^2 - 3x - 2,\, x \in (-\dfrac{1}{2}, 2)$。}
+    
+\end{xiaoxiaotis}
+
+\xiaoti{求下列函数的定义域：}
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$f(x) = \dfrac{6}{x^2 - 3x + 2}$；}
+    \vspace{1em}
+
+    \xiaoxiaoti{$f(x) = \dfrac{\sqrt[3]{4x + 8}}{\sqrt{3x - 2}}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$f(x) = \sqrt{2x - 1} + \sqrt{1 - 2x} + 4$；}
+
+    \xiaoxiaoti{$f(x) = \sqrt{x^2 - 4}$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{建筑一个容枳为 $8000\text{米}^3$，深为 $6$ 米的长方体蓄水池，
+    池壁每 $\text{米}^2$ 的造价为 $a$ 元，池底每 $\text{米}^2$ 的造价为 $2a$ 元。
+    把总造价 $y$ 元表示为底的一边长 $x$ 米的函数，并指出函数的定义域。}
+
+\xiaoti{如图，灌溉渠的横断面是等腰梯形，底宽 $2$ 米，边坡的倾角为 $45^\circ$，水深 $h$ 米。
+    求横断面中有水面积 $A\text{米}^2$ 与水深 $h$ 米的函数关系式。}
+
+\begin{figure}[htbp]
+    \center
+    \begin{tikzpicture}[>=Stealth]
+        \draw (2,-0.1) -- (2,-0.5);
+        \draw[<->] (2,-0.3) -- (3.8,-0.3);
+        \node [fill=white] at (2.9,-0.3) {2米};
+        \draw (3.8,-0.1) -- (3.8,-0.5);
+
+        \node at (4.6,0.3) {$45^\circ$};
+
+        \draw (4.0,0) -- (6.5,0);
+        \draw [<->] (6,0) -- (6,1.8);
+        \node [fill=white, rotate=90] at (6,0.9) {$h$米};
+        \draw (5.8,1.8) -- (6.5,1.8);
+
+        \filldraw[pattern=horizontal lines light gray] (0,2) -- (2,0) -- (3.8,0) -- (5.8,2) -- (5.6,1.8) -- (0.2,1.8);
+        \draw (2.9,1.85) -- (3.1,2.2) -- (2.7,2.2) -- cycle;
+    \end{tikzpicture}
+    \caption*{（第12题）}
+\end{figure}
+\xiaoti{投寄本埠平信，每 $20$ 克重应贴邮票 $4$ 分，不足 $20$ 克重的以 $20$ 克重计算。
+    写出邮资〈分）与信件重量（在60克重以内）的函数关系式，并画出函数的图象。如果要寄
+    挂号信，则每封信另加挂号费 1 角 2 分。写出邮资（分）与挂号信件重量（在60克重以内）
+    的函数关系式，并画出函数的图象。}
+
+\end{xiaotis}
