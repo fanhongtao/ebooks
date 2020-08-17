@@ -1,0 +1,447 @@
+\subsection{幂函数}
+
+我们已经学过函数 $y=x$，$y=x^2$ 及 $y=x^{-1}$ ，这些函数都是幂函数。
+
+一般地，函数 $y=x^\alpha$ 叫做\textbf{幂函数}，其中 $x$ 是自变量，$\alpha$ 是常数
+（这里我们只讨论 $\alpha$ 是有理数 $n$ 的情况）。
+
+我们知道，当 $n=0$ 时，$x^n = x^0 = 1\, (x \neq 0)$，函数 $y = x^0$ 成为常数函数 $y=1\, (x \neq 0)$，
+它的图象是平行于 $x$ 轴并在 $x$ 轴上方 1 个单位的一条直线（除去点$(0, 1)$）。
+
+当 $n=1$ 时，函数 $y=x^n$ 就是 $y=x$。$n$ 是其他正整数时，$x^n$ 的意义是 $x^n = x \cdot x \cdot \dots \cdot x$ 
+（共 $n$ 个 $x$ 相乘）。函数的定义域是实数集 $R$。
+
+$n$ 是一个正分数时，我们只研究 $n$ 是一个既约分数 $\dfrac{p}{q}$ 的情况（$p$，$q$ 是正整数，$q>1$)。
+这时，$x^n$ 的意义是 $x^\frac{p}{q} = \sqrt[q]{x^p}$，函数 $y = x^\frac{p}{q}$ 的
+定义域是使 $\sqrt[q]{x^p}$ 有意义的实数 $x$ 的集合。
+
+$n$ 是一个负整数或负分数时，例如，$n = -p$（$p$ 是正整数）或 $n = -\dfrac{p}{q}$
+（$p$,$q$ 是素质的正整数，$q>1$）时，$x^n$ 的意义分别是 $x^n = x^{-p} = \dfrac{1}{x^p}$，
+$x^n = x^{-\frac{p}{q}} = \dfrac{1}{\sqrt[q]{x^p}}$，函数的定义域是使 $\dfrac{1}{x^p}$
+或 $\dfrac{1}{\sqrt[q]{x^p}}$ 有意义的实数 $x$ 的集合。
+
+\liti 求下列幂函数的定义域：
+
+\hspace{2em} $y = x^3$，$y = x^{\frac 1 3}$，$y = x^{\frac 1 2}$，$y = x^{-2}$，$y = x^{-\frac 1 2}$。
+
+\jie $y = x^3$ 的定义域是 $R$，
+
+$y = x^{\frac 1 3} = \sqrt[3]{x}$ 的定义域是 $R$，
+
+$y = x^{\frac 1 2} = \sqrt{x}$ 的定义域是 $[0, +\infty)$，
+
+\vspace{0.5em}
+$y = x^{-2} = \dfrac{1}{x^2}$ 的定义域是 $\{x \mid x \in R \text{，且} x \neq 0\}$，
+
+\vspace{0.5em}
+$y = x^{-\frac 1 2} = \dfrac{1}{\sqrt{x}}$ 的定义域是 $(0, +\infty)$。
+
+现在我们分 $x>0$ 及 $n<0$ 两种情况来研究幂函数的图象和性质。
+
+\subsubsection{$n>0$。}
+
+我们知道，$y=x$ 的图象是直线（图\ref{fig:1-8}），$y=x^2$ 的图象是抛物线（图\ref{fig:1-9}）。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \draw [->] (-2.5,0) -- (2.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-2.5) -- (0,2.5) node[anchor=east] {$y$};
+        \node at (0.2,-0.2) {$O$};
+        \foreach \x in {-4,-2,1,2,3,4} {
+            \draw (\x/2,0.2) -- (\x/2,0) node[anchor=north] {$\x$};
+        }
+        \foreach \x in {-3,-1} {
+            \draw (\x/2,0) -- (\x/2,0.2) (\x/2-0.1, 0.2) node[anchor=south] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y/2) -- (0,\y/2) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-4,...,-1} {
+            \draw (0,\y/2) -- (0.2,\y/2) node[anchor=west] {$\y$};
+        }
+        \draw (-2,-2) -- (2,2) (2,1.2) node{$y=x$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-8}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-1) -- (0,5.5) node[anchor=east] {$y$};
+        \foreach \x in {-3,-2,-1,1,2,3}
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        \foreach \y in {1,...,5}
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        \node at (0.3,-0.3) {$O$};
+        \draw  (-2.2,4.84) parabola bend (0,0) (2.2,4.84);
+        \node at (2.5,3) {$y=x^2$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-9}
+    \end{minipage}
+\end{figure}
+
+现在画函数 $y=x^3$，$y=x^{\frac 1 2}$ 及 $y=x^{\frac 1 3}$ 的图象。
+
+分别列出 $x$，$y$ 的对应值表，用描点的方法，画出这三个函数的图象（图\ref{fig:1-10}，图\ref{fig:1-11}及图\ref{fig:1-12}）。
+
+$y=x^3$
+
+\begin{table}[ht]
+\begin{tabular}{|c|*{9}{w{c}{3em}|}}
+    \hline
+    x & $\dots$ & $-1.5$ & $-1$ & $-0.5$ & $0$ & $0.5$ & $1$ & $1.5$ & $\dots$ \\
+    \hline
+    $y=x^3$ & $\dots$ & $-3.38$ & $-1$ & $-0.13$ & $0$ & $0.13$ & $1$ & $3.38$ & $\dots$\\
+    \hline
+\end{tabular}
+\end{table}
+
+$y=x^{\frac 1 2}$
+
+\begin{table}[ht]
+\begin{tabular}{|c|*{8}{w{c}{3em}|}}
+    \hline
+    x & $0$ & $0.5$ & $1$ & $2$ & $3$ & $4$ & $6$ & $\dots$ \\
+    \hline
+    $y=x^{\frac 1 2}$ & $0$ & $0.71$ & $1$ & $1.41$ & $1.73$ & $2$ & $2.45$ & $\dots$\\
+    \hline
+\end{tabular}
+\end{table}
+
+$y=x^{\frac 1 3}$
+
+\begin{table}[ht]
+\begin{tabular}{|c|*{9}{w{c}{3em}|}}
+    \hline
+    x & $\dots$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+    $y=x^{\frac 1 3}$ & $\dots$ & $-1.44$ & $-1。26$ & $-1$ & $0$ & $1$ & $1。26$ & $1.44$ & $\dots$\\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{5cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-2.5,0) -- (2.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-4.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (0.3,-0.3) {$O$};
+        \foreach \x in {-2,-1,1,2} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-4,...,-1} {
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        }
+        \draw [domain=-1.6:1.6] plot (\x, {\x * \x * \x});
+        \node at (2.3,3) {$y = x^3$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-10}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-1,0) -- (6.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-1) -- (0,4.5) node[anchor=east] {$y$};
+        \foreach \x in {1,...,6}
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        \foreach \y in {1,...,5}
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        \node at (-0.3,-0.3) {$O$};
+        % 前一部分变化较大，需要多一些插值点。所以分成两段绘制
+        % 也可以增大 samples 个数: \draw [domain=0:6,samples=200] plot (\x, {\x ^ (1/2)});
+        \draw [domain=0:0.2] plot (\x, {\x ^ (1/2)});
+        \draw [domain=0.2:6] plot (\x, {\x ^ (1/2)});
+        \node at (2.3,2) {$y = x^{\frac 1 2}$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-11}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-2.5) -- (0,2.5) node[anchor=east] {$y$};
+        \foreach \x in {-3,-2,-1,1,2,3}
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        \foreach \y in {-2,-1,1,2}
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        \node at (0.3,-0.3) {$O$};
+        \draw [domain=-3:3,samples=200] plot (\x, {\x ^ (1/3)});
+        \node at (2.5,2) {$y=x^{\frac 1 3}$};
+        %\draw[help lines] (0,0) grid [step=0.5mm] (0.1,0.6);
+    \end{tikzpicture}
+    \caption{}\label{fig:1-12}
+\end{figure}
+
+进一步研究可以看出：幂函数 $y=x^4$，$y=x^6$，……的图象类似于 $y=x^2$ 的图象；
+$y=x^5$，$y=x^7$，……的图象类似于 $y=x^3$ 的图象；
+$y=x^{\frac 1 4}$，$y=x^{\frac 1 6}$，……的图象类似于 $y=x^{\frac 1 2}$ 的图象；
+$y=x^{\frac 1 5}$，$y=x^{\frac 1 7}$，……的图象类似于 $y=x^{\frac 1 3}$ 的图象。
+
+下面在同一坐标系内画出幂函数 $y=x$，$y=x^2$，$y=x^3$，$y=x^{\frac 1 2}$，$y=x^{\frac 1 3}$ 
+的图象（图\ref{fig:1-13}），我们可以看出，\textbf{当 $n>0$ 时，幂函数 $y=x^n$ 有下列性质：}
+
+\textbf{（1）图象都通过点 $(0,0)$，$(1,1)$；}
+
+\textbf{（2）在第一象限内，函数值随 $x$ 的增大而增大。}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-4.5,0) -- (4.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-4.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (0.3,-0.3) {$O$};
+        
+        \draw [dashed] (1,1) -- (1,0) node[anchor=north] {$1$};
+        \draw [dashed] (1,1) -- (0,1) node[anchor=east] {$1$};
+        \draw [dashed] (-1,-1) -- (-1,0) node[anchor=south] {$-1$};
+        \draw [dashed] (-1,-1) -- (0,-1) node[anchor=west] {$-1$};
+    
+        \draw [dash dot dot,domain=-1.6:1.6] plot (\x, {\x * \x * \x}) (0.8,4) node {$y = x^3$};
+        \draw [dashed,domain=-2:2] plot (\x, {abs(\x) ^ 2}) (2.8,4) node {$y=x^2$};
+        \draw (-4,-4) -- (4,4) (4.7,4) node{$y=x$};
+        \draw [red,domain=0:4,samples=200] plot (\x, {\x ^ (1/2)}) (4.1,2.6) node {$y = x^{\frac 1 2}$};
+        \draw [blue,semithick,domain=-4:4,samples=200] plot (\x, {\x ^ (1/3)}) (4.1,1.3) node {$y=x^{\frac 1 3}$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-13}
+\end{figure}
+
+\liti 比较下列各题 中两个值的大小：
+
+\twoInLine[10em]{（1） $1.5^{\frac 3 5}$，$1.7^{\frac 3 5}$}
+                {（2） $0.7^{1.5}$，$0.6^{1.5}$。}
+
+\jie （1）各题中两个值都是幂运算的结果，且指数相同，因此，可以利用幂函数的性质来判断它们
+的大小，考察函数 $y= x^{\frac 3 5}$，在第一象限内，$y$ 的值随 $x$ 的增大而增大。
+
+$\because 1.5 < 1.7$，
+
+$\therefore 1.5^{\frac 3 5} < 1.7^{\frac 3 5}$。
+
+（2）考察幂函数 $y=x^{1.5}$，同理，
+
+$\because 0.7 > 0.6$，
+
+$\therefore 0.7^{1.5} > 0.6^{1.5}$。
+
+\subsubsection{$n<0$。}
+
+我们知道，幂函数 $y=x^{-1}$ 的图象，即反比例函数 $y = \dfrac 1 x$ 的图象，是两支曲线（图\ref{fig:1-14}）。
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-4.5,0) -- (4.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-4.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (0.3,-0.3) {$O$};
+        \foreach \x in {1,...,4} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \x in {-4,...,-1} {
+            \draw (\x,0) -- (\x,0.2) (\x-0.1, 0.2) node[anchor=south] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-4,...,-1} {
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        }
+        \draw [domain=0.25:4] plot (\x, {1 / \x}) (2,3) node {$y=x^{-1}$};
+        \draw [domain=-4:-0.25] plot (\x, {1 / \x});
+    \end{tikzpicture}
+    \caption{}\label{fig:1-14}
+\end{figure}
+
+现在画函数 $y = x^{-2}$，$y = x^{-\frac 1 2}$ 的图象。
+
+分别列出 $x$，$y$ 的对应值表，用描点的方法画出这两个函数的图象（图\ref{fig:1-15}，图\ref{fig:1-16}）。
+
+\vspace{0.5em}
+$y = x^{-2} = \dfrac 1 {x^2}$
+
+\begin{table}[h]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|c|*{10}{w{c}{2em}|}}
+    \hline
+    x & $\dots$ & $-3$ & $-2$ & $-1$ & $-\dfrac 1 2$ & $\dfrac 1 2$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+    $y = x^{-2}$ & $\dots$ & $\dfrac 1 9$ & $\dfrac 1 4$ & $1$ & $4$ & $4$ & $1$ & $\dfrac 1 4$ & $\dfrac 1 9$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5em}
+$y = x^{-\frac 1 2} = \dfrac 1 {\sqrt{x}}$
+
+\begin{table}[h]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|c|*{7}{w{c}{2em}|}}
+    \hline
+    x & $\dots$ & $\dfrac 1 {16}$ & $\dfrac 1 9$ & $\dfrac 1 4$ & $1$ & $4$ & $\dots$ \\
+    \hline
+    $y = x^{-\frac 1 2}$ & $\dots$ & $4$ & $3$ & $2$ & $1$ & $\dfrac 1 2$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-4.5,0) -- (4.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-1.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (-0.3,-0.3) {$O$};
+        \foreach \x in {1,...,4} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \x in {-4,...,-1} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-1} {
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        }
+        \draw [domain=0.5:4] plot (\x, {\x^(-2)}) (2,3) node {$y=x^{-2}$};
+        \draw [domain=-4:-0.5] plot (\x, {abs(\x)^(-2)});
+    \end{tikzpicture}
+    \caption{}\label{fig:1-15}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-1.5,0) -- (5.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-1.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (-0.3,-0.3) {$O$};
+        \foreach \x in {-1,1,2,...,5} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-1} {
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        }
+        \draw [domain=0.07:5,samples=100] plot (\x, {1 /sqrt(\x)}) (2,3) node {$y=x^{-\frac 1 2}$};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-16}
+    \end{minipage}
+\end{figure}
+
+在同一坐标系内画出 $y = x^{-1}$，$y = x^{-2}$，$y = x^{-\dfrac 1 2}$ 的图象（图\ref{fig:1-17}），
+我们可以看出，\textbf{当 $n<0$ 时，幂函数 $y = x^n$ 有下列性质：}
+
+（1）图象都通过点 $(1,1)$；
+
+（2）在第一象限内，函数值随着 $x$ 的增大而减小；
+
+（3）在第一象限内，图象向上与 $y$ 轴无限地接近，向右与 $x$ 轴无限地接近。
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[>=Stealth,scale=0.8]
+        \draw [->] (-4.5,0) -- (4.5,0) node[anchor=north] {$x$};
+        \draw [->] (0,-4.5) -- (0,4.5) node[anchor=east] {$y$};
+        \node at (0.3,-0.3) {$O$};
+        \foreach \x in {1,...,4} {
+            \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+        }
+        \foreach \x in {-4,...,-1} {
+            \draw (\x,0) -- (\x,0.2) (\x-0.1, 0.2) node[anchor=south] {$\x$};
+        }
+        \foreach \y in {1,...,4} {
+            \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+        }
+        \foreach \y in {-4,...,-1} {
+            \draw (0,\y) -- (0.2,\y) node[anchor=west] {$\y$};
+        }
+        \node at (1.5,1.3) {$(1,1)$};
+        
+        \path[name path=a1,draw, domain=0.25:4] plot (\x, {1 / \x}) (1.8,3.5) node {$y=x^{-1}$};
+        \draw [domain=-4:-0.25] plot (\x, {1 / \x}) (-2, -2) node {$y=x^{-1}$};
+        \path [name path=a2] (0.35,0) -- (0.35,4);
+        \draw [name intersections={of=a1 and a2, by=x}] (x)-- (1.0,3.3);
+    
+        \draw [name path=b1,domain=0.5:4] plot (\x, {\x^(-2)}) (2,2.5) node {$y=x^{-2}$};
+        \draw [domain=-4:-0.5] plot (\x, {abs(\x)^(-2)}) (-2,2.5) node {$y=x^{-2}$};
+        \path [name path=b2] (0.7,0) -- (0.7,4);
+        \draw [name intersections={of=b1 and b2, by=x}] (x)-- (1.15,2.3);
+    
+        \draw [name path=c1,domain=0.07:5,samples=100] plot (\x, {1 /sqrt(\x)}) (3.5,1.5) node {$y=x^{-\frac 1 2}$};
+        \path [name path=c2] (2.5,0) -- (2.5,4);
+        \draw [name intersections={of=c1 and c2, by=x}] (x)-- (3.15,1.3);
+    \end{tikzpicture}
+    \caption{}\label{fig:1-17}
+\end{figure}
+
+\liti 比较下列各题中两个值的大小：
+
+\twoInLine[10em]{（1） $2.2^{-\frac 2 3}$，$1.8^{-\frac 2 3}$}
+                {（2） $0.15^{-1.2}$，$0.17^{-1.2}$。}
+
+\jie （1）考察幂函数 $y = x^{-\frac 2 3}$，在第一象限内，$y$ 的值随 $x$ 的增大而减小。
+
+$\because 2.2 > 1.8$，
+
+$\therefore 2.2^{-\frac 2 3} < 1.8^{-\frac 2 3}$。
+
+（2）考察幂函数 $y = x^{-1.2}$，同理，
+
+$\because 0.15 < 0.17$，
+
+$\therefore 0.15^{-1.2} > 0.17^{-1.2}$。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{求下列函数的定义域：}
+
+\begin{xiaoxiaotis}
+    \begin{tabular}[t]{*{2}{@{}p{14em}}} 
+        \xiaoxiaoti {$y = x^{-4}$;} & \xiaoxiaoti {$y = x^{\frac 1 5}$;} \\
+        \xiaoxiaoti {$y = x^{-\frac 3 2}$;} & \xiaoxiaoti {$y = x^{\frac 2 3}$;} \\
+        \xiaoxiaoti {$y = x^{\frac 3 2}$;} & \xiaoxiaoti {$y = x^{-\frac 4 5}$。}
+    \end{tabular}
+\end{xiaoxiaotis}
+
+
+\xiaoti{画出函数 $y = x^{\frac 2 3}$ 的图象。}
+
+\xiaoti{在同一坐标第内画出下列各题中两个函数的图象，并加以比较：}
+\begin{xiaoxiaotis}
+
+    \twoInLine[14em]{\xiaoxiaoti{$y=x^3$，$y=x^4$；}}
+        {\xiaoxiaoti{$y=x^{-3}$}，$y=x^{-4}$。}
+\end{xiaoxiaotis}
+
+\xiaoti{比较下列各题中两个值的大小：}
+\begin{xiaoxiaotis}
+
+    \twoInLine[14em]{\xiaoxiaoti{$1.3^{\frac 3 4}$，$1.5^{\frac 3 4}$；}}
+        {\xiaoxiaoti{$0.21^{\frac 2 5}$}，$0.27^{\frac 2 5}$。}
+\end{xiaoxiaotis}
+
+\xiaoti{比较下列各题中两个值的大小：}
+\begin{xiaoxiaotis}
+
+    \twoInLine[14em]{\xiaoxiaoti{$3^{-\frac 5 2}$，$3.1^{-\frac 5 2}$；}}
+        {\xiaoxiaoti{$1.1^{-\frac 1 2}$}，$0.9^{-\frac 1 2}$。}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
