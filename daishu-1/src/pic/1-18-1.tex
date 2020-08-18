@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth,scale=0.8]
+    \draw [->] (-1,0) -- (5.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+
+    \draw [name path=a1] (0.2,1.5) .. controls(1,1.5) and (3.6,1.7) .. (4.8,3.0);
+    \node at (1.2,2) {$y = f(x)$};
+
+    \path [name path=a2] (1.0,0) -- (1.0,4);
+    \draw [name intersections={of=a1 and a2, by=A}]
+        let \p1=(A)
+        in  
+            (\x1,\y1) -- (\x1, 0)
+            node[anchor=north] {$x1$}
+            (0.65cm+\x1,0.6) node {$f(x_1)$};
+
+    \path [name path=a3] (3.3,0) -- (3.3,4);
+    \draw [name intersections={of=a1 and a3, by=B}]
+        let \p1=(B)
+        in  
+            (\x1,\y1) -- (\x1, 0)
+            node[anchor=north] {$x2$}
+            (0.65cm+\x1,1.0) node {$f(x_2)$};
+\end{tikzpicture}

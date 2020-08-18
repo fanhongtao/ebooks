@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3,0) -- (3,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.5) -- (0,2.5) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \foreach \x in {1,2} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \x in {-2,-1} {
+        \draw (\x,0) -- (\x,0.2) (\x-0.1, 0.2) node[anchor=south] {$\x$};
+    }
+    
+    \coordinate (A) at (-2, -0.4);
+    \coordinate (B) at (-1, -1.0);
+    \coordinate (C) at (0, 1.5);
+    \coordinate (D) at (1, 0.9);
+    \coordinate (E) at (2, 2);
+
+    \draw (-2,0) -- (A) .. controls(-1.8,-0.6) and (-1.2,-1.0) .. (B);
+    \draw (-1,0) -- (B) .. controls(-0.4,-1.0) and (-0.3,1.5) .. (C);
+    \draw (0,0) -- (C) .. controls(0.4,1.5) and (0.7,0.9) .. (D);
+    \draw (1,0) -- (D) .. controls(1.4,1.5) and (1.7,1.9) .. (E) -- (2,0);
+    \node at (0.95,2.1) {$y = f(x)$};
+\end{tikzpicture}

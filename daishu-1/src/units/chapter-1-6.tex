@@ -1,0 +1,108 @@
+\subsection{函数的单调性}
+
+我们在研究一次函数、二次函数和幂函数时，根据函数的图象研究了函数在某个区间上增大或减小的性质。
+
+一般地，对于给定区间上的函数$f(x)$：
+
+1. 如果对于属于这个区间的任意两个自变量的值 $x_1$，$x_2$，当$x_1 < x_2$时，都有$f(x_1) < f(x_2)$，
+那么就说 $f(x)$ 在这个区间上是\textbf{增函数}（图\ref{fig:1-18}（1））；
+
+2. 如果对于属于这个区间的任意两个自变量的值 $x_1$，$x_2$，当$x_1 < x_2$时，都有$f(x_1) > f(x_2)$，
+那么就说 $f(x)$ 在这个区间上是\textbf{减函数}（图\ref{fig:1-18}（2））。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \input{pic/1-18-1}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{7cm}
+    \centering
+    \input{pic/1-18-2}
+    \caption*{（2）}
+    \end{minipage}
+    \caption{}\label{fig:1-18}
+\end{figure}
+
+如果函数 $y = f(x)$ 在某个区间上是增函数或减函数，就说 $f(x)$ 在这一区间上具有（严格的）\textbf{单调性}，
+这一区间叫做 $f(x)$ 的\textbf{单调区间}。
+
+\liti 图\ref{fig:1-19} 是定义在闭区间 $[-5, 5]$ 上的函数 $f(x)$ 的图象。
+根据图象说出 $f(x)$ 的单调区间，以及在每一单调区间上 $f(x)$ 是增函数还是减函数。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/1-19}
+    \caption{}\label{fig:1-19}
+\end{figure}
+
+\jie 函数 $f(x)$ 的单调区间有 $[-5,-2]$，$[-2,1]$，$[1,3]$，$[3,5]$。
+其中，$f(x)$ 在区间 $[-5,-2]$，$[1,3]$ 上是减函数，在区间 $[-2,1]$，$[3,5]$ 上是增函数。
+
+\liti 证明函数 $f(x) = 3x + 2$ 在 $(-\infty, +\infty)$ 上是增函数。
+
+\zhengming 设 $x_1$，$x_2$ 是任意两个实数，且 $x_1 < x_2$，则
+
+\begin{minipage}{10cm}
+\begin{align*}
+    & f(x_1) = 3x_1 + 2, \qquad f(x_2) = 3x_2 + 2 \text{。} \\
+    & f(x_2) - f(x_1) = (3x_2 + 2) - (3x_1 + 2) = 3(x_2 - x_1) \text{。} \\
+    \because \quad & x_2 > x_1, \qquad x_2 - x_1 > 0, \\
+    \therefore \quad & f(x_2) - f(x_1) > 0, \qquad f(x_2) > f(x_1) \text{。}
+\end{align*}
+\end{minipage}
+
+所以 $f(x) = 3x + 2$ 在 $(-\infty, +\infty)$ 上是增函数。
+
+\vspace{0.5em}
+\liti 证明函数 $f(x) = \dfrac 1 x$ 在 $(0, +\infty)$ 上是减函数。
+\vspace{0.5em}
+
+\zhengming  设 $x_1 > 0$，$x_2 > 0$，且 $x_1 < x_2$，则
+
+\begin{minipage}{10cm}
+    \begin{align*}
+        & f(x_1) = \dfrac 1 {x_1}, \qquad f(x_2) = \dfrac 1 {x_2} \text{。} \\
+        & f(x_2) - f(x_1) = \dfrac 1 {x_2} - \dfrac 1 {x_1} = \dfrac {x_1 - x_2} {x_1x_2} \text{。}
+    \end{align*}
+\end{minipage}
+
+由 $x_1 > 0$，$x_2 > 0$，得 $x_1x_2 > 0$；又由 $x_1 < x_2$，得 $x_1 - x_2 < 0$。于是
+$$ f(x_2) - f(x_1) < 0, \qquad f(x_2) < f(x_1) \text{。}$$
+
+所以 $f(x) = \dfrac 1 x$ 在 $(0, +\infty)$ 上是减函数。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{如图，已知函数 $f(x)$, $g(x)$ 的图象（包括端点），根据图象说出函数的单调区间，
+以及在每一单调区间上，函数是增函数还是减函数。}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \input{pic/lx-1-6-1}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/lx-1-6-2}
+    \caption*{（2）}
+    \end{minipage}
+    \caption*{（第1题）}
+\end{figure}
+
+\xiaoti{证明函数 $f(x) = -2x + 1$ 在 $(-\infty, +\infty)$ 上是减函数。}
+
+\vspace{0.5em}
+\xiaoti{证明函数 $f(x) = \dfrac 3 x$ 在 $(-\infty, 0)$ 上是减函数。}
+\vspace{0.5em}
+
+\xiaoti{证明函数 $f(x) = x^2 + 1$ 在 $(0, +\infty)$ 上是增函数。}
+
+\end{xiaotis}

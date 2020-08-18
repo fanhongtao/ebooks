@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.5) -- (0,1.5) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \draw let \n{pi} = {3.1415}
+        in
+            (-\n{pi},0) -- (-\n{pi},0.2) node[anchor=south] {$-\pi$}
+            (-\n{pi}/2,0) -- (-\n{pi}/2,0.2) node[anchor=south] {$-\frac {\pi} {2}$}
+            (\n{pi}/2,0.2) -- (\n{pi}/2,0) node[anchor=north] {$\frac {\pi} {2}$}
+            (\n{pi},0.2) -- (\n{pi},0) node[anchor=north] {$\pi$}
+            [domain=-\n{pi}:\n{pi},samples=50] plot (\x, {sin(\x r)});
+    
+    \node at (1.5,1.3) {$y = g(x)$};
+\end{tikzpicture}
