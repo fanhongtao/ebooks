@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-2) -- (0,2) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+
+    \coordinate (A1) at (0.5,0.3);
+    \coordinate (A5) at (3.0,0.8);
+    \draw [name path=a0] (A1) .. controls(1.2,2) and (2.1,2) .. (A5);
+    \draw [rotate around y=180] (0.5,0.3) .. controls(1.2,2) and (2.1,2) .. (3.0,0.8);
+    
+    \path [name path=a2] (1.0,0) -- (1.0,3);
+    \path [name path=a3] (1.7,0) -- (1.7,3);
+    \path [name path=a4] (2.5,0) -- (2.5,3);
+    \fill let \p1 = (A1) in 
+        (\p1) circle[radius=2pt] +(-0.2,0.1) node[anchor=south] {$A_1$}
+        (-\x1,\y1) circle[radius=2pt] +(+0.2,0.1) node[anchor=south] {$A'_1$};
+    \fill [name intersections={of=a0 and a2, by=A2}] let \p2 = (A2) in
+        (\p2) circle[radius=2pt] +(-0.1,0.1) node[anchor=south] {$A_2$}
+        (-\x2,\y2) circle[radius=2pt] +(0.1,0.1) node[anchor=south] {$A'_2$};
+    \fill [name intersections={of=a0 and a3, by=A3}] let \p3 = (A3) in
+        (\p3) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_3$}
+        (-\x3,\y3) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_3$};
+    \fill [name intersections={of=a0 and a4, by=A4}] let \p4 = (A4) in
+        (\p4) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_4$}
+        (-\x4,\y4) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_4$};
+    \fill let \p5 = (A5) in
+        (\p5) circle[radius=2pt] +(0.2,0.1) node[anchor=south] {$A_5$}
+        (-\x5,\y5) circle[radius=2pt] +(-0.2,0.1) node[anchor=south] {$A_5$};
+\end{tikzpicture}

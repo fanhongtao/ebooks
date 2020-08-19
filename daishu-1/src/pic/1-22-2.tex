@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-2) -- (0,2) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+
+    \coordinate (A1) at (0.5,0.3);
+    \coordinate (A5) at (3.0,0.8);
+    \draw [name path=a0] (A1) .. controls(1.2,2) and (2.1,2) .. (A5);
+
+    \path [name path=a2] (1.0,0) -- (1.0,3);
+    \path [name path=a3] (1.7,0) -- (1.7,3);
+    \path [name path=a4] (2.5,0) -- (2.5,3);
+    \fill (A1) circle[radius=2pt] +(-0.2,0.1) node[anchor=south] {$A_1$};
+    \fill [name intersections={of=a0 and a2, by=A2}] (A2) circle[radius=2pt] +(-0.1,0.1) node[anchor=south] {$A_2$};
+    \fill [name intersections={of=a0 and a3, by=A3}] (A3) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_3$};
+    \fill [name intersections={of=a0 and a4, by=A4}] (A4) circle[radius=2pt] +(0,0.1) node[anchor=south] {$A_4$};
+    \fill (A5) circle[radius=2pt] +(0.2,0.1) node[anchor=south] {$A_5$};
+\end{tikzpicture}

@@ -1,0 +1,164 @@
+\subsection{函数的奇偶性}
+
+对于函数 $f(x) = 3x$，有 $f(-x) = -3x$，即 $f(-x) = -f(x)$；
+而对于函数 $f(x) = x^2$，有 $f(-x) = (-x)^2 = x^2$，即 $f(-x) = f(x)$。
+
+一般地，对于函数 $f(x)$：
+
+1. 如果对于函数定义域内任意一个 $x$，都有 $f(-x) = -f(x)$，那么函数 $f(x)$ 就叫做\textbf{奇函数}；
+
+2. 如果对于函数定义域内任意一个 $x$，都有 $f(-x) = f(x)$，那么函数 $f(x)$ 就叫做\textbf{偶函数}。
+
+\liti 判断下列函数是否具有奇偶性：
+
+\begin{xiaoxiaotis}
+    \begin{tabular}[t]{*{2}{@{}p{14em}}} 
+        \xiaoxiaoti {$f(x) = x^3$;} & \xiaoxiaoti {$f(x) = 2x^4 + 3x^2$;} \\
+        \xiaoxiaoti {$f(x) = x^3 + x^{-\frac 1 3}$;} & \xiaoxiaoti {$f(x) = x + 1$。}
+    \end{tabular}
+\end{xiaoxiaotis}
+
+\jie （1） $f(-x) = (-x)^3 = -x^3$，即
+$$f(-x) = -f(x) ,$$
+所以 $f(x) = x^3$ 是奇函数。
+
+（2） $f(-x) = 2(-x)^4 + 3(-x)^2 = 2x^4 + 3x^2$，即
+$$f(-x) = f(x) ,$$
+所以 $f(x) = 2x^4 + 3x^2$ 是偶函数。
+
+（3） $f(-x) = (-x)^3 + (-x)^{-\frac 1 3} = -x^3 - x^{-\frac 1 3} = -(x^3 + x^{-\frac 1 3})$，即
+$$f(-x) = -f(x) ,$$
+所以 $f(x) = x^3 + x^{-\frac 1 3}$ 是奇函数。
+
+（4） $f(-x) = -x + 1$，$-x + 1 \neq -f(x)$，而且 $-x + 1 \neq f(x)$，
+所以 $f(x) = x + 1$ 既不是奇函数，也不是偶函数。
+
+\liti 已知函数 $f(x)$ 是奇函数，而且在 $(0, +\infty)$ 上是增函数，
+$f(x)$ 在 $(-\infty, 0)$ 上是增函数还是减函数？
+
+\jie 设 $x_1 < 0$，$x_2 < 0$，而且 $x_1 < x_2$。
+\begin{align}
+    &\because \quad f(x) \text{是奇函数} \notag \\
+    &\therefore \quad f(-x_1) = -f(x_1), \quad f(-x_2) = -f(x_2) \text{。} \tag{1}\label{eq:1-1}
+\end{align}
+
+由假设可知 $-x_1 > 0$，$-x_2 > 0$，而且 $-x_1 > -x_2$。又已知 $f(x)$ 在 $(0, +\infty)$ 上是增函数，于是有
+\begin{gather}
+    f(-x_1) > f(-x_2) \text{。} \tag{2}\label{eq:1-2}
+\end{gather}
+
+把 \eqref{eq:1-1} 代入  \eqref{eq:1-2}，得 $-f(x_1) > -f(x_2)$，从而
+$$f(x_1) < f(x_2) \text{。}$$
+由此可知，函数 $f(x)$ 在 $(-\infty, 0)$ 上是增函数。
+
+关于奇函数、偶函数的图象，有下面的定理。
+
+\begin{theorem}
+    奇函数的图象关于原点成中心对称图形；反过来，如果一个函数的
+    图象关于原点成中心对称图形，那么这个函数是奇函数。
+\end{theorem}
+
+\zhengming 设函数 $f(x)$ 是奇函数，则有 $f(-x) = -f(x)$。如图 \ref{fig:1-20}，在 $f(x)$ 的图象
+上任取一点 $P(a, f(a))$，那么 $P$ 关于原点的对称点是点 $P'(-a, -f(a))$，即 $P'(-a, f(-a))$。
+而点 $P'(-a, f(-a))$ 是 $f(x)$ 的图象上的点。这就是说，函数 $f(x)$ 图象上任意一点关于原点的对称点
+都在 $f(x)$ 的图象上，所以 $f(x)$ 的图象关于原点成中心对称图形。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-20}
+    \caption{}\label{fig:1-20}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-21}
+    \caption{}\label{fig:1-21}
+    \end{minipage}
+\end{figure}
+
+反过来，如果 $f(x)$ 的图象关于原点成中心对称图形，在 $f(x)$ 的图象上任取一点 $P(a, f(a))$，那么点
+$P$ 关于原点的对称点 $P'(-a, -f(a))$ 也在 $f(x)$ 的图象上。因为 $x = -a$ 时，$f(x) = f(-a)$，
+而函数值是唯一的（即每个原象只有一个象），即有 $f(x) = f(-a)$，但 $x$ 取值是任意的，于是在 $f(x)$
+的整个定义域内都有 $f(-x) = -f(x)$。从而 $f(x)$ 是奇函数。
+
+\begin{theorem}
+    偶函数的图象关于 $y$ 轴成轴对称图形；反过来，如果一个函数的
+    图象关于 $y$ 轴成轴对称图形，那么这个函数是偶函数。
+\end{theorem}
+
+请同学们自己证明（参看图 \ref{fig:1-21}）。
+
+\liti 已知函数 $f(x)$ 是偶函数，它在 $y$ 轴右边的图象如图 \ref{fig:1-22}（1）所示，画出 $f(x)$ 在 $y$ 轴左边的图象。
+
+\jie 因为偶函数的图象是关于 $y$ 轴成轴对称图形，所以画法如下：
+
+（1）如图 \ref{fig:1-22}（2），在 $y$ 轴右边的图象上取几个点。例如取点 $A_1$，$A_2$，$A_3$，$A_4$，$A_5$
+（这些点一般应包括图象曲线的最低、最高点等“关键”点）。
+
+（2）画出这些点关于 $y$ 轴的对称点。例如点 $A_1$，$A_2$，$A_3$，$A_4$，$A_5$ 的对称点分别
+为 $A'_1$，$A'_2$，$A'_3$，$A'_4$，$A'_5$（图\ref{fig:1-22}（3））。
+
+（3）用一条平滑曲线把对称点连续起来。例如用平滑曲线连接点 $A'_1$，$A'_2$，$A'_3$，$A'_4$，$A'_5$ 后，就得到
+$f(x)$ 在 $y$ 轴左边的图象（图\ref{fig:1-22}（3））。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-22-1}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-22-2}
+    \caption*{（2）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-22-3}
+    \caption*{（3）}
+    \end{minipage}
+    \caption{}\label{fig:1-22}
+\end{figure}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{判断下列函数是否具有奇偶性：}
+
+\begin{xiaoxiaotis}
+    \begin{tabular}[t]{*{2}{@{}p{14em}}} 
+        \xiaoxiaoti {$f(x) = x^{-2}$；} & \xiaoxiaoti {$f(x) = 3x^{\frac 2 3}$；} \\
+        \xiaoxiaoti {$f(x) = 2x + \sqrt[3]{x}$；} & \xiaoxiaoti {$f(x) = x + \dfrac 1 x$；} \\
+        \xiaoxiaoti {$f(x) = 2x^{-4} - x^{-2}$。}
+    \end{tabular}
+\end{xiaoxiaotis}
+
+\xiaoti{证明函数 $y = x^n$ 当 $n$ 为奇数时是奇函数，当 $n$ 为偶数时是偶函数。}
+
+\xiaoti{已知函数 $f(x)$ 是偶函数，而且在 $(-\infty, 0 )$ 上是增函数。$f(x)$ 在 $(0, +\infty)$ 上是增函数还是减函数？}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/lx-1-7-4}
+    \caption*{（第4题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/lx-1-7-5}
+    \caption*{（第5题）}
+    \end{minipage}
+\end{figure}
+
+\xiaoti{如图，已知偶函数 $f(x)$ 在 $y$ 轴右边的一部分图象，根据偶函数的性质，画出它在 $y$ 轴左边的图象。}
+
+\xiaoti{如图，已知奇函数 $f(x)$ 在 $y$ 轴右边的一部分图象，根据奇函数的性质，画出它在 $y$ 轴左边的图象。}
+
+\end{xiaotis}

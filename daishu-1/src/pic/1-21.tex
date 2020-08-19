@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-2) -- (0,2) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \draw [name path=a1] (0,1) .. controls(0.8,1) and (1.6,0.3) .. (2.5,0.8);
+    \draw [rotate around y=180] (0,1) .. controls(0.8,1) and (1.6,0.3) .. (2.5,0.8);
+    \path [name path=a2] (1,0) -- (1,2);
+    \draw [name intersections={of=a1 and a2, by=A}]
+        let \p1 = (A)
+        in (\x1,\y1) -- (\x1,0) node[anchor=north] {a}
+           (-\x1,\y1) -- (-\x1,0) node[anchor=north] {-a};
+    \node at (1.5,1.3) {$P = (a, f(a))$};
+    \node at (-1.5,1.3) {$P = (-a, f(-a))$};
+\end{tikzpicture}
