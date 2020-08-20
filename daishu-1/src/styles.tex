@@ -3,6 +3,7 @@
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{calc}
 \usepackage{caption}
 \captionsetup[figure]{labelsep=none}
 
@@ -11,6 +12,10 @@
 \usepackage{float}
 \usepackage{geometry}
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black}
+
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{
@@ -20,6 +25,8 @@
   patterns,
   patterns.meta,
 }
+
+\usepackage{xparse}
 
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
@@ -41,9 +48,6 @@
 
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
-
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=black}
 
 \newcounter{cntliti}[subsection]           % 例题的计数器
 \newcommand{\liti}{ % 例题的标题
@@ -69,10 +73,20 @@
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
 
+\newlength{\lenLabel}        % 用于计算题目前编号所占的长度。仅供内部使用
+
 \newenvironment{xiaotis}{ % “小题” 环境
-  \newcommand{\xiaoti}[1] { % 小题的标题
-    \stepcounter{cntxiaoti}
-    \hangafter 1\setlength{\hangindent}{3.2em}{\labelxiaoti ##1}
+  \NewDocumentCommand \xiaoti {s m} { % 小题的标题
+    \IfBooleanTF {##1}
+      {
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\hspace{\lenLabel}##2}
+      }
+      {
+        \stepcounter{cntxiaoti}
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoti ##2}
+      }
   }
   \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }  % 1. 2. 3. ……
 }{%
