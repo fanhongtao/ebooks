@@ -156,3 +156,7 @@
 
 %----------------------------------
 \newtheorem{theorem}{定理}
+
+%----------------------------------
+\newcounter{mylabel}
+\newcommand{\mylabel}[1]{\refstepcounter{mylabel} \label{#1}}

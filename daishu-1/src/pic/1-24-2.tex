@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0,0) circle [x radius=1cm, y radius=3cm];
+    \node at (-0.6,0) {$B$};
+    \node at (0,2) {$2$};
+    \node at (0,1) {$4$};
+    \node at (0,0) {$6$};
+    \node at (0,-1) {$8$};
+    \node at (0,-2) {$10$};
+
+    \draw (3,0) circle [x radius=1cm, y radius=3cm];
+    \node at (3.6,0) {$A$};
+    \node at (3,2) {$1$};
+    \node at (3,1) {$2$};
+    \node at (3,0) {$3$};
+    \node at (3,-1) {$4$};
+    \node at (3,-2) {$5$};
+
+    \draw [->] (0.2,2) .. controls(1.0,1.5) and (2.0,1.5) .. (2.8,2);
+    \draw [->] (0.2,1) .. controls(1.0,0.5) and (2.0,0.5) .. (2.8,1);
+    \draw [->] (0.2,0) .. controls(1.0,-0.5) and (2.0,-0.5) .. (2.8,0);
+    \draw [->] (0.2,-1) .. controls(1.0,-1.5) and (2.0,-1.5) .. (2.8,-1);
+    \draw [->] (0.2,-2) .. controls(1.0,-2.5) and (2.0,-2.5) .. (2.8,-2);
+
+    %\node at (1.5,3) {乘$\frac 1 2$};
+    \draw (1.5,2.8) node {乘$-$} (1.75,3.0) node {$1$} (1.75,2.5) node {$2$};
+    \node at (1.5,-3) {$g: B \to A$};
+\end{tikzpicture}

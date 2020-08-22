@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0,0) circle [x radius=1cm, y radius=3cm];
+    \node at (-0.6,0) {$A$};
+    \node at (0,2) {$1$};
+    \node at (0,1) {$2$};
+    \node at (0,0) {$3$};
+    \node at (0,-1) {$4$};
+    \node at (0,-2) {$5$};
+
+    \draw (3,0) circle [x radius=1cm, y radius=3cm];
+    \node at (3.6,0) {$B$};
+    \node at (3,2) {$2$};
+    \node at (3,1) {$4$};
+    \node at (3,0) {$6$};
+    \node at (3,-1) {$8$};
+    \node at (3,-2) {$10$};
+
+    \draw [->] (0.2,2) .. controls(1.0,2.5) and (2.0,2.5) .. (2.8,2);
+    \draw [->] (0.2,1) .. controls(1.0,1.5) and (2.0,1.5) .. (2.8,1);
+    \draw [->] (0.2,0) .. controls(1.0,0.5) and (2.0,0.5) .. (2.8,0);
+    \draw [->] (0.2,-1) .. controls(1.0,-0.5) and (2.0,-0.5) .. (2.8,-1);
+    \draw [->] (0.2,-2) .. controls(1.0,-1.5) and (2.0,-1.5) .. (2.8,-2);
+
+    \node at (1.5,3) {乘$2$};
+    \node at (1.5,-3) {$f: A \to B$};
+\end{tikzpicture}
