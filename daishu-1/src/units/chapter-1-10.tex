@@ -1,0 +1,95 @@
+\subsection{反函数}\label{subsec:1-10}
+
+函数 $y = f(x) = 2x + 4 \; (x \in R)$ 是由 $f(x)$ 的定义域 $R$ 到值域 $R$ 上的一个一一映射
+$f: R \to R$ 确定的，这个一一映射使 $f(x)$ 的值域 $R$ 中的元素 $y = 2x + 4$ 和定义域 $R$
+中的元素 $x$ 对应。那么，$f: A \to B$ 的逆映射 $f^{-1}: B \to A$ 就确定了一个函数
+$x = \dfrac{1}{2}y - 2 \; (y \in R)$，它使 $f(x)$ 的定义域 $R$ 中的元素 $x = \dfrac{1}{2}y - 2$
+和 $f(x)$ 的值域 $R$ 中的元素 $y$ 对应。
+\vspace{0.5em}
+
+一般地，如果确定函数 $y = f(x)$ 的映射 $f: A \to B$ 是 $f(x)$ 的定义域 $A$ 到值域 $B$ 上
+的一一映射，那么这个映射的逆映射 $f^{-1}: B \to A$ 所确定的函数 $x = f^{-1}(y)$ 叫做函数
+$y = f(x)$ 的\textbf{反函数}。函数 $y = f(x)$ 的定义域、值域分别是函数 $x = f^{-1}(y)$ 的值域、定义域。
+
+\vspace{0.5em}
+这样，函数 $x = f^{-1}(y) = \dfrac{1}{2}y - 2 \; (y \in R)$ 就是函数 $y = f(x) = 2x + 4 \; (x \in R)$ 的反函数。
+\vspace{0.5em}
+
+又如，第 \ref{subsec:1-8} 节例 \hyperref[li:1-8-4]{（4）} 中的映射 $f: \buji{R^-} \to \buji{R^-}$ 确定函数
+$y = f(x) = x^2 \; (x \in \buji{R^-})$， 由第 \ref{subsec:1-9} 节知道，这个映射的逆映射 $f^{-1}: \buji{R^-} \to \buji{R^-}$
+确定函数 $x = f^{-1}(y) = \sqrt{y} \; (y \in \buji{R^-})$。函数 $x = f^{-1}(y) = \sqrt{y} \; (y \in \buji{R^-})$
+就是函数 $y = f(x) = x^2 \; (x \in \buji{R^-})$ 的反函数。
+
+在函数式 $x = f^{-1}(y)$ 中，$y$ 表示自变量，$x$ 表示函数。但在习惯上，我们一般用 $x$ 表示自变量，用 $y$ 表示函数，
+为此我们常常对调函数式 $x = f^{-1}(y)$ 中的字母 $x$，$y$，把它改写成 $y = f^{-1}(x)$ （在本书中，今后凡不特别说明，
+函数的反函数都是指这种经过改写的反函数）。
+
+
+\liti 求下列函数的反函数：
+
+\begin{xiaoxiaotis}
+    \begin{tabular}[t]{@{}p{14em}@{}p{20em}} 
+        \xiaoxiaoti {$y = 3x - 1 \; (x \in R)$；} & \xiaoxiaoti {$y = x^3 + 1 \; (x \in R)$；} \\
+        \xiaoxiaoti {$y = \sqrt{x} + 1 \; (x \geqslant 0)$；} & \xiaoxiaoti {$y = \dfrac{2x + 3}{x - 1} \; (x \in R \text{，且} x \neq 1)$。}
+    \end{tabular}
+\end{xiaoxiaotis}
+
+\jie （1）由于 $y = 3x -1$，可得 $x = \dfrac{y + 1}{3}$，
+
+$\therefore$ 函数 $y = 3x - 1 \; (x \in R)$ 的反函数是 $y = \dfrac{x + 1}{3} \; (x \in R)$；
+
+（2）由 $y = x^3 + 1$，可得 $x = \sqrt[3]{y - 1}$，
+
+$\therefore$ 函数 $y = x^3 + 1 \; (x \in R)$ 的反函数是 $y = \sqrt[3]{x - 1} \; (x \in R)$；
+
+（3）由 $y = \sqrt{x} + 1$，可得 $x = (y - 1)^2$，
+
+$\therefore$ 函数 $y = \sqrt{x} + 1 \; (x \geqslant 0)$ 的反函数是 $y = (x - 1)^2 \; (x \geqslant 1)$；
+
+\vspace{0.5em}
+（4）由$y = \dfrac{2x + 3}{x - 1}$，可得 $x = \dfrac{y + 3}{y - 2}$，
+\vspace{0.5em}
+
+$\therefore$ 函数 $y = \dfrac{2x + 3}{x - 1} \; (x \in R \text{，且} x \neq 1)$ 的反函数是 $y = \dfrac{x + 3}{x - 2} \; (x \in R \text{，且} x \neq 2)$；
+\vspace{0.5em}
+
+求反函数时，由于确定函数 $y = f(x)$ 的映射 $f: A \to B$ 是 $f$ 的定义域 $A$ 到值域 $B$ 上的一一映射，
+我们可以先把函数式 $y = f(x)$ 看作以 $x$ 为未知数的方程，从中解出 $x = f^{-1}(y)$，再改写为 $y = f^{-1}(x)$。
+
+如果函数 $y = f(x)$ 的反函数是 $y = f^{-1}(x)$，那么显然函数 $y = f^{-1}(x)$ 的反函数就是 $y = f(x)$。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{巳知函数 $y = f(x)$，求它的反函数 $y = f^{-1}(x)$：}
+
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$y = -2x + 3 \; (x \in R)$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$y = -\dfrac 2 x \; (x \in R \text{，且} x \neq 0)$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$y = x^4 \; (x \geqslant 0)$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$y = \dfrac {x}{3x + 5} \; (x \in R \text{，且} x \neq -\dfrac 5 3)$。}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}
+
+\begin{xiaoxiaotis}
+    \vspace{-1.7em}
+    \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{函数 $y = 2x^2 - 3 \; (x \in R)$ 有没有反函数？为什么？}
+    \end{minipage}
+    
+    \xiaoxiaoti{怎样改变定义域，才能使它有反函数？}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
