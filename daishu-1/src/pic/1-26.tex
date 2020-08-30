@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \foreach \x in {-1,1} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {-1,1} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+    }
+    
+    \draw[domain=-1.3:1.3,samples=200] plot (\x, {\x^3}) +(0, 0.3) node {$y = x^3$};
+    \draw[domain=-2:2, dash pattern=on 5mm off 2mm] plot (\x, \x) +(0.5, -0.3) node {$y = x$};
+    \draw[domain=-2:2,,samples=200] plot (\x, {\x^(1/3)}) +(0, -0.5) node {$y = \sqrt[3]{x}$};
+\end{tikzpicture}

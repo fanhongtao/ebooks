@@ -95,9 +95,11 @@
 \newenvironment{xiaoxiaotis}{ % “小小题” 环境
   \newcommand{\xiaoxiaoti}[1] { % 小小题的标题
     \stepcounter{cntxiaoxiaoti}
-    \hangafter 1\setlength{\hangindent}{5.4em}{\hspace{1em}\labelxiaoxiaoti##1}
+    \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}
+    \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoxiaoti##1}
   }
   \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）} % （1） （2） （3） ……
+  \setlength{\parindent}{\parindent + \lenLabel}
 }{%
 }
 

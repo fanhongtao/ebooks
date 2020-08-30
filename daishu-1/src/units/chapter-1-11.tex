@@ -1,0 +1,119 @@
+\subsection{互为反函数的函数图象间的关系}\label{subsec:1-11}
+
+看下面的例题：
+
+\liti 求函数 $y = 3x - 2 \; (x \in R)$ 的反函数，并且画出原来的函数和它的反函数的图象。
+
+\vspace{0.5em}
+\jie 从 $y = 3x - 2$，得 $x = \dfrac {y+2}{3}$，因此，函数 $y = 3x - 2 \; (x \in R)$
+的反函数是 $y = \dfrac {x+2}{3} \; (x \in R)$。
+
+函数 $y = 3x - 2 \; (x \in R)$ 和它的反函数 $y = \dfrac {x+2}{3} \; (x \in R)$ 的图象如图 \ref{fig:1-25} 中所示。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-25}
+    \caption{}\label{fig:1-25}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/1-26}
+    \caption{}\label{fig:1-26}
+    \end{minipage}
+\end{figure}
+
+\liti 求函数 $y = x^3 \; (x \in R)$ 的反函数，并且画出原来的函数和它的反函数的图象。
+
+解：从 $y = x^3$，得 $x = \sqrt[3]{y}$。 因此，函数 $y = x^3 \; (x \in R)$ 的反函数是 $y = \sqrt[3]{x} \; (x \in R)$。
+
+函数  $y = x^3$ 和它的反函数 $y = x^3 \; (x \in R)$ 的图象如图 \ref{fig:1-26} 中所示。
+
+\vspace{0.5em}
+从图 \ref{fig:1-25} 可以看出，函数 $y = 3x - 2$ 和它的反函数 $y = \dfrac {x+2}{3} \; (x \in R)$
+的图象是以直线 $y = x$ 为对称轴的对称图形（以后简称\textbf{关于直线 $y = x$ 对称}；
+同样，以原点为对称中心的对称图形也简称 \textbf{关于原点对称}）。从图 \ref{fig:1-26} 也可以看出，
+函数 $y = x^3 \; (x \in R)$ 和它的反函数 $y = \sqrt[3]{x} \; (x \in R)$ 的图象关于直线 $y = x$ 对称。
+
+现在我们来证明下面的定理：
+
+\begin{theorem}
+    函数 $y = f(x)$ 的图象和它的反函数 $y = f^{-1}(x)$ 的图象关于直线 $y = x$ 对称。
+\end{theorem}
+
+\zhengming 设 $M(a,b)$ 是 $y = f(x)$ 的图象上的任意一点，那么 $x = a$ 时，$f(x)$ 有唯一的值 $f(a) = b$。
+因为 $y = f(x)$ 有反函数 $y = f^{-1}(x)$，所以 $x = b$ 时，$f^{-1}(x)$ 有唯一的值 $f^{-1}(b) = a$，即
+点 $M'(b,a)$ 在反函数 $y = f^{-1}(x)$  的图象上。
+
+如果 $a = b$，那么 $M$，$M'$ 是直线 $y = x$ 上的同一个点，因此它们关于直线 $y = x$ 对称。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/1-27}
+    \caption{}\label{fig:1-27}
+\end{figure}
+
+现设 $a \neq b$。如图 \ref{fig:1-27}，在直线 $y = x$ 上任取一点 $P(c,c)$，连接 $PM$，$PM'$ 及 $MM'$。
+由两点间距离公式，
+
+\begin{align*}
+    PM &= \sqrt{(a - c)^2 + (b - c)^2} \text{，} \\
+    PM' &= \sqrt{(b - c)^2 + (a - c)^2} \text{，} \\
+    \therefore &\quad PM = PM' \text{。}
+\end{align*}
+
+由此可知，直线 $y = x$ 上任意一点到两个定点 $M$，$M'$ 的距离相等，因此直线 $y = x$ 是线段 $MM'$
+的垂直平分线，从而点 $M$，$M'$ 关于直线 $y = x$ 对称。
+
+因为点 $M$ 是 $y = f(x)$ 的图象上的任意一点，所以 $y = f(x)$ 图象上任意一点关于直线 $y = x$ 的
+对称点都在它的反函数 $y = f^{-1}(x)$ 的图象上。由 $f$，$f^{-1}$ 的互逆性可知，函数  $y = f^{-1}(x)$
+图象上任意一点关于直线 $y = x$ 的对称点也都在它的反函数 $y = f(x)$ 的图象上。这就是说，$y = f(x)$
+和  $y = f^{-1}(x)$ 的图象关于直线 $y = x$ 对称。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{}
+
+\begin{xiaoxiaotis}
+    \vspace{-1em} %\vspace{-1.7em}
+    \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{在直角坐标系内，画出直线 $y = x$，然后找出下面这些点关于直线 $y = x$
+        的对称点，并写出它们的坐标（不必说明理由）：\\
+        $A(2,3)$，$B(1,0)$，$C(-2,-1)$，$D(0,-1)$。
+    }
+    \end{minipage}
+    \vspace{0.7em}
+
+    \xiaoxiaoti{上面所求得的各对称点的坐标同原来的点的坐标有什么关系？}
+
+    \xiaoxiaoti{求出点 $P(x_0, y_0)$ 关于直线 $y = x$ 的对称点 $Q$ 的坐标。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{设 $a \neq 0$，$b \neq 0$，求证下列各题中的两个点关于直线 $y = x$ 对称：}
+
+\begin{xiaoxiaotis}
+    \begin{tabular}[t]{@{}p{14em}@{}p{20em}} 
+        \xiaoxiaoti {$M(a,0)$，$M'(0,a)$；} & \xiaoxiaoti {$M(a,a)$，$M'(a,a)$；} \\
+        \xiaoxiaoti {$M(a,b)$，$M'(b,a)$。}
+    \end{tabular}
+\end{xiaoxiaotis}
+
+\xiaoti{求下列函数的反函数，并画出函数及其反函数的图象：}
+
+\begin{xiaoxiaotis}
+    \xiaoxiaoti{$y = 4x - \dfrac 1 2 \; (x \in R)$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$y = \dfrac 1 {x + 3} \; (x \in R \text{，且} x \neq -3)$。}
+    \vspace{0.5em}
+\end{xiaoxiaotis}
+
+\xiaoti{画出函数 $y = x^2 \; (x \in [0, +\infty))$ 的图象，再利用对称关系画出它的反函数的图象。}
+
+\end{xiaotis}
+
