@@ -74,7 +74,9 @@
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
 
-\newlength{\lenLabel}        % 用于计算题目前编号所占的长度。仅供内部使用
+\newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
+\newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
+\setlength{\lenParent}{0em}
 
 \newenvironment{xiaotis}{ % “小题” 环境
   \NewDocumentCommand \xiaoti {s m} { % 小题的标题
@@ -94,13 +96,13 @@
 }
 
 \newenvironment{xiaoxiaotis}{ % “小小题” 环境
+  \setlength{\lenParent}{\lenParent + \lenLabel}
   \newcommand{\xiaoxiaoti}[1] { % 小小题的标题
     \stepcounter{cntxiaoxiaoti}
     \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}
-    \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoxiaoti##1}
+    \hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}\labelxiaoxiaoti##1}
   }
   \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）} % （1） （2） （3） ……
-  \setlength{\parindent}{\parindent + \lenLabel}
 }{%
 }
 
