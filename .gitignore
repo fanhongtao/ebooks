@@ -1,4 +1,5 @@
 *.aux
+*.dvi
 *.fdb_latexmk
 *.fls
 *.gz

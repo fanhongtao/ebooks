@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.5,0) -- (6.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-0.5) -- (0,5.5) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \foreach \x in {1,2,...,6} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {0.2,0.4,0.6,0.8,1} {
+        \draw (0.2,\y*5) -- (0,\y*5) node[anchor=east] {\y};
+    }
+    
+    \draw[domain=0:6.3,samples=50] plot (\x, {0.84^\x * 5}) +(-3, +2.3) node {$y = 0.84^x$};
+    \draw[dash pattern=on 5mm off 2mm] (0, 2.5) -- (6, 2.5);
+\end{tikzpicture}

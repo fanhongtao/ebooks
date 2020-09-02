@@ -1,0 +1,153 @@
+\subsection{指数函数}\label{subsec:1-12}
+
+我们来研究下面的问题：
+
+某种细胞分裂时，由1个分裂成2个，2个分裂成4个，……。一个这样的细胞分裂 $x$ 次后，得到的细胞的个数 $y$ 与 $x$ 的函数关系式是
+$$y = 2^x \text{。}$$
+
+在这个函数里，自变量 $x$ 出现在指数的位置上，而底数2是一个大于零且不等于1的常量。
+
+一般地，函数 $y = a^x$ 叫做\textbf{指数函数}，其中 $a$ 是一个大于零且不等于 $1$ 的常量。函数的定义域是实数集 $R$。
+\footnote{$a > 0$，$x$ 是一个无理数时，$a^x$ 是一个确定的实数。对于无理数指数幂，过去学过的有理
+    数指数幂的性质和运算法则都适用。有关概念和定理证明在本书中从略。}
+
+现在研究指数函数 $y = a^x$ 的图象和性质。先画出一些指数函数的图象，例如，画出 $y = 2^x$，
+$y = 10^x$，$y = \left( \dfrac 1 2 \right)^x$ 的图象。
+
+列出 $x$，$y$ 的对应值表，用描点法画出图象（图\ref{fig:1-28}）:
+
+\begin{table}[H]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|w{c}{5em}|*{9}{w{c}{2em}|}}
+    \hline
+    $x$ & $\dots$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+    $y=2^x$ & $\dots$ & $\dfrac 1 8$ & $\dfrac 1 4$ & $\dfrac 1 2$ & $1$ & $2$ & $4$ & $8$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|w{c}{5em}|*{7}{w{c}{2.9em}|}}
+    \hline
+    $x$ & $\dots$ & $-1$ & $-\dfrac 1 2$ & $0$ & $\dfrac 1 2$ & $1$ & $\dots$ \\
+    \hline
+    $y=10^x$ & $\dots$ & $0.1$ & $0.32$ & $1$ & $3.16$ & $10$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|w{c}{5em}|*{9}{w{c}{2em}|}}
+    \hline
+    $x$ & $\dots$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+    $y=\left( \dfrac 1 2 \right)^x$ & $\dots$ & $8$ & $4$ & $2$ & $1$ & $\dfrac 1 2$ & $\dfrac 1 4$ & $\dfrac 1 8$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \input{pic/1-28}
+    \caption{}\label{fig:1-28}
+\end{figure}
+
+一般地，指数函数 $y = a^x$ 在其底数 $a > 1$ 及 $0 < a < 1$ 这两种情况下的图象和性质如下表所示：
+
+\begin{table}[H]
+\begin{tabular}{|c|l|l|}
+    \hline
+    \multirow{2}{*}{图象} & \makecell[c]{$a > 1$} & \makecell[c]{$0 < a < 1$} \\
+    \cline{2-3}
+    & \includegraphics{pic-pdf/zhi-shu-han-shu-1.pdf} & \includegraphics{pic-pdf/zhi-shu-han-shu-2.pdf} \\
+    \hline
+    \multirow{4}{*}{性质} & \multicolumn{2}{l|}{（1）$y > 0$;} \\
+    \cline{2-3}
+    & \multicolumn{2}{l|}{（2）当 $x = 0$ 时，$y = 1$;} \\
+    \cline{2-3}
+    &  \makecell[l]{（3）当 $x>0$ 时，$y>1$，\\ \hspace{2em} $x<0$ 时，$0<y<1$ ；}  & \makecell[l]{（3）当 $x>0$ 时，$0<y<1$，\\ \hspace{2em} $x<0$ 时，$y>1$ ；} \\
+    \cline{2-3}
+    & （4）在 $(-\infty, +\infty)$ 上是增函数。 & （4）在 $(-\infty, +\infty)$ 上是减函数。 \\
+    \hline
+\end{tabular}
+\end{table}
+
+\liti 一种放射性物质不断变化为其他物质，每经过一年剩留的质量约是原来的 $84\%$。画出这种物质的剩留量
+随时间变化的图象，并从图象上求出约经过多少年，剩留量是原来的一半（结果保留一个有效数字）。
+
+\jie 设最初的质量是 $1$，经过 $x$ 年，剩留量是 $y$。则
+经过 $1$年，$y = 1 \times 84\% = 0.84^1$；
+经过 $2$年，$y = 0.84 \times 0.84 = 0.84^2$。
+一般地，经过 $x$ 年则 $y = 0.84^x$。这就是所求的函数关系式。据此可以列出下表：
+
+\begin{table}[H]
+\begin{tabular}{|w{c}{5em}|*{7}{w{c}{2em}|}}
+    \hline
+    $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+    \hline
+    $y$ & $1$ & $0.84$ & $0.71$ & $0.59$ & $0.50$ & $0.42$ & $0.35$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+画出指数函数 $y = 0.84^x$ 的图象（图 \ref{fig:1-29}）。从图上看出 $y = 0.5$ 必须并且只需 $x \approx 4$。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/1-29}
+    \caption{}\label{fig:1-29}
+\end{figure}
+
+答：约经过 $4$ 年，剩留量是原来的一半。
+
+\liti 比较下列各题中两个值的大小：
+
+\begin{xiaoxiaotis}
+
+    \hspace{1em}\twoInLine[10em]{\xiaoxiaoti{$1.7^{2.5}$，$1.7^3$；}}{\xiaoxiaoti{$0.8^{-0.1}$，$0.8^{-0.2}$。}}
+
+\end{xiaoxiaotis}
+
+\jie 分别考察指数函数 $y = 1.7^x$ 与 $y = 0.8^x$，根据指数函数的性质知道：
+
+（1） $\because$ \quad $1.7 > 1$，$2.5 < 3$，
+
+$\therefore \quad 1.7^{2.5} < 1.7^3$；
+
+（2） $\because$ \quad $0.8 < 1$，$-0.1 > -0.2$，
+
+$\therefore \quad 0.8^{-0.1} < 0.8^{-0.2}$。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{在同一坐标系内，画出下列函数的图象：}
+\begin{xiaoxiaotis}
+
+    \vspace{0.5em}
+    \twoInLine[10em]{\xiaoxiaoti{$y = 3^x$；}}{\xiaoxiaoti{$y = \left( \dfrac 1 3 \right)^x$。}}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\xiaoti{一片树林中现有木材 $30000 \text{米}^3$，如果每年增长$5\%$，经过 $x$年，树林中有木材 $y\text{米}^3$，
+    写出 $x$，$y$ 间的函数关系式，并且利用图象求约经过多少年，木材可以增加到 $40000 \text{米}^3$ （结果保留一个有效数字)。}
+
+\xiaoti{比较下面各题中两个值的大小：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti {$3^{0.8}$，$3^{0.7}$；} & \xiaoxiaoti {$0.75^{-0.1}$，$0.75^{0.1}$；} \\
+        \xiaoxiaoti {$1.01^2$，$1.01^{3.5}$；} & \xiaoxiaoti {$0.99^3$，$0.99^{4.5}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
