@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-2.5,0) -- (5.0,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.5) -- (0,4.5) node[anchor=east] {$y$};
+    \node at (0.2,-0.2) {$O$};
+    \node at (0.2,0.6) {$1$};
+    \foreach \x in {-1,1,2,3,4} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {-1,2,3,4} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+    }
+    
+    \draw[domain=-2.1:1.9,samples=50] plot (\x, {2^\x}) +(0.5, -0.2) node {$y = 2^x$};
+    \draw[domain=-1.2:0.53,samples=50] plot (\x, {10^\x}) +(0.6, 0.3) node {$y = 10^x$};
+    \draw[domain=1.1:-1.9,samples=50] plot (\x, {(1/2)^\x}) +(0.5, 0.3) node {$y = \displaystyle \left(\frac 1 2 \right)^x$};
+
+    \draw[dash pattern=on 5mm off 2mm] (-1, -1) -- (4, 4) +(0.5,-0.3) node {$y = x$};
+
+    \draw[domain=0.233:3.732,samples=50] plot (\x, {log2(\x)}) +(0.5, -0.3) node {$y = \log_2 x$};
+    \draw[domain=0.0631:3.388,samples=50] plot (\x, {log10(\x)}) +(0.5, 0.3) node {$y = \log_{10} x$};
+    \draw[domain=0.4665:3.732,samples=50] plot (\x, {ln(\x) / ln(1/2)}) +(0.4, 0.4) node {$y = \log_{\frac 1 2} x$};
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{tikz,amsmath}
+\usetikzlibrary{arrows.meta}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.5,0) -- (6,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+    \node at (1.5,0.3) {$(1, 0)$};
+
+    \draw[domain=0.1:5,samples=50] plot (\x, {ln(\x) / ln(0.5)}) +(-1.3, -0.1) node {$y = \log_a x$} +(-1.3, -0.6) node{$(0 < a < 1)$};
+    \draw[dash pattern=on 5mm off 2mm] (1, -3.3) -- (1, 3.3) +(0.5, -0.4) node {$x = 1$};
+\end{tikzpicture}
+\end{document}

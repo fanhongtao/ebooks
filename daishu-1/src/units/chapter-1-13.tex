@@ -1,0 +1,147 @@
+\subsection{对数函数}\label{subsec:1-13}
+
+前面我们讲过细胞分裂问题，知道有的细胞分裂时，得到的细胞的个数 $y$ 是分裂次数 $x$ 的函数，这个函数可以用指数函数 $y = 2^x$ 表示。
+现在我们来研究相反的问题，例如，如果目的是求一个这样的细胞经过多少次分裂，大约可以得到1万个，10万个，……细胞，那么分裂次数 $x$ 就是
+得到的细胞的个数 $y$ 的函数，这个函数写成对数的形式就是
+$$x = \log_2 y \text{。}$$
+
+按照习惯，如果用 $x$ 表示自变量，用 $y$ 表示函数，那么这个函数就是
+$$y = \log_2 x \text{。}$$
+
+由指数的概念知道，确定函数 $y = f(x) = 2^x$ 的映射 $f: R \to R^+$ 是 $f(x)$ 的定义域 $R$
+到值域 $R^+$ 上的一一映射。由对数的概念知道，这一映射的逆映射 $f^{-1}: R^+ \to R$ 所确定的
+函数是 $x = f^{-1}(y)  = \log_2 y$。所以由反函数的概念可知，函数 $y = \log_2 x$ 是指数函数
+$y = 2^x$ 的反函数。
+
+从第 \ref{subsec:1-12} 节可知，指数函数 $y = 2^x$ 的变量 $x$，$y$ 的对应值表是：
+
+\begin{table}[H]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|w{c}{5em}|*{9}{w{c}{2em}|}}
+    \hline
+    $x$ & $\dots$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+    $y$ & $\dots$ & $\dfrac 1 8$ & $\dfrac 1 4$ & $\dfrac 1 2$ & $1$ & $2$ & $4$ & $8$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+那么只要把两行的数值对调，就得到函数 $y = \log_2 x$ 的变量对应值表：
+
+\begin{table}[H]
+\renewcommand\arraystretch{2}
+\begin{tabular}{|w{c}{5em}|*{9}{w{c}{2em}|}}
+    \hline
+    $x$ & $\dots$ & $\dfrac 1 8$ & $\dfrac 1 4$ & $\dfrac 1 2$ & $1$ & $2$ & $4$ & $8$ & $\dots$ \\
+    \hline
+    $y$ & $\dots$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $\dots$ \\
+    \hline
+\end{tabular}
+\end{table}
+
+一般地，对数函数 $y = \log_a x$（这里底数 $a$ 是一个大于零且不等于 $1$ 的常量）就是指数函数 $y = a^x$的反函数。
+因为 $y = a^x$ 的值域是 $(0, +\infty)$（即$R^+$），所以函数 $y = \log_a x$ 的定义域是 $(0, +\infty)$。
+
+函数 $y = \log_a x$ 叫做\textbf{对数函数}。
+
+现在研究对数函数 $y = \log_a x$ 的图象和性质。
+
+因为对数函数 $y = \log_a x$ 是指数函数 $y = a^x$ 的反函数，所以 $y = \log_a x$ 的图象和
+$y = a^x$ 的图象关于直线 $y = x$ 对称。因此，我们只要画出和 $y = a^x$ 的图象关于直线 $y = x$
+对称的曲线，就可以得到 $y = \log_a x$ 的图象，例如，画出和第 \ref{subsec:1-12} 节中三个
+函 $y = 2^x$，$y = 10^x$，$y = \left( \dfrac 1 2 \right)^x$ 的图象关于直线 $y = x$ 对称
+的曲线，就可得到 $y = \log_2 x$，$y = \log_{10} x$，$y = \log_{\frac 1 2} x$ 的图象（图 \ref{fig:1-30}）。
+
+\begin{figure}[H]
+    \centering
+    \input{pic/1-30}
+    \caption{}\label{fig:1-30}
+\end{figure}
+
+一般地，对数函数 $y = \log_a x$ 在其底数 $a > 1$ 及 $0 < a < 1$ 这两种情况下的图象和性质如下表所示：
+
+\begin{table}[H]
+\begin{tabular}{|c|l|l|}
+    \hline
+    \multirow{2}{*}{图象} & \makecell[c]{$a > 1$} & \makecell[c]{$0 < a < 1$} \\
+    \cline{2-3}
+    & \includegraphics{pic-pdf/dui-shu-han-shu-1.pdf} & \includegraphics{pic-pdf/dui-shu-han-shu-2.pdf} \\
+    \hline
+    \multirow{4}{*}{性质} & \multicolumn{2}{l|}{（1）$x > 0$;} \\
+    \cline{2-3}
+    & \multicolumn{2}{l|}{（2）当 $x = 0$ 时，$y = 1$;} \\
+    \cline{2-3}
+    &  \makecell[l]{（3）当 $x>1$ 时，$y>0$，\\ \hspace{2em} $0<x<1$ 时，$y<0$ ；}  & \makecell[l]{（3）当 $x>1$ 时，$y<0$，\\ \hspace{2em} $0<x<1$ 时，$y>0$ ；} \\
+    \cline{2-3}
+    & （4）在 $(0, +\infty)$ 上是增函数。 & （4）在 $(0, +\infty)$ 上是减函数。 \\
+    \hline
+\end{tabular}
+\end{table}
+
+\liti 求下列函数的定义域：
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$y = \log_a (x^2)$；}
+
+    \xiaoxiaoti{$y = \log_a (4 - x)$。}
+
+\end{xiaoxiaotis}
+
+\jie （1）因为 $x^2 > 0$，即 $x \neq 0$，所以函数 $y = \log_a (x^2)$ 的定义域是 $\{x | x \in R \text{，且} x \neq 0\}$。
+
+（2）因为 $4 - x > 0$，即 $x < 4$，所以函数 $y = \log_a (4 - x)$ 的定义域是 $(-\infty, 4)$。
+
+\liti 比较下列各组中两个值的大小：
+
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$\log_2 3$，$\log_2 3.5$；}
+
+    \xiaoxiaoti{$\log_{0.7} 1.6$，$\log_{0.7} 1.8$。}
+
+\end{xiaoxiaotis}
+
+\jie 分别考察对数函数 $y = \log_2 x$ 与 $y = \log_{0.7} x$，根据对数函数的性质知道：
+
+（1） $\because$ \quad $2 > 1$，$3 < 3.5$，
+
+$\therefore \quad \log_2 3 < \log_2 3.5$；
+
+（2） $\because$ \quad $0.7 < 1$，$1.6 < 1.8$，
+
+$\therefore \quad \log_{0.7} 1.6 > \log_{0.7} 1.8$。
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{画出函数 $y = \log_3 x$ 及 $y = \log_{\frac 1 3} x$ 的图象，并且说明这两个函数的相同性质和不同性质。}
+
+\xiaoti{求下列函数的定义域：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$y = \log_5 (1 + x)$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$y = \dfrac 1 {\log_2 x}$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$y = \log_7 \dfrac 1 {1 - 3x}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$y = \sqrt{\log_3 x}$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{比较下面各题中两个值的大小：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti {$\log_{10} 6$，$\log_{10} 8$；} & \xiaoxiaoti {$\log_{0.5} 6$，$\log_{0.5} 4$；} \\
+        \xiaoxiaoti {$\log_{\frac 2 3} 0.5$，$\log_{\frac 2 3} 0.6$；} & \xiaoxiaoti {$\log_{1.5} 1.6$，$\log_{1.5} 1.4$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
