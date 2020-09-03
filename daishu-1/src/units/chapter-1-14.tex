@@ -1,0 +1,159 @@
+\subsection{指数方程和对数方程}\label{subsec:1-14}
+
+在指数里含有未知数的方程叫做\textbf{指数方程}，在对数符号后面含有未知数的方程叫做\textbf{对数方程}。
+在这两类方程中，我们只能解一些特殊的方程。现在举一些例子。
+
+\liti 解方程 $4^x = 2^{x+1}$
+
+\jie 原方程可化为
+$$2^{2x} = 2^{x+1} \text{。}$$
+
+同一个底$a$（这里 $a > 0$，且 $a \neq 1$)的幂相等，必须并且只需它们的幂指数相等。因此上式就是
+\begin{align*}
+    2x &= x + 1 \text{。} \\
+    \therefore \qquad x &= 1
+\end{align*}
+
+\liti 电视机厂生产的电视机台数，如果每年平均比上一年增长 $10.4\%$，
+那么约经过多少年可以增长到原来的 $2$ 倍（结果保留一个有效数字）？
+
+\jie 设经过 $x$ 年可以增长到原来的 $2$ 倍，根据题意，得
+$$(1 +10.4\%)^x = 2 \text{。}$$
+
+两边取对数，得
+
+\begin{gather*}
+    x \lg 1.104 = \lg 2 \text{。} \\
+    \therefore \qquad x = \dfrac {\lg 2}{\lg 1.104} = \dfrac {0.3010}{0.0429} \approx 7 \text{。}
+\end{gather*}
+
+答：约经过 $7$ 年。
+
+（注：在例2中，也可以把指数式 $(1 + 10.4\%)^x = 2$ 化为对数式 $\log_{1.104} 2 = x$，
+再利用换底公式得到 $x = \dfrac {\lg 2}{\lg 1.104} \approx 7$。）
+\vspace{0.5em}
+
+\liti 解方程 $3^{x+1} + 9^x -18 = 0$。
+
+\jie 原方程可化为
+$$3 \cdot 3^x + (3^x)^2 - 18 = 0 \text{。}$$
+
+利用换元法，设 $3^x = y$，方程又成为
+$$y^2 + 3y - 18 = 0 \text{，}$$
+
+由此解得
+$$y_1 = 3, \quad y_2 = -6 \text{。}$$
+
+由 $3^x = 3$，得 $x = 1$；另 $3^x = -6$ 不符合指数函数意义（性质（1）），应舍去。
+所以原方程的解是 $x = 1$。
+
+\liti 解方程 $\lg (x^2 + 11x + 8) - \lg (x + 1) = 1$。
+
+\jie 把原方程化为
+$$\lg \dfrac{x^2 + 11x + 8}{x + 1} = \lg 10 \text{。}$$
+
+同一个底的对数相等，必须并且只需它们的真数（使对数有意文）相等。因此上式就是
+$$\dfrac{x^2 + 11x + 8}{x + 1} = 10 \text{。}$$
+
+解这个方程，得 $x_1 = -2$，$x_2 = 1$。
+
+检验：$x = -2$ 时，$x + 1 = -1$，负数的对数没有意义，所以 $x = -2$ 不是原方程的根；
+$x = 1$ 时，原方程的 $\text{左边} = \lg 20 - \lg2 = \lg 10 = 1 = \text{右边}$，
+所以 $x = 1$ 是原方程的根。
+
+注意：解对数方程时，必须对求得的根进行检验。因为在利用对数性质进行变形而得到新方程时，
+如果未知数的字母的取值范围扩大，可能产生增根。如例4，由原方程变形为
+\vspace{0.5em}
+$$\lg \dfrac{x^2 + 11x + 8}{x + 1} = \lg 10$$
+
+时，$x$ 的取值范围由 $\left\{ x \,\middle|\, 
+\begin{cases}
+    x^2 + 11x + 8 > 0, \\
+    x + 1 > 0
+\end{cases} \right\}$ 变为
+$$
+\left\{ x \,\middle|\, 
+\begin{cases}
+    x^2 + 11x + 8 > 0, \\
+    x + 1 > 0
+\end{cases} \right\}
+\cup
+\left\{ x \,\middle|\, 
+\begin{cases}
+    x^2 + 11x + 8 < 0, \\
+    x + 1 < 0
+\end{cases} \right\} \text{。}
+$$
+
+因为 $x = -2 \in \left\{ x \,\middle|\, 
+\begin{cases}
+    x^2 + 11x + 8 < 0, \\
+    x + 1 < 0
+\end{cases} \right\}$，所以方程产生了增根。
+
+\liti 求方程 $x + \lg x = 3$ 的近似解。
+
+\jie 在同一坐标系内画出 $y = \lg x$ 及 $y = 3 - x$ 的图象，求得交点的横坐标 $x \approx 2.6$（图\ref{fig:1-31}），
+这个 $x$ 值近似地满足 $\lg x = 3 - x$，所以它就是原方程的近似解。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/1-31}
+    \caption{}\label{fig:1-31}
+\end{figure}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{解下列指数方程：}
+\begin{xiaoxiaotis}
+
+\renewcommand\arraystretch{1.5}
+\begin{tabular}[t]{*{2}{@{}p{16em}}}
+    \xiaoxiaoti {$2^{x-1} = 8$；} & \xiaoxiaoti {$3^{\frac 1 x} = 9$；} \\
+    \xiaoxiaoti {$\left(\dfrac 1 4 \right)^{-x} = 64$；} & \xiaoxiaoti {$5^{(x-1)(x+2)} = 1$。}
+\end{tabular}
+
+\end{xiaoxiaotis}
+
+\vspace{0.5em}
+\xiaoti{利用常用对数解下列指数方程：}
+
+\begin{xiaoxiaotis}
+
+\begin{tabular}[t]{*{2}{@{}p{16em}}}
+    \xiaoxiaoti {$10^x = 300$；} & \xiaoxiaoti {$2^y = 100$；} \\
+    \xiaoxiaoti {$3^y = 12$；} & \xiaoxiaoti {$10^{4m} = 5.75$。}
+\end{tabular}
+    
+\end{xiaoxiaotis}
+    
+\xiaoti{已知镭经过 $100$ 年剩留原来质量的 $95.76\%$，计算它约经过多少年剩留一半（结果保留四个有效数字）。}
+
+\xiaoti{一个生产队去年粮食平均亩产量是 $817$ 斤，从今年起的 $5$ 年内，计划平均每年比上一年提高 $7\%$，约经过几年可以提高到亩产量 $1000$ 斤（结果保留一个有效数字）？}
+
+\xiaoti{解下列对数方程：}
+
+\begin{xiaoxiaotis}
+    
+    \twoInLine[16em]{\xiaoxiaoti{$2 \lg x + \lg 7 = \lg 14$；}}{\xiaoxiaoti{$\lg x + \lg (x - 3) = 1$；}}
+
+    \xiaoxiaoti{$\lg (x + 6) - \dfrac 1 2 \lg (2x - 3) = 2 - \lg 25$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\dfrac 1 2 (\lg x - \lg 5) = \lg 2 - \dfrac 1 2 \lg (9 - x)$。}
+    \vspace{0.5em}
+\end{xiaoxiaotis}
+
+\xiaoti{用换元法解方程：}
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$5^{2x} - 23 \times 5^x - 50 = 0$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\dfrac 1 {12} (\lg x)^2 = \dfrac 1 3 - \dfrac 1 4 \lg x$。}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}

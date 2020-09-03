@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.5,0) -- (5.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.5) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+    \foreach \x in {1,2,...,5} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {-1,1,2,3} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+    
+    \draw[name path=a1,domain=0.05:5,samples=100] plot (\x, {log10(\x)}) +(-1, +0.3) node {$y = \lg x$};
+    \draw[name path=a2,domain=-0.4:3.8] plot (\x, {3 - \x}) +(-2, +3.3) node {$y = 3 - x$};
+    \draw [name intersections={of=a1 and a2, by=A}]
+        let \p1 = (A)
+        in [dash pattern=on 1mm off 0.5mm] (\x1,\y1) -- (\x1,0);
+\end{tikzpicture}
