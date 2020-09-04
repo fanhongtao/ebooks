@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-2.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.0) -- (0,5.5) node[anchor=east] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+    \foreach \x in {-2,-1,1,2,3} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {1,3,4,5} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+    
+    \draw[domain=-1:1.5,samples=100] plot (\x, {3^\x}) +(0.6, -0.3) node {$y = 3^x$};
+    \draw (-2.5,2) -- (3,2) +(-1, 0.3) node {$y = 2$};
+    \draw (0.2,2) -- (0,2) node[anchor=east, fill=white] {2};
+\end{tikzpicture}
