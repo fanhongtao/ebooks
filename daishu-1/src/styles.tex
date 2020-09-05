@@ -51,6 +51,31 @@
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 
+% 在不改变 counter 值的情况下，重置 counter 的子 counter
+\newcommand{\touchcounter}[1]{\stepcounter{#1} \addtocounter{#1}{-1}}
+
+% 没有编号但又需要添加到目录中的 section (No num(ber) section)。
+% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
+% 参数2: 正文中的文字
+\NewDocumentCommand{\nonumsection}{o m}{%
+  \touchcounter{section}
+  \section*{#2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{section}{#2}}
+    {\addcontentsline{toc}{section}{#1}}
+}
+
+% 没有编号但又需要添加到目录中的 subsection (No num(ber) subsection)。
+% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
+% 参数2: 正文中的文字
+\NewDocumentCommand{\nonumsubsection}{o m}{%
+  \touchcounter{subsection}
+  \subsection*{#2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{subsection}{#2}}
+    {\addcontentsline{toc}{subsection}{#1}}
+}
+
 \newcounter{cntliti}[subsection]           % 例题的计数器
 \newcommand{\liti}{ % 例题的标题
   \stepcounter{cntliti}
@@ -63,21 +88,13 @@
 \newcounter{cntxiti}                       % “习题”的计数器
 \newcommand{\xiti}{%
   \stepcounter{cntxiti}
-  \setcounter{cntxiaoti}{0}
   \vspace{1em}
-  \begin{center}
-    \subsection*{\labelxiti}
-  \end{center}
-  \addcontentsline{toc}{subsection}{\labelxiti}
+  {\centering \nonumsubsection{\labelxiti}}
 }
 \newcommand{\labelxiti}{习题 \chinese{cntxiti}}
 
 \newcommand{\xiaojie}{%
-  \vspace{1em}
-  \begin{center}
-    \subsection*{\huge \labelxiaojie}
-  \end{center}
-  \addcontentsline{toc}{subsection}{\labelxiaojie}
+  \nonumsection[\labelxiaojie]{\huge \labelxiaojie}
 }
 \newcommand{\labelxiaojie}{小 \hspace{2em} 结}
 
