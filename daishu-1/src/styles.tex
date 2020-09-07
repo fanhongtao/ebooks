@@ -182,6 +182,20 @@
     }
 }
 
+\tikzset{
+  % 绘制阿基米德螺线。
+  % 参数1: 起始半径
+  % 参数2: 相邻两条曲线之间的距离
+  % 参数3: 开始角度
+  % 参数4: 终止角度
+  pics/luoxuan/.style args={#1, #2, #3, #4}{
+    code = {
+      \begin{scope}
+        \draw [domain=#3:#4,samples=300,smooth,variable=\t]
+            plot({(#1 + #2 * \t/360) * cos(\t)}, {(#1 + #2 * \t/360) * sin(\t)});
+      \end{scope}
+    }}}
+
 %----------------------------------
 \newlength{\defaultParIndent}  % 页面缺省的 \parindent 长度。
 \setlength{\defaultParIndent}{\parindent}

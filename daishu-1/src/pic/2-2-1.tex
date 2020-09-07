@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0, 0) circle [radius = 0.1];
+    \draw [name path=c1,line width=3pt] (0, 0) circle [radius = 3];
+    
+    \path [name path=l1] (0.2,-3) -- (0.2,3);
+    \foreach \s in {0,22.5,...,360} {
+        \draw [name intersections={of=c1 and l1, by={A, B}}]
+            let \p1 = (A), \p2 = (B)
+            in [rotate=\s] (\x1, \y1) -- (\x2, \y2);
+    }
+
+    \draw (0, 0) -- (4, 0) node[anchor=north] {$A$};
+    \draw [rotate=30] (0, 0) -- (4, 0) node[anchor=south] {$B$};
+    \draw [->] (3.5, 0) arc (0:30:3.5);
+    \node at (3.7, 1) {$\alpha$};
+    \node [fill=white,inner sep=0pt] at (-0.5, -0.2) {$O$};
+\end{tikzpicture}

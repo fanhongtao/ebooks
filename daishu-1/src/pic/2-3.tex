@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0, 0) -- (4, 0) node[anchor=north] {$A$};
+    \draw [rotate=-150] (0, 0) -- (4, 0) node[anchor=north] {$B_1$};
+    \draw [rotate=-660] (0, 0) -- (4, 0) node[anchor=west] {$B_2$};
+    \node [fill=white,inner sep=0pt] at (0.2, -0.2) {$O$};
+
+    \draw [->] (0.5, 0) arc (0:210:0.5);
+    \node at (-0.4, 0.8) {$\alpha = 210^\circ$};
+    
+    \draw [->] (1.0, 0) arc (0:-150:1.0);
+    \node at (0.5, -0.6) {$\beta = -150^\circ$};
+
+    \path [->] (0,0) pic {luoxuan={1.5, -0.5, 0, -660}};
+    \node at (0, 2.6) {$\gamma = -660^\circ$};
+\end{tikzpicture}

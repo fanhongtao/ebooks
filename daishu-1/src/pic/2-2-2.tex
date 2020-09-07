@@ -1,0 +1,11 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0, 0) -- (4, 0) node[anchor=north] {$A$};
+    \draw [rotate=30] (0, 0) -- (4, 0) node[anchor=south] {$B$};
+    \node [fill=white,inner sep=0pt] at (-0.2, -0.2) {$O$};
+
+    \draw [->] (3.5, 0) arc (0:30:3.5);
+    \node at (3.7, 1) {$\alpha$};
+
+    \path [->] (0,0) pic {luoxuan={0.5, 0.5, 0, 750}};
+    \node at (0, 1.5) {$750^\circ$};
+\end{tikzpicture}
