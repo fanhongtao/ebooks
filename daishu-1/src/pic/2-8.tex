@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw (0, 0) circle(2);
+    \node at (-0.3, 0) {$O$};
+
+    \filldraw[pattern={lines[angle=110]}] (0,0) -- (-45:2) arc[start angle=-45, end angle=45, radius=2] -- cycle;
+
+    \node [fill=white, inner sep=1pt] at (1.2, 0) {$S$};
+    \node at (2.2, 0) {$l$};
+    \node at (0.5, 0.9) {$R$};
+\end{tikzpicture}

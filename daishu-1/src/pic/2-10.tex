@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, rotate=60]
+    \draw (0, 0) -- (6, 0);
+    \draw [rotate=60] (0, 0) -- (6, 0);
+    \draw (4, -1) -- (4, 0) arc (0:60:4) -- +(-1, 0.5);
+    \draw [loosely dash dot] (4.5, -1) -- (4.5, 0) arc (0:60:4.5) -- +(-1, 0.5);
+    \draw (5, -1) -- (5, 0) arc (0:60:5) -- +(-1, 0.5);
+
+    \draw [<->] (5.5, 0) arc (0:60:5.5);
+    \node [fill=white, inner sep = 1pt] at (4.8,2.8) {$60^\circ$};
+
+    \draw [->, rotate=30] (0, 0) -- (4.5, 0);
+    \node [rotate=90] at (2.3,1.6) {$R45$};
+    \node [fill=white, inner sep = 1pt, rotate=0] at (2.0,4.0) {$A$};
+    \node [fill=white, inner sep = 1pt] at (4.5,-0.3) {$B$};
+\end{tikzpicture}

@@ -100,6 +100,7 @@
 
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
+\counterwithin*{cntxiaoxiaoti}{cntliti}
 
 \newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
 \newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
@@ -151,6 +152,25 @@
 %  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
 \newcommand{\kongji}{\varnothing}      % 空集
 \newcommand{\buji}{\overline}          % 补集
+
+% 绘制 弧度 符号。代码来自
+%    https://tex.stackexchange.com/questions/96680/
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\hudu@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\hudu}[1]{\mathpalette\hudu@hudu{#1}}
+
+\newcommand{\hudu@hudu}[2]{%
+  \sbox0{$\m@th#1#2$}%
+  \vbox{
+    \hbox{\resizebox{\wd0}{\height}{\hudu@char}}
+    \nointerlineskip
+    \box0
+  }%
+}
+\makeatother
 
 %----------------------------------
 % 图形相关的项
