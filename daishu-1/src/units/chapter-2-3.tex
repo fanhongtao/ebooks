@@ -1,0 +1,292 @@
+\subsection{任意角的三角函数}\label{subsec:2-3}
+
+在初中，我们已经接触过正弦、余弦、正切、余切这四种三角函数。它们都是以角为自变量、以比值为函数值的函数。
+这四种三角函数的定义，当时是针对 $0^\circ$ \~{} $360^\circ$ 间的角作出的，并对 $0^\circ$ \~{} $180^\circ$
+间的角的三角函数作了一些讨论。下面将三角函数的定义推广到任意角的情形。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-11-1}
+    \caption*{（\Rmnum 2）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-11-2}
+    \caption*{（\Rmnum 1）}
+    \end{minipage}
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-11-3}
+    \caption*{（\Rmnum 3）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-11-4}
+    \caption*{（\Rmnum 4）}
+    \end{minipage}
+    \caption{}\label{fig:2-11}
+\end{figure}
+
+设 $\alpha$ 是一个任意大小的角。角 $\alpha$ 的终边上任意一点 $P$ 的坐标是 $(x, y)$，
+它与原点的距离是 $r \, (r > 0)$（图 \ref{fig:2-11}），那么角 $\alpha$ 的正弦、余弦、正切、余切分别是
+
+\begin{gather*}
+    \sin \alpha = \dfrac y r , \quad \cos \alpha = \dfrac x r , \\
+    \tan \alpha = \dfrac y x , \quad \cot \alpha = \dfrac x y \text{。}
+\end{gather*}
+
+\begin{wrapfigure}[13]{r}{4.5cm}
+    \centering
+    \input{pic/2-12}
+    \vspace{-20pt}
+    \caption{}\label{fig:2-12}
+\end{wrapfigure}
+
+\vspace{0.5em}
+对于确定的 $\alpha$ 角，这四个比值的大小和 $P$ 点在角 $\alpha$ 的终边上的位置没有关系。
+当角 $\alpha$ 的终边在 $x$ 轴上时，$\alpha = k \pi$（或 $\alpha = k \cdot 180^\circ$），$k \in Z$，$\cot \alpha = \dfrac x y$ 无意义（因为 $y = 0$）；
+当角 $\alpha$ 的终边在 $y$ 轴上时，$\alpha = k \pi + \dfrac \pi 2$（或 $\alpha = k \cdot 180^\circ + 90^\circ$），$k \in Z$，$\tan \alpha = \dfrac y x$ 无意义（因为 $x = 0$）。
+此外，对于确定的角 $\alpha$，上面四个比值都是一个确定的实数。这就是说，正弦、余弦、正切、余切
+分别可看成从一个角的集合到一个比值的集合的映射（图 \ref{fig:2-12}），它们都是以角为自变量，
+以比值为函数值的函数，这些函数都叫做\textbf{三角函数}。
+
+有时，我们还要用到下面两个三角函数：
+
+角 $\alpha$ 的\textbf{正割}：\quad $\sec \alpha = \dfrac r x$，
+\vspace{0.5em}
+
+角 $\alpha$ 的\textbf{余割}：\quad $\csc \alpha = \dfrac r y$。
+
+由于角的集合与实数集之间可以建立一一对应关系，三角函数可以看成是以实数为自变量的函数。
+例如，当采用弧度制来度量角时，对于每一个实数，对应着一个确定的角（其弧度数等于这个实数），
+而这个确定的角又对应着它的三角函数值（所取的实数应使相应的三角函数有意义），从而这个实数
+就对应着它的三角函数值，即
+$$\text{实数} \to \text{角（其弧度数等于这个实数）} \to \text{三角函数值（实数）} $$
+
+当自变量是用弧度制来度量角所得到的实数 $\alpha$ 时，三角函数的定义域如下表：
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+    三角函数 & 定义域 \\ \hline
+    $\sin \alpha$ & $\{\alpha \mid \alpha \in R\}$  \\ \hline
+    $\cos \alpha$ & $\{\alpha \mid \alpha \in R\}$  \\ \hline
+    \rule{0pt}{1.5em}$\tan \alpha$ & $\{\alpha \mid \alpha \in R, \, \alpha \neq k\pi + \dfrac \pi 2, \, k \in Z\}$  \\ \hline
+    $\cot \alpha$ & $\{\alpha \mid \alpha \in R, \, \alpha \neq k\pi, \, k \in Z\}$  \\ \hline
+    \rule{0pt}{1.5em}$\sec \alpha$ & $\{\alpha \mid \alpha \in R, \, \alpha \neq k\pi + \dfrac \pi 2, \, k \in Z\}$  \\ \hline
+    $\csc \alpha$ & $\{\alpha \mid \alpha \in R, \, \alpha \neq k\pi, \, k \in Z\}$  \\ \hline
+\end{tabular}
+\end{table}
+
+\liti 已知角 $\alpha$ 的终边经过点 $P(2, -3)$，求 $\alpha$ 的六个三角函数值（图 \ref{fig:2-13}）。
+
+\begin{wrapfigure}[8]{r}{4.5cm}
+    \centering
+    \input{pic/2-13}
+    \vspace{-20pt}
+    \caption{}\label{fig:2-13}
+\end{wrapfigure}
+
+\jie $\because x = 2, \quad y = -3,$
+
+$\therefore \quad r = \sqrt{2^2 + (-3)^2} = \sqrt{13}.$
+
+\begin{minipage}{7.7cm}
+\begin{align*}
+    \therefore \quad & \sin \alpha = \dfrac y r = \dfrac{-3}{\sqrt{13}} = -\dfrac{-3\sqrt{13}}{13}, \\
+        & \cos \alpha = \dfrac x r = \dfrac{2}{\sqrt{13}} = \dfrac{2\sqrt{13}}{13}, \\
+        & \tan \alpha = \dfrac y x = -\dfrac 3 2, \quad \cot \alpha = \dfrac x y = -\dfrac 2 3, \\
+        & \sec \alpha = \dfrac r x = \dfrac{\sqrt{13}}{2}, \quad \cot \alpha = \dfrac r y = -\dfrac{\sqrt{13}}{3}, \\
+\end{align*}
+\end{minipage}
+
+\liti 求下列各角的六个三角函数值：
+\begin{xiaoxiaotis}
+
+    \threeInLine[8em]{\xiaoxiaoti{$0$；}}{\xiaoxiaoti{$\pi$；}}{\xiaoxiaoti{$\dfrac{3\pi}{2}$。}}
+
+\end{xiaoxiaotis}
+
+\jie （1） $\because$ 当 $\alpha = 0$ 时，$x = r$，$y = 0$，
+
+$\therefore$
+\begin{tabular}[t]{p{8em}p{8em}}
+    $\sin 0 = 0$， & $\cos 0 = 1$，\\
+    $\tan 0 = 0$， & $\cot 0$ 不存在，\\
+    $\sec 0 = 1$， & $\csc 0$ 不存在。
+\end{tabular}
+
+（2） $\because$ 当 $\alpha = \pi$ 时，$x = -r$，$y = 0$，
+
+$\therefore$
+\begin{tabular}[t]{p{8em}p{8em}}
+    $\sin \pi = 0$， & $\cos \pi = -1$，\\
+    $\tan \pi = 0$， & $\cot \pi$ 不存在，\\
+    $\sec \pi = -1$， & $\csc \pi$ 不存在。
+\end{tabular}
+
+（3） $\because$ 当 $\alpha = \dfrac{3\pi}{2}$ 时，$x = 0$，$y = -r$，
+
+$\therefore$
+\begin{tabular}[t]{p{8em}p{8em}}
+    $\sin \dfrac{3\pi}{2} = -1$， & $\cos \dfrac{3\pi}{2} = 0$，\\
+    \rule{0pt}{2em} $\tan \dfrac{3\pi}{2}$ 不存在， & $\cot \dfrac{3\pi}{2} = 0$，\\
+    \rule{0pt}{2em} $\sec \dfrac{3\pi}{2}$ 不存在， & $\csc \dfrac{3\pi}{2} = -1$。
+\end{tabular}
+
+\vspace{0.5em}
+由三角函数的定义和各象限内点的坐标的符号知道：
+
+\vspace{0.5em}
+正弦值 $\left( \dfrac y r \right)$ \vspace{0.5em} 与余割值 $\left( \dfrac r y \right)$ 对于第一、二象限的角是正的 $(y > 0, \, r > 0)$，而对于第三、四象限的角是负的 $(y < 0, \, r > 0)$；
+
+\vspace{0.5em}
+余弦值 $\left( \dfrac x r \right)$ \vspace{0.5em} 与正割值 $\left( \dfrac r x \right)$ 对于第一、四象限的角是正的 $(x > 0, \, r > 0)$，而对于第二、三象限的角是负的 $(x < 0, \, r > 0)$；
+
+\vspace{0.5em}
+正切值 $\left( \dfrac y x \right)$ \vspace{0.5em} 与余切值 $\left( \dfrac x y \right)$ 对于第一、三象限的角是正的（$x$，$y$ 同号），而对于第二、四象限的角是负的（$x$，$y$ 异号）。
+
+各三角函数值在每个象限的符号，如图 \ref{fig:2-14} 所示。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-14}
+    \caption{}\label{fig:2-14}
+\end{figure}
+
+根据三角函数的定义还可以知道，\textbf{终边相同的角的同一三角函数的值相等}。由此得到一组公式（\textbf{公式一}\mylabel{gongshi:1}）：
+
+\begin{center}
+    \framebox{\begin{tabular}{p{13em}p{16em}}
+            $\sin (k \cdot 360^\circ + \alpha) = \sin \alpha,$ & $\cos (k \cdot 360^\circ + \alpha) = \cos \alpha ,$ \\
+            $\tan (k \cdot 360^\circ + \alpha) = \tan \alpha,$ & $\cot (k \cdot 360^\circ + \alpha) = \cot \alpha .  \quad(k \in Z)$
+    \end{tabular}}
+\end{center}
+
+利用 \hyperref[gongshi:1]{公式一} 可以把求任意角的三角函数值的问题，转化为求 $0^\circ$ \~{} $360^\circ$（$0$ \~{} $2\pi$）间角的三角函数值的问题。
+
+\liti 确定下列各三角函数值的符号：
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{4}{@{}p{9em}}}
+        \xiaoxiaoti{$\cos 250^\circ$；} & \xiaoxiaoti{$\sin \left(-\dfrac \pi 4 \right)$；}
+            & \xiaoxiaoti{$\tan (-672^\circ 10')$；} & \xiaoxiaoti{$\cot \dfrac{11\pi}{3}$。}
+    \end{tabular}
+    \vspace{0.5em}
+    
+\end{xiaoxiaotis}
+
+\jie （1）因为 $250^\circ$ 是第三象限的角，所以 $\cos 250^\circ < 0$；
+
+\vspace{0.5em}
+（2）因为 $-\dfrac \pi 4$ 是第四象限的角，所以 $\sin \left(-\dfrac \pi 4 \right) < 0$；
+\vspace{0.5em}
+
+（3）因为 $\tan (-672^\circ 10') = \tan(-2 \times 360^\circ + 47^\circ 50') = \tan 47^\circ 50'$，
+而 $47^\circ 50'$ 是第一象限的角，所以 $\tan (-672^\circ 10') > 0$；
+
+\vspace{0.5em}
+（4）因为 $\cot \dfrac{11\pi}{3} = \cot(2\pi + \dfrac 5 3 \pi) = \cot \dfrac 5 3 \pi$，
+而 $\dfrac 5 3 \pi$ 是第四象限的角，所以 $\cot \dfrac{11\pi}{3} < 0$。
+\vspace{0.5em}
+
+\liti 根据条件 $\sin \theta < 0$ 且 $\tan \theta > 0$，确定 $\theta$ 是第几象限的角。
+
+\jie $\because \quad \sin \theta < 0$，
+
+$\therefore \quad \theta$ 在第三象限或第四象限，或 $\theta$ 的终边在 $y$ 轴的负半轴上；
+
+$\because \quad \tan \theta > 0$，
+
+$\therefore \quad \theta$ 在第一象限或第三象限。
+
+$\because \quad \sin \theta < 0$ 与 $\tan \theta > 0$ 同时成立，
+
+$\therefore \quad \theta$ 在第三象限。
+
+\liti 求下列各三角函数值：
+\begin{xiaoxiaotis}
+    
+    \vspace{0.5em}
+    \begin{tabular}[t]{*{3}{@{}p{9em}}}
+        \xiaoxiaoti{$\sin 1480^\circ 10'$；} & \xiaoxiaoti{$\cos \dfrac{9\pi}{4}$；}
+            & \xiaoxiaoti{$\tan \left(-\dfrac{7\pi}{6} \right)$。}
+    \end{tabular}
+    \vspace{0.5em}
+    
+\end{xiaoxiaotis}
+
+\jie （1）$\sin 1480^\circ 10' = \sin(4 \times 360^\circ + 40^\circ 10') = \sin 40^\circ 10' = 0.6451$；
+
+\vspace{0.5em}
+（2）$\cos \dfrac{9\pi}{4} = \cos \left( 2\pi + \dfrac \pi 4 \right) = \cos \dfrac \pi 4 = \dfrac{\sqrt{2}}{2}$；
+\vspace{0.5em}
+
+（3）$\tan \left(-\dfrac{7\pi}{6} \right) = \tan \left(-2\pi + \dfrac{5\pi}{6} \right) = \tan \dfrac{5\pi}{6} = \tan \left(\pi - \dfrac{\pi}{6} \right) = - \dfrac{\pi}{6} = -\dfrac{\sqrt{3}}{3}$。
+\vspace{0.5em}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{已知角 $\alpha$ 的终边经过点 $P(-3, -1)$，求 $\alpha$ 的六个三角函数值。}
+
+\xiaoti{填写下表：}
+
+\begin{table}[H]
+\renewcommand\arraystretch{1.5}
+\hspace{4em}
+\begin{tabular}{|c|*{5}{w{c}{4em}|}}
+    \hline
+    $\alpha$ & $0^\circ$ & $90^\circ$ & $180^\circ$ & $270^\circ$ & $360^\circ$ \\ \hline
+    角 $\alpha$ 的弧度数 & \eline{5} \\ \hline
+    $\sin \alpha$ & \eline{5} \\ \hline
+    $\cos \alpha$ & \eline{5} \\ \hline
+    $\tan \alpha$ & \eline{5} \\ \hline
+    $\cot \alpha$ & \eline{5} \\ \hline
+\end{tabular}
+\end{table}
+    
+\xiaoti{（口答）设 $\alpha$ 是三角形的一个内角，在 $\sin \alpha$，$\cos \alpha$，
+    $\tan \alpha$，$\cot \dfrac \alpha 2$ 中，哪些有可能取负值？}
+
+\xiaoti{确定下列各三角函数值的符号：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{3}{@{}p{9em}}}
+        \xiaoxiaoti{$\csc 156^\circ$；} & \xiaoxiaoti{$\cos \dfrac{16}{5} \pi$；} & \xiaoxiaoti{$\sec (-80^\circ)$；} \\
+        \xiaoxiaoti{$\cot \left( -\dfrac{17}{8} \pi \right)$；} & \xiaoxiaoti{$\sin \left( -\dfrac{4\pi}{3} \right)$；} & \xiaoxiaoti{$\tan 556^\circ 12'$。}
+    \end{tabular}
+    \vspace{0.5em}
+    
+\end{xiaoxiaotis}
+
+\xiaoti{根据下列条件，确定 $\theta$ 是第几象限的角：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\sin \theta < 0$ 且 $\cos \theta > 0$；} & \xiaoxiaoti{$\sec \theta < 0$ 且 $\cot \theta < 0$；} \\
+        \xiaoxiaoti{$\sin \theta$ 与 $\tan \theta$ 同号；} & \xiaoxiaoti{$\cos \theta$ 与 $\tan \theta$ 异号。}
+    \end{tabular}
+    
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{4}{@{}p{9em}}}
+        \xiaoxiaoti{$\cos 1109^\circ$；} & \xiaoxiaoti{$\tan \dfrac{19\pi}{3}$；} &
+        \xiaoxiaoti{$\sin (-1290^\circ)$；} & \xiaoxiaoti{$\cot \left( -\dfrac{29\pi}{4} \right)$。}
+    \end{tabular}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+
+
+\end{xiaotis}

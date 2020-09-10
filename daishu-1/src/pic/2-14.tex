@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \pos / \flga / \flgb / \flgc / \flgd / \name in
+        {
+            0 / $+$ / $+$ / $-$ / $-$ / {$\sin \alpha,\, \csc \alpha$},
+            4 / $+$ / $-$ / $-$ / $+$ / {$\cos \alpha,\, \sec \alpha$},
+            8 / $+$ / $-$ / $+$ / $-$ / {$\tan \alpha,\, \cot \alpha$}
+        }
+    {
+        \draw [->] (\pos-1.5,0) -- (\pos+1.5,0) node[anchor=north] {$x$};
+        \draw [->] (\pos,-1.5) -- (\pos,1.5) node[anchor=east] {$y$};
+        \node at (\pos-0.3,-0.3) {$O$};
+
+        \node at (\pos+0.7, 0.7) {\flga};
+        \node at (\pos-0.7, 0.7) {\flgb};
+        \node at (\pos-0.7, -0.7) {\flgc};
+        \node at (\pos+0.7, -0.7) {\flgd};
+        \node at (\pos, -1.7) {\name};
+    }
+\end{tikzpicture}

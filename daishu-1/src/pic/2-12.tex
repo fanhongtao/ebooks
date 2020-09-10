@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \baseline / \name / \formula in
+        {6/{正弦}/{$\displaystyle \frac y r$}, 
+         4/{余弦}/{$\displaystyle \frac x r$},
+         2/{正切}/{$\displaystyle \frac y x$},
+         0/{余切}/{$\displaystyle \frac x y$}}
+    {
+        \draw (0, \baseline) circle [x radius=0.6cm, y radius=0.8cm];
+        \node at (0, \baseline + 0.3) {$\alpha$};
+        \node at (0, \baseline - 0.3) {$\vdots$};
+
+        \draw (3, \baseline) circle [x radius=0.6cm, y radius=0.8cm];
+        \node at (3, \baseline + 0.3) {\formula};
+        \node at (3, \baseline - 0.3) {\vdots};
+
+        \node at (1.5, \baseline + 0.5) {\name};
+        \draw [->] (1.0, \baseline + 0.1) -- (2.0, \baseline + 0.1);
+    }
+\end{tikzpicture}
