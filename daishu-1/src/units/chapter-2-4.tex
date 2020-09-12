@@ -1,0 +1,278 @@
+\subsection{同角三角函数的基本关系式}\label{subsec:2-4}
+
+根据三角函数的定义，可以得到同角三角函数间的下列基本关系式：
+
+\begin{table}[h]
+\centering
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{c}
+    $\sin \alpha \cdot \csc \alpha = \dfrac y r \cdot \dfrac r y = 1 \text{。}$ \\
+    $\cos \alpha \cdot \sec \alpha = \dfrac x r \cdot \dfrac r x = 1 \text{。}$ \\
+    $\tan \alpha \cdot \cot \alpha = \dfrac y x \cdot \dfrac x y = 1 \text{。}$ \\
+    \rule{0pt}{3em}$\tan \alpha = \dfrac y x = \dfrac{\; \dfrac y r \;}{\dfrac x r} = \dfrac{\sin \alpha}{\cos \alpha} \text{。}$ \\
+    \rule{0pt}{3em}$\cot \alpha = \dfrac x y = \dfrac{\; \dfrac x r \;}{\dfrac y r} = \dfrac{\cos \alpha}{\sin \alpha} \text{。}$ \\
+    \rule{0pt}{2em}$\sin^2 \alpha + \cos^2 \alpha = \left( \dfrac y r\right)^2 + \left( \dfrac x r\right)^2 = \dfrac{y^2 + x^2}{r^2} = \dfrac{r^2}{r^2} = 1 \text{。}$
+\end{tabular}
+\end{table}
+
+将 $\sin^2 \alpha + \cos^2 \alpha = 1$ 的两边都除以 $\cos^2 \alpha$，可以得到
+$$1 + \tan^2 \alpha = \sec^2 \alpha \text{。}$$
+
+将 $\sin^2 \alpha + \cos^2 \alpha = 1$ 的两边都除以 $\sin^2 \alpha$，可以得到
+$$1 + \cot^2 \alpha = \csc^2 \alpha \text{。}$$
+
+以上关系式可以归纳如下：
+
+（1）倒数关系
+
+\begin{center}
+    \framebox{\begin{minipage}{15em}
+        \begin{gather*}
+            \sin \alpha \cdot \csc \alpha = 1 \text{；} \\
+            \cos \alpha \cdot \sec \alpha = 1 \text{；} \\
+            \tan \alpha \cdot \cot \alpha = 1 \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+（2）商数关系
+
+\begin{center}
+    \framebox{
+        \renewcommand\arraystretch{2}
+        \begin{tabular}{w{c}{13em}}
+            $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} \text{；} $ \\
+            $\cot \alpha = \dfrac{\cos \alpha}{\sin \alpha} \text{。}$
+        \end{tabular}
+    }
+\end{center}
+
+（3）平方关系
+
+\begin{center}
+    \framebox{\begin{minipage}{15em}
+        \begin{gather*}
+            \sin^2 \alpha + \cos^2 \alpha = 1 \text{；} \\
+            1 + \tan^2 \alpha = \sec^2 \alpha \text{；} \\
+            1 + \cot^2 \alpha = \csc^2 \alpha \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+上面这些关系式都是恒等式，即当 $\alpha$ 取使关系式的两边都有意义的任意值时，
+关系式两边的值都相等。以后所说的恒等式都是指这个意义下的恒等式。
+
+利用这些关系式，可以根据一个角的某一个三角函数值，求出这个角的其他三角函数值，
+还可化简三角函数式，证明其他一些三恒等式，等等。
+
+\liti 已知 $\sin \alpha = \dfrac 4 5$，并且 $\alpha$ 是第二象限的角，求 $\alpha$ 的其他三角函数值。
+\vspace{0.5em}
+
+\jie 由 $\sin^2 \alpha + \cos^2 \alpha = 1$，可得 $\cos \alpha = \pm \sqrt{1 - \sin^2 \alpha}$。
+
+$\because \quad \alpha$ 是第二象限的角，$\cos \alpha < 0$，
+
+$\therefore$
+\begin{tabular}[t]{l}
+    \rule{0pt}{3em}$\cos \alpha = - \sqrt{1 - \sin^2 \alpha} = - \sqrt{1 - \left( \dfrac 4 5 \right)^2} = -\dfrac 3 5$，\\
+    \rule{0pt}{2em}$\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{\dfrac 4 5}{-\dfrac 3 5} = -\dfrac 4 3$，\\
+    \rule{0pt}{2em}$\cot \alpha = \dfrac{1}{\tan \alpha} = \dfrac{1}{-\dfrac 4 3} = -\dfrac 3 4$，\\
+    \rule{0pt}{2em}$\sec \alpha = \dfrac{1}{\cos \alpha} = \dfrac{1}{-\dfrac 3 5} = -\dfrac 5 3$，\\
+    \rule{0pt}{2em}$\csc \alpha = \dfrac{1}{\sin \alpha} = \dfrac{1}{\; \dfrac 4 5 \;} = \dfrac 5 4$。
+\end{tabular}
+
+\vspace{0.5em}
+\liti 已知 $\cos \alpha = -\dfrac{8}{17}$，求 $\alpha$ 的其他三角函数值。
+\vspace{0.5em}
+
+\jie 因为 $\cos \alpha < 0$，所以 $\alpha$ 是第二象限的角或者是第三象限的角。
+
+（1）如果 $\alpha$ 是第二象限的角，可以得到
+
+\quad \begin{tabular}[t]{l}
+    \rule{0pt}{3em}$\sin \alpha = \sqrt{1 - \cos^2 \alpha} = \sqrt{1 - \left(-\dfrac{8}{17} \right)^2} = \dfrac{15}{17}$，\\
+    \rule{0pt}{2em}$\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{\dfrac{15}{17}}{-\dfrac{8}{17}} = -\dfrac{15}{8}$，\\
+    \rule{0pt}{2em}$\cot \alpha = \dfrac{1}{\tan \alpha} = \dfrac{1}{-\dfrac{15}{8}} = -\dfrac{8}{15}$，\\
+    \rule{0pt}{2em}$\sec \alpha = \dfrac{1}{\cos \alpha} = \dfrac{1}{-\dfrac{8}{17}} = -\dfrac{17}{8}$，\\
+    \rule{0pt}{2em}$\csc \alpha = \dfrac{1}{\sin \alpha} = \dfrac{1}{\; \dfrac{15}{17} \;} = \dfrac{17}{15}$。
+\end{tabular}
+\vspace{0.5em}
+
+（2）如果 $\alpha$ 是第三象限的角，则可得到
+
+\quad\begin{tabular}[t]{l}
+    \rule{0pt}{2em}$\sin \alpha = -\dfrac{15}{17}$，$\tan \alpha = \dfrac{15}{8}$，$\cot \alpha = \dfrac{8}{15}$，\\
+    \rule{0pt}{2em}$\sec \alpha = -\dfrac{17}{8}$，$\csc \alpha = -\dfrac{17}{15}$。
+\end{tabular}
+\vspace{0.5em}
+
+\liti 已知 $\cot \alpha = m \, (m \neq 0)$，求 $\cos \alpha$。
+
+\jie 由于 $\cot \alpha$ 的值为 $m$，且 $m \neq 0$，所以角 $\alpha$ 的终边不在两个坐标轴上。
+
+（1）如果 $\alpha$ 是第一、二象限的角，可以得到
+
+\begin{tabular}{p{2em}l}
+    & $\csc \alpha = \sqrt{1 + \cot^2 \alpha} = \sqrt{m^2 + 1}$，\\
+    \rule{0pt}{2em} & $\sin \alpha = \dfrac{1}{\csc \alpha} = \dfrac{1}{\sqrt{m^2 + 1}} = \dfrac{\sqrt{m^2 + 1}}{m^2 + 1}$，\\
+    \rule{0pt}{2em} $\therefore$ & $\cos \alpha = \sin \alpha \cdot \cot \alpha = \dfrac{m \sqrt{m^2 + 1}}{m^2 + 1}$。
+\end{tabular}
+\vspace{0.5em}
+
+（2）如果 $\alpha$ 是第三、四象限的角，可以得到
+
+\begin{tabular}{p{2em}l}
+    & $\csc \alpha = -\sqrt{m^2 + 1}$，\\
+    \rule{0pt}{2em} & $\sin \alpha = -\dfrac{\sqrt{m^2 + 1}}{m^2 + 1}$，\\
+    \rule{0pt}{2em} $\therefore$ & $\cos \alpha = -\dfrac{m \sqrt{m^2 + 1}}{m^2 + 1}$。
+\end{tabular}
+\vspace{0.5em}
+
+\liti 已知 $\tan \alpha \neq 0$，用 $\tan \alpha$ 来表示 $\alpha$ 的其他三角函数。
+
+\jie \begin{tabular}[t]{l}
+    \rule{0pt}{2em}$\cot \alpha = \dfrac{1}{\tan \alpha}$，\\
+    \rule{0pt}{2em}$\sec \alpha = \pm \sqrt{1 + \tan^2 \alpha}$ ($\alpha$ 为第一、四象限的角时取正号， \\
+        \multicolumn{1}{r}{$\alpha$为第二、三象限的角时取负号，以下各式同）}\\
+    \rule{0pt}{2em}$\cos \alpha = \dfrac{1}{\sec \alpha} = \dfrac{1}{\pm \sqrt{1 + \tan^2 \alpha}}$，\\
+    \rule{0pt}{2em}$\sin \alpha = \cos \alpha \cdot \tan \alpha = \dfrac{\tan \alpha}{\pm \sqrt{1 + \tan^2 \alpha}}$，\\
+    \rule{0pt}{2em}$\csc \alpha = \dfrac{1}{\sin \alpha} = \dfrac{\pm \sqrt{1 + \tan^2 \alpha}}{\tan \alpha}$。\\
+\end{tabular}
+\vspace{0.5em}
+
+一般地，当已知角 $\alpha$ 的任一个三角函数值及角 $\alpha$ 的终边所在的象限时，都可以根据同角三角函数间的基本关系式
+求出角 $\alpha$ 的其他三角函数值；当已知角 $\alpha$ 的一个三角函数值、而未指定角 $\alpha$ 的终边所在的象限时，
+要根据角 $\alpha$ 的终边可能在的两个象限分别求其他三角函数值；
+当已知的角 $\alpha$ 的三角函数值用字母表示时，为了确定角 $\alpha$ 的有些三角函数值表达式前面的正负号，
+要对角 $\alpha$ 的终边所在的象限分别进行讨论。
+
+\lianxi
+\begin{xiaotis}
+    
+\xiaoti{根据下列条件，求角 $\alpha$ 的其他三角函数值：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{己知 $\sin \alpha = \dfrac 1 2$，并且 $\alpha$ 为第一象限的角；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{己知 $\cos \alpha = -\dfrac 4 5$，并且 $\alpha$ 为第三象限的角。}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知 $\cos \theta = \dfrac 1 2$，求 $\theta$ 的其他三角函数值。}
+\vspace{0.5em}
+
+\xiaoti{已知 $\cot \varphi = -\dfrac{\sqrt{3}}{3}$，求 $\varphi$ 的其他三角函数值。}
+\vspace{0.5em}
+
+\xiaoti{已知 $\sin x = 0.35$，求 $x$ 的其他三角函数值（保留两个有效数字）。}
+
+\end{xiaotis}
+
+\vspace{1em}
+\liti 化简下列各式：
+
+\twoInLine[16em]{（1）$\sqrt{1 - \sin^2 100^\circ}$。}{（2）$\sqrt{\sec^2 A - 1}$。}
+
+\jie （1）$\sqrt{1 - \sin^2 100^\circ} = \sqrt{1 - \sin^2 80^\circ} = \sqrt{\cos^2 80^\circ} = \cos 80^\circ$。（$\because \quad \cos 80^\circ > 0$）
+
+（2）$\sqrt{\sec^2 A - 1} = \sqrt{\tan^2 A} = |\tan A|$。
+
+\liti 求证 $\cot^2 \alpha (\tan^2 \alpha - \sin^2 \alpha) = \sin^2 \alpha$。
+
+\begin{minipage}{6.6cm}
+\begin{align*}
+  \text{\zhengming} \quad  & \cot^2 \alpha (\tan^2 \alpha - \sin^2 \alpha) \\
+  = & \cot^2 \alpha \cdot \tan^2 \alpha - \cot^2 \alpha \cdot \sin^2 \alpha \\
+  = & (\cot \alpha \cdot \tan \alpha)^2 - \dfrac{\cos^2 \alpha}{\sin^2 \alpha} \sin^2 \alpha \\
+  = & 1 - \cos^2 \alpha = \sin^2 \alpha \text{。}  
+\end{align*}
+\end{minipage}
+
+\liti 求证 $\sin^2 \theta \cos^2 \theta = \dfrac{1}{\sec^2 \theta + \csc^2 \theta}$。
+
+\vspace{0.5em}
+\zhengming $\begin{aligned}[t]
+    & \dfrac{1}{\sec^2 \theta + \csc^2 \theta} = \dfrac{1}{\dfrac{1}{\cos^2 \theta} + \dfrac{1}{\sin^2 \theta}} \\
+  = & \dfrac{\sin^2 \theta \cos^2 \theta}{\sin^2 \theta + \cos^2 \theta} = \sin^2 \theta \cos^2 \theta \text{。}
+\end{aligned}$
+\vspace{0.5em}
+
+\liti 求证 $(1 - \sin^2 A)(\sec^2 A - 1) = \sin^2 A(\csc^2 A  - \cot^2 A)$。
+
+\zhengming $\begin{aligned}[t]
+    &(1 - \sin^2 A)(\sec^2 A - 1) = \cos^2 A \cdot \tan^2 A = cos^2 A \cdot \dfrac{\sin^2 A}{\cos^2 A} = \sin^2 A \text{，} \\
+    &\sin^2 A (\csc^2 A - \cot^2 A) = \sin^2 A \cdot 1 = \sin^2 A \text{，}
+\end{aligned}$
+
+$\therefore \quad (1 - \sin^2 A)(\sec^2 A - 1) = \sin^2 A (\csc^2 A - \cot^2 A)$。
+
+\vspace{0.5em}
+\liti 求证 $\dfrac{\cos x}{1 - \sin x} = \dfrac{1 + \sin x}{\cos x}$。
+\vspace{0.5em}
+
+\textbf{证明一：} $\because \quad (1 - \sin x)(1 + \sin x) = 1 - \sin^2 x = \cos^2 x = \cos x \cos x$，
+
+\vspace{0.5em}
+$\therefore \dfrac{\cos x}{1 - \sin x} = \dfrac{1 + \sin x}{\cos x}$。
+\vspace{0.5em}
+
+\textbf{证明二：} $\because \begin{aligned}[t]
+      &\dfrac{\cos x}{1 - \sin x} - \dfrac{1 + \sin x}{\cos x} \\
+    = &\dfrac{\cos x \cdot \cos x - (1 + \sin x)(1 - \sin x)}{(1 - \sin x)\cos x} \\
+    = &\dfrac{\cos^2 x - (1 - \sin^2 x)}{(1 - \sin x) \cos x} \\
+    = &\dfrac{\cos^2 x - \cos^2 x}{(1 - \sin x) \cos x} = 0 \text{，}
+\end{aligned}$
+
+\vspace{0.5em}
+$\therefore \quad \dfrac{\cos x}{1 - \sin x} = \dfrac{1 + \sin x}{\cos x}$。
+\vspace{0.5em}
+
+从上面的例子可以看到，证明三角恒等式，可以从任何一边开始，证得它等于另一边，也可以证明左右两边都等于同一个式子，
+有时也可以先证明另一个恒等式，从而推得需要证明的恒等式，等等。要在熟练掌握各基本公式的基础上，按照由繁到简的原则，
+灵活地运用各种证法。在变形的过程中，将同一式子中的正切、余切、正割、余割都化成正弦及余弦，并注意运用基本公式中的
+平方关系，有时可使式子简化。
+
+\lianxi
+\setcounter{cntxiaoti}{0}
+\begin{xiaotis}
+
+\xiaoti{化简：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}{p{16em}l}
+        \xiaoxiaoti{$\cos \theta \tan \theta$；} & \xiaoxiaoti{$\dfrac{1}{\sec^2 \alpha} + \dfrac{1}{\csc^2 \alpha}$；} \\
+        \multicolumn{2}{@{}l}{\xiaoxiaoti{$\csc \alpha \cdot \tan \alpha \cdot \sec \alpha \cdot \sin \alpha \cdot \cos \alpha \cdot \cot \alpha$；}} \\
+        \xiaoxiaoti{$\dfrac{2\cos^2 \alpha - 1}{1 - 2\sin^2 \alpha}$；} & \xiaoxiaoti{$\dfrac{\tan \alpha + \cot \alpha}{\sec \alpha \csc \alpha}$。}
+    \end{tabular}
+    
+\end{xiaoxiaotis}
+
+\xiaoti{化简：}
+\begin{xiaoxiaotis}
+    
+    \xiaoxiaoti{$\sec \theta \cdot \sqrt{1 - \sin^2 \theta}$，其中 $\theta$ 为第二象限的角；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\dfrac{\sec \alpha}{\sqrt{\tan^2 \alpha + 1}}$。}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求证下列恒等式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\sin^4 \alpha - \cos^4 \alpha = \sin^2 \alpha - \cos^2 \alpha$；}
+
+    \xiaoxiaoti{$\sin^4 \alpha + \sin^2 \alpha \cos^2 \alpha + \cos^2 \alpha = 1$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\dfrac{\sin \alpha + \cot \alpha}{\tan \alpha + \csc \alpha} = \cos \alpha$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$(\sin \varphi + \tan \varphi)(\cos \varphi + \cot \varphi) = (1 + \sin \varphi)(1 + \cos \varphi)$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
