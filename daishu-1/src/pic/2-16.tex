@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-3.5,0) -- (3.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (0.2,-0.2) {$O$};
+    \draw [name path=c] (0, 0) circle(2.5);
+
+    \draw [name path=a1] (0,0) -- (140:3.5);
+    \draw (0.6, 0.6) node {$\alpha$} [->] (0.6, 0) arc (0:140:0.6);
+    \draw [name intersections={of=a1 and c, by=A}]
+       let \p1=(A)
+       in (A) +(-0.2, 0) node[anchor=east] {$P(x, y)$}
+          (A) -- (\x1, -\y1) +(-0.2, 0) node[anchor=east] {$P'(x, -y)$}
+          (\x1, -0.3) -- +(0.3,0) -- +(0.3, 0.3) node [anchor=south] {$M$};
+    \draw [name path=a1] (0,0) -- (-140:3.5);
+    \draw (0.6, -0.6) node {$-\alpha$} [->] (0.6, 0) arc (0:-140:0.6);
+\end{tikzpicture}

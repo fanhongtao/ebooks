@@ -1,0 +1,349 @@
+\subsection{诱导公式}\label{subsec:2-5}
+
+我们知道，$0^\circ$ \~{} $90^\circ$ 间的角的三角函数值，可以通过查表求得。另外，利用第 \ref{subsec:2-3}
+节的 \hyperref[gongshi:1]{公式一}，可以把求任意角的三角函数值转化为求 $0^\circ$ \~{} $360^\circ$ 间的角
+的三角函数值。因此，如果能把求 $90^\circ$ \~{} $360^\circ$ 间的角的三角函数值转化为求 $0^\circ$ \~{} $90^\circ$
+间的角的三角函数值，那么任意角的三角函数值就都能通过查表来求了。
+
+对于 $90^\circ$ \~{} $360^\circ$ 间的角，可用下面的形式来表示：
+
+设 $0^\circ \leqslant \alpha \leqslant 90^\circ$，那么
+
+$90^\circ$ \~{} $180^\circ$ 间的角，可以写成 $180^\circ - \alpha$ ；
+
+$180^\circ$ \~{} $270^\circ$ 间的角，可以写成 $180^\circ + \alpha$ ；
+
+$270^\circ$ \~{} $360^\circ$ 间的角，可以写成 $360^\circ - \alpha$ 。
+
+下面依次讨论 $180^\circ + \alpha$，$-\alpha$，$180^\circ - \alpha$，$360^\circ - \alpha$ 的三角函数值
+与 $\alpha$ 的三角函数值之间的关系。为了使讨论更具有一般性，这里假定 $\alpha$ 为任意角。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-15}
+    \caption{}\label{fig:2-15}
+\end{figure}
+
+如图 \ref{fig:2-15}，以原点为圆心，等于单位长的线段为半径作一个圆〈这个圆叫做单位圆）。已知任意角 $\alpha$
+的终边与这个圆相交于点 $P(x, y)$。由于角 $180^\circ + \alpha$ 的终边就是角 $\alpha$ 的终边的反向延长线，
+角 $180^\circ + \alpha$ 的终边与单位圆的交点 $P'$，是与点 $P$ 关于点 $O$ 对称的，因此点 $P'$ 的坐标是
+$(-x, -y)$。又因单位圆的半径 $r = 1$，由正弦函数和余弦函数的定义得到 \\
+\begin{tabular}{p{5em}p{12em}l}
+    & $\sin\alpha = y$， & $\cos\alpha = x$，\\
+    & $\sin(180^\circ + \alpha) = -y$，& $\cos(180^\circ + \alpha) = -x$。
+\end{tabular} \\
+因此 \\
+\begin{tabular}{p{5em}p{12em}l}
+    & $\sin(180^\circ + \alpha) = -\sin\alpha$，& $\cos(180^\circ + \alpha) = -\cos\alpha$。
+\end{tabular}
+
+又根据同角三角函数间的基本关系式，有
+
+\vspace{-1em}\begin{gather*}
+    \tan(180^\circ + \alpha) = \dfrac{\sin(180^\circ + \alpha)}{\cos(180^\circ + \alpha)} = \dfrac{-\sin\alpha}{-\cos\alpha} = \tan\alpha \text{，} \\
+    \cot(180^\circ + \alpha) = \dfrac{\cos(180^\circ + \alpha)}{\sin(180^\circ + \alpha)} = \dfrac{-\cos\alpha}{-\sin\alpha} = \cot\alpha \text{。}
+\end{gather*}
+\vspace{0.5em}
+
+于是我们得到一组公式（\textbf{公式二}\mylabel{gongshi:2}）：
+
+\begin{center}
+    \framebox{\begin{tabular}{p{13em}p{13em}}
+            $\sin (180^\circ + \alpha) = -\sin \alpha,$ & $\cos (180^\circ + \alpha) = -\cos \alpha ,$ \\
+            $\tan (180^\circ + \alpha) = \tan \alpha,$ & $\cot (180^\circ + \alpha) = \cot \alpha . $
+    \end{tabular}}
+\end{center}
+
+我们再来研究任意角 $\alpha$ 与 $-\alpha$ 的三角函数值之间的关系。
+
+\begin{wrapfigure}[12]{r}{6.5cm}
+    \centering
+    \input{pic/2-16}
+    \vspace{-20pt}
+    \caption{}\label{fig:2-16}
+\end{wrapfigure}
+
+
+如图 \ref{fig:2-16}，任意角 $\alpha$ 的终边与单位圆相交于点 $P(x, y)$，角 $-\alpha$ 的终边与单位圆相交于点 $P'$。
+由于角 $\alpha$ 与 $-\alpha$ 是由射线从 $x$ 轴的正半轴开始，按相反的方向绕原点作相同大小的旋转而成的，这两个角的
+终边关于 $x$ 轴对称。因此，点 $P'$ 的坐标为 $(x, -y)$。由于 $r = 1$，我们得到
+$$\sin(-\alpha) = -y, \qquad \cos(-\alpha) = x \text{，}$$
+从而，
+
+\vspace{-1em}\begin{gather*}
+    \sin(-\alpha) = -\sin\alpha \text{，} \qquad \cos(-\alpha) = \cos\alpha \text{，} \\
+    \tan(-\alpha) = \dfrac{\sin(-\alpha)}{\cos(-\alpha)} = \dfrac{-\sin\alpha}{\cos\alpha} = -\tan\alpha \text{，} \\
+    \cot(-\alpha) = \dfrac{\cos(-\alpha)}{\sin(-\alpha)} = \dfrac{\cos\alpha}{-\sin\alpha} = -\cot\alpha \text{。}
+\end{gather*}
+\vspace{0.5em}
+
+于是得到一组公式（\textbf{公式三}\mylabel{gongshi:3}）：
+
+\begin{center}
+    \framebox{\begin{tabular}{p{13em}p{13em}}
+            $\sin (-\alpha) = -\sin \alpha,$ & $\cos (-\alpha) = \cos \alpha ,$ \\
+            $\tan (-\alpha) = -\tan \alpha,$ & $\cot (-\alpha) = -\cot \alpha . $
+    \end{tabular}}
+\end{center}
+
+\liti 求下列各三角函数值：
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cos 225^\circ$；} & \xiaoxiaoti{$\tan \dfrac 4 3 \pi$；} \\
+        \xiaoxiaoti{$\sin \dfrac{11}{10} \pi$；} & \xiaoxiaoti{$\cot 200^\circ 18'$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\jie （1）$\cos 225^\circ = \cos(180^\circ + 45^\circ) = -\cos 45^\circ = -\dfrac{\sqrt{2}}{2}$；
+
+\vspace{0.5em}
+（2）$\tan \dfrac 4 3 \pi = \tan \left( \pi + \dfrac \pi 3 \right) = \tan \dfrac \pi 3 = \sqrt{3}$；
+\vspace{0.5em}
+
+（3）$\sin \dfrac{11}{10} \pi = \sin \left( \pi + \dfrac \pi {10} \right) = -\sin \dfrac \pi {10} = -\sin 18^\circ = -0.3090$；
+\vspace{0.5em}
+
+（4）$\cot 200^\circ 18' = \cot (180^\circ + 20^\circ 18') = \cot 20^\circ 18' = 2.703$。
+
+\liti 求下列各三角函数值：
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\sin \left( -\dfrac \pi 3 \right)$；} & \xiaoxiaoti{$\tan(-210^\circ)$；} \\
+        \xiaoxiaoti{$\cos(-240^\circ 12')$；} & \xiaoxiaoti{$\cot(-400^\circ)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\jie （1）$\sin \left( -\dfrac \pi 3 \right) = -\sin \dfrac \pi 3 = -\dfrac{\sqrt{3}}{2}$；
+
+（2）$\tan(-210^\circ) = -\tan 210^\circ = -\tan(180^\circ + 30^\circ) = -\tan 30^\circ = -\dfrac{\sqrt{3}}{3}$；
+\vspace{0.5em}
+
+（3）$\cos(-240^\circ 12') = \cos 240^\circ 12' = \cos(180^\circ + 60^\circ 12') = -\cos 60^\circ 12' = -0.4970$；
+
+（4）$\cot(-400^\circ) = -\cot 400^\circ = -\cot(360^\circ + 40^\circ) = -\cot 40^\circ = -1.1918$。
+
+\liti 化简
+$$\dfrac{\sin(180^\circ + \alpha) \cdot \cos(360^\circ + \alpha)}{\cot(-\alpha - 180^\circ) \cdot \sin(-180^\circ - \alpha)} \text{。}$$
+
+\jie $\begin{aligned}[t]
+    \because \quad &\cot(-\alpha - 180^\circ) = \cot[-(180^\circ + \alpha)] = -\cot(180^\circ + \alpha) = -\cot\alpha , \\
+    &\sin(-180^\circ - \alpha) = \sin[-(180^\circ + \alpha)] = -\sin(180^\circ + \alpha) = -(-\sin\alpha) = \sin\alpha ,
+\end{aligned}$
+
+\vspace{0.5em}
+$\therefore \quad \dfrac{\sin(180^\circ + \alpha) \cdot \cos(360^\circ + \alpha)}{\cot(-\alpha - 180^\circ) \cdot \sin(-180^\circ - \alpha)}
+= \dfrac{(-\sin\alpha) \cdot \cos\alpha}{(-\cot\alpha) \cdot \sin\alpha} = \dfrac{\cos\alpha}{\cot\alpha} = \sin\alpha
+$。
+\vspace{0.5em}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\tan 210^\circ$；} & \xiaoxiaoti{$\cos \dfrac{13}{9} \pi$；} \\
+        \xiaoxiaoti{$\sin(1 + \pi)$；} & \xiaoxiaoti{$\cot 253^\circ 18'$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cot(-45^\circ)$；} & \xiaoxiaoti{$\sin \left( -\dfrac \pi 6 \right)$；} \\
+        \xiaoxiaoti{$\cos(-70^\circ 6')$；} & \xiaoxiaoti{$\tan \left( -\dfrac{5}{18} \pi \right)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cos(-420^\circ)$；} & \xiaoxiaoti{$\tan(-800^\circ)$；} \\
+        \xiaoxiaoti{$\sin \left(-\dfrac 7 6 \pi \right)$；} & \xiaoxiaoti{$\cot \left( -\dfrac 4 3 \pi \right)$；} \\
+        \xiaoxiaoti{$\sin(-1300^\circ)$；} & \xiaoxiaoti{$\cos \left( -\dfrac{79}{6} \pi \right)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{化简：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac{\sin(\alpha + 180^\circ) \cos(-\alpha)}{\cot(-\alpha - 180^\circ)}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\sin^3(-\alpha) \cos(2\pi + \alpha) \tan(-\alpha - \pi)$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\vspace{2em}
+我们利用 \hyperref[gongshi:2]{公式二} 和 \hyperref[gongshi:3]{公式三}，可以推出 $180^\circ - \alpha$ 与 $\alpha$ 的三角函数值之间的关系：
+
+\vspace{-1em}\begin{align*}
+    \sin(180^\circ - \alpha) &= \sin[180^\circ + (-\alpha)] = -\sin(-\alpha) = \sin\alpha ; \\
+    \cos(180^\circ - \alpha) &= \cos[180^\circ + (-\alpha)] = -\cos(-\alpha) = -\cos\alpha ; \\
+    \tan(180^\circ - \alpha) &= \tan[180^\circ + (-\alpha)] = \tan(-\alpha) = -\tan\alpha ; \\
+    \cot(180^\circ - \alpha) &= \cot[180^\circ + (-\alpha)] = \cot(-\alpha) = -\cot\alpha \text{。}
+\end{align*}
+
+于是又得到一组公式（\textbf{公式四}\mylabel{gongshi:4}）：
+
+\begin{center}
+    \framebox{\begin{tabular}{p{13em}p{13em}}
+            $\sin (180^\circ - \alpha) = \sin \alpha,$ & $\cos (180^\circ - \alpha) = -\cos \alpha ,$ \\
+            $\tan (180^\circ - \alpha) = -\tan \alpha,$ & $\cot (180^\circ - \alpha) = -\cot \alpha . $
+    \end{tabular}}
+\end{center}
+
+同学们还可以利用 \hyperref[gongshi:1]{公式一} 和 \hyperref[gongshi:3]{公式三}，自己推证 $360^\circ - \alpha$
+与 $\alpha$ 的三角函数值之间的关系（\textbf{公式五}\mylabel{gongshi:5}）：
+
+\begin{center}
+    \framebox{\begin{tabular}{p{13em}p{13em}}
+            $\sin (360^\circ - \alpha) = -\sin \alpha,$ & $\cos (360^\circ - \alpha) = \cos \alpha ,$ \\
+            $\tan (360^\circ - \alpha) = -\tan \alpha,$ & $\cot (360^\circ - \alpha) = -\cot \alpha . $
+    \end{tabular}}
+\end{center}
+
+\hyperref[gongshi:1]{公式一}、\hyperref[gongshi:2]{二}、\hyperref[gongshi:3]{三}、
+\hyperref[gongshi:4]{四}、\hyperref[gongshi:5]{五}都叫做 \textbf{诱导公式}。
+
+上面这些诱导公式，可以概括如下：
+
+\textbf{$k \cdot 360^\circ + \alpha \, (k \in Z)$，$-\alpha$，$180^\circ \pm \alpha$，
+$360^\circ - \alpha$ 的三角函数值等于 $\alpha$ 的同名函数值，前面加上一个把 $\alpha$ 看成
+锐角时原函数值的符号。}
+
+利用诱导公式求任意角的三角函数值，一般可按下面的步骤进行：
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-buzhou.tex}
+\end{figure}
+
+\liti 求下列各三角函数值：
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\tan \dfrac 3 4 \pi$；} & \xiaoxiaoti{$\cos (-150^\circ 15')$；} \\
+        \xiaoxiaoti{$\sin \dfrac{11}{6} \pi$；} & \xiaoxiaoti{$\cot 310^\circ 18'$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\jie （1） $\tan \dfrac 3 4 \pi = \tan \left( \pi - \dfrac \pi 4 \right) = -\tan \dfrac \pi 4 = -1$；
+\vspace{0.5em}
+
+（2） $\cos (-150^\circ 15') = \cos 150^\circ 15' = \cos (180^\circ - 29^\circ 45') = -\cos 29^\circ 45' = -0.8682$；
+
+\vspace{0.5em}
+（3）$\sin \dfrac{11}{6} \pi = \sin \left( 2\pi - \dfrac \pi 6 \right) = -\sin \dfrac \pi 6 = -\dfrac 1 2$；
+\vspace{0.5em}
+
+（4）$\cot 310^\circ 18' = \cot (360^\circ - 49^\circ 42') = -\cot 49^\circ 42' = -0.8481$。
+
+\liti 求下列各三角函数值：
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cos 519^\circ$；} & \xiaoxiaoti{$\sin \left( -\dfrac{17}{3} \pi \right)$；} \\
+        \xiaoxiaoti{$\cot(-1665^\circ)$；} & \xiaoxiaoti{$\tan(-324^\circ 18')$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\jie （1） $\cos 519^\circ = \cos(360^\circ + 159^\circ) = \cos 159^\circ = \cos(180^\circ - 21^\circ) = -\cos 21^\circ = -0.9336$；
+
+（2）$\sin \left( -\dfrac{17}{3} \pi \right) = \sin \left( -3 \times 2\pi + \dfrac \pi 3 \right) = \sin \dfrac \pi 3 = \dfrac{\sqrt{3}}{2}$；
+
+（3）$\begin{aligned}[t]
+      &\cot(-1665^\circ) = -\cot 1665^\circ \\
+    = &-\cot(4 \times 360^\circ + 225^\circ) \\
+    = &-\cot 225^\circ = -\cot(180^\circ + 45^\circ) \\
+    = &-\cot 45^\circ = -1 \text{；}
+\end{aligned}$
+
+（4）$\tan(-324^\circ 18') = \tan(-360^\circ + 35^\circ 42') = \tan 35^\circ 42' = 0.7186$。
+
+\liti 求证
+$$\dfrac{\sin(2\pi - \alpha) \tan(\pi + \alpha) \cot(-\alpha - \pi)}{\cos(\pi - \alpha) \tan(3\pi -\alpha)} = 1 \text{。}$$
+
+\zhengming  $\begin{aligned}[t]
+      &\dfrac{\sin(2\pi - \alpha) \tan(\pi + \alpha) \cot(-\alpha - \pi)}{\cos(\pi - \alpha) \tan(3\pi -\alpha)} \\
+    = &\dfrac{(-\sin\alpha) \tan\alpha [-\cot(\pi + \alpha)]}{(-\cos\alpha) \tan(\pi - \alpha)} \\
+    = &\dfrac{(-\sin\alpha) \tan\alpha (-\cot \alpha)}{(-\cos\alpha) (-\tan\alpha)} \\
+    = &\dfrac{\sin\alpha}{\cos\alpha} \cdot \dfrac{\cos\alpha}{\sin\alpha} \\
+    = & 1 \text{。}
+\end{aligned}$
+
+\vspace{2em}
+\lianxi
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{填写下表：}
+
+\begin{table}[H]
+    \renewcommand\arraystretch{2}
+    \hspace{4em}
+    \begin{tabular}{|w{c}{4em}|*{4}{w{c}{6em}|}}
+        \hline
+        $\alpha$ & $\sin \alpha$ & $\cos \alpha$ & $\tan \alpha$ & $\cot \alpha$ \\ \hline
+        $-\dfrac \pi 3$ & \eline{4} \\ \hline
+        $\dfrac 2 3 \pi$ & \eline{4} \\ \hline
+        $\dfrac 4 3 \pi$ & \eline{4} \\ \hline
+        $\dfrac 5 3 \pi$ & \eline{4} \\ \hline
+        $\dfrac 7 3 \pi$ & \eline{4} \\ \hline
+    \end{tabular}
+\end{table}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\sin \dfrac 3 5 \pi$；} & \xiaoxiaoti{$\cos 100^\circ 21'$；} \\
+        \xiaoxiaoti{$\cot \left( - \dfrac 3 4 \pi \right)$；} & \xiaoxiaoti{$\tan(-145^\circ 20')$；} \\
+        \xiaoxiaoti{$\sin \dfrac{31}{36} \pi$；} & \xiaoxiaoti{$\cos 324^\circ 32'$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各三角函数值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cos \dfrac{65}{6} \pi$；} & \xiaoxiaoti{$\cot \dfrac{35}{3} \pi$；} \\
+        \xiaoxiaoti{$\sin \left( - \dfrac{31}{4} \pi \right)$；} & \xiaoxiaoti{$\tan(-1596^\circ)$；} \\
+        \xiaoxiaoti{$\cos(-1182^\circ 13')$；} & \xiaoxiaoti{$\sin 670^\circ 39'$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{化简：}
+\begin{xiaoxiaotis}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\dfrac{\cos(\alpha - \pi) \cdot \tan(\alpha - 2\pi)}{\sin(\pi - \alpha) \cdot \cot(2\pi - \alpha)}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\sin^2(-\alpha) - \tan(360^\circ - \alpha) \cot(-\alpha) - \sin(180^\circ - \alpha) \cos(360^\circ - \alpha) \cot(\alpha + 180^\circ)$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
