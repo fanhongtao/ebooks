@@ -1,0 +1,130 @@
+\subsection{已知三角函数值求角}\label{subsec:2-6}
+
+已知任意一个角（角必须属于这个函数的定义域），可以求出它的三角函数值；
+反过来，如果已知一个三角函数值，也可以求出它对应的角。
+
+\vspace{0.5em}
+\liti 已知 $\sin\alpha = \dfrac{\sqrt{2}}{2}$，且 $0 \leqslant \alpha < 2\pi$，求 $\alpha$。
+\vspace{0.5em}
+
+\jie 因为 $\sin\alpha = \dfrac{\sqrt{2}}{2} > 0$，所以 $\alpha$ 是第一、二象限的角。由
+$$\sin \dfrac \pi 4 = \dfrac{\sqrt{2}}{2}$$
+知道，符合条件的第一象限的角是 $\dfrac \pi 4$。又由
+$$\sin \left( \pi - \dfrac \pi 4 \right) = \sin \dfrac \pi 4 = \dfrac{\sqrt{2}}{2} \vspace{0.5em}$$
+知道，符合条件的第二象限的角是 $\pi - \dfrac \pi 4$，即 $\dfrac{3\pi}{4}$。于是所求的 $\alpha$ 是 $\dfrac \pi 4$ 或 $\dfrac{3\pi}{4}$。
+
+\vspace{0.5em}
+也可以说，所求的 $\alpha$ 的集合是 $\left\{ \dfrac \pi 4, \dfrac{3\pi}{4} \right\}$。
+\vspace{0.5em}
+
+\liti 已知 $\cos\alpha = -0.7660$，且 $0^\circ \leqslant \alpha < 360^\circ$，求 $\alpha$。
+
+\jie 因为 $\cos\alpha = -0.7660 < 0$，所以 $\alpha$ 是第二、三象限的角。
+
+先求符合下面条件的锐角 $\theta$：
+$$\cos\theta = 0.7660 \text{，}$$
+查表得 \qquad $\theta = 40^\circ$。
+
+由 $\cos(180^\circ - 40^\circ) = -\cos 40^\circ = -0.7660$ 知道，符合条件的第二象限的角是 $180^\circ - 40^\circ$，即 $140^\circ$。
+
+又由 $\cos(180^\circ + 40^\circ) = -\cos 40^\circ = -0.7660$ 知道，符合条件的第三象限的角是 $180^\circ + 40^\circ$，即 $220^\circ$。
+
+因此，所求的 $\alpha$ 是 $140^\circ$ 或 $220^\circ$。
+
+\liti 已知 $\sin x = -0.3322$，求 $x$。
+
+\jie 因为 $\sin x = -0.3322 < 0$，所以 $x$ 是第三、四象限的角。
+
+先求符合下面条件的锐角 $\theta$：
+$$\sin\theta = 0.3322 \text{，}$$
+查表得
+$$\theta = 19^\circ 24' \text{，}$$
+因为
+$$\begin{gathered}
+    \sin(180^\circ + 19^\circ 24') = -\sin 19^\circ 24' = -0.3322, \\
+    \sin(360^\circ - 19^\circ 24') = -\sin 19^\circ 24' = -0.3322,
+\end{gathered}$$
+所以，在 $0^\circ$ \~{} $360^\circ$ 间，符合条件的第三、四象限的角分别是 $199^\circ 24'$，
+$340^\circ 36'$。由 \hyperref[gongshi:1]{公式一} 知道，与 $199^\circ 24'$，$340^\circ 36'$
+有相同终边的角的正弦都等于 $-0.3322$。所以，所求的 $x$ 是
+$$k \cdot 360^\circ + 199^\circ 24' \quad \text{或} \quad k \cdot 360^\circ + 340^\circ 36', \, k\in Z \text{。} $$
+
+\vspace{0.5em}
+\liti 已知 $\tan x = \dfrac 1 3$，求 $x$ 的集合。
+\vspace{0.5em}
+
+\jie 因为 $\tan x = \dfrac 1 3 > 0$，所以 $x$ 是第一、三象限的角。
+
+查表得
+$$\tan 18^\circ 26' = \dfrac 1 3 \text{，}$$
+又
+$$\tan(180^\circ + 18^\circ 26') = \tan 18^\circ 26' = \dfrac 1 3 \text{，}$$
+因此所求的 $x$ 是
+$$k \cdot 360^\circ + 18^\circ 26'$$
+或
+$$k \cdot 360^\circ + (180^\circ + 18^\circ 26') \, (k \in Z) \text{。}$$
+
+因为
+\begin{align}
+    &k \cdot 360^\circ + 18^\circ 26' = 2k \cdot 180^\circ + 18^\circ 26', \tag{1}\label{eq:2-6-1} \\
+    &k \cdot 360^\circ + 180^\circ + 18^\circ 26' =  (2k + 1) \cdot 180^\circ + 18^\circ 26', \tag{2}\label{eq:2-6-2}
+\end{align}
+
+所以把 \eqref{eq:2-6-1}，\eqref{eq:2-6-2} 合并，所求的 $x$ 就是
+$$n \cdot 180^\circ + 18^\circ 26', \, n \in Z \text{。}$$
+
+因此，所求的 $x$ 的集合是
+$$\{ x \mid x = n \cdot 180^\circ + 18^\circ 26', \, n \in Z \} \text{。}$$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{求适合下列条件的 $\alpha$：}
+\begin{xiaoxiaotis}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\cos\alpha = \dfrac{\sqrt{3}}{2}$，且 $\dfrac{3\pi}{2} < \alpha < 2\pi$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\sin\alpha = -\dfrac{1}{2}$，且 $\pi < \alpha < \dfrac{3\pi}{2}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\cot\alpha = 1$，且 $\pi < \alpha < \dfrac{3\pi}{2}$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\sin\alpha = -0.8572$，且 $0^\circ < \alpha < 360^\circ$；}
+
+    \xiaoxiaoti{$\cos\alpha = -0.4099$，且 $0^\circ < \alpha < 360^\circ$；}
+
+    \xiaoxiaoti{$\tan\alpha = -4$，且 $0^\circ < \alpha < 360^\circ$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求适合下列条件的 $x$：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\sin x = 0.3469$，且 $x$ 在第一象限；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\cot x = -\dfrac{\sqrt{3}}{3}$，且 $x$ 在第二象限；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\cos x = \dfrac{4}{5}$，且 $x$ 在第四象限；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\tan x = 4.653$，且 $x$ 在第三象限。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求适合下列条件的 $x$ 的集合：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{2}
+    \begin{tabular}[t]{*{2}{@{}p{15em}}}
+        \xiaoxiaoti{$\cos x = -\dfrac{\sqrt{3}}{2}$；} & \xiaoxiaoti{$\cot x = \dfrac{\sqrt{3}}{3}$；} \\
+        \xiaoxiaoti{$\sin x = 0.7662$；} & \xiaoxiaoti{$\tan x = -29.12$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
