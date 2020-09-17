@@ -1,0 +1,79 @@
+\subsection{用单位圆中的线段表示三角函数值}\label{subsec:2-7}
+
+\begin{wrapfigure}[17]{r}{7.4cm}
+    \centering
+    \input{pic/2-17}
+    \caption{}\label{fig:2-17}
+\end{wrapfigure}
+
+我们知道，坐标轴是规定了方向的直线。一条与坐标轴平行的线段也可以规定两种相反的方向。
+如图 \ref{fig:2-17}，$x$ 轴上的线段 $AB$，可以规定从点 $A$ 到点 $B$ 或从点 $B$ 到点 $A$ 这样两种相反的方向；
+与 $y$ 轴平行的线段 $CD$，也可以规定从点 $C$ 到点 $D$ 或从点 $D$ 到点 $C$ 这样两种相反的方向。
+如果这样的线段的方向与坐标轴的正向一致，就规定这条线段是正的，否则，就规定它是负的。
+例如图 \ref{fig:2-17} 中，$AB = 4$（长度单位），$BA = -4$（长度单位）。
+
+如图 \ref{fig:2-18}，设任意角 $\alpha$ 的终边与单位圆相交于点 $P(x, y)$，那么，
+
+$$\sin\alpha = \dfrac y r = \dfrac y 1 = y, \quad \cos\alpha = \dfrac x r = \dfrac x 1 = x \text{。}$$
+\vspace{0.5em}
+
+过点 $P$ 作 $x$ 轴的垂线，垂足为 $M$。我们把线段 $MP$，$OM$ 都看作是规定了方向的线段，这样，
+当 $MP$ 的方向与 $y$ 轴的正向一致时，$MP$ 是正的，相反时，$MP$ 是负的；
+当 $OM$ 的方向与 $x$ 轴的正向一致时，$OM$ 是正的，相反时，$OM$ 是负的。因此，
+线段 $MP$ 的符号与点 $P$ 的纵坐标 $y$ 的符号相同，且 $MP$ 的长度等于 $|y|$；
+线段 $OM$ 的符号与点 $P$ 的横坐标 $x$ 的符号相同，且 $OM$ 的长度等于 $|x|$。
+从而，$\sin\alpha = y = MP$，$\cos\alpha = x = OM$。
+我们把单位圆中规定了方向的线段 $MP$，$OM$ 分别叫做角 $\alpha$ 的 \textbf{正弦线，余弦线}。
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-18-1}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-18-2}
+    \end{minipage}
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-18-3}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{8cm}
+    \centering
+    \input{pic/2-18-4}
+    \end{minipage}
+    \caption{}\label{fig:2-18}
+\end{figure}
+
+
+过点 $A(1, 0)$ 作单位圆的切线，那么这条切线平行于 $y$ 轴（为什么？）。设这条切线与角 $\alpha$
+的终边（当 $\alpha$ 为第一、四象限的角时）或这条终边的反向延长线（当 $\alpha$ 为第二、三象限
+的角时）交于点 $T$。因为 $\triangle OMP \xiangsi \triangle OAT$，并且 $OM$ 与 $MP$ 同号时，
+$OA$ 与 $AT$ 也同号，$OM$ 与 $MP$ 异号时，$OA$ 与 $AT$ 也异号，所以
+$$\tan\alpha = \dfrac y x = \dfrac{MP}{OM} = \dfrac{AT}{OA} \text{。}$$
+但 $OA = 1$，从而
+$$\tan\alpha = AT \text{。}$$
+
+我们把规定了方向的线段 $AT$ 叫做角 $\alpha$ 的\textbf{正切线}。
+
+当角 $\alpha$ 的终边在 $x$ 轴上时，点 $T$ 与点 $A$ 重合，这时正切线变成了一个点；
+当角 $\alpha$ 的终边在 $y$ 轴上时，点 $T$ 不存在，即正切线不存在。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{作出下列各角的正弦线、余弦线、正切钱：}
+\begin{xiaoxiaotis}
+
+    \fourInLine[8em]{\xiaoxiaoti{$\dfrac \pi 3$；}}{\xiaoxiaoti{$\dfrac{5\pi}{6}$；}}{\xiaoxiaoti{$-\dfrac{2\pi}{3}$；}}{\xiaoxiaoti{$-\dfrac{13\pi}{6}$。}}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\xiaoti{以 $5cm$ 为单位长作单位圆，分别作出$30^\circ$，$225^\circ$，$330^\circ$ 的角的
+    正弦线、余弦线、正切线，量出它们的长度，从而写出这些角的正弦值、余弦值、正切值（精确到 $0.01$)。}
+
+\end{xiaotis}

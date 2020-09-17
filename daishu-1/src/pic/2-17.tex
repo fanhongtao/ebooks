@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5]
+    \draw [->] (-7,0) -- (7,0) node[anchor=north] {$x$};
+    \draw [->] (0,-7) -- (0,7) node[anchor=east] {$y$};
+    \node at (0.4,-0.4) {$O$};
+    \foreach \x in {-6,-4,-2,1,2,...,6} {
+        \draw (\x,0) -- (\x,0.2) node[anchor=south] {$\x$};
+    }
+    \foreach \x in {-5,-3,-1} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {1,...,6} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+    \foreach \y in {-6,...,-1} {
+        \draw (0,\y) -- (0.2,\y) node[anchor=west] {\y};
+    }
+
+    \draw (-3, 1) node[anchor=north] {$C$} -- (-3, 5) node[anchor=east] {$D$};
+    \draw [ultra thick] (2, 0)  node[anchor=north] {$A$} -- (6, 0) node[anchor=north] {$B$};
+\end{tikzpicture}

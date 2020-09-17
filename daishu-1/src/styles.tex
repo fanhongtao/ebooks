@@ -159,6 +159,10 @@
 %  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
 \newcommand{\kongji}{\varnothing}      % 空集
 \newcommand{\buji}{\overline}          % 补集
+\newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
+    \mathrel{\text{%
+            \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
+}}}
 
 % 绘制 弧度 符号。代码来自
 %    https://tex.stackexchange.com/questions/96680/
