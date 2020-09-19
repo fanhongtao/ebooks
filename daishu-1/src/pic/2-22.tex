@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-1.0,0) -- (2*pi +1,0) node[anchor=north] {$x$};
+    \draw [->] (0,-1.5) -- (0,1.5) node[anchor=east] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+    \foreach \x / \name in {
+        0.5*pi / $\dfrac \pi 2$,
+        pi / $\pi$,
+        1.5*pi / $\dfrac {3\pi} 2$,
+        2 * pi / $2\pi$
+    } {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {\name};
+    }
+    \foreach \y in {-1,1} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+
+    \foreach \x / \y in {0 / -1, 0.5*pi / 0, pi / 1, 1.5*pi / 0, 2*pi / -1} {
+        \fill (\x, \y) circle[radius=2pt];
+    }
+    \draw[domain=0:2*pi,samples=100] plot (\x, {-cos(\x r)}) +(-1.4, 2.5) node {$y = -\cos x \quad x \in [0, 2\pi]$};
+\end{tikzpicture}

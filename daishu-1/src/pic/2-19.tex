@@ -1,0 +1,79 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    % 绘制两组坐标轴
+    \foreach \y in {0, 4} {
+        \draw [->] (-3.5, \y) -- (7.5, \y) node[anchor=north] {$x$};
+        \draw [->] (0, \y-1.5) -- (0, \y+1.9) node[anchor=east] {$y$};
+        \node [font=\footnotesize] at (-0.2, \y-0.3) {$O$};
+        \node [font=\footnotesize] at (0.2, \y+1.2) {$1$};
+        \node [font=\footnotesize] at (0.3, \y-1.2) {$-1$};
+    }
+
+    % 绘制左上角的圆 及 圆内的分隔线
+    \pgfmathsetmacro{\base}{4}
+    \coordinate (O1) at (-2, \base);
+    \draw (O1) circle(1);
+    \foreach \id in {1, ..., 12} {
+        \draw (O1) -- ++(30 *\id:1) coordinate (A\id);
+    }
+    \draw (O1) +(0.3, -0.3) node [fill=white, inner sep = 1pt, font=\footnotesize] {$O_1$};
+    \node at (A12) [anchor=south west, inner sep = 1pt, font=\footnotesize] {$A$};
+
+    %-------------------------------------
+    % 绘制 sin 函数 及其相关连线
+    \coordinate (sinx) at (0, \base);
+    \draw[domain=0:2*pi,samples=100,name path=sin] plot (\x, {\base + sin(\x r)}) +(-1, 1.3) node {$y = \sin x \quad x \in [0, 2\pi]$};
+    \foreach \id in {4, 5, 7, 8} {
+        \path [name path=pc] (A\id) -- +(10, 0);
+        \path [name intersections={of=pc and sin, by={a, b}}];
+        \draw (a) -- (a |- sinx); % 第二种绘制方式： |-   (perpendicular)
+        \draw (b) -- (b |- sinx);
+        \draw [dashed] (A\id) -- (b);
+    }
+    \draw [dashed] (A3) node [anchor=south, font=\footnotesize] {$B$} -- (pi/2, \base+1);
+    \draw (pi/2, \base + 1) node [anchor=south, font=\footnotesize] {$(B)$} -- (pi/2, \base) node [anchor=north, fill=white, inner sep = 1pt] {$\frac \pi 2$} +(0.5, 0.25) node [fill=white, inner sep = 1pt, font=\footnotesize]{$(O_1)$};
+    \node [anchor=south] at (pi, \base) {$\pi$};
+    \draw (3*pi/2, \base - 1) -- (3*pi/2, \base) node [anchor=south] {$\frac{3\pi}{2}$};
+    \node [anchor=south, font=\footnotesize] at (2*pi, \base) {$2\pi$};
+    \draw [dashed] (A9) -- (3*pi/2, \base-1);
+
+    %-------------------------------------
+    % 绘制 cos 函数 及其相关连线
+    \draw [name path=line] (-3.5,-1.5) -- (-0.5,1.5);
+    \node [font=\footnotesize] at (-1.8, -0.3) {$O_1$};
+
+    \coordinate (cosx) at (0,0);
+    \draw[domain=0:2*pi,samples=100,name path=cos] plot (\x, {cos(\x r)}) +(-1, -2.5) node {$y = \cos x \quad x \in [0, 2\pi]$};
+
+    \foreach \id in {1, 2, 3, 4, 5} {
+        \path [name path=pl] (A\id) -- (A\id |- 0,-2);
+        \path [name intersections={of=pl and line, by=l1}];
+        \path [name path=pc] (l1) -- +(10, 0);
+        \draw [name intersections={of=pc and cos, by={c1, c2}}]
+            let \p1=(c1), \p2=(c2)
+            in (\p1) -- (\x1, 0)   % 第二种绘制方式： let ... in
+               (\p2) -- (\x2, 0);
+        \draw [dashed] (A\id) -- (l1) -- (c2);
+    }
+
+    \foreach \id in {1, 2, 12} {
+        \path [name path=pl] (A\id) -- (A\id |- 0,-2);
+        \path [name intersections={of=pl and line, by=l1}];
+        \draw (l1) -- (l1 |- cosx);
+    }
+
+    \foreach \id / \x / \y in { 6/pi/-1, 12/2*pi/1 } {
+        \path [name path=pl6] (A\id) -- (A\id |- 0,-2);
+        \path [name intersections={of=pl6 and line, by=l6}];
+        \draw [dashed] (A\id) -- (l6) -- (\x, \y);
+        \draw (\x, \y) -- (\x, 0);
+    }
+
+    \draw (-1.30, 0.28) node[fill=white, inner sep=0pt] {$\frac \pi 4$} (-1.6, 0) arc (0:45:0.4);
+    \node [anchor=north, font=\footnotesize] at (-0.5, 1.6) {$A'$};
+    \node [anchor=north, font=\footnotesize] at (-1, 0) {$A$};
+    \node [anchor=south west, fill=white, inner sep=1pt] at (pi/2, 0) {$\frac \pi 2$};
+    \node [anchor=south, font=\footnotesize] at (pi, 0) {$\pi$};
+    \node [anchor=north] at (3*pi/2, 0) {$\frac{3\pi}{2}$};
+    \node [anchor=north, font=\footnotesize] at (2*pi, 0) {$2\pi$};
+
+\end{tikzpicture}
