@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-1.0,0) -- (2*pi +1,0) node[anchor=north] {$x$};
+    \draw [->] (0,-2.5) -- (0,2.5) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+
+    \draw(0.5*pi, 0.2) -- (0.5*pi,0) node[anchor=north] {$\dfrac \pi 2$};
+    \draw(pi, 0.2) -- (pi,0) node[anchor=north east] {$\pi$};
+    \foreach \x / \name in {
+        1.5*pi / $\dfrac {3\pi} 2$,
+        2 * pi / $2\pi$
+    } {
+        \draw (\x,0) -- (\x,0.2) node[anchor=south] {\name};
+    }
+
+    \foreach \y in {-2,-1,1,2} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+    \foreach \y / \name in {
+        -0.5 / -$\frac 1 2$,
+        0.5 / $\frac 1 2$
+    } {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\name};
+    }
+
+    \draw[dashed, domain=0:2*pi,samples=50] plot (\x, {sin(\x r)});
+    \draw (2.3, 0.8) -- (3.1, 1.4) node[anchor=west] {$y = \sin x$};
+
+    \draw[thick, domain=0:2*pi,samples=50] plot (\x, {0.5 * sin(\x r)});
+    \draw (4.3, -0.5) -- (2.8, -1.5) node[anchor=east] {$y = \dfrac 1 2 \sin x$};
+
+    \draw[thick, domain=0:2*pi,samples=50] plot (\x, {2 * sin(\x r)}) (3, 2.0) node {$y = 2\sin x$};
+\end{tikzpicture}

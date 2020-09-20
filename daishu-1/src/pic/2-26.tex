@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-1.8,0) -- (2*pi +1,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,3.5) node[anchor=east] {$y$};
+    \node at (-0.2,0.2) {$O$};
+
+    \foreach \x / \name in {
+        -0.16667 * pi / $-\dfrac \pi 6$,
+        0.08333 * pi / $\dfrac{\pi}{12}$,
+        0.58333 * pi / $\dfrac{7\pi}{12}$
+    } {
+        \draw (\x,0.1) -- (\x,0) node[anchor=north] {\name};
+    }
+    \draw (-0.33333 * pi,0.1) -- (-0.33333 * pi,0) +(-0.2, 0) node[anchor=north] {$-\dfrac \pi 3$};
+    \draw (0.33333 * pi,0.1) -- (0.33333 * pi,0) +(-0.2, 0) node[anchor=north] {$\dfrac \pi 3$};
+
+    \foreach \x / \name in {
+        0.66667 * pi / $\dfrac{2\pi}{3}$,
+        pi / $\pi$,
+        1.66667 * pi / $\dfrac{5\pi}{3}$,
+        2 * pi / $2\pi$
+    } {
+        \draw (\x,0) -- (\x,0.1) node[anchor=south] {\name};
+    }
+
+    \foreach \y in {-3,-2,-1,2} {
+        \draw (0,\y) -- (0.1,\y) node[anchor=west] {$\y$};
+    }
+    \draw (0,1) -- (0.1,1) +(0, 0.2) node[anchor=west] {$1$};
+    \draw (0.1,3) -- (0,3) node[anchor=east] {$3$};
+
+    \draw[dashed, domain=0:2*pi,samples=50] plot (\x, {sin(\x r)}) (0.7*pi, 1.3) node {$y = \sin x$};
+
+    \draw[dashed, domain=-pi/3:5*pi/3,samples=50] plot (\x, {sin((\x + pi/3) r)});
+    \draw (1.1*pi, -1) -- (1.2*pi, -1.4) +(-0.3, 0.3) node [anchor=north west] {$y = \sin \left( x + \dfrac \pi 3 \right)$};
+
+    \draw[dashed, domain=-pi/6:5*pi/6,samples=50] plot (\x, {sin((2*\x + pi/3) r)});
+    \draw (0.65*pi, -1) -- (0.8*pi, -2.2) +(-0.3, 0.3) node [anchor=north west] {$y = \sin \left( 2x + \dfrac \pi 3 \right)$};
+
+    \draw[thick, domain=-pi/6:5*pi/6,samples=50] plot (\x, {3*sin((2*\x + pi/3) r)});
+    \draw (pi/5, 2.8) node [anchor=west] {$y = 3\sin \left( 2x + \dfrac \pi 3 \right)$};
+
+    \draw (0.83333 * pi,0.1) -- (0.83333 * pi,0) +(0.3, 0) node[anchor=north,fill=white,inner sep=1pt] {$\dfrac{5\pi}{6}$};
+\end{tikzpicture}
