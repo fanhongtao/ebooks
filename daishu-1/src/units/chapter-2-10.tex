@@ -1,0 +1,148 @@
+\subsection{正切函数、余切函数的图象和性质}\label{subsec:2-10}
+
+由诱导公式 $\tan(x + \pi) = \tan x, \, x \in R \text{且} x \neq k\pi + \dfrac \pi 2, \, k \in Z$
+知道，正切函数是周期函数。可以证明它的周期（最小正周期）是 $\pi$。现用单位圆上的正切线来作正切函数
+$y = \tan x$ 在 $\left( -\dfrac \pi 2, \dfrac \pi 2 \right)$ 内的图象（图 \ref{fig:2-27}）。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-27}
+    \caption{}\label{fig:2-27}
+\end{figure}
+
+根据正切函数的周期性，我们可以把图象向左、右扩展，得出 \vspace{0.5em}
+$y = \tan x, \, x \in \left( -\dfrac \pi 2 + k\pi, \dfrac \pi 2 + k\pi \right)$, $k \in Z$
+的图象——\textbf{正切曲线}（图 \ref{fig:2-28}）。可以看出，正切曲线是由相互平行的直线
+$x = \dfrac \pi 2 + k\pi \, (k \in Z)$ 隔开的无穷多支曲线所组成的。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-28}
+    \caption{}\label{fig:2-28}
+\end{figure}
+
+正切函数 $y = \tan x$ 有以下主要性质：
+
+（1）\textbf{定义域} \mylabel{xingzhi:tan-1}
+
+\textbf{函数 $y = \tan x$ 的定义域是 $\{ x \mid x \in R \; \text{且} \; x \neq k\pi + \dfrac \pi 2, \, k \in Z \}$。}
+
+（2）\textbf{值域} \mylabel{xingzhi:tan-2}
+
+从图 \ref{fig:2-28} 可以看出，
+当 $x$ 小于 $\dfrac \pi 2 + k\pi, \, k \in Z$ 而无限接近于 $\dfrac \pi 2 + k\pi$ 时，\vspace{0.5em}
+$\tan x$ 无限增大，即可比指定的任何正数都大，我们把这种情况记作 $\tan x \to +\infty$（读作 $\tan x$ 趋向于正无穷大）；\vspace{0.5em}
+当 $x$ 大于 $\dfrac \pi 2 + k\pi, \, k \in Z$ 而无限接近于 $\dfrac \pi 2 + k\pi$ 时，\vspace{0.5em}
+$\tan x$ 无限减小，即取负值且它的绝对值可比指定的任何正数都大，我们把这种情况记作 $\tan x \to -\infty$（读作 $\tan x$ 趋向于负无穷大）。
+这就是说，$\tan x$ 可以取任意实数值，但没有最大值、最小值。因此，
+\textbf{函数 $y  = \tan x$ 的值域是实集 $R$。}
+
+（3）\textbf{周期性} \mylabel{xingzhi:tan-3}
+
+\textbf{$y = \tan x$ 是周期函数，周期是 $\pi$。}
+
+（4）\textbf{奇偶性} \mylabel{xingzhi:tan-4}
+
+\textbf{从诱导公式 $\tan(-x) = -\tan x$ 知道，$y = \tan x$ 是奇函数，它的图象关于原点对称。}
+
+（5）\textbf{单调性} \mylabel{xingzhi:tan-5}
+
+从图 \ref{fig:2-28} 可以看出，\textbf{函数 $y = \tan x$ 在每一个开区间
+$(-\dfrac \pi 2 + k\pi, \, \dfrac \pi 2 + k\pi), \, k \in Z$ 内都是增函数。}
+（想一想：正切函数在整个定义域内是增函数吗？)
+
+用类似的方法，可以作出余切函数
+$y = \cot x, \, x \in R \text{且} x \neq k\pi, \, k \in Z$
+的图象——\textbf{余切曲线}，如图 \ref{fig:2-29} 所示。
+
+\begin{figure}[htbp]
+    \centering
+    \input{pic/2-29}
+    \caption{}\label{fig:2-29}
+\end{figure}
+
+余切函数 $y = \cot x$ 的主要性质如下：
+
+（1）\textbf{定义域} \mylabel{xingzhi:cot-1}
+
+\textbf{函数 $y = \cot x$ 的定义域是 $\{ x \mid x \in R \; \text{且} \; x \neq k\pi, \, k \in Z \}$。}
+
+（2）\textbf{值域} \mylabel{xingzhi:cot-2}
+
+\textbf{函数 $y  = \cot x$ 的值域是实集 $R$，没有最大值、最小值。}
+
+（3）\textbf{周期性} \mylabel{xingzhi:cot-3}
+
+\textbf{$y = \cot x$ 是周期函数，周期是 $\pi$。}
+
+（4）\textbf{奇偶性} \mylabel{xingzhi:cot-4}
+
+\textbf{$y = \cot x$ 是奇函数，它的图象关于原点对称。}
+
+（5）\textbf{单调性} \mylabel{xingzhi:cot-5}
+
+\textbf{$y = \cot x$ 在每一个开区间 $(k\pi, \, (k + 1)\pi), \, k \in Z$ 内都是减函数。}
+
+\vspace{0.5em}
+\liti 求函数 $y = \tan \left( x + \dfrac \pi 4 \right)$ 的定义域。
+\vspace{0.5em}
+
+\jie 令 $z = x + \dfrac \pi 4$，那么函数 $y = \tan z$ 的定义域是
+$$\{ z \mid z \in R, \, \text{且} \; z \neq k\pi + \dfrac \pi 2, \, k \in Z \} \text{。}$$
+由
+$$x + \dfrac \pi 4 = z = k\pi + \dfrac \pi 2,$$
+得
+$$x = k\pi + \dfrac \pi 2 - \dfrac \pi 4 = k\pi + \dfrac \pi 4 \text{。}$$
+
+因此，$y = \tan \left( x + \dfrac \pi 4 \right)$ 的定义域是
+$$\{ x \mid x \in R, \, \text{且} \; x \neq k\pi + \dfrac \pi 4, \, k \in Z \} \text{。}$$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{根据图 \ref{fig:2-27}，写出 $y = \tan x, \, x \in \left( -\dfrac \pi 2, \, \dfrac \pi 2 \right)$ 的图象的作法。}
+\vspace{0.5em}
+
+\xiaoti{观察正切曲线及余切曲线，写出满足下列条件的 $x$ 的值或 $x$ 的区间：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{3}{@{}p{13em}}}
+        \xiaoxiaoti {$\tan x > 0$；} & \xiaoxiaoti {$\tan x = 0$；}  & \xiaoxiaoti {$\tan x < 0$；} \\
+        \xiaoxiaoti {$\cot x > 0$；} & \xiaoxiaoti {$\cot x = 0$；}  & \xiaoxiaoti {$\cot x < 0$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列函数的定义域：}
+\begin{xiaoxiaotis}
+
+    \twoInLine[13em]{\xiaoxiaoti{$y = \tan 3x$；}}{\xiaoxiaoti{$y = -3\cot 2x$。}}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列函数的周期：}
+\begin{xiaoxiaotis}
+
+    \threeInLine[13em]{\xiaoxiaoti{$y = \tan 2x$；}}{\xiaoxiaoti{$y = \cot \left( x + \dfrac \pi 3 \right)$；}}{\xiaoxiaoti{$y = 5\tan \dfrac x 2$。}}
+
+\end{xiaoxiaotis}
+\vspace{0.5em}
+
+\xiaoti{指出下列各组函数值的差哪些大于零，哪些小于零（不求值）：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\tan 138^\circ - \tan 143^\circ$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\tan \left( -\dfrac{13}{4} \pi \right) - \tan \left( -\dfrac{17}{5} \pi \right)$；}
+    \vspace{0.5em}
+
+    \xiaoxiaoti{$\cot 281^\circ - \cot 305^\circ$；}
+
+    \vspace{0.5em}
+    \xiaoxiaoti{$\cot \left( -\dfrac{19}{7} \pi \right) - \cot \left( -\dfrac{23}{8} \pi \right)$。}
+    \vspace{0.5em}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}

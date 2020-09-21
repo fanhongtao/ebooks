@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-2*pi-1,0) -- (2*pi+1,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,4.0) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+
+    \foreach \x / \name in {
+        -2*pi / $-2\pi$,
+        -pi / $-\pi$,
+        pi / $\pi$,
+        2*pi / $2\pi$
+    } {
+        \draw (\x,0) node[anchor=north west] {\name};
+    }
+
+    \foreach \x / \name in {
+        -1.5*pi / $-\dfrac{3\pi}{2}$,
+        -0.5*pi / $-\dfrac{\pi}{2}$,
+        0.5*pi / $\dfrac{\pi}{2}$,
+        1.5*pi / $\dfrac{3\pi}{2}$
+    } {
+        \draw (\x-0.3, 0) node[anchor=south west] {\name};
+    }
+
+    \foreach \y in {-1, 1} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+
+    \foreach \x / \name in {
+        -2*pi / $-\dfrac{3\pi}{2}$,
+        -pi / $-\dfrac{\pi}{2}$,
+        pi / $\dfrac{\pi}{2}$,
+        2*pi / $\dfrac{3\pi}{2}$
+    } {
+        \draw [dashed] (\x, 3.5) -- (\x, -3.5);
+    }
+
+    \foreach \mid in {-3*pi/2, -pi/2, pi/2, 3*pi/2} {
+        \draw[thick, domain=\mid - pi/2 + 0.3 : \mid + pi/2 - 0.3, samples=50] plot (\x, {cot(\x r)});
+    }
+
+    \node [fill=white] at (0, -3.5) {$y = \cot x$};
+\end{tikzpicture}

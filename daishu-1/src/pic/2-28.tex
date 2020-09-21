@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-2*pi,0) -- (2*pi,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,4.0) node[anchor=east] {$y$};
+    \node at (0.3,-0.3) {$O$};
+    \node at (-pi - 0.1, 0.3) {$-\pi$};
+    \node at (pi, 0.3) {$\pi$};
+
+    \foreach \y in {-1, 1} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\y};
+    }
+
+    \foreach \y / \name in {
+        -1.5*pi / $-\dfrac{3\pi}{2}$,
+        -0.5*pi / $-\dfrac{\pi}{2}$,
+        0.5*pi / $\dfrac{\pi}{2}$,
+        1.5*pi / $\dfrac{3\pi}{2}$
+    } {
+        \draw [dashed] (\y, 3.5) -- (\y, -3.5) (\y - 0.4, -0.5) node {\name};
+    }
+
+    \foreach \mid in {-pi, 0, pi} {
+        \draw[thick, domain=\mid - pi/2 + 0.3 : \mid + pi/2 - 0.3, samples=50] plot (\x, {tan(\x r)});
+    }
+
+    \node [fill=white] at (0, -3.5) {$y = \tan x$};
+\end{tikzpicture}

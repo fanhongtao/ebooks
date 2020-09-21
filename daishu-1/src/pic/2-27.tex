@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-5.5,0) -- (2.5,0) node[anchor=north] {$x$};
+    \draw [->] (0,-3.5) -- (0,4.0) node[anchor=east] {$y$};
+    \node at (0.2,-0.2) {$O$};
+    \draw (0,1) node[anchor=south west] {$1$};
+    \draw (-0.2,-1) -- (0,-1) node[anchor=west] {$-1$};
+
+    \draw[thick, domain=-pi/2+0.3:pi/2-0.3,samples=50, name path=tan] plot (\x, {tan(\x r)});
+    \draw [dashed] (pi/2, 3.5) -- (pi/2, -3.5);
+    \draw [dashed] (-pi/2, 3.5) -- (-pi/2, -3.5);
+    \node [fill=white, inner sep = 0pt] at (0.7, -3.5) {$y = \tan x \quad x \in \left(-\dfrac \pi 2, \dfrac \pi 2 \right)$};
+
+    % 绘制单位圆 及 圆内的分隔线
+    \coordinate (O1) at (-3.5, 0);
+    \draw [thick] (O1) circle(1) node [anchor=north east, inner sep = 1pt] {$O_1$};
+    \foreach \id in {1, 2, 3, 4, -1, -2, -3, -4} {
+        \draw (O1) -- ++(22.5 *\id:1) coordinate (A\id);
+    }
+
+    % 单位圆的切线
+    \draw [thick, name path=tanline] (-2.5, 3.5) -- (-2.5, -3.5);
+
+    \coordinate (xline) at (0, 0);
+    \foreach \id in {1, 2, 3, -1, -2, -3} {
+        \path [name path=line1] (O1) -- ($(O1)!3!(A\id)$);
+        \path [name intersections={of=line1 and tanline, by=a}];
+        \path [name path=line2] (a) -- +(5, 0);
+        \path [name intersections={of=line2 and tan, by=b}];
+        \draw (O1) -- (a);          % 单位圆分隔线延长至切线
+        \draw [dashed] (a) -- (b);  % 切线 至 tan 曲线
+        \draw (b) -- (b |- xline);  % tan 曲线 至 x 轴
+    }
+
+    % 为了让 pi 附近的虚线尽可能多的显示，将负号单独作为一个node
+    % 普通的写法： \node [fill=white, inner sep=0pt, font=\footnotesize] at (-pi/2-0.3, 0.3) {$-\dfrac \pi 2$};
+    \draw (-pi/2-0.2, 0.3) node [fill=white, inner sep=0pt, font=\footnotesize] {$\dfrac \pi 2$} +(-0.3, 0) node {$-$};
+    \draw (-pi/4, 0.3) node [fill=white, inner sep=0pt, font=\footnotesize] {$\dfrac \pi 4$} +(-0.3, 0) node {$-$};
+
+    \node [font=\footnotesize] at (pi/4, -0.4) {$\dfrac \pi 4$};
+    \node [font=\footnotesize] at (pi/2-0.2, -0.4) {$\dfrac \pi 2$};
+\end{tikzpicture}
