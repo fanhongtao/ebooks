@@ -1,0 +1,88 @@
+\xiaojie
+
+一、本章主要内容是任意角的概念、弧度制、任意角的三角函数的概念、同角三角函数间的关系、
+诱导公式，以及三角函数的图象和性质。
+
+二、根据生产实际和进一步学习数学的需要，我们引入了任意大小的正、负角的概念。采用弧度制
+来度量角，实际上是在角的集合与实数集合 $R$ 之间建立了这样的一一对应关系：每一个角都有一个
+实数（即这个角的弧度数）与它对应；反过来，每一个实数也都有一个角（角的弧度数等于这个实数）
+与它对应。采用弧度制时，弧长公式十分简单：$l = |\alpha| r$（$l$ 为弧长，$r$ 为半径，
+$\alpha$ 为圆弧所对圆心角的弧度数），这就使一些与弧长有关的公式（如扇形面积公式等）得到了简化。
+
+三、在角的概念推广后，我们定义了任意角的正弦、余弦、正切、余切、正割、余割这六种三角函数。
+它们都是以角为自变量，以比值为函数值的函数。由于角的集合与实数集之间可以建立一一对应关系，
+三角函数可以看成是以实数为自变量的函数。
+
+四、同角三角函数的八个基本关系式是进行三角恒等变换的重要基础，它们在化简三角函数式和证明
+三角恒等式等问題中要经常用到，必须熟记，并能熟练运用。
+
+五、掌握了五组诱导公式以后，就可以把任意角的三角函数化为 $0^\circ$ \~{} $90^\circ$ 间
+角的三角函数。在五组诱导公式中，\hyperref[gongshi:2]{公式二} 和 \hyperref[gongshi:3]{公式三}
+是基本的（其中关于正弦、余弦的诱导公式是最基本的），由它们可以推出其他各组公式。
+
+五组公式列表如下：
+
+\begin{table}[H]
+\begin{tabular}{|w{c}{5em}|*{4}{w{c}{4em}|}}
+    \hline
+     & $\sin$ & $\cos$ & $\tan$ & $\cot$ \\ \hline
+    $-\alpha$ & $-\sin\alpha$ & $\cos\alpha$ & $-\tan\alpha$ & $-\cot\alpha$ \\ \hline
+    $\pi - \alpha$ & $\sin\alpha$ & $-\cos\alpha$ & $-\tan\alpha$ & $-\cot\alpha$ \\ \hline
+    $\pi + \alpha$ & $-\sin\alpha$ & $-\cos\alpha$ & $\tan\alpha$ & $\cot\alpha$ \\ \hline
+    $2\pi -\alpha$ & $-\sin\alpha$ & $\cos\alpha$ & $-\tan\alpha$ & $-\cot\alpha$ \\ \hline
+    $2k\pi +\alpha$ & $\sin\alpha$ & $\cos\alpha$ & $\tan\alpha$ & $\cot\alpha$ \\ \hline
+\end{tabular}
+\end{table}
+
+概括上表中的公式，可以说成：$k \cdot 360^\circ + \alpha \, (k \in Z)$，$-\alpha$，
+$180^\circ \pm \alpha$，$360^\circ - \alpha$ 的三角函数值等于的同名函数值，前面加上
+一个把 $\alpha$ 看成锐角时原函数值的符号。
+
+六、利用正弦线、余弦线可以比较精确地作出正弦函数、余弦函数的图象。可以看出，在长度为一个
+周期的闭区间上，有五个点（即函数值最大和最小的点以及函数值为零的点）在确定正弦函数、
+余弦函数图象的形状时起着关键的作用。因此，在精确度要求不太高时，可找出这五个点来作
+正弦、余弦函数及与它们类似的一些函数（特别是函数 $y = A\sin(\omega x + \varphi)$）的简图。
+
+七、正弦、余弦、正切、余切函数的主要性质可列表归纳如下：
+
+\begin{sidewaystable}[htbp]
+\begin{tabular}{|w{c}{5em}|*{4}{c|}}
+    \hline
+        & $y = \sin$ & $y = \cos$ & $y = \tan$ & $y = \cot$ \\ \hline
+
+    定义域
+        & $R$
+        & $R$
+        & \makecell{$\{ x \mid x \in R \; \text{且}$ \\ $x \neq k\pi + \dfrac \pi 2, \, k \in Z \}$ \jiange }
+        & \makecell{$\{ x \mid x \in R \; \text{且}$ \\ $x \neq k\pi, \, k \in Z \}$} \\ \hline
+
+    值 \quad 域
+        & \makecell{$[-1, \, 1]$ \\ 最大值为 $1$，\\ 最小值为 $-1$。}
+        & \makecell{$[-1, \, 1]$ \\ 最大值为 $1$，\\ 最小值为 $-1$。}
+        & \makecell{$R$ \\ 函数无最大值、\\ 最小值。}
+        & \makecell{$R$ \\ 函数无最大值、\\ 最小值。} \\ \hline
+
+    周期性
+        & 周期为 $2\pi$
+        & 周期为 $2\pi$
+        & 周期为 $\pi$
+        & 周期为 $\pi$ \\ \hline
+
+    奇偶性
+        & 奇函数
+        & 偶函数
+        & 奇函数
+        & 奇函数 \\ \hline
+
+    \makecell{ \rule{0pt}{3.5em} \\ 单调性 \\ \rule{0pt}{3.5em} } % 添加 \rule 是为了将“列”撑高。以便 \sin 对应的单元格中，公式和上面的分隔线能有间隔。
+        & \makecell{在 $\left[ -\dfrac \pi 2 + 2k\pi,  \dfrac \pi 2 + 2k\pi \right]$ \jiange 上 \\ 都是增函数；\\
+            在 $\left[ \dfrac \pi 2 + 2k\pi,  \dfrac{3\pi} 2 + 2k\pi \right]$ \jiange 上 \\ 都是减函数 $(k \in Z)$ 。}
+        & \makecell{在 $[(2k - 1)\pi, 2k\pi]$ 上 \\ 都是增函数；\\
+            在 $[2k\pi, (2k + 1)\pi]$ 上 \\ 都是减函数 $(k \in Z)$。}
+        & \makecell{在 $(-\dfrac \pi 2 + k\pi, \, \dfrac \pi 2 + k\pi)$ 内 \\
+            都是增函数 $(k \in Z)$。}
+        & \makecell{在 $(k\pi, \, (k + 1)\pi), \, k \in Z$ 内 \\
+            都是减函数 $(k \in Z)$。} \\ \hline
+
+\end{tabular}
+\end{sidewaystable}
