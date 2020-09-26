@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \coordinate (O) at (0, 0);
+    \draw (O) circle(3.5mm);
+    \draw (O) ++(40:2.9mm) arc (40:-100:2.9mm);
+    \draw (O) ++(20:2.3mm) arc (20:-80:2.3mm);
+    \draw (0, 3.5mm) -- (0, 0.6);
+    \draw[decoration={aspect=0.3, segment length=1.5mm, amplitude=3mm,coil},decorate] (0,0.6) -- (0, 2.6);
+    \draw (0, 2.6) -- (0, 3);
+    \fill [pattern = north east lines] (-1,3) rectangle (1,3.2);
+    \draw[thick] (-1,3) -- (1,3);
+
+    \draw [<->, thin] (0.6,-0.6) -- (0.6,0.6);
+    \draw [fill] (0.6, 0) circle(1pt);
+    \draw (1.2, 0.5) node {$h > 0$}
+          (1.2, 0) node {$h = 0$}
+          (1.2, -0.5) node {$h < 0$};
+\end{tikzpicture}

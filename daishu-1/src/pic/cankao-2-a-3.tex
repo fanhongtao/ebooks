@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \coordinate [label=180:$O$] (O) at (0,0);
+    \draw (O) circle(2.5);
+    \coordinate [label=90:$A$] (A) at (82:2.5);
+    \coordinate [label=270:$C$] (C) at (-82:2.5);
+    \draw [dashed] (O) -- (A);
+    \draw [dashed] (O) -- (C);
+
+    \coordinate [label=0:$O'$] (O') at (7,0);
+    \path (O') ++(82:2.5) coordinate (X1); % 设点X1，使 OA // O'X1
+    \path (O') ++(-82:2.5) coordinate (X2); % 设点X2，使 OC // O'X2
+    \coordinate [label=90:$B$] (B) at ($(O')!(A)!(X1)$); % AB 丄 O'X1（也即 BA 丄 OA）
+    \coordinate [label=270:$D$] (D) at ($(O')!(C)!(X2)$); % CD 丄 O'X2（也即 DC 丄 OC）
+    \node [draw] at (O') [circle through={(B)}] {}; % 以 O' 为圆心，过点 B 绘制圆
+    \draw [dashed] (O') -- (B);
+    \draw [dashed] (O') -- (D);
+    \draw (A) -- (B);
+    \draw [right angle symbol={A}{B}{O}];
+    \draw [right angle quadrant=2, right angle symbol={O'}{X1}{A}];
+    \draw (C) -- (D);
+    \draw [right angle symbol={C}{D}{O}];
+    \draw [right angle quadrant=2, right angle symbol={O'}{X2}{C}];
+
+    \draw (O) -- (O');
+    \coordinate [label=180:$E$] (E) at ($(O)!(O')!(A)$);
+    \draw [dashed] (O') -- (E);
+    \draw [right angle quadrant=2, right angle symbol={O}{A}{O'}];
+
+    \draw (O') +(-2.5,0) arc (180:172:2.5) (4.2, 0.2) node {$\alpha$}; % 注：这里的 172 度，并不是计算出来的，而是人工观察图片，调整出的值。
+    \node at (0.5, 1.7) {$R$};
+    \node at (7.4, 0.8) {$r$};
+\end{tikzpicture}
