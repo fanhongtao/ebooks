@@ -1,0 +1,398 @@
+\subsection{两角和与差的三角函数}\label{subsec:3-1} % 原书的目录结构就是如此（缺少 section），所以忽略此处的告警
+
+\subsubsection{两角和与差的余弦}
+
+研究两角和与差的三角函数的问题，就是研究怎样利用角 $\alpha$ 与 $\beta$ 的三角函数，表示 $\alpha \pm \beta$
+的三角函数。关于 $\cos(\alpha + \beta)$ 怎样用$\alpha$，$\beta$的三角函数来表示，我们有下面的重要公式\footnote{
+    $C_{\alpha + \beta}$ 是简记符号，用来表示公式 \\
+    \indent \hspace{3em} $\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta \text{。}$ \\
+    下面还有其他一些简记符号。
+}：
+\begin{gather}
+    \cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta \text{。} \tag{$C_{\alpha + \beta}$}\label{eq:3-1-1}
+\end{gather}
+
+\begin{wrapfigure}[16]{r}{7.0cm}
+    \centering
+    \input{pic/3-1}
+    \vspace{-2em}
+    \caption{}\label{fig:3-1}
+\end{wrapfigure}
+
+\zhengming 在直角坐标系 $xOy$ 内，作单位圆 $O$，并作 $\alpha$，$\beta$ 和 $-\beta$ 角；使
+$\alpha$ 角的始边为 $Ox$，交圆 $O$ 于 $P_1$，终边交圆 $O$ 于 $P_2$；
+$\beta$ 角的始边为 $OP_2$，终边交圆 $O$ 于 $P_3$；
+$-\beta$ 角的始边为 $OP_1$，终边交圆 $O$ 于$P_4$（图\ref{fig:3-1}）。
+这时，$P_1$，$P_2$，$P_3$，$P_4$ 的坐标分别是：
+
+$P_1(1, \, 0);$
+
+$P_2(\cos\alpha, \, \sin\alpha);$
+
+$P_3(\cos(\alpha + \beta), \, \sin(\alpha + \beta));$
+
+$P_4(\cos(-\beta), \, \sin(-\beta)).$
+
+由 $|P_1P_3| = |P_2P_4|$ 及两点间距离公式，得
+
+\vspace{-1.5em}
+\begin{align*}
+      & [\cos(\alpha + \beta) - 1]^2 + \sin^2(\alpha + \beta) \\
+    = & [\cos(-\beta) - \cos\alpha]^2 + [\sin(-\beta) - \sin\alpha]^2,
+\end{align*}
+
+展开，整理得
+
+\begin{minipage}{10cm}
+    \begin{align*}
+        & 2 - 2\cos(\alpha + \beta) = 2 - 2(\cos\alpha \cos\beta - \sin\alpha \sin\beta) \text{。}\\
+        & \therefore \quad \cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta \text{。}
+    \end{align*}
+\end{minipage}
+
+上面的公式，对于任意的角 $\alpha$ 和 $\beta$ 都成立。
+
+在上面的公式中，用 $-\beta$ 代替 $\beta$，就得到
+$$\cos(\alpha - \beta) = \cos\alpha \cos(-\beta) - \sin\alpha \sin(-\beta) \text{，}$$
+即
+\vspace{-1.7em}
+\begin{gather}
+    \cos(\alpha - \beta) = \cos\alpha \cos\beta + \sin\alpha \sin\beta \text{。} \tag{$C_{\alpha - \beta}$}\label{eq:3-1-2}
+\end{gather}
+
+\liti 不查表，求 $\cos 105^\circ$ 及 $\cos 15^\circ$ 的值。
+
+\jie $\begin{aligned}[t]
+        \cos 105^\circ &= \cos(60^\circ + 45^\circ) \\
+                       &= \cos 60^\circ \cos 45^\circ - \sin 60^\circ \sin 45^\circ \\
+                       &= \dfrac 1 2 \cdot \dfrac{\sqrt 2}{2} - \dfrac{\sqrt 3}{2} \cdot \dfrac{\sqrt 2}{2} = \dfrac{\sqrt 2 - \sqrt 6}{4};
+\end{aligned}$
+
+\newpage % TODO: 为了防止将公式挤得变形，手工分页。
+
+\hspace{2em} $\begin{aligned}[t]
+    \cos 15^\circ &= \cos(45^\circ - 30^\circ) \\
+        &= \cos 45^\circ \cos 30^\circ + \sin 45^\circ \sin 30^\circ \\
+        &= \dfrac{\sqrt 2}{2} \cdot \dfrac{\sqrt 3}{2} + \dfrac{\sqrt 2}{2} \cdot \dfrac{1}{2} = \dfrac{\sqrt 6 + \sqrt 2}{4} .\\
+\end{aligned}$
+
+\liti 已知 $\sin\alpha = \dfrac 2 3$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$，$\cos\beta = -\dfrac 3 4$，
+$\beta \in \left( \pi, \, \dfrac{3\pi}{2} \right)$，求 $\cos(\alpha - \beta)$ 的值。
+
+\jie 由 $\sin\alpha = \dfrac 2 3$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$ 得
+$$\cos\alpha = -\sqrt{1 - \sin^2 \alpha} = -\sqrt{1 - \left( \dfrac 2 3 \right)^2} = -\dfrac{\sqrt 5}{3};$$
+又由 $\cos\beta = -\dfrac 3 4$，$\beta \in \left( \pi, \, \dfrac{3\pi}{2} \right)$，得
+$$\sin\beta = -\sqrt{1 - \cos^2 \beta} = -\sqrt{1 - \left( -\dfrac 3 4 \right)^2} = -\dfrac{\sqrt 7}{4} \text{。}$$
+
+$\therefore$ \begin{minipage}[t]{9cm}
+    \vspace{-1.7em}
+    \begin{align*}
+        \cos(\alpha - \beta) &= \cos\alpha \cos\beta + \sin\alpha \sin\beta \\
+            &= \left( -\dfrac{\sqrt 5}{3} \right) \cdot \left( -\dfrac 3 4 \right) + \dfrac 2 3 \cdot \left( -\dfrac{\sqrt 7}{4} \right) \\
+            &= \dfrac{3\sqrt 5 - 2\sqrt 7}{12} \text{。}
+    \end{align*}
+\end{minipage}
+
+\jiange
+\liti 证明：公式
+$$\cos\left( \dfrac \pi 2 - \alpha \right) = \sin\alpha , \jiange$$
+$$\sin\left( \dfrac \pi 2 - \alpha \right) = \cos\alpha , \jiange$$
+当 $\alpha$ 为任意角时仍然成立。
+
+\zhengming 利用公式 (\ref{eq:3-1-2}) ，可得
+
+\begin{minipage}{20em}
+    \begin{align*}
+        & \cos\left( \dfrac \pi 2 - \alpha \right) = \cos\dfrac \pi 2 \cos\alpha + \sin\dfrac \pi 2 \sin\alpha,\\
+        \because \quad & \cos\dfrac \pi 2 = 0, \quad \sin\dfrac \pi 2 = 1, \\
+        \therefore \quad & \cos\left( \dfrac \pi 2 - \alpha \right) = \sin\alpha.
+    \end{align*}
+\end{minipage}
+
+因为上式中的 $\alpha$ 为任意角，如果把 $\left( \dfrac \pi 2 - \alpha \right)$ 换成 $\alpha$，就得
+$$\cos\alpha = \sin\left( \dfrac \pi 2 - \alpha \right), \jiange $$
+即
+\vspace{-1.2em}$$\sin\left( \dfrac \pi 2 - \alpha \right) = \cos\alpha . \jiange$$
+
+利用上述两式，不难证明下面两式在两边都有意义时成立：
+$$\tan\left( \dfrac \pi 2 - \alpha \right) = \cot\alpha ; \jiange$$
+$$\cot\left( \dfrac \pi 2 - \alpha \right) = \tan\alpha . \jiange$$
+
+以上四个公式是当 $\alpha$ 为任意角时 $\left( \dfrac \pi 2 - \alpha \right)$ 的诱导公式。如果把其中的 $\alpha$ 换成 $(-\alpha)$，
+就可得到当 $\alpha$ 为任意角时 $\left( \dfrac \pi 2 + \alpha \right)$ 的诱导公式：
+
+\begin{center}
+    \framebox{
+        \renewcommand\arraystretch{2}
+        \begin{tabular}{p{13em}p{13em}}
+            $\cos\left( \dfrac \pi 2 + \alpha \right) = -\sin\alpha$； & $\sin\left( \dfrac \pi 2 + \alpha \right) = \cos\alpha$；\\
+            $\tan\left( \dfrac \pi 2 + \alpha \right) = -\cot\alpha$； & $\cot\left( \dfrac \pi 2 + \alpha \right) = -\tan\alpha$。
+    \end{tabular}}
+\end{center}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{等式 $\cos(\alpha + \beta) = \cos\alpha + \cos\beta$ 成立吗？用 $\alpha = 60^\circ$，$\beta = 30^\circ$ 代入进行检验。}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt{$\cos 75^\circ$；}{$\cos 165^\circ$；}{$\cos\left( -\dfrac{61\pi}{12} \right)$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知 $\sin\alpha = \dfrac{15}{17}$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$，求 $\cos\left( \dfrac \pi 3 - \alpha \right)$ 的值。}
+\jiange
+
+\xiaoti{已知 $\cos\theta = -\dfrac{5}{13}$，$\theta \in \left( \pi, \, \dfrac 3 2 \pi \right)$，求 $\cos\left( \theta + \dfrac \pi 6 \right)$ 的值。}
+\jiange
+
+\xiaoti{把下列各三角函数化成 $0^\circ$ \~{} $45^\circ$ 的角的三角函数：}
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt{$\cos 1856^\circ$；}{$\sin(-1190^\circ)$；}{$\cot(-310^\circ)$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\cos 80^\circ \cos 20^\circ + \sin 80^\circ \sin 20^\circ$；}
+
+    \xiaoxiaoti{$\cos^2 15^\circ - \sin^2 15^\circ$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\subsubsection{两角和与差的正弦}
+
+因为 $\sin(\alpha + \beta) = \cos\left[ \dfrac \pi 2 - (\alpha + \beta) \right]$，\jiange \\
+而 $\begin{aligned}[t]
+      & \cos\left[ \dfrac \pi 2 - (\alpha + \beta) \right] =  \cos\left[ (\dfrac \pi 2 - \alpha) - \beta) \right] \\
+    = & \cos\left( \dfrac \pi 2 - \alpha \right) \cos\beta + \sin\left( \dfrac \pi 2 - \alpha \right) \sin\beta \\
+    = & \sin\alpha \cos\beta + \cos\alpha \sin\beta ,
+\end{aligned}$ \\
+所以
+\begin{minipage}[t]{0.9\textwidth}
+    \vspace{-1.7em}\begin{gather}
+        \sin(\alpha + \beta) = \sin\alpha \cos\beta + \cos\alpha \sin\beta \text{。} \tag{$S_{\alpha + \beta}$}\label{eq:3-1-3}
+    \end{gather}
+\end{minipage}
+
+把公式 (\ref{eq:3-1-3}) 中的 $\beta$ 换成 $-\beta$，得
+$$\sin(\alpha - \beta) = \sin\alpha \cos(-\beta) + \cos\alpha \sin(-\beta),$$
+即\hspace{1em}
+\begin{minipage}[t]{0.9\textwidth}
+    \vspace{-1.7em}\begin{gather}
+        \sin(\alpha - \beta) = \sin\alpha \cos\beta - \cos\alpha \sin\beta \text{。} \tag{$S_{\alpha - \beta}$}\label{eq:3-1-4}
+    \end{gather}
+\end{minipage}
+
+\liti 不查表，求 $\sin 75^\circ$ 的值。
+
+\jie $\begin{aligned}[t]
+    \sin 75^\circ &= \sin(45^\circ + 30^\circ) \\
+        &= \sin 45^\circ \cos 30^\circ + \cos 45^\circ \sin 30^\circ \\
+        &= \dfrac{\sqrt 2}{2} \cdot \dfrac{\sqrt 3}{2} + \dfrac{\sqrt 2}{2} \cdot \dfrac 1 2 = \dfrac{\sqrt 6 + \sqrt 2}{4} \text{。}
+\end{aligned}$
+
+\jiange
+\liti 已知 $\cos\varphi = \dfrac 3 5$，$\varphi \in \left( 0, \, \dfrac \pi 2 \right)$，求 $\sin\left( \varphi - \dfrac \pi 6 \right)$。
+
+\jiange
+\jie $\because \quad \cos\varphi = \dfrac 3 5$，$\varphi \in \left( 0, \, \dfrac \pi 2 \right)$，
+\jiange
+
+$\therefore \quad \sin\varphi = \sqrt{1 - \left( \dfrac 3 5 \right)^2} = \dfrac 4 5$。
+\jiange
+
+$\therefore \quad \begin{aligned}[t]
+    \sin\left( \varphi - \dfrac \pi 6 \right) &= \sin\varphi \cos\dfrac \pi 6 - \cos\varphi \sin\dfrac \pi 6 \\
+        &= \dfrac 4 5 \cdot \dfrac{\sqrt 3}{2} - \dfrac 3 5 \cdot \dfrac 1 2 = \dfrac{4\sqrt 3 - 3}{10} \text{。}
+\end{aligned}$
+
+\jiange
+\liti 求证 $\dfrac{\sin(\alpha + \beta) \sin(\alpha - \beta)}{\sin^2 \alpha \cos^2 \beta} = 1 - \cot^2 \alpha \tan^2 \beta$。
+
+\zhengming $\begin{aligned}[t]
+      & \text{左边} \\
+    = & \dfrac{(\sin\alpha \cos\beta + \cos\alpha \sin\beta)(\sin\alpha \cos\beta - \cos\alpha \sin\beta)}{\sin^2 \alpha \cos^2 \beta} \\
+    = & \dfrac{\sin^2 \alpha \cos^2 \beta - \cos^2 \alpha \sin^2 \beta}{\sin^2 \alpha \cos^2 \beta} = 1 - \dfrac{\cos^2 \alpha \sin^2 \beta}{\sin^2 \alpha \cos^2 \beta} \\
+    = & 1 - \cot^2 \alpha \tan^2 \beta = \text{右边。}
+\end{aligned}$
+
+$\therefore$ \quad 原式成立。
+
+\liti 求证 $\cos\alpha + \sqrt 3 \sin\alpha = 2\sin\left( \dfrac \pi 6 + \alpha \right)$。
+
+\textbf{证法一：} $\begin{aligned}[t]
+    \text{左边} &= 2\left( \dfrac 1 2 \cos\alpha + \dfrac{\sqrt 3}{2} \sin\alpha \right) \\
+        &= 2\left( \sin\dfrac \pi 6 \cos\alpha + \cos\dfrac \pi 6 \sin\alpha \right) \\
+        &= 2\sin\left( \dfrac \pi 6 + \alpha \right) = \text{右边。}
+\end{aligned}$
+
+$\therefore$ \quad 原式成立。
+
+\textbf{证法二：} $\begin{aligned}[t]
+    \text{右边} &= 2\left( \sin\dfrac \pi 6 \cos\alpha + \cos \dfrac \pi 6 \sin\alpha \right) \\
+        &= 2\left( \dfrac 1 2 \cos\alpha + \dfrac{\sqrt 3}{2} \sin\alpha \right) \\
+        &= \cos\alpha + \sqrt 3 \sin\alpha = \text{左边。}
+\end{aligned}$
+
+$\therefore$ \quad 原式成立。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{等式 $\sin(\alpha + \beta) = \sin\alpha + \sin\beta$ 成立吗？用 $\alpha = 60^\circ$，$\beta = 30^\circ$ 代入进行检验。}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt{$\sin 105^\circ$；}{$\sin 15^\circ$；}{$\sin\left( -\dfrac{5\pi}{12} \right)$。}
+    \jiange
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知 $\cos\theta = \dfrac 3 5$，$\theta \in \left( \dfrac \pi 2, \, \pi \right)$，求 $\sin\left( \theta + \dfrac \pi 3 \right)$ 的值。}
+\jiange
+
+\xiaoti{已知 $\sin\alpha = \dfrac 2 3$，$\cos\beta = -\dfrac 3 4$，且 $\alpha$，$\beta$ 都是第二象限角，求 $\sin(\alpha - \beta)$ 及 $\cos(\alpha - \beta)$。}
+\jiange
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\sin 13^\circ \cos 17^\circ + \cos 13^\circ \sin 17^\circ$；}
+
+    \xiaoxiaoti{$\sin 70^\circ \cos 25^\circ - \sin 20^\circ \sin 25^\circ$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac 1 2 \left( \cos\alpha + \sqrt 3 \sin\alpha \right) = \cos(60^\circ - \alpha)$；}
+
+    \jiange
+    \xiaoxiaoti{$\sin\left( \dfrac{5\pi}{6} - \varphi \right) + \sin\left( \dfrac{5\pi}{6} + \varphi \right) = \cos\varphi$。}
+    \jiange
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\subsubsection{两角和与差的正切}
+
+由 $\tan(\alpha + \beta) = \dfrac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} = \dfrac{\sin\alpha \cos\beta + \cos\alpha \sin\beta}{\cos\alpha \cos\beta - \sin\alpha \sin\beta}$，
+把最后一个分式的分子、分母分别除以 $\cos\alpha \cdot \cos\beta \, (\cos\alpha \neq 0,\, \cos\beta \neq 0)$，得
+\begin{gather}
+\tan(\alpha + \beta) = \dfrac{\tan\alpha + \tan\beta}{1 - \tan\alpha \tan\beta} \text{。} \tag{$T_{\alpha + \beta}$}\label{eq:3-1-5}
+\end{gather}
+
+\jiange
+把公式 (\ref{eq:3-1-5}) 中的 $\beta$ 换成 $-\beta$，得
+\begin{gather}
+\tan(\alpha - \beta) = \dfrac{\tan\alpha - \tan\beta}{1 + \tan\alpha \tan\beta} \text{。} \tag{$T_{\alpha - \beta}$}\label{eq:3-1-6}
+\end{gather}
+
+注意：在两角和与差的正切的公式中，$\alpha$，$\beta$ 的取值范围，应该是使 $\tan\alpha$，$\tan\beta$ 及 $\tan(\alpha \pm \beta)$
+都存在的那些值，即 $\alpha$，$\beta$ 及 $\alpha \pm \beta$ 都不能取 $\dfrac \pi 2 + n\pi \, (n \in Z)$ 。例如，如果
+$\alpha = \dfrac \pi 2$，$\beta = \dfrac \pi 3$，那么求 $\tan(\alpha + \beta)$ 的值，就不能用和角的正切公式，而应该用诱导公式。
+
+\jiange
+\liti 已知 $\tan\alpha = \dfrac 1 3$，$\tan\beta = -2$。\jiange
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{求 $\cot(\alpha - \beta)$；}
+
+    \xiaoxiaoti{求 $\alpha + \beta$ 的值（其中 $0^\circ < \alpha < 90^\circ$，$90^\circ < \beta < 180^\circ$）。}
+
+\end{xiaoxiaotis}
+
+\jie （1）$\because$ \vspace{-1.5em}$$\tan\alpha = \dfrac 1 3 \text{，} \tan\beta = -2 \text{，}$$
+而
+\vspace{-1.5em}$$
+    \cot(\alpha - \beta) = \dfrac{1}{\tan(\alpha - \beta)}, \vspace{1.5em}
+$$
+其中
+\vspace{-2.5em}$$
+    \tan(\alpha - \beta) = \dfrac{\tan\alpha - \tan\beta}{1 + \tan\alpha \tan\beta}
+        = \dfrac{\dfrac 1 3 + 2}{1 + \dfrac 1 3 \times (-2)} = 7 \text{。}
+$$
+
+$\therefore \quad \cot(\alpha - \beta) = \dfrac 1 7$。\jiange
+
+（2）由 $\tan\alpha = \dfrac 1 3$，$\tan\beta = -2$，得
+
+$$
+\tan(\alpha + \beta) = \dfrac{\tan\alpha + \tan\beta}{1 - \tan\alpha \tan\beta}
+        = \dfrac{\dfrac 1 3 - 2}{1 - \dfrac 1 3 \times (-2)} = -1 \text{；}
+$$
+又因 $0^\circ < \alpha < 90^\circ$，$90^\circ < \beta < 180^\circ$，所以
+$$ 90^\circ < \alpha + \beta < 270^\circ \text{。}$$
+
+在 $90^\circ$ 与 $270^\circ$ 之间，只有 $135^\circ$ 的正切的值为 $-1$，
+
+$\therefore \quad \alpha + \beta = 135^\circ \text{。}$
+
+\jiange
+\liti 计算 $\dfrac{1 + \tan 75^\circ}{1 - \tan 75^\circ}$ 的值。
+\jiange
+
+分析：因为 $\tan 45^\circ = 1$，所以原式可以看成是 \jiange
+$$\dfrac{\tan 45^\circ + \tan 75^\circ}{1 - \tan 45^\circ \tan 75^\circ} \text{。} \jiange $$
+这样，我们就可以运用两角和的正切公式，把原式化为
+$$\tan(45^\circ + 75^\circ) \text{，}$$
+而因 $45^\circ + 75^\circ = 120^\circ$ 是特殊角，所以可以求得原式的值。
+
+\jie $\because \quad \tan 45^\circ = 1$，\jiange
+
+$\therefore \quad \begin{aligned}[t]
+    \dfrac{1 + \tan 75^\circ}{1 - \tan 75^\circ} &= \dfrac{\tan 45^\circ + \tan 75^\circ}{1 - \tan 45^\circ \tan 75^\circ} \\
+        &= \tan(45^\circ + 75^\circ) \\
+        &= \tan 120^\circ = -\sqrt 3 \text{。}
+\end{aligned}$
+
+\liti 设 $\tan\alpha$，$\tan\beta$ 是一元二次方程 $ax^2 + bx + c = 0 \, (b \neq 0)$ 的两个根，求 $\cot(\alpha + \beta)$ 的值。
+
+\jie 在一元二次方程 $ax^2 + bx + c = 0$ 中，$a \neq 0$。由一元二次方程根与系数的关系，得
+$$\begin{gathered}
+    \tan\alpha + \tan\beta = -\dfrac b a \text{，} \\
+    \tan\alpha \tan\beta = \dfrac c a \text{。} \jiange \jiange
+\end{gathered}$$
+ 而 \vspace{-1.5em}$$ \cot(\alpha + \beta) = \dfrac{1}{\tan(\alpha + \beta)} = \dfrac{1 - \tan\alpha \tan\beta}{\tan\alpha + \tan\beta} \text{。}$$
+
+由题设 $b \neq 0$，故 $\tan\alpha + \tan\beta \neq 0$，代入，得
+$$\cot(\alpha + \beta) = \dfrac{1 - \dfrac c a}{-\dfrac b a} = \dfrac{a - c}{-b} = \dfrac{c - a}{b} \text{。}$$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt{$\tan 75^\circ$；}{$\tan 15^\circ$；}{$\cot 105^\circ$。}
+    \jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \jiange
+    \twoInLineXxt[14em]{$\dfrac{\tan 12^\circ + \tan 33^\circ}{1 - \tan 12^\circ \tan 33^\circ}$；}{$\dfrac{1 - \tan 15^\circ}{1 + \tan 15^\circ}$。}
+    \jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知 $\tan\alpha = 2$，求 $\tan\left( \alpha - \dfrac \pi 4 \right)$ 的值。\jiange}
+
+\xiaoti{已知 $\tan\alpha = 2$，$\tan\beta = 3$，并且 $\alpha$，$\beta$ 都是锐角，求证：
+    $$\alpha + \beta = 135^\circ \text{。}$$
+}
+
+\end{xiaotis}

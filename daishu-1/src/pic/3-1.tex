@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8, every node/.style = {inner sep = 1pt}]
+    \pgfmathsetmacro{\r}{3.5};
+    \pgfmathsetmacro{\axis}{\r + 1.0};
+    \pgfmathsetmacro{\a}{60};
+    \pgfmathsetmacro{\b}{45};
+
+    \draw [->] (-\axis,0) -- (\axis,0) node[anchor=north, inner sep = 5pt] {$x$};
+    \draw [->] (0,-\axis) -- (0,\axis) node[anchor=east, inner sep = 5pt] {$y$};
+    \node at (-0.3,-0.3) {$O$};
+    \draw [name path=c] (0, 0) circle(\r);
+
+    \coordinate (O) at (0,0);
+    \node [label=60:$P_1$] (P1) at (0:\r) {};
+    \node [label=20:$P_2$] (P2) at (\a:\r) {};
+    \node [label=120:$P_3$] (P3) at (\a + \b:\r) {};
+    \node [label=-60:$P_4$] (P4) at (-\b:\r) {};
+
+    \draw (P2) -- (O) -- (P4);
+    \draw[dashed] (P2) -- (P4);
+    \draw (P3) -- (O);
+    \draw[dashed] (P3) -- (P1);
+
+    \draw (0.8, 0.4) node {$\alpha$} [->] (0.6, 0) arc (0:\a:0.6);
+    \draw (0.3, 1.1) node {$\beta$} [->] (\a:0.8) arc (\a:\a+\b:0.8);
+    \draw (1.5, 1.4) node[fill=white, inner sep=0pt] {$\alpha + \beta$} [->] (0:1.5) arc (0:\a+\b:1.5);
+    \draw (1.2, -0.5) node {$-\beta$} [->] (0:0.8) arc (0:-\b:0.8);
+\end{tikzpicture}
