@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \coordinate [label=90:$A$] (A) at (0,3);
+    \coordinate [label=270:$B$] (B) at (-1,0);
+    \coordinate [label=270:$D$] (D) at (0,0);
+    \coordinate [label=270:$C$] (C) at (1.5,0);
+
+    \draw [thin] (A) -- (B) -- (C) -- (A);
+    \draw (A) -- (D);
+    \draw [right angle symbol={A}{D}{C}];
+\end{tikzpicture}
