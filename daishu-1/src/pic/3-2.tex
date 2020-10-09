@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \pgfmathsetmacro{\r}{3};
+    \coordinate (O) at (0,0);
+
+    \pgfmathsetmacro{\b}{45};
+    \coordinate (S1) at (\b:\r);
+    \coordinate (S2) at (90+\b:\r);
+    \coordinate (S3) at (180+\b:\r);
+    \coordinate (S4) at (270+\b:\r);
+    \draw[name path=c] (O) circle(\r);
+    \draw[dashed] (S1) -- (S2) -- (S3) -- (S4) -- (S1);
+    \draw (S1) -- (S3);
+
+    \pgfmathsetmacro{\a}{15};
+    \path[name path=l1] (S1) -- +(180+\a:5.5);
+    \path[name path=l2] (S3) -- +(\a:5.5);
+    \path [name intersections={of=c and l1, by={t1,t2}}];
+    \path [name intersections={of=c and l2, by={t3,t4}}];
+    \draw (S1) -- (t2) -- (S3) -- (t4) -- (S1);
+
+    \node[rotate=\b, above] at (O) {2R};
+    \draw (S3)+(1.2,0.7) node {$\theta$} (S3)+(\a:1) arc (\a:\b:1);
+    \draw (S3)+(\a:3) node[below,rotate=\a] {$2R\cos\theta$};
+    \draw (t4)+(90+\a:1) node[above,rotate=90+\a] {$2R\sin\theta$};
+\end{tikzpicture}

@@ -1,0 +1,174 @@
+\subsection{二倍角的正弦、余弦、正切}\label{subsec:3-2}
+
+在公式 (\ref{eq:3-1-3})，(\ref{eq:3-1-1})，(\ref{eq:3-1-5}) 中，当 $\alpha = \beta$ 时，就可以得出相应的二倍角的三角函数公式：
+\begin{gather}
+    \sin(2\alpha) = 2\sin\alpha \cos\alpha \text{；} \tag{$S_{2\alpha}$}\label{eq:S-2a} \\
+    \cos(2\alpha) = \cos^2\alpha - \sin^2\alpha \text{；} \tag{$C_{2\alpha}$}\label{eq:C-2a} \\
+    \tan(2\alpha) = \dfrac{2\tan\alpha}{1 - \tan^2\alpha} \text{。} \tag{$T_{2\alpha}$}\label{eq:T-2a}
+\end{gather}
+
+\jiange
+因为 $\sin^2\alpha + \cos^2\alpha = 1$，所以公式 (\ref{eq:C-2a}) 可以变形为
+$$\cos 2\alpha = 2\cos^2\alpha - 1 \text{，}$$
+或
+\begin{gather}
+    \cos 2\alpha = 1 - 2\sin^2\alpha \text{，} \tag{${C_{2\alpha}}'$}\label{eq:C-2a-'}
+\end{gather}
+
+有了二倍角的三角函数公式，就可以用单角的三角函数来表示二倍角的三角函数。
+
+\jiange
+\liti 已知 $\sin\alpha = \dfrac{5}{13}$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$，求 $\sin 2\alpha$，$\cos 2\alpha$，$\tan 2\alpha$ 的值。\jiange
+
+\jie $\because$ \quad $\sin\alpha = \dfrac{5}{13}$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$，
+
+\jiange
+$\therefore \quad \cos\alpha = -\sqrt{1 - \sin^2\alpha} = -\sqrt{1 - \left( \dfrac{5}{13} \right)^2} = -\dfrac{12}{13}$。
+\jiange
+
+$\therefore \quad \begin{gathered}[t]
+    \sin 2\alpha = 2\sin\alpha \cos\alpha = 2 \times \dfrac{5}{13} \times \left( -\dfrac{12}{13} \right) = -\dfrac{120}{169}, \\
+    \cos 2\alpha = 1 - 2\sin^2\alpha = 1 - 2 \times \left( \dfrac{5}{13} \right)^2 = \dfrac{119}{169}, \\
+    \tan 2\alpha = \dfrac{\sin 2\alpha}{\cos 2\alpha} = \dfrac{-120}{169} \left/ \dfrac{119}{169} = -1\dfrac{1}{119} \right. \text{。}
+\end{gathered} \jiange$
+
+\liti \quad \begin{minipage}[t]{0.8\textwidth}
+    （1）用 $\sin\theta$ 表示 $\sin 3\theta$；
+
+    （2）用 $\cos\theta$ 表示 $\cos 3\theta$；
+\end{minipage}
+
+\jie （1） $\begin{aligned}[t]
+    \sin 3\theta &= \sin(2\theta + \theta) \\
+        &= \sin 2\theta \cos\theta + \cos 2\theta \sin\theta \\
+        &= 2\sin\theta \cos^2\theta + (1 - 2\sin^2\theta)\sin\theta \\
+        &= 2\sin\theta(1 - \sin^2\theta) + \sin\theta -2\sin^3\theta \\
+        &= 3\sin\theta - 4\sin^3\theta \text{。}
+\end{aligned}$
+
+$\therefore \quad \sin 3\theta = 3\sin\theta - 4\sin^3\theta \text{。}$
+
+（2） $\begin{aligned}[t]
+    \cos 3\theta &= \cos(2\theta + \theta) \\
+        &= \cos2\theta \cos\theta - \sin2\theta \sin\theta \\
+        &= (2\cos^2\theta - 1) \cos\theta - 2\sin^2\theta \cos\theta \\
+        &= 2\cos^3\theta - \cos\theta - 2\cos\theta(1 - \cos^2\theta) \\
+        &= 4\cos^3\theta -3\cos\theta \text{。}
+\end{aligned}$
+
+$\therefore \quad \cos3\theta = 4\cos^3\theta -3\cos\theta \text{。}$
+
+\liti 求证
+$$[\sin\theta(1 + \sin\theta) + \cos\theta(1 + \cos\theta)] \times [\sin\theta(1 - \sin\theta) + \cos\theta(1 - \cos\theta)] = \sin2\theta \text{。}$$
+
+\zhengming $\begin{aligned}[t]
+    \text{左边} &= (\sin\theta + \sin^2\theta + \cos^2\theta + \cos\theta) \times (\sin\theta - \sin^2\theta - \cos^2\theta + \cos\theta) \\
+        &= (\sin\theta + \cos\theta + 1)(\sin\theta + \cos\theta - 1) \\
+        &= (\sin\theta + \cos\theta)^2 - 1 \\
+        &= 2\sin\theta \cos\theta \\
+        &= \sin2\theta = \text{右边。}
+\end{aligned}$
+
+$\therefore$ \quad 原式成立。
+
+\liti 化简 $\sin 50^\circ (1 + \sqrt 3 \tan 10^\circ)$。
+
+\jie $\begin{aligned}[t]
+      & \sin 50^\circ (1 + \sqrt 3 \tan 10^\circ) = \sin 50^\circ \left( 1 + \dfrac{\sqrt 3 \sin 10^\circ}{\cos 10^\circ} \right) \\
+    = & \sin 50^\circ \cdot \dfrac{2\left( \dfrac 1 2 \cos 10^\circ + \dfrac{\sqrt 3}{2} \sin 10^\circ \right)}{\cos 10^\circ} \\
+    = & 2\sin 50^\circ \cdot \dfrac{\sin 30^\circ \cos 10^\circ + \cos 30^\circ \sin 10^\circ}{\cos 10^\circ} \\
+    = & 2\cos 40^\circ \cdot \dfrac{\sin 40^\circ}{\cos 10^\circ} \\
+    = & \dfrac{\sin 80^\circ}{\cos 10^\circ} = \dfrac{\cos 10^\circ}{\cos 10^\circ} = 1 \text{。} \jiange
+\end{aligned}$
+\jiange
+
+\liti 把一段半径为 $R$ 的圆木，锯成横截面为矩形的木料，怎样锯法才能使横截面的面积最大？
+
+\begin{wrapfigure}[10]{r}{7.0cm}
+    \centering
+    \input{pic/3-2}
+    %\vspace{-2em}
+    \caption{}\label{fig:3-2}
+\end{wrapfigure}
+
+解：因为锯得的矩形横截面是圆内接矩形，所以它的对角线是圆的直径，其长度应为 $2R$。
+设对角线与一个边的夹角为 $\theta$（图\ref{fig:3-2}），则矩形的长与宽分别为 $2R\cos\theta$，$2R\sin\theta$。
+因此，矩形的面积
+\begin{align*}
+    S &= 2R\cos\theta \cdot 2R\sin\theta \\
+      &= 2R^2 \cdot 2\sin\theta \cos\theta \\
+      &= 2R^2 \cdot \sin2\theta \text{。}
+\end{align*}
+
+因为 $\sin2\theta \leqslant 1$，所以 $S \leqslant 2R^2$。
+
+当 $\sin2\theta$ 取最大值 $1$ 时，$S$ 取最大值 $2R^2$。
+
+所以，当 $2\theta = 90^\circ$，即 $\theta = 45^\circ$ 时，圆内接矩形的面积最大，这时圆内接矩形为内接正方形。
+
+答：以圆木的直径为对角线，锯成横截面为正方形的木料时，截面的面积最大。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.8}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$2\sin 67^\circ 30' \cos 67^\circ 30'$；} & \xiaoxiaoti{$\cos^2 \dfrac \pi 8 - \sin^2 \dfrac \pi 8$；} \\
+        \xiaoxiaoti{$2\cos^2 \dfrac{\pi}{12} - 1$；} & \xiaoxiaoti{$1 - 2\sin^2 75^\circ$；} \\
+        \xiaoxiaoti{$\dfrac{2\tan 22.5^\circ}{1 - \tan^2 22.5^\circ}$；} & \xiaoxiaoti{$\sin 15^\circ \cos 15^\circ$；} \\
+        \xiaoxiaoti{$1 - 2\sin^2 750^\circ$；} & \xiaoxiaoti{$\dfrac{2\tan 150^\circ}{1 - \tan^2 150^\circ}$。}
+    \end{tabular}
+    \jiange
+\end{xiaoxiaotis}
+
+\xiaoti{化简：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.8}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$(\sin\alpha - \cos\alpha)^2$；} & \xiaoxiaoti{$\sin\dfrac \theta 2 \cos\dfrac \theta 2$；} \\
+        \xiaoxiaoti{$\cos^4\varphi - \sin^4\varphi$；} & \xiaoxiaoti{$\dfrac{1}{1 - \tan\theta} - \dfrac{1}{1 + \tan\theta}$。}
+    \end{tabular}
+    \jiange
+\end{xiaoxiaotis}
+
+\xiaoti{已知 $\sin\alpha = 0.8$，$\alpha \in \left( 0, \, \dfrac \pi 2 \right)$，求 $\sin 2\alpha$，$\cos 2\alpha$ 的值。 \jiange}
+
+\xiaoti{已知 $\cos\alpha = -\dfrac{12}{13}$，$\alpha \in \left( \dfrac \pi 2, \, \pi \right)$，求 $\cos 2\alpha$，$\sin 2\alpha$，$\tan 2\alpha$，$\cot 2\alpha$ 的值。 \jiange}
+
+\xiaoti{已知 $\tan\alpha = \dfrac{1}{2}$，求 $\tan 2\alpha$，$\cot 2\alpha$ 的值。 \jiange}
+
+\xiaoti{写出由 $\tan\alpha$ 求 $\tan 3\alpha$ 的公式。}
+
+\xiaoti{证明下列恒等式：}
+\begin{xiaoxiaotis}
+
+    \jiange
+    \xiaoxiaoti{$\sin^2\theta = \dfrac{1 - \cos2\theta}{2}$；\jiange}
+
+    \xiaoxiaoti{$\cos^2\theta = \dfrac{1 + \cos2\theta}{2}$；\jiange}
+
+    \xiaoxiaoti{$2\sin(\pi + \alpha) \cos(\pi - \alpha) = \sin2\alpha$；}
+
+    \xiaoxiaoti{$\cos^4\dfrac{x}{2} - \sin^4\dfrac{x}{2} = \cos x$；\jiange}
+
+    \xiaoxiaoti{$1 + 2\cos^2\theta - \cos2\theta = 2$；}
+
+    \jiange
+    \xiaoxiaoti{$\dfrac{1 - \cos2\alpha}{\sin\alpha} = 2\sin\alpha$；\jiange}
+
+    \xiaoxiaoti{$\dfrac{2\cot\alpha}{\cot^2\alpha - 1} = \tan2\alpha$；\jiange}
+
+    \xiaoxiaoti{$\dfrac{\sin2\theta}{1 - \cos2\theta} = \cot\theta$；\jiange}
+
+    \xiaoxiaoti{$\cot\varphi - \cot2\varphi = \csc2\varphi$；}
+
+    \jiange
+    \xiaoxiaoti{$\dfrac{\sin\alpha \cos\alpha}{\sin^2\alpha - \cos^2\alpha} = -\dfrac{1}{2}\tan2\alpha$。\jiange}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
