@@ -1,0 +1,147 @@
+\subsection{半角的正弦、余弦和正切}\label{subsec:3-3}
+
+上节我们研究了用单角的三角函数表示二倍角的三角函数。这一节我们研究如何用单角的三角函数表示半角（单角的一半）的三角函数。
+
+由 $\cos2\alpha = 1 - 2\sin^2\alpha = 2\cos^2\alpha - 1$，得
+$$ \cos\alpha = 1 - 2\sin^2\dfrac{\alpha}{2} = 2\cos^2\dfrac{\alpha}{2} - 1 \text{，} $$
+即
+\begin{gather*}
+    2\sin^2\dfrac{\alpha}{2} = 1 - \cos\alpha \text{；} \jiange \\
+    2\cos^2\dfrac{\alpha}{2} = 1 + \cos\alpha \text{。}
+\end{gather*}
+
+$\therefore$
+\begin{gather}
+    \sin\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{2}} \text{，} \tag{$S_{\frac{\alpha}{2}}$}\label{eq:S-a/2} \\
+    \cos\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 + \cos\alpha}{2}} \text{，} \tag{$C_{\frac{\alpha}{2}}$}\label{eq:C-a/2}
+\end{gather}
+
+\jiange
+将这两个公式左边、右边分别相除，又可得
+\begin{gather}
+    \tan\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{1 + \cos\alpha}} \text{。} \tag{$T_{\frac{\alpha}{2}}$}\label{eq:T-a/2}
+\end{gather}
+
+这三个公式中根号前的符号，由 $\dfrac{\alpha}{2}$ 所在的象限来确定。如果没有给出限定符号的条件，根号前面应保持正负两个符号。
+
+$\tan\dfrac{\alpha}{2}$ 还可以用 $\sin\alpha$，$\cos\alpha$ 的不带根号的式子来表示：
+$$ \tan\dfrac{\alpha}{2} = \dfrac{\sin\dfrac{\alpha}{2}}{\cos\dfrac{\alpha}{2}}
+   = \dfrac{\sin\dfrac{\alpha}{2} \cdot 2\cos\dfrac{\alpha}{2}}{\cos\dfrac{\alpha}{2} \cdot 2\cos\dfrac{\alpha}{2}}
+   = \dfrac{\sin\alpha}{1 + \cos\alpha} \text{，}
+$$
+或
+$$ \tan\dfrac{\alpha}{2} = \dfrac{\sin\dfrac{\alpha}{2}}{\cos\dfrac{\alpha}{2}}
+    = \dfrac{\sin\dfrac{\alpha}{2} \cdot 2\sin\dfrac{\alpha}{2}}{\cos\dfrac{\alpha}{2} \cdot 2\sin\dfrac{\alpha}{2}}
+    = \dfrac{1 - \cos\alpha}{\sin\alpha} \text{。}
+$$
+即
+\begin{gather}
+    \tan\dfrac{\alpha}{2} = \dfrac{\sin\alpha}{1 + \cos\alpha} = \dfrac{1 - \cos\alpha}{\sin\alpha} \text{。} \tag{${T_{\frac{\alpha}{2}}}'$}\label{eq:T-a/2-'}
+\end{gather}
+
+\jiange
+\liti 已知 $\cos\alpha = \dfrac 1 2$，求 $\sin\dfrac{\alpha}{2}$，$\cos\dfrac{\alpha}{2}$，$\tan\dfrac{\alpha}{2}$。\jiange
+
+\jie $\begin{aligned}[t]
+    & \sin\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{2}} = \pm\sqrt{\dfrac{1 - \dfrac 1 2}{2}} = \pm\dfrac 1 2 \text{,} \\
+    & \cos\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 + \cos\alpha}{2}} = \pm\sqrt{\dfrac{1 + \dfrac 1 2}{2}} = \pm\dfrac{\sqrt 3} 2 \text{,} \\
+    & \tan\dfrac{\alpha}{2} = \pm\dfrac{\dfrac 1 2}{\dfrac{\sqrt 3} 2} = \pm\dfrac{\sqrt 3}{3} \text{。}
+\end{aligned}$ \jiange
+
+\liti 已知 $\cos\theta = -\dfrac 3 5$，并且 $180^\circ < \theta < 270^\circ$，求 $\tan\dfrac{\theta}{2}$。
+
+\textbf{解法一：} 因为 $180^\circ < \theta < 270^\circ$，所以 $90^\circ < \dfrac{\theta}{2} < 135^\circ$，即 $\dfrac{\theta}{2}$ 是第二象限角。
+
+$\therefore \quad \tan\dfrac{\theta}{2} = -\sqrt{\dfrac{1 - \cos\theta}{1 + \cos\theta}} = -\sqrt{\dfrac{1 - \left(-\dfrac 3 5\right)}{1 + \left(-\dfrac 3 5\right)}} = -2$。\jiange
+
+\textbf{解法二：} 因为 $180^\circ < \theta < 270^\circ$，即 $\theta$ 是第三象限角。\jiange
+
+$\therefore \quad \sin\theta = -\sqrt{1 - \cos^2\theta} = -\sqrt{1 - \dfrac{9}{25}} = -\dfrac 4 5$。\jiange
+
+$\therefore \quad \tan\dfrac{\theta}{2} = \dfrac{1 - \cos\theta}{\sin\theta} = \dfrac{1 - \left(-\dfrac 3 5\right)}{-\dfrac 4 5} = -2$，\jiange
+
+或 $\tan\dfrac{\theta}{2} = \dfrac{\sin\theta}{1 + \cos\theta} = \dfrac{-\dfrac 4 5}{1 + \left(-\dfrac 3 5\right)} = -2$。
+
+如果已经知道 $\sin\alpha$，$\cos\alpha$ 的值，那么求 $\tan\dfrac{\alpha}{2}$ 时，用公式 （\ref{eq:T-a/2-'}）比较方便。
+一般地说，选用分母为单项式的公式 $\tan\dfrac{\alpha}{2} = \dfrac{1 - \cos\alpha}{\sin\alpha}$ 更为方便。 \jiange
+
+\liti 求证 $\dfrac{\cos^2\alpha}{\cot\dfrac{\alpha}{2} - \tan\dfrac{\alpha}{2}} = \dfrac 1 4 \sin2\alpha$。\jiange
+
+\textbf{证法一：} $\begin{aligned}[t]
+    & \dfrac{\cos^2\alpha}{\cot\dfrac{\alpha}{2} - \tan\dfrac{\alpha}{2}} = \dfrac{\cos^2\alpha}{\dfrac{1 + \cos\alpha}{\sin\alpha} - \dfrac{1 - \cos\alpha}{\sin\alpha}} \\
+    =& \dfrac{\cos^2\alpha \sin\alpha}{2\cos\alpha} = \dfrac 1 2 \sin\alpha \cos\alpha = \dfrac 1 4 \sin2\alpha \text{。}
+\end{aligned}$ \jiange
+
+\textbf{证法二：} $\begin{aligned}[t]
+    \dfrac{\cos^2\alpha}{\cot\dfrac{\alpha}{2} - \tan\dfrac{\alpha}{2}} &= \dfrac{\cos^2\alpha \tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} = \dfrac 1 2 \cos^2\alpha \cdot \tan\alpha \\
+    &= \dfrac 1 2 \sin\alpha \cos\alpha = \dfrac 1 4 \sin2\alpha \text{。}
+\end{aligned}$ \jiange
+
+\liti 用 $\tan\dfrac{\alpha}{2}$ 表示 $\sin\alpha$，$\cos\alpha$，$\tan\alpha$。
+
+\jie $\begin{aligned}[t]
+    & \sin\alpha = 2\sin\dfrac{\alpha}{2} \cos\dfrac{\alpha}{2} = 2\tan\dfrac{\alpha}{2} \cdot \cos^2\dfrac{\alpha}{2}
+        = \dfrac{2\tan\dfrac{\alpha}{2}}{\sec^2\dfrac{\alpha}{2}}
+        = \dfrac{2\tan\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}}, \\
+    & \cos\alpha = 2\cos^2\dfrac{\alpha}{2} - 1
+        = \dfrac{2}{\sec^2\dfrac{\alpha}{2}} - 1
+        = \dfrac{2}{1 + \tan^2\dfrac{\alpha}{2}} - 1
+        = \dfrac{1 - \tan^2\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}} , \\
+    & \tan\alpha = \tan\left(2 \cdot \dfrac{\alpha}{2}\right) = \dfrac{2\tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} \text{。}
+\end{aligned}$
+
+用 $\tan\dfrac{\alpha}{2}$ 分别表示 $\sin\alpha$，$\cos\alpha$，$\tan\alpha$ 的公式，即
+\begin{gather*}
+    \sin\alpha = \dfrac{2\tan\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}} ,\quad
+    \cos\alpha = \dfrac{1 - \tan^2\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}} ,\quad
+    \tan\alpha = \dfrac{2\tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} \text{，}
+\end{gather*}
+通常叫做\textbf{万能公式}\mylabel{wannenggongshi}。这是因为，不论 $\alpha$ 角的哪一种三角函数，
+都可以用这几个公式把它化为 $\tan\dfrac{\alpha}{2}$ 的有理式，这样就可以把
+问题转化为以 $\tan\dfrac{\alpha}{2}$ 为变量的一元有理函数，往往有助于问题解决。
+
+我们用\hyperref[wannenggongshi]{万能公式} 来证明例3：
+
+$
+\text{右边} = \dfrac 1 2 \cdot \dfrac{\tan\alpha}{1 + \tan^2\alpha}
+    = \dfrac 1 2 \tan\alpha \cdot \cos^2\alpha
+    = \dfrac{\tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} \cdot \cos^2\alpha,
+$ \jiange
+
+$
+\text{左边} = \cos^2\alpha \cdot \dfrac{\tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} \text{。}
+$ \jiange
+
+$\therefore$ \quad 原式成立。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{已知 $\cos\alpha = \dfrac 2 3$，求 $\sin\dfrac{\alpha}{2}$，$\cos\dfrac{\alpha}{2}$，$\tan\dfrac{\alpha}{2}$。}\jiange
+
+\xiaoti{已知 $\sin\theta = -\dfrac 4 5$，且 $270^\circ < \theta < 360^\circ$，求 $\sin\dfrac{\theta}{2}$，$\cos\dfrac{\theta}{2}$，$\tan\dfrac{\theta}{2}$。} \jiange
+
+\xiaoti{已知 $\cos A = \dfrac 4 5$，且 $\dfrac 3 2 \pi < A < 2\pi$，求 $\tan\dfrac{A}{2}$。} \jiange
+
+\xiaoti{求证 $\tan\dfrac{\pi}{8} = \sqrt{2} - 1$。} \jiange
+
+\xiaoti{证明下列恒等式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\sin^2\dfrac{\alpha}{4} = \dfrac{1 - \cos\dfrac{\alpha}{2}}{2}$；} \jiange
+
+    \xiaoxiaoti{$1 + \sin\alpha = 2\cos^2\left( \dfrac{\pi}{4} - \dfrac{\alpha}{2} \right)$；} \jiange
+
+    \xiaoxiaoti{$1 - \sin\theta = 2\cos^2\left( \dfrac{\pi}{4} + \dfrac{\theta}{2} \right)$；} \jiange
+
+    \xiaoxiaoti{$\dfrac{\cos A}{\cot\dfrac{A}{2} - \tan\dfrac{A}{2}} = \dfrac 1 2 \sin A $；} \jiange
+
+    \xiaoxiaoti{$\dfrac{\sin 2\alpha}{1 + \cos 2\alpha} \cdot \dfrac{\cos\alpha}{1 + \cos\alpha} = \tan\dfrac{\alpha}{2}$；} \jiange
+
+    \xiaoxiaoti{$\dfrac{4\sin\alpha(1 - \tan^2\alpha)}{\sec\alpha(1 + \tan^2\alpha)} = \sin 4\alpha$。} \jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知 $\tan\alpha = -3$，求 $2\alpha$ 的各三角函数值。}
+
+\end{xiaotis}
