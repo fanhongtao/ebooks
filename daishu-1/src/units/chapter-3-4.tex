@@ -1,0 +1,394 @@
+\subsection{三角函数的积化和差与和差化积}\label{subsec:3-4}
+
+在计算或化简的过程中，有时需要把三角函数的积的形式与和差的形式进行互化。下面我们就来研究这种互化。
+
+\subsubsection{三角函数的积化和差}
+
+将公式 (\ref{eq:S-a+b}) 加上公式 (\ref{eq:S-a-b})，得
+$$\sin(\alpha + \beta) + \sin(\alpha - \beta) = 2\sin\alpha \cos\beta,$$
+
+\jiange$\therefore$
+\begin{minipage}{0.9\textwidth}
+\begin{gather}
+    \sin\alpha \cdot \cos\beta = \dfrac{1}{2} [\sin(\alpha + \beta) + \sin(\alpha - \beta)] \text{。} \tag{$1$}\label{eq:jhhc-s-c}
+\end{gather}
+\end{minipage}\jiange
+
+将公式 (\ref{eq:S-a+b}) 减去公式 (\ref{eq:S-a-b})，得
+$$\sin(\alpha + \beta) - \sin(\alpha - \beta) = 2\cos\alpha \sin\beta,$$
+
+\jiange$\therefore$
+\begin{minipage}{0.9\textwidth}
+\begin{gather}
+    \cos\alpha \cdot \sin\beta = \dfrac{1}{2} [\sin(\alpha + \beta) - \sin(\alpha - \beta)] \text{。} \tag{$2$}\label{eq:jhhc-c-s}
+\end{gather}
+\end{minipage}\jiange
+
+将公式 (\ref{eq:C-a+b}) 加上公式 (\ref{eq:C-a-b})，得
+$$\cos(\alpha + \beta) + \cos(\alpha - \beta) = 2\cos\alpha \cos\beta,$$
+
+\jiange$\therefore$
+\begin{minipage}{0.9\textwidth}
+\begin{gather}
+    \cos\alpha \cdot \cos\beta = \dfrac{1}{2} [\cos(\alpha + \beta) + \cos(\alpha - \beta)] \text{。} \tag{$3$}\label{eq:jhhc-c-c}
+\end{gather}
+\end{minipage}\jiange
+
+将公式 (\ref{eq:C-a+b}) 减去公式 (\ref{eq:C-a-b})，得
+$$\cos(\alpha + \beta) - \cos(\alpha - \beta) = -2\sin\alpha \sin\beta,$$
+
+\jiange$\therefore$
+\begin{minipage}{0.9\textwidth}
+\begin{gather}
+    \sin\alpha \cdot \sin\beta = -\dfrac{1}{2} [\cos(\alpha + \beta) - \cos(\alpha - \beta)] \text{。} \tag{$4$}\label{eq:jhhc-s-s}
+\end{gather}
+\end{minipage}\jiange
+
+(\ref{eq:jhhc-s-c})，(\ref{eq:jhhc-c-s})，(\ref{eq:jhhc-c-c})，(\ref{eq:jhhc-s-s}) 这四个公式叫做\textbf{积化和差公式}。
+
+\jiange\liti 不查表，求 $\sin\dfrac{5\pi}{12} \cdot \cos\dfrac{\pi}{12}$ 的值。\jiange
+
+\textbf{解法一：} $\begin{aligned}[t]
+    & \sin\dfrac{5\pi}{12} \cdot \cos\dfrac{\pi}{12} \\
+    = & \dfrac{1}{2}\left[\sin\left( \dfrac{5\pi}{12} + \dfrac{\pi}{12} \right) + \sin\left( \dfrac{5\pi}{12} - \dfrac{\pi}{12} \right)\right] \\
+    = & \dfrac{1}{2}\left( \sin\dfrac{\pi}{2} + \sin\dfrac{\pi}{3} \right) = \dfrac{1}{2} + \dfrac{\sqrt{3}}{4} \text{。}
+\end{aligned}$ \jiange
+
+\textbf{解法二：} $\begin{aligned}[t]
+    & \sin\dfrac{5\pi}{12} \cdot \cos\dfrac{\pi}{12} = \cos\dfrac{\pi}{12} \cos\dfrac{\pi}{12} = \cos^2\dfrac{\pi}{12} \\
+    = & \dfrac{1 + \cos\dfrac{\pi}{6}}{2} = \dfrac{1 + \dfrac{\sqrt{3}}{2}}{2} = \dfrac{1}{2} + \dfrac{\sqrt{3}}{4} \text{。}
+\end{aligned}$ \jiange
+
+\liti 把下列各式化为和差的形式，然后查表求值。\jiange
+
+\twoInLine[14em]{（1）$2\cos31^\circ \sin14^\circ$；}{（2）$\cos\dfrac{2\pi}{15} \cos\dfrac{\pi}{5}$。}\jiange
+
+\jie （1） $\begin{aligned}[t]
+    & 2\cos31^\circ \sin14^\circ \\
+    = & \sin(31^\circ + 14^\circ) - \sin(31^\circ - 14^\circ) \\
+    = & \dfrac{\sqrt{2}}{2} - \sin 17^\circ \\
+    = & 0.7071 - 0.2924 = 0.4147;
+\end{aligned}$ \jiange
+
+（2） $\begin{aligned}[t]
+    & \cos\dfrac{2\pi}{15} \cos\dfrac{\pi}{5}
+    = \dfrac{1}{2} \left[ \cos\left( \dfrac{2\pi}{15} + \dfrac{\pi}{5} \right) +  \cos\left( \dfrac{2\pi}{15} - \dfrac{\pi}{5} \right) \right]
+    = \dfrac{1}{2} \left( \cos\dfrac{\pi}{3} + \cos\dfrac{\pi}{15} \right) \\
+    = & \dfrac{1}{2} \left( \dfrac{1}{2} + \cos12^\circ \right) = 0.25 + 0.4891 = 0.7391 \text{。}
+\end{aligned}$ \jiange
+
+\liti 求证 $\sin15^\circ \cdot \sin30^\circ \cdot \sin75^\circ = \dfrac{1}{8}$。\jiange
+
+\textbf{证法一：} $\begin{aligned}[t]
+    & \sin15^\circ \cdot \sin30^\circ \cdot \sin75^\circ \\
+    = & \dfrac{1}{2} \sin15^\circ \sin75^\circ \\
+    = & -\dfrac{1}{4} [\cos(15^\circ + 75^\circ) - \cos(15^\circ - 75^\circ)] \\
+    = & -\dfrac{1}{4} (\cos90^\circ - \cos60^\circ) = -\dfrac{1}{4} \cdot \left( -\dfrac{1}{2} \right) = \dfrac{1}{8} \text{。}
+\end{aligned}$ \jiange
+
+\textbf{证法二：} $\begin{aligned}[t]
+    & \sin15^\circ \cdot \sin30^\circ \cdot \sin75^\circ \\
+    = & \dfrac{1}{2} \sin15^\circ \cdot \sin75^\circ \\
+    = & \dfrac{1}{2} \sin15^\circ \cdot \cos15^\circ = \dfrac{1}{4} \sin30^\circ = \dfrac{1}{8} \text{。}
+\end{aligned}$ \jiange
+
+\liti 求 $\cos10^\circ \cdot \cos30^\circ \cdot \cos50^\circ \cdot \cos70^\circ$ 的值。
+
+\jie $\begin{aligned}[t]
+    \text{原式} &= \cos10^\circ \cdot \dfrac{\sqrt{3}}{2} \cdot \dfrac{1}{2}[\cos(50^\circ + 70^\circ) + \cos(50^\circ - 70^\circ)] \\
+    &= \dfrac{\sqrt{3}}{4} \cos10^\circ \left( -\dfrac{1}{2} + \cos20^\circ \right) \\
+    &= -\dfrac{\sqrt{3}}{8} \cos10^\circ + \dfrac{\sqrt{3}}{4} \cos10^\circ \cos20^\circ \\
+    &= -\dfrac{\sqrt{3}}{8} \cos10^\circ + \dfrac{\sqrt{3}}{8}(\cos30^\circ + \cos10^\circ) \\
+    &= -\dfrac{\sqrt{3}}{8} \cos10^\circ + \dfrac{\sqrt{3}}{8} \cdot \dfrac{\sqrt{3}}{2} + \dfrac{\sqrt{3}}{8} \cos10^\circ \\
+    &= \dfrac{3}{16} \text{。}
+\end{aligned}$ \jiange
+
+\liti 求证 $\sin3\alpha \sin^3\alpha + \cos3\alpha \cos^3\alpha = \cos^3 2\alpha$。
+
+\zhengming $\begin{aligned}[t]
+    \text{左边} &= \sin^2\alpha(\sin3\alpha \sin\alpha) + \cos^2\alpha(\cos3\alpha \cos\alpha) \\
+    &= \dfrac{1}{2} [\sin^2\alpha(\cos2\alpha - \cos4\alpha) + \cos^2\alpha(\cos4\alpha + \cos2\alpha)] \\
+    &= \dfrac{1}{2} [\cos2\alpha(\sin^2\alpha + \cos^2\alpha) + \cos4\alpha(\cos^2\alpha - \sin^2\alpha)] \\
+    &= \dfrac{1}{2} (\cos2\alpha + \cos4\alpha \cos2\alpha) \\
+    &= \dfrac{1}{2} \cos2\alpha (1 + \cos4\alpha) \\
+    &= \dfrac{1}{2} \cos2\alpha \cdot 2\cos^2 2\alpha \\
+    &= \cos^3 2\alpha = \text{右边。}
+\end{aligned}$ \jiange
+
+$\therefore$ 原式成立。
+
+\liti 已知 $\triangle ABC$ 中，$\sin B \sin C = \cos^2 \dfrac{A}{2}$，求证这个三角形是等腰三角形。
+
+\zhengming 由 $\sin B \sin C = \cos^2 \dfrac{A}{2}$，知
+$$\sin B \sin C = \dfrac{1 + \cos A}{2} ,$$
+又由 $A + B + C = 180^\circ$，知
+$$\cos A = -\cos(B + C),$$
+
+$\therefore \quad -\dfrac{1}{2}[\cos(B+C) - \cos(B-C)] = \dfrac{1}{2}[1 - \cos(B+C)]$ \jiange
+
+化简，得
+$$\cos(B-C) = 1 \text{。}$$
+
+$\because \quad -180^\circ < B - C < 180^\circ$，
+
+$\therefore \quad B - C = 0$。
+
+由此，得 $B = C$，即 $\triangle ABC$ 是等腰三角形。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列各式化为和差的形式，然后查表求值：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti {$2\sin70^\circ \cos20^\circ$；} & \xiaoxiaoti {$\cos80^\circ \sin20^\circ$；} \\
+        \xiaoxiaoti {$\cos68^\circ \cos52^\circ$；} & \xiaoxiaoti {$\sin121^\circ \sin59^\circ$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{不查表，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$\sin105^\circ \cos75^\circ$；}{$2\cos37.5^\circ \cos22.5^\circ$；}\jiange
+
+    \xiaoxiaoti{$2\cos\dfrac{9\pi}{13} \cos\dfrac{\pi}{13} + \cos\dfrac{5\pi}{13} + \cos\dfrac{3\pi}{13}$。}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{证明下列各恒等式：}
+\begin{xiaoxiaotis}
+
+    \jiange
+    \xiaoxiaoti{$2\sin\left( \dfrac{\pi}{4} + \alpha \right) \cdot \sin\left( \dfrac{\pi}{4} - \alpha \right) = \cos2\alpha$；}\jiange
+
+    \xiaoxiaoti{$2\sin(60^\circ + \alpha) \cdot \cos(60^\circ - \alpha) = \dfrac{\sqrt{3}}{2} + \sin2\alpha$；}\jiange
+
+    \xiaoxiaoti{$\sin20^\circ \cos70^\circ + \sin10^\circ \sin50^\circ = \dfrac{1}{4}$；}\jiange
+
+    \xiaoxiaoti{$\cos2\alpha \cos\alpha - \sin5\alpha \sin2\alpha = \cos4\alpha \cos3\alpha$；}
+
+    \xiaoxiaoti{$\cos4x \cdot \cos2x - \cos^2 3x = -\sin^2 x$；}\jiange
+
+    \xiaoxiaoti{$\tan\left( x + \dfrac{\pi}{4} \right) + \tan\left( x - \dfrac{\pi}{4} \right) = 2\tan2x$。}\jiange
+
+\end{xiaoxiaotis}
+\end{xiaotis}
+
+
+\subsubsection{三角函数的和差化积}
+
+在积化和差的公式中，如果令 $\alpha + \beta = \theta$，$\alpha - \beta = \varphi$，则 \jiange
+$$\alpha = \dfrac{\theta + \varphi}{2}, \quad \beta = \dfrac{\theta - \varphi}{2} \text{。}$$
+
+\jiange 把 $\alpha$，$\beta$ 的值代入积化和差的公式 (\ref{eq:jhhc-s-c}) 中，就有\jiange
+$$ \sin\dfrac{\theta + \varphi}{2} \cdot \cos\dfrac{\theta - \varphi}{2} = \dfrac{1}{2} \left[ \sin\left( \dfrac{\theta + \varphi}{2} + \dfrac{\theta - \varphi}{2} \right) + \sin\left( \dfrac{\theta + \varphi}{2} - \dfrac{\theta - \varphi}{2} \right) \right]  = \dfrac{1}{2}(\sin\theta + \sin\varphi) \text{。} \jiange$$
+
+\jiange
+$\therefore$
+
+\vspace{-1.7em} \begin{minipage}{0.9\textwidth}
+\begin{gather*}
+    \sin\theta + \sin\varphi = 2\sin\dfrac{\theta + \varphi}{2} \cdot \cos\dfrac{\theta - \varphi}{2} \text{。}
+\end{gather*}
+\end{minipage}
+
+同样可得，
+\begin{align*}
+    &\sin\theta - \sin\varphi = 2\cos\dfrac{\theta + \varphi}{2} \cdot \sin\dfrac{\theta - \varphi}{2} \text{，} \\
+    &\cos\theta + \cos\varphi = 2\cos\dfrac{\theta + \varphi}{2} \cdot \cos\dfrac{\theta - \varphi}{2} \text{，} \\
+    &\cos\theta - \cos\varphi = -2\sin\dfrac{\theta + \varphi}{2} \cdot \sin\dfrac{\theta - \varphi}{2} \text{。}
+\end{align*}
+
+这四个公式叫做\textbf{和差化积公式}。
+
+\liti 把下列各式化为积的形式：
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\sin104^\circ + \sin16^\circ$；}\jiange
+
+    \xiaoxiaoti{$\cos\left( \alpha + \dfrac{\pi}{4} \right) + \cos\left( \alpha - \dfrac{\pi}{4} \right)$。}\jiange
+
+\end{xiaoxiaotis}
+
+\jie （1）$\begin{aligned}[t]
+    & \sin104^\circ + \sin16^\circ \\
+    = & 2\sin\dfrac{104^\circ + 16^\circ}{2} \cos\dfrac{104^\circ - 16^\circ}{2} \\
+    = & 2\sin60^\circ \cos44^\circ = \sqrt{3}\cos44^\circ \text{；}
+\end{aligned}$\jiange
+
+（2）$\begin{aligned}[t]
+    & \cos\left( \alpha + \dfrac{\pi}{4} \right) + \cos\left( \alpha - \dfrac{\pi}{4} \right) \\
+    = & 2\cos\dfrac{\left( \alpha + \dfrac{\pi}{4} \right) + \left( \alpha - \dfrac{\pi}{4} \right)}{2} \cdot \cos\dfrac{\left( \alpha + \dfrac{\pi}{4} \right) - \left( \alpha - \dfrac{\pi}{4} \right)}{2} \\
+    = & 2\cos\alpha \cos\dfrac{\pi}{4} = \sqrt{2} \cos\alpha \text{。}
+\end{aligned}$\jiange
+
+\liti 求 $\sin75^\circ - \sin15^\circ$ 的值。
+
+\jie $\begin{aligned}[t]
+    & \sin75^\circ - \sin15^\circ \\
+    = & 2\cos\dfrac{75^\circ + 15^\circ}{2} \sin\dfrac{75^\circ - 15^\circ}{2} \\
+    = & 2\cos45^\circ \cdot \sin30^\circ = \dfrac{\sqrt{2}}{2} \text{。}
+\end{aligned}$\jiange
+
+\liti 把下列各式化为积的形式：
+\begin{xiaoxiaotis}
+
+    \jiange
+    \twoInLineXxt[16em]{$\cos x - \dfrac{\sqrt{3}}{2}$；}{$\sin x + \cos x$。}\jiange
+
+\end{xiaoxiaotis}
+
+\jie （1）$\begin{aligned}[t]
+    & \cos x - \dfrac{\sqrt{3}}{2} = \cos x - \cos\dfrac{\pi}{6} \\
+    = & -2\sin\dfrac{x + \dfrac{\pi}{6}}{2} \sin\dfrac{x - \dfrac{\pi}{6}}{2} \\
+    = & -2\sin\left( \dfrac{x}{2} + \dfrac{\pi}{12} \right) \sin\left( \dfrac{x}{2} - \dfrac{\pi}{12} \right) \text{；}
+\end{aligned}$\jiange
+
+（2）$\begin{aligned}[t]
+    \sin x + \cos x &= \sin x + \sin(90^\circ - x) \\
+    &= 2\sin45^\circ \cos(x - 45^\circ) \\
+    &= \sqrt{2} \cos(x - 45^\circ) \text{，}
+\end{aligned}$\jiange
+
+或 \; $\begin{aligned}[t]
+    \sin x + \cos x &= \cos(90^\circ - x) + \cos x \\
+    &= 2\cos45^\circ \cos(45^\circ - x) \\
+    &= \sqrt{2} \cos(45^\circ - x) \text{。}
+\end{aligned}$\jiange
+
+因为 $\begin{aligned}[t]
+    \sqrt{2} \cos(45^\circ - x) &= \sqrt{2} \cos[-(x - 45^\circ)] \\
+    &= \sqrt{2} \cos(x - 45^\circ) \text{，}
+\end{aligned}$ \\
+所以两种解法的结果实际上是一样的。
+
+\liti 求 $\sin^2 10^\circ + \cos^2 40^\circ + \sin 10^\circ \cos 40^\circ$ 的值。
+
+\jie $\begin{aligned}[t]
+    & \sin^2 10^\circ + \cos^2 40^\circ + \sin 10^\circ \cos 40^\circ \\
+    = & \dfrac{1 - \cos 20^\circ}{2} + \dfrac{1 + \cos 80^\circ}{2} + \dfrac{1}{2}(\sin 50^\circ - \sin 30^\circ) \\
+    = & 1 + \dfrac{1}{2}(\cos 80^\circ - \cos 20^\circ) + \dfrac{1}{2} \left( \sin 50^\circ - \dfrac{1}{2} \right) \\
+    = & 1 + \dfrac{1}{2}(-2\sin 50^\circ \sin 30^\circ) + \dfrac{1}{2} \left( \sin 50^\circ - \dfrac{1}{2} \right) \\
+    = & 1 - \dfrac{1}{2}\sin 50^\circ + \dfrac{1}{2}\sin 50^\circ - \dfrac{1}{4} \\
+    = & \dfrac{3}{4} \text{。}
+\end{aligned}$ \jiange
+
+\liti 在 $\triangle ABC$ 中，求证
+$$ \sin A + \sin B + \sin C = 4\cos\dfrac{A}{2} \cos\dfrac{B}{2} \cos\dfrac{C}{2} \text{。}$$
+
+\zhengming 由 $A + B + C = 180^\circ$，得
+$$ C = 180^\circ - (A + B), \quad \dfrac{C}{2} = 90^\circ - \dfrac{A + B}{2} \text{。} $$
+
+$\therefore \quad \begin{aligned}[t]
+    & \sin A + \sin B + \sin C \\
+    = & 2 \sin\dfrac{A + B}{2} \cos\dfrac{A - B}{2} + \sin(A + B) \\
+    = & 2 \sin\dfrac{A + B}{2} \cos\dfrac{A - B}{2} + 2\sin\dfrac{A + B}{2} \cos\dfrac{A + B}{2} \\
+    = & 2 \sin\dfrac{A + B}{2} \left( \cos\dfrac{A - B}{2} + \cos\dfrac{A + B}{2} \right) \\
+    = & 2 \sin(90^\circ - \dfrac{C}{2}) \cdot 2 \cos\dfrac{A}{2} \cos\left( -\dfrac{B}{2} \right) \\
+    = & 4 \cos\dfrac{A}{2} \cdot \cos\dfrac{B}{2} \cdot \cos\dfrac{C}{2} \text{。}
+\end{aligned}$ \jiange
+
+\liti 把 $1 + \sin\theta + \cos\theta$ 化成积的形式。
+
+\jie $\begin{aligned}[t]
+    & 1 + \sin\theta + \cos\theta \\
+    = & (1 + \cos\theta) + \sin\theta \\
+    = & 2\cos^2\dfrac{\theta}{2} + 2\sin\dfrac{\theta}{2} \cos\dfrac{\theta}{2} \\
+    = & 2\cos\dfrac{\theta}{2} \left( \cos\dfrac{\theta}{2} + \sin\dfrac{\theta}{2} \right) \\
+    = & 2\cos\dfrac{\theta}{2} \left[ \sin\left( 90^\circ - \dfrac{\theta}{2} \right) + \sin\dfrac{\theta}{2} \right] \\
+    = & 2\cos\dfrac{\theta}{2} \cdot 2\sin45^\circ \cos\left( 45^\circ - \dfrac{\theta}{2} \right) \\
+    = & 2\sqrt{2} \cos\dfrac{\theta}{2} \cos\left( 45^\circ - \dfrac{\theta}{2} \right) \text{。}
+\end{aligned}$ \jiange
+
+\liti 化下列各式为一个角的一个三角函数的形式：\jiange
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac{\sqrt{2}}{2} \sin\alpha +  \dfrac{\sqrt{2}}{2} \cos\alpha$；}\jiange
+
+    \xiaoxiaoti{$\sin\alpha - \sqrt{3}\cos\alpha$；}
+
+    \xiaoxiaoti{$a\sin\alpha + b\cos\alpha$。}
+
+\end{xiaoxiaotis}
+
+\jie （1）$\because \quad \cos45^\circ = \dfrac{\sqrt{2}}{2}$，$\sin45^\circ = \dfrac{\sqrt{2}}{2}$，
+
+$\therefore \quad \begin{aligned}[t]
+    \text{原式} &= \sin\alpha \cos45^\circ + \cos\alpha \sin45^\circ \\
+    &= \sin(\alpha + 45^\circ);
+\end{aligned}$
+
+（2） $\text{原式} = 2\left( \dfrac{1}{2}\sin\alpha  - \dfrac{\sqrt{3}}{2}\cos\alpha \right)$，而\jiange
+
+\qquad $\cos\dfrac{\pi}{3} = \dfrac{1}{2}$，$\sin\dfrac{\pi}{3} = \dfrac{\sqrt{3}}{2}$，\jiange
+
+$\therefore \quad \begin{aligned}[t]
+    \text{原式} &= 2\left( \sin\alpha \cos\dfrac{\pi}{3} - \cos\alpha \sin\dfrac{\pi}{3} \right) \\
+    &= 2\sin\left( \alpha - \dfrac{\pi}{3} \right);
+\end{aligned}$
+
+（3）分析：如果 $a = x\cos\varphi$，$b = x\sin\varphi$，$\text{原式} = x(\sin\alpha \cos\varphi + \cos\alpha \sin\varphi)$，
+这样就可以把原式化为 $x\sin(\alpha + \varphi)$ 了。现在问题转变为 $x$ 与 $\varphi$ 应当怎样来确定。
+
+由 $\cos^2\varphi + \sin^2\varphi = 1$，可得 $\left( \dfrac{a}{x} \right)^2 + \left( \dfrac{b}{x} \right)^2 = 1$，\jiange
+
+$\therefore \quad x^2 = a^2 + b^2$。
+
+这样就得到 $x = \pm\sqrt{a^2 + b^2}$，不妨取 $x = \sqrt{a^2 + b^2}$，于是就得到 $\cos\varphi = \dfrac{a}{\sqrt{a^2 + b^2}}$，
+$\sin\varphi = \dfrac{b}{\sqrt{a^2 + b^2}}$，从而得 $\tan\varphi = \dfrac{b}{a}$。因为 $a$，$b$ 是已知的，所以 $\varphi$ 可以确定。
+
+$a\sin\alpha + b\cos\alpha = \sqrt{a^2 + b^2} \left( \dfrac{a}{\sqrt{a^2 + b^2}} \sin\alpha + \dfrac{b}{\sqrt{a^2 + b^2}} \cos\alpha \right)$。\jiange
+
+令 $\cos\varphi = \dfrac{a}{\sqrt{a^2 + b^2}}$，$\sin\varphi = \dfrac{b}{\sqrt{a^2 + b^2}}$，则 \jiange
+
+$\begin{aligned}[t]
+    \text{原式} &= \sqrt{a^2 + b^2} (\sin\alpha \cos\varphi + \cos\alpha \sin\varphi) \\
+    &= \sqrt{a^2 + b^2} \sin(\alpha + \varphi) \text{。}
+\end{aligned}$
+
+（其中 $\varphi$ 角所在象限由 $a$，$b$ 的符号确定，$\varphi$ 角的值由 $\tan\varphi = \dfrac{b}{a}$ 确定。）
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列各式化为积的形式：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti {$\sin24^\circ + \sin21^\circ$；} & \xiaoxiaoti {$\sin(15^\circ + \alpha) - \sin(15^\circ - \alpha)$；} \\
+        \xiaoxiaoti {$\cos3x + \cos2x$；} & \xiaoxiaoti {$\cos\dfrac{\alpha + \beta}{2} - \cos\dfrac{\alpha - \beta}{2}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各式的值：}\jiange
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$\dfrac{\sin20^\circ - \cos50^\circ}{\cos20^\circ - \cos40^\circ}$；}{$\sin20^\circ + \sin40^\circ - \sin80^\circ$。}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac{\sin\alpha + \sin\beta}{\sin\alpha - \sin\beta} = \tan\dfrac{\alpha + \beta}{2} \cdot \cot\dfrac{\alpha - \beta}{2}$；}\jiange
+
+    \xiaoxiaoti{$\dfrac{\sin x + \sin y}{\cos x - \cos y} = \cot\dfrac{y - x}{2}$。}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{将下列各式化为一个角的一个三角函数的形式：}\jiange
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti {$\dfrac{\sqrt{3}}{2}\sin x + \dfrac{1}{2}\cos x$；} & \xiaoxiaoti {$\dfrac{\sqrt{2}}{2}\sin\varphi - \dfrac{\sqrt{2}}{2}\cos\varphi$；} \\
+        \xiaoxiaoti {$\sqrt{2}\cos\alpha - \sqrt{2}\sin\alpha$；} & \xiaoxiaoti {$\cos\theta - \sqrt{3}\sin\theta$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
