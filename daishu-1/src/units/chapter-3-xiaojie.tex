@@ -1,0 +1,67 @@
+\xiaojie
+
+一、本章内容包括两角和与差的三角函数的公式，倍角、半角的三角函数的公式，以及三角函数的
+积化和差与和差化积公式。这些公式主要用于三角函数式的计算和推导。它们在高等数学、电工学、
+力学、机械设计与制造等方面都有广泛的应用，要熟练地掌握。主要公式如下：
+
+\begin{tabular}[t]{@{}p{10em}@{}l}
+    两角和与差公式：& $\sin(\alpha \pm \beta) = \sin\alpha \cos\beta \pm \cos\alpha \sin\beta$；\\
+    & $\cos(\alpha \pm \beta) = \cos\alpha \cos\beta \mp \sin\alpha \sin\beta$；\\
+    & $\tan(\alpha \pm \beta) = \dfrac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha \tan\beta}$。
+\end{tabular}
+
+\begin{tabular}[t]{@{}p{10em}@{}l}
+    倍角公式：& $\sin2\alpha = 2\sin\alpha \cos\alpha$；\\
+    & $\cos2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$；\\
+    & $\tan2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha}$。
+\end{tabular}
+
+\renewcommand\arraystretch{2}
+\begin{tabular}[t]{@{}p{10em}@{}l}
+    半角公式：& $\sin\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{2}}$；\\
+    & $\cos\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 + \cos\alpha}{2}}$；\\
+    & $\tan\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{1 + \cos\alpha}} = \dfrac{1 - \cos\alpha}{\sin\alpha} = \dfrac{\sin\alpha}{1 + \cos\alpha}$。
+\end{tabular}
+
+\renewcommand\arraystretch{1.8}
+\begin{tabular}[t]{@{}p{10em}@{}l}
+    积化和差公式：& $\sin\alpha \cos\beta = \dfrac{1}{2} [\sin(\alpha + \beta) + \sin(\alpha - \beta)]$；\\
+    & $\cos\alpha \sin\beta = \dfrac{1}{2} [\sin(\alpha + \beta) - \sin(\alpha - \beta)]$；\\
+    & $\cos\alpha \cos\beta = \dfrac{1}{2} [\cos(\alpha + \beta) + \cos(\alpha - \beta)]$；\\
+    & $\sin\alpha \sin\beta = -\dfrac{1}{2} [\cos(\alpha + \beta) - \cos(\alpha - \beta)]$。
+\end{tabular}
+
+\begin{tabular}[t]{@{}p{10em}@{}l}
+    和差化积公式：& $\sin\alpha + \sin\beta = 2\sin\dfrac{\alpha + \beta}{2} \cos\dfrac{\alpha - \beta}{2}$；\\
+    & $\sin\alpha - \sin\beta = 2\cos\dfrac{\alpha + \beta}{2} \sin\dfrac{\alpha - \beta}{2}$；\\
+    & $\cos\alpha + \cos\beta = 2\cos\dfrac{\alpha + \beta}{2} \cos\dfrac{\alpha - \beta}{2}$；\\
+    & $\cos\alpha - \cos\beta =-2\sin\dfrac{\alpha + \beta}{2} \sin\dfrac{\alpha - \beta}{2}$。
+\end{tabular}
+\renewcommand\arraystretch{1}
+
+此外，还有万能公式：
+\begin{gather*}
+    \sin\alpha = \dfrac{2\tan\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}} ,\quad
+    \cos\alpha = \dfrac{1 - \tan^2\dfrac{\alpha}{2}}{1 + \tan^2\dfrac{\alpha}{2}} ,\quad
+    \tan\alpha = \dfrac{2\tan\dfrac{\alpha}{2}}{1 - \tan^2\dfrac{\alpha}{2}} \text{，}
+\end{gather*}
+
+\jiange
+二、上述公式是以两角和的余弦公式为基础推导得出，这些公式的内在联系和推导的线索如下表（见 \pageref{fig:tuidao} 页）。
+
+掌握表中公式的内在联系及其推导的线索，能够帮助我们理解和记忆这些公式，这是学好本章内容的关键。
+
+三、应注意的几个问题：
+
+（1） 凡使公式中某个式子没有意义的角，都不适合公式；
+
+（2）在半角公式（\ref{eq:S-a/2}，\ref{eq:C-a/2}，\ref{eq:T-a/2}）中，根号前的符号由半角所在的象限来决定；
+
+\begin{figure}[H]
+    \centering
+    \mylabel{fig:tuidao}
+    \input{pic/3-xiaojie-1}
+\end{figure}
+
+（3）把 $a\sin\alpha + b\cos\alpha$ 化成 $\sqrt{a^2 + b^2} \sin(\alpha + \varphi)$ 时，
+其中辅助角 $\varphi$ 在哪个象限，由 $a$，$b$ 的符号确定，$\varphi$ 的值由 $\tan\varphi = \dfrac{b}{a}$ 确定。
