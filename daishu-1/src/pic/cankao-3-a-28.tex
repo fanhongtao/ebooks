@@ -7,22 +7,22 @@
     \draw [name path=bc] (B) -- (C);
 
     % 求角A的角平分线
-    \path [name path=circleA] (A) circle (2);
-    \path [name intersections={of=circleA and ac, by={ma}}];
-    \path [name intersections={of=circleA and ab, by={na}}];
-    \path [name path=circleMA] (ma) circle (2);
-    \path [name path=circleNA] (na) circle (2);
-    \path [name intersections={of=circleMA and circleNA, by={pa1, pa2}}];
-    \path [name path=splitA] (pa1) -- (pa2);
+    \coordinate (ma) at (2, 0);
+    \path [name path=arcA] (ma) arc (0:90:2);
+    \path [name intersections={of=arcA and ac, by={na}}];
+    \path [name path=arcMA] (ma)+(2,0) arc (0:90:2);
+    \path [name path=arcNA] (na)+(30:2) arc (30:-60:2);;
+    \path [name intersections={of=arcMA and arcNA, by={pa}}];
+    \path [name path=splitA] (A) -- (pa);
 
     % 求角B的角平分线
-    \path [name path=circleB] (B) circle (2);
-    \path [name intersections={of=circleB and bc, by={mb}}];
-    \path [name intersections={of=circleB and ab, by={nb}}];
-    \path [name path=circleMB] (mb) circle (2);
-    \path [name path=circleNB] (nb) circle (2);
-    \path [name intersections={of=circleMB and circleNB, by={pb1, pb2}}];
-    \path [name path=splitB] (pb1) -- (pb2);
+    \coordinate (mb) at (3, 0);
+    \path [name path=arcB] (mb) arc(180:90:2);
+    \path [name intersections={of=arcB and bc, by={nb}}];
+    \path [name path=arcMB] (mb)+(-2,0) arc(180:90:2);
+    \path [name path=arcNB] (nb)+(120:2) arc (120:220:2);
+    \path [name intersections={of=arcMB and arcNB, by={pb}}];
+    \path [name path=splitB] (B) -- (pb);
 
     % 根据两角的平分线，确定内切圆的圆心
     \path [name intersections={of=splitA and splitB, by={O}}];
