@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth]
+    \coordinate [label=180:$A$] (A) at (0, 0);
+    \coordinate [label=0:$B$] (B) at (5, 0);
+    \coordinate [label=90:$C$] (C) at (9/5, 12/5);
+    \draw [name path=ab] (A) -- (B);
+    \draw [name path=ac] (A) -- (C);
+    \draw [name path=bc] (B) -- (C);
+
+    % 求角A的角平分线
+    \path [name path=circleA] (A) circle (2);
+    \path [name intersections={of=circleA and ac, by={ma}}];
+    \path [name intersections={of=circleA and ab, by={na}}];
+    \path [name path=circleMA] (ma) circle (2);
+    \path [name path=circleNA] (na) circle (2);
+    \path [name intersections={of=circleMA and circleNA, by={pa1, pa2}}];
+    \path [name path=splitA] (pa1) -- (pa2);
+
+    % 求角B的角平分线
+    \path [name path=circleB] (B) circle (2);
+    \path [name intersections={of=circleB and bc, by={mb}}];
+    \path [name intersections={of=circleB and ab, by={nb}}];
+    \path [name path=circleMB] (mb) circle (2);
+    \path [name path=circleNB] (nb) circle (2);
+    \path [name intersections={of=circleMB and circleNB, by={pb1, pb2}}];
+    \path [name path=splitB] (pb1) -- (pb2);
+
+    % 根据两角的平分线，确定内切圆的圆心
+    \path [name intersections={of=splitA and splitB, by={O}}];
+    \node [anchor=south] at (O) {$O$};
+
+    % 绘制内切圆
+    \coordinate [label=270:$D$] (D) at (A -| O);
+    \draw (O) let
+                \p1 = ($ (O) - (D) $)
+              in
+                circle ({veclen(\x1,\y1)});
+
+    % 其它
+    \draw [dashed] (A) -- (O) -- (B) (O) -- (D);
+    \node at (2.2, 0.4) {$r$};
+    \node at (3.2, -0.2) {$c$};
+\end{tikzpicture}
