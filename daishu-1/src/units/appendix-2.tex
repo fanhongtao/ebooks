@@ -1,0 +1,112 @@
+\chapter{换底公式}\label{app:2}
+
+利用常用对数表，可以求得任意一个正数的以 $10$ 为底的对数。现在我们来
+说明以其他正数 $a \; (a \neq 1)$ 为底的对数的求法。例如，求 $\log_3 5$。
+
+设 $log_3 5 = x$，写成指数式，得
+$$3^x = 5 \text{。}$$
+
+两边取常用对数，得
+$$x\lg3 = \lg5 \text{，}$$
+
+$\therefore$
+\begin{minipage}{0.9\textwidth}
+$$x = \dfrac{\lg5}{\lg3} = \dfrac{0.6990}{0.4771} = 1.465 \text{，}$$
+\end{minipage}\jiange\\
+就是
+$$\log_3 5 = 1.465 \text{。}$$
+
+一般地，我们有下面的换底公式：
+$$\log_b N = \dfrac{\log_a N}{\log_a b} \text{。}$$
+
+\zhengming 设 $\log_b N = x$，写成指数式，得
+$$b^x = N \text{。}$$
+
+两边取以 $a$ 为底的对数，得
+$$x\log_a b = \log_a N \text{。}$$
+
+$\therefore$
+\begin{minipage}{0.9\textwidth}
+$$x = \dfrac{\log_a N}{\log_a b} \text{。}$$
+\end{minipage}\jiange
+
+所以
+$$\log_b N = \dfrac{\log_a N}{\log_a b} \text{。}$$
+
+在科学技术中常常使用以无理数 $e = 2.71828\cdots$ 为底的对数，
+以 $e$ 为底的对数叫做\textbf{自然对数}，$\log_e N$ 通常记作
+$\ln N$。根据对数换底公式，可以得到自然对数与常用对数之间的关系：\jiange
+$$\ln N = \dfrac{\lg N}{\lg e} = \dfrac{\lg N}{0.4343} \text{，} \jiange$$
+就是
+$$\ln N = 2.303 \lg N \text{。}$$
+
+\liti 求 $\log_8 9 \cdot \log_{27} 32$ 的值。
+
+\jiange \jie $\begin{aligned}[t]
+    \log_8 9 \cdot \log_{27} 32 &= \dfrac{\lg 9}{\lg 8} \cdot \dfrac{\lg 32}{\lg 27} = \dfrac{2 \; \lg 3}{3 \; \lg 2} \cdot \dfrac{5 \; \lg 2}{3 \; \lg 3}\\
+    &= \dfrac{2}{3} \times \dfrac{5}{3} = 1\dfrac{1}{9} \text{。}
+\end{aligned}$\jiange
+
+\liti 求证 $\log_x y \cdot \log_y Z = \log_x z$。
+
+\zhengming
+\begin{minipage}[t]{0.8\textwidth}
+把 $\log_y z$ 化成以 $x$ 为底的对数，则\\
+$\begin{aligned}[t]
+    & \log_x y \cdot \log_y z \\
+    = & \log_x y \cdot \dfrac{\log_x z}{\log_x y} = \log_x z \text{。}
+\end{aligned}$
+\end{minipage}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{利用常用对数表，求下列各对数的值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\log_2 1000$；} & \xiaoxiaoti{$\log_5 0.5$；} \\
+        \xiaoxiaoti{$\log_3 10$；} & \xiaoxiaoti{$\log_{\frac{1}{2}} \dfrac{1}{3}$。}
+    \end{tabular}
+    \jiange
+\end{xiaoxiaotis}
+
+
+\xiaoti{利用常用对数表计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\ln \pi$；} & \xiaoxiaoti{$\ln \dfrac{\sqrt{2}}{2}$；} \\
+        \xiaoxiaoti{已知 $\ln x = 2.174$，求 $x$；} & \xiaoxiaoti{已知 $\ln x = -0.7103$，求 $x$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$\ln e^2$；}{$e^{\ln x}$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{不查表计算下列各题：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$(\lg 5)^2 + \lg 2 \cdot \lg 50$；}
+
+    \xiaoxiaoti{已知 $\lg 2 = 0.3010$，$\lg 7 = 0.8451$，求 $\lg 35$；}
+
+    \jiange\xiaoxiaoti{$\log_2 \dfrac{1}{25} \cdot \log_3 \dfrac{1}{8} \cdot \log_5 \dfrac{1}{9}$。}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{利用换底公式证明：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\log_a b = \dfrac{1}{\log_b a}$；}
+
+    \xiaoxiaoti{$(\log_a b)\cdot (\log_b c) \cdot (\log_c a) = 1$。}
+
+\end{xiaoxiaotis}
+\end{xiaotis}
