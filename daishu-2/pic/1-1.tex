@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, scale=0.7]
+    \draw[domain=-2*pi:4*pi,samples=100] plot (\x, {sin(\x r)});
+
+    \draw [dashed] (-2*pi-0.2, 0.5) -- (4*pi+0.2, 0.5);
+    \draw [->] (-2*pi-0.5, 0) -- (4*pi+0.5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1.5) -- (0, 1.5) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (-0.2, -0.3) {$O$};
+    \node [font=\footnotesize, fill=white, inner sep=1pt] at (-0.3, 0.5) {$\dfrac{1}{2}$};
+    \draw (0,1) -- (0.2, 1) node [font=\footnotesize] at (0.4, 1) {$1$};
+    \draw (0,-1) -- (0.2, -1) node [font=\footnotesize] at (-0.4, -1) {$-1$};
+    \foreach \x / \name in {
+        -2*pi/$-2\pi$,
+        -1*pi/$-\pi$,
+        0.16667*pi/$\dfrac{\pi}{6}$,
+        0.16667*5*pi/$\dfrac{5\pi}{6}$,
+        pi/$\pi$,
+        2*pi/$2\pi$,
+        3*pi/$3\pi$,
+        4*pi/$4\pi$} {
+        \node [anchor=north, font=\footnotesize] at (\x, 0) {\name};
+    }
+
+    \foreach \x in {-2, -1, 1, 2, 3, 4, 1/6, 5/6} {
+        \draw (\x * pi, 0) -- (\x * pi, 0.2);
+    }
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [dashed] (0, 1) -- (0.5*pi, 1) -- (0.5*pi, 0);
+    \draw [dashed] (0, -1) -- (-0.5*pi, -1) -- (-0.5*pi, 0);
+
+    \draw [->] (-0.5*pi-0.5, 0) -- (0.5*pi+0.5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1.5) -- (0, 1.5) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+    \draw (0,1) -- (0.2, 1) node [font=\footnotesize] at (-0.4, 1) {$1$};
+    \draw (0,-1) -- (0.2, -1) node [font=\footnotesize] at (0.5, -1) {$-1$};
+    \foreach \x / \name in {
+        -0.5*pi/$-\dfrac{\pi}{2}$,
+        -1/$-1$,
+        1/$1$,
+        0.5*pi/$\dfrac{\pi}{2}$} {
+        \draw (\x, 0) -- (\x, 0.2);
+        \node [anchor=north, font=\footnotesize, fill=white, inner sep=1pt] at (\x, 0) {\name};
+    }
+
+    \draw[domain=-0.5*pi:0.5*pi,samples=30] plot (\x, {sin(\x r)});
+\end{tikzpicture}

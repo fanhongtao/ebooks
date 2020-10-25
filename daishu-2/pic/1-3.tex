@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+    \pgfmathsetmacro{\base}{0.5 * pi};
+    \draw [->] (-\base-0.5, 0) -- (\base+0.5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -\base-0.5) -- (0, \base+0.8) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+    \foreach \x / \name in {
+        -\base/$-\dfrac{\pi}{2}$,
+        -1/$-1$,
+        1/$1$,
+        \base/$\dfrac{\pi}{2}$} {
+        \draw (\x, 0.2) -- (\x, 0) node [anchor=north, font=\footnotesize] {\name};
+    }
+
+    \foreach \y / \name in {
+        -\base/$-\dfrac{\pi}{2}$,
+        -1/$-1$,
+        1/$1$,
+        \base/$\dfrac{\pi}{2}$} {
+        \draw (0.2, \y) -- (0, \y) node [anchor=east, font=\footnotesize]{\name};
+    }
+
+    \draw (-\base, -\base) -- (\base, \base) node [anchor=west] {$y = x$};
+    \draw[dashed, domain=-0.5*pi:0.5*pi,smooth] plot (\x, {sin(\x r)}) node [anchor=west] {$y = \sin x$};
+    \draw[domain=-1:1,smooth,samples=50] plot (\x, {rad(asin(\x))}) node at (1.4, 2.0) {$y = \arcsin x$};
+    \node[font=\footnotesize] at (2.4, 0.5) {$x \in [-\dfrac{\pi}{2}, \dfrac{\pi}{2}]$};
+\end{tikzpicture}
