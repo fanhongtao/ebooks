@@ -1,0 +1,197 @@
+\subsection{反余弦函数}\label{subsec:1-2}
+
+从余弦函数的图象（图\ref{fig:1-4}）同样可以看到，余弦函数 $y = \cos x \; (x \in (-\infty, +\infty))$
+不存在反函数。但在单调区间 $[0, \pi]$ 上，对于不同的 $x$ 值，$y$ 有不同的值和它对应，
+并且随着 $x$ 由 $0$ 增大到 $\pi$，$y$ 由 $1$ 减小到 $-1$，取得值域 $[-1, 1]$ 上的一切值。
+因此，函数 $y = \cos x \; (x \in [0, \pi])$ 有反函数。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/1-4}
+    \caption{}\label{fig:1-4}
+\end{figure}
+
+函数 $y = \cos x \; (x \in [0, \pi])$ 的反函数叫做\textbf{反余弦函数}，记作 $y = \arccos x$，
+它的定义域是 $[-1, 1]$，值域是 $[0, \pi]$。
+
+这样，对于属于 $[-1, 1]$ 的每一个 $x$ 值，$\arccos x$ 就表示属于 $[0, \pi]$ 的唯一确定的一个值，
+它的余弦正好等于已知的 $x$。也可以说，$\arccos x$ 表示属于 $[0, \pi]$ 的唯一确定的一个角〈弧度数），\jiange
+这个角的余弦恰好等于 $x$。例如，对于 $x = \dfrac{1}{2}$，$y = \arccos \dfrac{1}{2}$\jiange
+就表示 $[0, \pi]$ 上使 $\cos y = \dfrac{1}{2}$ 的唯一确定的一个角，这个角是 $\dfrac{\pi}{3}$，\jiange
+因为根据余弦函数 $y = \cos x$ 在 $[0, \pi]$ 上的单调性可以知道，在 $[0, \pi]$ 上，除了
+$\dfrac{\pi}{3}$ 外，其他任何角的余弦都不等 $\dfrac{1}{2}$。\jiange
+
+由此可以得到
+$$\cos\left( \arccos \dfrac{1}{2} \right) = \dfrac{1}{2} \text{。}$$
+
+一般地，根据反余弦函数的定义，可以得到
+$$ \cos(\arccos x) = x \text{，}$$
+其中 $x \in [-1, 1]$，$\arccos x \in [0, \pi]$。
+
+反余弦函数 $y = \arccos x$ 的图象如图 \ref{fig:1-5} 所示，它是与余弦函数 $y = \cos x$
+在 $[0, \pi]$ 上的一段图象关于直线 $y = x$ 对称的图形。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/1-5}
+    \caption{}\label{fig:1-5}
+\end{figure}
+
+从图象上可以看出：\textbf{反余弦函 $y = \arccos x$ 在区间 $[-1, 1]$ 上是减函数。}
+它既不是偶函数，也不是奇函数。
+
+下面我们来证明：\textbf{对于任意 $x \in [-1，1]$，有}
+$$ \arccos (-x) = \pi - \arccos x \text{。}$$
+
+\zhengming 由 $-1 \leqslant x \leqslant 1$，得 $1 \geqslant -x \geqslant -1$，
+即 $-x$ 属于反余弦函数的定义域 $[-1, 1]$。
+
+根据诱导公式与反余弦函数的定义，得
+$$\cos(\pi - \arccos x) = -\cos(\arccos x) - x \text{，}$$
+因此，$\pi - \arccos x$ 是余弦等于 $-x$ 的一个值。
+
+又因 $0 \leqslant \arccos x \leqslant \pi$，所以 $0 \geqslant -\arccos x \geqslant -\pi$，
+由此可得 $\pi \geqslant \pi - \arccos x \geqslant 0$，即 $\pi - \arccos x \in [0, \pi]$。
+
+因此，$\pi - \arccos x$ 是属于 $[0, \pi]$ 且它的余弦等于 $-x$ 的一个值。于是
+$$\arccos(-x) = \pi - \arccos x \text{。}$$
+
+\liti 求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.8}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\arccos \dfrac{\sqrt{3}}{2}$；} & \xiaoxiaoti{$\arccos \left( -\dfrac{\sqrt{2}}{2} \right)$；} \\
+        \xiaoxiaoti{$\cos \left[ \arccos\left( -\dfrac{\sqrt{2}}{3} \right)\right]$；} & \xiaoxiaoti{$\arccos\left( \cos\dfrac{11\pi}{6} \right)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\jie （1）因为在 $[0, \pi]$ 上，$\cos\dfrac{\pi}{6} = \dfrac{\sqrt{3}}{2}$，所以
+$$\arccos\dfrac{\sqrt{3}}{2} = \dfrac{\pi}{6} \text{。} \jiange $$
+
+（2）因为在 $[0, \pi]$ 上，$\cos\dfrac{3\pi}{4} = -\dfrac{\sqrt{2}}{2}$，所以
+$$\arccos \left( -\dfrac{\sqrt{2}}{2} \right) = \dfrac{3\pi}{4} \text{。} \jiange$$
+
+或：$\arccos\left( -\dfrac{\sqrt{2}}{2} \right) = \pi - \arccos \dfrac{\sqrt{2}}{2} = \pi - \dfrac{\pi}{4} = \dfrac{3\pi}{4}$。\jiange
+
+（3） $\because \quad -\dfrac{\sqrt{2}}{3} \in [-1, 1]$，\jiange
+
+$\therefore \quad \cos \left[ \arccos\left( -\dfrac{\sqrt{2}}{3} \right)\right] = -\dfrac{\sqrt{2}}{3}$。\jiange
+
+（4）$\arccos\left( \cos\dfrac{11\pi}{6} \right) = \arccos \dfrac{\sqrt{3}}{2} = \dfrac{\pi}{6}$。\jiange
+
+\liti 求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \jiange
+    \xiaoxiaoti{$\sin\left[ \arccos\left( -\dfrac{4}{5} \right)\right]$；\jiange}
+
+    \xiaoxiaoti{$\tan(\arccos x), \; x \in [-1, 1]$，且 $x \neq 0$；\jiange}
+
+    \xiaoxiaoti{$\cos\left[ \arccos\dfrac{4}{5} + \arccos\left( -\dfrac{5}{13} \right)\right]$。\jiange}
+
+\end{xiaoxiaotis}
+
+\jie （1）设 $\arccos\left( -\dfrac{4}{5} \right) = \alpha$，则 $\cos\alpha = -\dfrac{4}{5}$。
+由 $\alpha \in [0, \pi]$，得 $\sin\alpha \geqslant 0$，可知：
+$$\sin\alpha = \sqrt{1 - \cos^2\alpha} = \sqrt{1 - \left( -\dfrac{4}{5} \right)^2} = \dfrac{3}{5} \text{。}$$
+
+$\therefore \quad \sin\left[ \arccos\left( -\dfrac{4}{5} \right)\right] = \dfrac{3}{5}$。\jiange
+
+（2）由 $\arccos x \in [0, \pi]$，知 $\sin(\arccos x) \geqslant 0$。
+
+$\therefore \quad
+\begin{aligned}[t]
+    \tan(\arccos x) &= \dfrac{\sin(\arccos x)}{\cos(\arccos x)} \\
+        & = \dfrac{\sqrt{1 - [\cos(\arccos x)]^2}}{\cos(\arccos x)} \\
+        & = \dfrac{\sqrt{1 - x^2}}{x} \text{。}
+\end{aligned}$ \jiange
+
+（3）设 $\arccos \dfrac{4}{5} = \alpha$，则 $\cos\alpha = \dfrac{4}{5}$，$\alpha$ 是第一象限的角，\jiange
+
+$\therefore \quad \sin\alpha = \sqrt{1 - \cos^2\alpha} = \dfrac{3}{5}$。\jiange
+
+又设 $\arccos\left( -\dfrac{5}{13} \right) = \beta$，则 $\cos\beta = -\dfrac{5}{13}$，$\beta$ 是第二象限的角，\jiange
+
+$\therefore \quad \sin\beta = \sqrt{1 - \cos^2\beta} = \dfrac{12}{13}$。\jiange
+
+代入原式，得
+\begin{align*}
+    & \cos\left[ \arccos\dfrac{4}{5} + \arccos\left( -\dfrac{5}{13} \right)\right] \\
+    = & \cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta \\
+    = & \dfrac{4}{5} \cdot \left( -\dfrac{5}{13} \right) - \dfrac{3}{5} \cdot \dfrac{12}{13} = -\dfrac{56}{65} \text{。}
+\end{align*}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用反余弦的形式把下列各式中的 $x \; (x \in [0, \pi])$ 表示出来：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\cos x = \dfrac{2}{3}$；} & \xiaoxiaoti{$\cos x = -\dfrac{1}{5}$；} \\
+        \xiaoxiaoti{$\cos x = 0.8065$；} & \xiaoxiaoti{$\cos x = \alpha \quad (\alpha \in [-1, 1])$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.7em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{$\arccos 1.2$ 有意义吗，为什么？}
+    \end{minipage}
+
+    \jiange
+    \xiaoxiaoti{$\cos\left( \arccos\dfrac{\sqrt{5}}{3} \right) = \dfrac{\sqrt{5}}{3}$ 是否成立，为什么？}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{写出下列函数的定义域、值域：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$y = \arccos 3x$；} & \xiaoxiaoti{$y = -5\arccos x$；} \\
+        \xiaoxiaoti{$y = \dfrac{1}{2} \arccos\dfrac{x}{4}$；\jiange} & \xiaoxiaoti{$y = 3\arccos(2 - 3x)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列反余弦函数的值：}
+\begin{xiaoxiaotis}
+
+    \jiange
+    \renewcommand\arraystretch{1.8}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\arccos\dfrac{\sqrt{2}}{2}$；} & \xiaoxiaoti{$\arccos 0$；} \\
+        \xiaoxiaoti{$\arccos\left( -\dfrac{3}{4} \right)$；\jiange} & \xiaoxiaoti{$\arccos 0.0471$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\cos(\arccos 0.8795)$；} & \xiaoxiaoti{$\arccos(\cos 0.8795)$；} \\
+        \xiaoxiaoti{$\cos\left[ \arccos\left( -\dfrac{1}{4} \right)\right]$；} & \xiaoxiaoti{$\arccos\left[ \cos\left( -\dfrac{1}{4} \right)\right]$。\jiange}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.8}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\sin\left( \arccos\dfrac{2}{7} \right)$；} & \xiaoxiaoti{$\cos\left( 2\arccos\dfrac{4}{5} \right)$；} \\
+        \xiaoxiaoti{$\sin\left[ \dfrac{\pi}{3} + \arccos\left( -\dfrac{1}{4} \right)\right]$；\jiange} & \xiaoxiaoti{$\cot(\arccos x), \; x \in (-1, 1)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth]
+    \pgfmathsetmacro{\half}{0.5 * pi};
+
+    \draw [->] (-1.5, 0) -- (pi+0.5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1) -- (0, pi+0.8) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+
+    \draw (-1, 0.2) -- (-1, 0) node[below, font=\footnotesize] {$-1$};
+    \node[below, font=\footnotesize] at (1, 0) {$1$};
+    \node[above, font=\footnotesize] at (\half, 0) {$\frac{\pi}{2}$};
+    \draw (pi, 0) -- (pi, 0.2) node[above, font=\footnotesize] {$\pi$};
+
+    \node[right, font=\footnotesize] at (0, \half) {$\frac{\pi}{2}$};
+    \node[right, font=\footnotesize] at (0, pi) {$\pi$};
+
+    \draw (-0.5, -0.5) -- (pi, pi) node [anchor=west] {$y = x$};
+    \draw[dashed, domain=0:pi,smooth] plot (\x, {cos(\x r)}) node [below] {$y = \cos x$} node[below=10pt] {$x \in [0, \pi]$};
+    \draw[domain=-1:1,smooth,samples=30] plot (\x, {rad(acos(\x))}) node at (-1.4, 3.4) {$y = \arccos x$};
+
+    \draw[dashed] (-1, pi) -- (0, pi);
+    \draw[dashed] (pi, -1) -- (pi, 0);
+\end{tikzpicture}
