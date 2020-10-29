@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \pgfmathsetmacro{\half}{0.5 * pi};
+
+    \draw[dashed] (-2.5, pi) -- (3.6, pi);
+    \draw [->] (-2.5, 0) -- (3.8, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -3) -- (0, pi+0.8) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+
+    \node[below, font=\footnotesize] at (\half, 0) {$\frac{\pi}{2}$};
+    \node[below, font=\footnotesize] at (pi, 0) {$\pi$};
+
+    \node[left, font=\footnotesize] at (0, \half) {$\frac{\pi}{2}$};
+    \node[left, font=\footnotesize, fill=white, inner sep=1pt] at (0, pi) {$\pi$};
+
+    \draw (-1.5, -1.5) -- (pi+0.2, pi+0.2) node [above] {$y = x$};
+    \draw[dashed, domain=0.28:pi-0.4,smooth] plot (\x, {cot(\x r)}) node [below] {$y = \cot x \quad x \in [0, \pi]$};
+    \draw[domain=3.477:-2.365,smooth,samples=50] plot (\x, {rad(90 - atan(\x))}) node at (-2.0, 1.9) {$y = \mathrm{arccot}\,x$};
+\end{tikzpicture}

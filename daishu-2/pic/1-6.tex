@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \pgfmathsetmacro{\half}{0.5 * pi};
+    \draw[dashed] (-2.6, \half) -- (2.6, \half);
+    \draw[dashed] (-2.6, -\half) -- (2.6, -\half);
+    \draw [->] (-\half-1.0, 0) -- (\half+1.0, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -\half-1.0) -- (0, \half+1.0) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+    \foreach \x / \name in {
+        -\half/$-\dfrac{\pi}{2}$,
+        \half/$\dfrac{\pi}{2}$} {
+        \draw (\x, 0.2) -- (\x, 0) node [anchor=north, font=\footnotesize] {\name};
+    }
+
+    \foreach \y / \name in {
+        -\half/$-\dfrac{\pi}{2}$,
+        \half/$\dfrac{\pi}{2}$} {
+        \draw (0.2, \y) -- (0, \y) node [anchor=east, font=\footnotesize, fill=white, inner sep=1pt]{\name};
+    }
+
+    \draw (-2.2, -2.2) -- (2.2, 2.2) node [anchor=north west] {$y = x$};
+    \draw[dashed, domain=-1.2:1.2,smooth] plot (\x, {tan(\x r)}) +(1.5, -0.2) node [above] {$y = \tan x \quad x \in \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$};
+    \draw[domain=-2.572:2.572,smooth] plot (\x, {rad(atan(\x))}) node [anchor=north west] {$y = \arctan x$};
+    % tan(1.2) = 2.572
+\end{tikzpicture}
