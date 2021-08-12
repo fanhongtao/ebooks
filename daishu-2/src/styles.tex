@@ -37,6 +37,10 @@
 \usepackage{xlop}
 \usepackage{xparse}
 
+% 确保 有行内公式 的行，与其上、下行之间，有足够的行距
+\setlength{\lineskip}{\baselineskip-\ccwd}
+\setlength{\lineskiplimit}{2.5pt}
+
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
     {\node[shape = circle, draw, inner sep = 1pt]
@@ -154,8 +158,6 @@
 \newcommand{\twoInLineXxt}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3}\end{tabular}}
 \newcommand{\threeInLineXxt}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4}\end{tabular}}
 \newcommand{\fourInLineXxt} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4} & \xiaoxiaoti{#5}\end{tabular}}
-
-\newcommand{\jiange}{\vspace{0.5em}} % 手工调整垂直间隔（测试发现 0.5em 比较合适。不支持参数，特殊情况直接使用 \vspace{} 命令。）
 
 % 修改数学公式与上下文的距离
 \makeatletter
