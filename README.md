@@ -25,14 +25,19 @@
 | 3 | 代数 第三册 | NA |
 | 4 | 平面解析几何 全一册 | NA |
 | 5 | 立体几何 全一册 | NA |
-| 6 | 物理 第一册 | NA |
-| 7 | 物理 第二册 | NA |
-| 8 | 物理 第三册 | NA |
-| 9 | 化学 第一册 | NA |
-| 10 | 化学 第二册 | NA |
-| 11 | 化学 第三册 | NA |
+| 6 | 化学 第一册 | NA |
+| 7 | 化学 第二册 | NA |
+| 8 | 化学 第三册 | NA |
 
 # 其它
 
 * 本项目依赖于 [TexLive](http://tug.org/texlive/) 2020，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
 * 需要先将各书本目录的 `pic-pdf` 子目录下的 `tex` 文件编译成 `pdf` 文件，才能编译书本。
+
+---
+
+[james](https://github.com/jamesfang8499/) 完成了
+
+* [物理 第一册](https://github.com/jamesfang8499/physics1)
+* [物理 第二册](https://github.com/jamesfang8499/physics2)
+* [物理 第三册](https://github.com/jamesfang8499/physics3)
