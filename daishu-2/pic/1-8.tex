@@ -1,0 +1,67 @@
+% 下面以多行注释的方式记录了计算过程。如果想显示，删除  \iffalse 和 \fi 两行。
+\iffalse
+$\because \begin{aligned}[t]
+\sin x &= 2\sin(60^\circ - x) \\
+       &= 2(\sin 60^\circ \cos x - \cos 60^\circ \sin x) \\
+       &= 2 \left( \dfrac{\sqrt{3}}{2} \cos x - \dfrac{1}{2} \sin x \right) \\
+       &= \sqrt{3} \cos x - \sin x
+\end{aligned}$
+
+$ \therefore \begin{aligned}[t]
+    2 \sin x &= \sqrt{3} \cos x \\
+    \dfrac{\sin x}{\cos x} &= \dfrac{\sqrt{3}}{2} \\
+    \tan x &= \dfrac{\sqrt{3}}{2} \\
+    x &= 0.7137243789447656 \approx 40.89 ^\circ
+\end{aligned}$
+
+在得到 x 的值后，可以计算出线段 $AB$ 和 $BD$ 的长度：
+
+$\because sin x = AD \div AB$
+
+$\therefore AB = AD \div \sin x = 8 \div \sin 0.7137243789447656 = 12.220201853215574$
+
+$BD = AB \times \cos x = 12.220201853215574 \times = 9.237604307034013$
+
+
+可以使用下面的 Python 代码来计算 x ，$AB$, $BD$ 的值：
+
+\begin{verbatim}
+    import math
+    x = math.atan(math.sqrt(3)/2)
+    ab = 8 / math.sin(x)
+    bd = ab * math.cos(x)
+
+    print("x =", x, "=", math.degrees(x), "degree")
+    print("AB =", ab)
+    print("BD =", bd)
+\end{verbatim}
+
+\fi
+
+% 以B为原点，A点坐标为 (9.237604307034013, 8)，按 5:1缩小，为 (1.848, 1.6)
+\begin{tikzpicture}[>=Stealth, scale=0.7]
+    \coordinate [label=290:$A$] (A) at (1.848, 1.6);
+    \coordinate [label=180:$B$] (B) at (0, 0);
+
+    \draw [name path=bcd] (0, 0) -- (8, 0) [rotate=60] (0, 0) -- (6, 0);
+    \draw (A) -- +(6, 0)  [rotate around={60:(A)}] (A) -- +(4, 0);
+    \draw [solid] (0.5, 0) arc (0:40.89:0.5) node [anchor=west] {$x$};
+    \draw [solid] (A)+(0.5, 0) arc (0:60:0.5) node [anchor=west] {$60^\circ$};
+    \draw [dashed] (0, 0) -- (A);
+    \draw [dashed] (A) -- (0,0 -| A) node [below] {$D$};
+    \path [name path=ac] [rotate around={150:(A)}] (A) -- +(4, 0);
+    \draw [name intersections={of=bcd and ac, by=C}]
+        [dashed] (A) -- (C) node [left] {$C$};
+    \draw [dashed] (A) -- (0,0 -| A) node [below] {$D$};
+
+    \draw [<->] (7, 0) -- (7, 1.6);
+    \node [fill=white] at (7, 0.8) {$8$};
+    \draw (6.5, 0) .. controls (7, 0.6) and (6, 1.2) .. (6.5, 1.6);
+    \node at (6, 0.8) {$Q$};
+
+    % P点 （使用拼凑的数据）
+    \draw [->] [rotate=60] (5.5, 0.5) -- (5.5, 0);
+    \draw [->] [rotate=60] (A)+(3.3, -0.5) -- +(3.3, 0) node [left, rotate=-30] {$4$};
+    \node [rotate=-30] at (2.7, 4.0) {$P$};
+
+\end{tikzpicture}
