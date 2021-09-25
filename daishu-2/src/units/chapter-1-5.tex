@@ -1,0 +1,197 @@
+\subsection{最简单的三角方程}\label{subsec:1-5}
+
+在三角方程中，$\sin x = \alpha$，$\cos x = \alpha$，$\tan x = \alpha$，$\cot x = \alpha$ 是最简单的。
+其他的三角方程的求解，往往可以归结为求这种最简单的三角方程的解集。
+下面我们先研究这四个最简单的三角方程的解集。
+
+\subsubsection{$\sin x = \alpha$ 的解集}
+
+因为 $|\sin x| \leqslant 1$，所以当 $|\alpha| > 1$ 时，方程 $\sin x = \alpha$ 的解集为 $\kongji$。
+
+当 $|\alpha| = 1$ 时，方程 $\sin x = \alpha$ 成为 $\sin x = 1$ 或 $\sin x = -1$ 。
+由于 $y = \sin x$ 的周期为 $2\pi$ ，而在长度为一个周期的区间 $[-\pi, \pi)$ 上，
+方程 $\sin x = 1$ 有唯一解 $x = \dfrac{\pi}{2}$，
+方程 $\sin x = -1$ 有唯一解 $x = -\dfrac{\pi}{2}$。
+因此，在 $(-\infty, +\infty)$ 上，方程 $\sin x = 1$ 的解集是
+$$\left\{ x \,\middle|\, x = 2k\pi + \dfrac{\pi}{2}, \; k \in Z \right\} \text{，}$$
+方程 $\sin x = -1$ 的解集是
+$$\left\{ x \,\middle|\, x = 2k\pi - \dfrac{\pi}{2}, \; k \in Z \right\} \text{。}$$
+这就是说，当 $|\alpha| = 1$ 时，方程 $\sin x = \alpha$ 的解集是
+$$\{ x \mid x = 2k\pi + \arcsin\alpha, \; k \in Z \} \text{。}$$
+
+当 $|\alpha| < 1$ 时，由\hyperref[subsec:1-1]{反正弦函数}的定义可知，方程 $\sin x = \alpha$
+在单调区间 $\left[ -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ 上有唯一解 $x = \arcsin\alpha$，
+而在单调区间 $\left[ \dfrac{\pi}{2}, \dfrac{3\pi}{2} \right)$ 上又有唯一解 $x = \pi - \arcsin\alpha$。
+因此，在长度为一个周期的区间 $\left[ -\dfrac{\pi}{2}, \dfrac{3\pi}{2} \right)$ 上，
+方程 $\sin x = \alpha$ 有两个解：$x = \arcsin\alpha$，$x = \pi - \arcsin\alpha$。
+于是，当 $|\alpha| < 1$ 时，在 $(-\infty, +\infty)$ 上，方程 $\sin x = \alpha$ 的解集是
+$$\{x \mid x = 2k\pi + \arcsin\alpha, \; k \in Z\}$$
+$$\cup \; \{x \mid x = (2k+1)\pi - \arcsin\alpha, \; k \in Z\} \text{。}$$
+
+上面第一个集合中的元素 $x$ 等于 $\pi$ 的偶数倍与 $\arcsin\alpha$ 的和，
+第二个集合中的元素 $x$ 等于 $\pi$ 的奇数倍与 $-\arcsin\alpha$ 的和。
+因为当 $k$ 为偶数时 $(-1)^k = 1$，当 $k$ 为奇数时，$(-1)^k = -1$，所以上述并集等于
+$$\{ x \mid x = k\pi + (-1)^k \arcsin\alpha, \; k \in Z \} \text{。}$$
+
+因此，方程 $\sin x = \alpha$ 在 $(-\infty, +\infty)$ 上的解集如下表所示：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}{|w{c}{10em}|w{c}{20em}|}
+        \hline
+        $\alpha$ 的取值范围 & 方程 $\sin x = \alpha$ 的解集 \\ \hline
+        $|\alpha| > 1$ & $\kongji$ \\ \hline
+        $|\alpha| = 1$ & $\{ x \mid x = 2k\pi + \arcsin\alpha, \; k \in Z \}$ \\ \hline
+        $|\alpha| < 1$ & $\{ x \mid x = k\pi + (-1)^k \arcsin\alpha, \; k \in Z \}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{$\cos x = \alpha$ 的解集}
+
+当 $|\alpha| > 1$ 时，方程 $\cos x = \alpha$ 的解集为 $\kongji$。
+
+当 $|\alpha| = 1$ 时，在长度为一个周期的区间 $[0, 2\pi)$ 上，
+方程 $\cos x = 1$ 有唯一解 $x = 0$；
+方程 $\cos x = -1$ 有唯一解 $x = \pi$。
+因此，在 $(-\infty, +\infty)$ 上，
+方程 $\cos x = 1$ 的解集是 $\{ x \mid x = 2k\pi, \; k \in Z \}$，
+方程 $\cos x = -1$ 的解集是 $\{ x \mid x = 2k\pi + \pi, \; k \in Z \}$。
+就是说，在 $|\alpha| = 1$ 时，方程 $\cos x = \alpha$ 的解集是
+$$ \{ x \mid x = 2k\pi + \arccos \alpha, \; k \in Z \} \text{。} $$
+
+当 $|\alpha| < 1$ 时，由\hyperref[subsec:1-2]{反余弦函数}的定义可知，方程 $\cos x = \alpha$
+在单调区间 $[0, \pi)$ 上有唯一解 $x = \arccos\alpha$，
+在单调区间 $[-\pi, 0)$ 上又有唯一解 $x = -\arccos\alpha$。
+因此，在长度为一个周期的区间 $[-\pi, \pi)$ 上，方程 $\cos x = \alpha$ 有两个解：$x = \pm \arccos\alpha$。
+于是，在 $(-\infty, +\infty)$ 上，方程 $\cos x = \alpha \; (|\alpha| < 1)$ 的解集是
+$$\{x \mid x = 2k\pi \pm \arccos\alpha, \; k \in Z\} \text{。}$$
+
+方程 $\cos x = \alpha$ 在 $(-\infty, +\infty)$ 上的解集如下表所示：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}{|w{c}{10em}|w{c}{20em}|}
+        \hline
+        $\alpha$ 的取值范围 & 方程 $\cos x = \alpha$ 的解集 \\ \hline
+        $|\alpha| > 1$ & $\kongji$ \\ \hline
+        $|\alpha| = 1$ & $\{ x \mid x = 2k\pi + \arccos\alpha, \; k \in Z \}$ \\ \hline
+        $|\alpha| < 1$ & $\{ x \mid x = 2k\pi \pm \arccos\alpha, \; k \in Z \}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{$\tan x = \alpha$ 的解集}
+
+由\hyperref[subsec:1-3]{反正切函数}的定义可知，在单调区间 $\left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ 上，
+不论 $\alpha$ 为什么实数，方程 $\tan x = \alpha$ 都有唯一解 $x = \arctan \alpha$。
+因为 $y = \tan x$ 的周期是 $\pi$，所以方程 $\tan x = \alpha$ 的解集如下表所示：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}{|w{c}{20em}|}
+        \hline
+        方程 $\tan x = \alpha$ 的解集 \\ \hline
+        $\{ x \mid x = k\pi + \arctan\alpha, \; k \in Z \}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{$\cot x = \alpha$ 的解集}
+
+由\hyperref[subsec:1-3]{反余切函数}的定义可知，在单调区间 $(0, \pi)$ 上，
+不论 $\alpha$ 为什么实数，方程 $\cot x = \alpha$ 有唯一解 $x = \arccot \alpha$。
+因为 $y = \cot x$ 的周期是 $\pi$，所以方程 $\cot x = \alpha$ 的解集如下表所示：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}{|w{c}{20em}|}
+        \hline
+        方程 $\cot x = \alpha$ 的解集 \\ \hline
+        $\{ x \mid x = k\pi + \arccot\alpha, \; k \in Z \}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\liti 解方程 $2\sin x + \sqrt{2} = 0$。
+
+\jie 原方程可化为
+$$ \sin x = -\dfrac{\sqrt{2}}{2} \text{。}$$
+$\therefore$ 解集是 $\left\{\, x \,\middle|\, x = k\pi + (-1)^k \arcsin\left(-\dfrac{\sqrt{2}}{2}\right), \; k \in Z \,\right\}$，
+即
+$$ \left\{ x \,\middle|\, x = k\pi + (-1)^k \cdot \left( -\dfrac{\pi}{4} \right), \; k \in Z \right\} \text{。}$$
+
+
+\liti 解方程 $2\cos2x = 1$。
+
+\jie 原方程可化为
+$$\cos2x = \dfrac{1}{2},$$
+$$2x = 2k\pi \pm \arccos \dfrac{1}{2} \quad (k \in Z),$$
+即
+$$2x = 2k\pi \pm \dfrac{\pi}{3} \quad (k \in Z) \text{。}$$
+$\therefore$ 解集是 $\left\{\, x \,\middle|\, x = k\pi \pm \dfrac{\pi}{6}, \; k \in Z \,\right\}$。
+
+
+\liti 解方程 $\tan(x + 15^\circ) + 1 = 0$。
+
+\jie 原方程可化为
+$$\tan(x + 15^\circ) = -1,$$
+$$x + 15^\circ = k \cdot 180^\circ + (-45^\circ) \quad (k \in Z) \text{。}$$
+$\therefore$ 解集是 $\{ x \mid x = k \cdot 180^\circ - 60^\circ, \; k \in Z \}$。
+
+
+\liti 求适合方程 $\sin(3x - 105^\circ) = \dfrac{1}{2}$ 且小于 $360^\circ$ 的正角。
+
+\jie 由方程 $\sin(3x - 105^\circ) = \dfrac{1}{2}$，可得
+$$3x - 105^\circ = k \cdot 180^\circ + (-1)^k \cdot 30^\circ \quad (k \in Z) \text{。}$$
+$\therefore$ 解集是 $\{ x \mid x = k \cdot 60^\circ + (-1)^k \cdot 10^\circ + 35^\circ, \; k \in Z \}$。
+
+分别设 $k = 0, 1, 2, 3, 4, 5$，得适合方程且小于 $360^\circ$ 的正角是
+$45^\circ$，$85^\circ$，$165^\circ$，$205^\circ$，$285^\circ$，$325^\circ$。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{写出下列方程的解集：}
+
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.7}
+    \begin{tabular}[t]{*{2}{@{}p{18em}}}
+        \xiaoxiaoti{$\sin x = \dfrac{\sqrt{3}}{2}$；} & \xiaoxiaoti{$\sin x = -\dfrac{1}{2}$；} \\
+        \xiaoxiaoti{$\cos x = \dfrac{\sqrt{2}}{2}$；} & \xiaoxiaoti{$\cos x = -0.8475$；} \\
+        \xiaoxiaoti{$\tan x = -\sqrt{3}$；} & \xiaoxiaoti{$\cot x = \dfrac{5}{3}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{解下列方程：}
+
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$2 \sin \dfrac{2x}{3} = 1$；}
+
+    \xiaoxiaoti{$2 \cos(3x - 15^\circ) + 1 = 0$；}
+
+    \xiaoxiaoti{$3 \tan \dfrac{x + 20^\circ}{3} = \sqrt{3}$；}
+
+    \xiaoxiaoti{$\cot \left( \dfrac{x}{4} + 30^\circ \right) + 1 = 0$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求 $0^\circ$ 到 $360^\circ$ 的角 $x$，已知：}
+
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{18em}}}
+        \xiaoxiaoti{$\sin 2x = -\dfrac{1}{2}$；} & \xiaoxiaoti{$\cos (3x + 20^\circ) = 0.95$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
