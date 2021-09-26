@@ -1,0 +1,189 @@
+\subsection{简单的三角方程}\label{subsec:1-6}
+
+有些比较简单的三角方程，可以通过三角恒等变形或利用代数中解方程的方法，把它化成一个或几个
+最简单的三角方程，从而求出它们的解。现举例如下：
+
+\liti 解方程 $2\sin^2 x + 3\cos x = 0$。
+
+\jie 原方程可化为
+$$ 2(1 - \cos^2 x) + 3\cos x = 0 \text{，} $$
+即
+$$ 2\cos^2 x - 3\cos x - 2 = 0 \text{。}$$
+
+解这个关于 $\cos x$ 的二次方程，得
+$$ \cos x = 2, \quad \cos x = -\dfrac{1}{2} \text{。}$$
+
+$\cos x = 2$ 的解集为 $\kongji$；再由 $\cos x = -\dfrac{1}{2}$，得
+$$ x = 2k\pi \pm \dfrac{2\pi}{3} \quad (k \in Z) \text{。}$$
+
+所以原方程的解集是 $\left\{\, x \,\middle|\, x = 2k\pi \pm \dfrac{2\pi}{3}, \; k \in Z \,\right\}$。
+
+
+\liti 解方程 $\sin^2 x - \dfrac{2\sqrt{3}}{3} \sin x \cos x - \cos^2 x = 0$。
+
+\jie 显然，使 $\cos x = 0$ 的 $x$ 值不可能满足原方程（因为 $\cos x = 0$ 时，$\sin x = \pm 1$），
+所以在方程的两边同除以 $\cos^2 x $，得
+$$ \tan^2 x - \dfrac{2\sqrt{3}}{3}\tan x - 1 = 0 \text{。}$$
+
+解这个关于 $\tan x$ 的二次方程，得
+$$ \tan x = \sqrt{3}, \quad \tan x = -\dfrac{\sqrt{3}}{3} \text{。}$$
+
+由 $\tan x = \sqrt{3}$ 得
+$$ x = k\pi + \dfrac{\pi}{3} \quad (k \in Z) \text{；}$$
+
+由 $\tan x = -\dfrac{\sqrt{3}}{3}$ 得
+$$ x = k\pi - \dfrac{\pi}{6} \quad (k \in Z) \text{。}$$
+
+所以原方程的解集是
+
+\begin{align*}
+    & \left\{\, x \,\middle|\, x = k\pi + \dfrac{\pi}{3}, \; k \in Z \,\right\} \;\bigcup\; \left\{\, x \,\middle|\, x = k\pi - \dfrac{\pi}{6}, \; k \in Z \,\right\} \\
+   = & \left\{\, x \,\middle|\, x = k\pi + \dfrac{\pi}{3}, \;\text{或}\; x = k\pi - \dfrac{\pi}{6}, \; k \in Z \,\right\} \text{。}
+\end{align*}
+
+在例2中，方程的每一项关于 $\sin x$ 及 $\cos x$ 的次数都是相同的（这里都是二次）。
+象这样的方程叫做关于 $\sin x$ 及 $\cos x$ 的齐次方程。它的解法一般是先化为只含有未知数的正切函数的三角方程，然后求解。
+
+\liti 解方程 $\sin x = 2\sin(60^\circ — x)$。
+
+\jie 将原方程变形，
+\begin{align*}
+    \sin x &= 2(\sin 60^\circ - \cos 60^\circ \sin x),\\
+    \sin x &= 2\left( \dfrac{\sqrt{3}}{2} \cos x - \dfrac{1}{2} \sin x \right),
+\end{align*}
+得
+$$ 2\sin x = \sqrt{3} \cos x \text{。} $$
+
+这是关于 $\sin x$ ，$\cos x$ 的齐次方程。在方程两边都除以 $2\cos x$，得
+$$ \tan x = \dfrac{\sqrt{3}}{2} \text{，}$$
+
+查平方根表，得 $\dfrac{\sqrt{3}}{2} = 0.8660$。再查正切表，得
+$$ \tan 40^\circ 54' = 0.8660 \text{，}$$
+$$ \arctan 0.8660 = 40^\circ 54' \text{。}$$
+
+所以原方程的解集是
+$$ \{ x \mid x = k \cdot 180^\circ + 40^\circ 54', \, k \in Z \} \text{。}$$
+
+例3 的方程就是 \hyperref[subsec:1-4]{第 1.4 节} 中焊接钢板问题所得的方程。
+它的解虽然有无穷多个，但是在这个实际问题中，要求 $0^\circ < x < 60^\circ$，
+因此，只有当 $k = 0$ 时， $x = 40^\circ 54'$ 有意义。
+
+\liti 解方程 $\sin x = \cos \dfrac{x}{2}$。
+
+\jie 利用倍角公式把原方程化为
+$$ 2\sin\dfrac{x}{2} \cos\dfrac{x}{2} = \cos\dfrac{x}{2}, $$
+$$ \cos\dfrac{x}{2} \left( 2\sin\dfrac{x}{2} - 1 \right) = 0, $$
+
+得
+\begin{minipage}[t]{0.9\textwidth}
+    \vspace{-1.7em}$$\cos\dfrac{x}{2} = 0  \text{，或} \quad \sin\dfrac{x}{2} = \dfrac{1}{2} \text{。}$$
+\end{minipage}
+
+由 $\cos\dfrac{x}{2} = 0$，得 $\dfrac{x}{2} = 2k\pi \pm \dfrac{\pi}{2}$，即
+$$ x = 4k\pi \pm \pi \quad (k \in Z) \text{；}$$
+
+由 $\sin\dfrac{x}{2} = \dfrac{1}{2}$，得 $\dfrac{x}{2} = k\pi + (-1)^k \dfrac{\pi}{6}$，即
+$$ x = 2k\pi + (-1)^k \dfrac{\pi}{3} \quad (k \in Z) \text{。} $$
+
+所以原方程的解集是
+\begin{align*}
+    & \{ x \mid x = (4k \pm 1)\pi ,\, k \in Z \} \;\bigcup\; \left\{\, x \,\middle|\, x = 2k\pi + (-1)^k \dfrac{\pi}{3} ,\; k \in Z \,\right\} \\
+   = & \left\{\, x \,\middle|\, x = (4k \pm 1)\pi, \;\text{或}\; x = 2k\pi + (-1)^k \dfrac{\pi}{3} ,\; k \in Z \,\right\} \text{。}
+\end{align*}
+
+\liti 解方程 $\sin 5x = \sin 4x$。
+
+\textbf{解法一: } 移项并运用三角函数的和差化积公式，得
+\begin{gather*}
+    \sin 5x - \sin 4x = 0, \\
+    2 \cos\dfrac{9x}{2} \sin\dfrac{x}{2} = 0, \\
+    \cos\dfrac{9x}{2} = 0 \;\text{或}\; \sin\dfrac{x}{2} = 0 \text{。}
+\end{gather*}
+
+由 $\cos\dfrac{9x}{2} = 0$，得 $\dfrac{9x}{2} = 2k\pi \pm \dfrac{\pi}{2} \quad (k \in Z)$，即
+$$ x = \dfrac{4}{9}k\pi \pm \dfrac{\pi}{9} \quad (k \in Z) \text{。}$$
+
+由 $\sin\dfrac{x}{2} = 0$，得 $\dfrac{x}{2} = k\pi \quad (k \in Z)$，即
+$$ x = 2k\pi \quad (k \in Z) \text{。} $$
+
+所以原方程的解集是
+\begin{align*}
+    & \left\{\, x \,\middle|\, x = \dfrac{4}{9}k\pi \pm \dfrac{\pi}{9} ,\; k \in Z \,\right\} \;\bigcup\; \{ x \mid x = 2k\pi ,\, k \in Z \} \\
+    = & \left\{\, x \,\middle|\, x = \dfrac{4}{9}k\pi \pm \dfrac{\pi}{9}, \;\text{或}\; x = 2k\pi ,\; k \in Z \,\right\} \text{。}
+\end{align*}
+
+
+\textbf{解法二: } 因为与 $\alpha$ 有相同的正弦值的弧度数 $x$ 的集合是
+$\{ x \mid x = k\pi + (-1)^k \alpha ,\, k \in Z \}$，所以原方程可以化成
+$$ 5x = k\pi + (-1)^k 4x \quad (k \in Z) \text{。}$$
+
+当 $k$ 是偶数 $2n \, (n \in Z)$ 时，上式成为 $5x = 2n\pi + 4x$，由此可得
+$$ x = 2n\pi \quad (n \in Z) \text{。}$$
+
+当 $k$ 是奇数 $2n + 1 \, (n \in Z)$ 时，上式成为 $5x = (2n+1)\pi - 4x$，由此可得
+$$ 9x = (2n + 1)\pi \quad (n \in Z) \text{，}$$
+即
+$$ x = \dfrac{1}{9}(2n + 1)\pi \quad (n \in Z) \text{。} $$
+
+所以原方程的解集是
+\begin{align*}
+    & \{ x \mid x = 2n\pi ,\, n \in Z \} \;\bigcup\; \left\{\, x \,\middle|\, x = \dfrac{1}{9}(2n + 1)\pi ,\; n \in Z \,\right\} \\
+    = & \left\{\, x \,\middle|\, x = 2n\pi, \;\text{或}\; x = \dfrac{1}{9}(2n + 1)\pi ,\; n \in Z \,\right\} \text{。}
+\end{align*}
+
+例5 的两种解法，虽然得到的解集的表示形式不同，但因为
+当 $n$ 为偶数 $2k$ 时，$\dfrac{1}{9}(2n + 1)\pi$ 成为 $\dfrac{1}{9}(4k + 1)\pi$；
+当 $n$ 为奇数 $2k - 1$ 时，$\dfrac{1}{9}(2n + 1)\pi$ 成为 $\dfrac{1}{9}(4k - 1)\pi$，
+所以实质上 \\ $\left\{\, x \,\middle|\, x = \dfrac{1}{9}(2n + 1)\pi ,\; n \in Z \,\right\}$
+与 $\left\{\, x \,\middle|\, x = \dfrac{1}{9}(4k \pm 1)\pi ,\;  k \in Z \,\right\}$
+是相等的集合。就是说，两种解法所得的解集是相同的。
+
+
+\liti 解方程 $5\sin x - 12\cos x = 6.5$。
+
+\jie 在方程的两边都除以 $\sqrt{5^2 + 12^2}$，得
+$$ \dfrac{5}{13} \sin x - \dfrac{12}{13} \cos x = \dfrac{1}{2} \text{。}$$
+
+令 $\cos\theta = \dfrac{5}{13}$，$\sin\theta = \dfrac{12}{13}$，即令 $tan\theta = \dfrac{12}{5} = 2.4$，
+则满足这些式子的 $\theta$ 的一个值为 $67^\circ 23'$。由此得
+\begin{gather*}
+    \sin x \cos 67^\circ 23' - \cos x \sin 67^\circ 23' = 0.5 \, , \\
+    sin(x - 67^\circ 23') = 0.5 \, , \\
+    x - 67^\circ 23' = k \times 180^\circ + (-1)^k \times 30^\circ \quad (k \in Z) \text{。}
+\end{gather*}
+
+所以原方程的解集是
+$$ \{ x \mid x = k \times 180^\circ + 67^\circ 23' + (-1)^k \times 30^\circ ,\, k \in Z \} \text{。}$$
+
+在解例6 的方程时，我们在方程的两边都除以 $\sqrt{5^2 + 12^2}$ ，其中被开方式 $5^2 + 12^2$ 是方程中
+$\sin x$ 与 $\cos x$ 的\textbf{系数}的平方和。一般说来，对于形如
+$a \sin x + b \cos x = c$ 的三角方程，可先在方程的两边都除以 $\sqrt{a^2 + b^2}$，
+然后令 $\cos\theta = \dfrac{a}{\sqrt{a^2 + b^2}}$，$\sin\theta = \dfrac{b}{\sqrt{a^2 + b^2}}$，
+则方程变形为 $\sin(x + \theta) = \dfrac{c}{\sqrt{a^2 + b^2}}$，当
+$$ \left| \dfrac{c}{\sqrt{a^2 + b^2}} \right| \leqslant 1$$
+时，方程有解。
+
+\lianxi
+
+解下列方程：
+
+\begin{xiaotis}
+
+\xiaoti{$sin^2 x - 2\sin x - 3 = 0$。}
+
+\xiaoti{$4\cos^2 x - 4\sin x = 1$。}
+
+\xiaoti{$2\sin x - 5\cos x = 0$。}
+
+\xiaoti{$3\sin^2 x + 2\sin x \cos x - 5\cos^2 x = 0$。}
+
+\xiaoti{$4\cos\dfrac{x}{2} - 5\cos x = 5$。}
+
+\xiaoti{$\sin\dfrac{x}{2} - \sqrt{3}\cos\dfrac{x}{4} = 0$。}
+
+\xiaoti{$\cos 3x + \cos 2x = 0$。}
+
+\xiaoti{$6\sin x + 8\cos x = 5$。}
+
+\end{xiaotis}
+
