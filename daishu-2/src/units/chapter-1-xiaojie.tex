@@ -1,0 +1,48 @@
+\xiaojie
+
+一、本章主要内容是反三角函数的概念、图象、性质以及简单三角方程的解法。
+
+二、本章学习的四种反三角函数的名称，函数式，定义域，值域，列表如下：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.6}
+    \begin{tabular}{|w{c}{6em}|w{c}{8em}|*{2}{w{c}{5em}|}}
+        \hline
+        名称 & 函数式 & 定义域 & 值域 \\ \hline
+        反正弦函数 & $y = \arcsin x$ & $[-1, 1]$ & $\left[ -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right]$ \\ \hline
+        反余弦函数 & $y = \arccos x$ & $[-1, 1]$ & $[ 0, \pi ]$ \\ \hline
+        反正切函数 & $y = \arctan x$ & $(-\infty, +\infty)$ & $\left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ \\ \hline
+        反余切函数 & $y = \arccot x$ & $(-\infty, +\infty)$ & $( 0, \pi )$ \\ \hline
+    \end{tabular}
+\end{table}
+反正弦函数与反正切函数在它们的整个定义域内都是增函数，并且都是奇函数，所以具有以下关系：
+$$\arcsin(-x) = -\arcsin(x) \text{，}$$
+$$\arctan(-x) = -\arctan(x) \text{。}$$
+
+反余弦函数与反余切函数在它们的整个定义域内都是减函数，并且具有以下关系：
+$$\arccos(-x) = \pi - \arccos(x) \text{，}$$
+$$\arccot(-x) = \pi - \arccot(x) \text{。}$$
+由此可见，它们既不是奇函数，也不是偶函数。
+
+三、最简单的三角方程的解集列表如下：
+
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}{|c|w{c}{6em}|c|}
+        \hline
+        \multicolumn{2}{|c|}{方程} & 方程的解集 \\ \hline
+        \multirow{2}{*}{$\sin x = \alpha$} & $|\alpha > 1|$ & $\kongji$ \\ \cline{2-3}
+        & $|\alpha = 1|$ & $\{ x \mid x = 2k\pi + \arcsin\alpha ,\, k \in Z \}$ \\ \cline{2-3}
+        & $|\alpha < 1|$ & $\{ x \mid x = k\pi + (-1)^k \arcsin\alpha ,\, k \in Z \}$ \\ \hline
+        \multirow{2}{*}{$\cos x = \alpha$} & $|\alpha > 1|$ & $\kongji$ \\ \cline{2-3}
+        & $|\alpha = 1|$ & $\{ x \mid x = 2k\pi \pm \arccos\alpha ,\, k \in Z \}$ \\ \cline{2-3}
+        & $|\alpha < 1|$ & $\{ x \mid x = 2k\pi \pm \arccos\alpha ,\, k \in Z \}$ \\ \hline
+        \multicolumn{2}{|c|}{$\tan x = \alpha$} & $\{ x \mid x = k\pi + \arctan\alpha ,\, k \in Z \}$ \\ \hline
+        \multicolumn{2}{|c|}{$\cot x = \alpha$} & $\{ x \mid x = k\pi + \arccot\alpha ,\, k \in Z \}$ \\ \hline
+    \end{tabular}
+\end{table}
+
+四、某些简单的三角方程，可以利用三角恒等变形或代数中解方程的方法， 把它化成一个或几个最简单的三角方程，然后求解。
+
