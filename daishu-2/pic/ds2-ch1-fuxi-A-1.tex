@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \coordinate [label=180:$A$] (A) at (0, 0);
+    \coordinate [label=270:$B$] (B) at (1.2, -1.8);
+    \coordinate [label=0:$C$] (C) at (5, 0);
+    \coordinate [label=90:$S$] (S) at (2, 3);
+    \path
+        let
+            \p{ab} = ($ (A) !.5! (B) $),
+            \p{cs} = ($ (C) !.5! (S) $)
+        in
+            coordinate [label=200:$E$] (E) at (\p{ab})
+            coordinate [label=50:$F$] (F) at (\p{cs});
+
+    \draw (S) -- (A) -- (B) -- (S) -- (C) -- (B);
+    \draw [dashed] (A) -- (C);
+    \draw [dashed] (E) -- (F);
+\end{tikzpicture}
