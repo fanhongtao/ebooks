@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth]
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (0, 3);
+    \coordinate (C) at (3, 0);
+    \coordinate (D) at (4, 0);
+
+    \draw (A) -- +(0, -0.35) (C) -- +(0, -0.35);
+    \draw [<->] (0, -0.25) -- (3, -0.25);
+    \node [fill=white] at (1.5, -0.25) {$a$};
+
+    \draw (A) -- +(-0.35, 0) (B) -- +(-0.35, 0);
+    \draw [<->] (-0.25, 0) -- (-0.25, 3);
+    \node [fill=white, rotate=90] at (-0.25, 1.5) {$a$};
+
+
+    \draw [->](C) -- +(30:1) coordinate (M) node [above] {$M$};
+    \node [rotate=30] at (3.2, 0.4) {$R$};
+    \draw (D) arc (0:30:1) -- (M) -- (B) -- (A) -- (D);
+    \draw (0.3, 0) arc (0:90:0.3) +(0.4, 0.2) node {$90^\circ$};
+    \draw (0, 2.7) arc (270:325:0.3) +(0, -0.3) node {$\theta$}; % 325是猜测的数据
+\end{tikzpicture}
