@@ -1,0 +1,5 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5]
+    \foreach \y in {0,...,6}
+        \foreach \x [parse=true] in {1,...,10-\y}
+            \draw (\x+0.5*\y,0.9*\y) circle (0.5cm) circle (0.4cm);
+\end{tikzpicture}

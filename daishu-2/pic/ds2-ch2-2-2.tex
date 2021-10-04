@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-1,0) -- (4,0) node[anchor=north] {$n$};
+    \draw [->] (0,-1) -- (0,5.5) node[anchor=east] {$a_n$};
+    \node at (-0.2,-0.2) {$O$};
+    \foreach \x in {1,...,7} {
+        \draw (\x/2,0.2) -- (\x/2,0) node[anchor=north] {$\x$};
+    }
+    \draw (0.2, 5) -- (0,5) node[anchor=east] {$1$};
+    \foreach \y in {2, 4, 8} {
+        \draw (0.2, 5/\y) -- (0,5/\y) node[anchor=east] {$\frac{1}{\y}$};
+    }
+
+    \foreach \n in {1,...,7} {
+        \filldraw [fill=black] (\n/2, 5/\n) circle (0.1);
+    }
+\end{tikzpicture}
+
