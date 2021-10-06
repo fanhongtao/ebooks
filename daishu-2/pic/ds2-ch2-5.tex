@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,scale=0.6]
+    %\filldraw [fill=black] (0, 0) circle (0.1);
+    \foreach \y in {1,...,4}
+        \foreach \x in {1,...,\y}
+            \draw (\x-0.5*\y-0.5,0.9*\y-0.9) circle (0.5cm);
+
+    \foreach \y in {5,...,9}
+        \draw [dashed] (-0.5*\y,0.9*\y-0.9) -- (\y-0.5*\y,0.9*\y-0.9);
+
+    \foreach \y in {10} {
+        \foreach \x in {1,2, 9, 10}
+            \draw (\x-0.5*\y-0.5,0.9*\y-0.9) circle (0.5cm);
+        \draw [dashed] (-3,0.9*\y-0.9) -- (3,0.9*\y-0.9);
+    }
+
+    \draw[domain=-0.65:5,smooth,samples=20,line width=0.3em] plot (\x+0.65, 1.8*\x);
+    \draw[domain=-0.65:5,smooth,samples=20,line width=0.3em] plot (-\x-0.65, 1.8*\x);
+\end{tikzpicture}

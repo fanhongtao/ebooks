@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=Stealth,scale=0.8]
+    \foreach \y in {0,...,6}
+        \foreach \x [parse=true] in {1,...,10-\y}
+            \draw (\x+0.5*\y,0.9*\y) circle (0.5cm);
+    \foreach \y in {0,...,6}
+        \foreach \x [parse=true] in {1,...,4+\y}
+            \draw [dashed] (\x+10-0.5*\y,0.9*\y) circle (0.5cm);
+\end{tikzpicture}

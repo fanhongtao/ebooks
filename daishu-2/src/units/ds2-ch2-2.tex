@@ -1,0 +1,273 @@
+\subsection{等差数列}\label{subsec:2-2}
+
+考察上一节中到过的数列
+\begin{gather}
+    4,\; 5,\; 6,\; 7,\; 8,\; 9,\; 10 \text{。} \tag{$1$}\label{eq:shulie-1-ref}
+\end{gather}
+
+我们可以发现，这个数列有这样的特点：从第 $2$ 项起，每一项与它的前一项的差都等于 $1$ 。
+
+一般地，如果一个数列从第 $2$ 项起， 每一项与它的前一项的差等同一个常数，这个数列就叫做\textbf{等差数列}，
+这个常数叫做等差数列的\textbf{公差}， 公差通常用字母 $d$ 表示。 例如， 数列
+$$ 1,\; 3,\; 5,\; 7,\; \cdots $$
+与
+$$ 5,\; 0,\; -5,\; -10,\; \cdots $$
+都是等差数列，它们的公差分别是 $2$ 与 $-5$。
+
+如果一个数列
+$$ a_1,\; a_2,\; a_3,\; \cdots ,\; a_n,\; \cdots $$
+是等差数列，它的公差是 $d$，那么
+
+$\begin{aligned}[t]
+    a_2 &= a_1 + d, \\
+    a_3 &= a_2 + d = (a_1 + d) + d = a_1 + 2d, \\
+    a_4 &= a_3 + d = (a_1 + 2d) + d = a_1 + 3d, \\
+    &\cdots\cdots\cdots \qquad\qquad\qquad \cdots\cdots\cdots \text{。}
+\end{aligned}$\\
+由此可知，等差数列 $\{a_n\}$ 的通项公式是
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            a_n = a_1 + (n - 1)d \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+
+\begin{wrapfigure}[22]{r}{5cm}
+    \centering
+    \input{../pic/ds2-ch2-3}
+    \caption{}\label{fig:2-3}
+\end{wrapfigure}
+
+如果一个等差数列 $\{a_n\}$ 的首项是 $1$，公差是 $2$，那么将它们代入上面的公式，就得到通项公式
+$$ a_n = 1 + (n - 1) \cdot 2 \text{，}$$
+即
+$$ a_n = 2n - 1 \text{。}$$
+
+这个数列可以用图 \ref{fig:2-3} 来表示。从图中看到，表示这个等差数列各项的点都在同一直线 $y = 2x - 1$ 上。
+
+\liti 求等差数列 $8$，$5$，$2$，$\cdots$ 的第 $20$ 项。
+
+\jie $\because \quad a_1 = 8,\; d = 5 - 8 = -3,\; n = 20$
+
+$\therefore \quad \begin{aligned}[t]
+    a_{20} &= 8 + (20 - 1) \times (-3) \\
+         &= -49 \text{。}
+\end{aligned}$
+
+
+\liti 等差数列 $-5$，$-9$，$-13$，$\cdots$ 的第几项是 $-401$？
+
+\jie $a_1 = 5$，$d = -9 - (-5) = -4$，$a_n = -401$，因此，
+$$ -401 = -5 + (n - 1) \times (-4) \text{。} $$
+
+解得
+$$ n = 100 \text{。} $$
+
+答：这个数列的第 $100$ 项是 $-401$。
+
+
+\liti 梯子的最高一级宽 $33cm$，最低一级宽 $110cm$，中间还有 $10$ 级，各级的宽度
+成等差数列。计算中间各级的宽。
+
+\jie 用 $\{a_n\}$ 表示题中的等差数列，由已知条件，有
+$$ a_1 = 33,\quad a_{12} = 110,\quad n = 12,$$
+$$ a_{12} = a_1 + (12 - 1)d ,$$
+即
+$$ 110 = 33 + 11d \text{。} $$
+
+解得
+$$ d = 7 \text{。} $$
+
+因此，
+\begin{align*}
+    a_2 &= 33 + 7 = 40, \\
+    a_3 &= 40 + 7 = 47, \\
+    \cdots&\cdots\cdots \quad \cdots\cdots\cdots \\
+    a_{11} &= 96 + 7 = 103 \text{。}
+\end{align*}
+
+答：梯子中间各级的宽从上到下依次是 $40$，$47$，$54$，$61$，$68$，$75$，$82$，$89$，$96$，$103cm$。
+
+\,
+
+如果在 $a$ 与 $b$ 中间插入一个数 $A$ ，使 $a$，$A$，$b$ 成等差数列，那么 $A$ 叫做 $a$ 与 $b$ 的 \textbf{等差中项}。
+
+如果 $A$ 是 $a$ 与 $b$ 的等差中项，那么 $A - a = b - A$，所以
+$$ A = \dfrac{a + b}{2} \text{。}$$
+
+容易看出，在一个等差数列中，从第 2 项起，每一项（有穷等差数列的末项除外）都是它的前一项与后一项的等差中项。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{求等差数列 $3$，$7$，$11$，$\cdots$ 的第 $4$，$7$，$10$ 项；}
+    \end{minipage}
+
+    \xiaoxiaoti{求等差数列 $10$，$8$，$6$，$\cdots$ 的第 $20$ 项；}
+
+    \xiaoxiaoti{求等差数列 $2$，$9$，$16$，$\cdots$ 的第 $n$ 项；}
+
+    \xiaoxiaoti{求等差数列 $0$，$-3\dfrac{1}{2}$，$-7$，$\cdots$ 的第 $n + 1$ 项；}
+
+\end{xiaoxiaotis}
+
+\xiaoti{在等差数列 $\{a_n\}$ 中：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{已知 $d = -\dfrac{1}{3}$，$a_7 = 8$，求 $a_1$；}
+
+    \xiaoxiaoti{已知 $a_1 = 12$，$a_6 = 27$，求 $d$；}
+
+    \xiaoxiaoti{已知 $a_1 = 3$，$a_n = 21$，$d = 2$，求 $n$；}
+
+    \xiaoxiaoti{已知 $a_4 = 10$，$a_7 = 19$，求 $a_1$ 与 $d$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\,
+
+下面通过具体例子，说明求等差数列的前 $n$ 项和的方法。
+
+为了求出图\ref{fig:2-1} 所示的钢管的总数， 我们可以设想如图 \ref{fig:2-4} 那样，
+在这堆钢管的旁边倒放着同样的一堆钢管。这样，每层的钢管数都相等， 即
+$$ 4 + 10 = 5 + 9 = 6 + 8 = \cdots = 10 + 4 \text{。}$$
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch2-4}
+    \caption{}\label{fig:2-4}
+\end{figure}
+
+由于共有 $7$ 层，两堆钢管的总数是 $(4 + 10) \times 7$，因此所求的钢管总数是
+$$ \dfrac{(4 + 10) \times 7}{2} = 49 \text{。}$$
+
+一般地，设有等差数列
+$$ a_1,\; a_2,\; a_3,\; \cdots ,$$
+它的前 $n$ 项的和是 $S_n$ ，即
+$$ S_n = a_1 + a_2 + \cdots + a_n \text{。}$$
+
+根据等差数列 $\{a_n\}$ 的通项公式，上式可以写成
+\begin{gather}
+    S_n = a_1 + (a_1 + d)  + (a_1 + 2d) + \cdots + [a_1 + (n - 1)d]; \tag{$1$}\label{eq:dengchashulie-1}
+\end{gather}
+
+再把项的次序反过来，$S_n$ 又可以写成
+\begin{gather}
+    S_n = a_n + (a_n - d)  + (a_n - 2d) + \cdots + [a_n - (n - 1)d]; \tag{$2$}\label{eq:dengchashulie-2}
+\end{gather}
+
+把 (\ref{eq:dengchashulie-1})，(\ref{eq:dengchashulie-2}) 的两边分别相加，得
+\begin{align*}
+    2S_n &= \overbrace{(a_1 + a_n) + (a_1 + a_n) + \cdots + (a_1 + a_n)}^\text{n个} \\
+       &= n(a_1 + a_n) \text{。}
+\end{align*}
+
+由此得到等差数列 $\{a_n\}$ 的前 $n$ 项的和的公式
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            S_n = \dfrac{n(a_1 + a_n)}{2} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+因为 $a_n = a_1 + (n - 1) d$，所以上面的公式又可写成
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            S_n = n a_1 + \dfrac{n(n - 1)}{2} d \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+
+\liti 如图 \ref{fig:2-5} ，一个堆放铅笔的 V 形架的最下面一层放 $1$ 支铅笔，往上每一层都比它下面一层多放 $1$ 支，
+最上面一层放 $120$ 支。这个 V 形架上共放着多少支铅笔？
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch2-5}
+    \caption{}\label{fig:2-5}
+\end{figure}
+
+\jie 由题意可知，这个 V 形架上共放着 $120$ 层铅笔，且自下而上各层的铅笔数组成等差数列，记为 $\{a_n\}$，
+其中 $a_1 = 1$，$a_{120} = 120$。根据等差数列 $\{a_n\}$ 前 $n$ 项和的公式，得
+$$ S_{120} = \dfrac{120 \times (1 + 120)}{2} = 7260 \text{。}$$
+
+答：V形架上共放着 $7260$ 支铅笔。
+
+\liti 求集合 $M = \{ m \mid m = 7n ,\, n \in N \text{，且} m < 100 \}$ 的元素个数，并求这些元素的和。
+
+\jie $\because \quad 7n < 100,$
+
+$\therefore \quad \begin{aligned}[t]
+     & n < \dfrac{100}{7} \\
+     & n < 14\dfrac{2}{7} \text{。}
+\end{aligned}$
+
+由于满足上面不等式的自然数 $n$ 共有 $14$ 个，集合 $M$ 里的元素共有 $14$ 个。将它们从小到大列出，得
+$$ 7,\; 7 \times 2,\; 7 \times 3,\; \cdots,\; 7 \times 14, $$
+即
+$$ 7,\; 14,\; 21,\; \cdots,\; 98 \text{。}$$
+这个数列是等差数列，记为 $\{a_n\}$ ，其中 $a_1 = 7$， $a_{14} = 98$。因此，
+$$ S_{14} = \dfrac{14 \times (7 + 98)}{2} = 735 \text{。} $$
+
+答：集合 $M$ 共有 $14$ 个元素，它们的和等于 $735$ 。
+
+例 5 表明，在小于 100 的正整数中共有 $14$ 个数是 $7$ 的倍数，它们的和是 $735$ 。
+
+\liti 已经一个直角三角形的三条边的长成等差数列，求证它们的比是 $3:4:5$。
+
+\zhengming 将成等差数列的三条边的长从小到大排列，它们可以表示为 $a - d$，$a$，$a + d$，
+这里 $a - d > 0$， $d > 0$。由于它们是直角三角形的三条边的长，根据勾股定理，得到
+$$ (a - d)^2 + a^2 = (a + d)^2 \text{。}$$
+
+解得
+$$ a = 4d \text{，}$$
+从而这三条边的长是 $3d$，$4d$，$5d$。
+
+因此，这三条边的长的比是 $3:4:5$。
+
+\lianxi
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{根据下列各题中的条件，求相应的等差数列 $\{a_n\}$ 的 $S_n$：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$a_1 = 5$，$a_n = 95$，$n = 10$；}
+
+    \xiaoxiaoti{$a_1 = 100$，$d = -2$，$n = 50$；}
+
+    \xiaoxiaoti{$a_1 = \dfrac{2}{3}$，$a_n = -\dfrac{3}{2}$，$n = 14$；}
+
+    \xiaoxiaoti{$a_1 = 14.5$，$d = 0.7$，$a_n = 32$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}
+
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{求自然数列中前 $n$ 个数的和；}
+    \end{minipage}
+
+    \xiaoxiaoti{求自然数列中前 $n$ 个偶数的和。}
+
+\end{xiaoxiaotis}
+\end{xiaotis}
+
+
+
+
+
+
