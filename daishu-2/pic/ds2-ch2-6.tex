@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-1,0) -- (4.8,0) node[anchor=north] {$n$};
+    \draw [->] (0,-1) -- (0,8.5) node[anchor=east] {$a_n$};
+    \node at (-0.3,-0.3) {$O$};
+    \foreach \x in {1,...,4} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {1,...,8} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {$\y$};
+    }
+
+    \draw[domain=-0.2:4.1,smooth,samples=50] plot (\x, {0.5 * 2^\x});
+\end{tikzpicture}

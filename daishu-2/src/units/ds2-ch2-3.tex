@@ -1,0 +1,279 @@
+\subsection{等比数列}\label{subsec:2-3}
+
+看下面的数列：
+$$ 1,\; 2,\; 4,\; 8,\; \cdots \text{。}$$
+这个数列有这样的特点： 从第 $2$ 项起， 每一项与它前一项的比都等于常数 $2$ 。
+
+一般地，如果一个数列从第 $2$ 项起，每一项与它前一项的比等于同一个常数，
+这个数列就叫做\textbf{等比数列}， 这个常数叫做等比数列的\textbf{公比}，
+公比通常用字母 $q$ 表示。例如，数列
+$$ 5,\quad 25,\quad 125,\quad 625,\quad \cdots $$
+与
+$$ 1,\quad -\dfrac{1}{2},\quad \dfrac{1}{4},\quad -\dfrac{1}{8},\quad \cdots $$
+都是等比数列，它们的公比分别是 $5$ 与 $-\dfrac{1}{2}$。
+
+因为在一个等比数列里，从第 $2$ 项起，每一项与它的前一项的比都等于公比，
+所以每一项都等于它的前一项乘以公比。这就是说，如果等比数列
+$a_1$，$a_2$，$a_3$，$a_4$，$\cdots$ 的公比是 $q$，那么
+
+$\qquad \begin{aligned}
+    a_2 &= a_1 q, \\
+    a_3 &= a_2 q = (a_1 q)q = a_1 q^2, \\
+    a_4 &= a_3 q = (a_1 q^2)q = a_1 q^3, \\
+    &\cdots\cdots \qquad\qquad \cdots\cdots \text{。}
+\end{aligned}$ \\
+由此可知，等比数列 $\{a_n\}$ 的通项公式是
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            a_n = a_1  q^{n - 1} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+上面的公式还可以改写成
+$$ a_n = \dfrac{a_1}{q} q^n = c q^n \text{，}$$
+这里 $c = \dfrac{a_1}{q}$ ，它是一个不为零的常数。当 $q$ 是不等于 $1$ 的正数时，
+$y = q^x$ 是一个指数函数，而函数 $y = c q^x$ 是一个不为零的常数与指数函数的积。
+因此， 从图上看，表示数列 $\{c q^n\}$ 各项的点都在函数 $y = c q^x$ 的图像上。
+例如，当 $a_1 = 1$，$q = 2$ 时，
+$$ a_n = \dfrac{1}{2} \cdot 2^n \text{，}$$
+表示数列各项的点都在函数 $y = \dfrac{1}{2} \cdot 2^x$ 的图像上（图 \ref{fig:2-6}）。
+
+\begin{wrapfigure}[22]{r}{5cm}
+    \centering
+    \input{../pic/ds2-ch2-6}
+    \caption{}\label{fig:2-6}
+\end{wrapfigure}
+
+\liti 培育水稻新品种，如果第 $1$ 代得到 $120$ 粒种子，并且从第 $1$ 代起，
+以后各代的每一粒种子都可以得到下一代的 $120$ 粒种子，到第 $5$ 代大约可以
+得到这种新品种的种子多少粒（保留两个有效数字）？
+
+\jie 由于每代的种子数是它的前一代种子数的 $120$ 倍，逐代的种子数组成等比数列，
+记为 $\{a_n\}$ ，其中 $a_1 = 120$，$q = 120$，因此，
+$$ a_5 = 120 \times 120^{5 - 1} \approx 2.5 \times 10^{10} \text{。} $$
+
+答：到第 $5$ 代大约可以得到种子 $2.5 \times 10^{10}$ 粒。
+
+
+\liti 一个等比数列的第 $3$ 项与第 $4$ 项分别是 $12$ 与 $18$，求它的第 $1$ 项与第 $2$ 项。
+
+\jie 设这个等比数列的第 $1$ 项是 $a_1$，公比是 $q$，那么
+\begin{align*}
+    a_1 q^2 &= 12, \tag{$1$} \\
+    a_1 q^3 &= 18  \tag{$2$}
+\end{align*}
+解 (1)，(2) 所组成的方程组，得
+$$ q = \dfrac{3}{2}, \quad a_1 = \dfrac{16}{3} \text{，} $$
+因此，
+$$ a_1 q = \dfrac{16}{3} \times \dfrac{3}{2} = 8 \text{。} $$
+
+答： 这个数列的 $1$ 项与第 $2$ 项分别是与 $\dfrac{16}{3}$ 与 $8$。
+
+
+\liti 某种电讯产品自投放市场以来，经过三次降价，单价由原来的 $174$ 元降到 $58$ 元。
+这种电讯产品平均每次降价的百分率大约是多少（ 精确到 $1\%$）？
+
+\jie 设平均每次降价的百分率是 $x$，那么每次降价后的单价应是降价前的 $(1 - x)$ 倍。
+这样，将原单价与三次降价后的单价依次排列，就组成一个等比数列，记为 $\{a_n\}$ ，其中
+$$ a_1 = 174,\quad a_4 = 58,\quad n = 4 \text{。} $$
+由等比数列的通项公式，得
+$$ 58 = 174 \times (1 - x)^{4 - 1} \text{。}$$
+整理后，得
+\begin{align*}
+    (1 - x)^3 &= \dfrac{1}{3} , \\
+    1 - x &= \sqrt[3]{\dfrac{1}{3}} \\
+    &= 0.693 \text{，}
+\end{align*}
+因此，
+\begin{align*}
+    x &= 1 - 0.693 \\
+      &\approx 31\% \text{。}
+\end{align*}
+
+答：上述电讯产品平均每次降价的百分率大约是 $31\%$。
+
+如果在 $a$ 与 $b$ 中间插入一个数 $G$，使 $a$，$G$，$b$ 成等比数列，那么 $G$ 叫 $a$ 与 $b$ 的\textbf{等比中项}。
+
+如果 $G$ 是 $a$ 与 $b$ 的等比中项，那么 $\dfrac{G}{a} = \dfrac{b}{G}$，即 $G^2 = ab$，因此，
+$$ G = \pm \sqrt{ab} \text{。}$$
+
+容易看出，一个等比数列从第 $2$ 项起， 每一项（有穷等比数列的末项除外）是它的前一项与后一项的等比中项。
+
+\lianxi
+
+\begin{xiaotis}
+
+
+\xiaoti{已知等比数列 $\{a_n\}$ ，问：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$a_1$ 能不能是零？} & \xiaoxiaoti{公比 $q$ 能不能是零？}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下面等比数列的第 $4$ 项与笫 $5$ 项：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$5$，$-15$，$45$，$\cdots$；} & \xiaoxiaoti{$1.2$，$2.4$，$4.8$，$\cdots$；} \\
+        \xiaoxiaoti{$\dfrac{2}{3}$，$\dfrac{1}{2}$，$\dfrac{3}{8}$，$\cdots$；} & \xiaoxiaoti{$\sqrt{2}$，$1$，$\dfrac{\sqrt{2}}{2}$，$\cdots$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{一个等比数列的第 $9$ 项是 $\dfrac{4}{9}$，公比是 $-\dfrac{1}{3}$，求它的第 $1$ 项；}
+    \end{minipage}
+
+    \xiaoxiaoti{一个等比数列的第 $2$ 项是 $10$，第 $3$ 项是 $20$，求它的第 $1$ 项与第 $4$ 项。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{已知等比数列 $\{a_n\}$ 的 $a_2 = 2$，$a_5 = 54$，求 $q$；}
+    \end{minipage}
+
+    \xiaoxiaoti{已知等比数列 $\{a_n\}$ 的 $a_1 = 1$，$a_n = 256$，$q = 2$，求 $n$；}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\,
+
+下面我们来求等比数列
+$$ a_1,\; a_2,\; a_3,\; \cdots,\; a_n,\;  \cdots $$
+前 $n$ 项的和 $S_n$。
+
+根据等比数列 $\{a_n\}$ 的通项公式，等比数列 $\{a_n\}$ 前 $n$ 项的和可以写成：
+\begin{gather*}
+    S_n = a_1 + a_1 q + \cdots + a_1 q^{n-2} + a_1 q^{n-1} \text{。} \tag{$1$}
+\end{gather*}
+
+我们知道，将等比数列的每一项乘以公比，就得到它后面邻的一项。现将 (1) 的两边分别乘以公比 $q$ ，得到
+\begin{gather*}
+    q S_n = a_1 q + a_1 q^2 + \cdots + a_1 q^{n-1} + a_1 q^n \text{。} \tag{$2$}
+\end{gather*}
+
+比较 (1) 和 (2) ， 我们看到， (1) 的右边从第 $2$ 项到最后一项， 与 (2) 的右边从第 $1$ 项到倒数第 $2$ 项完全相同。
+于是，从 (1) 的两边分别减去 (2) 的两边，可以消去这些相同项，得到
+$$ (1 - q)S_n = a_1 - a_1 q^n \text{。} $$
+
+由此得到 $q \neq 1$ 时等比数列 $\{a_n\}$ 的前项的和的公式
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            S_n = \dfrac{a_1(1 - q^n)}{1 - q} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+因为
+$$ a_1 q^n = (a_1 q^{n - 1})q = a_n q \text{，}$$
+所以上面的公式还可以写成
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            S_n = \dfrac{a_1 - a_n q}{1 - q} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+很明显，当 $q = 1$ 时，$S_n = n a_1$ 。
+
+\liti 求等比数列 $\dfrac{1}{2}$，$\dfrac{1}{4}$，$\dfrac{1}{8}$，$\cdots$ 的前 $8$ 项的和。
+
+\jie $\because \quad a_1 = \dfrac{1}{2},\; q = \dfrac{1}{2},\; n = 8,$
+
+$\therefore \quad  S_8 = \dfrac{\dfrac{1}{2} \left[ 1 - \left( \dfrac{1}{2} \right)^8 \right]}{1 - \dfrac{1}{2}} = \dfrac{255}{256} \text{。} $
+
+
+\liti 某制糖厂今年制糖 $5$ 万吨，如果平均每年的产量比上一年增加 $10\%$，那么从今年起，几年内可以使总产量达到 $30$ 万吨（保留到个位）？
+
+\jie 由题意可知，这个糖厂从今年起，平均每年的产量（万吨）组成一个等比数列，记为 $\{a_n\}$ ，其中
+$$ a_1 = 5, \quad q = 1 + 10\%  = 1.1, \quad S_n = 30 \text{，} $$
+于是得到
+$$ \dfrac{5(1 - 1.1^n)}{1 - 1.1} = 30 \text{。} $$
+
+整理后，得
+$$ 1.1^n = 1.6 \text{。} $$
+两边取对数，得
+$$ n\lg 1.1 = \lg 1.6 \text{。} $$
+$\therefore \quad n = \dfrac{\lg 1.6}{\lg 1.1} = \dfrac{0.2041}{0.0414} \approx 5 \text{。}$
+
+答：$5$ 年内可以使总产量达到 $30$ 万吨。
+
+
+\liti 已知无穷数列
+$$ 10^\frac{0}{5},\; 10^\frac{1}{5},\; 10^\frac{2}{5},\; \cdots,\; 10^\frac{n-1}{5},\; \cdots, $$
+求证：
+
+（1）这个数列是等比数列；
+
+（2）这个数列中的任意一项是它后面第 $5$ 项的 $\dfrac{1}{10}$；
+
+（3）这个数列中任意两项的积仍然在这个数列中。
+
+\zhengming （1）这个数列中的第 $n$ 项与第 $n + 1$ 项分别是 $10^\frac{n-1}{5}$ 与 $10^\frac{n}{5}$ $(n \geqslant 1)$，
+于是第 $n + 1$ 项与第 $n$ 项的比为
+$$ \dfrac{10^\frac{n}{5}}{10^\frac{n-1}{5}} = 10^{\frac{n}{5} - \frac{n-1}{5}} = 10^\frac{1}{5} \text{，}$$
+即它们的比值是常数 $10^\frac{1}{5}$ 。因此这个数列是以 $10^\frac{1}{5}$ 为公比的等比数列。
+
+（2）这个数列第 $n$ 项与第 $n + 5$ 项分别是 $10^\frac{n-1}{5}$ 与 $10^\frac{n+4}{5}$ $(n \geqslant 1)$，于是
+$$ \dfrac{10^\frac{n-1}{5}}{10^\frac{n+1}{5}} = 10^{\frac{n-1}{5} - \frac{n+4}{5}} = 10^{-\frac{5}{5}} = \dfrac{1}{10} \text{，}$$
+这说明，这个数列中的任意一项经过 $5$ 次等比的递增以后，变大到它本身的 $10$ 倍。
+例如，数列中第 $3$ 项是 $10^\frac{2}{5}$ ，第 $8$ 项就变大到 $10 \times 10^\frac{2}{5}$ 。
+
+（3） 从这个数列中任意取出两项，假定它们分别是第 $n_1$ 项与第 $n_2$ 项， 即 $10^\frac{n_1 - 1}{5}$ 与 $10^\frac{n_2 - 1}{5}$，这里，$n_1,\; n_2 \in N$ ，于是
+$$ 10^\frac{n_1 - 1}{5} \times 10^\frac{n_2 - 1}{5} = 10^{\frac{n_1 - 1}{5} + \frac{n_2 - 1}{5}} = 10^\frac{(n_1 + n_2 -1) - 1}{5} \text{。}$$
+
+因为 $n_1 \geqslant 1$，$n_2 \geqslant 1$ ，所以 $n_1 + n_2 \geqslant 2$ ，即
+$$ n_1 + n_2 - 1 \geqslant 1 \text{。}$$
+又因为 $n_1,\; n_2 \in N$ ，所以 $n_1 + n_2 - 1 \in N$ 。这就证明 $10^\frac{(n_1 + n_2 -1) - 1}{5}$ 属于
+上述数列，而且是数列的第 $n_1 + n_2 - 1$ 项。
+
+
+\lianxi
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{根据下列各题中的条件，求相应的等比数列 $\{a_n\}$ 的 $S_n$ ：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$a_1 = 3$，$q = 2$，$n = 6$；}
+
+    \xiaoxiaoti{$a_1 = 2.4$，$q = -1.5$，$n = 5$；}
+
+    \xiaoxiaoti{$a_1 = 8$，$q = \dfrac{1}{2}$，$n = 5$；}
+
+    \xiaoxiaoti{$a_1 = -2.7$，$q = -\dfrac{1}{3}$，$n = 6$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.9\textwidth}
+    \xiaoxiaoti{求等比数列 $1$，$2$，$4$，$\cdots$ 从第 $5$ 项到第 $10$ 项的和；}
+    \end{minipage}
+
+    \xiaoxiaoti{求等比数列 $\dfrac{3}{2}$，$\dfrac{3}{4}$，$\dfrac{3}{8}$，$\cdots$ 从第 $3$ 项到第 $7$ 项的和。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
