@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \a / \b in {1/2, 3/4} {
+        \draw[pattern={Lines[angle=35]}] (0, \a) --  (\a, \a) -- (\a, 0) -- (\b, 0) -- (\b, \b) -- (0, \b) -- (0, \a);
+    }
+    \foreach \x in {0,...,5} {
+        \draw (\x,0) -- (\x,5);
+    }
+    \foreach \y in {0,...,5} {
+        \draw (0,\y) -- (5,\y);
+    }
+    \foreach \x / \n in {0.5/1, 1.5/3, 2.5/5, 3.5/7}
+        \node [fill=white] at (\x, \x) {$\n$};
+
+    \node [below] at (2.5, 0) {$n$};
+    \node [right] at (5, 2.5) {$n$};
+\end{tikzpicture}
