@@ -1,0 +1,179 @@
+\subsection{不等式的性质}\label{subsec:3-2}
+
+不等式有下面一些性质。
+
+\begin{theorem} \label{theorem:bds-1}
+    如果 $a > b$，那么 $b < a$；如果 $b < a$，那么 $a > b$。即
+    $$ a > b \iff b < a \text{。} $$
+\end{theorem}
+
+\zhengming 由正数的相反数是负数，负数的相反数是正数，得
+$$ a > b \implies a - b > 0 \implies -(a - b) < 0 \implies b - a < 0 \implies b < a \text{；} $$
+$$ b < a \implies b - a < 0 \implies -(b - a) > 0 \implies a - b > 0 \implies a > b \text{。} $$
+即
+$$ a > b \iff b < a \text{。} $$
+
+
+定理 \ref{theorem:bds-1} 说明，把不等式的左边和右边交换，所得不等式与原不等式异向。
+
+\begin{theorem} \label{theorem:bds-2}
+    如果 $a > b$，$b > c$，那么 $a > c$。即
+    $$ a > b, \; b > c \implies a > c \text{。} $$
+\end{theorem}
+
+\zhengming 根据两个正数的和仍是正数，得
+\begin{align*}
+    &   \left.
+            \begin{array}{l}
+                a > b \implies a - b > 0 \\
+                b > c \implies b - c > 0
+            \end{array}
+        \right\} \\
+    \implies & (a - b) + (b - c) > 0 \implies a - c > 0 \\
+    \implies & a > c \text{。}
+\end{align*}
+即
+$$ a > b, \; b > c \implies a > c \text{。} $$
+
+根据定理 \ref{theorem:bds-1}，定理 \ref{theorem:bds-2} 还可以表示为
+$$ c < b, \; b < a \implies c < a \text{。} $$
+
+（下面一些定理也可根据定理 \ref{theorem:bds-1} 表示为另一种形式。）
+
+\begin{theorem} \label{theorem:bds-3}
+    如果 $a > b$，那么 $a + c > b + c$。即
+    $$ a > b \implies a + c > b + c \text{。} $$
+\end{theorem}
+
+\zhengming $ a > b \implies a - b > 0 \implies (a + c) - (b + c) > 0 \implies a + c > b + c $。
+
+定理 \ref{theorem:bds-3} 说明，不等式的两边都加上同一个实数，所得不等式与原不等式同向。由此很容易得出：
+$$ a + b > c \implies a + b + (-b) > c + (-b) \implies a > c - b \text{。} $$
+
+一般地说，\textbf{不等式中任何一项的符号变成相反的符号后，可以把它从一边移到另一边。}
+
+\begin{corollary} \label{corollary:bds-3-1}
+    $a > b, \; c > d \implies a + c > b + d \text{。}$
+\end{corollary}
+
+这是因为
+$$
+\left.
+    \begin{array}{l}
+        a > b \implies a + c > b + c \\
+        c > d \implies b + c > b + d
+    \end{array}
+\right\} \implies a + c > b + d \text{。}
+$$
+
+很明显，不等式的这个性质可以推广到任意个同向不等式两边分别相加。这就是说，
+\textbf{两个或者几个同向不等式两边分别相加，所得不等式与原不等式同向。}
+
+
+\begin{theorem} \label{theorem:bds-4}
+    如果 $a > b$，$c > 0$，那么 $ac > bc$；
+    如果 $a > b$，$c < 0$，那么 $ac < bc$。即
+    $$ a > b,\; c > 0 \implies ac > bc ;\qquad a > b,\; c < 0 \implies ac < bc \text{。} $$
+\end{theorem}
+
+\zhengming 根据同号相乘得正，异号相乘得负，得
+\begin{align*}
+    \left.
+        \begin{aligned}
+            a > b,\; c > 0 \implies a - b &> 0 \\
+                                    c &> 0
+        \end{aligned}
+    \right\} & \implies (a - b)c > 0 \\
+             & \implies ac - bc > 0 \implies ac > bc \text{；} \\
+    \left.
+        \begin{aligned}
+            a > b,\; c < 0 \implies a - b &> 0 \\
+                                    c &< 0
+        \end{aligned}
+    \right\} & \implies (a - b)c < 0 \\
+            & \implies ac - bc < 0 \implies ac < bc \text{。}
+\end{align*}
+
+\setcounter{corollary}{0}
+\begin{corollary} \label{corollary:bds-4-1}
+    $a > b > 0, \; c > d > 0 \implies ac > bd \text{。}$
+\end{corollary}
+
+这是因为
+$$
+\left.
+    \begin{gathered}
+        a > b,\; c > 0 \implies ac > bc \\
+        c > d,\; b > 0 \implies bc > bd
+    \end{gathered}
+\right\} \implies ac > bd \text{。}
+$$
+
+很明显，不等式的这个性质可以推广到任意个两边都是正数的同向不等式两边分别相乘。这就是说，
+\textbf{两个或者几个两边都是正数的同向不等式两边分别相乘，所得不等式与原不等式同向。}
+由此，我们可以得到
+
+\begin{corollary} \label{corollary:bds-4-2}
+    $a > b > 0 \implies a^n > b^n \; (n \in Z \text{，且} \; n > 1) \text{。}$
+\end{corollary}
+
+
+\begin{theorem} \label{theorem:bds-5}
+    如果 $a > b > 0$，那么 $\sqrt[n]{a} > \sqrt[n]{b} \; (n \in Z \text{，且} \; n > 1)$。即
+    $$ a > b > 0 \implies \sqrt[n]{a} > \sqrt[n]{b} \text{。} $$
+\end{theorem}
+
+\zhengming 用反证法。
+
+假定 $\sqrt[n]{a}$ 不大于 $\sqrt[n]{b}$，则或者 $\sqrt[n]{a} < \sqrt[n]{b}$，或者 $\sqrt[n]{a} = \sqrt[n]{b}$。但
+\begin{align*}
+    \sqrt[n]{a} < \sqrt[n]{b} & \implies a < b , \\
+    \sqrt[n]{a} = \sqrt[n]{b} & \implies a = b \text{。}
+\end{align*}
+这些都同已知条件 $a > b$ 矛盾，所以 $\sqrt[n]{a} > \sqrt[n]{b}$。即
+$$ a > b > 0 \implies \sqrt[n]{a} > \sqrt[n]{b} \text{。} $$
+
+
+\lianxi
+
+\begin{xiaotis}
+
+\xiaoti{判断下列各命题的真假，并说明理由：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$a > b \implies ac > bc$；}
+
+    \xiaoxiaoti{$a > b \implies ac^2 > bc^2$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}
+\begin{xiaoxiaotis}
+
+    \vspace{-1.6em} \begin{minipage}{0.95\textwidth}
+    \xiaoxiaoti{如果$a > b$，$c < d$，能否断定 $a + c$ 与 $b + d$ 谁大谁小？举例说明。}
+    \end{minipage}
+
+    \xiaoxiaoti{如果$a > b$，$c > d$，能否断定 $a - c$ 与 $b - d$ 谁大谁小？举例说明。}
+
+    \xiaoxiaoti{如果$a > b$，$c > d$，是否一定得出 $ac > bd$？举例说明。}
+
+    \xiaoxiaoti{如果$a > b$，$c < d$，$c$，$d$ 都不是零，是否一定得出 $\dfrac{a}{c} > \dfrac{b}{d}$？举例说明。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$a > b,\; c < d \implies a - c > b - d$；}
+
+    \xiaoxiaoti{$a > b > 0,\; c < d < 0 \implies ac < bd$；}
+
+    \xiaoxiaoti{$a > b,\; ab > 0 \implies \dfrac{1}{a} < \dfrac{1}{b}$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
