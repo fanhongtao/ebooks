@@ -1,0 +1,63 @@
+%----------------------------------
+% 图形相关的项
+% 需要 TexLive 2020 版本
+
+% 自定义填充格式，用于实现绘制阴影
+\tikzdeclarepattern{
+    name=lines,
+    parameters={
+        \pgfkeysvalueof{/pgf/pattern keys/size},
+        \pgfkeysvalueof{/pgf/pattern keys/angle},
+        \pgfkeysvalueof{/pgf/pattern keys/line width},
+    },
+    bounding box={(-.1pt,-.1pt) and
+        (\pgfkeysvalueof{/pgf/pattern keys/size}+.1pt,
+        \pgfkeysvalueof{/pgf/pattern keys/size}+.1pt)},
+    tile size={(\pgfkeysvalueof{/pgf/pattern keys/size},
+                \pgfkeysvalueof{/pgf/pattern keys/size})},
+    tile transformation={rotate=\pgfkeysvalueof{/pgf/pattern keys/angle}},
+    defaults={
+        size/.initial=7pt,
+        angle/.initial=0,
+        line width/.initial=.4pt,
+    },
+    code={
+        \draw[line width=\pgfkeysvalueof{/pgf/pattern keys/line width}]
+            (0,0) -- (\pgfkeysvalueof{/pgf/pattern keys/size},
+                      \pgfkeysvalueof{/pgf/pattern keys/size});
+    }
+}
+
+\tikzset{
+  % 绘制阿基米德螺线。
+  % 参数1: 起始半径
+  % 参数2: 相邻两条曲线之间的距离
+  % 参数3: 开始角度
+  % 参数4: 终止角度
+  pics/luoxuan/.style args={#1, #2, #3, #4}{
+    code = {
+      \begin{scope}
+        \draw [domain=#3:#4,samples=300,smooth,variable=\t]
+            plot({(#1 + #2 * \t/360) * cos(\t)}, {(#1 + #2 * \t/360) * sin(\t)});
+      \end{scope}
+    }}}
+
+% 绘制垂足符号
+% 代码来自：https://tex.stackexchange.com/questions/21752/
+\tikzset{
+  right angle quadrant/.code={
+    \pgfmathsetmacro\quadranta{{1,1,-1,-1}[#1-1]}     % Arrays for selecting quadrant
+    \pgfmathsetmacro\quadrantb{{1,-1,-1,1}[#1-1]}},
+  right angle quadrant=1, % Make sure it is set, even if not called explicitly
+  right angle length/.code={\def\rightanglelength{#1}},   % Length of symbol
+  right angle length=2ex, % Make sure it is set...
+  right angle symbol/.style n args={3}{
+    insert path={
+        let \p0 = ($(#1)!(#3)!(#2)$) in     % Intersection
+            let \p1 = ($(\p0)!\quadranta*\rightanglelength!(#3)$), % Point on base line
+            \p2 = ($(\p0)!\quadrantb*\rightanglelength!(#2)$) in % Point on perpendicular line
+            let \p3 = ($(\p1)+(\p2)-(\p0)$) in  % Corner point of symbol
+        (\p1) -- (\p3) -- (\p2)
+    }
+  }
+}
