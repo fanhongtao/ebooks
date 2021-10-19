@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,scale=0.8]
+    \draw [->] (-7,0) -- (8,0);
+    \foreach \x in {-6,...,7} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+
+   \pic [transform shape] {infinity interval={start=-5, stop=7.5}};
+   \pic [transform shape] [blue] {interval={start=-2, stop=7, height=0.7}};
+   \pic [transform shape] [red] {infinity interval={start=-1, stop=-6.5, height=0.5}};
+   \pic [transform shape] [red] {infinity interval={start=4, stop=7.5, height=0.5}};
+
+    \foreach \x in {-5, -2, -1, 4, 7} {
+        \draw [fill=white] (\x, 0) circle(0.1);
+    }
+\end{tikzpicture}

@@ -1,0 +1,352 @@
+\subsection{不等式的解法}\label{subsec:3-4}
+
+在初中，已经学习过一元一次不等式、一元二次不等式的解法。我们知道，
+如果两个不等式的解集相等，那么这两个不等式就叫做\textbf{同解不等式}。
+一个不等式变形为另一个不等式时，如果这两个不等式是同解不等式，那么这种变形叫做\textbf{不等式的同解变形}。
+
+我们知道，任何一个一元一次不等式，经过不等式的同解变形后，都可以化成
+$$ ax > b \quad (a \neq 0) $$
+的形式。很明显，
+如果 $a > 0$， 那么 $ax > b$ 的解集是 $\left\{\, x \,\middle|\, x > \dfrac{b}{a} \,\right\}$；
+如果 $a < 0$， 那么 $ax > b$ 的解集是 $\left\{\, x \,\middle|\, x < \dfrac{b}{a} \,\right\}$。
+
+\liti 解不等式 $2(x + 1) + \dfrac{x - 2}{3} > \dfrac{7x}{2} - 1$。
+
+\jie 两边都乘以 $6$，得
+\begin{gather*}
+    12(x + 1) + 2(x - 2) > 21x - 6 , \\
+    14x + 8 > 21x - 6 \text{。}
+\end{gather*}
+
+移项，整理后，得
+$$ -7x > -14 \text{。} $$
+
+两边都除以 $-7$，得解集
+$$ \{ x \mid x < 2 \} \text{。} $$
+
+我们知道，几个不等式可以组成不等式组。这几个不等式的解集的交集，就是这个不等式组的解集。
+
+\liti 解不等式组
+$$\begin{cases}
+    10 + 2x \leqslant 11 + 3x, \\
+    5x - 3 \leqslant 4x - 1, \\
+    7 + 2x > 6 + 3x \text{。}
+\end{cases}$$
+
+\jie 因为各不等式的解集分别是
+\begin{align*}
+    & \{ x \mid x \geqslant -1 \}, \\
+    & \{ x \mid x \leqslant 2 \}, \\
+    & \{ x \mid x < 1 \},
+\end{align*}
+所以不等式组的解集是
+\begin{align*}
+        & \{ x \mid x \geqslant -1 \} \cap \{ x \mid x \leqslant 2 \} \cap \{ x \mid x < 1 \} \\
+    ={} & \{ x \mid -1 \leqslant x < 1 \} \text{。}
+\end{align*}
+
+我们知道，任何一个一元二次不等式，经过不等式的同解变形后，都可以化成
+$$ ax^2 + bx + c > 0 \text{，或} \; ax^2 + bx + c < 0 \quad (a > 0) $$
+的形式（这是因为，如果二次项系数小于零，两边乘以 $-1$，并把不等号改变方向，
+仍可化成上面两种形式之一，其中 $a > 0$）。
+
+一元二次不等式的解集与一元二次方程的根及二次函数的图象密切相关，如第 \pageref{yi-yuan-er-ci} 页表中所示。
+
+\begin{sidewaystable}[htbp]
+\begin{tabular}{|w{c}{5em}|*{4}{c|}}
+    \hline
+    \multicolumn{2}{|c|}{$\Delta = b^2 - 4ac$} & $\Delta > 0$ & $\Delta = 0$ & $\Delta < 0$ \mylabel{yi-yuan-er-ci} \\ \hline
+
+    \multicolumn{2}{|c|}{ \makecell{一元二次方程 \\ $ax^2 + bx + c = 0$ \\ $(a > 0)$ 的根} }
+        & \makecell{有两个相异实根 \\ $x_{1,\; 2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ \\ (取 $x_1 < x_2$)}
+        & \makecell{有两个相等的实根 \\ $x_1 = x_2 = -\dfrac{b}{2a}$ }
+        & 没有实根 \\ \hline
+
+    \multirow{2}{*}{ \makecell{一元二次 \\ 不等式的 \\ 解集} }
+        & $ax^2 + bx + c > 0 \quad (a > 0)$
+        & \makecell{
+            $\begin{aligned}
+                    & \{ x \mid x < x_1 \} \cup \{ x \mid x > x_2 \} \\
+                ={} & \{ x \mid x < x_1 \text{，或}\; x > x_2 \}
+            \end{aligned}$}
+        & $\left\{\, x \,\middle|\, x \neq -\dfrac{b}{2a} \,\right\}$
+        & 实数集 $R$ \\ \cline{2-5}
+
+    %...
+        & \rule{0pt}{2em} $ax^2 + bx + c < 0 \quad (a > 0)$
+        & $\{ x \mid x_1 < x < x_2 \}$
+        & $\kongji$
+        & $\kongji$ \\ \hline
+
+    \multicolumn{2}{|c|}{ \makecell[c]{ 二次函数 \\ $y = ax^2 + bx + c \quad (a > 0)$ 的图象 } }
+        & \includegraphics{../pic-pdf/fang-cheng-1}
+        & \includegraphics{../pic-pdf/fang-cheng-2}
+        & \includegraphics{../pic-pdf/fang-cheng-3} \\ \hline
+
+\end{tabular}
+\end{sidewaystable}
+
+\liti 解不等式 $-x^2 + 5x > 6$。
+
+\jie 原不等式可变形为
+$$ x^2 - 5x + 6 < 0 \text{。} $$
+
+因为 $\Delta = (-5)^2 -4 \times 1 \times 6 = 1 > 0$，解方程
+$$ x^2 -5x + 6 = 0 ,$$
+得
+$$ x_1 = 2,\quad x_2 = 3, $$
+所以原不等式的解集是 $\left\{\, x \,\middle|\, 2 < x < 3 \,\right\}$。
+
+\liti 解不等式 $\dfrac{x^2 - 3x + 2}{x^2 - 2x -3} < 0$。
+
+\textbf{解法一：} 这个不等式的解集是下面的不等式组 (I) 及不等式组 (II) 的解集的并集：
+
+\begin{minipage}{0.1\textwidth}
+    (I)
+\end{minipage}
+\begin{minipage}{0.85\textwidth}
+    \begin{numcases}{}
+        x^2 - 3x + 2 > 0 \text{，} \tag{1} \\
+        x^2 - 2x - 3 < 0 \text{；} \tag{2}
+    \end{numcases}
+\end{minipage}
+
+\begin{minipage}{0.1\textwidth}
+    (II)
+\end{minipage}
+\begin{minipage}{0.85\textwidth}
+    \begin{numcases}{}
+        x^2 - 3x + 2 < 0 \text{，} \tag{3} \\
+        x^2 - 2x - 3 > 0 \text{。} \tag{4}
+    \end{numcases}
+\end{minipage}
+
+先解不等式组(I)。
+
+解不等式(1)，得解集
+$$ \left\{\, x \,\middle|\, x < 1 \; \text{，或} \; x > 2 \,\right\} \text{，} $$
+
+解不等式(2)，得解集
+$$ \left\{\, x \,\middle|\, -1 < x < 3 \,\right\} \text{。} $$
+
+因此，不等式组(I)的解集是
+\begin{align*}
+        & \left\{\, x \,\middle|\, x < 1 \; \text{，或} \; x > 2 \,\right\} \cap \left\{\, x \,\middle|\, -1 < x < 3 \,\right\} \\
+    ={} & \left\{\, x \,\middle|\, -1 < x < 1 \; \text{，或} \; 2 < x < 3 \,\right\} \text{。}
+\end{align*}
+
+这个不等式组的解集可以在数轴上表示如下（图 \ref{fig:3-1}）
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch3-3-1}
+    \caption{}\label{fig:3-1}
+\end{figure}
+
+再解不等式组(II)。
+
+解不等式(3)，得解集
+$$ \left\{\, x \,\middle|\, 1 < x < 2 \,\right\} \text{，} $$
+
+解不等式(4)，得解集
+$$ \left\{\, x \,\middle|\, x < -1 \; \text{或} \; x > 3 \,\right\} \text{。} $$
+
+因此，不等式组(II)的解集是 $\kongji$ （图 \ref{fig:3-2}）
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch3-3-2}
+    \caption{}\label{fig:3-2}
+\end{figure}
+
+由此可知，原不等式的解集是
+$$ \left\{\, x \,\middle|\, -1 < x < 1 \; \text{，或} \; 2 < x < 3 \,\right\} \text{。} $$
+
+
+\textbf{解法二：} 原不等式可化为 $\dfrac{(x - 1)(x - 2)}{(x - 3)(x + 1)} < 0$。
+
+把分子分母各因式的根按照从小到大的顺序排列，可得下表：
+
+\begin{tabular}{|c|*{5}{p{1.5cm}<{\centering}|}}
+    \hline
+    \diagbox[width=3cm]{因式}{各因式的 \\ 值的符号}{根} & \multicolumn{5}{c|}{
+        \begin{tabular}{l}
+            \begin{tabular}{m{0.8cm}*{4}{m{1.5cm}}}
+                \rule{0pt}{2.1em} & & & \\
+                &-1&1&2&3 \\
+            \end{tabular}
+            \\
+            \begin{tabular}{m{1.08cm}|*{3}{m{1.5cm}|}}
+                & & & \\
+            \end{tabular}
+        \end{tabular}
+    } \\ \hline
+    $x + 1$ & $-$ & $+$ & $+$ & $+$ & $+$ \\ \hline
+    $x - 1$ & $-$ & $-$ & $+$ & $+$ & $+$ \\ \hline
+    $x - 2$ & $-$ & $-$ & $-$ & $+$ & $+$ \\ \hline
+    $x - 3$ & $-$ & $-$ & $-$ & $-$ & $+$ \\ \hline
+    \rule{0pt}{2em}$\dfrac{(x - 1)(x - 2)}{(x - 3)(x + 1)}$ & $+$ & $-$ & $+$ & $-$ & $+$ \\ \hline
+\end{tabular}
+
+由上表可知，原不等式的解集是
+$$ \left\{\, x \,\middle|\, -1 < x < 1 \; \text{，或} \; 2 < x < 3 \,\right\} \text{。} $$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{解下列不等式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$15 - 9x < 10 - 4x$；}
+
+    \xiaoxiaoti{$3(x + 5) - \dfrac{2}{3} \geqslant 2x - \dfrac{3}{2}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列不等式组；}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{cases}
+        4x - 4 > 3x + 1, \\
+        3x + 1 > 2x - 1;
+    \end{cases}$}
+
+    \xiaoxiaoti{$\begin{cases}
+        x - 2 > 0, \\
+        x - 5 < 0, \\
+        2x + 3 > 0 \text{。}
+    \end{cases}$}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{画出 $y = x^2 - 5x + 6$ 的图象，根据图象求满足下列各式的未知数 $x$ 的值的集合：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$x^2 - 5x + 6 = 0$；} & \xiaoxiaoti{$x^2 - 5x + 6 > 0$；} \\
+        \xiaoxiaoti{$x^2 -5x + 6 < 0$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列不等式：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$\dfrac{1}{2}x^2 - 4x + 6 < 0$；}{$x^2 - x > x(2x - 3) + 2$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解不等式 $\dfrac{x^2 - 3x + 2}{x^2 - 7x + 12} > 0$。}
+
+\xiaoti{解不等式 $x(x-3)(x+1)(x-2) < 0$ 。}
+
+\end{xiaotis}
+
+
+\vspace{2em}
+\liti 解不等式 $\sqrt{3x - 4} - \sqrt{x - 3} > 0$。
+
+\jie 因为根式必须有意义，所以先解不等式组
+$$\begin{cases}
+    3x - 4 \geqslant 0, \\
+    x - 3 \geqslant 0,
+\end{cases}$$
+解得
+\begin{gather*}
+    \left\{\, x \,\middle|\, x \geqslant 3 \,\right\} \text{。} \tag{1}
+\end{gather*}
+
+另一方面，原不等式可化为
+$$ \sqrt{3x - 4} > \sqrt{x - 3} \text{。}$$
+
+两边平方，得
+$$ 3x - 4 > x - 3 \text{。} $$
+
+移项，整理后得
+\begin{gather*}
+    \left\{\, x \,\middle|\, x > \dfrac{1}{2} \,\right\} \text{。} \tag{2}
+\end{gather*}
+
+由 (1)，(2) 取交集，得原不等式的解集是
+$$ \{ x \mid x \geqslant 3 \} \text{。} $$
+
+
+\liti 解不等式 $2^{x^2 - 2x - 3} < \left( \dfrac{1}{2} \right)^{3(x - 1)}$
+
+\jie 原不等式可化为
+\begin{gather*}
+    2^{x^2 - 2x - 3} < 2^{-3(x - 1)} \text{。} \tag{1}
+\end{gather*}
+
+因为 (1) 式中所含的以 $2 \; (2 \in (1, +\infty))$ 为底的指数函数是增函数，所以 (1) 式成立当且仅当
+\begin{gather*}
+    x^2 - 2x - 3 < -3(x - 1) \tag{2}
+\end{gather*}
+成立。将 (2) 式整理后，得
+$$ x^2 + x - 6 < 0 \text{。} $$
+
+解这个不等式，得解集
+$$ \{ x \mid -3 < x < 2  \} \text{。} $$
+所以原不等式的解集是
+$$ \{ x \mid -3 < x < 2  \} \text{。} $$
+
+
+\liti 解不等式
+$$ \log_{\frac{1}{3}} (x^2 - 3x - 4) > \log_{\frac{1}{3}} (2x + 10) \text{。} $$
+
+\jie 因为真数应该是正数，所以未知数应满足
+\begin{align*}
+    & x^2 - 3x - 4 > 0 , \\
+    & 2x + 10 > 0 \text{。}
+\end{align*}
+
+另一方面，因为不等式中所含的以 $\dfrac{1}{3} \; \left( \dfrac{1}{3} \in (0, 1) \right)$ 为底的
+对数函数是减函数，所以原不等式等价于不等式组
+\begin{numcases}{}
+    x^2 - 3x - 4 < 2x + 10, \tag{1} \\
+    x^2 - 3x - 4 > 0,       \tag{2} \\
+    2x + 10 > 0 \text{。}   \tag{3}
+\end{numcases}
+
+解不等式 (1) ，得解集
+$$ \{ x \mid -2 < x < 7 \} ;$$
+
+解不等式 (2) ，得解集
+$$ \{ x \mid x < -1 \text{，或}\; x > 4 \} ;$$
+
+解不等式 (3) ，得解集
+$$ \{ x \mid x > -5 \} \text{。} $$
+
+所以原不等式的解集是
+\begin{align*}
+        & \{ x \mid -2 < x < 7 \} \cap \{ x \mid x < -1 \text{，或}\; x > 4 \} \cap \{ x \mid x > -5 \} \\
+    ={} & \{ x \mid -2 < x < -1 \text{，或}\; 4 < x < 7 \} \text{。}
+\end{align*}
+
+这个不等式的解集可以在数轴上表示如图 \ref{fig:3-3} 。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch3-3-3}
+    \caption{}\label{fig:3-3}
+\end{figure}
+
+\lianxi
+
+解下列不等式：
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{$5^x + 5^{x - 1} < 750$。}
+
+\xiaoti{$\sqrt{3x + 1} > \sqrt{2x + 1} - 1$。}
+
+\xiaoti{$\left( \dfrac{4}{5} \right)^{(\log_2 x)^2 - 1} < \left( \dfrac{4}{5} \right)^{2(2 + \log_{\sqrt{2}} x)}$。}
+
+\end{xiaotis}
+

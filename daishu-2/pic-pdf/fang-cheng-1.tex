@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{tikz,amsmath}
+\usetikzlibrary{arrows.meta, intersections}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\begin{document}
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->, name path=x] (-2, 0) -- (3, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1.5) -- (0, 3) node[anchor=east] {$y$};
+    \node [font=\footnotesize, fill=white, inner sep=0pt] at (0.3, -0.3) {$O$};
+
+    \draw[name path=curl,domain=-1.1:1.6,smooth,samples=50] plot (\x, {2*\x*\x - \x - 1});
+    \fill [name intersections={of=x and curl}]
+        (intersection-1) circle (2pt) node[above left] {$x_1$}
+        (intersection-2) circle (2pt) node[above right] {$x_2$};
+\end{tikzpicture}
+\end{document}
