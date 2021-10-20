@@ -1,0 +1,204 @@
+\subsection{含有绝对值的不等式}\label{subsec:3-5}
+
+我们知道，在实数值 $R$ 中：
+
+$$|a| = \begin{cases}
+    a & (\text{当} a > 0 \text{时}), \\
+    0 & (\text{当} a = 0 \text{时}), \\
+    -a & (\text{当} a < 0 \text{时}) \text{。}
+\end{cases}$$
+
+根据实数的绝对值的定义，我们有
+\begin{align*}
+    & |ab| = |a| \cdot |b|, \\
+    & \left| \dfrac{a}{b} \right| = \dfrac{|a|}{|b|} \quad (b \neq 0) \text{。}
+\end{align*}
+
+如果 $a$ 是一个正数，那么
+\begin{gather*}
+    |x| < a \iff x^2 < a^2 \iff -a < x < a, \\
+    |x| > a \iff x^2 > a^2 \iff x > a \text{，或} \; x < -a \text{。}
+\end{gather*}
+
+即在 $a > 0$ 时，
+\begin{gather*}
+    |x| < a \iff -a < x < a, \\
+    |x| > a \iff x > a \text{，或} \; x < -a \text{。}
+\end{gather*}
+
+这个结果从图 \ref{fig:3-4} 也可看出。
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{8cm}
+        \centering
+        \input{../pic/ds2-ch3-3-4-1}
+        \caption*{$|x| < a$ \\ (1)}
+    \end{minipage}
+    \quad
+    \begin{minipage}{8cm}
+        \centering
+        \input{../pic/ds2-ch3-3-4-2}
+        \caption*{$|x| > a$ \\ (2)}
+    \end{minipage}
+    \caption{}\label{fig:3-4}
+\end{figure}
+
+关于和差的绝对值与绝对值的和差，还有下面的性质：
+
+\begin{theorem} \label{theorem:bds-jdz-1}
+    $|a| - |b| \leqslant |a + b| \leqslant |a| + |b|$。
+\end{theorem}
+
+\zhengming \; $\because \begin{aligned}[t]
+    & -|a| \leqslant a \leqslant |a|, \\
+    & -|b| \leqslant b \leqslant |b|, \\
+\end{aligned}$
+
+$\therefore \quad -(|a| + |b|) \leqslant a + b \leqslant |a| + |b|,$\\
+即
+\begin{equation*}
+    |a + b| \leqslant |a| + |b| \text{。} \tag{1}
+\end{equation*}
+
+又
+$$ a = a + b - b, \quad |-b| = |b|, $$
+
+由 (1) 得
+$$ |a| = |a + b - b| \leqslant |a + b| + |-b|, $$
+即
+\begin{equation*}
+    |a| - |b| \leqslant |a + b| \text{。} \tag{2}
+\end{equation*}
+
+由 (1)，(2) 得
+$$ |a| - |b| \leqslant |a + b| \leqslant |a| + |b| \text{。} $$
+
+\begin{corollary} \label{corollary:bds-jdz-1-1}
+    $|a_1 + a_2 + \cdots + a_n| \leqslant |a_1| + |a_2| + \cdots + |a_n|$
+\end{corollary}
+
+
+\begin{theorem} \label{theorem:bds-jdz-2}
+    $|a| - |b| \leqslant |a - b| \leqslant |a| + |b|$。
+\end{theorem}
+
+\zhengming 由定理 \ref{theorem:bds-jdz-1} 可知
+$$ |a| - |-b| \leqslant |a + (-b)| \leqslant |a| + |-b|,$$
+即
+$$ |a| - |b| \leqslant |a - b| \leqslant |a| + |b| \text{。} $$
+
+
+\liti 解不等式 $|2x - 3| < 5$ 。
+
+\jie 这个不等式等价于
+$$ -5 < 2x - 3 < 5 \text{。} $$
+
+解这个不等式，得解集
+$$ \{ x \mid -1 < x < 4 \} \text{。} $$
+
+
+\liti 解不等式 $|x^2 - 5x| > 6$。
+
+\jie 这个不等式等价于
+\begin{equation*}
+    x^2 - 5x > 6, \tag{1}
+\end{equation*}
+或
+\begin{equation*}
+    x^2 - 5x < -6 \text{。} \tag{2}
+\end{equation*}
+
+解不等式 (1) ，得 $x < -1$，或 $x > 6$；
+
+解不等式 (2) ，得 $2 < x < 3$。
+
+因此，原不等式的解集是
+\begin{gather*}
+    \{ x \mid x < -1 \} \cup \{ x \mid 2 < x < 3 \} \cup \{ x \mid x > 6 \} \\
+    = \{ x \mid x < -1 \text{，或}\; 2 < x < 3 \text{，或}\; x > 6 \} \text{。}
+\end{gather*}
+
+
+\liti 已知 $|x| < \dfrac{\epsilon}{3}$，$|y| < \dfrac{\epsilon}{6}$，$|z| < \dfrac{\epsilon}{9}$，求证
+$$ |x + 2y - 3z| < \epsilon \text{。} $$
+
+\zhengming \; $\because \begin{aligned}[t]
+        & |x + 2y - 3z| \leqslant |x| + |2y| + |-3z| \\
+    ={} & |x| + |2| \cdot |y| + |-3| \cdot |z| = |x| + 2|y| + 3|z| \text{。}
+\end{aligned}$
+
+$\because$ \quad $|x| < \dfrac{\epsilon}{3}$，$|y| < \dfrac{\epsilon}{6}$，$|z| < \dfrac{\epsilon}{9}$，
+
+$\therefore \quad |x| + 2|y| + 3|z| < \dfrac{\epsilon}{3} + \dfrac{2\epsilon}{6} + \dfrac{3\epsilon}{9} = \epsilon$。
+
+$\therefore \quad |x + 2y - 3z| < \epsilon$。
+
+
+\liti 已知 $|a| < 1$，$|b| < 1$，求证
+$$ \left| \dfrac{a + b}{1 + ab} \right| < 1 \text{。} $$
+
+\zhengming \; $\because \begin{aligned}[t]
+    \left| \dfrac{a + b}{1 + ab} \right| < 1 & \iff \dfrac{(a + b)^2}{(1 + ab)^2} < 1 \\
+    & \iff a^2 + 2ab + b^2 < 1 + 2ab + a^2b^2 \\
+    & \iff 1 - a^2 - b^2 + a^2b^2 > 0 \\
+    & \iff (1 - a^2)(1 - b^2) > 0 \text{。}
+\end{aligned}$
+
+因为 $|a| < 1$，$|b| < 1$，$(1 - a^2)(1 - b^2) > 0$ 成立，所以
+$$ \left| \dfrac{a + b}{1 + ab} \right| < 1 \text{。} $$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）下列各式是不是恒等式，为什么？}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$|-a| = a$；} & \xiaoxiaoti{$\sqrt{(-a)^2} = a$；} \\
+        \xiaoxiaoti{$|b - a| = |a - b|$；} & \xiaoxiaoti{$\left| \dfrac{1}{a^2} \right| = \dfrac{1}{a^2}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{（口答）用不带绝对值符号的式子表示下列各式：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$|(-a)^2|$；} & \xiaoxiaoti{$|a^2 - 1| \quad (0 < a < 1)$；} \\
+        \xiaoxiaoti{$\dfrac{|ab^3 + a^3b|}{a^2 + b^2} \quad (ab < 0)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{设 $\epsilon > 0$，解不等式 $|x - A| < \epsilon$，并且在数轴上表示出它的解集。}
+
+
+\xiaoti{已知 $|A - a| < \dfrac{\epsilon}{2}$，$|B - b| < \dfrac{\epsilon}{2}$，求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$|(A + B) - (a + b)| < \epsilon$；}
+
+    \xiaoxiaoti{$|(A - B) - (a - b)| < \epsilon$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列不等式：}
+\begin{xiaoxiaotis}
+
+    %\renewcommand\arraystretch{1.5}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$|x - 2| < 5$；} & \xiaoxiaoti{$|2x - 3| \leqslant 1$；} \\
+        \xiaoxiaoti{$|x^2 -3x - 1| > 3$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+

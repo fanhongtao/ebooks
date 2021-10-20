@@ -208,8 +208,11 @@
 \setlength{\defaultParIndent}{\parindent}
 
 %----------------------------------
-\newtheorem{theorem}{定理}
-\newtheorem{corollary}{推论}
+\newtheorem{theorem}{定理}[subsection]
+\renewcommand\thetheorem{\arabic{theorem}}
+\newtheorem{corollary}{推论}[theorem]
+\renewcommand\thecorollary{\arabic{corollary}}
+
 
 %----------------------------------
 \newcounter{mylabel}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth,scale=0.8]
+    \pgfmathsetmacro{\a}{1}
+    \draw [->] (-4,0) -- (4,0);
+    \foreach \x/\txt in {-\a/-a, 0/0, \a/a} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\txt$};
+    }
+
+   \pic [transform shape] {interval={start=-\a, stop=\a}};
+
+    \foreach \x in {-\a, \a} {
+        \draw [fill=white] (\x, 0) circle(0.1);
+    }
+\end{tikzpicture}
