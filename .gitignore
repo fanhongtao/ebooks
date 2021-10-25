@@ -8,3 +8,4 @@
 *.pdf
 *.toc
 temp/
+.vscode/
