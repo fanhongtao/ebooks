@@ -1,0 +1,120 @@
+\subsubsection{二元线性方程组的解的讨论}
+
+我们已经知道当系数行列式 $D$ 不等于零时，方程组 \eqref{eq:fcz-1} 的解可以由公式 \eqref{eq:ejhls-9} 给出。
+公式 \eqref{eq:ejhls-9} 告诉我们方程组 \eqref{eq:fcz-1} 的解是根据方程组的系数与常数项得出的。
+在一般情况下，方程组 \eqref{eq:fcz-1} 是不是一定有解，如果有解，有多少解，
+这些问题是否也可以不经过解方程组而根据方程组的系数与常数项来作出回答呢？
+下面，我们分情况进行论。
+\footnote{
+    这里，我们是对形如
+    $$\begin{cases}
+        a_1x + b_1y = c_1, \\
+        a_2x + b_2y = c_2
+    \end{cases}$$
+    的方程组进行讨论，对其中的系数不加任何限制。
+}
+
+\begin{enumerate}[(1), nosep]
+    \item $D \neq 0$。方程组 \eqref{eq:fcz-1} 有唯一解。
+    \item $D = 0$，但 $D_x$，$D_y$ 不全为零。不失一般性，设 $D_x \neq 0$，即 $c_1b_2 - c_2b_1 \neq 0$。这时无论 $x$ 取什么值，
+        \begin{equation*}
+            (a_1b_2 - a_2b_1)x = c_1b_2 - c_2b_1 \text{；} \tag{3}
+        \end{equation*}
+        都不成立，即方程 \eqref{eq:ejhls-3} 无解，因此方程组 \eqref{eq:fcz-1} 也无解。
+    \item $D = D_x = D_y = 0$。
+    \begin{enumerate}[(1$^\circ$), nosep]
+        \item $a_1$，$a_2$，$b_1$，$b_2$ 不全为零。不失一般性，设 $b_1 \neq 0$，则由
+            $$ a_1b_2 - a_2b_1 = 0, \quad c_1b_2 - c_2b_1 = 0, $$
+            可得
+            $$ a_2 = \dfrac{a_1b_2}{b_1}, \quad c_2 = \dfrac{c_1b_2}{b_1}, $$
+            因此方程 \eqref{eq:ejhls-2} 成为
+            $$ \dfrac{a_1b_2}{b_1}x + b_2y = \dfrac{c_1b_2}{b_1}, $$
+            即
+            $$ \dfrac{b_2}{b_1}(a_1x + b_1y) = \dfrac{b_2}{b_1} \cdot c_1 \text{。} $$
+            所以方程 \eqref{eq:ejhls-1} 的解就是方程 \eqref{eq:ejhls-2} 的解。
+            因为方程 \eqref{eq:ejhls-1} 有无穷多解，所以方程组 \eqref{eq:fcz-1} 也有无穷多解。
+
+        \item $a_1 = a_2 = b_1 = b_2 = 0$。这时，
+            如果 $c_1$，$c_2$ 不全为零，方程组 \eqref{eq:fcz-1} 无解；
+            如果 $c_1 = c_2 = 0$，则 $x$，$y$ 的任意一组值都同时适合方程 \eqref{eq:ejhls-1} 和方程 \eqref{eq:ejhls-2}，
+            因此方程组 \eqref{eq:fcz-1} 有无穷多解。
+    \end{enumerate}
+\end{enumerate}
+
+归纳以上讨论，可以得出：
+
+\textbf{
+二元线性方程组
+$$\begin{cases}
+    a_1x + b_1y = c_1, \\
+    a_2x + b_2y = c_2
+\end{cases}$$
+\begin{enumerate}[(1), nosep]
+    \item 当 $D \neq 0$ 时有唯一解；
+    \item 当 $D = 0$，但 $D_x$，$D_y$ 不全为零时，无解；
+    \item 当 $D = D_x = D_y = 0$ 时，有以下两种情况：
+    \begin{enumerate}[(1$^\circ$), nosep]
+        \item $a_1$，$a_2$，$b_1$，$b_2$ 不全为零，或 $a_1 = a_2 = b_1 = b_2 = c_1 = c_2 = 0$ 时，有无穷多解；
+        \item $a_1 = a_2 = b_1 = b_2 = 0$，但 $c_1$，$c_2$ 不全为零时，无解。
+    \end{enumerate}
+\end{enumerate}
+}
+
+
+\setcounter{cntliti}{2}
+\liti 解关于 $x$，$y$ 的线性方程组，并进行讨论：
+$$\begin{cases}
+    mx + y = m + 1, \\
+    x + my = 2m \text{。}
+\end{cases}$$
+
+解： $\begin{aligned}[t]
+    D & = \begin{vmatrix}
+            m \quad & 1 \\
+            1 \quad & m
+        \end{vmatrix} = m^2 - 1 = (m + 1)(m - 1), \\
+    D_x & = \begin{vmatrix}
+            m+1 \quad & 1 \\
+            2m  \quad & m
+        \end{vmatrix} = m(m + 1) - 2m = m^2 - m = m(m - 1), \\
+    D_y & = \begin{vmatrix}
+            m \quad & m+1 \\
+            1 \quad & 2m
+        \end{vmatrix} = 2m^2 - (m + 1) = 2m^2 - m - 1 = (2m + 1)(m - 1) \text{。} \\
+\end{aligned}$
+
+\begin{enumerate}[(1), nosep]
+    \item 当 $m \neq -1$，$m \neq 1$ 时，$D \neq 0$，方程组有唯一解，它的解集是 $\left\{ \left( \dfrac{m}{m+1}, \; \dfrac{2m+1}{m+1} \right) \right\}$。
+    \item 当 $m = -1$ 时，$D = 0$，$D_x = 2 \neq 0$，方程组无解，它的解集是 $\kongji$。
+    \item 当 $m = 1$ 时，$D = D_x = D_y = 0$，$a_1 = 1 \neq 0$，方程组有无穷多解。\\
+          这时，方程组是
+          $$\begin{cases}
+              x + y = 2, \\
+              x + y = 2 \text{。}
+          \end{cases}$$
+          如果引进参数 $t$，令 $x = t$，那么  $y = 2 - t$，方程组的解集可以表示为 $\{ (t, 2 - t) \mid  t \text{为任意常数} \}$。
+\end{enumerate}
+
+注意：由于引进参数的方法不同，上例情况 (3) 中方程组的解集的表示形式不是唯一的。
+例如如果令 $y = t$，那么方程组的解集就可表示为 $\{ (2 - t, t) \mid  t \text{为任意常数} \}$，等等。
+
+\lianxi
+
+解下列关于 $x$，$y$ 的方程组，并进行讨论：
+
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{
+        $\begin{cases}
+            x + (m - 1)y = 1,\\
+            (m - 1)x + y = 2;
+        \end{cases}$
+    }{
+        $\begin{cases}
+            4x + my = m,\\
+            mx + y = 1 \text{。}
+        \end{cases}$
+    }
+
+\end{xiaoxiaotis}
+

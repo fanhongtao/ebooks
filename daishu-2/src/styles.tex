@@ -11,7 +11,7 @@
 
 \usepackage{cases}
 \usepackage{diagbox}
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \usepackage{etoolbox}
 \usepackage{float}
 \usepackage{geometry}
@@ -208,6 +208,7 @@
 \setlength{\defaultParIndent}{\parindent}
 
 %----------------------------------
+\renewcommand{\theequation}{\arabic{equation}}
 \newtheorem{theorem}{定理}[subsection]
 \renewcommand\thetheorem{\arabic{theorem}}
 \newtheorem{corollary}{推论}[theorem]
@@ -217,3 +218,21 @@
 %----------------------------------
 \newcounter{mylabel}
 \newcommand{\mylabel}[1]{\refstepcounter{mylabel} \label{#1}}
+
+%
+% 创建计数器及其同名的生成label的命令模板。
+% 参数1: 计数器的名称（同时也是为计数器创建 label 的命令的名字）
+% 参数2: （可选）\the<counter> 显示的内容。默认为 \arabic{<counter>}
+% 参数3: （可选）上级计数器的名字。默认为没有上级计数器。
+\NewDocumentCommand{\createcounter}{m o o}{
+  \IfValueTF{#3}
+    {\newcounter{#1}[#3]}
+    {\newcounter{#1}}
+  \IfValueT{#2}
+    {\expandafter\renewcommand\csname the#1\endcsname{#2}}
+  \expandafter\newcommand\expandafter*\csname #1\endcsname[1]{
+    \refstepcounter{#1} \label{##1}}
+}
+
+\createcounter{fangchengzu}[\Roman{fangchengzu}]
+
