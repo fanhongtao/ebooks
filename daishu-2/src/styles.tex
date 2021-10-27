@@ -22,6 +22,7 @@
 
 \usepackage{longdivision}
 \usepackage{makecell}
+\usepackage{mathtools}
 \usepackage{multirow}
 \usepackage{polynom}
 \usepackage[figuresright]{rotating}
@@ -208,6 +209,7 @@
 \setlength{\defaultParIndent}{\parindent}
 
 %----------------------------------
+\counterwithin*{equation}{subsection}
 \renewcommand{\theequation}{\arabic{equation}}
 \newtheorem{theorem}{定理}[subsection]
 \renewcommand\thetheorem{\arabic{theorem}}

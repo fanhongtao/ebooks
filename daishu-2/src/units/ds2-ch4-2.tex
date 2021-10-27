@@ -1,0 +1,142 @@
+\subsection{三阶行列式}\label{subsec:4-2}
+
+把九个数排成三行三列，在这九个数的两旁各加一条竖线，如
+\begin{equation}
+    \begin{vmatrix}
+        a_1 \quad & b_1 \quad & c_1 \\
+        a_2 \quad & b_2 \quad & c_2 \\
+        a_3 \quad & b_3 \quad & c_3
+    \end{vmatrix}, \label{eq:sjhls-1}
+\end{equation}
+并且规定它表示
+\begin{equation}
+    a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2 \text{。} \label{eq:sjhls-2}
+\end{equation}
+这时，\eqref{eq:sjhls-1} 式叫做 \textbf{三阶行列式}。三阶行列式有三行三列。
+
+三阶行列式也可按对角线法则展开。如图：
+
+\begin{figure}[H]
+    \centering
+    \input{../pic/ds2-ch4-f-b}
+\end{figure}
+
+
+图中实线上三个元素的积，添上正号；虚线上三个元素的积，添上负号。容易看出三阶行列式就是这六项的和。
+
+\liti 用对角线法则计算行列式
+$$\begin{vmatrix*}[r]
+    3 \quad & -2 \quad & 1 \\
+    -2 \quad & 1 \quad & 3 \\
+    2 \quad & 0 \quad & -2
+\end{vmatrix*} \text{。} $$
+
+\jie $\begin{aligned}[t]
+    & \begin{vmatrix*}[r]
+        3 \quad & -2 \quad & 1 \\
+        -2 \quad & 1 \quad & 3 \\
+        2 \quad & 0 \quad & -2
+    \end{vmatrix*} \\
+    ={} & 3 \times 1 \times (-2) + (-2) \times 0 \times 1 + 2 \times (-2) \times 3 \\
+        & -2 \times 1 \times 1 - (-2) \times (-2) \times (-2) - 3 \times 0 \times 3 \\
+    ={} & -6 + 0 -12 - 2 + 8 - 0 = -12 \text{。}
+\end{aligned}$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用对角线法则计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{
+            $\begin{vmatrix*}[r]
+                1 \quad & 5 \quad & 7 \\
+                2 \quad & 0 \quad & -4 \\
+                -3 \quad & 1 \quad & 6
+            \end{vmatrix*}$；
+        } & \xiaoxiaoti{
+            $\begin{vmatrix*}[r]
+                2 \quad & -3 \quad & 1 \\
+                4 \quad & -1 \quad & 7 \\
+                -1 \quad & 5 \quad & 2
+            \end{vmatrix*}$。
+        }
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{用对角线法则展开下列行列式，并化简：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{
+            $\begin{vmatrix}
+                0 \quad & a \quad & b \\
+                a \quad & 0 \quad & c \\
+                b \quad & c \quad & 0
+            \end{vmatrix}$；
+        } & \xiaoxiaoti{
+            $\begin{vmatrix}
+                x \quad & y \quad & z \\
+                z \quad & x \quad & y \\
+                y \quad & z \quad & x
+            \end{vmatrix}$；
+        }\\
+
+        \xiaoxiaoti{
+            $\begin{vmatrix*}[r]
+                a \quad & b \quad & c \\
+                2a \quad & 2b \quad & 2c \\
+                m \quad & n \quad & l
+            \end{vmatrix*}$；
+        } & \xiaoxiaoti{
+            $\begin{vmatrix*}[r]
+                1 \quad & -a \quad & -b \\
+                a \quad & 1 \quad & -c \\
+                b \quad & c \quad & 1
+            \end{vmatrix*}$。
+        }
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{计算下列各题中的两个行列式；比较计算结果，得出每两个行列式之间的关系式。}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{
+        $\begin{vmatrix}
+            1 \quad & 2 \quad & 3 \\
+            4 \quad & 5 \quad & 6 \\
+            7 \quad & 8 \quad & 9
+        \end{vmatrix}$，
+        $\begin{vmatrix}
+            1 \quad & 4 \quad & 7 \\
+            2 \quad & 5 \quad & 8 \\
+            3 \quad & 6 \quad & 9
+        \end{vmatrix}$；
+    }
+
+    \xiaoxiaoti{
+        $\begin{vmatrix*}[r]
+            3 \quad & 0 \quad & 4 \\
+            1 \quad & 1 \quad & 2 \\
+            5 \quad & -7 \quad & 11
+        \end{vmatrix*}$，
+        $\begin{vmatrix*}[r]
+            3 \quad & 0 \quad & 4 \\
+            k \quad & k \quad & 2k \\
+            5 \quad & -7 \quad & 11
+        \end{vmatrix*}$。
+    }
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
