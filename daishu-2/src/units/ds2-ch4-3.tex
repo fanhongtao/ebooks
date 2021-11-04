@@ -1,0 +1,596 @@
+\subsection{三阶行列式的性质}\label{subsec:4-3}
+
+为了更好地掌握和运用行列式这一工具，简化行列式的计算，我们以三阶行列式为例，来学习行列式的一些性质。
+
+\begin{theorem} \label{theorem:sjhls-1}
+    把行列式的各行变为应的列（就是第 $i$ 行变为第 $i$ 列，$i = 1,\; 2,\; 3$）， 所得行列式与原行列式等。即
+    $$
+    \begin{vmatrix*}
+        a_1 \quad & b_1 \quad & c_1 \\
+        a_2 \quad & b_2 \quad & c_2 \\
+        a_3 \quad & b_3 \quad & c_3
+    \end{vmatrix*}
+    =
+    \begin{vmatrix*}
+        a_1 \quad & a_2 \quad & a_3 \\
+        b_1 \quad & b_2 \quad & b_3 \\
+        c_1 \quad & c_2 \quad & c_3
+    \end{vmatrix*} \text{。}
+    $$
+\end{theorem}
+
+
+\zhengming 按对角线法则分别把上式两边的行列式展开。
+
+$\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$，
+
+$\begin{vmatrix*}
+    a_1 \quad & a_2 \quad & a_3 \\
+    b_1 \quad & b_2 \quad & b_3 \\
+    c_1 \quad & c_2 \quad & c_3
+\end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$
+
+$\therefore \quad
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*}
+=
+\begin{vmatrix*}
+    a_1 \quad & a_2 \quad & a_3 \\
+    b_1 \quad & b_2 \quad & b_3 \\
+    c_1 \quad & c_2 \quad & c_3
+\end{vmatrix*} \text{。}$
+
+由定理 \ref{theorem:sjhls-1} 可知，对于行列式的行成立的定理对于列也一定成立；反过来也对。
+
+
+\begin{theorem} \label{theorem:sjhls-2}
+    把行列式的两行（或两列）对调， 所得行列式与原行列式绝对值相等，符号相反。
+\end{theorem}
+
+\zhengming 我们先证明把行列式的第二行与第三行对调时，结论成立，即
+$$
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_3 \quad & b_3 \quad & c_3 \\
+    a_2 \quad & b_2 \quad & c_2
+\end{vmatrix*}
+=
+- \begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+
+用对角线法则展开上式两边的行列式：
+
+$\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$，
+
+$\begin{aligned}
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_3 \quad & b_3 \quad & c_3 \\
+    a_2 \quad & b_2 \quad & c_2
+\end{vmatrix*}
+    &= a_1b_3c_2 + a_3b_2c_1 + a_2b_1c_3 - a_2b_3c_1 - a_3b_1c_2 - a_1b_2c_3 \\
+    &= -(a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \text{。}
+\end{aligned}$
+
+$\therefore \quad
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_3 \quad & b_3 \quad & c_3 \\
+    a_2 \quad & b_2 \quad & c_2
+\end{vmatrix*}
+=
+- \begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$
+
+其他情况可类似证明。
+
+\begin{corollary} \label{corollary:sjhls-2-1}
+    如果行列式某两行（或两列）的对应元素相同，那么行列式等于零。
+\end{corollary}
+
+\zhengming 假设行列式 $D$ 有两行（或两列） 的对应元素相同，把这两行（或两列）对调， 得出的仍是原行列式 $D$。
+但根据定理 \ref{theorem:sjhls-2}，对调后的行列式应等于 $-D$ 。所以有
+$$ D = -D \text{。} $$
+由此得出
+$$ D = 0 \text{。} $$
+
+
+
+\begin{theorem} \label{theorem:sjhls-3}
+    把行列式的某一行（或一列） 的所有元素同乘以某个数 $k$，等于用数 $k$ 乘原行列式。
+\end{theorem}
+
+\zhengming 我们先证明把行列式的第二行的元素乘以 $k$ 时，结论成立，即
+$$
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    ka_2 \quad & kb_2 \quad & kc_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*}
+=
+k \begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+
+用对角线法则展开上式左边的行列式，得
+\begin{align*}
+    \begin{vmatrix*}
+        a_1 \quad & b_1 \quad & c_1 \\
+        ka_2 \quad & kb_2 \quad & kc_2 \\
+        a_3 \quad & b_3 \quad & c_3
+    \end{vmatrix*}
+        &= ka_1b_2c_3 + ka_2b_3c_1 + ka_3b_1c_2 - ka_3b_2c_1 - ka_2b_1c_3 - ka_1b_3c_2 \\
+        &= k(a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \\
+        &= k \begin{vmatrix*}
+                a_1 \quad & b_1 \quad & c_1 \\
+                a_2 \quad & b_2 \quad & c_2 \\
+                a_3 \quad & b_3 \quad & c_3
+            \end{vmatrix*} \text{。}
+\end{align*}
+因此结论成立。
+
+其他情况可类似证明。
+
+
+\begin{corollary} \label{corollary:sjhls-3-1}
+    行列式的某一行（或一列）有公因子时，可以把公因子提到行列式外面。
+\end{corollary}
+
+
+\liti 计算
+$$
+\begin{vmatrix*}
+    \dfrac{1}{2} \quad & \dfrac{1}{2} \quad & -1 \\[1em]
+    \dfrac{1}{3} \quad & \dfrac{2}{3} \quad & -\dfrac{2}{3} \\[1em]
+    \dfrac{2}{5} \quad & \dfrac{3}{5} \quad & -\dfrac{1}{5}
+\end{vmatrix*} \text{。}
+$$
+
+\jie\shangyihang\begin{flalign*}
+    \hspace{4em} & \begin{vmatrix*}
+            \dfrac{1}{2} \quad & \dfrac{1}{2} \quad & -1 \\[1em]
+            \dfrac{1}{3} \quad & \dfrac{2}{3} \quad & -\dfrac{2}{3} \\[1em]
+            \dfrac{2}{5} \quad & \dfrac{3}{5} \quad & -\dfrac{1}{5}
+          \end{vmatrix*} \\
+    ={} & (-1) \times \dfrac{1}{2} \times \dfrac{1}{3} \times \dfrac{1}{5} \times
+        \begin{vmatrix*}
+            1 \quad & 1 \quad & 2 \\
+            1 \quad & 2 \quad & 2 \\
+            2 \quad & 3 \quad & 1
+        \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}}\\
+    ={} & -\dfrac{1}{30} \times (2 + 6 + 4 - 8 - 1 - 6) \\
+    ={} & -\dfrac{1}{30} \times (-3) = \dfrac{1}{10} \text{。}
+\end{flalign*}
+
+
+从例1 可以看出，根据定理 \ref{theorem:sjhls-3} 的推论\ref{corollary:sjhls-3-1}，
+把行列式中某一行（ 或一列） 的公因子提到行列式外面， 往往可以简化行列式的计算。
+
+
+\begin{corollary} \label{corollary:sjhls-3-2}
+    如果行列式某一行（或一列）的所有元素都是零，那么行列式等于零。
+\end{corollary}
+
+
+\begin{theorem} \label{theorem:sjhls-4}
+    如果行列式某两行（ 或两列） 的对应元素成比例，那么行列式等于零。
+\end{theorem}
+
+\zhengming 设行列式的第二列与第一列的对应元素成比例（比例因子为 $k$），即行列式有如下形式
+$$
+\begin{vmatrix*}
+    a_1 \quad & ka_1 \quad & c_1 \\
+    a_2 \quad & ka_2 \quad & c_2 \\
+    a_3 \quad & ka_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+
+根据定理 \ref{theorem:sjhls-3} 的推论 \ref{corollary:sjhls-3-1}
+和定理 \ref{theorem:sjhls-2} 的 \hyperref[corollary:sjhls-2-1]{推论}，我们有
+
+$$
+\begin{vmatrix*}
+    a_1 \quad & ka_1 \quad & c_1 \\
+    a_2 \quad & ka_2 \quad & c_2 \\
+    a_3 \quad & ka_3 \quad & c_3
+\end{vmatrix*}
+= k
+\begin{vmatrix*}
+    a_1 \quad & a_1 \quad & c_1 \\
+    a_2 \quad & a_2 \quad & c_2 \\
+    a_3 \quad & a_3 \quad & c_3
+\end{vmatrix*}
+= 0 \text{。}
+$$
+因此结论成立。
+
+其他情况可类似证明。
+
+
+\begin{theorem} \label{theorem:sjhls-5}
+    如果行列式的某一行（或一列）的元素都是二项式，那么这个行列式等于把这些二项式
+    各取一项作成相应行（或列) 而其余行（或列）不变的两个行列式的和。
+\end{theorem}
+
+\zhengming 设行列式的第一行元素都是二项式，即行列式有如下形式：
+$$
+\begin{vmatrix*}
+    a_1 + a_1' \quad & b_1 + b_1' \quad & c_1 + c_1' \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+
+把行列式用对角线法则展开，得
+
+\begin{align*}
+    & \begin{vmatrix*}
+        a_1 + a_1' \quad & b_1 + b_1' \quad & c_1 + c_1' \\
+        a_2 \quad & b_2 \quad & c_2 \\
+        a_3 \quad & b_3 \quad & c_3
+    \end{vmatrix*} \\
+    ={} & (a_1 + a_1')b_2c_3 + a_2b_3(c_1 + c_1')
+         + a_3(b_1 + b_1')c_2 - a_3b_2(c_1 + c_1')
+         - a_2(b_1 + b_1')c_3 - (a_1 + a_1')b_3c_2 \\
+    ={} & (a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \\
+        & + (a_1'b_2c_3 + a_2b_3c_1' + a_3b_1'c_2 - a_3b_2c_1' - a_2b_1'c_3 - a_1'b_3c_2) \\
+    ={} & \begin{vmatrix*}
+            a_1 \quad & b_1 \quad & c_1 \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+        \end{vmatrix*}
+      + \begin{vmatrix*}
+            a_1' \quad & b_1' \quad & c_1' \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+        \end{vmatrix*} \text{。}
+\end{align*}
+因此结论成立。
+
+其他情况可类似证明。
+
+\liti 求证
+$$
+\begin{vmatrix*}
+    1 \quad & x^2 \quad & a^2 + x^2 \\
+    1 \quad & y^2 \quad & a^2 + y^2 \\
+    1 \quad & z^2 \quad & a^2 + z^2
+\end{vmatrix*} = 0 \text{。}
+$$
+
+\zhengming\shangyihang\begin{flalign*}
+    \hspace{5em} & \begin{vmatrix*}
+                    1 \quad & x^2 \quad & a^2 + x^2 \\
+                    1 \quad & y^2 \quad & a^2 + y^2 \\
+                    1 \quad & z^2 \quad & a^2 + z^2
+                \end{vmatrix*} \\
+    ={} & \begin{vmatrix*}
+            1 \quad & x^2 \quad & a^2 \\
+            1 \quad & y^2 \quad & a^2 \\
+            1 \quad & z^2 \quad & a^2
+        \end{vmatrix*}+
+        \begin{vmatrix*}
+            1 \quad & x^2 \quad & x^2 \\
+            1 \quad & y^2 \quad & y^2 \\
+            1 \quad & z^2 \quad & z^2
+        \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-5}} \\
+    ={} & 0 \text{。} && \text{(\nameref{theorem:sjhls-4} 和 \nameref{corollary:sjhls-2-1})}
+\end{flalign*}
+
+
+
+\begin{theorem} \label{theorem:sjhls-6}
+    把行列式某一行（或一列）的所有元素同乘以一个数 $k$，加到另一行（或另一列）的
+    对应元素上， 所得行列式与原行列式相等。
+\end{theorem}
+
+\zhengming 把行列式
+$$
+\begin{vmatrix*}
+    a_1 \quad & b_1 \quad & c_1 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*}
+$$
+的第二行的元素乘以 $k$，加到第一行的对应元素上，得
+$$
+\begin{vmatrix*}
+    a_1 + ka_2 \quad & b_1 + kb_2 \quad & c_1 + kc_2 \\
+    a_2 \quad & b_2 \quad & c_2 \\
+    a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+
+根据 \nameref{theorem:sjhls-5} 和 \nameref{theorem:sjhls-4}，可以推出：
+\begin{align*}
+      & \begin{vmatrix*}
+            a_1 + ka_2 \quad & b_1 + kb_2 \quad & c_1 + kc_2 \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+        \end{vmatrix*} \\
+    ={} & \begin{vmatrix*}
+            a_1 \quad & b_1 \quad & c_1 \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+          \end{vmatrix*}
+        + \begin{vmatrix*}
+            ka_2 \quad & kb_2 \quad & kc_2 \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+          \end{vmatrix*} \\
+    ={} & \begin{vmatrix*}
+            a_1 \quad & b_1 \quad & c_1 \\
+            a_2 \quad & b_2 \quad & c_2 \\
+            a_3 \quad & b_3 \quad & c_3
+          \end{vmatrix*} \text{。}
+\end{align*}
+因此结论成立。
+
+其他情况可类似证明。
+
+由 \hyperref[xiti-8]{习题八} 的 \hyperref[xiti-8-2]{第 2 题} 可知，三阶行列式的上述性质，对二阶行列式同样成立。
+
+
+\liti 利用行列式的性质，计算：
+
+\twoInLine[16em]{(1) \quad $\begin{aligned}
+    \begin{vmatrix*}[r]
+        3 \quad & 2 \quad & 6 \\
+        8 \quad & 10 \quad & 9 \\
+        6 \quad & -2 \quad & 21
+    \end{vmatrix*}
+\end{aligned}$；}{(2)\quad $\begin{aligned}
+    \begin{vmatrix*}[r]
+        10 \quad & -2 \quad & 7 \\
+        -15 \quad & 3 \quad & 2 \\
+        -5 \quad & 4 \quad & 9
+    \end{vmatrix*}
+\end{aligned}$。}
+
+\jie
+
+\begin{flalign*}
+    \hspace{4em} (1) \begin{vmatrix*}[r]
+            3 \quad & 2 \quad & 6 \\
+            8 \quad & 10 \quad & 9 \\
+            6 \quad & -2 \quad & 21
+        \end{vmatrix*}
+    &= 3 \times 2 \times \begin{vmatrix*}[r]
+            3 \quad &  1 \quad & 2 \\
+            8 \quad &  5 \quad & 3 \\
+            6 \quad & -1 \quad & 7
+        \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
+    &= 6 \times \begin{vmatrix*}[r]
+            3 \quad &  1 + 2 \quad & 2 \\
+            8 \quad &  5 + 3 \quad & 3 \\
+            6 \quad & -1 + 7 \quad & 7
+        \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
+    &= 6 \times \begin{vmatrix*}[r]
+            3 \quad & 3 \quad & 2 \\
+            8 \quad & 8 \quad & 3 \\
+            6 \quad & 6 \quad & 7
+        \end{vmatrix*} \\
+    &= 0 \text{。} && \text{\eqnameref{corollary:sjhls-2-1}}
+\end{flalign*}
+
+
+\begin{flalign*}
+    \hspace{4em} (2) \begin{vmatrix*}[r]
+            10 \quad & -2 \quad & 7 \\
+            -15 \quad & 3 \quad & 2 \\
+            -5 \quad & 4 \quad & 9
+        \end{vmatrix*}
+    &= 5 \times \begin{vmatrix*}[r]
+            2 \quad & -2 \quad & 7 \\
+            -3 \quad & 3 \quad & 2 \\
+            -1 \quad & 4 \quad & 9
+        \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
+    &= 5 \times \begin{vmatrix*}[r]
+            2 \quad & -2 + 2 \quad & 7 \\
+            -3 \quad & 3 + (-3) \quad & 2 \\
+            -1 \quad & 4 + (-1) \quad & 9
+        \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
+    &= 5 \times \begin{vmatrix*}[r]
+            2 \quad & 0 \quad & 7 \\
+            -3 \quad & 0 \quad & 2 \\
+            -1 \quad & 3 \quad & 9
+        \end{vmatrix*} \\
+    &= 5 \times (-63 - 12) = -375 \text{。}
+\end{flalign*}
+
+
+从上述例题可以看出，在计算行列式时，如果能直接观察出行列式有两行（或两列）
+的对应元素成比例或能化到成比例的形式，那么立即可以判断这个行列式等于零。
+一般地，可以先提出行列式中某一行（或一列）的各元素的公因子，
+或运用 \nameref{theorem:sjhls-6} 把三阶行列式中某一行（或一列）的两个
+元素变为零，从而简化计算。
+
+
+\liti 利用行列式的性质，证明：
+
+\twoInLine[16em]{(1) \quad $\begin{aligned}
+    \begin{vmatrix*}[r]
+        0 \quad & a \quad & b \\
+        -a \quad & 0 \quad & c \\
+        -b \quad & -c \quad & 0
+    \end{vmatrix*} = 0
+\end{aligned}$；}{(2) \quad $\begin{aligned}
+    \begin{vmatrix*}[r]
+        a + b \quad & c \quad & -a \\
+        a + c \quad & b \quad & -c \\
+        b + c \quad & a \quad & -b
+    \end{vmatrix*}
+    =
+    \begin{vmatrix*}[r]
+        b \quad & a \quad & c \\
+        a \quad & c \quad & b \\
+        c \quad & b \quad & a
+    \end{vmatrix*}
+\end{aligned}$。
+}
+
+\zhengming
+
+\begin{flalign*}
+    \hspace{4em} (1) \begin{vmatrix*}[r]
+        0 \quad & a \quad & b \\
+        -a \quad & 0 \quad & c \\
+        -b \quad & -c \quad & 0
+    \end{vmatrix*} &= \begin{vmatrix*}[r]
+            0 \quad & -a \quad & -b \\
+            a \quad & 0 \quad & -c \\
+            b \quad & c \quad & 0
+        \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-1}} \\
+    &= - \begin{vmatrix*}[r]
+            0 \quad & a \quad & b \\
+            -a \quad & 0 \quad & c \\
+            -b \quad & -c \quad & 0
+        \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}}
+\end{flalign*}
+
+$\therefore \quad
+\begin{vmatrix*}[r]
+    0 \quad & a \quad & b \\
+    -a \quad & 0 \quad & c \\
+    -b \quad & -c \quad & 0
+\end{vmatrix*} = 0 \text{。}
+$
+
+\begin{flalign*}
+    \hspace{4em} (2) \begin{vmatrix*}[r]
+            a + b \quad & c \quad & -a \\
+            a + c \quad & b \quad & -c \\
+            b + c \quad & a \quad & -b
+        \end{vmatrix*} &= \begin{vmatrix*}[r]
+            b \quad & c \quad & -a \\
+            a \quad & b \quad & -c \\
+            c \quad & a \quad & -b
+        \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
+    &= - \begin{vmatrix*}[r]
+            b \quad & c \quad & a \\
+            a \quad & b \quad & c \\
+            c \quad & a \quad & b
+        \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
+    &= \begin{vmatrix*}[r]
+            b \quad & a \quad & c \\
+            a \quad & c \quad & b \\
+            c \quad & b \quad & a
+        \end{vmatrix*} \text{。} && \text{\eqnameref{theorem:sjhls-2}}
+\end{flalign*}
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{利用行列式的性质，计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{vmatrix*}[r]
+                1 \quad & 3 \quad & 4 \\
+                10 \quad & 1 \quad & 11 \\
+                7 \quad & 1 \quad & 8
+            \end{vmatrix*}$；}
+        & \xiaoxiaoti{$\begin{vmatrix*}[r]
+                3 \quad & 49 \quad & 4 \\
+                2 \quad & 28 \quad & 4 \\
+                4 \quad & 35 \quad & 8
+            \end{vmatrix*}$；} \\[3em]
+        \xiaoxiaoti{$\begin{vmatrix*}[r]
+                \dfrac{2}{3} \quad & \dfrac{2}{3} \quad & 3 \\
+                7 \quad & 5 \quad & 14 \\
+                \dfrac{1}{3} \quad & \dfrac{1}{5} \quad & \dfrac{4}{15}
+            \end{vmatrix*}$；}
+        & \xiaoxiaoti{$\begin{vmatrix*}[r]
+                1 \quad & 4 \quad & 7 \\
+                2 \quad & 5 \quad & 8 \\
+                3 \quad & 6 \quad & 9
+            \end{vmatrix*}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{利用行列式的性质，计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{vmatrix*}[r]
+                a \quad & a \quad & a \\
+                -a \quad & a \quad & x \\
+                -a \quad & -a \quad & x
+            \end{vmatrix*}$；}
+        & \xiaoxiaoti{$\begin{vmatrix*}[r]
+                1 \quad & a \quad & b + c \\
+                1 \quad & b \quad & c + a \\
+                1 \quad & c \quad & a + b
+            \end{vmatrix*}$；} \\
+        \xiaoxiaoti{$\begin{vmatrix*}
+                1 \quad & 1 \quad & 1 \\
+                1 \quad & 1 + b \quad & 1 \\
+                1 \quad & 1 \quad & 1 + c
+            \end{vmatrix*}$；}
+        & \xiaoxiaoti{$\begin{vmatrix*}[r]
+                a - b \quad & b - c \quad & c - a \\
+                b - c \quad & c - a \quad & a - b \\
+                c - a \quad & a - b \quad & b - c
+            \end{vmatrix*}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{不展开行列式，证明下列等式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{
+        $\begin{vmatrix*}
+            1 \quad & 1 \quad & 1 \\
+            p \quad & q \quad & p + q \\
+            q \quad & p \quad & 0
+        \end{vmatrix*} = 0$；
+    }
+
+    \xiaoxiaoti{
+        $\begin{vmatrix*}[r]
+            -a+b+c \quad & a \quad & -b \\
+            a-b+c \quad & b \quad & -c \\
+            a+b-c \quad & c \quad & -a
+        \end{vmatrix*} = \begin{vmatrix*}[r]
+            b \quad & a \quad & c \\
+            c \quad & b \quad & a \\
+            a \quad & c \quad & b
+        \end{vmatrix*}$。
+    }
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+

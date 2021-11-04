@@ -211,11 +211,51 @@
 %----------------------------------
 \counterwithin*{equation}{subsection}
 \renewcommand{\theequation}{\arabic{equation}}
-\newtheorem{theorem}{定理}[subsection]
-\renewcommand\thetheorem{\arabic{theorem}}
-\newtheorem{corollary}{推论}[theorem]
-\renewcommand\thecorollary{\arabic{corollary}}
+%\newtheorem{theorem}{定理}[subsection]
+%\renewcommand\thetheorem{\arabic{theorem}}
+%\newtheorem{corollary}{推论}[theorem]
+%\renewcommand\thecorollary{\arabic{corollary}}
 
+\makeatletter
+% 创建指定名字的label
+% 参数1: label的id
+% 参数2: label的名字
+\newcommand{\namedlabel}[2]{%
+  \@bsphack
+  \protected@write\@auxout{}{%
+    \string\newlabel{#1}{%
+        {\@currentlabel}%
+        {\thepage}%
+        {{#2}}%\@currentlabelname
+        {\@currentHref}{}%
+      }%
+  }%
+  \@bsphack
+}%
+\makeatother
+
+% 创建定理环境
+% 参数1: 环境名称
+% 参数2: 环境的标题
+% 参数3: 环境的counter对应的父counter
+% 参数4: 创建label时，所写内容的模板（一般要包含环境名称对应计数器）
+% 注：前3个参数，就是 \newtheorem{foo3}{bar}[section] 中的三个参数。
+\newcommand{\createtheorem}[4]{
+  \newcounter{#1}[#3]
+  \newtheorem{inner#1}[#1]{#2}
+  \expandafter\renewcommand\csname the#1\endcsname{\arabic{#1}}
+  \newenvironment{#1}{
+    \expandafter\renewcommand{\label}[1]{\namedlabel{####1}{#4}}
+    \begin{inner#1}
+  }{
+    \end{inner#1}
+  }
+}
+
+\createtheorem{theorem}{定理}{section}{定理 \thetheorem}
+\createtheorem{corollary}{推论}{theorem}{定理 \thetheorem 推论 \thecorollary}
+
+\newcommand{\eqnameref}[1]{(\nameref{#1})}
 
 %----------------------------------
 \newcounter{mylabel}
