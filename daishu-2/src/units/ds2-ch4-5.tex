@@ -1,0 +1,288 @@
+\subsection{三元线性方程组}\label{subsec:4-5}
+
+一个三元线性方程组，当其中方程的个数与未知数的个数相同时，它的一般形式是
+
+\fangchengzu{eq:fcz-2}(II)
+\begin{minipage}[c]{0.90\textwidth}
+    \begin{numcases}{}
+        a_1 x + b_1 y + c_1 z = d_1 \text{，} \label{eq:syxxfcz-1} \\
+        a_2 x + b_2 y + c_2 z = d_2 \text{，} \label{eq:syxxfcz-2} \\
+        a_3 x + b_3 y + c_3 z = d_3 \text{。} \label{eq:syxxfcz-3}
+    \end{numcases}
+\end{minipage}
+
+如果当 $x = x_1$，$y = y_1$，$z = z_1$ 时，方程组 \eqref{eq:fcz-2} 中的每个方程
+左右两边的值相等，那么 $x = x_1$，$y = y_1$，$z = z_1$ 叫做
+\textbf{方程组 \eqref{eq:fcz-2} 的一个解}，简记为 $(x_1, y_1, z_1)$。
+方程组 \eqref{eq:fcz-2} 的所有的解构成的集合叫做
+\textbf{方程组 \eqref{eq:fcz-2} 的解集}。
+\footnote{对一般 $n$ 元线性方程组的解与解集，也可作相应定义。}
+
+我们现在利用第 \ref{subsec:4-4} 节的两个定理来导出方程组 \eqref{eq:fcz-2} 的解。
+
+用 $D$ 表示方程组 \eqref{eq:fcz-2} 的系数行列式，即
+$$
+D =
+\begin{vmatrix*}
+	a_1 \quad & b_1 \quad & c_1 \\
+	a_2 \quad & b_2 \quad & c_2 \\
+	a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} \text{。}
+$$
+用元素 $a_1$，$a_2$，$a_3$ 对应的代数余子式 $A_1$，$A_2$，$A_3$ 分别乘方程
+\eqref{eq:syxxfcz-1}，\eqref{eq:syxxfcz-2}，\eqref{eq:syxxfcz-3} 的两边，得
+\begin{gather*}
+    a_1A_1x + b_1A_1y + c_1A_1z = d_1A_1 \text{，} \\
+    a_2A_2x + b_2A_2y + c_2A_2z = d_2A_2 \text{，} \\
+    a_3A_3x + b_3A_3y + c_3A_3z = d_3A_3 \text{。}
+\end{gather*}
+把上面三式的等号两边分别相加，得
+\begin{align}
+    &(a_1A_1 + a_2A_2 + a_3A_3)x
+        + (b_1A_1 + b_2A_2 + b_3A_3)y
+        + (c_1A_1 + c_2A_2 + c_3A_3)z \notag \\
+    &= d_1A_1 + d_2A_2 + d_3A_3 \text{。} \label{eq:syxxfcz-4}
+\end{align}
+根据第 \ref{subsec:4-4} 节的 \nameref{theorem:sjhlszk-1} 和 \nameref{theorem:sjhlszk-2}，
+\eqref{eq:syxxfcz-4} 中 $x$ 的系数是 $D$，而 $y$，$z$ 的系数都是零，
+所以 \eqref{eq:syxxfcz-4} 式成为
+\begin{equation}
+    D \cdot x = d_1A_1 + d_2A_2 + d_3A_3 \text{。} \label{eq:syxxfcz-5}
+\end{equation}
+
+用类似的方法，从方程组 \eqref{eq:fcz-2} 中消去 $x$，$z$，或者 $x$，$y$，分别得到
+\begin{align}
+    D \cdot y &= d_1B_1 + d_2B_2 + d_3B_3 \text{，} \label{eq:syxxfcz-6} \\
+    D \cdot z &= d_1C_1 + d_2C_2 + d_3C_3 \text{。} \label{eq:syxxfcz-7}
+\end{align}
+令
+\begin{align*}
+    D_x &= d_1A_1 + d_2A_2 + d_3A_3
+        =   \begin{vmatrix*}
+                d_1 \quad & b_1 \quad & c_1 \\
+                d_2 \quad & b_2 \quad & c_2 \\
+                d_3 \quad & b_3 \quad & c_3
+            \end{vmatrix*} \text{，} \\
+    D_y &= d_1B_1 + d_2B_2 + d_3B_3
+        =   \begin{vmatrix*}
+                a_1 \quad & d_1 \quad & c_1 \\
+                a_2 \quad & d_2 \quad & c_2 \\
+                a_3 \quad & d_3 \quad & c_3
+            \end{vmatrix*} \text{，} \\
+    D_z &= d_1C_1 + d_2C_2 + d_3C_3
+        =   \begin{vmatrix*}
+                a_1 \quad & b_1 \quad & d_1 \\
+                a_2 \quad & b_2 \quad & d_2 \\
+                a_3 \quad & b_3 \quad & d_3
+            \end{vmatrix*} \text{，}
+\end{align*}
+$D_x$，$D_y$，$D_z$ 是把 $D$ 中第一、二、三列分别换成方程组 \eqref{eq:fcz-2} 的常数
+项列而得出的。这时 \eqref{eq:syxxfcz-5}，\eqref{eq:syxxfcz-6}，\eqref{eq:syxxfcz-7}
+式就可写成
+\begin{numcases}{}
+    D \cdot x = D_x \text{，} \label{eq:syxxfcz-8} \\
+    D \cdot y = D_y \text{，} \label{eq:syxxfcz-9} \\
+    D \cdot z = D_z \text{。} \label{eq:syxxfcz-10}
+\end{numcases}
+
+从上面的推导过程可知，如果方程组 \eqref{eq:fcz-2} 有解，这个解一定适合方程
+\eqref{eq:syxxfcz-8}，\eqref{eq:syxxfcz-9}，\eqref{eq:syxxfcz-10}。
+当 $D \neq 0$ 时，方程 \eqref{eq:syxxfcz-8}，\eqref{eq:syxxfcz-9}，\eqref{eq:syxxfcz-10}
+组成的方程组的唯一解是
+\begin{equation}
+    \begin{cases}
+        x = \dfrac{D_x}{D} \text{，} \\[1em]
+        y = \dfrac{D_y}{D} \text{，} \\[1em]
+        z = \dfrac{D_z}{D} \text{。}
+    \end{cases} \label{eq:syxxfcz-11}
+\end{equation}
+因此，当系数行列式 $D \neq 0$ 时，方程组 \eqref{eq:fcz-2} 如果有解，
+解只能有一个，并且可以写成 \eqref{eq:syxxfcz-11} 式的形式。
+
+现在来验证 \eqref{eq:syxxfcz-11} 式确是方程组 \eqref{eq:fcz-2} 的解。
+把 \eqref{eq:syxxfcz-11} 代入方程 \eqref{eq:syxxfcz-1} 的左边，我们有
+\begin{align*}
+    \text{左边} &= a_1\dfrac{D_x}{D} + b_1\dfrac{D_y}{D} + c_1\dfrac{D_z}{D} \\
+        &= \dfrac{a_1}{D}(d_1A_1 + d_2A_2 + d_3A_3)
+            + \dfrac{b_1}{D}(d_1B_1 + d_2B_2 + d_3B_3)
+            + \dfrac{c_1}{D}(d_1C_1 + d_2C_2 + d_3C_3) \\
+        &= \dfrac{1}{D}[(a_1A_1 + b_1B_1 + c_1C_1)d_1
+                        + (a_1A_2 + b_1B_2 + c_1C_2)d_2
+                        + (a_1A_3 + b_1B_3 + c_1C_3)d_3] \\
+        &= \dfrac{1}{D}[D \cdot d_1 + 0 \cdot d_2 + 0 \cdot d_3] \\
+        &= d_1 = \text{右边。}
+\end{align*}
+即 \eqref{eq:syxxfcz-11} 式适合方程 \eqref{eq:syxxfcz-1}。
+同样可以验证 \eqref{eq:syxxfcz-11} 分别适合方程 \eqref{eq:syxxfcz-2} 和方程 \eqref{eq:syxxfcz-3}。
+因此，\eqref{eq:syxxfcz-11} 式是方程组 \eqref{eq:fcz-2} 的解。
+
+综上所述，可得以下结论：
+
+\textbf{三元线性方程组 \eqref{eq:fcz-2}，当它的系数行列式 $D$ 不等于零时，
+有唯一解 $\left( \dfrac{D_x}{D},\; \dfrac{D_y}{D},\; \dfrac{D_z}{D} \right)$，
+其中 $D_x$，$D_y$，$D_z$ 是把系数行列式 $D$ 中第一、二、三列分别换成
+方程组 \eqref{eq:fcz-2} 的常数项列而得出的三个三阶行列式。}
+
+我们已经知道， 对二元线性方程组 \eqref{eq:fcz-1} 已有类似的结论。
+事实上，对 $n$ 元线性方程组都有类似的结论。
+这一结论称为\textbf{克莱姆法则}\footnote{克莱姆 (Gabriel Cramer, 1704 — 1752 年)，瑞士数学家。}
+上面只是对 $n = 3$ 的情况进行了证明。
+
+当方程组 \eqref{eq:fcz-2} 的系数行列式 $D = 0$ 时，方程组 \eqref{eq:fcz-2}
+或者无解，或者有无穷多解（证明从略）。例如方程组
+$$
+\begin{cases}
+    x + y + z = 1, \\
+    x + y + 2z = 2, \\
+    2x + 2y + 3z = 5,
+\end{cases} \qquad
+\begin{cases}
+    x + y + z = 1, \\
+    x + y + z = 2, \\
+    x + y + z = 3
+\end{cases}
+$$
+都没有解，而方程组
+$$
+\begin{cases}
+    x + y + z = 1, \\
+    x + 2y + 2z = 1, \\
+    y + z = 0,
+\end{cases} \qquad
+\begin{cases}
+    x + y + z = 1, \\
+    2x + 2y + 2z = 2, \\
+    4x + 4y + 4z = 4
+\end{cases}
+$$
+都有无穷多解。
+
+\liti 判断下列方程组是否有唯一解；如果有唯一解，根据克莱姆法则把解求出来。
+$$
+(1) \; \begin{cases}
+    2x + 3y - 5z = 3, \\
+    x - 2y + z = 0, \\
+    3x + y + 3z = 7,
+\end{cases} \qquad
+(2) \; \begin{cases}
+    x - 3y + z = 1, \\
+    2x + y - z = 0, \\
+    4x - 5y + z = 2 \text{。}
+\end{cases}
+$$
+
+\jie
+
+$
+    (1)\; D = \begin{vmatrix*}[r]
+        2 \quad & 3  \quad & -5 \\
+        1 \quad & -2 \quad & 1 \\
+        3 \quad & 1  \quad & 3
+    \end{vmatrix*} = \begin{vmatrix*}[r]
+        2 \quad & 7 \quad & -7 \\
+        1 \quad & 0 \quad & 0 \\
+        3 \quad & 7 \quad & 0
+    \end{vmatrix*} = - \begin{vmatrix*}[r]
+        7 \quad & -7 \\
+        7 \quad & 0
+    \end{vmatrix*} = -49 \neq 0 \text{，}
+$
+
+所以方程组有唯一解。由
+\begin{align*}
+    D_x &= \begin{vmatrix*}[r]
+            3 \quad & 3  \quad & -5 \\
+            0 \quad & -2 \quad & 1 \\
+            7 \quad & 1  \quad & 3
+        \end{vmatrix*} = \begin{vmatrix*}[r]
+            3 \quad & -7 \quad & -5 \\
+            0 \quad & 0  \quad & 1 \\
+            7 \quad & 7  \quad & 3
+        \end{vmatrix*} = - \begin{vmatrix*}[r]
+            3 \quad & -7 \\
+            7 \quad & 7
+        \end{vmatrix*} = -70 \text{，} \\
+    D_y &= \begin{vmatrix*}[r]
+            2 \quad & 3 \quad & -5 \\
+            1 \quad & 0 \quad & 1 \\
+            3 \quad & 7 \quad & 3
+        \end{vmatrix*} = \begin{vmatrix*}[r]
+            7 \quad & 3 \quad & -5 \\
+            0 \quad & 0 \quad & 1 \\
+            0 \quad & 7 \quad & 3
+        \end{vmatrix*} = 7 \begin{vmatrix*}[r]
+            0 \quad & 1 \\
+            7 \quad & 3
+        \end{vmatrix*} = -49 \text{，} \\
+    D_z &= \begin{vmatrix*}[r]
+            2 \quad & 3  \quad & 3 \\
+            1 \quad & -2 \quad & 0 \\
+            3 \quad & 1  \quad & 7
+        \end{vmatrix*} = \begin{vmatrix*}[r]
+            2 \quad & 7 \quad & 3 \\
+            1 \quad & 0 \quad & 0 \\
+            3 \quad & 7 \quad & 7
+        \end{vmatrix*} = - \begin{vmatrix*}[r]
+            7 \quad & 3 \\
+            7 \quad & 7
+        \end{vmatrix*} = -28 \text{，}
+\end{align*}
+得
+$$
+    \dfrac{D_x}{D} = \dfrac{-70}{-49} = \dfrac{10}{7},\quad
+    \dfrac{D_y}{D} = \dfrac{-49}{-49} = 1,\quad
+    \dfrac{D_z}{D} = \dfrac{-28}{-49} = \dfrac{4}{7} \text{。}
+$$
+
+方程组的解集是 $\left\{\, \left( \dfrac{10}{7},\; 1,\; \dfrac{4}{7} \right) \,\right\}$。
+
+$
+    (2)\; D = \begin{vmatrix*}[r]
+        1 \quad & -3 \quad & 1 \\
+        2 \quad & 1  \quad & -1 \\
+        4 \quad & -5 \quad & 1
+    \end{vmatrix*} = \begin{vmatrix*}[r]
+        1 \quad & -3 \quad & 1 \\
+        3 \quad & 2  \quad & 0 \\
+        3 \quad & -2 \quad & 0
+    \end{vmatrix*} = 0 \text{，}
+$
+方程组或者无解，或者有无穷多解。因此，方程组不可能是有唯一解。
+
+
+\lianxi
+
+判断下列方程组是否有唯一解；如果有唯一解，根据克莱姆法则把解求出来。
+
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{
+        $\begin{cases}
+            x - 2y + z = 0, \\
+            3x + y - 2z = 0, \\
+            7x + 6y + 7z = 100;
+        \end{cases}$
+    }{
+        $\begin{cases}
+            3x - 2y + 3z = 11, \\
+            4x - 3y + 2z = 9, \\
+            5x - 4y + z = 7;
+        \end{cases} $
+    }
+
+    \twoInLineXxt[16em]{
+        $\begin{cases}
+            2x + 3y + 4z = 2, \\
+            3x + 5y + 7z = -3, \\
+            x + 2y + 3z = 4;
+        \end{cases}$
+    }{
+        $\begin{cases}
+            x - 3y + z = 6, \\
+            2x + y + 2z = -2, \\
+            4x - 5y + 6z = 10 \text{。}
+        \end{cases} $
+    }
+
+\end{xiaoxiaotis}
+
