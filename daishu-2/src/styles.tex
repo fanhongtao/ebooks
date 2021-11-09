@@ -101,6 +101,17 @@
     {\addcontentsline{toc}{subsection}{#1}}
 }
 
+
+% （编号前）带星号的 subsection
+% 参数1: subsection 的标题
+\NewDocumentCommand{\starredsubsection}{o m}{
+  \refstepcounter{subsection}
+  \subsection*{*\thesubsection\quad #2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{subsection}{\makebox[0pt][r]{*}\thesubsection\qquad #2}}
+    {\addcontentsline{toc}{subsection}{\makebox[0pt][r]{*}\thesubsection\qquad #1}}
+}
+
 \newcounter{cntliti}[subsubsection]           % 例题的计数器
 \newcommand{\liti}{ % 例题的标题
   \stepcounter{cntliti}

@@ -1,0 +1,227 @@
+\starredsubsection[三元齐次线性方程组]{三元齐次线性方程组 \protect\footnote{凡标有“*”号的章、节，供第三类型和第一类型选修数学的学生选学。}}\label{subsec:4-6}
+
+常数项为零的三元线性方程组
+
+\fangchengzu{eq:fcz-3}(\Roman{fangchengzu})
+\begin{minipage}[c]{0.90\textwidth}
+    \begin{numcases}{}
+        a_1 x + b_1 y + c_1 z = 0 \text{，} \label{eq:syqcxxfcz-1} \\
+        a_2 x + b_2 y + c_2 z = 0 \text{，} \label{eq:syqcxxfcz-2} \\
+        a_3 x + b_3 y + c_3 z = 0 \text{。} \label{eq:syqcxxfcz-3}
+    \end{numcases}
+\end{minipage}
+叫做\textbf{三元齐次线性方程组}。显然，三元齐次线性方程组总有解 $(0,\; 0,\; 0)$，它叫做\textbf{零解}。
+下面进一步讨论方程组 \eqref{eq:fcz-3} 会不会有非零解的情况。用 $D$ 表示方程组 \eqref{eq:fcz-3} 的系数行列式。
+
+\begin{enumerate}[(1), nosep]
+    \item $D \neq 0$。方程组 \eqref{eq:fcz-3} 有唯一解 —— 零解。
+    \item $D = 0$。我们来证明方程组 \eqref{eq:fcz-3} 除零解外还有无穷多非零解。\footnote{
+        利用第 \ref{subsec:4-5} 节三元线性方程组 \eqref{eq:fcz-2} 当 $D=0$ 时或者无解或者
+        有无穷多解的结论，容易得出三元齐次线性方程组 \eqref{eq:fcz-3} 当 $D=0$ 时一定
+        有无穷多非零解。这里我们是从头证明，并同时给出了求解的方法。
+    }
+\end{enumerate}
+
+
+(1$^\circ$) $D$ 中至少有一个元素的代数余子式不等于零。不失一般性，设
+$$ C_3 = \begin{vmatrix*}
+    a_1 \quad & b_1 \\
+    a_2 \quad & b_2
+\end{vmatrix*} \neq 0 ,$$
+
+把方程 \eqref{eq:syqcxxfcz-1}， \eqref{eq:syqcxxfcz-2} 中含 $z$ 的项到等号右边，得
+$$\begin{cases}
+    a_1x + b_1y = -c_1z \text{，}\\
+    a_2x + b_2y = -c_2z \text{。}
+\end{cases}$$
+把这个方程组看成关于 $x$，$y$ 的线性方程组，解出
+$$\begin{cases}
+    x = \hspace{0.9em} \dfrac{
+            \begin{vmatrix*}
+                b_1 \quad & c_1 \\
+                b_2 \quad & c_2
+            \end{vmatrix*}
+        }{
+            \begin{vmatrix*}
+                a_1 \quad & b_1 \\
+                a_2 \quad & b_2
+            \end{vmatrix*}
+        }z = \dfrac{A_3}{C_3}z \text{，} \\[4em]
+    y = \dfrac{
+            -\begin{vmatrix*}
+                a_1 \quad & c_1 \\
+                a_2 \quad & c_2
+            \end{vmatrix*}
+        }{
+            \phantom{-}\begin{vmatrix*}
+                a_1 \quad & b_1 \\
+                a_2 \quad & b_2
+            \end{vmatrix*}
+        }z = \dfrac{B_3}{C_3}z \text{。}
+\end{cases}$$
+
+令
+$$ z = C_3t \quad (\text{t 为任意常数}) \text{，}$$
+得
+\begin{equation}
+    \begin{cases}
+        x = A_3t \text{，}\\
+        y = B_3t \text{，}\\
+        z = C_3t
+    \end{cases} \label{eq:syqcxxfcz-4}
+\end{equation}
+\eqref{eq:syqcxxfcz-4} 是方程 \eqref{eq:syqcxxfcz-1} 和方程 \eqref{eq:syqcxxfcz-2} 的所有公共解
+的一般表示形式。把 \eqref{eq:syqcxxfcz-4} 式代入方程 \eqref{eq:syqcxxfcz-3} 左边，得
+\begin{align*}
+    a_3x + b_3y + c_3z &= a_3A_3t + b_3B_3t + c_3C_3t \\
+        &= D \cdot t = 0,
+\end{align*}
+这说明 \eqref{eq:syqcxxfcz-4} 式又同时适合方程 \eqref{eq:syqcxxfcz-3}。
+因此，\eqref{eq:syqcxxfcz-4} 式表示方程组 \eqref{eq:fcz-3} 的解，
+而且包括方程组 \eqref{eq:fcz-3} 的所有的解。
+
+对任意的一个 $t$ 值， \eqref{eq:syqcxxfcz-4} 式都可确定方程组 \eqref{eq:fcz-3} 的一个解，
+$t$ 值不同，确定的解也不同，而只有 $t = 0$ 时它才是零解，所以方程组 \eqref{eq:fcz-3} 有无穷多非零解。
+
+
+(2$^\circ$)  $D$ 中每一个元素的代数余子式都等于零。这时，如果方程组 \eqref{eq:fcz-3}
+的每个系数都等于零，那么任意一组 $x$，$y$，$z$ 的值都是方程组 \eqref{eq:fcz-3} 的解，
+当然它有无穷多非零解。如果系数不全为零，不失一般性，设 $b_1 \neq 0$，由
+$$\begin{vmatrix*}
+    a_1 \quad & b_1 \\
+    a_2 \quad & b_2
+\end{vmatrix*} = 0, \qquad
+\begin{vmatrix*}
+    b_1 \quad & c_1 \\
+    b_2 \quad & c_2
+\end{vmatrix*} = 0,
+$$
+得
+$$a_1b_2 = a_2b_1, \qquad b_1c_2 = b_2c_1 \text{。}$$
+
+$\therefore \qquad a_2 = \dfrac{a_1b_2}{b_1}, \qquad c_2 = \dfrac{b_2c_1}{b_1} \text{。}$
+
+因此方程 \eqref{eq:syqcxxfcz-2} 就可由方程 \eqref{eq:syqcxxfcz-1} 两边同乘以常数 $\dfrac{b_2}{b_1}$ 得出。
+同样，方程 \eqref{eq:syqcxxfcz-3} 可由方程 \eqref{eq:syqcxxfcz-1} 两边同乘以常数 $\dfrac{b_3}{b_1}$ 得出。
+因此方程 \eqref{eq:syqcxxfcz-1} 的解就是方程组 \eqref{eq:fcz-3} 的解，所以方程组 \eqref{eq:fcz-3} 除零解
+外还有无穷多非零解。
+
+反过来， 如果方程组 \eqref{eq:fcz-3} 有非零解，那么它的系数行列式 $D = 0$。
+不然的话，即如果 $D \neq 0$，那么根据克莱姆法则，可推出方程组 \eqref{eq:fcz-3}
+只有零解，这和方程组 \eqref{eq:fcz-3} 有非零解相矛盾。
+
+综上所述， 可以得出：
+
+\begin{theorem}\label{theorem:syqcxxfcz-1}
+    齐次线性方程组 \eqref{eq:fcz-3} 有非零解的充要条件是它的系数行列式 $D$ 等于零。
+\end{theorem}
+
+
+\liti 解齐次线性方程组
+$$\begin{cases}
+    x + y + z = 0, \\
+    2x + 2y + 3z = 0, \\
+    4x + 4y + 5z = 0 \text{。}
+\end{cases}$$
+
+\jie 因为
+$$D = \begin{vmatrix*}
+	1 \quad & 1 \quad & 1 \\
+	2 \quad & 2 \quad & 3 \\
+	4 \quad & 4 \quad & 5
+\end{vmatrix*} = 0,$$
+所以方程组有无穷多解。
+
+又因为
+$$\begin{vmatrix*}
+    b_1 \quad & c_1 \\
+    b_2 \quad & c_2
+\end{vmatrix*} = \begin{vmatrix*}
+    1 \quad 1 \\
+    2 \quad 3
+\end{vmatrix*} = 1 \neq 0,
+$$
+把第一、第二两个方程中含 $x$ 的项移到等号右边，得
+$$\begin{cases}
+    y + z = -x, \\
+    2y + 3z = -2x \text{。}
+\end{cases}$$
+把这个方程组看成关于 $y$，$z$ 的线性方程组，解出
+$$\begin{cases}
+    y = -x, \\
+    z = 0 \text{。}
+\end{cases}$$
+令 $x = t$，那么 $y = -t$，$z = 0$。不管 $t$ 取什么值，$(t,\; -t,\; 0)$ 总适合第三个方程。
+
+因此，原方程组的解集是 $\{ (t,\; -t,\; 0) \mid  t\; \text{为任意常数} \}$。
+
+
+
+\liti 求方程组
+$$\begin{cases}
+    a_1x + b_1y + c_1 = 0, \\
+    a_2x + b_2y + c_2 = 0, \\
+    a_3x + b_3y + c_3 = 0
+\end{cases}$$
+有解的必要条件。
+
+\jie 如果这个方程组有解，那么至少存在一个有序数组 $(x_1,\; y_1)$，使得
+$$\begin{cases}
+    a_1x + b_1y + c_1 = 0, \\
+    a_2x + b_2y + c_2 = 0, \\
+    a_3x + b_3y + c_3 = 0,
+\end{cases}$$
+即
+$$\begin{cases}
+    a_1x + b_1y + c_1 \cdot 1 = 0, \\
+    a_2x + b_2y + c_2 \cdot 1 = 0, \\
+    a_3x + b_3y + c_3 \cdot 1 = 0 \text{。}
+\end{cases}$$
+也就是说，三元齐次线性方程组
+$$\begin{cases}
+    a_1x + b_1y + c_1z = 0, \\
+    a_2x + b_2y + c_2z = 0, \\
+    a_3x + b_3y + c_3z = 0
+\end{cases}$$
+有一个非零解 $(x_1,\; y_1,\; 1)$。根据齐次线性方程组有非零解的必要条件是它的系数行列式等于零，从而推出
+$$D = \begin{vmatrix*}
+	a_1 \quad & b_1 \quad & c_1 \\
+	a_2 \quad & b_2 \quad & c_2 \\
+	a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} = 0 \text{。}$$
+
+因此，原方程组
+$$\begin{cases}
+    a_1x + b_1y + c_1 = 0, \\
+    a_2x + b_2y + c_2 = 0, \\
+    a_3x + b_3y + c_3 = 0
+\end{cases}$$
+有解的必要条件是
+$$\begin{vmatrix*}
+	a_1 \quad & b_1 \quad & c_1 \\
+	a_2 \quad & b_2 \quad & c_2 \\
+	a_3 \quad & b_3 \quad & c_3
+\end{vmatrix*} = 0 \text{。}$$
+
+想一想，能否把题中的必要条件改为充要条件，为什么？
+
+\lianxi
+
+下列齐次线性方程组有没有非零解？如果有，把解集求出来。
+
+\begin{xiaoxiaotis}
+    \twoInLineXxt[16em]{
+        $\begin{cases}
+            x + y + z = 0, \\
+            2x - y + 3z = 0, \\
+            x - 2y + z = 0;
+        \end{cases}$
+    }{
+        $\begin{cases}
+            5x - 6y - 4z = 0, \\
+            x + 2y + 4z = 0, \\
+            3x + 2y + 6z = 0 \text{。}
+        \end{cases}$
+    }
+\end{xiaoxiaotis}
+
