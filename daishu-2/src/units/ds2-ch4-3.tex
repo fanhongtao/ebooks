@@ -6,15 +6,15 @@
     把行列式的各行变为应的列（就是第 $i$ 行变为第 $i$ 列，$i = 1,\; 2,\; 3$）， 所得行列式与原行列式等。即
     $$
     \begin{vmatrix*}
-        a_1 \quad & b_1 \quad & c_1 \\
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*}
     =
     \begin{vmatrix*}
-        a_1 \quad & a_2 \quad & a_3 \\
-        b_1 \quad & b_2 \quad & b_3 \\
-        c_1 \quad & c_2 \quad & c_3
+        a_1 & a_2 & a_3 \\
+        b_1 & b_2 & b_3 \\
+        c_1 & c_2 & c_3
     \end{vmatrix*} \text{。}
     $$
 \end{theorem}
@@ -23,28 +23,28 @@
 \zhengming 按对角线法则分别把上式两边的行列式展开。
 
 $\begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$，
 
 $\begin{vmatrix*}
-    a_1 \quad & a_2 \quad & a_3 \\
-    b_1 \quad & b_2 \quad & b_3 \\
-    c_1 \quad & c_2 \quad & c_3
+    a_1 & a_2 & a_3 \\
+    b_1 & b_2 & b_3 \\
+    c_1 & c_2 & c_3
 \end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$
 
 $\therefore \quad
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*}
 =
 \begin{vmatrix*}
-    a_1 \quad & a_2 \quad & a_3 \\
-    b_1 \quad & b_2 \quad & b_3 \\
-    c_1 \quad & c_2 \quad & c_3
+    a_1 & a_2 & a_3 \\
+    b_1 & b_2 & b_3 \\
+    c_1 & c_2 & c_3
 \end{vmatrix*} \text{。}$
 
 由定理 \ref{theorem:sjhls-1} 可知，对于行列式的行成立的定理对于列也一定成立；反过来也对。
@@ -57,31 +57,31 @@ $\therefore \quad
 \zhengming 我们先证明把行列式的第二行与第三行对调时，结论成立，即
 $$
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_3 \quad & b_3 \quad & c_3 \\
-    a_2 \quad & b_2 \quad & c_2
+    a_1 & b_1 & c_1 \\
+    a_3 & b_3 & c_3 \\
+    a_2 & b_2 & c_2
 \end{vmatrix*}
 =
 - \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 
 用对角线法则展开上式两边的行列式：
 
 $\begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2$，
 
 $\begin{aligned}
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_3 \quad & b_3 \quad & c_3 \\
-    a_2 \quad & b_2 \quad & c_2
+    a_1 & b_1 & c_1 \\
+    a_3 & b_3 & c_3 \\
+    a_2 & b_2 & c_2
 \end{vmatrix*}
     &= a_1b_3c_2 + a_3b_2c_1 + a_2b_1c_3 - a_2b_3c_1 - a_3b_1c_2 - a_1b_2c_3 \\
     &= -(a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \text{。}
@@ -89,15 +89,15 @@ $\begin{aligned}
 
 $\therefore \quad
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_3 \quad & b_3 \quad & c_3 \\
-    a_2 \quad & b_2 \quad & c_2
+    a_1 & b_1 & c_1 \\
+    a_3 & b_3 & c_3 \\
+    a_2 & b_2 & c_2
 \end{vmatrix*}
 =
 - \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $
 
@@ -122,31 +122,31 @@ $$ D = 0 \text{。} $$
 \zhengming 我们先证明把行列式的第二行的元素乘以 $k$ 时，结论成立，即
 $$
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    ka_2 \quad & kb_2 \quad & kc_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    ka_2 & kb_2 & kc_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*}
 =
 k \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 
 用对角线法则展开上式左边的行列式，得
 \begin{align*}
     \begin{vmatrix*}
-        a_1 \quad & b_1 \quad & c_1 \\
-        ka_2 \quad & kb_2 \quad & kc_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_1 & b_1 & c_1 \\
+        ka_2 & kb_2 & kc_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*}
         &= ka_1b_2c_3 + ka_2b_3c_1 + ka_3b_1c_2 - ka_3b_2c_1 - ka_2b_1c_3 - ka_1b_3c_2 \\
         &= k(a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \\
         &= k \begin{vmatrix*}
-                a_1 \quad & b_1 \quad & c_1 \\
-                a_2 \quad & b_2 \quad & c_2 \\
-                a_3 \quad & b_3 \quad & c_3
+                a_1 & b_1 & c_1 \\
+                a_2 & b_2 & c_2 \\
+                a_3 & b_3 & c_3
             \end{vmatrix*} \text{。}
 \end{align*}
 因此结论成立。
@@ -162,23 +162,23 @@ $$
 \liti 计算
 $$
 \begin{vmatrix*}
-    \dfrac{1}{2} \quad & \dfrac{1}{2} \quad & -1 \\[1em]
-    \dfrac{1}{3} \quad & \dfrac{2}{3} \quad & -\dfrac{2}{3} \\[1em]
-    \dfrac{2}{5} \quad & \dfrac{3}{5} \quad & -\dfrac{1}{5}
+    \dfrac{1}{2} & \dfrac{1}{2} & -1 \\[1em]
+    \dfrac{1}{3} & \dfrac{2}{3} & -\dfrac{2}{3} \\[1em]
+    \dfrac{2}{5} & \dfrac{3}{5} & -\dfrac{1}{5}
 \end{vmatrix*} \text{。}
 $$
 
 \jie\shangyihang\begin{flalign*}
     \hspace{4em} & \begin{vmatrix*}
-            \dfrac{1}{2} \quad & \dfrac{1}{2} \quad & -1 \\[1em]
-            \dfrac{1}{3} \quad & \dfrac{2}{3} \quad & -\dfrac{2}{3} \\[1em]
-            \dfrac{2}{5} \quad & \dfrac{3}{5} \quad & -\dfrac{1}{5}
+            \dfrac{1}{2} & \dfrac{1}{2} & -1 \\[1em]
+            \dfrac{1}{3} & \dfrac{2}{3} & -\dfrac{2}{3} \\[1em]
+            \dfrac{2}{5} & \dfrac{3}{5} & -\dfrac{1}{5}
           \end{vmatrix*} \\
     ={} & (-1) \times \dfrac{1}{2} \times \dfrac{1}{3} \times \dfrac{1}{5} \times
         \begin{vmatrix*}
-            1 \quad & 1 \quad & 2 \\
-            1 \quad & 2 \quad & 2 \\
-            2 \quad & 3 \quad & 1
+            1 & 1 & 2 \\
+            1 & 2 & 2 \\
+            2 & 3 & 1
         \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}}\\
     ={} & -\dfrac{1}{30} \times (2 + 6 + 4 - 8 - 1 - 6) \\
     ={} & -\dfrac{1}{30} \times (-3) = \dfrac{1}{10} \text{。}
@@ -201,9 +201,9 @@ $$
 \zhengming 设行列式的第二列与第一列的对应元素成比例（比例因子为 $k$），即行列式有如下形式
 $$
 \begin{vmatrix*}
-    a_1 \quad & ka_1 \quad & c_1 \\
-    a_2 \quad & ka_2 \quad & c_2 \\
-    a_3 \quad & ka_3 \quad & c_3
+    a_1 & ka_1 & c_1 \\
+    a_2 & ka_2 & c_2 \\
+    a_3 & ka_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 
@@ -212,15 +212,15 @@ $$
 
 $$
 \begin{vmatrix*}
-    a_1 \quad & ka_1 \quad & c_1 \\
-    a_2 \quad & ka_2 \quad & c_2 \\
-    a_3 \quad & ka_3 \quad & c_3
+    a_1 & ka_1 & c_1 \\
+    a_2 & ka_2 & c_2 \\
+    a_3 & ka_3 & c_3
 \end{vmatrix*}
 = k
 \begin{vmatrix*}
-    a_1 \quad & a_1 \quad & c_1 \\
-    a_2 \quad & a_2 \quad & c_2 \\
-    a_3 \quad & a_3 \quad & c_3
+    a_1 & a_1 & c_1 \\
+    a_2 & a_2 & c_2 \\
+    a_3 & a_3 & c_3
 \end{vmatrix*}
 = 0 \text{。}
 $$
@@ -237,9 +237,9 @@ $$
 \zhengming 设行列式的第一行元素都是二项式，即行列式有如下形式：
 $$
 \begin{vmatrix*}
-    a_1 + a_1' \quad & b_1 + b_1' \quad & c_1 + c_1' \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 + a_1' & b_1 + b_1' & c_1 + c_1' \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 
@@ -247,9 +247,9 @@ $$
 
 \begin{align*}
     & \begin{vmatrix*}
-        a_1 + a_1' \quad & b_1 + b_1' \quad & c_1 + c_1' \\
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_1 + a_1' & b_1 + b_1' & c_1 + c_1' \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*} \\
     ={} & (a_1 + a_1')b_2c_3 + a_2b_3(c_1 + c_1')
          + a_3(b_1 + b_1')c_2 - a_3b_2(c_1 + c_1')
@@ -257,14 +257,14 @@ $$
     ={} & (a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2) \\
         & + (a_1'b_2c_3 + a_2b_3c_1' + a_3b_1'c_2 - a_3b_2c_1' - a_2b_1'c_3 - a_1'b_3c_2) \\
     ={} & \begin{vmatrix*}
-            a_1 \quad & b_1 \quad & c_1 \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
         \end{vmatrix*}
       + \begin{vmatrix*}
-            a_1' \quad & b_1' \quad & c_1' \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            a_1' & b_1' & c_1' \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
         \end{vmatrix*} \text{。}
 \end{align*}
 因此结论成立。
@@ -274,27 +274,27 @@ $$
 \liti 求证
 $$
 \begin{vmatrix*}
-    1 \quad & x^2 \quad & a^2 + x^2 \\
-    1 \quad & y^2 \quad & a^2 + y^2 \\
-    1 \quad & z^2 \quad & a^2 + z^2
+    1 & x^2 & a^2 + x^2 \\
+    1 & y^2 & a^2 + y^2 \\
+    1 & z^2 & a^2 + z^2
 \end{vmatrix*} = 0 \text{。}
 $$
 
 \zhengming\shangyihang\begin{flalign*}
     \hspace{5em} & \begin{vmatrix*}
-                    1 \quad & x^2 \quad & a^2 + x^2 \\
-                    1 \quad & y^2 \quad & a^2 + y^2 \\
-                    1 \quad & z^2 \quad & a^2 + z^2
+                    1 & x^2 & a^2 + x^2 \\
+                    1 & y^2 & a^2 + y^2 \\
+                    1 & z^2 & a^2 + z^2
                 \end{vmatrix*} \\
     ={} & \begin{vmatrix*}
-            1 \quad & x^2 \quad & a^2 \\
-            1 \quad & y^2 \quad & a^2 \\
-            1 \quad & z^2 \quad & a^2
+            1 & x^2 & a^2 \\
+            1 & y^2 & a^2 \\
+            1 & z^2 & a^2
         \end{vmatrix*}+
         \begin{vmatrix*}
-            1 \quad & x^2 \quad & x^2 \\
-            1 \quad & y^2 \quad & y^2 \\
-            1 \quad & z^2 \quad & z^2
+            1 & x^2 & x^2 \\
+            1 & y^2 & y^2 \\
+            1 & z^2 & z^2
         \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-5}} \\
     ={} & 0 \text{。} && \text{(\nameref{theorem:sjhls-4} 和 \nameref{corollary:sjhls-2-1})}
 \end{flalign*}
@@ -309,41 +309,41 @@ $$
 \zhengming 把行列式
 $$
 \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*}
 $$
 的第二行的元素乘以 $k$，加到第一行的对应元素上，得
 $$
 \begin{vmatrix*}
-    a_1 + ka_2 \quad & b_1 + kb_2 \quad & c_1 + kc_2 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 + ka_2 & b_1 + kb_2 & c_1 + kc_2 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 
 根据 \nameref{theorem:sjhls-5} 和 \nameref{theorem:sjhls-4}，可以推出：
 \begin{align*}
       & \begin{vmatrix*}
-            a_1 + ka_2 \quad & b_1 + kb_2 \quad & c_1 + kc_2 \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            a_1 + ka_2 & b_1 + kb_2 & c_1 + kc_2 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
         \end{vmatrix*} \\
     ={} & \begin{vmatrix*}
-            a_1 \quad & b_1 \quad & c_1 \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
           \end{vmatrix*}
         + \begin{vmatrix*}
-            ka_2 \quad & kb_2 \quad & kc_2 \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            ka_2 & kb_2 & kc_2 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
           \end{vmatrix*} \\
     ={} & \begin{vmatrix*}
-            a_1 \quad & b_1 \quad & c_1 \\
-            a_2 \quad & b_2 \quad & c_2 \\
-            a_3 \quad & b_3 \quad & c_3
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
           \end{vmatrix*} \text{。}
 \end{align*}
 因此结论成立。
@@ -357,15 +357,15 @@ $$
 
 \twoInLine[16em]{(1) \quad $\begin{aligned}
     \begin{vmatrix*}[r]
-        3 \quad & 2 \quad & 6 \\
-        8 \quad & 10 \quad & 9 \\
-        6 \quad & -2 \quad & 21
+        3 & 2 & 6 \\
+        8 & 10 & 9 \\
+        6 & -2 & 21
     \end{vmatrix*}
 \end{aligned}$；}{(2)\quad $\begin{aligned}
     \begin{vmatrix*}[r]
-        10 \quad & -2 \quad & 7 \\
-        -15 \quad & 3 \quad & 2 \\
-        -5 \quad & 4 \quad & 9
+        10 & -2 & 7 \\
+        -15 & 3 & 2 \\
+        -5 & 4 & 9
     \end{vmatrix*}
 \end{aligned}$。}
 
@@ -373,24 +373,24 @@ $$
 
 \begin{flalign*}
     \hspace{4em} (1) \begin{vmatrix*}[r]
-            3 \quad & 2 \quad & 6 \\
-            8 \quad & 10 \quad & 9 \\
-            6 \quad & -2 \quad & 21
+            3 & 2 & 6 \\
+            8 & 10 & 9 \\
+            6 & -2 & 21
         \end{vmatrix*}
     &= 3 \times 2 \times \begin{vmatrix*}[r]
-            3 \quad &  1 \quad & 2 \\
-            8 \quad &  5 \quad & 3 \\
-            6 \quad & -1 \quad & 7
+            3 &  1 & 2 \\
+            8 &  5 & 3 \\
+            6 & -1 & 7
         \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
     &= 6 \times \begin{vmatrix*}[r]
-            3 \quad &  1 + 2 \quad & 2 \\
-            8 \quad &  5 + 3 \quad & 3 \\
-            6 \quad & -1 + 7 \quad & 7
+            3 &  1 + 2 & 2 \\
+            8 &  5 + 3 & 3 \\
+            6 & -1 + 7 & 7
         \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
     &= 6 \times \begin{vmatrix*}[r]
-            3 \quad & 3 \quad & 2 \\
-            8 \quad & 8 \quad & 3 \\
-            6 \quad & 6 \quad & 7
+            3 & 3 & 2 \\
+            8 & 8 & 3 \\
+            6 & 6 & 7
         \end{vmatrix*} \\
     &= 0 \text{。} && \text{\eqnameref{corollary:sjhls-2-1}}
 \end{flalign*}
@@ -398,24 +398,24 @@ $$
 
 \begin{flalign*}
     \hspace{4em} (2) \begin{vmatrix*}[r]
-            10 \quad & -2 \quad & 7 \\
-            -15 \quad & 3 \quad & 2 \\
-            -5 \quad & 4 \quad & 9
+            10 & -2 & 7 \\
+            -15 & 3 & 2 \\
+            -5 & 4 & 9
         \end{vmatrix*}
     &= 5 \times \begin{vmatrix*}[r]
-            2 \quad & -2 \quad & 7 \\
-            -3 \quad & 3 \quad & 2 \\
-            -1 \quad & 4 \quad & 9
+            2 & -2 & 7 \\
+            -3 & 3 & 2 \\
+            -1 & 4 & 9
         \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
     &= 5 \times \begin{vmatrix*}[r]
-            2 \quad & -2 + 2 \quad & 7 \\
-            -3 \quad & 3 + (-3) \quad & 2 \\
-            -1 \quad & 4 + (-1) \quad & 9
+            2 & -2 + 2 & 7 \\
+            -3 & 3 + (-3) & 2 \\
+            -1 & 4 + (-1) & 9
         \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
     &= 5 \times \begin{vmatrix*}[r]
-            2 \quad & 0 \quad & 7 \\
-            -3 \quad & 0 \quad & 2 \\
-            -1 \quad & 3 \quad & 9
+            2 & 0 & 7 \\
+            -3 & 0 & 2 \\
+            -1 & 3 & 9
         \end{vmatrix*} \\
     &= 5 \times (-63 - 12) = -375 \text{。}
 \end{flalign*}
@@ -432,21 +432,21 @@ $$
 
 \twoInLine[16em]{(1) \quad $\begin{aligned}
     \begin{vmatrix*}[r]
-        0 \quad & a \quad & b \\
-        -a \quad & 0 \quad & c \\
-        -b \quad & -c \quad & 0
+        0 & a & b \\
+        -a & 0 & c \\
+        -b & -c & 0
     \end{vmatrix*} = 0
 \end{aligned}$；}{(2) \quad $\begin{aligned}
     \begin{vmatrix*}[r]
-        a + b \quad & c \quad & -a \\
-        a + c \quad & b \quad & -c \\
-        b + c \quad & a \quad & -b
+        a + b & c & -a \\
+        a + c & b & -c \\
+        b + c & a & -b
     \end{vmatrix*}
     =
     \begin{vmatrix*}[r]
-        b \quad & a \quad & c \\
-        a \quad & c \quad & b \\
-        c \quad & b \quad & a
+        b & a & c \\
+        a & c & b \\
+        c & b & a
     \end{vmatrix*}
 \end{aligned}$。
 }
@@ -455,48 +455,48 @@ $$
 
 \begin{flalign*}
     \hspace{4em} (1) \begin{vmatrix*}[r]
-        0 \quad & a \quad & b \\
-        -a \quad & 0 \quad & c \\
-        -b \quad & -c \quad & 0
+        0 & a & b \\
+        -a & 0 & c \\
+        -b & -c & 0
     \end{vmatrix*} &= \begin{vmatrix*}[r]
-            0 \quad & -a \quad & -b \\
-            a \quad & 0 \quad & -c \\
-            b \quad & c \quad & 0
+            0 & -a & -b \\
+            a & 0 & -c \\
+            b & c & 0
         \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-1}} \\
     &= - \begin{vmatrix*}[r]
-            0 \quad & a \quad & b \\
-            -a \quad & 0 \quad & c \\
-            -b \quad & -c \quad & 0
+            0 & a & b \\
+            -a & 0 & c \\
+            -b & -c & 0
         \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}}
 \end{flalign*}
 
 $\therefore \quad
 \begin{vmatrix*}[r]
-    0 \quad & a \quad & b \\
-    -a \quad & 0 \quad & c \\
-    -b \quad & -c \quad & 0
+    0 & a & b \\
+    -a & 0 & c \\
+    -b & -c & 0
 \end{vmatrix*} = 0 \text{。}
 $
 
 \begin{flalign*}
     \hspace{4em} (2) \begin{vmatrix*}[r]
-            a + b \quad & c \quad & -a \\
-            a + c \quad & b \quad & -c \\
-            b + c \quad & a \quad & -b
+            a + b & c & -a \\
+            a + c & b & -c \\
+            b + c & a & -b
         \end{vmatrix*} &= \begin{vmatrix*}[r]
-            b \quad & c \quad & -a \\
-            a \quad & b \quad & -c \\
-            c \quad & a \quad & -b
+            b & c & -a \\
+            a & b & -c \\
+            c & a & -b
         \end{vmatrix*} && \text{\eqnameref{theorem:sjhls-6}} \\
     &= - \begin{vmatrix*}[r]
-            b \quad & c \quad & a \\
-            a \quad & b \quad & c \\
-            c \quad & a \quad & b
+            b & c & a \\
+            a & b & c \\
+            c & a & b
         \end{vmatrix*} && \text{\eqnameref{corollary:sjhls-3-1}} \\
     &= \begin{vmatrix*}[r]
-            b \quad & a \quad & c \\
-            a \quad & c \quad & b \\
-            c \quad & b \quad & a
+            b & a & c \\
+            a & c & b \\
+            c & b & a
         \end{vmatrix*} \text{。} && \text{\eqnameref{theorem:sjhls-2}}
 \end{flalign*}
 
@@ -511,24 +511,24 @@ $
     \renewcommand\arraystretch{1.2}
     \begin{tabular}[t]{*{2}{@{}p{16em}}}
         \xiaoxiaoti{$\begin{vmatrix*}[r]
-                1 \quad & 3 \quad & 4 \\
-                10 \quad & 1 \quad & 11 \\
-                7 \quad & 1 \quad & 8
+                1 & 3 & 4 \\
+                10 & 1 & 11 \\
+                7 & 1 & 8
             \end{vmatrix*}$；}
         & \xiaoxiaoti{$\begin{vmatrix*}[r]
-                3 \quad & 49 \quad & 4 \\
-                2 \quad & 28 \quad & 4 \\
-                4 \quad & 35 \quad & 8
+                3 & 49 & 4 \\
+                2 & 28 & 4 \\
+                4 & 35 & 8
             \end{vmatrix*}$；} \\[3em]
         \xiaoxiaoti{$\begin{vmatrix*}[r]
-                \dfrac{2}{3} \quad & \dfrac{2}{3} \quad & 3 \\
-                7 \quad & 5 \quad & 14 \\
-                \dfrac{1}{3} \quad & \dfrac{1}{5} \quad & \dfrac{4}{15}
+                \dfrac{2}{3} & \dfrac{2}{3} & 3 \\
+                7 & 5 & 14 \\
+                \dfrac{1}{3} & \dfrac{1}{5} & \dfrac{4}{15}
             \end{vmatrix*}$；}
         & \xiaoxiaoti{$\begin{vmatrix*}[r]
-                1 \quad & 4 \quad & 7 \\
-                2 \quad & 5 \quad & 8 \\
-                3 \quad & 6 \quad & 9
+                1 & 4 & 7 \\
+                2 & 5 & 8 \\
+                3 & 6 & 9
             \end{vmatrix*}$。}
     \end{tabular}
 
@@ -542,24 +542,24 @@ $
     \renewcommand\arraystretch{1.2}
     \begin{tabular}[t]{*{2}{@{}p{16em}}}
         \xiaoxiaoti{$\begin{vmatrix*}[r]
-                a \quad & a \quad & a \\
-                -a \quad & a \quad & x \\
-                -a \quad & -a \quad & x
+                a & a & a \\
+                -a & a & x \\
+                -a & -a & x
             \end{vmatrix*}$；}
         & \xiaoxiaoti{$\begin{vmatrix*}[r]
-                1 \quad & a \quad & b + c \\
-                1 \quad & b \quad & c + a \\
-                1 \quad & c \quad & a + b
+                1 & a & b + c \\
+                1 & b & c + a \\
+                1 & c & a + b
             \end{vmatrix*}$；} \\
         \xiaoxiaoti{$\begin{vmatrix*}
-                1 \quad & 1 \quad & 1 \\
-                1 \quad & 1 + b \quad & 1 \\
-                1 \quad & 1 \quad & 1 + c
+                1 & 1 & 1 \\
+                1 & 1 + b & 1 \\
+                1 & 1 & 1 + c
             \end{vmatrix*}$；}
         & \xiaoxiaoti{$\begin{vmatrix*}[r]
-                a - b \quad & b - c \quad & c - a \\
-                b - c \quad & c - a \quad & a - b \\
-                c - a \quad & a - b \quad & b - c
+                a - b & b - c & c - a \\
+                b - c & c - a & a - b \\
+                c - a & a - b & b - c
             \end{vmatrix*}$。}
     \end{tabular}
 
@@ -572,21 +572,21 @@ $
 
     \xiaoxiaoti{
         $\begin{vmatrix*}
-            1 \quad & 1 \quad & 1 \\
-            p \quad & q \quad & p + q \\
-            q \quad & p \quad & 0
+            1 & 1 & 1 \\
+            p & q & p + q \\
+            q & p & 0
         \end{vmatrix*} = 0$；
     }
 
     \xiaoxiaoti{
         $\begin{vmatrix*}[r]
-            -a+b+c \quad & a \quad & -b \\
-            a-b+c \quad & b \quad & -c \\
-            a+b-c \quad & c \quad & -a
+            -a+b+c & a & -b \\
+            a-b+c & b & -c \\
+            a+b-c & c & -a
         \end{vmatrix*} = \begin{vmatrix*}[r]
-            b \quad & a \quad & c \\
-            c \quad & b \quad & a \\
-            a \quad & c \quad & b
+            b & a & c \\
+            c & b & a \\
+            a & c & b
         \end{vmatrix*}$。
     }
 

@@ -4,30 +4,30 @@
 
 \begin{flalign*}
     \begin{vmatrix*}
-        a_1 \quad & b_1 \quad & c_1 \\
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*} & = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2 \\
     &= a_1(b_2c_3 - b_3c_2) + a_2(b_3c_1 - b_1c_3) + a_3(b_1c_2 - b_2c_1) \\
     &= a_1 \begin{vmatrix}
-                b_2 \quad & c_2 \\
-                b_3 \quad & c_3
+                b_2 & c_2 \\
+                b_3 & c_3
             \end{vmatrix}
      - a_2 \begin{vmatrix}
-                b_1 \quad & c_1 \\
-                b_3 \quad & c_3
+                b_1 & c_1 \\
+                b_3 & c_3
             \end{vmatrix}
      + a_3 \begin{vmatrix}
-                b_1 \quad & c_1 \\
-                b_2 \quad & c_2
+                b_1 & c_1 \\
+                b_2 & c_2
             \end{vmatrix} \tag{1}\label{eq:sjhlszk-1}
 \end{flalign*}
 
 我们看到，\eqref{eq:sjhlszk-1} 式中的
 $$
 \begin{vmatrix}
-    b_2 \quad & c_2 \\
-    b_3 \quad & c_3
+    b_2 & c_2 \\
+    b_3 & c_3
 \end{vmatrix}
 $$
 就是在原三阶行列式中，划去 $a_1$ 所在的行和列，剩下的元素
@@ -38,16 +38,16 @@ $$
 例如在行列式
 $$
 D = \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*}
 $$
 中，对应于元素 $a_2$ 的余子式为
 $$
 \begin{vmatrix}
-    b_1 \quad & c_1 \\
-    b_3 \quad & c_3
+    b_1 & c_1 \\
+    b_3 & c_3
 \end{vmatrix} \text{。}
 $$
 
@@ -58,32 +58,32 @@ $$
 $i + j = 2 + 1 = 3$， 所以对应于 $a_2$ 的代数余子式为
 $$
 (-1)^{2+1}\begin{vmatrix}
-    b_1 \quad & c_1 \\
-    b_3 \quad & c_3
+    b_1 & c_1 \\
+    b_3 & c_3
 \end{vmatrix} \text{，}
 $$
 即
 $$
 -\begin{vmatrix}
-    b_1 \quad & c_1 \\
-    b_3 \quad & c_3
+    b_1 & c_1 \\
+    b_3 & c_3
 \end{vmatrix} \text{。}
 $$
 三阶行列式各元素的代数余子式的符号 $(-1)^{i+j}$ 可以用下图来帮助记忆：
 $$
 \begin{vmatrix}
-	+ \quad & - \quad & + \\
-	- \quad & + \quad & - \\
-	+ \quad & - \quad & +
+	+ & - & + \\
+	- & + & - \\
+	+ & - & +
 \end{vmatrix} \text{。}
 $$
 
 行列式
 $$
 D = \begin{vmatrix*}
-    a_1 \quad & b_1 \quad & c_1 \\
-    a_2 \quad & b_2 \quad & c_2 \\
-    a_3 \quad & b_3 \quad & c_3
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3
 \end{vmatrix*}
 $$
 中某个元素的代数余子式常用这个元素相应的大写字母并附
@@ -92,39 +92,39 @@ $$
 \begin{align*}
     A_1 &= (-1)^{1+1}
             \begin{vmatrix}
-                b_2 \quad & c_2 \\
-                b_3 \quad & c_3
+                b_2 & c_2 \\
+                b_3 & c_3
             \end{vmatrix}
         =   \begin{vmatrix}
-                b_2 \quad & c_2 \\
-                b_3 \quad & c_3
+                b_2 & c_2 \\
+                b_3 & c_3
             \end{vmatrix} \text{，} \\
     B_1 &= (-1)^{1+2}
             \begin{vmatrix}
-                a_2 \quad & c_2 \\
-                a_3 \quad & c_3
+                a_2 & c_2 \\
+                a_3 & c_3
             \end{vmatrix}
         = - \begin{vmatrix}
-                a_2 \quad & c_2 \\
-                a_3 \quad & c_3
+                a_2 & c_2 \\
+                a_3 & c_3
             \end{vmatrix} \text{，} \\
     C_1 &= (-1)^{1+3}
             \begin{vmatrix}
-                a_2 \quad & b_2 \\
-                a_3 \quad & b_3
+                a_2 & b_2 \\
+                a_3 & b_3
             \end{vmatrix}
         =   \begin{vmatrix}
-                a_2 \quad & b_2 \\
-                a_3 \quad & b_3
+                a_2 & b_2 \\
+                a_3 & b_3
             \end{vmatrix} \text{。} \\
 \end{align*}
 
 这样，上面所得的 \eqref{eq:sjhlszk-1} 式就可写成
 \begin{gather*}
     \begin{vmatrix*}
-        a_1 \quad & b_1 \quad & c_1 \\
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*} = a_1A_1 + a_2A_2 + a_3A_3 \text{，} \tag{2}\label{eq:sjhlszk-2}
 \end{gather*}
 它把一个三阶行列式表示成这个行列式第一列的元素与对应于它们的代数余子式的乘积的和。
@@ -154,21 +154,21 @@ $$ a_2A_1 + b_2B_1 + c_2C_1 = 0 \text{。} $$
 $\because \quad
 \begin{aligned}[t]
   & a_2 \begin{vmatrix}
-            b_2 \quad & c_2 \\
-            b_3 \quad & c_3
+            b_2 & c_2 \\
+            b_3 & c_3
         \end{vmatrix}
     - b_2 \begin{vmatrix}
-            a_2 \quad & c_2 \\
-            a_3 \quad & c_3
+            a_2 & c_2 \\
+            a_3 & c_3
         \end{vmatrix}
     + c_2 \begin{vmatrix}
-            a_2 \quad & b_2 \\
-            a_3 \quad & b_3
+            a_2 & b_2 \\
+            a_3 & b_3
         \end{vmatrix} \\
  &= \begin{vmatrix*}
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_2 \quad & b_2 \quad & c_2 \\
-        a_3 \quad & b_3 \quad & c_3
+        a_2 & b_2 & c_2 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
     \end{vmatrix*}
     = 0 \text{，}
 \end{aligned}$
@@ -181,30 +181,30 @@ $\therefore \quad a_2A_1 + b_2B_1 + c_2C_1 = 0 \text{。}$
 $$
 D =
 \begin{vmatrix*}[r]
-    3 \quad & 1 \quad & -2 \\
-    5 \quad & -2 \quad & 7 \\
-    3 \quad & 4 \quad & 2
+    3 & 1 & -2 \\
+    5 & -2 & 7 \\
+    3 & 4 & 2
 \end{vmatrix*}
 $$
 按第一行展开，然后进行计算。
 
 \jie \quad $\begin{aligned}[t]
     \begin{vmatrix*}[r]
-        3 \quad & 1 \quad & -2 \\
-        5 \quad & -2 \quad & 7 \\
-        3 \quad & 4 \quad & 2
+        3 & 1 & -2 \\
+        5 & -2 & 7 \\
+        3 & 4 & 2
     \end{vmatrix*}
     &= 3 \times \begin{vmatrix*}[r]
-                -2 \quad & 7 \\
-                4 \quad & 2
+                -2 & 7 \\
+                4 & 2
             \end{vmatrix*}
         -1 \times   \begin{vmatrix*}[r]
-                5 \quad & 7 \\
-                3 \quad & 2
+                5 & 7 \\
+                3 & 2
             \end{vmatrix*}
         + (-2) \times \begin{vmatrix*}[r]
-                5 \quad & -2 \\
-                3 \quad & 4
+                5 & -2 \\
+                3 & 4
             \end{vmatrix*} \\
     &= 3 \times (-32) - 1 \times (-11) - 2 \times 26 \\
     &= -137 \text{。}
@@ -214,19 +214,19 @@ $$
 就会使计算简便得多。如上题，把第二列乘以 $-3$ 加到第一列，把二列乘以 $2$ 加到第三列，可得
 
 $\begin{vmatrix*}[r]
-    3 \quad & 1 \quad & -2 \\
-    5 \quad & -2 \quad & 7 \\
-    3 \quad & 4 \quad & 2
+    3 & 1 & -2 \\
+    5 & -2 & 7 \\
+    3 & 4 & 2
 \end{vmatrix*}
 = \begin{vmatrix*}[r]
-        0 \quad & 1 \quad & 0 \\
-        11 \quad & -2 \quad & 3 \\
-        -9 \quad & 4 \quad & 10
+        0 & 1 & 0 \\
+        11 & -2 & 3 \\
+        -9 & 4 & 10
   \end{vmatrix*}
 = -1 \times
     \begin{vmatrix*}[r]
-        11 \quad & 3 \\
-        -9 \quad & 10
+        11 & 3 \\
+        -9 & 10
     \end{vmatrix*}
 = -137 \text{。}
 $
@@ -236,15 +236,15 @@ $
 
 \twoInLine[16em]{(1) \;
     $\begin{vmatrix*}[r]
-        4 \quad & -6 \quad & 3 \\
-        5 \quad & 2 \quad & 7 \\
-        5 \quad & -2 \quad & 8
+        4 & -6 & 3 \\
+        5 & 2 & 7 \\
+        5 & -2 & 8
     \end{vmatrix*}$ ；
 }{(2) \;
     $\begin{vmatrix*}[r]
-        8 \quad & -6 \quad & 9 \\
-        5 \quad & 4 \quad & 6 \\
-        4 \quad & 5 \quad & 8
+        8 & -6 & 9 \\
+        5 & 4 & 6 \\
+        4 & 5 & 8
     \end{vmatrix*}$ 。
 }
 
@@ -252,41 +252,41 @@ $
 
 (1) \quad $
 \begin{vmatrix*}[r]
-    4 \quad & -6 \quad & 3 \\
-    5 \quad & 2 \quad & 7 \\
-    5 \quad & -2 \quad & 8
+    4 & -6 & 3 \\
+    5 & 2 & 7 \\
+    5 & -2 & 8
 \end{vmatrix*}
 =   \begin{vmatrix*}[r]
-        19 \quad & 0 \quad & 24 \\
-        5 \quad & 2 \quad & 7 \\
-        10 \quad & 0 \quad & 15
+        19 & 0 & 24 \\
+        5 & 2 & 7 \\
+        10 & 0 & 15
     \end{vmatrix*}
 = 2 \begin{vmatrix*}[r]
-        19 \quad & 24 \\
-        10 \quad & 15
+        19 & 24 \\
+        10 & 15
     \end{vmatrix*}
 = 90
 $；
 
 (2) \quad $
 \begin{vmatrix*}[r]
-    8 \quad & -6 \quad & 9 \\
-    5 \quad & 4 \quad & 6 \\
-    4 \quad & 5 \quad & 8
+    8 & -6 & 9 \\
+    5 & 4 & 6 \\
+    4 & 5 & 8
 \end{vmatrix*}
 =   \begin{vmatrix*}[r]
-        8 \quad & -6 \quad & 9 \\
-        5 \quad & 4 \quad & 6 \\
-        -1 \quad & 1 \quad & 2
+        8 & -6 & 9 \\
+        5 & 4 & 6 \\
+        -1 & 1 & 2
     \end{vmatrix*}
 =   \begin{vmatrix*}[r]
-        2 \quad & -6 \quad & 21 \\
-        9 \quad & 4 \quad & -2 \\
-        0 \quad & 1 \quad & 0
+        2 & -6 & 21 \\
+        9 & 4 & -2 \\
+        0 & 1 & 0
     \end{vmatrix*}
 = - \begin{vmatrix*}[r]
-        2 \quad & 21 \\
-        9 \quad & -2
+        2 & 21 \\
+        9 & -2
     \end{vmatrix*}
 = 193
 $。
@@ -295,31 +295,31 @@ $。
 \liti 解方程
 $$
 \begin{vmatrix}
-    15 - 2x \quad & 11 \quad & 10 \\
-    11 - 3x \quad & 17 \quad & 16 \\
-     7 - x  \quad & 14 \quad & 13
+    15 - 2x & 11 & 10 \\
+    11 - 3x & 17 & 16 \\
+     7 - x  & 14 & 13
 \end{vmatrix} = 0 \text{。}
 $$
 
 \jie $\begin{aligned}[t]
     \begin{vmatrix}
-        15 - 2x \quad & 11 \quad & 10 \\
-        11 - 3x \quad & 17 \quad & 16 \\
-        7 - x   \quad & 14 \quad & 13
+        15 - 2x & 11 & 10 \\
+        11 - 3x & 17 & 16 \\
+        7 - x   & 14 & 13
     \end{vmatrix}
     &=  \begin{vmatrix}
-            15 - 2x \quad & 1 \quad & 10 \\
-            11 - 3x \quad & 1 \quad & 16 \\
-            7 - x   \quad & 1 \quad & 13
+            15 - 2x & 1 & 10 \\
+            11 - 3x & 1 & 16 \\
+            7 - x   & 1 & 13
         \end{vmatrix} \\
     &=  \begin{vmatrix}
-            8 - x  \quad & 0 \quad & -3 \\
-            4 - 2x \quad & 0 \quad & 3 \\
-            7 - x  \quad & 1 \quad & 13
+            8 - x  & 0 & -3 \\
+            4 - 2x & 0 & 3 \\
+            7 - x  & 1 & 13
         \end{vmatrix}
     =  -\begin{vmatrix*}[r]
-            8 - x  \quad & -3 \\
-            4 - 2x \quad & 3
+            8 - x  & -3 \\
+            4 - 2x & 3
         \end{vmatrix*} \\
     &= 9x - 36 = 9(x - 4) \text{。}
 \end{aligned}$
@@ -331,39 +331,39 @@ $$
 \liti 求证
 $$
 \begin{vmatrix}
-    a     \quad & b     \quad & c \\
-    a^2   \quad & b^2   \quad & c^2 \\
-    b + c \quad & c + a \quad & a + b
+    a     & b     & c \\
+    a^2   & b^2   & c^2 \\
+    b + c & c + a & a + b
 \end{vmatrix} = (a - b)(b - c)(c - a)(a + b + c) \text{。}
 $$
 
 \zhengming $\begin{aligned}[t]
     \begin{vmatrix}
-        a     \quad & b     \quad & c \\
-        a^2   \quad & b^2   \quad & c^2 \\
-        b + c \quad & c + a \quad & a + b
+        a     & b     & c \\
+        a^2   & b^2   & c^2 \\
+        b + c & c + a & a + b
     \end{vmatrix}
     &=  \begin{vmatrix}
-            a - b     \quad & b - c     \quad & c \\
-            a^2 - b^2 \quad & b^2 - c^2 \quad & c^2 \\
-            b - a     \quad & c - b     \quad & a + b
+            a - b     & b - c     & c \\
+            a^2 - b^2 & b^2 - c^2 & c^2 \\
+            b - a     & c - b     & a + b
         \end{vmatrix} \\
     &= (a - b)(b - c)
         \begin{vmatrix}
-            1     \quad & 1     \quad & c \\
-            a + b \quad & b + c \quad & c^2 \\
-            -1    \quad & -1    \quad & a + b
+            1     & 1     & c \\
+            a + b & b + c & c^2 \\
+            -1    & -1    & a + b
         \end{vmatrix} \\
     &= (a - b)(b - c)
         \begin{vmatrix}
-            1     \quad & 1     \quad & c \\
-            a + b \quad & b + c \quad & c^2 \\
-            0     \quad & 0     \quad & a + b + c
+            1     & 1     & c \\
+            a + b & b + c & c^2 \\
+            0     & 0     & a + b + c
         \end{vmatrix} \\
     &= (a - b)(b - c)(a + b + c)
         \begin{vmatrix}
-            1     \quad & 1 \\
-            a + b \quad & b + c
+            1     & 1 \\
+            a + b & b + c
         \end{vmatrix} \\
     &= (a - b)(b - c)(c - a)(a + b + c) \text{。}
 \end{aligned}$
@@ -373,55 +373,55 @@ $$
 \liti 求证
 \begin{gather*}
     \begin{vmatrix*}
-        x   \quad & y   \quad & 1 \\
-        x_1 \quad & y_1 \quad & 1 \\
-        x_2 \quad & y_2 \quad & 1
+        x   & y   & 1 \\
+        x_1 & y_1 & 1 \\
+        x_2 & y_2 & 1
     \end{vmatrix*} = 0 \tag{*}\label{eq:sjhlszk-star}
 \end{gather*}
 是经过不同两点 $P_1(x_1, y_1)$，$P_2(x_2, y_2)$ 的直线的方程。
 
 \zhengming $
     \begin{vmatrix*}
-        x   \quad & y   \quad & 1 \\
-        x_1 \quad & y_1 \quad & 1 \\
-        x_2 \quad & y_2 \quad & 1
+        x   & y   & 1 \\
+        x_1 & y_1 & 1 \\
+        x_2 & y_2 & 1
     \end{vmatrix*}
     =   \begin{vmatrix*}
-            y_1 \quad & 1 \\
-            y_2 \quad & 1
+            y_1 & 1 \\
+            y_2 & 1
         \end{vmatrix*} x
       - \begin{vmatrix*}
-            x_1 \quad & 1 \\
-            x_2 \quad & 1
+            x_1 & 1 \\
+            x_2 & 1
         \end{vmatrix*} y
       + \begin{vmatrix*}
-            x_1 \quad & y_1 \\
-            x_2 \quad & y_2
+            x_1 & y_1 \\
+            x_2 & y_2
         \end{vmatrix*}
 $。
 
 因为 $P_1$ 与 $P_2$ 是不同的两点，所以 $x_1$ 与 $x_2$，$y_1$ 与 $y_x$ 不能都相等，也就是
 $$
 \begin{vmatrix*}
-    x_1 \quad & 1 \\
-    x_2 \quad & 1
+    x_1 & 1 \\
+    x_2 & 1
 \end{vmatrix*}, \quad
 \begin{vmatrix*}
-    y_1 \quad & 1 \\
-    y_2 \quad & 1
+    y_1 & 1 \\
+    y_2 & 1
 \end{vmatrix*}
 $$
 不能全为零。因此，方程 \eqref{eq:sjhlszk-star} 是关于 $x$，$y$ 的一次方程，即平面上的直线方程。又因为
 $$
 \begin{vmatrix*}
-    x_1 \quad & y_1 \quad & 1 \\
-    x_1 \quad & y_1 \quad & 1 \\
-    x_2 \quad & y_2 \quad & 1
+    x_1 & y_1 & 1 \\
+    x_1 & y_1 & 1 \\
+    x_2 & y_2 & 1
 \end{vmatrix*} = 0,\quad
 \begin{vmatrix*}
-    x_2 \quad & y_2 \quad & 1 \\
-    x_1 \quad & y_1 \quad & 1 \\
-    x_2 \quad & y_2 \quad & 1
+    x_2 & y_2 & 1 \\
+    x_1 & y_1 & 1 \\
+    x_2 & y_2 & 1
 \end{vmatrix*} = 0
 $$
 所以点 $P_1(x_1, y_1)$，$P_2(x_2, y_2)$ 都在方程 \eqref{eq:sjhlszk-star}
@@ -435,9 +435,9 @@ $$
 \xiaoti{已知行列式}
 $$
     \begin{vmatrix*}[r]
-        3 \quad & 6  \quad & 7 \\
-        8 \quad & 6  \quad & 1 \\
-        2 \quad & -5 \quad & 4
+        3 & 6  & 7 \\
+        8 & 6  & 1 \\
+        2 & -5 & 4
     \end{vmatrix*} \text{，}
 $$
 
@@ -457,21 +457,21 @@ $$
 
     \threeInLineXxt[10em]{
         $\begin{vmatrix*}[r]
-            5  \quad & 0 \quad & -5 \\
-            3  \quad & 2 \quad & 7 \\
-            -4 \quad & 3 \quad & 9
+            5  & 0 & -5 \\
+            3  & 2 & 7 \\
+            -4 & 3 & 9
         \end{vmatrix*}$；
     }{
         $\begin{vmatrix*}[r]
-            -6 \quad & 5 \quad & 2 \\
-            2  \quad & 1 \quad & -1 \\
-            1  \quad & 7 \quad & 4
+            -6 & 5 & 2 \\
+            2  & 1 & -1 \\
+            1  & 7 & 4
         \end{vmatrix*}$；
     }{
         $\begin{vmatrix*}[r]
-            2  \quad & 6 \quad & 7 \\
-            -3 \quad & 8 \quad & 8 \\
-            -5 \quad & 2 \quad & 3
+            2  & 6 & 7 \\
+            -3 & 8 & 8 \\
+            -5 & 2 & 3
         \end{vmatrix*}$。
     }
 
@@ -483,15 +483,15 @@ $$
 
     \twoInLineXxt[16em]{
         $\begin{vmatrix*}
-            2 \quad & x+2 \quad & 6 \\
-            1 \quad & x   \quad & 3 \\
-            1 \quad & 3   \quad & x
+            2 & x+2 & 6 \\
+            1 & x   & 3 \\
+            1 & 3   & x
         \end{vmatrix*} = 0$；
     }{
         $\begin{vmatrix*}[r]
-            a \quad & a \quad & x \\
-            1 \quad & 1 \quad & 1 \\
-            b \quad & x \quad & b
+            a & a & x \\
+            1 & 1 & 1 \\
+            b & x & b
         \end{vmatrix*} = 0$。
     }
 
@@ -502,21 +502,21 @@ $$
 \begin{xiaoxiaotis}
 
     \xiaoxiaoti{$\begin{vmatrix*}[r]
-            1  \quad & 1  \quad & 1 \\
-            a  \quad & b  \quad & c \\
-            bc \quad & ca \quad & ab
+            1  & 1  & 1 \\
+            a  & b  & c \\
+            bc & ca & ab
         \end{vmatrix*} = (a - b)(b - c)(c - a)$；}
 
     \xiaoxiaoti{$\begin{vmatrix*}[r]
-            a \quad & b \quad & b \\
-            b \quad & a \quad & b \\
-            b \quad & b \quad & a
+            a & b & b \\
+            b & a & b \\
+            b & b & a
         \end{vmatrix*} = (a + 2b)(a - b)^2$；}
 
     \xiaoxiaoti{$\begin{vmatrix*}[r]
-            1 \quad & p \quad & p^3 \\
-            1 \quad & q \quad & q^3 \\
-            1 \quad & r \quad & r^3
+            1 & p & p^3 \\
+            1 & q & q^3 \\
+            1 & r & r^3
         \end{vmatrix*} = (p - q)(q - r)(r - p)(p + q + r)$。}
 
 \end{xiaoxiaotis}

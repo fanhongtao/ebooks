@@ -3,12 +3,12 @@
 利用二阶行列式，我们也可以把公式 \eqref{eq:ejhls-5} 中的两个分子写成行列式的形式，即
 $$
 c_1b_2 - c_2b_1 = \begin{vmatrix}
-    c_1 \quad & b_1 \\
-    c_2 \quad & b_2
+    c_1 & b_1 \\
+    c_2 & b_2
 \end{vmatrix}, \qquad
 a_1c_2 - a_2c_ = \begin{vmatrix}
-    a_1 \quad & c_1 \\
-    a_2 \quad & c_2
+    a_1 & c_1 \\
+    a_2 & c_2
 \end{vmatrix} \text{。}
 $$
 这样，当 $a_1b_2 - a_2b_1 \neq 0$ 时，二元线性方程组 \eqref{eq:fcz-1} 的解可以写成
@@ -16,25 +16,25 @@ $$
     \begin{cases}
         x = \dfrac{
                 \begin{vmatrix}
-                    c_1 \quad & b_1 \\
-                    c_2 \quad & b_2
+                    c_1 & b_1 \\
+                    c_2 & b_2
                 \end{vmatrix}
             }{
                 \begin{vmatrix}
-                    a_1 \quad & b_1 \\
-                    a_2 \quad & b_2
+                    a_1 & b_1 \\
+                    a_2 & b_2
                 \end{vmatrix}
             } \text{，} \\
         \\
         y = \dfrac{
                 \begin{vmatrix}
-                    a_1 \quad & c_1 \\
-                    a_2 \quad & c_2
+                    a_1 & c_1 \\
+                    a_2 & c_2
                 \end{vmatrix}
             }{
                 \begin{vmatrix}
-                    a_1 \quad & b_1 \\
-                    a_2 \quad & b_2
+                    a_1 & b_1 \\
+                    a_2 & b_2
                 \end{vmatrix}
             } \text{。}
     \end{cases} \label{eq:ejhls-8}
@@ -43,16 +43,16 @@ $$
 为了简便起见，通常用 $D$，$D_x$，$D_y$ 分别表示 \eqref{eq:ejhls-8} 式中作为分母与分子的行列式：
 $$
 D = \begin{vmatrix}
-    a_1 \quad & b_1 \\
-    a_2 \quad & b_2
+    a_1 & b_1 \\
+    a_2 & b_2
 \end{vmatrix}, \qquad
 D_x = \begin{vmatrix}
-    c_1 \quad & b_1 \\
-    c_2 \quad & b_2
+    c_1 & b_1 \\
+    c_2 & b_2
 \end{vmatrix}, \qquad
 D_y = \begin{vmatrix}
-    a_1 \quad & c_1 \\
-    a_2 \quad & c_2
+    a_1 & c_1 \\
+    a_2 & c_2
 \end{vmatrix} \text{。}
 $$
 行列式 $D$ 是由方程组 \eqref{eq:fcz-1} 中未知数 $x$，$y$ 的系数组成的，叫做这个方程组的\textbf{系数行列式} 。
@@ -86,16 +86,16 @@ $$\begin{cases}
 由
 \begin{align*}
     D ={} & \begin{vmatrix}
-            11  \quad & -2 \\
-            3   \quad & 7
+            11 & -2 \\
+            3  & 7
         \end{vmatrix} = 77 - (-6) = 83 \neq 0, \\
     D_x ={} & \begin{vmatrix}
-            -5  \quad & -2 \\
-            -24 \quad & 7
+            -5  & -2 \\
+            -24 & 7
         \end{vmatrix} = -35 - 48 = -83, \\
     D_y ={} & \begin{vmatrix}
-            11  \quad & -5 \\
-            3   \quad & -24
+            11 & -5 \\
+            3  & -24
         \end{vmatrix} = -264 - (-15) = -249, \\
 \end{align*}
 得

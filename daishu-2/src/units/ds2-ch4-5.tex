@@ -24,9 +24,9 @@
 $$
 D =
 \begin{vmatrix*}
-	a_1 \quad & b_1 \quad & c_1 \\
-	a_2 \quad & b_2 \quad & c_2 \\
-	a_3 \quad & b_3 \quad & c_3
+	a_1 & b_1 & c_1 \\
+	a_2 & b_2 & c_2 \\
+	a_3 & b_3 & c_3
 \end{vmatrix*} \text{。}
 $$
 用元素 $a_1$，$a_2$，$a_3$ 对应的代数余子式 $A_1$，$A_2$，$A_3$ 分别乘方程
@@ -59,21 +59,21 @@ $$
 \begin{align*}
     D_x &= d_1A_1 + d_2A_2 + d_3A_3
         =   \begin{vmatrix*}
-                d_1 \quad & b_1 \quad & c_1 \\
-                d_2 \quad & b_2 \quad & c_2 \\
-                d_3 \quad & b_3 \quad & c_3
+                d_1 & b_1 & c_1 \\
+                d_2 & b_2 & c_2 \\
+                d_3 & b_3 & c_3
             \end{vmatrix*} \text{，} \\
     D_y &= d_1B_1 + d_2B_2 + d_3B_3
         =   \begin{vmatrix*}
-                a_1 \quad & d_1 \quad & c_1 \\
-                a_2 \quad & d_2 \quad & c_2 \\
-                a_3 \quad & d_3 \quad & c_3
+                a_1 & d_1 & c_1 \\
+                a_2 & d_2 & c_2 \\
+                a_3 & d_3 & c_3
             \end{vmatrix*} \text{，} \\
     D_z &= d_1C_1 + d_2C_2 + d_3C_3
         =   \begin{vmatrix*}
-                a_1 \quad & b_1 \quad & d_1 \\
-                a_2 \quad & b_2 \quad & d_2 \\
-                a_3 \quad & b_3 \quad & d_3
+                a_1 & b_1 & d_1 \\
+                a_2 & b_2 & d_2 \\
+                a_3 & b_3 & d_3
             \end{vmatrix*} \text{，}
 \end{align*}
 $D_x$，$D_y$，$D_z$ 是把 $D$ 中第一、二、三列分别换成方程组 \eqref{eq:fcz-2} 的常数
@@ -175,56 +175,56 @@ $$
 
 $
     (1)\; D = \begin{vmatrix*}[r]
-        2 \quad & 3  \quad & -5 \\
-        1 \quad & -2 \quad & 1 \\
-        3 \quad & 1  \quad & 3
+        2 & 3  & -5 \\
+        1 & -2 & 1 \\
+        3 & 1  & 3
     \end{vmatrix*} = \begin{vmatrix*}[r]
-        2 \quad & 7 \quad & -7 \\
-        1 \quad & 0 \quad & 0 \\
-        3 \quad & 7 \quad & 0
+        2 & 7 & -7 \\
+        1 & 0 & 0 \\
+        3 & 7 & 0
     \end{vmatrix*} = - \begin{vmatrix*}[r]
-        7 \quad & -7 \\
-        7 \quad & 0
+        7 & -7 \\
+        7 & 0
     \end{vmatrix*} = -49 \neq 0 \text{，}
 $
 
 所以方程组有唯一解。由
 \begin{align*}
     D_x &= \begin{vmatrix*}[r]
-            3 \quad & 3  \quad & -5 \\
-            0 \quad & -2 \quad & 1 \\
-            7 \quad & 1  \quad & 3
+            3 & 3  & -5 \\
+            0 & -2 & 1 \\
+            7 & 1  & 3
         \end{vmatrix*} = \begin{vmatrix*}[r]
-            3 \quad & -7 \quad & -5 \\
-            0 \quad & 0  \quad & 1 \\
-            7 \quad & 7  \quad & 3
+            3 & -7 & -5 \\
+            0 & 0  & 1 \\
+            7 & 7  & 3
         \end{vmatrix*} = - \begin{vmatrix*}[r]
-            3 \quad & -7 \\
-            7 \quad & 7
+            3 & -7 \\
+            7 & 7
         \end{vmatrix*} = -70 \text{，} \\
     D_y &= \begin{vmatrix*}[r]
-            2 \quad & 3 \quad & -5 \\
-            1 \quad & 0 \quad & 1 \\
-            3 \quad & 7 \quad & 3
+            2 & 3 & -5 \\
+            1 & 0 & 1 \\
+            3 & 7 & 3
         \end{vmatrix*} = \begin{vmatrix*}[r]
-            7 \quad & 3 \quad & -5 \\
-            0 \quad & 0 \quad & 1 \\
-            0 \quad & 7 \quad & 3
+            7 & 3 & -5 \\
+            0 & 0 & 1 \\
+            0 & 7 & 3
         \end{vmatrix*} = 7 \begin{vmatrix*}[r]
-            0 \quad & 1 \\
-            7 \quad & 3
+            0 & 1 \\
+            7 & 3
         \end{vmatrix*} = -49 \text{，} \\
     D_z &= \begin{vmatrix*}[r]
-            2 \quad & 3  \quad & 3 \\
-            1 \quad & -2 \quad & 0 \\
-            3 \quad & 1  \quad & 7
+            2 & 3  & 3 \\
+            1 & -2 & 0 \\
+            3 & 1  & 7
         \end{vmatrix*} = \begin{vmatrix*}[r]
-            2 \quad & 7 \quad & 3 \\
-            1 \quad & 0 \quad & 0 \\
-            3 \quad & 7 \quad & 7
+            2 & 7 & 3 \\
+            1 & 0 & 0 \\
+            3 & 7 & 7
         \end{vmatrix*} = - \begin{vmatrix*}[r]
-            7 \quad & 3 \\
-            7 \quad & 7
+            7 & 3 \\
+            7 & 7
         \end{vmatrix*} = -28 \text{，}
 \end{align*}
 得
@@ -238,13 +238,13 @@ $$
 
 $
     (2)\; D = \begin{vmatrix*}[r]
-        1 \quad & -3 \quad & 1 \\
-        2 \quad & 1  \quad & -1 \\
-        4 \quad & -5 \quad & 1
+        1 & -3 & 1 \\
+        2 & 1  & -1 \\
+        4 & -5 & 1
     \end{vmatrix*} = \begin{vmatrix*}[r]
-        1 \quad & -3 \quad & 1 \\
-        3 \quad & 2  \quad & 0 \\
-        3 \quad & -2 \quad & 0
+        1 & -3 & 1 \\
+        3 & 2  & 0 \\
+        3 & -2 & 0
     \end{vmatrix*} = 0 \text{，}
 $
 方程组或者无解，或者有无穷多解。因此，方程组不可能是有唯一解。
