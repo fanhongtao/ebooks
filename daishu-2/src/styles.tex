@@ -232,9 +232,9 @@
 %\renewcommand\thecorollary{\arabic{corollary}}
 
 \makeatletter
-% 创建指定名字的label
-% 参数1: label的id
-% 参数2: label的名字
+% 创建指定名字的标签
+% 参数1: 标签的id
+% 参数2: 标签的名字 (\nameref{标签id} 所得到的结果)
 \newcommand{\namedlabel}[2]{%
   \@bsphack
   \protected@write\@auxout{}{%
@@ -274,7 +274,18 @@
 
 %----------------------------------
 \newcounter{mylabel}
-\newcommand{\mylabel}[1]{\refstepcounter{mylabel} \label{#1}}
+% 针对计数器 mylabel 创建（指定名字）标签
+% 参数1: 标签的id
+% 参数2: (可选) 标签的名字 (\nameref{标签id} 所得到的结果)。默认为标签归属章节的名字
+\NewDocumentCommand{\mylabel}{m o}{%
+  \refstepcounter{mylabel}
+  \IfValueTF{#2}{
+    \namedlabel{#1}{#2}
+  }{
+    \label{#1}
+  }
+}
+
 
 %
 % 创建计数器及其同名的生成label的命令模板。
