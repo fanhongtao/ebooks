@@ -1,0 +1,275 @@
+\subsubsection{四阶行列式}
+
+一个三阶行列式可以用三个二阶行列式来表示，如
+
+\begin{equation}
+    \begin{vmatrix*}
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
+    \end{vmatrix*}
+        = (-1)^{1+1}a_1 \begin{vmatrix*}
+                b_2 & c_2 \\
+                b_3 & c_3
+            \end{vmatrix*}
+        + (-1)^{1+2}b_1 \begin{vmatrix*}
+                a_2 & c_2 \\
+                a_3 & c_3
+            \end{vmatrix*}
+        + (-1)^{1+3}c_1 \begin{vmatrix*}
+                a_2 & b_2 \\
+                a_3 & b_3
+            \end{vmatrix*} \text{。} \label{eq:sijiehls-1}
+\end{equation}
+所以，我们可以用二阶行列式来定义三阶行列式。仿此，我们可以把\textbf{四阶行列式}定义为：
+\begin{align}
+    \begin{vmatrix*}
+        a_1 & b_1 & c_1 & d_1 \\
+        a_2 & b_2 & c_2 & d_2 \\
+        a_3 & b_3 & c_3 & d_3 \\
+        a_4 & b_4 & c_4 & d_4
+    \end{vmatrix*}
+        &= (-1)^{1+1}a_1 \begin{vmatrix*}
+                b_2 & c_2 & d_2 \\
+                b_3 & c_3 & d_3 \\
+                b_4 & c_4 & d_4
+            \end{vmatrix*}
+        + (-1)^{1+2}b_1 \begin{vmatrix*}
+                a_2 & c_2 & d_2 \\
+                a_3 & c_3 & d_3 \\
+                a_4 & c_4 & d_4
+            \end{vmatrix*} \notag \\
+        &+ (-1)^{1+3}c_1 \begin{vmatrix*}
+                a_2 & b_2 & d_2 \\
+                a_3 & b_3 & d_3 \\
+                a_4 & b_4 & d_4
+            \end{vmatrix*}
+        + (-1)^{1+4}d_1 \begin{vmatrix*}
+                a_2 & b_2 & c_2 \\
+                a_3 & b_3 & c_3 \\
+                a_4 & b_4 & c_4
+            \end{vmatrix*} \text{。}  \label{eq:sijiehls-2}
+\end{align}
+
+
+对这样定义得出的四阶行列式，第 \ref{subsec:4-3} 节中行列式的性质定理和
+第 \ref{subsec:4-4} 节中的两个定理都成立（证明从略）。
+
+类似地，可以用四阶行列式来定义五阶行列式，……，用 $n-1$ 阶行列式来定义 $n$ 阶行列式。
+第 \ref{subsec:4-3} 节中行列式的性质定理和第 \ref{subsec:4-4} 节中的两个定理对于任意阶行列式也都成立。
+
+但应注意，用对角线法则展开行列式，仅适用于二阶、三阶行列式，不适用于高于三阶的行列式。
+
+
+\liti 把行列式
+$$\begin{vmatrix*}[r]
+	5 & 2  & -3 & 0 \\
+	1 & -7 & 2  & 6 \\
+	6 & -1 & 1  & -2 \\
+	3 & 8  & 4  & 2
+\end{vmatrix*}$$
+按第二列展开。
+
+\jie
+\shangyihang\begin{align*}
+    & \begin{vmatrix*}[r]
+        5 & 2  & -3 & 0 \\
+        1 & -7 & 2  & 6 \\
+        6 & -1 & 1  & -2 \\
+        3 & 8  & 4  & 2
+    \end{vmatrix*} \\
+    &= 2 \times (-1)^{1+2} \begin{vmatrix*}[r]
+            1 & 2  & 6 \\
+            6 & 1  & -2 \\
+            3 & 4  & 2
+        \end{vmatrix*}
+    + (-7) \times (-1)^{2+2} \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            6 & 1  & -2 \\
+            3 & 4  & 2
+        \end{vmatrix*} \\
+    &\qquad + (-1) \times (-1)^{3+2} \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            1 & 2  & 6 \\
+            3 & 4  & 2
+        \end{vmatrix*}
+    + 8 \times (-1)^{4+2} \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            1 & 2  & 6 \\
+            6 & 1  & -2
+        \end{vmatrix*} \\
+    &= -2 \begin{vmatrix*}[r]
+            1 & 2  & 6 \\
+            6 & 1  & -2 \\
+            3 & 4  & 2
+        \end{vmatrix*}
+    - 7 \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            6 & 1  & -2 \\
+            3 & 4  & 2
+        \end{vmatrix*}
+    +   \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            1 & 2  & 6 \\
+            3 & 4  & 2
+        \end{vmatrix*}
+    + 8 \begin{vmatrix*}[r]
+            5 & -3 & 0 \\
+            1 & 2  & 6 \\
+            6 & 1  & -2
+        \end{vmatrix*} \text{。}
+\end{align*}
+
+
+\liti 计算
+$$\begin{vmatrix*}[r]
+	1  & 3  & 7 & 2 \\
+	2  & 1  & 0 & -2 \\
+	7  & 4  & 1 & -6 \\
+	-3 & -2 & 4 & 5
+\end{vmatrix*} \text{。}$$
+
+\jie
+
+\begin{align*}
+    \begin{vmatrix*}[r]
+        1  & 3  & 7 & 2 \\
+        2  & 1  & 0 & -2 \\
+        7  & 4  & 1 & -6 \\
+        -3 & -2 & 4 & 5
+    \end{vmatrix*}  & \xlongequal[\text{第二列乘以 (-2) 加到第一列}]{\text{第一列加到第四列}} \begin{vmatrix*}[r]
+            -5 & 3  & 7 & 3 \\
+            0  & 1  & 0 & 0 \\
+            -1 & 4  & 1 & 1 \\
+            1  & -2 & 4 & 2
+        \end{vmatrix*} \\
+    & \xlongequal{\text{按第二行展开}} (-1)^{2+2} \begin{vmatrix*}[r]
+            -5 & 7 & 3 \\
+            -1 & 1 & 1 \\
+            1  & 4 & 2
+        \end{vmatrix*} \\
+    &= \begin{vmatrix*}[r]
+            2 & 4 & 3 \\
+            0 & 0 & 1 \\
+            5 & 2 & 2
+        \end{vmatrix*} = -\begin{vmatrix*}[r]
+                2 & 4 \\
+                5 & 2
+            \end{vmatrix*} = 16 \text{。}
+\end{align*}
+
+
+\liti 求证
+$$
+\begin{vmatrix*}[r]
+    a_0 & -1 & 0  & 0 \\
+    a_1 & x  & -1 & 0 \\
+    a_2 & 0  & x  & -1 \\
+    a_3 & 0  & 0  & x
+\end{vmatrix*} = a_0x^3 + a_1x^2 + a_2x + a_3 \text{。}
+$$
+
+\zhengming
+\shangyihang\begin{flalign*}
+    \hspace{5em}\begin{vmatrix*}[r]
+        a_0 & -1 & 0  & 0 \\
+        a_1 & x  & -1 & 0 \\
+        a_2 & 0  & x  & -1 \\
+        a_3 & 0  & 0  & x
+    \end{vmatrix*} &= a_0 \begin{vmatrix*}[r]
+            x  & -1 & 0 \\
+            0  & x  & -1 \\
+            0  & 0  & x
+        \end{vmatrix*} + \begin{vmatrix*}[r]
+            a_1 & -1 & 0 \\
+            a_2 & x  & -1 \\
+            a_3 & 0  & x
+        \end{vmatrix*} && \\
+    &= a_0x^3 + a_1\begin{vmatrix*}[r]
+            x  & -1 \\
+            0  & x
+        \end{vmatrix*} + \begin{vmatrix*}[r]
+            a_2 & -1 \\
+            a_3 & x
+        \end{vmatrix*} \\
+    &= a_0x^3 + a_1x^2 + a_2x + a_3 \text{。}
+\end{flalign*}
+
+
+\liti 利用行列式的性质计算
+$$\begin{vmatrix*}
+    a & 1 & 1 & 1 \\
+    1 & a & 1 & 1 \\
+    1 & 1 & a & 1 \\
+    1 & 1 & 1 & a
+\end{vmatrix*} \text{。}$$
+
+\jie
+\shangyihang\begin{flalign*}
+    \hspace{4em}\begin{vmatrix*}
+        a & 1 & 1 & 1 \\
+        1 & a & 1 & 1 \\
+        1 & 1 & a & 1 \\
+        1 & 1 & 1 & a
+    \end{vmatrix*} &= \begin{vmatrix*}
+            a + 3 & 1 & 1 & 1 \\
+            a + 3 & a & 1 & 1 \\
+            a + 3 & 1 & a & 1 \\
+            a + 3 & 1 & 1 & a
+        \end{vmatrix*} && \\
+    &= (a + 3) \begin{vmatrix*}
+            1 & 1 & 1 & 1 \\
+            1 & a & 1 & 1 \\
+            1 & 1 & a & 1 \\
+            1 & 1 & 1 & a
+        \end{vmatrix*} \\
+    &= (a + 3) \begin{vmatrix*}
+            1 & 1 & 1 & 1 \\
+            0 & a-1 & 0 & 0 \\
+            0 & 0 & a-1 & 0 \\
+            0 & 0 & 0 & a-1
+        \end{vmatrix*} \\
+    &= (a + 3)(a -  1)^3 \text{。}
+\end{flalign*}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{已知行列式}
+$$\begin{vmatrix*}[r]
+    1  & 2 & 5  & 7 \\
+    1  & 0 & -2 & 0 \\
+    -1 & 1 & 4  & 5 \\
+    3  & 2 & 9  & 9
+\end{vmatrix*} \text{，}$$
+
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{写出行列式中第三行第二列的元素的余子式及代数余子式；}
+
+    \xiaoxiaoti{把行列式按第二行展开，并进行计算；}
+
+    \xiaoxiaoti{把行列式按第一列展开，并进行计算。}
+
+\end{xiaoxiaotis}
+
+\xiaoti*{比较以上两种计算结果是否相同。}
+
+\xiaoti{利用行列式的性质和展开定理，计算}
+$$\begin{vmatrix*}
+    0 & q & r & s \\
+    p & 0 & r & s \\
+    p & q & 0 & s \\
+    p & q & r & 0
+\end{vmatrix*} \text{。}$$
+
+\end{xiaotis}
+
+
+
+
+
+
+
+
