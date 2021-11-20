@@ -32,7 +32,7 @@
 \usepackage{multirow}
 \usepackage{polynom}
 \usepackage[figuresright]{rotating}
-\usepackage{wrapfig}
+\usepackage{tablefootnote}
 \usepackage{tikz}
 \usetikzlibrary{
   arrows.meta,
@@ -44,6 +44,7 @@
   through,
 }
 
+\usepackage{wrapfig}
 \usepackage{xlop}
 \usepackage{xparse}
 
@@ -57,6 +58,7 @@
     (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
     \node at (char.center) {\makebox[0pt][c]{#2}};}}
 \robustify{\circled}
+\newcommand{\tc}[1]{\text{\circled{#1}}}
 
 % 罗马数字
 \makeatletter
@@ -110,8 +112,8 @@
   \refstepcounter{subsection}
   \subsection*{*\thesubsection\quad #2}
   \IfNoValueTF{#1}
-    {\addcontentsline{toc}{subsection}{\makebox[0pt][r]{*}\thesubsection\qquad #2}}
-    {\addcontentsline{toc}{subsection}{\makebox[0pt][r]{*}\thesubsection\qquad #1}}
+    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
+    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
 }
 
 \newcounter{cntliti}[subsubsection]           % 例题的计数器
@@ -238,7 +240,7 @@
 % 参数1: 标签的id
 % 参数2: 标签的名字 (\nameref{标签id} 所得到的结果)
 \newcommand{\namedlabel}[2]{%
-  \@bsphack
+  \@bsphack%
   \protected@write\@auxout{}{%
     \string\newlabel{#1}{%
         {\@currentlabel}%
@@ -247,7 +249,7 @@
         {\@currentHref}{}%
       }%
   }%
-  \@bsphack
+  \@bsphack%
 }%
 \makeatother
 
@@ -280,12 +282,12 @@
 % 参数1: 标签的id
 % 参数2: (可选) 标签的名字 (\nameref{标签id} 所得到的结果)。默认为标签归属章节的名字
 \NewDocumentCommand{\mylabel}{m o}{%
-  \refstepcounter{mylabel}
-  \IfValueTF{#2}{
-    \namedlabel{#1}{#2}
-  }{
-    \label{#1}
-  }
+  \refstepcounter{mylabel}%
+  \IfValueTF{#2}{%
+    \namedlabel{#1}{#2}%
+  }{%
+    \label{#1}%
+  }%
 }
 
 
@@ -305,4 +307,18 @@
 }
 
 \createcounter{fangchengzu}[\Roman{fangchengzu}]
+
+%---------------------------
+% 在数学的长符号（如：\xlongrightarrow）添加脚注时，遇到脚注重复的问题。
+% 下面的代码用于避免脚注重复。
+% 注意：不建议在数学公式中使用脚注，这里是为了尽可能展现原书的内容。
+\makeatletter
+\newif\ifext@arrow@measuring@
+\let\saved@ext@arrow\ext@arrow % 保存原始定义
+\def\fake@footnotemark{\textsuperscript{\the\numexpr\value{footnote}+1\relax}}
+\patchcmd\ext@arrow{\mathop}{\ext@arrow@measuring@true\mathop}{}{}
+\patchcmd\ext@arrow{\limits}{\ext@arrow@measuring@false\limits}{}{}
+\def\arrowmeasuring#1#2{\ifext@arrow@measuring@#1\else#2\fi}
+\makeatother
+\def\mytablefootnote#1{\arrowmeasuring{\csname fake@footnotemark\endcsname}{\tablefootnote{#1}}}
 

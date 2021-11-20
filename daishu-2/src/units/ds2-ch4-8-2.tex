@@ -1,0 +1,528 @@
+\subsubsection{顺序消元法解线性方程组的矩阵表示}
+
+从解题过程可以看出，在消元过程中，方程组的未知数都不参与运算，
+参与运算的只是方程组的系数和常数项，因此可以通过方程组的系数
+和常数项的变化来表示方程组的消元过程。
+为此，我们先来学习一个新的概念 —— 矩阵。
+
+设有 $m \times n$ 个数排成一个 $m$ 行 $n$ 列的矩形表，为明确起
+见，用括弧把它的两侧括起来，这个表叫做\textbf{矩阵}。例如
+$$\begin{pmatrix*}[r]
+    3 & 4 & 2 \\
+    1 & 5 & -1
+\end{pmatrix*}$$
+是一个两行三列的矩阵，
+$$\begin{pmatrix*}[r]
+    3 & 1 & 5 \\
+    2 & 0 & -3 \\
+    5 & 4 & 2
+\end{pmatrix*}$$
+是一个三行三列的矩阵，也叫三阶\textbf{方阵}。
+
+矩阵的行、列与行列式的行、列含义相同，各行、各列上的数叫做矩阵的\textbf{元素}。
+
+注意：矩阵与行列式是两个不同的概念。
+行列式表示数，当它的元素取定某一组值时，行列式就有一个确定的值；
+矩阵不表示数，而是某些数按照一定顺序排成的一个矩形表。
+
+把三元线性方程组 \eqref{eq:fcz-2} 的系数与常数项按它们原来的位置分别写成下面两个表：
+$$
+\begin{pmatrix*}
+    a_1 & b_1 & c_1 \\
+	a_2 & b_2 & c_2 \\
+	a_3 & b_3 & c_3
+\end{pmatrix*}, \qquad
+\begin{pmatrix*}
+    d_1 \\
+    d_2 \\
+    d_3
+\end{pmatrix*} \text{，}
+$$
+前者叫做方程组 \eqref{eq:fcz-2} 的\textbf{系数矩阵}，
+后者叫做方程组 \eqref{eq:fcz-2} 的\textbf{常数项矩阵}。
+把上面两个表合写成一个表
+$$\begin{pmatrix*}
+    a_1 & b_1 & c_1 & d_1 \\
+	a_2 & b_2 & c_2 & d_2 \\
+	a_3 & b_3 & c_3 & d_3 \\
+	a_4 & b_4 & c_4 & d_4
+\end{pmatrix*}$$
+它叫做方程组 \eqref{eq:fcz-2} 的\textbf{增广矩阵}。
+
+方程组的变形，可以用它的增广矩阵的变化来表示。我们把 \nameref{liti:xyf-1} 中方程组
+的消元过程和它的矩阵表示的形式对比地列成表格，如下所示。
+
+\begin{table}[htbp]
+%TODO: 方程组中各方程的编号，采用的是手工调整间距的方式
+\centering
+\renewcommand\arraystretch{1.2}
+\begin{tabular}{|*{2}{@{}r@{}l|}}
+    \hline
+    \multicolumn{2}{|c|}{方程组的消元过程} & \multicolumn{2}{c|}{矩阵表示的形式} \\ \hline
+    &$\left\{
+        \begin{alignedat}{4}
+                &     & 2y & +{} & 3z & = -8, & \hspace{2em} & (1)\\
+            x   & +{} & 3y & -{} & 2z & = 2,  & & (2)\\
+            2x  & -{} & 3y & +{} & 7z & = -9  & & (3)
+        \end{alignedat}
+    \right.$
+    & & $\begin{pmatrix*}[r]
+        0 &  2 &  3 & -8 \\
+        1 &  3 & -2 & 2 \\
+        2 & -3 &  7 & -9
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{\text{(1), (2)互换}}$
+    & $\left\{
+        \begin{alignedat}{4}
+            x   & +{} & 3y & -{} & 2z & = 2,  & \hspace{2em} & (1)'\\
+                &     & 2y & +{} & 3z & = -8, & & (2)'\\
+            2x  & -{} & 3y & +{} & 7z & = -9  & & (3)
+        \end{alignedat}
+    \right.$
+    & $\xlongrightarrow{\text{\tc{1}，\tc{2} 互换}}$
+    &$\begin{pmatrix*}[r]
+        1 &  3 & -2 & 2 \\
+        0 &  2 &  3 & -8 \\
+        2 & -3 &  7 & -9
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{-2 \times (1)' + (3) \mytablefootnote{$-2 \times (1)' + (3)$ 表示用 $-2$ 乘以方程 $(1)'$ 的两边，分别加到方程 $(3)$ 的两边上去。}}$
+    &$\left\{
+        \begin{alignedat}{4}
+            x   & +{} & 3y & -{} &  2z & = 2,  & \hspace{1.8em} & (1)'\\
+                &     & 2y & +{} &  3z & = -8, & & (2)'\\
+                & -{} & 9y & +{} & 11z & = -13 & & (3)'
+        \end{alignedat}
+    \right. $
+    &$\xlongrightarrow{-2 \times \tc{1} + \tc{3} \mytablefootnote{$-2 \times \tc{1} + \tc{3}$ 表示用 $-2$ 乘矩阵的第一行的所有元素，加到第三行的对应元素上去。}}$
+    &$\begin{pmatrix*}[r]
+        1 &  3 & -2 & 2 \\
+        0 &  2 &  3 & -8 \\
+        0 & -9 & 11 & -13
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{\dfrac{1}{2} \times (2)'}$
+    &$\left\{
+        \begin{alignedat}{4}
+            x   & +{} & 3y & -{} &  2z & = 2,  & \hspace{1.8em} & (1)'\\
+                &     &  y & +{} & \dfrac{3}{2}z & = -4, & & (2)''\\
+                & -{} & 9y & +{} & 11z & = -13 & & (3)'
+        \end{alignedat}
+        \right. $
+    & $\xlongrightarrow{\dfrac{1}{2} \times \tc{2}}$
+    &$\begin{pmatrix*}[r]
+        1 &  3 & -2 & 2 \\
+        0 &  1 & \dfrac{3}{2} & -4 \\
+        0 & -9 & 11 & -13
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{9 \times (2)'' + (3)'}$
+    & $\left\{
+        \begin{alignedat}{4}
+            x   & +{} & 3y & -{} &  2z & = 2,  & \hspace{1.6em} & (1)'\\
+                &     &  y & +{} & \dfrac{3}{2}z & = -4, & & (2)''\\
+                &     &    &     & \dfrac{49}{2}z & = -49 & & (3)''
+        \end{alignedat}
+    \right.$
+    & $\xlongrightarrow{9 \times \tc{2} + \tc{3}}$
+    & $\begin{pmatrix*}[r]
+        1 &  3 & -2 & 2 \\
+        0 &  1 & \dfrac{3}{2} & -4 \\[1em]
+        0 &  0 & \dfrac{49}{2} & -49
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{\dfrac{2}{49} \times (3)''}$
+    & $\left\{
+        \begin{alignedat}{4}
+            x  & +{} & 3y & -{} &  2z & = 2,  & \hspace{2.3em} & (1)'\\
+                &     &  y & +{} & \dfrac{3}{2}z & = -4, & & (2)''\\
+                &     &    &     &   z & = -2  & & (3)'''
+        \end{alignedat}
+    \right. $
+    & $\xlongrightarrow{\dfrac{2}{49} \times \tc{3}}$
+    & $\begin{pmatrix*}[r]
+        1 &  3 & -2 & 2 \\
+        0 &  1 & \dfrac{3}{2} & -4 \\[1em]
+        0 &  0 & 1 & -2
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow[-\dfrac{3}{2} \times (3)''' + (2)'']{2 \times (3)''' + (1)'}$
+    & $\left\{
+        \begin{alignedat}{4}
+            x   & +{} & 3y & \phantom{+{}} & \phantom{1z} & = -2,  & \hspace{2.9em} & (1)''\\
+                &     &  y &     &    & = -1, & & (2)'''\\
+                &     &    &     &  z & = -2  & & (3)'''
+        \end{alignedat}
+    \right.$
+    & $\xlongrightarrow[-\dfrac{3}{2} \times \tc{3} + \tc{2}]{2 \times \tc{3} + \tc{1}}$
+    & $\begin{pmatrix*}[r]
+        1 &  3 & 0 & -2 \\
+        0 &  1 & 0 & -1 \\
+        0 &  0 & 1 & -2
+    \end{pmatrix*}$ \\
+
+
+    $\xLongrightarrow{-3 \times (2)''' + (1)''}$
+    & $\left\{
+        \begin{alignedat}{4}
+            x   & \phantom{ +{} } & \phantom{ 3y } & \phantom{ +{} } & \phantom{ 1z } & = 1,  & \hspace{3.3em} & (1)'''\\
+                &     &  y &     &    & = -1, & & (2)'''\\
+                &     &    &     &  z & = -2  & & (3)'''
+        \end{alignedat}
+    \right.$
+    & $\xlongrightarrow{-3 \times \tc{2} + \tc{1}}$
+    & $\begin{pmatrix*}[r]
+        1 &  0 & 0 &  1 \\
+        0 &  1 & 0 & -1 \\
+        0 &  0 & 1 & -2
+    \end{pmatrix*}$
+    \\ \hline
+\end{tabular}
+\end{table}
+
+
+从表格可以看出，在解题过程中，我们只对方程组进行了三种变形：
+
+\begin{enumerate}[(1), nosep]
+    \item 用一个非零常数乘某一个方程；
+    \item 用一个数乘某一个方程，加到另一个方程上去；
+    \item 两个方程互换。
+\end{enumerate}
+
+这三种变形叫做\textbf{方程组的初等变换}。
+方程组经过初等变换，形式变了，但它的解不变。
+
+这时，方程组的增广矩阵也有了变化。增广矩阵的改变，是由于对矩阵相应地进行了以下三种变形：
+
+\begin{enumerate}[(1), nosep]
+    \item 用一个非零常数乘矩阵某一行的所有元素；
+    \item 用一个数乘矩阵某一行的所有元素，然后加到另一行的对应元素上去；
+    \item 两行互换。
+\end{enumerate}
+
+这三种变形叫做\textbf{矩阵的行的初等变换}。
+
+这样，三元线性方程组的求解过程，也就是有顺序地利用矩阵的行的初等变换，把方程组的增广矩阵变换为
+$$\begin{pmatrix*}
+    1 & 0 & 0 & x_1 \\
+    0 & 1 & 0 & y_1 \\
+    0 & 0 & 1 & z_1
+\end{pmatrix*}$$
+的过程。这时方程组的系数矩阵变为
+$$\begin{pmatrix*}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{pmatrix*} \text{，}$$
+常数项矩阵变为
+$$\begin{pmatrix*}
+    x_1 \\
+    y_1 \\
+    z_1
+\end{pmatrix*} \text{。}$$
+$(x_1,\; y_1,\; z_1)$ 就是这个三元线性方程组的解。
+
+这种解线性方程组的方法也可以推广到四元或多于四元的线性方程组。当未知数的个数相当多时，
+利用电子计算机按编好的程序进行运算，可以把解很快求出来。
+
+下面我们再举几个用顺序消元法解题的例子，但只写出它们的矩阵表示的形式。
+
+\setcounter{cntliti}{1}
+\liti 用顺序消元法（矩阵表示）解方程组
+$$\left\{
+    \begin{alignedat}{3}
+        x  & -{} &  y & +{} & z & = 4, \\
+        4x & -{} & 4y & +{} & z & = 7, \\
+        x  & +{} & 2y & -{} & z & = 1 \text{。}
+    \end{alignedat}
+\right.$$
+
+
+\begin{align*}
+    \text{\jie} \quad
+    \begin{pmatrix*}[r]
+        1 & -1 &  1 & 4 \\
+        4 & -4 &  1 & 7 \\
+        1 &  2 & -1 & 1
+    \end{pmatrix*}
+    &\xrightarrow[-1 \times \text{\circled{1}} + \text{\circled{3}}]{-4 \times \text{\circled{1}} + \text{\circled{2}}}
+        \begin{pmatrix*}[r]
+            1 & -1 &  1 & 4 \\
+            0 &  0 & -3 & -9 \\
+            0 &  3 & -2 & -3
+        \end{pmatrix*}
+        \xrightarrow{\text{\circled{2}，\circled{3}互换}}
+        \begin{pmatrix*}[r]
+            1 & -1 &  1 & 4 \\
+            0 &  3 & -2 & -3 \\
+            0 &  0 & -3 & -9
+        \end{pmatrix*} \\
+    &\xrightarrow{\dfrac{1}{3} \times \text{\circled{2}}}
+        \begin{pmatrix*}[r]
+            1 & -1 &  1 & 4 \\
+            0 &  1 & -\dfrac{2}{3} & -1 \\
+            0 &  0 & -3 & -9
+        \end{pmatrix*}
+        \xrightarrow{-\dfrac{1}{3} \times \text{\circled{3}}}
+        \begin{pmatrix*}[r]
+            1 & -1 &  1 & 4 \\
+            0 &  1 & -\dfrac{2}{3} & -1 \\
+            0 &  0 & 1 & 3
+        \end{pmatrix*} \\
+    & \xrightarrow[-1 \times \text{\circled{3}} + \text{\circled{1}}]{\dfrac{2}{3} \times \text{\circled{3}} + \text{\circled{2}}}
+        \begin{pmatrix*}[r]
+            1 & -1 & 0 & 1 \\
+            0 &  1 & 0 & 1 \\
+            0 &  0 & 1 & 3
+        \end{pmatrix*}
+        \xrightarrow{\text{\circled{2}} + \text{\circled{1}}}
+        \begin{pmatrix*}[r]
+            1 &  0 & 0 & 2 \\
+            0 &  1 & 0 & 1 \\
+            0 &  0 & 1 & 3
+        \end{pmatrix*} \text{。}
+\end{align*}
+
+所以方程组的解是 $(2,\; 1,\; 3)$。
+
+
+\liti 用顺序消元法（矩阵表示）解方程组
+$$\left\{
+    \begin{alignedat}{4}
+        2x & +{} & 3y & +{} & 11z & +{} & 5w & = 2, \\
+        x  & +{} &  y & +{} &  5z & +{} & 2w & = 1, \\
+        2x & +{} &  y & +{} &  3z & +{} & 2w & = -3, \\
+        x  & +{} &  y & +{} &  3z & +{} & 4w & = -3 \text{。}
+    \end{alignedat}
+\right.$$
+
+\begin{align*}
+    \text{\jie} \quad
+    \begin{pmatrix*}[r]
+        2 & 3 & 11 & 5 & 2 \\
+        1 & 1 &  5 & 2 & 1 \\
+        2 & 1 &  3 & 2 & -3 \\
+        1 & 1 &  3 & 4 & -3
+    \end{pmatrix*}
+    &\xrightarrow{\dfrac{1}{2} \times \tc{1}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            1 & 1 &  5 & 2 & 1 \\
+            2 & 1 &  3 & 2 & -3 \\
+            1 & 1 &  3 & 4 & -3
+        \end{pmatrix*}
+        \xrightarrow[-1 \times \tc{1} + \tc{4}]{
+            \scriptsize\begin{gathered}
+                -1 \times \tc{1} + \tc{2} \\[-1em]
+                -2 \times \tc{1} + \tc{3}
+            \end{gathered}
+        }
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 & -\dfrac{1}{2} &  -\dfrac{1}{2} & -\dfrac{1}{2} & 0 \\[1em]
+            0 & -2 &  -8 & -3 & -5 \\[1em]
+            0 & -\dfrac{1}{2} & -\dfrac{5}{2} & \dfrac{3}{2} & -4
+        \end{pmatrix*} \\
+    & \xrightarrow{-2 \times \tc{2}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 &  1 &   1 &  1 & 0 \\[1em]
+            0 & -2 &  -8 & -3 & -5 \\[1em]
+            0 & -\dfrac{1}{2} & -\dfrac{5}{2} & \dfrac{3}{2} & -4
+        \end{pmatrix*}
+        \xrightarrow[\dfrac{1}{2} \times \tc{2} + \tc{4}]{2 \times \tc{2} + \tc{3}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 &  1 &   1 &  1 & 0 \\[1em]
+            0 &  0 &  -6 & -1 & -5 \\[1em]
+            0 &  0 &  -2 &  2 & -4
+        \end{pmatrix*} \\
+    & \xrightarrow{-\dfrac{1}{6} \times \tc{3}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 &  1 &   1 &  1 & 0 \\[1em]
+            0 &  0 &   1 & \dfrac{1}{6} & \dfrac{5}{6} \\[1em]
+            0 &  0 &  -2 &  2 & -4
+        \end{pmatrix*}
+        \xrightarrow{2 \times \tc{3} + \tc{4}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 &  1 &   1 &  1 & 0 \\[1em]
+            0 &  0 &   1 & \dfrac{1}{6} & \dfrac{5}{6} \\[1em]
+            0 &  0 &   0 & \dfrac{7}{3} & -\dfrac{7}{3}
+        \end{pmatrix*} \\
+    & \xrightarrow{\dfrac{3}{7} \times \tc{4}}
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & \dfrac{5}{2} & 1 \\[1em]
+            0 &  1 &   1 &  1 & 0 \\[1em]
+            0 &  0 &   1 & \dfrac{1}{6} & \dfrac{5}{6} \\[1em]
+            0 &  0 &   0 &  1 & -1
+        \end{pmatrix*}
+        \xrightarrow[-\dfrac{5}{2} \times \tc{4} + \tc{1}]{
+            \scriptsize\begin{gathered}
+                -\dfrac{1}{6} \times \tc{4} + \tc{3} \\[-1em]
+                -1 \times \tc{4} + \tc{2}
+            \end{gathered}
+        }
+        \begin{pmatrix*}[r]
+            1 & \dfrac{3}{2} & \dfrac{11}{2} & 0 & \dfrac{7}{2} \\[1em]
+            0 &  1 &   1 &  0 & 1 \\[1em]
+            0 &  0 &   1 &  0 & 1 \\[1em]
+            0 &  0 &   0 &  1 & -1
+        \end{pmatrix*} \\
+    & \xrightarrow[-\dfrac{11}{2} \times \tc{3} + \tc{1}]{-1 \times \tc{3} + \tc{2}}
+    \begin{pmatrix*}[r]
+        1 & \dfrac{3}{2} & 0 & 0 & -2 \\[1em]
+        0 &  1 &   0 &  0 & 0 \\
+        0 &  0 &   1 &  0 & 1 \\
+        0 &  0 &   0 &  1 & -1
+    \end{pmatrix*}
+    \xrightarrow{-\dfrac{3}{2} \times \tc{2} + \tc{1}}
+    \begin{pmatrix*}[r]
+        1 &  0 &   0 &  0 & -2 \\
+        0 &  1 &   0 &  0 & 0 \\
+        0 &  0 &   1 &  0 & 1 \\
+        0 &  0 &   0 &  1 & -1
+    \end{pmatrix*}
+\end{align*}
+
+所以方程组的解是 $(-2,\; 0,\; 1,\; -1)$。
+
+上面的做法是严格按照一种规定的程序进行的，但实际上，根据方程组的初等变换和矩阵的行的
+初等变换之间的关系，在系数行列式不为零的情况下，只要把系数矩阵化到每一行只有一个元素
+是 $1$，其他都是 $0$，而且取值为 $1$ 的元素各在不同的列时，就可以得出方程组的解来。
+因此在用笔算解题时，不必严格按照上述规定的程序，可以灵活处理，以使计算简便。
+
+\liti 解方程组
+$$\left\{
+    \begin{alignedat}{4}
+        3x & -{} & 2y & +{} &  z & -{} &  w & = 2, \\
+        2x & +{} &  y & -{} &  z & -{} & 2w & = 4, \\
+        4x & -{} &  y & -{} & 2z & +{} &  w & = 10, \\
+        2x & +{} & 3y & +{} &  z & -{} & 3w & = 3 \text{。}
+    \end{alignedat}
+\right.$$
+
+\begin{align*}
+    \text{\jie} \quad
+    \begin{pmatrix*}[r]
+        3 & -2 &  1 & -1 & 2 \\
+        2 &  1 & -1 & -2 & 4 \\
+        4 & -1 & -2 &  1 & 10 \\
+        2 &  3 &  1 & -3 & 3
+    \end{pmatrix*}
+    & \xrightarrow[-2 \times \tc{2} + \tc{3}]{
+        \scriptsize\begin{aligned}
+            -1 \times &\tc{4} + \tc{1} \\[-1em]
+                      &\tc{4} + \tc{2}
+        \end{aligned}
+    }
+        \begin{pmatrix*}[r]
+            1 & -5 &  0 &  2 & -1 \\
+            4 &  4 &  0 & -5 & 7 \\
+            0 & -3 &  0 &  5 & 2 \\
+            2 &  3 &  1 & -3 & 3
+        \end{pmatrix*}
+        \xrightarrow[-2 \times \tc{1} + \tc{4}]{-4 \times \tc{1} + \tc{2}}
+        \begin{pmatrix*}[r]
+            1 & -5 &  0 &  2 & -1 \\
+            0 & 24 &  0 & -13 & 11 \\
+            0 & -3 &  0 &  5 & 2 \\
+            0 & 13 &  1 & -7 & 5
+        \end{pmatrix*} \\
+    & \xrightarrow[4 \times \tc{3} + \tc{4}]{
+        \scriptsize\begin{aligned}
+            -1 \times &\tc{3} + \tc{1} \\[-1em]
+             8 \times &\tc{3} + \tc{2}
+        \end{aligned}
+    }
+        \begin{pmatrix*}[r]
+            1 & -2 &  0 & -3 & -3 \\
+            0 &  0 &  0 & 27 & 27 \\
+            0 & -3 &  0 &  5 & 2 \\
+            0 &  1 &  1 & 13 & 13
+        \end{pmatrix*}
+        \xrightarrow{\dfrac{1}{27} \times \tc{2}}
+        \begin{pmatrix*}[r]
+            1 & -2 &  0 & -3 & -3 \\
+            0 &  0 &  0 &  1 & 1 \\
+            0 & -3 &  0 &  5 & 2 \\
+            0 &  1 &  1 & 13 & 13
+        \end{pmatrix*} \\
+    & \xrightarrow[-13 \times \tc{2} + \tc{4}]{
+        \scriptsize\begin{aligned}
+            3 \times &\tc{2} + \tc{1} \\[-1em]
+            -5 \times &\tc{2} + \tc{3}
+        \end{aligned}
+    }
+        \begin{pmatrix*}[r]
+            1 & -2 &  0 &  0 & 0 \\
+            0 &  0 &  0 &  1 & 1 \\
+            0 & -3 &  0 &  0 & -3 \\
+            0 &  1 &  1 &  0 & 0
+        \end{pmatrix*}
+        \xrightarrow{-\dfrac{1}{3} \times \tc{3}}
+        \begin{pmatrix*}[r]
+            1 & -2 &  0 &  0 & 0 \\
+            0 &  0 &  0 &  1 & 1 \\
+            0 &  1 &  0 &  0 & 1 \\
+            0 &  1 &  1 &  0 & 0
+        \end{pmatrix*} \\
+    &\xrightarrow[-1 \times \tc{3} + \tc{4}]{2 \times \tc{3} + \tc{1}}
+    \begin{pmatrix*}[r]
+        1 &  0 &  0 &  0 & 2 \\
+        0 &  0 &  0 &  1 & 1 \\
+        0 &  1 &  0 &  0 & 1 \\
+        0 &  0 &  1 &  0 & -1
+    \end{pmatrix*}
+\end{align*}
+
+所以方程组的解是 $(2,\; 1,\; -1,\; 1)$。
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{根据指定要求对下列矩阵进行行的初等变换：}
+
+\newcommand{\emptymatrix}{
+    \begin{pmatrix}
+        \phantom{123} & \phantom{123} & \phantom{123} & \phantom{123} \\
+        \, \\
+        \,
+    \end{pmatrix}
+}
+\begin{align*}
+    \begin{pmatrix*}[r]
+        1 & -1 & 2 & 2 \\
+        1 &  1 & 0 & 1 \\
+        1 &  3 & 1 & -2
+    \end{pmatrix*}
+    &\xrightarrow[-1 \times \tc{1} + \tc{3}]{-1 \times \tc{1} + \tc{2}}
+        \emptymatrix
+        \xrightarrow{\dfrac{1}{2} \times \tc{2}}
+        \emptymatrix \\
+    &\xrightarrow{-4 \times \tc{2} + \tc{3}}
+        \emptymatrix
+        \xrightarrow{\dfrac{1}{3} \times \tc{3}}
+        \emptymatrix \text{。}
+\end{align*}
+
+\xiaoti{用顺序消元法（矩阵表示）解方程组}
+$$\begin{cases}
+    x + y - 2z = -5, \\
+    x - y + z = 1, \\
+    2x + 5y + z = 0 \text{。}
+\end{cases}$$
+
+
+\end{xiaotis}
+
