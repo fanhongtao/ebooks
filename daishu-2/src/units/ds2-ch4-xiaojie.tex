@@ -1,0 +1,99 @@
+\xiaojie
+
+一、本章主要内容是二阶、三阶行列式，行列式的性质和展开，二元线性方程组解的讨论，
+用克莱姆法则求二元、三元线性方程组的唯一解。选学内容有三元齐次线性方程组，四阶
+行列式和四元线性方程组，用顺序消元法（矩阵表示） 解线性方程组。
+
+二、二阶及三阶行列式的定义是：
+\begin{flalign*}
+    \hspace{3em} & \begin{vmatrix}
+        a_1 & b_1 \\
+        a_2 & b_2
+    \end{vmatrix} = a_1b_2 - a_2b_1, && \\
+    & \begin{vmatrix}
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
+    \end{vmatrix} = a_1b_2c_3 + a_2b_3c_1 + a_3b_1c_2 - a_3b_2c_1 - a_2b_1c_3 - a_1b_3c_2 \text{。}
+\end{flalign*}
+
+对四阶行列式，本章中是借助四个三阶行列式来定义的。一般地，可以用 $n$ 个 $n-1$ 阶行列式来定义 $n$ 阶行列式。
+
+三、行列式中某元素的余子式与代数余子式是两个重要的概念，第 \ref{subsec:4-3} 节中行列式的性质定理
+和第 \ref{subsec:4-4} 节中的展开定理，是行列式进行恒等变形以及简化行列式的计算的重要依据。这些概念、
+定理在本章中都是以三阶行列式为例来引入或证明的，但它们对任意阶行列式都适用。
+
+二阶、三阶行列式可以用对角线法则展开，也可按某一行（或一列）展开，对高于三阶的行列式，
+对角线法则不再适用，但仍可按某一行（或一列）展开，逐次降低行列式的阶。
+
+四、二元线性方程组
+$$\begin{cases}
+    a_1x + b_1y = c_1, \\
+    a_2x + b_2y = c_2
+\end{cases}$$
+
+\begin{enumerate}[(1), nosep]
+    \item 当系数行列式 $D \neq 0$ 时，有唯一解 $\left( \dfrac{D_x}{D},\; \dfrac{D_y}{D}\right)$；
+    \item 当 $D = 0$，但 $D_x$，$D_y$ 不全为零，无解。
+    \item 当 $D = D_x = D_y = 0$ 时，有以下两种情况：
+    \begin{enumerate}[(1$^\circ$), nosep]
+        \item $a_1$，$a_2$，$b_1$，$b_2$ 不全为零，或 $a_1 = a_2 = b_1 = b_2 = c_1 = c_2 = 0$ 时，有无穷多解；
+        \item $a_1 = a_2 = b_1 = b_2 = 0$，但 $c_1$，$c_2$ 不全为零时，无解。
+    \end{enumerate}
+\end{enumerate}
+
+
+三元线性方程组
+$$\begin{cases}
+    a_1 x + b_1 y + c_1 z = d_1 , \\
+    a_2 x + b_2 y + c_2 z = d_2 ,\\
+    a_3 x + b_3 y + c_3 z = d_3
+\end{cases}$$
+
+\begin{enumerate}[(1), nosep]
+    \item 当系数行列式 $D \neq 0$ 时，有唯一解 $\left( \dfrac{D_x}{D},\; \dfrac{D_y}{D},\; \dfrac{D_z}{D} \right)$ ；
+    \item 当 $D = 0$ 时，或者无解或者有无穷多解。
+\end{enumerate}
+
+一般地，对含 $n$ 个方程 $n$ 个未知数的线性方程组，利用第 \ref{subsec:4-4} 节中的两个定理，
+依照第 \ref{subsec:4-5} 节中三元线方程组 \eqref{eq:fcz-3} 的求解方法，可以得出：
+
+当系数行列式 $D \neq 0$ 时，$n$ 元线性方程组有唯一解
+$\left( \dfrac{D_1}{D},\; \dfrac{D_2}{D},\; \cdots ,\; \dfrac{D_n}{D} \right)$ ，
+其中 $D_i \; (i = 1, 2, \cdots, n)$ 是将系数行列式 $D$ 中第 $i$ 列换成方程组的
+常数项列而得出的 $n$ 阶行列式。
+
+这就是求 $n$ 元线性方程组的解的克莱姆法则。
+
+五、三元齐次线方程组
+$$\begin{cases}
+    a_1 x + b_1 y + c_1 z = 0 , \\
+    a_2 x + b_2 y + c_2 z = 0 , \\
+    a_3 x + b_3 y + c_3 z = 0
+\end{cases}$$
+
+\begin{enumerate}[(1), nosep]
+    \item 当系数行列式 $D \neq 0$ 时，有唯一解 —— 零解；
+    \item 当 $D = 0$ 时，除零解外还有无穷多非零解。
+\end{enumerate}
+
+这一结论对含 $n$ 个未知数 $n$ 个方程的齐次线性方程组也适用。
+
+六、用顺序消元法解 $n$ 元线性方程组，它的基本思想是消元，但强调按一定的程序进行消元。
+它的矩阵表示的形式是对方程组的增广矩阵进行矩阵的行的初等变换，当方程组的系数行列式
+不等于零时，把增广矩阵最终化为
+$$\begin{pNiceMatrix}
+    1 & 0 & \cdots & 0 & k_1 \\
+    0 & 1 & \cdots & 0 & k_2 \\
+    \Hdotsfor{5} \\
+    0 & 0 & \cdots & 1 & k_n
+    \CodeAfter
+    \begin{tikzpicture}
+        \coordinate (A) at ($(5 -| 1) + (0.5em, 0)$);
+        \coordinate (B) at ($(5 -| 5) - (0.5em, 0)$);
+        \draw[decorate,decoration={brace,amplitude=3mm,mirror},thick] (A) -- (B);
+        \node [yshift=-0.5cm] at (5 -| 3) {\text{n列}};
+    \end{tikzpicture}
+\end{pNiceMatrix}$$\\
+的形式，从而求出方程组的解 $(k_1,\; k_2,\; \cdots ,\; k_n)$。
+
