@@ -1,0 +1,442 @@
+{\centering \nonumsubsection{A \hspace{1em} 组}}
+
+\begin{xiaotis}
+
+\xiaoti{讨论关于 $x$ 的方程 $ax = b$ 的解的几种情况。}
+
+\xiaoti{什么叫做二元线性方程组的一个解？什么叫做二元线性方程组的解集？二元线性方程组的解可能有几种情况？}
+
+\xiaoti{已知方程组
+$$\begin{cases}
+    a_1x + b_1y = c_1, \\
+    a_2x + b_2y = c_2
+\end{cases} \quad (a_1,\; b_1 \text{不同时为零，} a_2,\; b_2 \text{不同时为零})
+$$
+中的两个方程分别表示两条直线 $l_1$ 与 $l_2$，求证：
+}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$l_1$，$l_2$ 相交的充要条件是方程组的系数行列式 $D \neq 0$；}
+
+    \xiaoxiaoti{$l_1$，$l_2$ 平行而不重合的充要条件是 $D = 0$，但 $D_x$，$D_y$ 中至少有一个不等于零；}
+
+    \xiaoxiaoti{$l_1$，$l_2$ 重合的充要条件是 $D = D_x = D_y = 0$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{$a$，$b$ 满足什么条件时，直线 $3x - by = a$ 与 $ax + y - 3 = 0$}
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt[10em]{相交？}{平行？}{重合？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{讨论下列方程组，并画出图象来说明所得的结果：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{cases}
+                x + y = 2, \\
+                4x - y = 3;
+            \end{cases}$}
+        & \xiaoxiaoti{$\begin{cases}
+                x - y = 5, \\
+                2x - 2y = 7;
+            \end{cases}$} \\[1.5em]
+        \xiaoxiaoti{$\begin{cases}
+                x + 2y = 5, \\
+                2x + 4y = 10;
+            \end{cases}$；}
+        & \xiaoxiaoti{$\begin{cases}
+                y = 3x + 2, \\
+                y = 3x \text{。}
+            \end{cases}$}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列关于 $x$，$y$ 的方程组，并进行讨论：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{cases}
+        (a + 1)x - (2a - 1)y = 3a, \\
+        (3a + 1)x - (4a - 1)y = 5a + 4;
+    \end{cases}$}
+
+    \xiaoxiaoti{$\begin{cases}
+        (a - 1)x + (a + 1)y = 2(a^2 - 1), \\
+        (a^2 - 1)x + (a^2 + 1)y = 2(a^3 - 1) \text{。}
+    \end{cases}$}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{判断下列方程组有没有非零解，如果有，把解求出来：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{cases}
+                4x - 6y = 0, \\
+                6x + 9y = 0;
+            \end{cases}$；}
+        & \xiaoxiaoti{$\begin{cases}
+                5x = 8y, \\
+                10x - 16y = 0 \text{。}
+            \end{cases}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知行列式
+$$\begin{vmatrix*}[r]
+    13 &  22 & 17 \\
+    14 & -11 & 16 \\
+    10 &   0 & 18
+\end{vmatrix*} \text{，}$$
+}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{用对角线法则展开行列式并进行计算；}
+
+    \xiaoxiaoti{按某一行（或一列）展开行列式并进行计算；}
+
+    \xiaoxiaoti{利用行列式的性质先化简行列式再展开，然后进行计算。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{解下列关于 $x$ 的方程：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{vmatrix}
+                1+x & 2   & 3 \\
+                1   & 2+x & 3 \\
+                1   & 2   & 3+x
+            \end{vmatrix} = 0$；}
+        & \xiaoxiaoti{$\begin{vmatrix}
+                \sin x & 1 & \sin x \\
+                \cos x & 0 & \sin x \\
+                \cos x & 1 & \cos x
+            \end{vmatrix} = 0$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{展开下列行列式，并化简：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{vmatrix}
+                x   & y   & x+y \\
+                y   & x+y & x \\
+                x+y & x   & y
+            \end{vmatrix}$；}
+        & \xiaoxiaoti{$\begin{vmatrix}
+                b+c & a-c & a-b \\
+                b-c & c+a & b-a \\
+                c-b & c-a & a+b
+            \end{vmatrix}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+            a-b-c & 2a    & 2a \\
+            2b    & b-c-a & 2b \\
+            2c    & 2c    & c-b-a
+        \end{vmatrix} = (a+b+c)^3$；}
+
+    \xiaoxiaoti{$\begin{vmatrix*}[r]
+            a  &  b & c \\
+            -b &  a & d \\
+            -c & -d & a
+        \end{vmatrix*} = \begin{vmatrix*}[r]
+            a &  b &  c \\
+            b & -a &  d \\
+            c & -d & -a
+        \end{vmatrix*}$；}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+            b_1 + c_1 & c_1 + a_1 & a_1 + b_1 \\
+            b_2 + c_2 & c_2 + a_2 & a_2 + b_2 \\
+            b_3 + c_3 & c_3 + a_3 & a_3 + b_3
+        \end{vmatrix} = 2 \begin{vmatrix}
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
+        \end{vmatrix}$；}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+            \cos(\alpha + \beta) & \sin\alpha & \cos\alpha \\
+            \sin(\alpha + \beta) & \cos\alpha & \sin\alpha \\
+            1                    & \sin\beta  & \cos\beta
+        \end{vmatrix} = 0$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解不等式
+    $$\begin{vmatrix}
+        x-a & b   & -c \\
+        a   & x-b & c \\
+        -a  & b   & x-c
+    \end{vmatrix} > 0 \text{。}$$}
+
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+            a & b & c \\
+            c & a & b \\
+            b & c & a
+        \end{vmatrix} = a^3 + b^3 + c^3 - 3abc$；}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+            a & b & c \\
+            c & a & b \\
+            b & c & a
+        \end{vmatrix} = (a + b + c)(a^2 + b^2 + c^2 - bc - ca - ab)$；}
+
+    \xiaoxiaoti{如果 $\triangle ABC$ 的三边 $a$，$b$，$c$ 有 $a^3 + b^3 + c^3 = 3abc$ 的关系，那么 $\triangle ABC$ 为等边三角形。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知三角形的三顶点 $A(x_1, y_1)$，$B(x_2, y_2)$，$C(x_3, y_3)$，求证三角形的面积
+    $$S = \dfrac{1}{2}\begin{vmatrix}
+        x_1 & y_1 & 1 \\
+        x_2 & y_2 & 1 \\
+        x_3 & y_3 & 1
+    \end{vmatrix} \text{的绝对值。}$$
+}
+
+
+\xiaoti{利用上题结论，}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{求以 $(1, 1)$，$(3, 4)$，$(5, -2)$，$(4, -7)$ 为顶点的四边形的面积；}
+
+    \xiaoxiaoti{求证以三角形三边中点为顶点的三角形的面积等于原三角形面积的四分之一。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列关于 $x$，$y$，$z$ 的方程组：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{cases}
+                7x - 4\dfrac{1}{2}y = 9\dfrac{1}{2}, \\[1em]
+                2x + 3y + 7\dfrac{1}{2}z = 22, \\[1em]
+                -\dfrac{2}{3}x + 2\dfrac{1}{2}z = 3\dfrac{2}{3};
+            \end{cases}$}
+        & \xiaoxiaoti{$\begin{cases}
+                \dfrac{x + 2}{y - 2} = \dfrac{3}{2}, \\[1em]
+                \dfrac{y + 1}{z + 3} = 4, \\[1em]
+                \dfrac{z + 4}{x - 1} = -\dfrac{4}{3};
+            \end{cases}$} \\[4em]
+        \xiaoxiaoti{$\begin{cases}
+                \dfrac{2}{x} - \dfrac{3}{y} + \dfrac{4}{z} = 11, \\[1em]
+                \dfrac{3}{x} - \dfrac{2}{y} - \dfrac{5}{z} = -20, \\[1em]
+                \dfrac{3}{x} + \dfrac{4}{y} - \dfrac{3}{z} = 6;
+            \end{cases}$}
+        & \xiaoxiaoti{%\begin{minipage}{13em}
+            \vspace{-4em}\begin{multline*}
+                \begin{cases}
+                    lx = my = nz, \\
+                    ax + by + cz = d
+                \end{cases} \\
+                (amn + bnl + cml \neq 0);
+            \end{multline*}
+        %\end{minipage}
+        } \\
+        \xiaoxiaoti{$\begin{cases}
+                ax - aby + bz = b, \\
+                x + ay - z = -1, \\
+                by + z = 1 \text{。}
+            \end{cases}$}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求下列关于 $x$，$y$，$z$ 的方程组有唯一解的条件，并把在这个条件下的解求出来：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{cases}
+        (\lambda + 3)x + y + 2z = \lambda, \\
+        \lambda x + (\lambda - 1)y + z = 2\lambda, \\
+        3(\lambda + 1)x + \lambda y + (\lambda + 3)z = 3\lambda;
+    \end{cases}$}
+
+    \xiaoxiaoti{$\begin{cases}
+        x + y + z = 0, \\
+        ax + by + cz = 0, \\
+        bcx + cay + abz = (b -c)(c -a)(a - b) \text{。}
+    \end{cases}$}
+
+\end{xiaoxiaotis}
+
+
+\renewcommand{\labelxiaoti}{*\arabic{cntxiaoti}. }
+
+\xiaoti{解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$\begin{cases}
+            2x + 3y + z = 0, \\
+            x + 2y - 3z = 0;
+        \end{cases}$}
+        & \xiaoxiaoti{$\begin{cases}
+            4x - 5y - z = 0, \\
+            3x + 7y - 6z = 0 \text{。}
+        \end{cases}$}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{下列方程组在 $k$ 取什么值时有非零解？并把解集求出来。}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{@{}p{16em}@{}p{18em}}
+        \xiaoxiaoti{$\begin{cases}
+            kx + 3y + z = 0, \\
+            x + 4y - 3z = 0, \\
+            kx + y + 3z = 0;
+        \end{cases}$}
+        & \xiaoxiaoti{$\begin{cases}
+            4x - 2y + kz = 0, \\
+            kx - y + z = 0, \\
+            6x - 3y + (k + 1)z = 0 \text{。}
+        \end{cases}$}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{已知方程组
+    $$\begin{cases}
+        ax + by + cz = 0, \\
+        cx + by + az = 0, \\
+        bx + ay + cz = 0
+    \end{cases}$$
+    有非零解，求证 $a = b$，或 $a = c$，或 $a + b + c = 0$。
+}
+
+
+\xiaoti{求证：方程 $a_1 x + b_1 y + c_1 = 0$，$a_2 x + b_2 y + c_2 = 0$，
+    $a_3 x + b_3 y + c_3 = 0$ 表示的三直线共点的必要条件是
+    $$\begin{vmatrix}
+        a_1 & b_1 & c_1 \\
+        a_2 & b_2 & c_2 \\
+        a_3 & b_3 & c_3
+    \end{vmatrix} = 0 \text{。} $$
+}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$\begin{vmatrix}
+        1 & 2 & 2 & 2 \\
+        2 & 2 & 2 & 2 \\
+        2 & 2 & 3 & 2 \\
+        2 & 2 & 2 & 4
+    \end{vmatrix}$；}{$\begin{vmatrix*}[r]
+        2 &  1 & 4 & -1 \\
+        3 & -1 & 2 & -1 \\
+        1 &  2 & 3 & -2 \\
+        5 &  0 & 6 & -2
+    \end{vmatrix*}$；}
+
+    \xiaoxiaoti{$\begin{vmatrix*}[r]
+        a^2 & (a+1)^2 & (a+2)^2 & (a+3)^2 \\
+        b^2 & (b+1)^2 & (b+2)^2 & (b+3)^2 \\
+        c^2 & (c+1)^2 & (c+2)^2 & (c+3)^2 \\
+        d^2 & (d+1)^2 & (d+2)^2 & (d+3)^2
+    \end{vmatrix*}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{vmatrix*}[r]
+        1 & p & q & r+s \\
+        1 & q & r & s+p \\
+        1 & r & s & p+q \\
+        1 & s & p & q+r
+    \end{vmatrix*} = 0$；}
+
+    \xiaoxiaoti{$\begin{vmatrix}
+        a & b & b & b \\
+        b & a & b & b \\
+        b & b & a & b \\
+        b & b & b & a
+    \end{vmatrix} = (a + 3b)(a - b)^3$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{利用克莱姆法则解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\begin{cases}
+        2x + y - 5z + w = 8, \\
+        x - 3y - 6w = 9, \\
+        2y - z + 2w = -5, \\
+        x + 4y - 7z + 6w = 0;
+    \end{cases}$}
+
+    \xiaoxiaoti{$\begin{cases}
+        2x - y + z - w = 0, \\
+        3x + 2y + 3z - w = 0, \\
+        x - 4y - z + 2w = 12, \\
+        2x + 3y - 2z - 2w = -11 \text{。}
+    \end{cases}$}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用顺序消元法（矩阵表示）解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{@{}p{16em}@{}p{18em}}
+        \xiaoxiaoti{$\begin{cases}
+                2x - y + 2z = 4, \\
+                x - 2y - z = 1, \\
+                4x + y + 4z = 2;
+            \end{cases}$}
+        & \xiaoxiaoti{$\begin{cases}
+            x + 2y - z + 3w = 2, \\
+            2x - y + 3z - 2w = 7, \\
+            x + 2y -z + w = 4, \\
+            x - y + z + 2w = -2 \text{。}
+        \end{cases}$}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
