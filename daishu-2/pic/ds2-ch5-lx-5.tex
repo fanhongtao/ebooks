@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [thick,->] (-5, 0) -- (5, 0) node[anchor=west] {$x$};
+    \draw [thick,->] (0, -4) -- (0, 4) node[anchor=east] {$y$};
+    \node [font=\footnotesize] at (-0.3, -0.3) {$O$};
+
+    \foreach \x in {-4, -3.5, -3, ..., 4} {
+        \draw (\x, 3) -- (\x, -3);
+    }
+
+    \foreach \y in {-3, -2.5, -2, ..., 3} {
+        \draw (4, \y) -- (-4, \y);
+    }
+
+    \foreach \n/\x/\y in {
+            A/4/3, B/3/-3, C/-3/1.5, D/-2.5/-2,
+            E/5.5/0, F/-2/0, G/0/5, H/0/-5} {
+        \coordinate (P) at (\x/2, \y/2);
+        \node [fill=white, inner sep=0pt, font=\footnotesize] at ($(P) + (-0.3, -0.3)$) {$\n$};
+        \draw [fill=black] (P) circle (2pt);
+    }
+\end{tikzpicture}

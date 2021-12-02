@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-1, 0) -- (5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -2.5) -- (0, 2.5) node[anchor=east] {$y$};
+    \node [font=\footnotesize] at (-0.3, -0.3) {$O$};
+
+    \coordinate (Z1) at (3, 1.5);
+    \coordinate (Z2) at (3, -1.5);
+    \draw [dashed] (Z1) -- (Z2);
+    \filldraw [fill=white] (Z1) circle (0.05);
+    \filldraw [fill=white] (Z2) circle (0.05);
+    \node at ($(Z1) + (0.8, 0.3)$) {$Z: a + bi$};
+    \node at ($(Z2) + (0.8, -0.4)$) {$\bar{Z}: a - bi$};
+    \node at (1.8, 0.3) {$a$};
+    \node at (3.3, 0.8) {$b$};
+    \node at (3.4, -0.8) {$-b$};
+\end{tikzpicture}
