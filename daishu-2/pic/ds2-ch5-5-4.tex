@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \filldraw [lightgray] (0, 0) circle (2);
+    \draw [dashed, thick] (0, 0) circle(2);
+
+    \filldraw [white] (0, 0) circle (1);
+    \draw [dashed, thick] (0, 0) circle(1);
+
+    \draw [->] (-3, 0) -- (3, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -3) -- (0, 3) node[anchor=east] {$y$};
+    \node at (-0.3, -0.3) {$O$};
+    \node [fill=white, inner sep=0pt] at (1.2, -0.3) {$2$};
+    \node at (2.2, -0.3) {$4$};
+\end{tikzpicture}

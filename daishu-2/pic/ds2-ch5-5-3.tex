@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-1, 0) -- (3, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1) -- (0, 3) node[anchor=east] {$y$};
+    \node [font=\footnotesize] at (-0.3, -0.3) {$O$};
+
+    \coordinate (Z) at (1.8, 2.2);
+    \draw [dashed]
+        let
+            \p1 = (Z)
+        in
+            (\x1, 0) -- (\p1);
+    \draw [->] (0, 0) -- (Z);
+    \node at ($(Z) + (1.2, 0)$) {$Z: a + bi$};
+    \node at (0.8, -0.3) {$a$};
+    \node at (2.0, 1.1) {$b$};
+    \node at (0.6, 1.1) {$r$};
+\end{tikzpicture}

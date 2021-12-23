@@ -1,0 +1,92 @@
+\subsection{复数的向量表示}\label{subsec:5-3}
+
+在物理学中，我们经常遇到力、速度、加速度、电场强度等，这些量，除了要考虑它们的绝对值大小以外，
+还要考虑它们的方向。我们把这种既有绝对值大小又有方向的量叫做\textbf{向量}。向量可以用有向
+线段来表示，线段的长度就是这个向量的绝对值（叫做这个\textbf{向量的模})，线段的方向（用箭头表示）
+就是这个向量的方向。模相等且方向相同的向量，不管它们的起点在哪里，都认为是\textbf{相等的向量}。
+在这一规定下，向量可以根据需要进行平移。模为零的向量（它的方向是任意的）叫做\textbf{零向量}。
+规定所有零向量相等。
+
+复数可以用向量来表示。如图 \ref{fig:5-3}，设复平面内的点 $Z$ 表示复数 $z = a + bi$，
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-3}
+    \caption{}\label{fig:5-3}
+\end{figure}
+连结 $OZ$，如果我们把有向线段 $OZ$（方向是从点 $O$ 指向点 $Z$）看成向量，
+记作 $\overrightarrow{OZ}$， 就把复数同向量联系起来了。
+很明显，向量 $\overrightarrow{OZ}$ 是由点 $Z$ 唯一确定的；
+反过来，点 $Z$ 也可由向量 $\overrightarrow{OZ}$ 唯一确定。
+因此，复数集 $C$ 与复平面内所有以原点 $O$ 为起点的向量所成的集合也是一一对应的。
+为方便起见， 我们常把复数 $z = a + bi$ 说成点 $Z$ 或说成向量 $\overrightarrow{OZ}$。
+此外， 我们还规定，相等的向量表示同一个复数。
+
+
+图 \ref{fig:5-3} 中的向量 $\overrightarrow{OZ}$ 的模（即有向线段 $OZ$ 的长度）
+$r$ 叫做\textbf{复数 $z = a + bi$ 的模（或绝对值）}，记作 $|z|$ 或 $|a + bi|$。
+如果 $b = 0$，那么 $z = a + bi$ 是一个实数 $a$，它的模就等于 $|a|$
+（即 $a$ 在实数意义上的绝对值）。容易看出，
+$$ |z| = |a + bi| = r = \sqrt{a^2 + b^2} \text{。}$$
+
+\liti 求复数 $z_1 = 3 + 4i$ 及 $z_2 = -\dfrac{1}{2} - \sqrt{2}i$ 的模，
+并且比较它们的模的大小。
+
+\jie $\begin{aligned}[t]
+    &|z_1| = \sqrt{3^2 + 4^2} = 5, \\
+    &|z_2| = \sqrt{\left( -\dfrac{1}{2} \right)^2 + \left( -\sqrt{2} \right)^2} = \dfrac{3}{2} \text{。}
+\end{aligned}$
+
+$\because \quad 5 > \dfrac{3}{2},$
+
+$\therefore \quad |z_1| > |z_2| \text{。}$
+
+
+
+\liti 设 $z \in C$，满足下列条件的点 $Z$ 的集合是什么图形？
+
+\twoInLine[16em]{(1) $|z| = 4$；}{(2) $2 < |z| < 4$。}
+
+\jie (1) 复数 $z$ 的模等于 $4$，就是说，向量 $\overrightarrow{OZ}$ 的模
+（即点 $Z$ 与原点 $O$ 的距离）等于 $4$ ，所以满足条件 $|z| = 4$ 的
+点 $Z$ 的集合是以原点 $O$ 为圆心，以 $4$ 为半径的圆。
+
+(2) 不等式 $2 < |z| < 4$ 可化为不等式组
+$$
+\begin{cases}
+    |z| < 4, \\
+    |z| > 2 \text{。}
+\end{cases}
+$$
+
+不等式 $|z| < 4$ 的解集是圆 $|z| = 4$ 内部所有的点组成的集合，
+不等式 $|z| > 2$ 的解集是圆 $|z| = 2$ 外部所有的点组成的集合，
+这两个集合的交集，就是上述不等式组的解集，也就是满足条件 $2 < |z| < 4$ 的点 $Z$ 的集合。
+容易看出，所求的集合是以原点 $O$ 为圆心，以 $2$ 及 $4$ 为半径的圆所夹的圆环，但不包括圆环的边界（图 \ref{fig:5-4}）。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-4}
+    \caption{}\label{fig:5-4}
+\end{figure}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{已知复数 $\sqrt{3} + i$，$-2 + 4i$， $-2i$，$4$。}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{在复平面内描出表示这些复数的点；}
+
+    \xiaoxiaoti{在复平面内画出表示这些复数的向量；}
+
+    \xiaoxiaoti{求各复数的模。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求证复平面内分别和复数 $z_1 = 1 + 2i$，$z_2 = \sqrt{2} + \sqrt{3}i$，
+    $z_3 = \sqrt{3} - \sqrt{2}i$，$z_4 = -2 + i$ 对应的四点 $Z_1$，$Z_2$，$Z_3$，$Z_4$ 共圆。}
+
+
+\end{xiaotis}
