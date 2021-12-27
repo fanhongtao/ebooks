@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-1, 0) -- (5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1) -- (0, 5) node[anchor=east] {$y$};
+    \node at (-0.3, -0.3) {$O$};
+
+    \coordinate (O) at (0, 0);
+    \coordinate [label=0:$P$] (P) at (2, 2.5);
+    \draw [name path=c] (P) circle [radius=1.5];
+    \path [name path=l] (O) -- (1.5, 5);
+    \draw [name intersections={of=c and l, by={Z, Y}}];
+    \node [label=90:$Z$] at (Z) {};
+    \draw [arrows = {-Stealth[length=10pt,width=5pt]}] (O) -- (Z);
+    \draw [arrows = {-Stealth[length=10pt,width=5pt]}] (O) -- (P) -- (Z);
+\end{tikzpicture}

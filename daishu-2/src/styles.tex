@@ -200,9 +200,20 @@
 %  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
 \newcommand{\kongji}{\varnothing}      % 空集
 \newcommand{\buji}{\overline}          % 补集
+\newcommand*\pxdy{%                    % 平行且等于
+    \mathrel{\hspace{.03555em}\text{\tikz[baseline]
+            \draw (.1em,0ex) -- (.9em,0ex)
+            (.1em,.3ex) -- (.9em,.3ex)
+            (.375em,.4ex) -- (.675em,1.8ex)
+            (.55em,.4ex) -- (.85em,1.8ex);}\hspace{.03555em}}%
+}
 \newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
     \mathrel{\text{%
             \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
+}}}
+\newcommand*\quandeng{%                % 全等
+    \mathrel{\text{%\small%
+            \tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
 }}}
 \newcommand{\arccot}{\mathrm{arccot}\,} % 反余切函数
 

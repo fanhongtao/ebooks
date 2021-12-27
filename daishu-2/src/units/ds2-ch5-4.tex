@@ -1,0 +1,206 @@
+\subsection{复数的加法与减法}\label{subsec:5-4}
+
+复数的加法规定按照以下的法则进行：设 $z_1 = a + b\,i$，$z_2 = c + d\,i$
+是任意两个复数，那么它们的\textbf{和}
+$$(a + b\,i) + (c + d\,i) = (a + c) + (b + d)\,i \text{。}$$
+
+很明显，两个复数的和仍然是一个复数。
+
+容易验证，复数的加法满足交换律、结合律，即对任何 $z_1$，$z_2$，$z_3 \in C$，有
+\begin{align*}
+    z_1 + z_2 &= z_2 + z_1 \text{，} \\[-1em]
+    (z_1 + z_2) + z_3 &= z_1 + (z_2 + z_3) \text{。}
+\end{align*}
+
+现在我们来看复数加法的几何意义。
+
+从物理学知道，要求出作用于同一点 $O$、但不在同一直线上的两个力
+$\overrightarrow{F1}$ 与 $\overrightarrow{F2}$ 的合力，只要用表示
+$\overrightarrow{F1}$ 与 $\overrightarrow{F2}$ 的向量为相邻的两边
+画一个平行四边形， 那么，平行四边形中，以力的作用点 $O$ 为起点的那条
+对角线所表示的向量就是合力 $\overrightarrow{F}$ （图 \ref{fig:5-5}(1)）。
+这个法则通常叫做向量加法的\textbf{平行四边形法则}。
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{8cm}
+        \centering
+        \input{../pic/ds2-ch5-5-5-1}
+        \caption*{（1）}
+    \end{minipage}
+    \quad
+    \begin{minipage}{8cm}
+        \centering
+        \input{../pic/ds2-ch5-5-5-2}
+        \caption*{（2）}
+    \end{minipage}
+    \caption{}\label{fig:5-5}
+\end{figure}
+
+
+复数用向量来表示，如果与这些复数对应的向量不在同一直线上，那么这些复数的加法就可以按照向量
+加法的平行四边形法则来进行。下面我们来证明这个事实。
+
+设 $\overrightarrow{OZ_1}$ 及 $\overrightarrow{OZ_2}$ 分别与复数 $a + b\,i$ 及 $c + d\,i$ 对应，
+且 $\overrightarrow{OZ_1}$ ，$\overrightarrow{OZ_2}$ 不在同一直线上（图 \ref{fig:5-5}(2)）。
+以 $\overrightarrow{OZ_1}$ 及 $\overrightarrow{OZ_2}$ 为两条邻边画平行四边形 $OZ_1ZZ_2$，
+画 $x$ 轴的垂线 $PZ_1$，$QZ_2$ 及 $RZ$，并且画 $Z_1S \perp RZ$，容易证明
+$$ \triangle ZZ_1S \quandeng \triangle Z_2OQ \text{，}$$ %$$ \triangle ZZ_1S \cong \triangle Z_2OQ \text{，}$$
+并且四边形 $Z_1PRS$ 是矩形，因此
+\begin{align*}
+    OR &= OP + PR = OP + Z_1S = OP + OQ = a + c, \\[-1em]
+    RZ &= RS + SZ = PZ_1 + QZ_2 = b + d \text{。}
+\end{align*}
+
+于是，点 $Z$ 的坐标是 $(a + c,\; b + d)$，这说明 $\overrightarrow{OZ}$ 就是与
+复数 $(a + c) + (b + d)\,i$ 对应的向量。
+
+由此可知，求两个复数的和，可以先画出与这两个复数对应的
+向量 $\overrightarrow{OZ_1}$，$\overrightarrow{OZ_2}$，
+如果 $\overrightarrow{OZ_1}$，$\overrightarrow{OZ_2}$ 不在同一直线上，
+再以这两个向量为两条邻边画平行四边形，那么与这个平行四边形的对角线 $OZ$
+所表示的向量 $\overrightarrow{OZ}$ 对应的复数，就是所求两个复数的和。
+
+如果 $\overrightarrow{OZ_1}$，$\overrightarrow{OZ_2}$ 在同一直线上，
+我们可以画出一个“压扁”了的平行四边形，并据此画出它的对角线来表示
+$\overrightarrow{OZ_1}$，$\overrightarrow{OZ_2}$ 的和。
+
+总之，复数的加法可以按照向量的加法法则来进行，这是复数加法的几何意义。
+
+下面再来看复数的减法。
+
+复数的减法规定是加法的逆运算，即把满足
+$$ (c + d\,i) + (x + y\,i) = a + b\,i $$
+的复数 $x + y\,i$，叫做复数 $a + b\,i$ 减去 $c + d\,i$
+的\textbf{差}，记作 $(a + b\,i) - (c + d\,i)$。根据复数相等的定义，有
+$$ c + x = a,\quad d + y = b, $$
+由此
+$$ x = a - c,\quad y = b - d, $$
+所以
+$$ x + y\,i = (a - c) + (b - d)\,i, $$
+即
+$$ (a + b\,i) - (c + d\,i) = (a - c) + (b - d)\,i, $$
+这就是复数的减法法则。由此可见，两个复数的差是一个唯一确定的复数。
+
+现设 $\overrightarrow{OZ}$ 与复数 $a + b\,i$ 对应，
+$\overrightarrow{OZ_1}$ 与复数 $c + d\,i$ 对应（图 \ref{fig:5-6}）。
+以 $\overrightarrow{OZ}$ 为一条对角线， $\overrightarrow{OZ_1}$ 为一条边
+画平行四边形， 那么这个平行四边形的另一边 $OZ_2$ 所表示的向量 $\overrightarrow{OZ_2}$
+就与复数 $(a - c) + (b - d)\,i$ 对应。 因为 $Z_1Z \pxdy OZ_2$，
+所以向量 $\overrightarrow{Z_1Z}$ 也与这个差对应。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-6}
+    \caption{}\label{fig:5-6}
+\end{figure}
+
+
+这就是说，两个复数的差 $z - z_1$（即 $\overrightarrow{OZ} - \overrightarrow{OZ_1}$）
+与连结两个向量终点并指向被减数的向量对应。这是复数减法的几何意义。
+
+由上所述，我们可以看出， 复数的加（减）法与多项式的加（减）法是类似的，
+就是把复数的实部与实部、虚部与虚部分别相加（减），即
+
+\begin{center}
+    \framebox{\begin{minipage}{20em}
+        \begin{gather*}
+            (a + b\,i) \pm (c + d\,i) = (a \pm c) + (b \pm d)\,i \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+
+\liti 计算 $(5-6\,i) + (-2-i) - (3+4\,i)$。
+
+\jie \quad $\begin{aligned}[t]
+       & (5-6\,i) + (-2-i) - (3+4\,i) \\[-1em]
+    ={}& (5 - 2 - 3) + (-6 - 1 - 4)\,i \\[-1em]
+    ={}& -11\,i \text{。}
+\end{aligned}$
+
+
+
+\begin{minipage}{\textwidth} % 本页有两个 wrapfigure ，直接使用会报错，所以将其中一个封装在 minipage 中
+\begin{wrapfigure}[22]{r}{5cm}
+    \centering
+    \input{../pic/ds2-ch5-5-7}
+    \caption{}\label{fig:5-7}
+\end{wrapfigure}
+\liti 根据复数的几何意义及向量表示，求复平面内两点间的距离公式。
+
+\jie 如图 \ref{fig:5-7} ，设复平面内的任意两点 $Z_1$，$Z_2$ 分别表示复数
+$z_1 = x_1 + y_1\,i$，$z_2 = x_2 + y_2\,i$ 出那么 $\overrightarrow{Z_1Z_2}$ 就是与复数 $z_2 - z_1$
+对应的向量。如果用 $d$ 表示点 $Z_1$，$Z_2$ 之间的距离， 那么 $d$ 就是向量
+$\overrightarrow{Z_1Z_2}$ 的模，即复数 $z_2 - z_1$ 的模，所以
+$$ d = |z_2 - z_1| \text{。} $$
+这就是复平面内两点间的距离公式。而
+\begin{align*}
+    d = |z_2 - z_1| &= |(x_2 + y_2\,i) - (x_1 + y_1\,i)| \\
+        &= |(x_2 - x_1) + (y_2 - y_1)\,i| \\
+        &= \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \text{。}
+\end{align*}
+
+这与我们以前导出的两点间的距离公式一致。
+\end{minipage}
+
+
+\begin{wrapfigure}[22]{r}{5cm}
+    \centering
+    \input{../pic/ds2-ch5-5-8}
+    \caption{}\label{fig:5-8}
+\end{wrapfigure}
+\liti 根据复数的几何意义及向量表示，求复平面内的圆的方程。
+
+\jie 如图 \ref{fig:5-8}，设圆心为 $P$，点 $P$ 与复数 $p = a + b\,i$ 对应，
+圆的半径为 $r$，圆上任意一点 $Z$ 与复数 $z = x + y\,i$ 对应，那么
+$$ |z - p| = r \text{。} $$
+
+这就是复平面内的圆的方程。特别地，当点 $P$ 在原点时，圆的方程就成了 $|z| = r$。
+
+请同学们利用复数的减法法则，把圆的方程 $|z - p| = r$ 化成用实数表示的一般形式
+$$ (x - a)^2 + (y - b)^2 = r^2 \text{。} $$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{证明复数的加法满足交换律与结合律。}
+
+\xiaoti{分别用代数及几何方法计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$(4+5\,i) + (2+3\,i)$；} & \xiaoxiaoti{$(2+4\,i) + (3-4\,i)$；} \\
+        \xiaoxiaoti{$(-3-4\,i) + (-2+i)$；} & \xiaoxiaoti{$-5\,i + (-i-1)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{分别用代数及几何方法计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$(4+5\,i) - (3+2\,i)$；} & \xiaoxiaoti{$(-3+2\,i) - (4-5\,i)$；} \\
+        \xiaoxiaoti{$(6-3\,i) - (-3\,i-2)$；} & \xiaoxiaoti{$5 - (3+2\,i)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{设 $z = a + b\,i$，求 $z + \bar{z}$ 与 $z - \bar{z}$。}
+
+
+\xiaoti{\begin{minipage}[t]{0.9\textwidth}
+    设复平面内的定点 $P$ 与复数 $p = a + b\,i$ 对应，动点 $Z$ 与复数 $z = x + y\,i$ 对应，
+    $\varepsilon \in R^+$，满足不等式
+        $$ |z - p| < \varepsilon $$
+    的点 $Z$ 的集合是什么图形？
+\end{minipage}}
+
+\end{xiaotis}
+

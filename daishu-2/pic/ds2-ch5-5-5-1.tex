@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-1, 0) -- (4, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1) -- (0, 4) node[anchor=east] {$y$};
+    \node at (-0.3, -0.3) {$O$};
+
+    \coordinate (O) at (0, 0);
+    \coordinate [label=0:$\overrightarrow{F_1}$] (F1) at (2.2, 0.5);
+    \coordinate [label=90:$\overrightarrow{F_2}$] (F2) at (1, 2);
+    \coordinate [label=45:$\overrightarrow{F}$] (F) at (3.5, 2.8);
+    \draw[->, thick] (O) -- (F1);
+    \draw[->, thick] (O) -- (F2);
+    \draw[->, thick] (O) -- (F);
+    \draw (F1) -- (F) -- (F2);
+\end{tikzpicture}
