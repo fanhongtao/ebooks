@@ -1,0 +1,144 @@
+\subsection{复数的乘法与除法}\label{subsec:5-5}
+
+复数的乘法规定按照以下的法则进行：设 $z_1 = a + b\,i$，$z_2 = c + d\,i$ 是任意两个复数，那么它们的\textbf{积}
+\begin{align*}
+    (a + b\,i)(c + d\,i) &= ac + bc\,i + cd\,i + bd\,i^2 \\[-1em]
+        &=(ac - bd) + (bc + ad)\,i \text{。}
+\end{align*}
+也就是说，复数的乘法与多项式的乘法是类似的，但必须在所得的结果中把 $i^2$ 换成 $-1$ ，
+并且把实部与虚部分别合并。
+
+很明显，两个复数的积仍然是一个复数。
+
+容易验证，复数的乘法满足交换律、结合律以及乘法对加法的分配律，即对任何 $z_1\, z_2\, z_3 \in C$，有
+\begin{align*}
+    z_1 \cdot z_2 &= z_2 \cdot z_1 , \\[-1em]
+    (z_1 \cdot z_2) \cdot z_3 &= z_1 \cdot (z_2 \cdot z_3) , \\[-1em]
+    z_1 \cdot (z_2 + z_3) &= z_1 \cdot z_2 + z_1 \cdot z_3 \text{。}
+\end{align*}
+
+根据复数的乘法法则，对于任何复数 $z = a + b\,i$，有
+\begin{align*}
+    (a + b\,i)(a - b\,i) &= a^2 + b^2 + (ab - ab)\,i \\[-1em]
+        &= a^2 + b^2 \text{，}
+\end{align*}
+因此，两个共轭复数 $z$，$\bar{z}$ 的积是一个实数，这个实数等于每一个复数的模的平方，即
+$$ z \cdot \bar{z} = |z|^2 = |\bar{z}|^2 \text{。} $$
+
+\liti 计算 $(1 -2\,i)(3 + 4\,i)(-2 + i)$。
+
+\jie \quad $\begin{aligned}[t]
+        & (1 -2\,i)(3 + 4\,i)(-2 + i) \\[-1em]
+    ={} & (11 - 2\,i)(-2 + i) \\[-1em]
+    ={} & -20 + 15\,i \text{。}
+\end{aligned}$
+
+计算复数的乘方，要用到虚数单位 $i$ 的乘方。因为复数的乘法满足交换律与结合律，
+所以实数集 $R$ 中正整数指数幂的运算律，在复数集 $C$ 中仍然成立，即对任何
+$z,\, z_1,\, z_2 \in C$ 及 $m,\, n \in N$，有
+\begin{align*}
+    z^m \cdot z^n &= z^{m + n}, \\
+    (z^m)^n &= z^{mn}, \\
+    (z_1 \cdot z_2)^n &= z_1^n \cdot z_2^n \text{。}
+\end{align*}
+
+另一方面，我们有
+\begin{gather*}
+    i^1 = i, \\
+    i^2 = -1, \\
+    i^3 = i^2 \cdot i = - i, \\
+    i^4 = i^3 \cdot i = - i \cdot i = - i^2 = 1 \text{。}
+\end{gather*}
+
+从而，对于任何 $n \in N$，我们都有
+\begin{align*}
+    i^{4n+1} &= i^{4n} \cdot i = (i^4)^n \cdot i \\
+        &= 1^n \cdot i = i \text{。}
+\end{align*}
+同理可证
+\begin{align*}
+    & i^{4n + 2} = -1, \\
+    & i^{4n + 3} = -i, \\
+    & i^{4n} = 1 \text{。}
+\end{align*}
+
+这就是说，如果 $n \in N$，那么
+\begin{center}
+    \framebox{\begin{minipage}{23em}
+        \begin{gather*}
+            i^{4n+1} = i,\quad i^{4n+2} = -1,\quad i^{4n+3} = -i,\quad i^{4n} = 1 \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+\liti 计算 $\left( \dfrac{1}{2} - \dfrac{\sqrt{3}}{2}\,i \right)^3$。
+
+\jie \quad $\begin{aligned}[t]
+        & \left( \dfrac{1}{2} - \dfrac{\sqrt{3}}{2}\,i \right)^3 \\
+    ={} & \left( \dfrac{1}{2} \right)^3 - 3 \left( \dfrac{1}{2} \right)^2 \left( \dfrac{\sqrt{3}}{2}\,i \right)
+        + 3 \left( \dfrac{1}{2} \right) \left( \dfrac{\sqrt{3}}{2}\,i \right)^2
+        - \left( \dfrac{\sqrt{3}}{2}\,i \right)^3 \\
+    ={} & \dfrac{1}{8} - \dfrac{3\sqrt{3}}{8}\,i - \dfrac{9}{8} + \dfrac{3\sqrt{3}}{8}\,i = -1 \text{。}
+\end{aligned}$
+
+
+
+复数的除法规定是乘法的逆运算，即把满足
+$$ (c + d\,i)(x + y\,i) = a + b\,i \quad (c + d\,i \neq 0) $$
+的复数 $x + y\,i$，叫做复数 $a + b\,i$ 除以复数 $c + d\,i$ 的\textbf{商}，记作
+$(a + b\,i) \div (c + d\,i)$ 或 $\dfrac{a + b\,i}{c + d\,i}$。
+
+我们知道，两个共轭复数的积是一个实数，因此，两个复数相除，可以先把它们的商写成
+分式的形式，然后把分子与分母都乘以分母的共轭复数，并且把结果化简，即
+\begin{align*}
+        & \dfrac{a + b\,i}{c + d\,i} = \dfrac{(a + b\,i)(c - d\,i)}{(c + d\,i)(c - d\,i)} \\
+    ={} & \dfrac{(ac + bd) + (bc - ad)\,i}{c^2 + d^2} \\
+    ={} & \dfrac{ac + bd}{c^2 + d^2} + \dfrac{bc - ad}{c^2 + d^2}\,i \qquad (c + d\,i \neq 0) \text{。}
+\end{align*}
+因为 $c + d\,i \neq 0$，所以 $c^2 + d^2 \neq 0$。由此可见，商 $\dfrac{a + b\,i}{c + d\,i}$ 是一个唯一确定的复数。
+
+
+\liti 计算 $(1 + 2\,i) \div (3 - 4\,i)$。
+
+\jie \quad $\begin{aligned}[t]
+    & (1 + 2\,i) \div (3 - 4\,i) = \dfrac{1 + 2\,i}{3 - 4\,i} \\
+    & = \dfrac{(1 + 2\,i)(3 + 4\,i)}{(3 - 4\,i)(3 + 4\,i)} = \dfrac{-5 + 10\,i}{25} = -\dfrac{1}{5} + \dfrac{2}{5}\,i \text{。}
+\end{aligned}$
+
+
+
+\lianxi
+\begin{xiaotis}
+
+
+\xiaoti{证明复数的乘法满足交换律、结合律以及乘法对加法的分配律。}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$(-8 - 7\,i)(-3\,i)$；} & \xiaoxiaoti{$(4 - 3\,i)(-5 - 4\,i)$；} \\
+        \xiaoxiaoti{$\left( -\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}\,i \right)(1 + i)$；} & \xiaoxiaoti{$\left( \dfrac{\sqrt{3}}{2}\,i - \dfrac{1}{2} \right)\left( -\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}\,i \right)$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{（口答）$i^{11}$，$i^{25}$，$i^{26}$，$i^{36}$，$i^{70}$，$i^{101}$，$i^{355}$，$i^{400}$ 各等于什么？}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{3}{@{}p{11em}}}
+        \xiaoxiaoti{$\dfrac{1}{i}$；} & \xiaoxiaoti{$\dfrac{1}{i^3}$；} & \xiaoxiaoti{$\dfrac{1}{\sqrt{2}\,i}$；} \\[1em]
+        \xiaoxiaoti{$\dfrac{2\,i}{1 - i}$；} & \xiaoxiaoti{$\dfrac{2 + i}{7 + 4\,i}$；} & \xiaoxiaoti{$\dfrac{1}{(9 + 2\,i)^2}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\end{xiaotis}
