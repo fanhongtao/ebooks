@@ -1,0 +1,132 @@
+\subsection{复数的三角形式}\label{subsec:5-6}
+
+我们知道，与复数 $z = a + b\,i$ 对应的向量 $\overrightarrow{OZ}$ （图 \ref{fig:5-9}）的模 $r$ 叫做这个复数的模，并且
+$$ r = \sqrt{a^2 + b^2} \text{。} $$
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-9}
+    \caption{}\label{fig:5-9}
+\end{figure}
+
+以 $x$ 轴的正半轴为始边、向量 $\overrightarrow{OZ}$ 所在的射线（起点是 $O$）
+为终边的角 $\theta$，叫做\textbf{复数 $z = a + b\,i$ 的辐角}。
+
+不等于零的复数 $z = a + b\,i$ 的辐角有无限多个值，这些值相差 $2\pi$ 的整数倍。
+例如，复数 $i$ 的辐角是 $\dfrac{\pi}{2} + 2k\pi$，其中 $k$ 可以取任何整数。
+
+适合于 $0 \leqslant \theta < 2\pi$ 的辐角 $\theta$ 的值，叫做\textbf{辐角的主值}，
+通常记作 $\arg z$ ，即 $0 \leqslant \arg z < 2\pi$。
+
+每一个不等于零的复数有唯一的模与辐角的主值，并且可由它的模与辐角的主值唯一确定。
+因此，\textbf{两个非零复数相等当且仅当它们的模与辐角的主值分别相等}。
+
+很明显， \textbf{当 $a \in R^+$ 时，}
+\begin{align*}
+    & \bm{\arg a = 0,} \\
+    & \bm{\arg(-a) = \pi,} \\
+    & \bm{\arg(a\,i) = \dfrac{\pi}{2},} \\
+    & \bm{\arg(-a\,i) = \dfrac{3\pi}{2} \text{。}}
+\end{align*}
+
+如果 $z = 0$，那么与它对应的向量 $\overrightarrow{OZ}$ 缩成一个点（零向量），这样的向量的方向是任意的，所以复数 $0$ 的辐角也是任意的。
+
+从图 \ref{fig:5-9} 可以看出：
+$$\begin{cases}
+    a = r \cos\theta, \\
+    b = r \sin\theta \text{。}
+\end{cases}$$
+
+$\therefore \quad \begin{aligned}[t]
+    a + b\,i &= r\cos\theta + i\,r\sin\theta \\
+        &= r(\cos\theta + i\sin\theta) \text{，}
+\end{aligned}$\\
+其中
+$$ r = \sqrt{a^2 + b^2},\quad \cos\theta = \dfrac{a}{r},\quad \sin\theta = \dfrac{b}{r} \text{。} $$
+当与 $z$ 对应的点 $Z$ 不在实轴或虚轴上时，$z$ 的辐角 $\theta$ 的终边所在的象限就是点 $Z$ 所在的象限；
+当点 $Z$ 在实轴或虚轴上时，辐角 $\theta$ 的终边就是从原点 $O$ 出发、经过点 $Z$ 的半条坐标轴。
+
+因此我们可以说，任何一个复数 $z = a + b\,i$ 都可以表示成
+$$ \bm{r(\cos\theta + i\sin\theta)} $$
+的形式。
+
+$r(\cos\theta + i\sin\theta)$ 叫做复数 $a + b\,i$ 的\textbf{三角形式}。
+为了同三角形式区别开来，$a + b\,i$ 叫做复数的\textbf{代数形式}。
+
+
+\liti 把复数 $\sqrt{3} + i$ 表示成三角形式。
+
+\jie \quad $r = \sqrt{3 + 1} = 2, \quad \cos\theta = \dfrac{\sqrt{3}}{2}$ 。
+
+因为与 $\sqrt{3} + i$ 对应的点在第一象限，所以 $\arg(\sqrt{3} + i) = \dfrac{\pi}{6}$，于是
+$$ \sqrt{3} + i = 2 \left( \cos\dfrac{\pi}{6} + i \sin\dfrac{\pi}{6} \right) \text{。} $$
+
+
+
+\liti 把复数 $1 - i$ 表示成三角形式。
+
+\jie \quad $r = \sqrt{1 + 1} = \sqrt{2}, \quad \cos\theta = \dfrac{1}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$ 。
+
+因为与 $1 - i$ 对应的点在第四象限，所以 $\arg(1 - i) = \dfrac{7\pi}{4}$，于是
+$$ 1 - i = \sqrt{2} \left( \cos\dfrac{7\pi}{4} + i\sin\dfrac{7\pi}{4} \right) \text{。} $$
+
+
+\liti 把复数 $-1$ 表示成三角形式。
+
+\jie \quad $r = \sqrt{1 + 0} = 1$ 。
+
+因为与 $-1$ 对应的点在 $x$ 轴的负半轴上，所以 $\arg(-1) = \pi$，于是
+$$ -1 = \cos\pi + i\sin\pi \text{。} $$
+
+当然，把一个复数表示成三角形式时，辐角 $\theta$ 不一定要取主值。例如：
+$\sqrt{2} \left[ \cos\left( -\dfrac{\pi}{4} \right) + i\sin\left( -\dfrac{\pi}{4} \right)\right]$
+也是复数 $1 - i$ 的三角形式。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列复数表示成三角形式，并且画出与它们对应的向量。}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{3}{@{}p{10em}}}
+        \xiaoxiaoti{$4$；} & \xiaoxiaoti{$-3$；} & \xiaoxiaoti{$2\,i$；} \\
+        \xiaoxiaoti{$-i$；} & \xiaoxiaoti{$-2 + 2\,i$；} & \xiaoxiaoti{$-1 - \sqrt{3}\,i$；} \\
+        \xiaoxiaoti{$\dfrac{\sqrt{3}}{2} - \dfrac{1}{2}\,i$；} & \xiaoxiaoti{$3 - 4\,i$；} & \xiaoxiaoti{$-4 + 3\,i$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{下列复数是不是复数的三角形式？如果不是，把它们表示成三角形式。}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac{1}{2} \left( \cos\dfrac{\pi}{4} - i\sin\dfrac{\pi}{4} \right)$；}
+
+    \xiaoxiaoti{$-\dfrac{1}{2} \left( \cos\dfrac{\pi}{3} + i\sin\dfrac{\pi}{3} \right)$；}
+
+    \xiaoxiaoti{$\dfrac{1}{2} \left( \sin\dfrac{3\pi}{4} + i\cos\dfrac{3\pi}{4} \right)$；}
+
+    \xiaoxiaoti{$\cos\dfrac{7\pi}{5} + i\sin\dfrac{7\pi}{5}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列复数表示成代数形式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$4\left( \cos\dfrac{\pi}{3} + i\sin\dfrac{\pi}{3} \right)$；}
+
+    \xiaoxiaoti{$\sqrt{2} \left( \cos\dfrac{3\pi}{4} + i\sin\dfrac{3\pi}{4} \right)$；}
+
+    \xiaoxiaoti{$6 \left( \cos\dfrac{11\pi}{6} + i\sin\dfrac{11\pi}{6} \right)$；}
+
+    \xiaoxiaoti{$3 \left( \cos\dfrac{3\pi}{2} + i\sin\dfrac{3\pi}{2} \right)$。}
+
+\end{xiaoxiaotis}
+
+
+\end{xiaotis}
+
+
