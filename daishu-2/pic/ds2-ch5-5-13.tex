@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-3, 0) -- (3, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -3) -- (0, 3) node[anchor=east] {$y$};
+    \node at (-0.2, -0.5) {$O$};
+
+    \draw (1, 0.2) -- (1, 0) node[below] {$1$};
+    \draw [thick] (0, 0) circle [radius = 2];
+    \draw [fill] (2, 0) circle(2pt) node[anchor=north west] {$2$} node [anchor=south west] {$x_1$};
+    \draw [thick, fill, rotate=75] (0, 0) -- (2, 0) circle(2pt) node [anchor=south] {$x_2$};
+    \draw [thick, fill, rotate=150] (0, 0) -- (2, 0) circle(2pt) node [anchor=south east] {$x_3$};
+    \draw [thick, fill, rotate=225] (0, 0) -- (2, 0) circle(2pt) node [anchor=north east] {$x_4$};
+    \draw [thick, fill, rotate=290] (0, 0) -- (2, 0) circle(2pt) node [anchor=north west] {$x_5$};
+\end{tikzpicture}

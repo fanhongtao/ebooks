@@ -1,0 +1,166 @@
+\subsubsection{乘法与乘方}\label{subsec:5-7-1}
+
+如果把复数 $z_1$，$z_2$ 分别写成三角形式
+\begin{gather*}
+    z_1 = r_1 (\cos\theta_1 + i\,\sin\theta_1), \\
+    z_2 = r_2 (\cos\theta_2 + i\,\sin\theta_2),
+\end{gather*}
+就有
+\begin{align*}
+    z_1 \cdot z_2 &= r_1 (\cos\theta_1 + i\,\sin\theta_1) \cdot r_2 (\cos\theta_2 + i\,\sin\theta_2) \\
+        &= r_1 r_2[(\cos\theta_1 \cos\theta_2 - \sin\theta_1 \sin\theta_2) + i\,(\sin\theta_1 \cos\theta_2 + \cos\theta_1 \sin\theta_2)] \\
+        &= r_1 r_2[\cos(\theta_1 + \theta_2) + i\,\sin(\theta_1 + \theta_2)],
+\end{align*}
+即
+\begin{center}
+    \framebox{\begin{minipage}{23em}
+        \begin{gather*}
+            r_1 (\cos\theta_1 + i\,\sin\theta_1) \cdot r_2 (\cos\theta_2 + i\,\sin\theta_2) \\
+            = r_1 r_2[\cos(\theta_1 + \theta_2) + i\,\sin(\theta_1 + \theta_2)]
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+这就是说，\textbf{两个复数相乘，积的模等于各复数的模的积，积的辐角等于各复数的辐角的和。}
+
+据此，两个复数 $z_1$，$z_2$ 相乘时，可以先画出分别与 $z_1$，$z_2$ 对应的向量
+$\overrightarrow{OP_1}$，$\overrightarrow{OP_2}$， 然后把向量 $\overrightarrow{OP_1}$
+按逆时针方向旋转一个角 $\theta_2$ （如果 $\theta_2 < 0$ ，就要把 $\overrightarrow{OP_1}$
+按顺针方向旋转一个角 $|\theta_2|$ ）， 再把它的模变为原来的 $r_2$ 倍，所得的向量
+$\overrightarrow{OP}$， 就表示积 $z_1 \cdot z_2$ （ 图 \ref{fig:5-10} ） 。
+这是复数乘法的几何意义。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-10}
+    \caption{}\label{fig:5-10}
+\end{figure}
+
+
+用数学归纳法容易证明（请同学们自己证明），上面的结论可以推广到 $n$ 个复数相乘的情况，就是：
+
+\begin{align*}
+    z_1 \cdot z_2 \cdot \cdots \cdot z_n &= r_1 (\cos\theta_1 + i \, \sin\theta_1) \cdot r_2 (\cos\theta_2 + i \, \sin\theta_2) \cdot \; \cdots \; \cdot r_n (\cos\theta_n + i \, \sin\theta_n) \\
+    &= r_1 r_2 \cdots r_n [\cos(\theta_1 + \theta_2 + \cdots + \theta_n) + i \, \sin(\theta_1 + \theta_2 + \cdots + \theta_n) ] \text{。}
+\end{align*}
+
+因此，如果
+$$ r_1 = r_2 = \cdots = r_n = r , \qquad \theta_1 = \theta_2 = \cdots = \theta_n = \theta $$
+时，就有
+\begin{center}
+    \framebox{\begin{minipage}{26em}
+        \begin{gather*}
+            [r(\cos\theta + i\, \sin\theta)]^n = r^n (\cos n\theta + i\, \sin n\theta) \quad (n \in N) \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+这就是说，\textbf{复数的 $n \; (n \in N)$ 次幂的模等于这个复数的模的 $n$ 次幂，它的辐角等于这个复数的辐角的 $n$ 倍。}
+这个定理叫做 \textbf{棣莫佛\footnote{棣莫佛（Abraham de Moivre, 1667 —— 1754 年），法国数学家。} 定理。}
+
+
+\liti 计算
+$$ \sqrt{2} \left( \cos\dfrac{\pi}{12} + i\, \sin\dfrac{\pi}{12} \right) \cdot \sqrt{3} \left( \cos\dfrac{\pi}{6} + i\, \sin\dfrac{\pi}{6} \right) \text{。} $$
+
+\jie $\begin{aligned}[t]
+        & \sqrt{2} \left( \cos\dfrac{\pi}{12} + i\, \sin\dfrac{\pi}{12} \right) \cdot \sqrt{3} \left( \cos\dfrac{\pi}{6} + i\, \sin\dfrac{\pi}{6} \right) \\
+    ={} & \sqrt{2} \cdot \sqrt{3} \left[ \cos\left( \dfrac{\pi}{12} + \dfrac{\pi}{6} \right) + i\, \sin\left( \dfrac{\pi}{12} + \dfrac{\pi}{6} \right) \right] \\
+    ={} & \sqrt{2} \cdot \sqrt{3} \left( \cos\dfrac{\pi}{4} + i\, \sin\dfrac{\pi}{4} \right) \\
+    ={} & \sqrt{2} \cdot \sqrt{3} \left( \dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{2}}{2} \, i \right) \\
+    ={} & \sqrt{3} + \sqrt{3} \, i \text{。}
+\end{aligned}$
+
+
+
+\liti 计算 $(\sqrt{3} - i)^6$ 。
+
+\jie 因为 $\sqrt{3} - i = 2 \left( \cos\dfrac{11\pi}{6} + i\, \sin\dfrac{11\pi}{6} \right)$，所以
+
+$\begin{aligned}
+    (\sqrt{3} - i)^6 &= \left[ 2 \left( \cos\dfrac{11\pi}{6} + i\, \sin\dfrac{11\pi}{6} \right)\right]^6 \\
+    &= 2^6 (\cos 11\pi + i\, \sin 11\pi) \\
+    &= 64 (\cos\pi + i\, \sin\pi) \\
+    &= 64 \cdot (-1) = -64 \text{。}
+\end{aligned}$
+
+
+\begin{wrapfigure}[22]{r}{4cm}
+    \centering
+    \input{../pic/ds2-ch5-5-11}
+    \caption{}\label{fig:5-11}
+\end{wrapfigure}
+
+\liti 如图 \ref{fig:5-11}，向量 $\overrightarrow{OZ}$ 与复数 $-1 + i$ 对应，把 $\overrightarrow{OZ}$
+按逆时针方向旋转 $120^\circ$，得到 $\overrightarrow{OZ'}$。求与向量 $\overrightarrow{OZ'}$
+对应的复数（用代数形式表示）。
+
+\jie 所求的复数就是 $-1 + i$ 乘以一个复数 $z_0$ 的积，这个复数 $z_0$ 的模是 $1$，
+辐角的主值是 $120^\circ$ 。 所以所求的复数是
+
+$\begin{aligned}
+        & (-1 + i) \cdot 1 (\cos 120^\circ + i\, \sin 120^\circ) \\
+    ={} & (-1 + i)\left( -\dfrac{1}{2} + \dfrac{\sqrt{3}}{2} \, i \right) \\
+    ={} & \dfrac{1 - \sqrt{3}}{2} - \dfrac{1 + \sqrt{3}}{2} \, i \, \text{。}
+\end{aligned}$
+
+
+\liti 如图 \ref{fig:5-12}，已知平面内并列的三个相等的正方形，利用复数证明
+$$ \angle 1 + \angle 2 + \angle 3 = \dfrac{\pi}{2} \text{。} $$
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-12}
+    \caption{}\label{fig:5-12}
+\end{figure}
+
+\zhengming 如图建立坐标系（确定复平面），由于平行线的内错角相等，$\angle 1$，$\angle 2$，$\angle 3$
+分别等于复数 $1 + i$，$2 + i$，$3 + i$ 的辐角的主值，这样 $\angle 1 + \angle 2 + \angle 3$
+就是积 $(1 + i)(2 + i)(3 + i)$ 的辐角，而
+$$ (1 + i)(2 + i)(3 + i) = (1 + 3i)(3 + i) = 10i \text{，}$$
+其辐角的主值是 $\dfrac{\pi}{2}$，并且 $\angle 1$，$\angle 2$，$\angle 3$ 都是锐角，于是
+$$ 0 < \angle 1 + \angle 2 + \angle 3 < \dfrac{3\pi}{2} \text{，} $$
+所以
+$$ \angle 1 + \angle 2 + \angle 3 = \dfrac{\pi}{2} \text{。} $$
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$8\left( \cos\dfrac{\pi}{6} + i\, \sin\dfrac{\pi}{6} \right) \cdot 2\left( \cos\dfrac{\pi}{4} + i\, \sin\dfrac{\pi}{4} \right)$；}
+
+    \xiaoxiaoti{$2\left( \cos\dfrac{4\pi}{3} + i\, \sin\dfrac{4\pi}{3} \right) \cdot 4\left( \cos\dfrac{5\pi}{6} + i\, \sin\dfrac{5\pi}{6} \right)$；}
+
+    \xiaoxiaoti{$\sqrt{2} (\cos 240^\circ + i\, \sin 240^\circ) \cdot \dfrac{\sqrt{3}}{2} (\cos 60^\circ + i\, \sin 60^\circ)$；}
+
+    \xiaoxiaoti{$3(\cos 18^\circ + i\, \sin 18^\circ) \cdot 2(\cos 54^\circ + i\, \sin 54^\circ) \cdot 5(\cos 108^\circ + i\, \sin 108^\circ)$。}
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{用棣莫佛定理计算：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$[3(\cos 18^\circ + i\, \sin 18^\circ)]^5$；}
+
+    \xiaoxiaoti{$\left[ \sqrt{2} \left( \cos\dfrac{\pi}{4} + i\, \sin\dfrac{\pi}{4} \right) \right]^6$；}
+
+    \xiaoxiaoti{$(1 - i) \left( -\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}\, i \right)^7$；}
+
+    \xiaoxiaoti{$(-1 - i)^6$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{直角三角形 $ABC$ 中， $\angle C = \dfrac{\pi}{2}$， $BC = \dfrac{1}{3} AC$，
+    点 $E$ 在 $AC$ 上， 且 $EC = 2AE$。利用复数证明
+}
+$$\angle CBE + \angle CBA = \dfrac{3\pi}{4} \text{。} $$
+
+\end{xiaotis}
+
+

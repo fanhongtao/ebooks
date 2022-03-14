@@ -1,0 +1,179 @@
+\subsubsection{开方}\label{subsec:5-7-3}
+
+设 $\rho (\cos\phi + i\,\sin\phi)$ 是复数 $r (\cos\theta + i\,\sin\theta)$ 的 $n \; (n \in N)$ 次方根，那么
+\begin{align*}
+    r (\cos\theta + i\,\sin\theta) &= [\rho (\cos\phi + i\,\sin\phi)]^n \\
+        &= \rho^n (\cos n\phi + i\,\sin n\phi) \text{。}
+\end{align*}
+
+因为相等的复数，它们的模相等，辐角可以相差 $2\pi$ 的整数倍，所以
+$$\begin{cases}
+    \rho^n = r, \\
+    n\phi = \theta + 2k\pi \quad (k \in Z) \text{。}
+\end{cases}$$
+
+由此可知，
+$$ \rho = \sqrt[n]{r},\quad \phi = \dfrac{\theta + 2k\pi}{n} \text{，}$$
+因此 $r (\cos\theta + i\,\sin\theta)$ 的 $n$ 次方根是
+$$ \sqrt[n]{r} \left( \cos\dfrac{\theta + 2k\pi}{n} + i\,\sin\dfrac{\theta + 2k\pi}{n} \right) \text{。}$$
+当 $k$ 取 $0$，$1$，$\cdots$，$n - 1$ 各值时，就可以得到上式的 $n$ 个值。由于正弦、余弦函数
+的周期都是 $2\pi$，当 $k$ 取 $n$，$n + 1$ 以及其他各个整数值时，又重复出现
+$k$ 取 $0$，$1$，$\cdots$，$n - 1$ 时的结果。所以
+\begin{center}
+    \framebox{\begin{minipage}{18em}
+        复数 $r (\cos\theta + i\,\sin\theta)$ 的 $n$ 次方根 \footnotemark 是 \\
+        $\sqrt[n]{r} \left( \cos\dfrac{\theta + 2k\pi}{n} + i\,\sin\dfrac{\theta + 2k\pi}{n} \right)$  \\
+        $(k = 0,\, 1, \, \cdots, \, n-1)$ 。
+    \end{minipage}}
+\end{center}
+\footnotetext{有的书上用 $\sqrt[n]{z}$ 表示复数 $z$ 的 $n$ 次方根。采用这个符号时，一定要记住 $\sqrt[n]{z}$ 表示 $n$ 个复数。}
+这就是说，\textbf{复数的 $n \; (n \in N)$ 次方根是 $n$ 个复数，它们的模都等于这个复数的模的 $n$ 次算术根，它们的辐角分别等于这个复数的辐角
+与 $2\pi$ 的 $0$，$1$，$\cdots$，$n - 1$ 倍的和的 $n$ 分之一。}
+
+
+
+\setcounter{cntliti}{5}
+\liti 求 $1 - i$ 的立方根。
+
+\jie 因为 $1 - i = \sqrt{2} \left( \cos\dfrac{7\pi}{4} + i \sin\dfrac{7\pi}{4} \right)$，
+所以 $1 - i$ 的立方根是
+\begin{align*}
+    & \sqrt[6]{2} \left( \cos\dfrac{\dfrac{7\pi}{4} + 2k\pi}{3} + i\,\sin\dfrac{\dfrac{7\pi}{4} + 2k\pi}{3} \right) \\
+    ={} & \sqrt[6]{2} \left( \cos\dfrac{7\pi + 8k\pi}{12} + i\,\sin\dfrac{7\pi + 8k\pi}{12} \right) \quad (k = 0,\, 1, \, 2) \text{，}
+\end{align*}
+即 $1 - i$ 的立方根是下面的三个复数：
+\begin{align*}
+    & \sqrt[6]{2} \left( \cos\dfrac{7\pi}{12} + i\,\sin\dfrac{7\pi}{12} \right) \text{，} \\
+    & \sqrt[6]{2} \left( \cos\dfrac{5\pi}{4} + i\,\sin\dfrac{5\pi}{4} \right) \text{，} \\
+    & \sqrt[6]{2} \left( \cos\dfrac{23\pi}{12} + i\,\sin\dfrac{23\pi}{12} \right) \text{。}
+\end{align*}
+
+
+\liti 设 $a \in R^+$，求 $-a$ 的平方根。
+
+\jie 因为 $-a = a(\cos\pi + i\,\sin\pi)$，所以 $-a$ 的平方根是
+$$ \sqrt{a} \left( \cos\dfrac{\pi + 2k\pi}{2} + i\,\sin\dfrac{\pi + 2k\pi}{2} \right) \quad (k = 0,\, 1) \text{，}$$
+即 $-a$ 的平方根是下面两个复数：
+$$
+    \sqrt{a} \left( \cos\dfrac{\pi}{2} + i\,\sin\dfrac{\pi}{2} \right),\quad
+    \sqrt{a} \left( \cos\dfrac{3\pi}{2} + i\,\sin\dfrac{3\pi}{2} \right) \text{，}
+$$
+或
+$$ \sqrt{a}\,i, \quad -\sqrt{a}\,i \text{。} $$
+
+从例 7 可以看到，\textbf{$a \in R^+$ 时 $-a$ 的平方根是 $\pm\sqrt{a}\,i$。}
+
+我们知道，对于实系数一元二次方程 $ax^2 + bx + c = 0$，如果 $b^2 - 4ac < 0$，
+那么它在实数集 $R$ 中没有根。现在我们在复数集 $C$ 中考察这种情况。经过变形，原方程可化为
+$$ x^2 + \dfrac{b}{a} x = - \dfrac{c}{a} \text{，} $$
+
+$\therefore \quad \begin{gathered}[t]
+    x^2 + 2 \cdot x \cdot \dfrac{b}{2a} + \left( \dfrac{b}{2a} \right)^2 = \left( \dfrac{b}{2a} \right)^2 - \dfrac{c}{a}, \\
+    \left( x + \dfrac{b}{2a} \right)^2 = \dfrac{b^2 - 4ac}{(2a)^2} , \\
+    \left( x + \dfrac{b}{2a} \right)^2 = - \left[ \dfrac{-(b^2 - 4ac)}{(2a)^2} \right] \text{。}
+\end{gathered}$
+
+由于 $\dfrac{-(b^2 - 4ac)}{(2a)^2} \in R^+$，根据例 7，我们得到
+$$ x + \dfrac{b}{2a} = \dfrac{\pm \sqrt{-(b^2 - 4ac)}\,i}{2a} \text{，} $$
+\textbf{所以方程 $ax^2 + bx + c = 0$ 在复数集 $C$ 中有两个根
+    $$ x = \dfrac{-b \pm \sqrt{-(b^2 - 4ac)}\,i}{2a} \quad (b^2 - 4ac < 0) \text{。} $$
+}
+显然，它们是一对共轭复数。
+
+
+
+\liti 在复数集 $C$ 中解方程 $x^2 - 4x + 5 = 0$。
+
+\jie 因为 $b^2 - 4ac = 16 - 20 = -4 < 0$，所以
+$$ x = \dfrac{4 \pm \sqrt{4}\,i}{2} = \dfrac{4 \pm 2\,i}{2} = 2 \pm i \text{，} $$
+
+根据以前学过的一元二次方程的有关知识，我们知道，例 8 中方程左边的二次三项式
+$x^2 - 4x + 5$ 在复数集 $C$ 中就可以通过求根的方法分解成两个一次因式的积，即
+\begin{align*}
+    x^2 - 4x + 5 &= [x - (2 + i)] [x - (2 - i)] \\
+        &= (x - 2 - i)(x - 2 + i) \text{。}
+\end{align*}
+
+形如 $a_n x^n + a_0 = 0 \; (a_0, \, a_n \in C \text{，且} a_n \neq 0)$ 的方程
+叫做\textbf{二项方程}。任何一个二项方程都可以化成 $x^n = b \; (b \in C)$ 的形式，
+因此，都可以通过复数开方来求根。
+
+
+
+
+\liti 在复数集 $C$ 中解方程 $x^5 = 32$ 。
+
+\jie 原方程就是
+$$ x^5 = 32(\cos 0 + i\,\sin 0) \text{。}$$
+
+$\therefore \quad \begin{aligned}[t]
+    x &= \sqrt[5]{32} \left( \cos\dfrac{0 + 2k\pi}{5} + i\,\sin\dfrac{0 + 2k\pi}{5} \right) \\
+      & = 2 \left[ \cos\left( k \cdot \dfrac{2\pi}{5} \right) + i\,\sin\left( k \cdot \dfrac{2\pi}{5} \right) \right] \quad (k = 0,\, 1,\, 2,\, 3,\, 4) \text{，}
+\end{aligned}$\\
+就是
+\begin{align*}
+    x_1 &= 2 (\cos 0 + i \sin 0) = 2 , \\
+    x_2 &= 2 \left( \cos\dfrac{2\pi}{5} + i\,\sin\dfrac{2\pi}{5} \right), \\
+    x_3 &= 2 \left( \cos\dfrac{4\pi}{5} + i\,\sin\dfrac{4\pi}{5} \right), \\
+    x_4 &= 2 \left( \cos\dfrac{6\pi}{5} + i\,\sin\dfrac{6\pi}{5} \right), \\
+    x_5 &= 2 \left( \cos\dfrac{8\pi}{5} + i\,\sin\dfrac{8\pi}{5} \right) \text{。}
+\end{align*}
+
+这个方程的根的几何意义是复平面内的五个点，这些点均匀分布在以原点为圆心、以 $2$ 为半径的圆上（图 \ref{fig:5-13}）.
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds2-ch5-5-13}
+    \caption{}\label{fig:5-13}
+\end{figure}
+
+
+一般地，方程 $x^n = b \; (b \in C)$ 的根的几何意义是复平面内的 $n$ 个点，这些点均匀分布在以原点
+为圆心、以 $\sqrt[n]{|b|}$ 为半径的圆上。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）求下列各数的平方根：\\
+    $-9$，$-2.89$，$-5$，$-t \; (t \in R^+)$，$-m^2 \; (m \in R)$，$a - b \; (a,\, b \in R\text{，且} a < b)$。
+}
+
+\xiaoti{在复数集 $C$ 中解下列方程：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$9x^2 + 16 = 0$；} & \xiaoxiaoti{$-3x^2 = 5$；} \\
+        \xiaoxiaoti{$x^2 + x + 6 = 0$；} & \xiaoxiaoti{$18x^2 - 42x + 29 = 0$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$-i$ 的平方根；}
+
+    \xiaoxiaoti{$-\dfrac{1}{2} + \dfrac{\sqrt{3}}{2}\,i$ 的平方根；}
+
+    \xiaoxiaoti{$1$ 的平方根；}
+
+    \xiaoxiaoti{$-16$ 的四次方根。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{在复数集 $C$ 中解下列方程，并在复平面内把方程的根表示出来：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$x^3 - 27 = 0$；} & \xiaoxiaoti{$x^3 + 1 = 0$；} \\
+        \xiaoxiaoti{$x^4 - 16 = 0$；} & \xiaoxiaoti{$x^4 + 1 = 0$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+

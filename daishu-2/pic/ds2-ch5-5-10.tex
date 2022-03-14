@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [->] (-1, 0) -- (4.5, 0) node[anchor=west] {$x$};
+    \draw [->] (0, -1) -- (0, 6) node[anchor=east] {$y$};
+    \node at (-0.3, -0.3) {$O$};
+
+    \coordinate (O) at (0, 0);
+    \draw[rotate=25,->,thick] (O) -- (3.8, 0) node[anchor=west] {$P2$};
+    \draw [->] (1.0, 0) arc (0:25:1.0);
+    \node at (1.4, 0.3) {$\theta_2$};
+    \node at (2.9, 1.0) {$r_2$};
+
+    \draw[rotate=40,->,thick] (O) -- (3.8, 0) node[anchor=west] {$P1$};
+    \draw [->] (1.8, 0) arc (0:40:1.8);
+    \node at (2.1, 0.5) {$\theta_1$};
+    \node at (2.7, 1.8) {$r_1$};
+
+    \draw[rotate=65,->,thick] (O) -- (6, 0) node[anchor=west] {$P$}; % 原本长度应该是 3.8*3.8 ，但为了图形更好看，取了一个较小的值 6
+    \draw [->] (2.5, 0) arc (0:65:2.5);
+    \node at (3.3, 0.3) {$\theta_1 + \theta_2$};
+    \node at (2.7, 4.5) {$r_1 r_2$};
+\end{tikzpicture}
