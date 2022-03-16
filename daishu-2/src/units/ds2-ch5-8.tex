@@ -1,0 +1,162 @@
+\starredsubsection{复数的指数形式}\label{subsec:5-8}
+
+前面我们学习了复数的代数形式及三角形式，在科学技术，特别是在电工和无线电计算中，
+为了简便起见，还采用复数的另一种表示——复数的指数形式。
+
+我们把模为 $1$， 辐角为 $\theta$ （以弧度为单位）的复数
+$$ \cos\theta + i\,\sin\theta $$
+用记号 $e^{i\,\theta}$ 来表示， 即
+\begin{gather}
+    e^{i\,\theta} = \cos\theta + i\,\sin\theta \text{。}\footnotemark \label{eq:fushu-zhishu-1}
+\end{gather}
+\footnotetext{这里的 $e = 2.71828\cdots$ ，就是自然对数的底数。
+公式 \eqref{eq:fushu-zhishu-1} 叫做 \textbf{欧拉}（Leonhard Euler，1707 —\ 1783 年，瑞士数学家）\textbf{公式}。
+在“复变函数论”中可以证明这个公式。}
+例如，
+\begin{gather*}
+    e^{i\,\frac{\pi}{2}} = \cos\dfrac{\pi}{2} + i\,\sin\dfrac{\pi}{2} = i, \\
+    e^{i\,\frac{\pi}{3}} = \cos\dfrac{\pi}{3} + i\,\sin\dfrac{\pi}{3} = \dfrac{1}{2} + \dfrac{\sqrt{3}}{2}\,i \text{。}
+\end{gather*}
+又如，$\cos\dfrac{5\pi}{6} + i\,\sin\dfrac{5\pi}{6}$ 可以写成 $e^{i\,\frac{5\pi}{6}}$，
+$$ \dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{2}}{2}\,i = \cos\dfrac{\pi}{4} + i\,\sin\dfrac{\pi}{4} $$
+可以写成 $e^{i\,\frac{\pi}{4}}$。
+
+引入记号 $e^{i\,\theta} = \cos\theta + i\,\sin\theta$ 之后，任何一个复数
+$$ z = r(\cos\theta + i\,\sin\theta) $$
+就可以表示成
+$$ z = r e^{i\,\theta} $$
+的形式。我们把这一表达式叫做复数的\textbf{指数形式}。
+
+根据复数的指数形式的定义，我们有
+\begin{align*}
+    e^{i\,\theta_1} \cdot e^{i\,\theta_2} &= (\cos\theta_1 + i\,\sin\theta_1) (\cos\theta_2 + i\,\sin\theta_2) \\
+        &= \cos(\theta_1 + \theta_2) + i\,\sin(\theta_1 + \theta_2) \\
+        &= e^{i\,(\theta_1 + \theta_2)} \text{，}
+\end{align*}
+即
+\begin{gather}
+    e^{i\,\theta_1} \cdot e^{i\,\theta_2} = e^{i\,(\theta_1 + \theta_2)} \text{。}  \label{eq:fushu-zhishu-2}
+\end{gather}
+
+同样可证
+\begin{gather}
+    (e^{i\,\theta})^n = e^{i\,n\,\theta} \quad (n \in N) \text{，}  \label{eq:fushu-zhishu-3} \\
+    \dfrac{e^{i\,\theta_1}}{e^{i\,\theta_2}} = e^{i(\theta_1 - \theta_2)} \text{。} \label{eq:fushu-zhishu-4}
+\end{gather}
+\eqref{eq:fushu-zhishu-2}，\eqref{eq:fushu-zhishu-3}，\eqref{eq:fushu-zhishu-4} 与我们过去学过的实数指数幂的性质一致，
+所以把复数从三角形式改写成指数形式后，可以运用实数集 $R$ 中的幂运算律（注意：乘方的指数限于自然数〉来进行运算。
+这里我们仿照实数集 $R$ 中的说法，把 $e^{i\,\theta}$ 叫做以 $e$ 为底、$i\,\theta$ 为指数的幂。
+
+对于开方运算，\textbf{复数 $r e^{i\,\theta}$ 的 $n \; (n \in N)$ 次方根是}
+$$ \sqrt[n]{r} e^{i\,\frac{\theta + 2k\pi}{n}} \qquad (k = 0,\, 1,\, \cdots,\, n-1) \text{。} $$
+
+
+
+\liti 把复数 $z = 2\,i$ 表示成指数形式。
+
+\jie $z = 2\,i = 2 \left( \cos\dfrac{\pi}{2} + i\,\sin\dfrac{\pi}{2} \right) = 2 e^{i\,\frac{\pi}{2}}$。
+
+
+
+\liti 把 $\sqrt{2} e^{-i\,\frac{\pi}{4}}$，$\sqrt{5} e^{i\,\frac{2\pi}{3}}$
+表示成三角形式及代数形式。
+
+\jie \, $\begin{aligned}[t]
+    \sqrt{2} e^{-i\,\frac{\pi}{4}} &= \sqrt{2} \left[ \cos\left( -\dfrac{\pi}{4} \right) + i\,\sin\left( -\dfrac{\pi}{4} \right) \right] \\
+        &= 1 - i \text{，} \\
+    \sqrt{5} e^{i\,\frac{2\pi}{3}} &= \sqrt{5} \left( \cos\dfrac{2\pi}{3} + i\,\sin\dfrac{2\pi}{3} \right) \\
+        &= -\dfrac{\sqrt{5}}{2} + \dfrac{\sqrt{15}}{2}\,i \text{。}
+\end{aligned}$
+
+
+\liti 用 $e^{i\,\theta}$ 与 $e^{-i\,\theta}$ 表示 $\cos\theta$ 与 $\sin\theta$。
+
+\jie $\because$ \quad $\begin{aligned}[t]
+    e^{i\,\theta} &= \cos\theta + i\,\sin\theta, \\
+    e^{-i\,\theta} &= \cos(-\theta) + i\,\sin(-\theta) \\
+        &= \cos\theta - i\,\sin\theta ,
+\end{aligned}$
+
+$\therefore \qquad \begin{aligned}[t]
+    \cos\theta &= \dfrac{e^{i\,\theta} + e^{-i\,\theta}}{2} , \\
+    \sin\theta &= \dfrac{e^{i\,\theta} - e^{-i\,\theta}}{2\,i} \text{。}
+\end{aligned}$
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列复数表示成指数形式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$1$，\quad $-1$；}
+
+    \xiaoxiaoti{$\cos\dfrac{\pi}{8} + i\,\sin\dfrac{\pi}{8}$，\quad
+        $\cos 15^\circ + i\,\sin 15^\circ$，\quad
+        $\cos 3 + i\,\sin 3$；}
+
+    \xiaoxiaoti{$\dfrac{\sqrt{2}}{2} - \dfrac{\sqrt{2}}{2}\,i$；}
+
+    \xiaoxiaoti{$2 + 2\,i$，\quad $3 - 3\,i$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列复数表示成三角形式及代数形式：}
+\begin{xiaoxiaotis}
+
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{*{2}{@{}p{16em}}}
+        \xiaoxiaoti{$e^{-i\,\frac{\pi}{2}}$；} & \xiaoxiaoti{$\sqrt{2} e^{i\,\frac{2\pi}{3}}$；} \\
+        \xiaoxiaoti{$4 e^{i\,\frac{\pi}{6}}$；} & \xiaoxiaoti{$3 e^{-2\,i}$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求与复数 $e^{i\,\frac{4\pi}{5}}$， $e^{i\,\frac{2\pi}{3}}$ 对应的向量的夹角 $\alpha \, (0 \leqslant \alpha \leqslant \pi)$。}
+
+
+\xiaoti{设 $a + b\,i = r e^{i\,\theta}$，把下列复数表示成指数形式：
+    $$a-b\,i, \quad -a+b\,i, \quad -a-b\,i \text{。}$$
+}
+
+\shangyihang
+\xiaoti{用复数的指数形式计算：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$8 \left( \cos\dfrac{7\pi}{6} + i\,\sin\dfrac{7\pi}{6} \right) \cdot 2 \left( \cos\dfrac{\pi}{4} + i\,\sin\dfrac{\pi}{4} \right)$；}
+
+    \xiaoxiaoti{$2 \left( \cos\dfrac{4\pi}{3} + i\,\sin\dfrac{4\pi}{3} \right) \cdot 4 \left( \cos\dfrac{5\pi}{6} + i\,\sin\dfrac{5\pi}{6} \right)$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知 $z_1 = 5 e^{i\,\frac{\pi}{3}}$，$z_2 = 2 e^{-i\,\frac{\pi}{6}}$，
+    求 $z1 \cdot z_2$，并在复平面内用向量表示出来。
+}
+
+
+\xiaoti{根据 $e^{i\,\theta} = \cos\theta + i\,\sin\theta$，求证：
+    $$ e^{i\,(-\theta)} = \dfrac{1}{\cos\theta + i\,\sin\theta} \text{。} $$
+}
+
+\shangyihang
+\xiaoti{用复数的指数形式计算：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$\dfrac{\sqrt{3}(\cos 150^\circ + i\,\sin 150^\circ)}{\sqrt{2}(\cos 225^\circ + i\,\sin 225^\circ)}$；}
+
+    \xiaoxiaoti{$\dfrac{2}{e^{i\,\frac{\pi}{4}}}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用复数的指数形式计算 $(1 + \sqrt{3}\,i)^{10}$。}
+
+
+\xiaoti{用复数的指数形式求 $64$ 的四次方根。}
+
+
+\end{xiaotis}
