@@ -86,16 +86,12 @@
 % 在不改变 counter 值的情况下，重置 counter 的子 counter
 \newcommand{\touchcounter}[1]{\stepcounter{#1} \addtocounter{#1}{-1}}
 
-% （编号前）带星号的 chapter
-% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
-% 参数2: 正文中的文字
-\NewDocumentCommand{\starredchapter}{o m}{
-  \refstepcounter{chapter}
-  \chapter*{*\CTEXthechapter\quad #2}
-  \IfNoValueTF{#1}
-    {\addcontentsline{toc}{chapter}{\makebox{*}\CTEXthechapter\qquad #2}}
-    {\addcontentsline{toc}{chapter}{\makebox{*}\CTEXthechapter\qquad #1}}
-}
+\newenvironment{starred}{
+  \ctexset {
+    chapter/name={*第,章},
+    section/name={*}
+  }
+}{}
 
 
 % 没有编号但又需要添加到目录中的 section (No num(ber) section)。
