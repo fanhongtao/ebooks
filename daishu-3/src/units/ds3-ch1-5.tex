@@ -1,0 +1,270 @@
+\subsection{利用综合除法、因式定理来分解因式}\label{subsec:1-5}
+
+设有多项式 $x^6 + x^4 - x^2 - 1$，我们把它在复数集 $C$ 中分解因式，得
+\begin{align*}
+        & x^6 + x^4 - x^2 - 1 \\
+    ={} & x^4(x^2 + 1) - (x^2 + 1) \\
+    ={} & (x^4 - 1) (x^2 + 1) \\
+    ={} & (x^2 - 1) (x^2 + 1) (x^2 + 1) \\
+    ={} & (x + 1) (x - 1) (x + i)^2 (x - i)^2 \text{。}
+\end{align*}
+
+这个一元六次式有六个一次因式，其中有两个相同因式 $x + i$，两个相同因式 $x - i$。
+
+关于复系数一元 $n$ 次多项式的因式分解， 有下面的定理：
+
+\begin{theorem} \label{theorem:dxs-1}
+    任何一个复系数一元 $n$ 次多项式 $f(x)$ 有且仅有 $n$ 个一次因式 $x - x_i \; (i = 1,\, 2,\, \cdots,\, n)$，
+    把其中相同的因式的积用幂表示后，$f(x)$ 就具有唯一确定\footnotemark 的因式分解的形式：
+    \begin{align*}
+        f(x) = a_n(x - x_1)^{k_1} (x - x_2)^{k_2} \cdots (x - x_m)^{k_m} \tag{*}\mylabel{eq:dxs-1}[*]
+    \end{align*}
+    其中， $k_1,\, k_2,\, \cdots,\, k_m \in N$，且 $k_1 + k_2 + \cdots + k_m = n$，
+    复数 $x_1,\, x_2,\, \cdots,\, x_m$ 两两不等。
+\end{theorem}
+\footnotetext{这里所说的“唯一确定”，不考虑各一次因式的书写顺序，也不考虑常数因子。例如，我们把
+$4x^2 -16 = (2x + 4) (2x -4)$ 与 $4x^2 -16 = 4 (x - 2) (x + 2)$ 等等看成同一种分解形式。}
+
+这个定理的证明超出中学数学范围，本书从略。
+
+我们把分解结果 (\nameref{eq:dxs-1}) 中的 $x - x_i \; (i = 1,\, 2,\, \cdots,\, m)$ 叫做\textbf{多项式 $f(x)$ 的 $k_i$ 重一次因式。}
+例如：多项式 $x^2 - 6x + 9$ 有 $2$ 重一次因式 $x - 3$；
+多项式 $(x - 4) (x-2)^2 (x - 5)^3$ 有 $1$ 重一次因式 $x - 4$，$2$ 重一次因式 $x + 2$，$3$ 重一次因式 $x - 5$。
+
+由 \nameref{theorem:dxs-1} 可以得到：
+
+\begin{corollary} \label{corollary:dxs-1-1}
+    如果 $x - a,\, x - b \; (a \neq b)$ 都是复系数一元 $n$ 次多项式 $f(x)$ 的因式，那么它们的积 $(x - a) (x - b)$ 也是 $f(x)$ 的因式。
+\end{corollary}
+
+\zhengming 因为 $f(x)$ 的分解结果 \eqnameref{eq:dxs-1} 是唯一确定的，所以 $a$ 一定等于某个 $x_i$，
+$b$ 一定等于某个 $x_j$ （$i = 1,\, 2\, \cdots,\, m,$ $j = 1,\, 2\, \cdots,\, m$，且 $i \neq j$），
+即 $(x - a) (x - b) = (x - x_i) (x - x_j)$，由此可见，$(x - x_i) (x - x_j)$ 是 $f(x)$ 的因式。
+
+
+对于一个任意的复系数一元 $n$ 次多项式，要求出它的一次因式，没有一般的方法。
+但是，如果 $f(x)$ 是整系数多项式，那么进一步运用下列定理，就能使我们较快地求得它的形如
+$x - \dfrac{q}{p}$ （其中$p,\, q$ 是互质的整数）的因式，或者确定它没有这种形式的因式。
+
+\begin{theorem} \label{theorem:dxs-2}
+    如果整系数多项式 $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ 有因式
+    $x - \dfrac{q}{p}$ （其中$p,\, q$ 是互质的整数），那么
+    $p$ 一定是首项系数 $a_n$ 的约数，$q$ 一定是末项系数 $a_0$ 的约数。
+\end{theorem}
+
+例如，$15x^2 - 17x + 4$ 有因式 $3x - 1$，$5x - 4$，即 $3 \left( x - \dfrac{1}{3} \right)$，
+$5 \left( x - \dfrac{4}{5} \right)$，$3$ 与 $5$ 都是首项系数 $15$ 的约数，
+$1$ 与 $4$ 都是末项系数 $4$ 的约数。
+又如， 如果 $2x^4 - x^3 - 13x^2 - x - 15$ 有 $x - \dfrac{q}{p}$ 形式的因式
+（其中 $p$，$q$ 是互质的整数，下同），那么 $p$ 只可能是 $1$，$2$，
+$q$ 只可能是 $\pm 1$，$\pm 3$，$\pm 5$，$\pm 15$。
+
+
+要注意定理中“$p$ 是 $a_n$ 的约数，$q$ 是 $a_0$ 的约数” 只是 “整系数多项式
+$a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ 有因式 $x - \dfrac{q}{p}$
+的必要条件，而不是充分条件（为什么）。
+
+
+下面证明 \nameref{theorem:dxs-2}。
+
+\zhengming 因为 $f(x)$ 有因式 $x - \dfrac{q}{p}$，所以 $f \left( \dfrac{q}{p} \right) = 0$，即
+$$ a_n \left( \dfrac{q}{p} \right)^n + a_{n-1} \left( \dfrac{q}{p} \right)^{n-1} + \cdots + a_1 \left( \dfrac{q}{p} \right) + a_0 = 0 \text{。} $$
+
+把第二项起的各项移到右边，并将两边都乘以 $p^{n-1}$，得
+$$ \dfrac{a_n q^n}{p} = - (a_{n-1} q^{n-1} + \cdots + a_1 q p^{n-2} + a_0 p^{n-1}) \text{。} $$
+
+等式的右边是一个整数，所以 $\dfrac{a_n q^n}{p}$ 也是一个整数，即 $p$ 能整除 $a_n q^n$。
+但因 $p$，$q$ 互质，所以 $p$ 的任何一个因数都不是 $q$ 的约数，从而也不是 $q^n$ 的约数\footnotemark。
+由此可知，$p$ 一定是 $a_n$ 的约数。
+\footnotetext{例如：$p = 2 \times 5 = 10$，$q = 3 \times 7 = 21$，$p$ 的任何一个质因数（$2$ 或 $5$）
+都不是$q$ 的约数，从而也不是 $q^n = 3^n \times 7^n$ 的约数。}
+
+同理，把上面的等式写成
+$$ \dfrac{a_0 p^n}{q} = - (a_{n} q^{n-1} + a_{n-1} q^{n-2} p + \cdots + a_1 p^{n-1}) \text{，} $$
+可以证明 $q$ 一定是 $a_0$ 的约数。
+
+\begin{corollary} \label{corollary:dxs-2-1}
+    如果首项系数为 $1$ 的整系数多项式  $f(x) = x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$
+    有因式 $x - q$，其中 $q \in Z$，那么 $q$ 一定是常数项 $a_0$ 的约数。
+\end{corollary}
+
+利用 \nameref{theorem:dxs-2} 及其 \hyperref[corollary:dxs-2-1]{推论}，我们可以较快地确定一个整系数一元一次式
+是不是某整系数一元 $n$ 次多项式的因式。
+
+
+\liti 把 $f(x) = x^3 + x^2 - 10x - 6$ 分解因式\footnotemark。
+\footnotetext{如果没有特别说明，本章中所说的因式分解，都是指在复数集 $C$ 中的因式分解。}
+
+分析：先考虑 $x - q \; (q \in Z)$ 形式的因式，因为 $f(x)$ 的首项系数为 $1$ 的整系数多项式，
+根据 \nameref{theorem:dxs-2} 的 \hyperref[corollary:dxs-2-1]{推论}，可能出现的 $x - q$ 这样的因式
+有 $x \pm 1$，$x \pm 2$，$x \pm 3$，$x \pm 6$。
+
+判断 $x - 1$，$x + 1$ 是不是 $f(x)$ 的因式时，只要根据 \nameref{theorem:yinshi}，
+计算 $f(1)$，$f(-1)$ 是不是等于零就可以了。因为 $f(1) = -14 \neq 0$，$f(-1) = 4 \neq 0$，
+所以 $x - 1$，$x + 1$ 都不是 $f(x)$ 的因式。
+
+判断 $x - 2$，$x + 2$，$\cdots$ 是不是 $f(x)$ 的因式时，可以计算 $f(2)$，$f(-2)$，$\cdots$
+是不是等于零。用综合除法，由于
+
+\begin{minipage}{6cm}
+    $$
+    \begin{array}{*{3}{c@{\hspace{0.5cm}}}c|l}
+        1 & +1 & -10 & -6 & 2 \\
+          & +2 &  +6 &    &   \\
+        \cline{1-4}
+        1 & +3 &  -4 & \multicolumn{1}{r}{ } &
+    \end{array}
+    $$
+\end{minipage}
+\begin{minipage}{6cm}
+    $$
+    \begin{array}{*{3}{c@{\hspace{0.5cm}}}c|l}
+        1 & +1 & -10 & -6 & -2 \\
+          & -2 &  +2 &    &    \\
+        \cline{1-4}
+        1 & -1 &  -8 & \multicolumn{1}{r}{ } &
+    \end{array}
+    $$
+\end{minipage}\\
+（上面左式中 $-4 \times 2$ 不是 $-6$ 的相反数，右式中 $-8 \times (-2)$ 不是 $-6$ 的相反数，
+已经说明相应的余数都不是零，所以不必继续演算了。）可见 $x - 2$，$x + 2$ 都不是 $f(x)$ 的因式。但
+$$
+\begin{array}{*{3}{c@{\hspace{0.5cm}}}c|l}
+    1 & +1 & -10 & -6 & 3 \\
+      & +3 & +12 & +6 &   \\
+    \cline{1-4}
+    1 & +4 &  +2 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{4-4}
+\end{array}
+$$
+可知 $x - 3$ 是 $f(x)$ 的因式。所以
+$$ x^3 + x^2 - 10x - 6 = (x - 3) (x^2 + 4x + 2) \text{。} $$
+
+因为方程 $x^2 + 4x + 2 = 0$ 的两个根是 $-2 \pm \sqrt{2}$，于是
+$$ x^3 + x^2 - 10x - 6 = (x - 3) (x + 2 + \sqrt{2}) (x + 2 - \sqrt{2}) \text{。} $$
+
+解答时，只需写出结果是因式的试验过程，其他过程不必写出。
+
+\jie \qquad $\begin{array}[t]{*{3}{c@{\hspace{0.5cm}}}c|l}
+    1 & +1 & -10 & -6 & 3 \\
+      & +3 & +12 & +6 &   \\
+    \cline{1-4}
+    1 & +4 &  +2 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{4-4}
+\end{array}$
+
+$\therefore \quad \begin{aligned}[t]
+        & x^3 + x^2 - 10x - 6 \\
+    ={} & (x - 3) (x^2 + 4x + 2) \\
+    ={} & (x - 3) (x + 2 + \sqrt{2}) (x + 2 - \sqrt{2}) \text{。}
+\end{aligned}$
+
+
+
+\liti 把 $f(x) = 2x^4 - x^3 - 13x^2 -x -15$ 分解因式。
+
+分析：$f(x)$ 首项系数不是 $1$，根据 \nameref{theorem:dxs-2}，可试验
+$x \pm 1$，$x \pm 3$，$x \pm 5$，$x \pm 15$，
+$x \pm \dfrac{1}{2}$，$x \pm \dfrac{3}{2}$，
+$x \pm \dfrac{5}{2}$，$x \pm \dfrac{15}{2}$。
+
+因为 $f(1) \neq 0$，$f(-1) \neq 0$，所以 $x + 1$，$x - 1$ 不是 $f(x)$ 的因式。但
+$$
+\begin{array}{*{4}{c@{\hspace{0.5cm}}}c|l}
+    2 & -1 & -13 & -1 & -15 & 3 \\
+      & +6 & +15 & +6 & +15 &   \\
+    \cline{1-5}
+    2 & +5 &  +2 & +5 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{5-5}
+\end{array}
+$$
+所以，
+$$ f(x) = (x - 3) (2x^3 + 5x^2 + 2x + 5) \text{。} $$
+
+继续分解 $2x^3 + 5x^2 + 2x + 5$。这个多项式的首项系数是 $2$，末项系数是 $5$，
+所以只要试验 $x \pm 1$，$x \pm 5$，$x \pm \dfrac{1}{2}$，$x \pm \dfrac{5}{2}$
+就可以了。但因 $x \pm 1$ 不是原来多项式 $f(x)$ 的因式，所以也不是这个多项式的因式。由
+$$
+\begin{array}{*{3}{c@{\hspace{0.5cm}}}c|l}
+    2 & +5 & +2 & +5 & -\dfrac{5}{2} \\
+      & -5 & +0 & -5 &  \\
+    \cline{1-4}
+    2 & +0 & +2 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{4-4}
+\end{array}
+$$
+得
+\begin{align*}
+    2x^3 + 5x^2 + 2x + 5 &= \left( x + \dfrac{5}{2} \right) (2x^2 + 2) \\
+        &= (2x + 5)(x^2 + 1) \text{。}
+\end{align*}
+
+（实际上，利用分组分解法也容易得到这个结果。）
+
+$x^2 + 1$ 在复数集 $C$ 中还能继续分解因式，所以
+
+$\begin{aligned}[t]
+        & 2x^4 - x^3 - 13x^2 -x -15 \\
+    ={} & (x - 3) (2x + 5) (x^2 + 1) \\
+    ={} & (x - 3) (2x + 5) (x + i) (x - i) \text{。}
+\end{aligned}$
+
+\jie \qquad $\begin{array}[t]{*{4}{c@{\hspace{0.5cm}}}c|l}
+    2 & -1 & -13 & -1 & -15 & 3 \\
+      & +6 & +15 & +6 & +15 &   \\
+    \cline{1-5}
+    2 & +5 &  +2 & +5 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{5-5}
+\end{array}
+$
+
+\phantom{\jie} \qquad $\begin{array}[t]{*{3}{c@{\hspace{0.5cm}}}c|l}
+    2 & +5 & +2 & +5 & -\dfrac{5}{2} \\
+      & -5 & +0 & -5 &  \\
+    \cline{1-4}
+    2 & +0 & +2 & \multicolumn{1}{|r}{ 0 } & \\
+    \cline{4-4}
+\end{array}
+$
+
+$\therefore \quad \begin{aligned}[t]
+    & 2x^4 - x^3 - 13x^2 -x -15 \\
+={} & (x - 3) (2x^3 + 5x^2 + 2x + 5) \\
+={} & (x - 3) (2x + 5) (x^2 + 1) \\
+={} & (x - 3) (2x + 5) (x + i) (x - i) \text{。}
+\end{aligned}$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{判断下列各命题的真假，并说明理由：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{如果整数 $p$，$q$ 互质，且 $p$ 为整系数多项式
+        $$ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 $$
+        的首项系数 $a_n$ 的约数，$q$ 为末项系数 $a_0$ 的约数，那么
+        $x - \dfrac{q}{p}$ 一定是 $f(x)$ 的因式；
+    }
+
+    \xiaoxiaoti{如果多项式 $f(x) = g(x) q(x)$，其中 $g(x)$，$q(x)$ 也是多项式，
+        且 $x - a$ 不是 $f(x)$ 的因式，那么 $x -a$ 也不是 $q(x)$ 的因式。
+    }
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列多项式分解因式：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{$x^3 + x^2 - 10x + 8$；}
+
+    \xiaoxiaoti{$2x^3 - 9x^2 + x + 12$；}
+
+    \xiaoxiaoti{$x^4 + 3x^3 - 3x^2 -12x - 4$；}
+
+    \xiaoxiaoti{$4x^5 - 13x^3 + 10x^2 - 42x + 20$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
