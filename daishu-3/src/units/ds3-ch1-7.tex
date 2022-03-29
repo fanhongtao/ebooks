@@ -1,0 +1,154 @@
+\subsection{一元 $n$ 次方程的根与系数的关系}\label{subsec:1-7}
+
+我们知道，如果一元二次方程
+$$ ax^2 + bx + c = 0 $$
+的两个根是 $x_1,\, x_2$，那么根与系数之间有下列关系：
+$$
+\begin{cases}
+    x_1 + x_2 = -\dfrac{b}{a}, \\[1em]
+    x_1 x_2 = \dfrac{c}{a} \text{。}
+\end{cases}
+$$
+
+一般地说，我们有如下的定理：
+
+\begin{theorem}\footnotemark
+    如果一元 $n$ 次方程
+    $$ a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0 $$
+    在复数集 $C$ 中的根是 $x_1,\, x_2,\, \cdots,\, x_n$，那么
+    \begin{equation}
+    \begin{cases}
+        x_1 + x_2 + \cdots + x_n = -\dfrac{a_{n-1}}{a_n}, \\
+        x_1 x_2 + x_1 x_3 + \cdots + x_{n-1} x_n = \dfrac{a_{n-2}}{a_n}, \\
+        x_1 x_2 x_3 + x_1 x_2 x_4 + \cdots + x_{n-2} x_{n-1} x_n = -\dfrac{a_{n-8}}{a_n}, \\
+        \rule{2em}{0pt} \cdots \cdots \cdots  \hspace{6em} \cdots \cdots \cdots \\
+        x_1 x_2 \cdots x_n = (-1)^n \dfrac{a_0}{a_n}
+    \end{cases} \tag{*} \label{eq:wddl}
+    \end{equation}
+\end{theorem}
+\footnotetext{此定理又叫做\textbf{韦达定理}。韦达(Francois Viete, 1540 - 1603 年)，法国数学家。}
+
+例如，当 $n = 3$ 时，有
+$$\begin{cases}
+    x_1 + x_2 + x_3 = -\dfrac{a_2}{a_3}, \\
+    x_1 x_2 + x_1 x_3 + x_2 x_3 = \dfrac{a_1}{a_3}, \\
+    x_1 x_2 x_3 = -\dfrac{a_0}{a_3} \text{。}
+\end{cases}$$
+
+下面我们证明上述定理。
+
+\zhengming 因为方程 $a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0$ 的根是 $x_1,\, x_2,\, \cdots,\, x_n$，
+由上节\nameref{theorem:yyncfc-1}，可以把 $f(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$
+分解成 $n$ 个一次因式与 $a_n$ 的积：
+$$ a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = a_n (x - x_1) (x - x_2) \cdots (x - x_n) \text{。} $$
+
+因为
+\begin{align*}
+        & (x - x_1) (x - x_2) \cdots (x - x_n) \\
+    ={} & x^n - (x_1 + x_2 + \cdots x_n) x^{n-1}  \\
+        & + (x_1 x_2 + x_1 x_3 + \cdots + x_{n-1} x_n) x^{n-2}  \\
+        & + \cdots + (-1)^n x_1 x_2 \cdots x_n \text{，}
+\end{align*}
+代入上式后，把每一项与 $a_n$ 相乘。现将等号左边的多项式减去等号右边的多项式，所得的差 $F(x)$
+是一个零多项式。对 $F(x)$ 进行整理，可知
+\begin{align*}
+    F(x) ={} & [a_{n-1} + a_n (x_1 + x_2 + \cdots + x_n)] x^{n-1} \\
+             & + [ a_{n-2} - a_n (x_1 x_2 + x_1 x_3 + \cdots + x_{n-1} x_n)] x^{n-2} \\
+             & + \cdots + [ a_0 - (-1)^n a_n x_1 x_2 \cdots x_n ] \text{。}
+\end{align*}
+
+根据零多项式的定义，$F(x)$ 的系数都是 $0$，所以
+$$\begin{cases}
+    a_{n-1} + a_n (x_1 + x_2 + \cdots + x_n) = 0, \\
+    a_{n-2} - a_n (x_1 x_2 + x_1 x_3 + \cdots + x_{n-1} x_n) = 0, \\
+    \rule{2em}{0pt} \cdots\cdots\cdots  \qquad \cdots\cdots\cdots \\
+    a_0 - (-1)^n a_n x_1 x_2 \cdots x_n = 0 \text{。}
+\end{cases}$$
+
+由此即得
+$$\begin{cases}
+    x_1 + x_2 + \cdots + x_n = -\dfrac{a_{n-1}}{a_n}, \\
+    x_1 x_2 + x_1 x_3 + \cdots + x_{n-1} x_n = \dfrac{a_{n-2}}{a_n}, \\
+    \rule{2em}{0pt} \cdots \cdots \cdots  \hspace{6em} \cdots \cdots \cdots \\
+    x_1 x_2 \cdots x_n = (-1)^n \dfrac{a_0}{a_n} \text{。}
+\end{cases}$$
+
+这个定理的逆命题也成立，即对于任何一元 $n$ 次方程
+$$ f(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0 \text{，} $$
+如果有 $n$ 个数 $x_1,\, x_2,\, \cdots,\, x_n$ 满足\eqref{eq:wddl}式，
+那么 $x_1,\, x_2,\, \cdots,\, x_n$ 一定是方程 $f(x) = 0$ 的根。
+
+
+\liti 已知方程 $2x^3 -5x^2 -4x + 12 = 0$ 有 $2$ 重根，利用
+一元 $n$ 次方程的根与系数的关系，求这个方程在复数集 $C$ 中的解集。
+
+\jie 设原方程在 $C$ 中的解集为 $\{ \alpha_{(2)},\, \beta \}$，那么
+\begin{numcases}{}
+    2\alpha + \beta = \dfrac{5}{2} \text{，} \tag{1} \\
+    \alpha^2 + 2\alpha\beta = -2 \text{，} \tag{2} \\
+    \alpha^2 \beta = -6 \text{。} \tag{3}
+\end{numcases}
+（说明：这里有两个未知数、三个方程。我们可以选其中两个方程，求出满足这两个方程的
+$\alpha,\, \beta$，再代入另一个方程，如能满足，求出满足这两个方程的 $\alpha,\, \beta$，
+再代入另一个方程，如能满足，就是方程组的解，否则不是。）解(1)，(2)两式组成的方程组，得
+
+\rule{4cm}{0pt}
+\begin{minipage}{2.5cm}
+    $\begin{cases}
+        \alpha = 2, \\[1em]
+        \beta = -\dfrac{3}{2},
+    \end{cases}$
+\end{minipage}
+或 \quad
+\begin{minipage}{3cm}
+    $\begin{cases}
+        \alpha = -\dfrac{1}{3}, \\[1em]
+        \beta = \dfrac{19}{6} \text{。}
+    \end{cases}$
+\end{minipage}
+
+第一个解满足 (3) 式；第二个解不满足 (3) 式，应舍去。
+所以原方程在 $C$ 中的解集为 $\left\{ 2_{(2)},\, -\dfrac{3}{2} \right\}$。
+
+
+\liti 当且仅当 $k$ 是什么数的时候，方程 $x^3 - 6x^2 + 3x + k = 0$ 的三个根成
+等差数列\footnote{本书中涉及等差、等比数列问题，都限于在实数集内讨论。}？
+
+\jie 设原方程在 $C$ 中的三个根成等差数列，并分别记作
+$a - d,\, a,\, a + d \; (d \geqslant 0)$，那么
+$$\begin{cases}
+    (a - d) + a + (a + d) = 6, \\
+    a (a - d) + a (a + d) + (a + d) (a - d) = 3, \\
+    a (a - d) (a + d) = -k \text{。}
+\end{cases}$$
+整理后，得
+\begin{numcases}{}
+    3a = 6 \text{，} \tag{1} \\
+    3a^2 - d^2 = 3 \text{，} \tag{2} \\
+    a^3 - ad^2 = -k \text{。} \tag{3}
+\end{numcases}
+
+由 (1) 式，得 $a = 2$；代入 (2) 式，得 $d = 3$；再代入 (3) 式，便得
+$$ k = 10 \text{。} $$
+
+这就是说，要使原方程的三个根成等差数列，$k$ 必须等于 $10$。
+反过来，容易验证，当方程中的 $k = 10$ 时，$-1 \; (= a - d)$，
+$2 \; (= a)$， $5 \; (= a + d)$ 三个数确实是原方程的根，且成等差数列。
+所以当且仅当 $k = 10$ 时，原方程的三个根成等差数列。
+
+\lianxi
+
+利用一元 $n$ 次方程的根与系数的关系解下列各题：
+
+\begin{xiaotis}
+
+\xiaoti{已知方程 $6x^4 + 7x^3 - 36x^2 - 7x + 6 = 0$ 的根中有三个是
+    $-\dfrac{1}{2}$，$\dfrac{1}{3}$，$2$，求这个方程在复数集 $C$ 中的解集。}
+
+
+\xiaoti{已知方程 $2x^3 + x^2 -8x - 4 = 0$ 的根都是实数，且有两个互为相反数，求这个方程的解集。}
+
+\xiaoti{已知方程 $x^3 - 9\sqrt{2}x^2 + 46x - 30\sqrt{2} = 0$ 的三个根成等差数列，求这个方程的解集。}
+
+\end{xiaotis}
+
