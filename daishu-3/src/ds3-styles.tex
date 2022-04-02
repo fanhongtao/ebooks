@@ -158,39 +158,39 @@
 \newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
 \setlength{\lenParent}{0em}
 
-\newenvironment{xiaotis}{ % “小题” 环境
-  \NewDocumentCommand \xiaoti {s m} { % 小题的标题
-    \IfBooleanTF {##1}
-      {
-        \setlength{\lenLabel}{\widthof{\labelxiaoti}}
-        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\hspace{\lenLabel}##2}
-      }
-      {
-        \stepcounter{cntxiaoti}
-        \setlength{\lenLabel}{\widthof{\labelxiaoti}}
-        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoti ##2}
-      }
-  }
-  \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }  % 1. 2. 3. ……
+\newenvironment{xiaotis}{% “小题” 环境
+  \NewDocumentCommand \xiaoti {s m} {% 小题的标题
+    \IfBooleanTF {##1}%
+      {%
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\hspace{\lenLabel}##2}%
+      }%
+      {%
+        \stepcounter{cntxiaoti}%
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoti ##2}%
+      }%
+  }%
+  \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }% 1. 2. 3. ……
 }{%
 }
 
 % 为命令 `\xiaoxiaoti' 增加一个可选参数，是为了实现：当“小题”没有文字时，第一个“小小题” 与“小题”同行。
-% 对应 “习题 十四” 中的第 10 小题。
-% 在此之前，是通过将 “小小题” 上移一行来实现同行显示。如： “习题 七” 中的第 10 小题。
+% 对应 《代数二》“习题 十四” 中的第 10 小题。
+% 在此之前，是通过将 “小小题” 上移一行来实现同行显示。如：《代数二》“习题 七” 中的第 10 小题。
 % 但当“小题”本身处于页的最后一行时，上移不能生效，会导致“小题”显示在上一页的页末，而“小小题”显示在下一页的页首。
-\newenvironment{xiaoxiaotis}{ % “小小题” 环境
-  \setlength{\lenParent}{\lenParent + \lenLabel}
-  \NewDocumentCommand{\xiaoxiaoti}{o m} { % 小小题的标题
-    \stepcounter{cntxiaoxiaoti}
-    \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}
-    \IfNoValueTF{##1}
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}\labelxiaoxiaoti##2}}
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{##1}\labelxiaoxiaoti##2}}
-  }
-  \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）} % （1） （2） （3） ……
+\newenvironment{xiaoxiaotis}{% “小小题” 环境
+  \setlength{\lenParent}{\lenParent + \lenLabel}%
+  \NewDocumentCommand{\xiaoxiaoti}{o m} {% 小小题的标题
+    \stepcounter{cntxiaoxiaoti}%
+    \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}%
+    \IfNoValueTF{##1}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}~\labelxiaoxiaoti ##2}}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{~\labelxiaoxiaoti ##2}}%
+  }%
+  \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
   % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}
-  \newcommand{\xxtsep}{-4.9em}%
+  \newcommand{\xxtsep}{0em}%
 }{%
 }
 
