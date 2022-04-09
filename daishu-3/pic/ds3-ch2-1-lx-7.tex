@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \coordinate (A) at (0, 1);
+    \coordinate (B) at (4, 0);
+    \coordinate (C) at (6, 1.5);
+
+    \draw (A) .. controls (2, 0.5) and (1, 0.5) .. (B);
+    \draw (A) .. controls (1.5, 0) and (3, 0) .. (B);
+
+    \draw (A) .. controls (2, 2) and (5, 2) .. (C);
+    \draw (A) .. controls (3, 0.5) and (3.5, 1.5) .. (C);
+
+    \draw (B) .. controls (5, 1) and (5, 1) .. (C);
+    \draw (B) .. controls (5, 0.5) and (6, 1) .. (C);
+    \draw (B) .. controls (5, 0) and (6, 0.5) .. (C);
+
+    \draw [very thick, fill=white] (A) circle (0.1) node[below left] {甲地};
+    \draw [very thick, fill=white] (B) circle (0.1) node[below] {乙地};
+    \draw [very thick, fill=white] (C) circle (0.1) node[below right] {丙地};
+\end{tikzpicture}
