@@ -33,6 +33,7 @@
 
 * 本项目依赖于 [TexLive](http://tug.org/texlive/) 2020，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
 * 需要先将各书本目录的 `pic-pdf` 子目录下的 `tex` 文件编译成 `pdf` 文件，才能编译书本。
+* 由俄罗斯的**特别军事行动**所引发的一系列后果，推测 GitHub 在某天不能访问会是大概率事件。所以启用 [备用库](https://gitee.com/fhtao/ebooks)
 
 ---
 
