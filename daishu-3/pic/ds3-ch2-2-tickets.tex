@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth]
+    \tikzset{
+        pics/tickets/.style args={#1/#2/#3}{
+        code = {
+            \node at (0, 0.35) {#1};
+            \node at (2, 0.7) {#2};
+            \node at (2, 0) {#3};
+            \draw (1.5, 0.7) -- (0.5, 0.35) -- (1.5, 0);
+
+            \node at (5, 0) {#1};
+            \node at (7, 0) {#3};
+            \draw (5.5, 0) -- (6.5, 0);
+
+            \node at (5, 0.7) {#1};
+            \node at (7, 0.7) {#2};
+            \draw (5.5, 0.7) -- (6.5, 0.7);
+        }}}
+
+    \draw (0, 0) pic[transform shape] {tickets=广州/北京/上海};
+    \draw (0, 1.5) pic[transform shape] {tickets=上海/北京/广州};
+    \draw (0, 3) pic[transform shape] {tickets=北京/上海/广州};
+    \node at (0, 4.3) {起点站};
+    \node at (2, 4.3) {终点站};
+    \node at (6, 4.3) {飞机票};
+\end{tikzpicture}

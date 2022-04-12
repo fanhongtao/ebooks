@@ -1,0 +1,52 @@
+\begin{tikzpicture}[>=Stealth,
+    every text node part/.style={font=\tiny},
+    transform shape,
+    scale=1.6]
+    \tikzset{
+        pics/boxes/.style n args={2}{
+            code = {
+                \draw (0, 0) rectangle (0.9, 0.3);
+                \draw (0.3, 0) -- (0.3, 0.3);
+                \draw (0.6, 0) -- (0.6, 0.3);
+                \def\first{\the\numexpr(#1)/100\relax};
+                \draw (0.15, 0.15) node{\first};
+                \ifnum #2>1
+                    \draw (0.45, 0.15) node{\the\numexpr(#1)/10 - \first*10\relax};
+                    \ifnum #2>2
+                        \draw (0.75, 0.15) node{\the\numexpr(#1) - \numexpr(#1)/10*10\relax};
+                    \fi
+                \fi
+            }
+        }
+    }
+    \tikzset{
+        pics/numbers/.style n args={6}{
+            code = {
+                \draw (0, 0) pic {boxes={#1}{1}};
+
+                \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (1.2, 1.2) -- (1.2, -0.9);
+                \draw (1.3,  1) pic {boxes={#1}{2}};
+                \draw (1.3,  0) pic {boxes={#3}{2}};
+                \draw (1.3, -1) pic {boxes={#5}{2}};
+
+                \draw[decorate,decoration={brace,mirror,amplitude=0.1cm}] (2.4, 1.5) -- (2.4, 0.8);
+                \draw (2.5, 1.25) pic {boxes={#1}{3}};
+                \draw (2.5, 0.75) pic {boxes={#2}{3}};
+
+                \draw[decorate,decoration={brace,mirror,amplitude=0.1cm}] (2.4, 0.5) -- (2.4, -0.2);
+                \draw (2.5, 0.25) pic {boxes={#3}{3}};
+                \draw (2.5, -0.25) pic {boxes={#4}{3}};
+
+                \draw[decorate,decoration={brace,mirror,amplitude=0.1cm}] (2.4, -0.5) -- (2.4, -1.2);
+                \draw (2.5, -0.75) pic {boxes={#5}{3}};
+                \draw (2.5, -1.25) pic {boxes={#6}{3}};
+            }
+        }
+    }
+
+    \draw (0, 0) pic {numbers={123}{124}{132}{134}{142}{143}};
+    \draw (4, 0) pic {numbers={213}{214}{231}{234}{241}{243}};
+
+    \draw (0, -3) pic {numbers={312}{314}{321}{324}{341}{342}};
+    \draw (4, -3) pic {numbers={412}{413}{421}{423}{431}{432}};
+\end{tikzpicture}

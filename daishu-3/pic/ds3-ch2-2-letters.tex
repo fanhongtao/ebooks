@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth]
+    \ExplSyntaxOn
+    \tikzset{
+       pics/letters/.style~n~args={3}{
+            code = {
+                \node at (0, 0) {$(#1)$};
+
+                \draw (0, 0.3) -- (-0.8, 1.2) node[above] {$\clist_item:nn{#2}{1}$};
+                \draw (0, 0.3) -- (0, 1.2) node[above] {$\clist_item:nn{#2}{2}$};
+                \draw (0, 0.3) -- (0.8, 1.2) node[above] {$\clist_item:nn{#2}{3}$};
+
+                \draw (-0.8, 1.8) -- (-1.0, 2.7) node[above] {$\clist_item:nn{#3}{1}$};
+                \draw (-0.8, 1.8) -- (-0.6, 2.7) node[above] {$\clist_item:nn{#3}{2}$};
+
+                \draw (0, 1.8) -- (-0.2, 2.7) node[above] {$\clist_item:nn{#3}{3}$};
+                \draw (0, 1.8) -- (0.2, 2.7) node[above] {$\clist_item:nn{#3}{4}$};
+
+                \draw (0.8, 1.8) -- (0.6, 2.7) node[above] {$\clist_item:nn{#3}{5}$};
+                \draw (0.8, 1.8) -- (1.0, 2.7) node[above] {$\clist_item:nn{#3}{6}$};
+            }}}
+    \ExplSyntaxOff
+
+    \draw (0,0) pic {letters={a}{b,c,d}{c,d,b,d,b,c}};
+    \draw (3,0) pic {letters={b}{a,c,d}{c,d,a,d,a,c}};
+    \draw (6,0) pic {letters={c}{a,b,d}{b,d,a,d,a,b}};
+    \draw (9,0) pic {letters={d}{a,b,c}{b,c,a,c,a,b}};
+\end{tikzpicture}
