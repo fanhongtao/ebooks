@@ -1,0 +1,253 @@
+\subsection{排列数公式}\label{subsec:2-3}
+
+从 $n$ 个不同元素中取出 $m \; (m \leqslant n)$ 个元素的所有排列的个数，
+叫做从 $n$ 个不同元素中取出 $m$ 个元素的\textbf{排列数}，用符号 $P_n^m$ 表示。
+\footnote{$P$ 是英文 Permutation （排列）的第一个字母。}
+
+例如，从 $8$ 个不同元素中取出 $5$ 个元素的排列数表示为 $P_8^5$，
+从 $7$ 个不同元素中取出 $6$ 个元素的排列数表示为 $P_7^6$。
+
+现在我们研究计算排列数的公式。
+
+求排列数 $P_n^2$ 可以这样考虑：假定有排好顺序的 $2$ 个空位（图 \ref{fig:2-3}），
+从 $n$ 个不同元素 $a_1,\, a_2,\, \cdots,\, a_n$ 中任意取 $2$ 个去填空，
+一个空位填一个元素，每一种填法就得到一个排列；反过来，任一个排列总可以由这样的
+一种填法得到。因此，所有不同填法的种数就是排列数 $P_n^2$。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-2-3}
+    \caption{}\label{fig:2-3}
+\end{figure}
+
+现在我们计算有多少种不同的填法，完成这件事可分为两个步骤：
+
+第一步，先排第一个位置的元素，可以从这 $n$ 个元素中任选一个填空，有 $n$ 种方法；
+
+第二步，确定排在第二个位置的元素，可以从剩下的 $n - 1$ 个元素中任选一个填空，有 $n - 1$ 种方法。
+
+于是，根据乘法原理，得到排列数为
+$$ P_n^2 = n (n - 1) \text{。} $$
+
+求排列数 $P_n^3$ 可以按依次填 $3$ 个空位来考虑，得到
+$$ P_n^3 = n (n - 1) (n - 2) \text{。} $$
+
+同样，求排列数 $P_n^m$ 可以这样考虑：假定有排好顺序的 $m$ 个空位（图\ref{fig:2-4}），
+从 $n$ 个不同元素 $a_1,\, a_2,\, \cdots,\, a_n$ 中任意取 $m$ 个去填空，一个空位填一个元素，
+每一种填法就得到一个排列；反过来，任一个排列总可以由一种填法得到。
+因此，所有不同填法的种数就是排列数 $P_n^m$。
+
+现在我们计算共有多少种不同的填法（图\ref{fig:2-4}）：
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-2-4}
+    \caption{}\label{fig:2-4}
+\end{figure}
+
+第一步，第 $1$ 位可以从 $n$ 个元素中，任选一个填上，共有 $n$ 种填法；
+
+第二步，第 $2$ 位只能从余下的 $n-1$ 个元素中，任选一个填上， 共有 $n-1$ 种填法；
+
+第三步，第 $3$ 位只能从余下的 $n-2$ 个元素中，任选一个填上， 共有 $n-2$ 种填法；
+
+依此类推，当前面的 $m-1$ 个空位都填上后，第 $m$ 位只能从余下的 $n - (m-1)$ 个元素中，
+任选一个填上，共有 $n - (m+1)$ 种填法。
+
+根据乘法原理，全部填满 $m$ 个空位共有
+$$ n (n-1) (n-2) \cdots (n-m+1) $$
+种填法。
+
+所以得到公式
+\begin{center}
+    \framebox{\begin{minipage}{18em}
+        \begin{gather*}
+            P_n^m = n (n-1) (n-2) \cdots (n-m+1) \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+这里 $n,\, m \in N$，并且 $m \leqslant n$。这个公式叫做\textbf{排列数公式}。
+其中，公式右边中第一个因数是 $n$，后面的每个因数都比它前面一个因数少 $1$，
+最后一个因数为 $n-m+1$，共有 $m$ 个因数相乘。
+
+例如，$P_8^3 = 8 \times 7 \times 6 = 336$。
+
+排列数公式中，当 $m=n$ 时，有
+$$ P_n^n = n \cdot (n-1) \cdot (n-2) \cdot \; \cdots \; \cdot 3 \cdot 2 \cdot 1 \text{。} $$
+这个公式指出，$n$ 个不同元素全部取出的排列数，等于自然数 $1$ 到 $n$ 的连乘积。
+$n$ 个不同元素全部取出的一个排列，叫做 $n$ 个不同元素的一个\textbf{全排列}。
+自然数 $1$ 到 $n$ 的连乘积，叫做\textbf{$n$ 的阶乘}，用 $n!$ 表示。
+所以 $n$ 个不同元素的全排列数公式可以写成
+\begin{center}
+    \framebox{\begin{minipage}{8em}
+        \begin{gather*}
+            P_n^n = n! \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+排列数公式可作如下变形：
+$$\begin{aligned}
+    P_n^m &= n (n-1) (n-2) \cdots (n-m+1) \\
+        &= \dfrac{n \cdot (n-1) \cdot (n-2) \cdot \; \cdots \; \cdot (n-m+1) \cdot (n-m) \cdot \; \cdots \; \cdot 2 \cdot 1}{(n-m) \cdot \; \cdots \; \cdot 2 \cdot 1} \\
+        &= \dfrac{n!}{(n-m)!} \text{。}
+\end{aligned}$$
+因此，排列数公式还可以写成
+\begin{center}
+    \framebox{\begin{minipage}{8em}
+        \begin{gather*}
+            P_n^m = \dfrac{n!}{(n-m)!} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+\textbf{注意} \quad 为了使这个公式在 $m = n$ 时也能成立，我们规定
+$$ 0! = 1 \text{。} $$
+
+\liti 计算 $P_{16}^3$ 及 $P_6^6$ 。
+
+\jie \quad $\begin{aligned}[t]
+    P_{16}^3 &= 16 \times 15 \times 14 = 3360; \\
+    P_6^6 &= 6! = 720 \text{。}
+\end{aligned}$
+
+
+\liti 求证 $P_n^m + m P_n^{m-1} = P_{n+1}^m$ 。
+
+\zhengming $\begin{aligned}[t]
+    P_n^m + m P_n^{m-1} &= \dfrac{n!}{(n-m)!} + m \cdot \dfrac{n!}{[n - (m-1)]!} \\
+        &= \dfrac{n! (n-m+1)}{(n-m+1)!} + \dfrac{m \cdot n!}{(n-m+1)!} \\
+        &= \dfrac{n! ((n-m+1+m))}{(n-m+1)!} \\
+        &= \dfrac{(n+1)!}{[(n+1)-m]!} = P_{n+1}^m \text{。}
+\end{aligned}$
+
+$\therefore \quad P_n^m + m P_n^{m-1} = P_{n+1}^m$。
+
+
+\liti 某段铁路上有 $12$ 个车站，共需要准备多少种普通客票？
+
+\jie 因为每一张车票对应着 $2$ 个车站的一个排列，因此需要准备的车票种数，
+就是从 $12$ 个车站中任取 $2$ 个的排列数：
+$$ P_{12}^2 = 12 \times 11 = 132 \; \text{（种）。} $$
+
+答： 一共需要准备 $132$ 种普通客票。
+
+
+\liti 某信号兵用红、黄、蓝三面旗从上到下挂在竖直的旗杆上表示信号，每次可以任挂一面、二面或三面，
+并且不同的顺序表示不同的信号，一共可以表示多少种不同的信号？
+
+\jie 如果把 $3$ 面旗看成 $3$ 个元素， 则从 $3$ 个元素里每次取出 $1$ 个元素的一个排列，
+对应一种信号。于是，只 $1$ 面旗表示的信号是 $P_3^1$ 种。
+
+同样，只用二面旗表示的信号共有 $P_3^2$ 种，只用 $3$ 面旗表示的信号共有 $P_3^3$ 种。
+
+根据加法原理，所求的信号种数是
+$$ P_3^1 + P_3^2 + P_3^3 = 3 + 3 \times 2 + 3 \times 2 \times 1 = 15 \; \text{（种）。} $$
+
+答：一共可以表示 $15$ 种不同的信号。
+
+
+\liti 用 $0$ 到 $9$ 这十个数字，可以组成多少个没有重复数字的三位数？
+
+分析一：因为要用 $0$ 到 $9$ 这十个数字组成三位数， 每一个三位数可以看成是从这十个数字中
+任取 $3$ 个的一个排列（$0$ 排在首位的除外），由于百位上的数字不能是 $0$，我们可以分成
+两个步骤考虑：先排百位上的数字，再排十位和个位上的数字。
+
+\textbf{解法一：} 百位上的数字只能从除 $0$ 以外的 $1$ 到 $9$ 这九个数字中任选一个，有 $P_9^1$ 种；
+十位和个位上的数字，可以从余下的九个数字中任选两个，有 $P_9^2$ 种 （如图\ref{fig:2-5}）。
+根据乘法原理，所求的三位数的个数是
+$$ P_9^1 \cdot P_9^2 = 9 \times 9 \times 8 = 648 \text{。} $$
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-2-5}
+    \caption{}\label{fig:2-5}
+\end{figure}
+
+分析二：从 $0$ 到 $9$ 这十个数字中任取三个数字的排列数，减去其中以 $0$ 为排头的排列数，
+就是用这十个数字组成的没有重复数字的三位数的个数。
+
+\textbf{解法二：} 从 $0$ 到 $9$ 这十个数字中任取三个数字的排列数为 $P_{10}^3$，
+其中以 $0$ 为排头的排列数为 $P_9^2$，因此所求的三位数的个数是
+$$ P_{10}^3 - P_9^2 = 10 \times 9 \times 8 - 9 \times 8 = 648 \text{。} $$
+
+\textbf{解法三：} 如图 \ref{fig:2-6}，符合条件的三位数可以分为三类：
+
+每一位数字都不是 0 的三位数有 $P_9^3$ 个；
+
+个位数字是 $0$ 的三位数有 $P_9^2$ 个；
+
+十位数字是 $0$ 的三位数有 $P_9^2$ 个。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-2-6}
+    \caption{}\label{fig:2-6}
+\end{figure}
+
+根据加法原理，符合条件的三位数的个数是
+$$ P_9^3 + P_9^2 + P_9^2 = 648 \text{。} $$
+
+答：可以组成 $648$ 个没有重复数字的三位数。
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{写出：}
+\begin{xiaoxiaotis}
+
+    \xiaoxiaoti{从四个元素 $a,\, b,\, c,\, d$ 中任取两个元素的所有排列；}
+
+    \xiaoxiaoti{从五个元素 $a,\, b,\, c,\, d,\, e$ 中任取两个元素的所有排列。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    %\renewcommand\arraystretch{1.2}
+    \begin{tabular}[t]{p{5em}@{}p{8em}@{}p{7em}@{}p{15em}}
+        \xiaoxiaoti{$P_5^2$；} & \xiaoxiaoti{$P_{15}^4$；} & \xiaoxiaoti{$P_{100}^3$；} & \xiaoxiaoti{$P_7^7$；} \\[1em]
+        \xiaoxiaoti{$P_6^3$；} & \xiaoxiaoti{$P_8^4 - 2 P_8^2$；} & \xiaoxiaoti{$\dfrac{P_{12}^8}{P_{12}^7}$；} & \xiaoxiaoti{$P_4^1 + P_4^2 + P_4^3 + P_4^4$。}
+    \end{tabular}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{填写下面的阶乘表，并计算出各阶乘数：\\
+    \begin{tabular}{|w{c}{4em}|*{7}{w{c}{2em}|}}
+        \hline
+        $n$  & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ \\ \hline
+        $n!$ &     &     &     &     &     &     & \\ \hline
+    \end{tabular}
+}
+
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[16em]{$n! = \dfrac{(n + 1)!}{n + 1}$；}
+        {$P_8^8 - 8P_7^7 + 7P_6^6 = P_7^7$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求 $n$： $\dfrac{P_n^7 - P_n^5}{P_n^5} = 89$。}
+
+
+\xiaoti{$6$ 名同学排成一排照相，有多少种排法？}
+
+\xiaoti{从 $4$ 种蔬菜品种中选出 $3$ 种，分别种植在不同土质的 $3$ 块
+    土地上进行试验，有多少种种植方法？}
+
+\xiaoti{用 $1,\, 2,\, 3,\, 4,\, 5$ 这五个数字，可以组成多少个没
+    有重复数字的四位数？其中有多少个四位数是 $5$ 的倍数？}
+
+\end{xiaotis}
+
+
+
+
