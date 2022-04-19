@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, transform shape]
+    \tikzset{
+        pics/zuhe pailie/.style args={#1/#2/#3}{
+            code = {
+                \draw (-0.9, -0.4) rectangle (0.9, 0.4);
+                \node at (0, 0) {$#1 \quad #2 \quad #3$};
+
+                \draw[->] (1, 0) -- (2, 0);
+
+                \draw (2.1, -0.6) rectangle (8.9, 0.6);
+                \node at (3,  0.3) {$#1 \quad #2 \quad #3$};
+                \node at (3, -0.3) {$#1 \quad #3 \quad #2$};
+                \node at (5.5,  0.3) {$#2 \quad #1 \quad #3$};
+                \node at (5.5, -0.3) {$#2 \quad #3 \quad #1$};
+                \node at (8,  0.3) {$#3 \quad #1 \quad #2$};
+                \node at (8, -0.3) {$#3 \quad #2 \quad #1$};
+            }
+        }
+    }
+
+    \node at (0, 1) {组 \quad 合};
+    \node at (5.5, 1) {排 \quad 列};
+
+    \draw (0, 0) pic {zuhe pailie=a/b/c};
+    \draw (0, -1.6) pic {zuhe pailie=a/b/d};
+    \draw (0, -3.2) pic {zuhe pailie=a/c/d};
+    \draw (0, -4.8) pic {zuhe pailie=b/c/d};
+\end{tikzpicture}

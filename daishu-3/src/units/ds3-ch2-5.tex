@@ -1,0 +1,82 @@
+\subsection{组合数公式}\label{subsec:2-5}
+
+从 $n$ 个不同元素中取出 $m \; (m \leqslant n)$ 个元素的所有组合的个数，
+叫做从 $n$ 个不同元素中取出 $m$ 个元素的\textbf{组合数}，用符号 $C_n^m$ 表示。
+\footnote{$C$ 是英文 Combination （组合）的第一个字母。}
+
+例如，从 $8$ 个不同元素中取出 $5$ 个元素的组合数表示为 $C_8^5$；
+从 $7$ 个不同元素中取出 $6$ 个元素的组合数表示为 $C_7^6$。
+
+现在我们从研究组合数 $C_n^m$ 与排列数 $P_n^m$ 的关系入手，找出组合数 $C_n^m$ 的计算公式。
+
+例如，从 $4$ 个不同元素 $a,\, b,\, c,\, d$ 中取出 $3$ 个元素的排列与组合的关系如下表所示：
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-5-zuhe-pailie}
+\end{figure}
+
+由表中可以看出，对于每一个组合都有 $6$ 个不同的排列，因此，求从 $4$ 个不同元素中取 $3$ 个
+元素的排列数 $P_4^3$，可以分以下两步完成：
+
+第一步，从 $4$ 个不同元素中取出 $3$ 个元素作组合，共有 $C_4^3 (=4)$ 个；
+
+第二步，对每一个组合中的 $3$ 个不同元素作全排列，各有 $P_3^3 (=6)$ 个。
+
+根据乘法原理，得
+$$ P_4^3 = C_4^3 \cdot P_3^3 \text{，}$$
+
+因此，
+$$ C_4^3 = \dfrac{P_4^3}{P_3^3} \text{，} $$
+
+一般地，求从 $n$ 个不同元素中取出 $m$ 个元素的排列数 $P_n^m$，可分以下两步完成：
+
+第一步，先求出从这 $n$ 个不同的元素中取出 $m$ 个元素的组合数 $C_n^m$；
+
+第二步，求每一个组合中 $m$ 个元素的全排列数 $P_m^m$。
+
+根据乘法原理，得到
+$$ P_n^m = C_n^m \cdot P_m^m \text{，} $$
+因此
+\begin{center}
+    \framebox{\begin{minipage}{22em}
+        \begin{gather*}
+            C_n^m = \dfrac{P_n^m}{P_m^m} = \dfrac{n (n-1) (n-2) \cdots (n-m+1)}{m!} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+这里 $n,\, m \in N$，并且 $m \leqslant n$。这个公式叫做\textbf{组合数公式}。
+
+因为
+$$ P_n^m = \dfrac{n!}{(n-m)!} \text{，} $$
+所以，上面的组合数公式还可以写成
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            C_n^m = \dfrac{n!}{m! (n-m)!} \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+这也是组合数的一个常用公式。
+
+\liti 计算 $C_{10}^4$ 及 $C_7^3$ 。
+
+\jie \; $\begin{aligned}[t]
+    C_{10}^4 &= \dfrac{10 \times 9 \times 8 \times 7}{4 \times 3 \times 2 \times 1} = 210;\\
+    C_7^3 &= \dfrac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 \text{。}
+\end{aligned}$
+
+
+\liti 求证 $C_n^m = \dfrac{m+1}{n-m} \cdot C_n^{m+1}$。
+
+\zhengming \; $\because \; C_n^m = \dfrac{n!}{m! (n-m)!}$，
+
+$\begin{aligned}[t]
+    \dfrac{m+1}{n-m} \cdot C_n^{m+1} &= \dfrac{m+1}{n-m} \cdot \dfrac{n!}{(m+1)! (n-m-1)!} \\
+        &=\dfrac{m+1}{(m+1)!} \cdot \dfrac{n!}{(n-m) (n-m-1)} \\
+        &= \dfrac{n!}{m! (n-m)!} \text{，}
+\end{aligned}$
+
+$\therefore \quad C_n^m = \dfrac{m+1}{n-m} \cdot C_n^{m+1}$。
+
+
