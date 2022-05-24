@@ -1,0 +1,176 @@
+\subsection{二项式定理}\label{subsec:2-7}
+
+我们已经知道，
+\begin{align*}
+    (a + b)^2 &= a^2 + 2ab + b^2 , \\
+    (a + b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \text{。}
+\end{align*}
+
+现在研究 $(a + b)^n$ 的展开式，这里 $n \in N$ 。
+
+首先，研究 $(a + b)^4$ 的展开式的各项，即研究
+$$ (a + b)^4  = (a + b) (a + b) (a + b) (a + b) $$
+的展开式的各项。
+
+等号右边的积的展开式的每一项，是从四个括号中每个里任取一个字母的乘积，
+因而各项都是 $4$ 次式，即展开式应有下面形式的各项：
+$$ a^4,\; a^3b,\; a^2b^2,\; ab^3,\; b^4 \text{。} $$
+
+运用组合的知识，就可以得出展开式各项的系数规律：
+
+在上面四个括号中，都不取 $b$，共有 $1$ 种，即 $C_4^0$种，所以 $a^4$ 的系数是 $C_4^0$；
+
+在四个括号中，恰有 $1$ 个取 $b$，共有 $C_4^1$ 种，所以 $a^3b$ 的系数是 $C_4^1$；
+
+在四个括号中，恰有 $2$ 个取 $b$，共有 $C_4^2$ 种，所以 $a^2b^2$ 的系数是 $C_4^2$；
+
+在四个括号中，恰有 $3$ 个取 $b$，共有 $C_4^3$ 种，所以 $ab^3$ 的系数是 $C_4^3$；
+
+在四个括号中，$4$ 个都取 $b$，共有 $C_4^4$ 种，所以 $b^4$ 的系数是 $C_4^4$。
+
+因此，
+$$ (a + b)^4 = C_4^0 a^4 + C_4^1 a^3b + C_4^2 a^2b^2 + C_4^3 ab^3 + C_4^4 b^4 \text{。} $$
+
+一般地，有以下公式：
+\begin{center}
+    \framebox{\begin{minipage}{32em}
+        \begin{gather*}
+            (a + b)^n = C_n^0 a^n + C_n^1 a^{n-1}b^1 + \cdots + C_n^r a^{n-r}b^r + \cdots + C_n^n b^n,\; (n \in N) \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+下面，我们用数学归纳法来证明这一公式。
+
+\zhengming (1) 当 $n = 1$ 时，等式的左边是
+$$ (a + b)^1 = a + b \text{；} $$
+等式的右边是
+$$ C_1^0 a + C_1^1 b = a + b \text{。} $$
+于是，当 $n = 1$ 时等式成立。
+
+(2) 假设 $n = k$ 时等式成立，即
+$$ (a + b)^k = C_k^0 a^k + C_k^1 a^{k-1}b^1 + \cdots + C_k^r a^{k-r}b^r + \cdots + C_k^k b^k \text{。} $$
+现在证明当 $n = k + 1$ 时等式也成立。
+
+由于
+\begin{align*}
+        & (a + b)^{k+1} \\
+    ={} & (a + b)^k (a + b) \\
+    ={} & (C_k^0 a^k + C_k^1 a^{k-1}b^1 + \cdots + C_k^r a^{k-r}b^r + \cdots + C_k^k b^k) (a + b) \\
+    ={} & C_k^0 a^{k+1} + C_k^1 a^kb^1 + \cdots + C_k^{r+1} a^{k-r}b^{r+1} + \cdots + C_k^k ab^k \\
+        & \hspace{3.3em} + C_k^0 a^kb^1 + \cdots + C_k^r a^{k-r}b^{r+1} + \cdots + C_k^{k-1} ab^k + C_k^k b^{k+1} \\
+    ={} & C_k^0 a^{k+1} + (C_k^1 + C_k^0) a^kb^1 + \cdots + (C_k^{r+1} + C_k^r) a^{k-r}b^{r+1} + \cdots + (C_k^k + C_k^{k-1}) ab^k + C_k^k b^{k+1} \text{，}
+\end{align*}
+利用
+\begin{align*}
+    C_k^0 = C_{k+1}^0,\quad C_k^1 + C_k^0 = C_{k+1}^1,\quad \cdots,\quad C_k^{r+1} + C_k^r = C_{k+1}^{r+1},\quad  \cdots,\\
+    C_k^k + C_k^{k-1} = C_{k+1}^k,\quad  C_k^k = C_{k+1}^{k+1}，
+\end{align*}
+则得到
+$$ (a+b)^{k+1} = C_{k+1}^0 a^{k+1} + C_{k+1}^1 a^kb^1 + \cdots + C_{k+1}^{r+1} a^{k-r}b^{r+1} + \cdots + C_{k+1}^k a^1b^k + C_{k+1}^{k+1}b^{k+1} \text{。} $$
+这就是说，如果 $n=k$ 时等式成立，那么 $n=k+1$ 时等式也成立。
+
+根据 (1) 和 (2) ，可知对于任意自然数 $n$，公式都成立。
+
+这个公式所表示的定理叫做\textbf{二项式定理}，
+右边的多项式叫做 $(a+b)^n$ 的 \textbf{二项展开式}，
+其中的系数 $C_n^r \; (r = 0,\, 1,\, \cdots,\, n)$ 叫做 \textbf{二项式系数}。
+式中的 $C_n^r a^{n-r}b^r$ 叫做二项展开式的\textbf{通项}，用 $T_{r+1}$ 表示，即通项为展开式的第 $r+1$ 项：
+\begin{center}
+    \framebox{\begin{minipage}{12em}
+        \begin{gather*}
+            T_{r+1} = C_n^r a^{n-r}b^r \text{。}
+        \end{gather*}
+    \end{minipage}}
+\end{center}
+
+在二项式定理中，如果设 $a = 1$，$b = x$，则得到公式：
+$$ (1 + x)^n = 1 + C_n^1 x + C_n^2 x^2 + \cdots + C_n^r x^r + \cdots + x^n \text{。} $$
+
+遇到 $n$ 是较小的正整数时，二项式系数也可以直接用下表计算：
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-7-xi-shu}
+\end{figure}
+
+表中每行两端都是 $1$，而且除 $1$ 以外的每一个数都等于它肩上两个数的和。
+
+类似这样的表，早在我国宋朝数学家杨辉 $1261$ 年所著的《详解九章算法》一书里就已出现，
+这本书里记载着下面的表（图 \ref{fig:2-8}），我们称它为\textbf{杨辉三角}\footnotemark。
+\footnotetext{在欧洲，人们认为这个表是法国数学家帕斯卡 （Blaise Pasca1，1623 一 1662 年）首先发现的，他们把这个表叫做帕斯卡三角。}
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/ds3-ch2-7-yang-hui-san-jiao}
+    \caption{}\label{fig:2-8}
+\end{figure}
+
+
+\liti 展开 $\left( 1 + \dfrac{1}{x} \right)^4$。
+
+\jie \; $\begin{aligned}[t]
+    \left( 1 + \dfrac{1}{x} \right) &= 1 + 4 \left( \dfrac{1}{x} \right) + 6 \left( \dfrac{1}{x} \right)^2 + 4 \left( \dfrac{1}{x} \right)^3 + \left( \dfrac{1}{x} \right)^4 \\
+        &= 1 + \dfrac{4}{x} + \dfrac{6}{x^2} + \dfrac{4}{x^3} + \dfrac{1}{x^4} \text{。}
+\end{aligned}$
+
+
+
+\liti 展开 $\left( 2\sqrt{x} - \dfrac{1}{\sqrt{x}} \right)^6$ 。
+
+\jie \; $\begin{aligned}[t]
+    \left( 2\sqrt{x} - \dfrac{1}{\sqrt{x}} \right)^6 &= \left( \dfrac{2x - 1}{\sqrt{x}} \right)^6 = \dfrac{1}{x^3}(2x - 1)^6 \\
+        &= \dfrac{1}{x^3} [(2x)^6 - C_6^1 (2x)^5 + C_6^2 (2x)^4 - C_6^3 (2x)^3 + C_6^4 (2x)^2 - C_6^5 (2x) + C_6^6] \\
+        &= \dfrac{1}{x^3} (64x^6 - 6 \cdot 32 x^5 + 15 \cdot 16 x^4 - 20 \cdot 8 x^3 + 15 \cdot 4x^2 - 6 \cdot 2x + 1) \\
+        &= 64x^3 - 192 x^2 + 240x - 160 + \dfrac{60}{x} - \dfrac{12}{x^2} + \dfrac{1}{x^3} \text{。}
+\end{aligned}$
+
+
+
+\liti 求 $\left( x - \dfrac{1}{x} \right)^9$ 的展开式中 $x^3$ 的系数。
+
+\jie 展开式的通项是
+$$ C_9^r x^{9-r} \left( -\dfrac{1}{x} \right)^r = (-1)^r C_9^r x^{9-2r} \text{。} $$
+根据题意，得
+\begin{align*}
+    9 - 2r &= 3, \\
+         r &= 3 \text{。}
+\end{align*}
+因此，$x^3$ 的系数是
+$$ (-1)^3 C_9^3 = -84 \text{。} $$
+
+
+\textbf{注意} \quad 展开式中第 $r+1$ 项的二项式系数 $C_n^r$ 与第 $r+1$ 项的系数不同，
+例如在 $(1 + 2x)^7$ 的展开式中，第四项为 $T_4 = C_7^3 \cdot 1^{7-3} \cdot (2x)^3$，
+其二项式系数是 $C_7^3 = 35$，而第四项（即含 $x^3$ 的项）的系数是 $C_7^3 \cdot 2^3 = 280$。
+
+
+
+\liti 计算 $(0.997)^3$ 的近似值（精确到 $0.001$）。
+
+\jie \; $\begin{aligned}[t]
+    (0.997)^3 &= (1 - 0.003)^3 \\
+        &= 1 - 3 \times 0.003 + 3 \times (0.003)^2 - \cdots \text{。}
+\end{aligned}$ \\
+根据题中精确度的要求，从第三项起以后的各项都可以删去，所以
+$$ (0.997)^3 \approx 1 - 3 \times 0.003 = 0.991 \text{。} $$
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{写出 $(p + q)^7$ 的展开式。}
+
+\xiaoti{求 $(2a + 3b)^6$ 的展开式的第 $3$ 项。}
+
+\xiaoti{求 $(3b + 2a)^6$ 的展开式的第 $3$ 项。}
+
+\xiaoti{写出 $\left( \sqrt[3]{x} - \dfrac{1}{2 \sqrt[3]{x}} \right)^n$ 的展开式的第 $r+1$ 项。}
+
+\xiaoti{求 $(x^3 + 2x)^7$ 的展开式的第 $4$ 项的二项式系数，并求第 $4$ 项的系数。}
+
+\xiaoti{计算 $(1.002)^6$ 的近似值（精确到 $0.001$）。}
+
+\end{xiaotis}
+

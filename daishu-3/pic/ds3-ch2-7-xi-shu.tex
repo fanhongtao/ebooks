@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \ExplSyntaxOn
+    \tikzset{
+       pics/mydots/.style~n~args={1}{
+            code = {
+                \draw (0, 0) node {\int_step_inline:nn {#1} {$\cdot$~} } ;
+            }}}
+    \ExplSyntaxOff
+    \draw (0, 6) node { $(a + b)^1$} (3.5, 6) pic {mydots={16}} (7, 6) node {$1 \quad 1$ };
+    \draw (0, 5) node { $(a + b)^2$} (3.3, 5) pic {mydots={15}} (7, 5) node {$1 \quad 2 \quad 1$ };
+    \draw (0, 4) node { $(a + b)^3$} (3.1, 4) pic {mydots={14}} (7, 4) node {$1 \quad 3 \quad 3 \quad 1$ };
+    \draw (0, 3) node { $(a + b)^4$} (2.9, 3) pic {mydots={13}} (7, 3) node {$1 \quad 4 \quad 6 \quad 4 \quad 1$ };
+    \draw (0, 2) node { $(a + b)^5$} (2.7, 2) pic {mydots={12}} (7, 2) node {$1 \quad 5 \quad 10 \quad 10 \quad 5 \quad 1$ };
+    \draw (0, 1) node { $(a + b)^6$} (2.5, 1) pic {mydots={11}} (7, 1) node {$1 \quad 6 \quad 15 \quad 20 \quad 15 \quad 6 \quad 1$ };
+   \draw (7, 0) pic {mydots={20}};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \NewDocumentCommand{\num}{m o} {
+        \IfNoValueTF{#2}
+            {\hbox {#1}}
+            {\hbox{\lower-1.0ex\hbox{\scalebox{1}[0.4]{#1}}\lower.1ex\hbox{\kern-1em \scalebox{1}[0.5]{#2}}}}
+    }
+
+    \ExplSyntaxOn
+    \tikzset{
+       pics/line/.style~n~args={1}{
+            code = {
+                \int_step_inline:nnn {1}{\clist_count:n{#1}} {
+                     \draw [fill=white] (##1 -1, 0) node {$\clist_item:nn{#1}{##1}$} circle (0.28);
+                }
+            }}}
+    \ExplSyntaxOff
+
+    \ExplSyntaxOn
+    \int_step_inline:nnn {0}{5} {
+        \draw (0 + 0.6*#1, 0 - #1) -- (-3.9 + 1.25 * #1, -6);
+        \draw (0 - 0.65*#1, 0 - #1) -- (3.7 - 1.25 * #1, -6);
+    }
+    \ExplSyntaxOff
+
+    \draw (0, 0) pic {line={\num{一}}};
+    \draw (-0.65, -1) pic {line={\num{一},\num{一}}};
+    \draw (-1.30, -2) pic {line={\num{一},\num{二},\num{一}}};
+    \draw (-1.95, -3) pic {line={\num{一},\num{三},\num{三},\num{一}}};
+    \draw (-2.60, -4) pic {line={\num{一},\num{四},\num{六},\num{四},\num{一}}};
+    \draw (-3.25, -5) pic {line={\num{一},\num{五},\num{十},\num{十},\num{五},\num{一}}};
+    \draw (-3.90, -6) pic {line={\num{一},\num{六},\num{十}[五],\num{二}[十],\num{十}[五],\num{六},\num{一}}};
+\end{tikzpicture}
