@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8, transform shape]
+    \tikzset{
+        pics/coin/.style args={#1/#2}{
+        code = {
+            \draw (0, 0) node {\Large #1} circle (0.4);
+            \draw (0, -0.7) node {#2};
+        }}}
+
+    \draw (0, 0) pic {coin={正/1}};
+    \draw (1, 0) pic {coin={正/2}};
+
+    \draw (3, 0) pic {coin={正/1}};
+    \draw (4, 0) pic {coin={反/2}};
+
+    \draw (0, -2) pic {coin={反/1}};
+    \draw (1, -2) pic {coin={正/2}};
+
+    \draw (3, -2) pic {coin={反/1}};
+    \draw (4, -2) pic {coin={反/2}};
+\end{tikzpicture}
