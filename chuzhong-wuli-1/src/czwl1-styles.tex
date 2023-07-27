@@ -12,6 +12,7 @@
 \captionsetup[figure]{labelsep=none}
 
 \usepackage{cases}
+\usepackage{CJKfntef}
 \usepackage{diagbox}
 \usepackage[shortlabels]{enumitem}
 \usepackage{etoolbox}
@@ -72,7 +73,6 @@
 \makeatother
 
 \newcommand{\gongshishangyi}{\setlength\abovedisplayskip{-1.5em}} % 当 “解:” 后直接写公式时，为了“解”与公式水平对齐所需要的偏移。
-\newcommand{\lianxi}{\hspace{1em}\par \textbf{练\quad 习}}
 \newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
 
 \counterwithout*{subsection}{section}
@@ -138,13 +138,13 @@
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
 
-\newcounter{cntxiti}                       % “习题”的计数器
-\newcommand{\xiti}{%
-  \stepcounter{cntxiti}
+\newcounter{cntlianxi}[chapter]               % “练习”的计数器
+\newcommand{\lianxi}{%
+  \stepcounter{cntlianxi}
   \vspace{1em}
   {\centering \nonumsubsection{\labelxiti}}
 }
-\newcommand{\labelxiti}{习题 \chinese{cntxiti}}
+\newcommand{\labelxiti}{练 \; 习 \; \chinese{cntlianxi}}
 
 \newcommand{\xiaojie}{%
   \nonumsection[\labelxiaojie]{\huge \labelxiaojie}
