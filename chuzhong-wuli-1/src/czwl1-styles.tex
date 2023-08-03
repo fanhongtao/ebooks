@@ -359,6 +359,12 @@
 %---------------------------
 \newcommand{\shiyan}[1]{\textbf{【#1】}}
 
+% 实现单元格内文字换行的命令
+% 参数1：对齐方式
+% 参数2: 单元格的内容。使用 \\ 进行换行。
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+
 % 物理单位
 \newcommand{\lfm}{\mathord{\text{米}^3}}%立方米
 \newcommand{\lflm}{\mathord{\text{厘米}^3}}%立方厘米
