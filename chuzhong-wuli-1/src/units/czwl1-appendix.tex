@@ -1,0 +1,65 @@
+\chapter{}\label{app:1}
+
+\begin{table}[htbp]
+\centering
+\caption*{本书中用到的物理量及其单位}
+\begin{tblr}{
+    hlines, vlines, stretch=1.3,
+    colspec={ccccl},
+    cells={valign=m},
+}
+    \SetCell[c=2]{c} 物理量 & & \SetCell[c=2]{c} 单位 & & \SetCell[r=2]{c}备注 \\
+    名称 & 符号 & 中文符号 & 国际符号 & \\
+    {长度 \\（路径）} & {$l$ \\ （$s$）} & 米 & $m$ & {$1\qianmi = 1000\mi$ \\ $1\mi = 100\limi = 1000\haomi$} \\
+    面积 & $S$ & $\pfm$ & $m^2$ & $1\pfm = 10^4\pflm = 10^6\pfhm$ \\
+    体积 & $V$ & $\lfm$ & $m^3$ & $1\lfm = 10^6\lflm = 10^9\lfhm$ \\
+    质量 & $m$ & 千克 & $kg$ & {$1\text{吨} = 1000\qianke$ \\ $1\qianke = 1000\ke$ \\ $1\ke = 1000\haoke$} \\
+    时间 & $t$ & 秒 & $s$ & $1\text{小时} = 3600\miao$ \\
+    {力 \\ (重力)} & {$F$ \\ $(G)$ } & 牛 & $N$ & \\
+    速度 & $v$ & 米/秒 & $m/s$  & $v = \dfrac{s}{t}$ \\
+    密度 & $\rho$ & $\qkmlfm$ & $kg/m^3$ & $\rho = \dfrac{m}{V}$ \\
+    压强 & $p$ & 帕 & $Pa$ & {$p = \dfrac{F}{S}$ \\ $1\text{帕} = 1\text{牛/米}^2$} \\
+    功 & $W$ & 焦 & $J$ & {$W = Fs$ \\ $1\text{焦} = 1\text{牛·米}$} \\
+    功率 & $P$ & 瓦 & $W$ & {$P = \dfrac{W}{t}$ \\ $1\text{瓦} = 1\text{焦/秒}$} \\
+\end{tblr}
+\end{table}
+
+
+
+% 不使用 tabularray，按照以前的老方式来写，大概是这样。
+% 依赖的库：
+% \usepackage{makecell}
+% \usepackage{multirow}
+% \begin{table}[htbp]
+% \centering
+% \caption*{本书中用到的物理量及其单位}
+% \begin{tabular}{|c|c|c|c|l|}
+%     \hline
+%     \multicolumn{2}{|c|}{物理量} & \multicolumn{2}{c|}{单位} & \multirow{2}{*}{备注} \\
+%     \cline{1-4}
+%     名称 & 符号 & 中文符号 & 国际符号 & \\
+%     \hline
+%     \makecell[c]{长度 \\（路径）} & \makecell[c]{$l$ \\($s$)} & 米 & m & \makecell[l]{$1\qianmi = 1000\mi$ \\ $1\mi = 100\limi = 1000\haomi$} \\
+%     \hline
+%     面积 & $S$ & $\pfm$ & $m^2$ & $1\pfm = 10^4\pflm = 10^6\pfhm$ \\
+%     \hline
+%     体积 & $V$ & $\lfm$ & $m^3$ & $1\lfm = 10^6\lflm = 10^9\lfhm$ \\
+%     \hline
+%     质量 & $m$ & 千克 & $kg$ & \makecell[l]{$1\text{吨} = 1000\qianke$ \\ $1\qianke = 1000\ke$ \\ $1\ke = 1000\haoke$} \\
+%     \hline
+%     时间 & $t$ & 秒 & $s$ & $1\text{小时} = 3600\miao$ \\
+%     \hline
+%     \makecell[c]{力 \\ (重力)} & \makecell[l]{$F$ \\ $(G)$ } & 牛 & N & \\
+%     \hline
+%     速度 & $v$ & 米/秒 & $m/s$  & $v = \dfrac{s}{t}$ \\
+%     \hline
+%     密度 & $\rho$ & $\qkmlfm$ & $kg/m^3$ & $\rho = \dfrac{m}{V}$ \\
+%     \hline
+%     压强 & $p$ & 帕 & $Pa$ & \makecell[l]{$p = \dfrac{F}{S}$ \\ $1\text{帕} = 1\text{牛/米}^2$} \\
+%     \hline
+%     功 & $W$ & 焦 & $J$ & \makecell[l]{$W = Fs$ \\ $1\text{焦} = 1\text{牛·米}$} \\
+%     \hline
+%     功率 & $P$ & 瓦 & $W$ & \makecell[l]{$P = \dfrac{W}{t}$ \\ $1\text{瓦} = 1\text{焦/秒}$} \\
+%     \hline
+% \end{tabular}
+% \end{table}

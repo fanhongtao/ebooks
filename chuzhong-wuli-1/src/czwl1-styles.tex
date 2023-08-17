@@ -37,6 +37,7 @@
 \usepackage{polynom}
 \usepackage[figuresright]{rotating}
 \usepackage{scalerel}
+\usepackage{tabularray}
 \usepackage{tablefootnote}
 \usepackage{tikz}
 \usetikzlibrary{
@@ -370,9 +371,11 @@
 
 %------------------ 物理单位
 % 长度单位
+\newcommand{\qianmi}{\mathord{\text{千米}}}%千米
 \newcommand{\mi}{\mathord{\text{米}}}%米
 \newcommand{\fenmi}{\mathord{\text{分米}}}%分米
 \newcommand{\limi}{\mathord{\text{厘米}}}%厘米
+\newcommand{\haomi}{\mathord{\text{毫米}}}%毫米
 
 % 面积单位
 \newcommand{\pfm}{\mathord{\text{米}^2}}%平方米
@@ -383,8 +386,10 @@
 \newcommand{\lfm}{\mathord{\text{米}^3}}%立方米
 \newcommand{\lffm}{\mathord{\text{分米}^3}}%立方分米
 \newcommand{\lflm}{\mathord{\text{厘米}^3}}%立方厘米
+\newcommand{\lfhm}{\mathord{\text{毫米}^3}}%立方毫米
 
 % 质量单位
+\newcommand{\haoke}{\mathord{\text{毫克}}}%毫克
 \newcommand{\ke}{\mathord{\text{克}}}%克
 \newcommand{\qianke}{\mathord{\text{千克}}}%千克
 
