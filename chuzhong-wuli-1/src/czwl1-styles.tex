@@ -6,17 +6,12 @@
 \usepackage{amsmath}
 \allowdisplaybreaks[1]
 \usepackage{amssymb}
-\usepackage{bm}
 \usepackage{calc}
 \usepackage{caption}
 \captionsetup[figure]{labelsep=none}
 
-\usepackage{cases}
 \usepackage{CJKfntef}
-\usepackage{diagbox}
-\usepackage[shortlabels]{enumitem}
 \usepackage{etoolbox}
-\usepackage{extarrows}
 \usepackage{float}
 \usepackage[stable]{footmisc}
 \usepackage{geometry}
@@ -25,34 +20,13 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=red}
 
-\usepackage{longdivision}
-\usepackage{longtable}
-\setlength\LTleft\parindent
-\setlength\LTright\fill
-
 \usepackage{makecell}
-\usepackage{mathtools}
 \usepackage{multirow}
-\usepackage{nicematrix}
-\usepackage{polynom}
-\usepackage[figuresright]{rotating}
-\usepackage{scalerel}
 \usepackage{tabularray}
-\usepackage{tablefootnote}
+
 \usepackage{tikz}
-\usetikzlibrary{
-  arrows.meta,
-  calc,
-  decorations.pathmorphing,
-  decorations.pathreplacing,
-  intersections,
-  patterns,
-  patterns.meta,
-  through,
-}
 
 \usepackage{wrapfig}
-\usepackage{xlop}
 \usepackage{xparse}
 \usepackage{xpinyin}
 
@@ -67,15 +41,6 @@
     \node at (char.center) {\makebox[0pt][c]{#2}};}}
 \robustify{\circled}
 \newcommand{\tc}[1]{\text{\circled{#1}}}
-
-% 罗马数字
-\makeatletter
-\newcommand{\rmnum}[1]{\romannumeral #1}
-\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
-\makeatother
-
-\newcommand{\gongshishangyi}{\setlength\abovedisplayskip{-1.5em}} % 当 “解:” 后直接写公式时，为了“解”与公式水平对齐所需要的偏移。
-\newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
 
 \counterwithout*{subsection}{section}
 \counterwithin*{subsection}{chapter}
@@ -148,65 +113,7 @@
 }
 \newcommand{\labelxiti}{练 \; 习 \; \chinese{cntlianxi}}
 
-\newcommand{\xiaojie}{%
-  \nonumsection[\labelxiaojie]{\huge \labelxiaojie}
-}
-\newcommand{\labelxiaojie}{小 \hspace{2em} 结}
-
-\newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
-\newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
-\counterwithin*{cntxiaoxiaoti}{cntliti}
-
-\newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
-\newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
-\setlength{\lenParent}{0em}
-
-\newenvironment{xiaotis}{% “小题” 环境
-  \NewDocumentCommand \xiaoti {s m} {% 小题的标题
-    \IfBooleanTF {##1}%
-      {%
-        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
-        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\hspace{\lenLabel}##2}%
-      }%
-      {%
-        \stepcounter{cntxiaoti}%
-        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
-        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoti ##2}%
-      }%
-  }%
-  \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }% 1. 2. 3. ……
-}{%
-}
-
-% 为命令 `\xiaoxiaoti' 增加一个可选参数，是为了实现：当“小题”没有文字时，第一个“小小题” 与“小题”同行。
-% 对应 《代数二》“习题 十四” 中的第 10 小题。
-% 在此之前，是通过将 “小小题” 上移一行来实现同行显示。如：《代数二》“习题 七” 中的第 10 小题。
-% 但当“小题”本身处于页的最后一行时，上移不能生效，会导致“小题”显示在上一页的页末，而“小小题”显示在下一页的页首。
-\newenvironment{xiaoxiaotis}{% “小小题” 环境
-  \setlength{\lenParent}{\lenParent + \lenLabel}%
-  \NewDocumentCommand{\xiaoxiaoti}{o m} {% 小小题的标题
-    \stepcounter{cntxiaoxiaoti}%
-    \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}%
-    \IfNoValueTF{##1}%
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}~\labelxiaoxiaoti ##2}}%
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{~\labelxiaoxiaoti ##2}}%
-  }%
-  \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
-  % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}
-  \newcommand{\xxtsep}{0em}%
-}{%
-}
-
-\newcommand{\twoInLine}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} #2 & #3\end{tabular}}
-\newcommand{\threeInLine}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} #2 & #3 & #4\end{tabular}}
-\newcommand{\fourInLine} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} #2 & #3 & #4 & #5\end{tabular}}
-
-\newcommand{\twoInLineXxt}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3}\end{tabular}}
-\newcommand{\threeInLineXxt}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4}\end{tabular}}
-\newcommand{\fourInLineXxt} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4} & \xiaoxiaoti{#5}\end{tabular}}
-
 \newcommand{\jiange}{\vspace{0.5em}} % 手工调整垂直间隔（测试发现 0.5em 比较合适。不支持参数，特殊情况直接使用 \vspace{} 命令。）
-\newcommand{\shangyihang}{\vspace{-1.5em}} % 上移一行
 
 % 修改数学公式与上下文的距离
 \makeatletter
@@ -220,97 +127,8 @@
 %----------------------------------
 % （重）定义一些数学符号
 %  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
-\newcommand{\kongji}{\varnothing}      % 空集
-\newcommand{\buji}{\overline}          % 补集
-\newcommand*\pxdy{%                    % 平行且等于
-    \mathrel{\hspace{.03555em}\text{\tikz[baseline]
-            \draw (.1em,0ex) -- (.9em,0ex)
-            (.1em,.3ex) -- (.9em,.3ex)
-            (.375em,.4ex) -- (.675em,1.8ex)
-            (.55em,.4ex) -- (.85em,1.8ex);}\hspace{.03555em}}%
-}
-\newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
-    \mathrel{\text{%
-            \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
-}}}
-\newcommand*\quandeng{%                % 全等
-    \mathrel{\text{%\small%
-            \tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
-}}}
-\newcommand{\arccot}{\mathrm{arccot}\,} % 反余切函数
 \newcommand{\celsius}{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}} % 摄氏度
 
-% 绘制 弧度 符号。代码来自
-%    https://tex.stackexchange.com/questions/96680/
-\makeatletter
-\DeclareFontFamily{U}{tipa}{}
-\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
-\newcommand{\hudu@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
-
-\newcommand{\hudu}[1]{\mathpalette\hudu@hudu{#1}}
-
-\newcommand{\hudu@hudu}[2]{%
-  \sbox0{$\m@th#1#2$}%
-  \vbox{
-    \hbox{\resizebox{\wd0}{\height}{\hudu@char}}
-    \nointerlineskip
-    \box0
-  }%
-}
-\makeatother
-
-%----------------------------------
-\newlength{\defaultParIndent}  % 页面缺省的 \parindent 长度。
-\setlength{\defaultParIndent}{\parindent}
-
-%----------------------------------
-\counterwithin*{equation}{subsection}
-\renewcommand{\theequation}{\arabic{equation}}
-%\newtheorem{theorem}{定理}[subsection]
-%\renewcommand\thetheorem{\arabic{theorem}}
-%\newtheorem{corollary}{推论}[theorem]
-%\renewcommand\thecorollary{\arabic{corollary}}
-
-\makeatletter
-% 创建指定名字的标签
-% 参数1: 标签的id
-% 参数2: 标签的名字 (\nameref{标签id} 所得到的结果)
-\newcommand{\namedlabel}[2]{%
-  \@bsphack%
-  \protected@write\@auxout{}{%
-    \string\newlabel{#1}{%
-        {\@currentlabel}%
-        {\thepage}%
-        {{#2}}%\@currentlabelname
-        {\@currentHref}{}%
-      }%
-  }%
-  \@bsphack%
-}%
-\makeatother
-
-% 创建定理环境
-% 参数1: 环境名称
-% 参数2: 环境的标题
-% 参数3: 环境的counter对应的父counter
-% 参数4: 创建label时，所写内容的模板（一般要包含环境名称对应计数器）
-% 注：前3个参数，就是 \newtheorem{foo3}{bar}[section] 中的三个参数。
-\newcommand{\createtheorem}[4]{
-  \newcounter{#1}[#3]
-  \newtheorem{inner#1}[#1]{#2}
-  \expandafter\renewcommand\csname the#1\endcsname{\arabic{#1}}
-  \newenvironment{#1}{
-    \expandafter\renewcommand{\label}[1]{\namedlabel{####1}{#4}}
-    \begin{inner#1}
-  }{
-    \end{inner#1}
-  }
-}
-
-\createtheorem{theorem}{定理}{subsection}{定理 \thetheorem}
-\createtheorem{corollary}{推论}{theorem}{定理 \thetheorem 推论 \thecorollary}
-
-\newcommand{\eqnameref}[1]{(\nameref{#1})}
 
 %----------------------------------
 \newcounter{mylabel}
@@ -325,38 +143,6 @@
     \label{#1}%
   }%
 }
-
-
-%
-% 创建计数器及其同名的生成label的命令模板。
-% 参数1: 计数器的名称（同时也是为计数器创建 label 的命令的名字）
-% 参数2: （可选）\the<counter> 显示的内容。默认为 \arabic{<counter>}
-% 参数3: （可选）上级计数器的名字。默认为没有上级计数器。
-\NewDocumentCommand{\createcounter}{m o o}{
-  \IfValueTF{#3}
-    {\newcounter{#1}[#3]}
-    {\newcounter{#1}}
-  \IfValueT{#2}
-    {\expandafter\renewcommand\csname the#1\endcsname{#2}}
-  \expandafter\newcommand\expandafter*\csname #1\endcsname[1]{
-    \refstepcounter{#1} \label{##1}}
-}
-
-\createcounter{fangchengzu}[\Roman{fangchengzu}]
-
-%---------------------------
-% 在数学的长符号（如：\xlongrightarrow）添加脚注时，遇到脚注重复的问题。
-% 下面的代码用于避免脚注重复。
-% 注意：不建议在数学公式中使用脚注，这里是为了尽可能展现原书的内容。
-\makeatletter
-\newif\ifext@arrow@measuring@
-\let\saved@ext@arrow\ext@arrow % 保存原始定义
-\def\fake@footnotemark{\textsuperscript{\the\numexpr\value{footnote}+1\relax}}
-\patchcmd\ext@arrow{\mathop}{\ext@arrow@measuring@true\mathop}{}{}
-\patchcmd\ext@arrow{\limits}{\ext@arrow@measuring@false\limits}{}{}
-\def\arrowmeasuring#1#2{\ifext@arrow@measuring@#1\else#2\fi}
-\makeatother
-\def\mytablefootnote#1{\arrowmeasuring{\csname fake@footnotemark\endcsname}{\tablefootnote{#1}}}
 
 %---------------------------
 \newcommand{\shiyan}[1]{\textbf{【#1】}}
