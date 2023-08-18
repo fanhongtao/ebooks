@@ -20,8 +20,6 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=red}
 
-\usepackage{makecell}
-\usepackage{multirow}
 \usepackage{tabularray}
 
 \usepackage{tikz}
@@ -146,11 +144,6 @@
 
 %---------------------------
 \newcommand{\shiyan}[1]{\textbf{【#1】}}
-
-% 实现单元格内文字换行的命令
-% 参数1：对齐方式
-% 参数2: 单元格的内容。使用 \\ 进行换行。
-\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 
 %特殊符号
 \newcommand{\juhao}{\mathord{\text{。}}}%（中文的）句号
