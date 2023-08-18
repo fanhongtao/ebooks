@@ -1,0 +1,200 @@
+% 定义本书中使用到的格式
+
+\ctexset {chapter = {pagestyle = headings}}
+
+\usepackage{array}
+\usepackage{amsmath}
+\allowdisplaybreaks[1]
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{caption}
+\captionsetup[figure]{labelsep=none}
+
+\usepackage{CJKfntef}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage[stable]{footmisc}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=red}
+
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{tabularray}
+
+\usepackage{tikz}
+
+\usepackage{wrapfig}
+\usepackage{xparse}
+\usepackage{xpinyin}
+
+% 确保 有行内公式 的行，与其上、下行之间，有足够的行距
+\setlength{\lineskip}{\baselineskip-\ccwd}
+\setlength{\lineskiplimit}{2.5pt}
+
+% 绘制带圈的数字
+\newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
+    {\node[shape = circle, draw, inner sep = 1pt]
+    (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
+    \node at (char.center) {\makebox[0pt][c]{#2}};}}
+\robustify{\circled}
+\newcommand{\tc}[1]{\text{\circled{#1}}}
+
+\counterwithout*{subsection}{section}
+\counterwithin*{subsection}{chapter}
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{\chinese{section}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
+
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
+
+% 在不改变 counter 值的情况下，重置 counter 的子 counter
+\newcommand{\touchcounter}[1]{\stepcounter{#1} \addtocounter{#1}{-1}}
+
+\newenvironment{starred}{
+  \ctexset {
+    chapter/name={*第,章},
+    section/name={*}
+  }
+}{}
+
+
+% 没有编号但又需要添加到目录中的 section (No num(ber) section)。
+% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
+% 参数2: 正文中的文字
+\NewDocumentCommand{\nonumsection}{o m}{%
+  \touchcounter{section}
+  \section*{#2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{section}{#2}}
+    {\addcontentsline{toc}{section}{#1}}
+}
+
+% 没有编号但又需要添加到目录中的 subsection (No num(ber) subsection)。
+% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
+% 参数2: 正文中的文字
+\NewDocumentCommand{\nonumsubsection}{o m}{%
+  \touchcounter{subsection}
+  \subsection*{#2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{subsection}{#2}}
+    {\addcontentsline{toc}{subsection}{#1}}
+}
+
+
+% （编号前）带星号的 subsection
+% 参数1: subsection 的标题
+\NewDocumentCommand{\starredsubsection}{o m}{
+  \refstepcounter{subsection}
+  \subsection*{*\thesubsection\quad #2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
+    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
+}
+
+\newcounter{cntliti}[subsubsection]           % 例题的计数器
+\newcommand{\liti}{ % 例题的标题
+  \stepcounter{cntliti}
+  \textbf{[例题 \thecntliti]}
+}
+
+\newcommand{\jie}{\textbf{解: }}
+\newcommand{\zhengming}{\textbf{证明: }}
+
+\newcounter{cntlianxi}[chapter]               % “练习”的计数器
+\newcommand{\lianxi}{%
+  \stepcounter{cntlianxi}
+  \vspace{1em}
+  {\centering \nonumsubsection{\labelxiti}}
+}
+\newcommand{\labelxiti}{练 \; 习 \; \chinese{cntlianxi}}
+
+\newcommand{\jiange}{\vspace{0.5em}} % 手工调整垂直间隔（测试发现 0.5em 比较合适。不支持参数，特殊情况直接使用 \vspace{} 命令。）
+
+% 修改数学公式与上下文的距离
+\makeatletter
+\renewcommand\normalsize{%
+    \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
+    \belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
+
+%----------------------------------
+% （重）定义一些数学符号
+%  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
+\newcommand{\celsius}{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}} % 摄氏度
+
+
+%----------------------------------
+\newcounter{mylabel}
+% 针对计数器 mylabel 创建（指定名字）标签
+% 参数1: 标签的id
+% 参数2: (可选) 标签的名字 (\nameref{标签id} 所得到的结果)。默认为标签归属章节的名字
+\NewDocumentCommand{\mylabel}{m o}{%
+  \refstepcounter{mylabel}%
+  \IfValueTF{#2}{%
+    \namedlabel{#1}{#2}%
+  }{%
+    \label{#1}%
+  }%
+}
+
+%---------------------------
+\newcommand{\shiyan}[1]{\textbf{【#1】}}
+
+% 实现单元格内文字换行的命令
+% 参数1：对齐方式
+% 参数2: 单元格的内容。使用 \\ 进行换行。
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+%特殊符号
+\newcommand{\juhao}{\mathord{\text{。}}}%（中文的）句号
+
+%------------------ 物理单位
+% 长度单位
+\newcommand{\qianmi}{\mathord{\text{千米}}}%千米
+\newcommand{\mi}{\mathord{\text{米}}}%米
+\newcommand{\fenmi}{\mathord{\text{分米}}}%分米
+\newcommand{\limi}{\mathord{\text{厘米}}}%厘米
+\newcommand{\haomi}{\mathord{\text{毫米}}}%毫米
+
+% 面积单位
+\newcommand{\pfm}{\mathord{\text{米}^2}}%平方米
+\newcommand{\pflm}{\mathord{\text{厘米}^2}}%平方厘米
+\newcommand{\pfhm}{\mathord{\text{毫米}^2}}%平方毫米
+
+% 体积单位
+\newcommand{\lfm}{\mathord{\text{米}^3}}%立方米
+\newcommand{\lffm}{\mathord{\text{分米}^3}}%立方分米
+\newcommand{\lflm}{\mathord{\text{厘米}^3}}%立方厘米
+\newcommand{\lfhm}{\mathord{\text{毫米}^3}}%立方毫米
+
+% 质量单位
+\newcommand{\haoke}{\mathord{\text{毫克}}}%毫克
+\newcommand{\ke}{\mathord{\text{克}}}%克
+\newcommand{\qianke}{\mathord{\text{千克}}}%千克
+
+\newcommand{\qkmlfm}{\mathord{\text{千克}/\text{米}^3}}%千克每立方米
+\newcommand{\kmlflm}{\mathord{\text{克}/\text{厘米}^3}}%克每立方厘米
+
+% 力的单位
+\newcommand{\niudun}{\mathord{\text{牛顿}}}%牛顿
+\newcommand{\ndmqk}{\mathord{\text{牛顿/千克}}}%牛顿每千克
+\newcommand{\ndmpfm}{\mathord{\text{牛顿}/\text{米}^2}}%牛顿每平方米
+\newcommand{\pasika}{\mathord{\text{帕斯卡}}}%帕斯卡
+
+% 功的单位
+\newcommand{\niudunmi}{\mathord{\text{牛顿·米}}}%牛顿·米
+\newcommand{\jiaoer}{\mathord{\text{焦耳}}}%焦耳
+\newcommand{\jemm}{\mathord{\text{焦耳/秒}}}%焦耳每秒
+\newcommand{\wate}{\mathord{\text{瓦特}}}%瓦特
+\newcommand{\qianwa}{\mathord{\text{千瓦}}}%千瓦
+\newcommand{\mali}{\mathord{\text{马力}}}%马力
+
+% 时间单位
+\newcommand{\miao}{\mathord{\text{秒}}}%秒
