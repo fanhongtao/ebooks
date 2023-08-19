@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+    \draw (-3, 0) -- (3, 0);
+    \draw [dashed] (0, 3) -- (0, -3);
+    \node at (3.7, 0) {分界面};
+    \node at (-2.6, 0.4) {空气};
+    \node at (-2.6, -0.4) {水};
+    \node at (0.3, -0.3) {$O$};
+    \node at (0.4, 2.7) {$N$};
+    \node at (0.4, -2.7) {$N'$};
+
+    \draw [rotate=50] (0, 0) -- (3, 0) [->] (2, 0) -- (1, 0);
+    \draw (0, 0.8) arc [start angle=90, end angle=50, radius=0.8];
+    \draw (0, 0.7) arc [start angle=90, end angle=50, radius=0.7];
+    \node at (1.2, 2.0) {$A$};
+    \node at (2.2, 1.5) {入射光};
+
+    \draw [rotate=-50] (0, 0) -- (-3, 0) [->] (0, 0) -- (-1.2, 0);
+    \draw (0, 0.75) arc [start angle=90, end angle=130, radius=0.75];
+    \draw (0, 0.65) arc [start angle=90, end angle=130, radius=0.65];
+    \node at (-2.2, 1.5) {反射光};
+
+    \draw [rotate=60] (0, 0) -- (-3, 0) [->] (0, 0) -- (-1, 0);
+    \draw (0, -0.65) arc [start angle=270, end angle=240, radius=0.65];
+    \node at (-1.1, -2.4) {$B$};
+    \node at (-1.9, -1.7) {折射光};
+\end{tikzpicture}
