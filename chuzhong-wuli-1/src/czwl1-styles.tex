@@ -1,6 +1,13 @@
 % 定义本书中使用到的格式
 
-\ctexset {chapter = {pagestyle = headings}}
+\ctexset {
+  chapter = {
+    pagestyle = headings,
+  },
+  section = {
+    aftername={、},
+  }
+}
 
 \usepackage{array}
 \usepackage{amsmath}
@@ -49,7 +56,7 @@
 \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}\;}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 
 % 在不改变 counter 值的情况下，重置 counter 的子 counter
