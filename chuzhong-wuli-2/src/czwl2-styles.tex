@@ -39,8 +39,16 @@
 \usepackage{xpinyin}
 
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
-%\setlength{\lineskip}{\baselineskip-\ccwd}
-%\setlength{\lineskiplimit}{2.5pt}
+% 参数1: 最后一行需要额外增加的高度（用于调整和后继行的间隔）
+\NewDocumentEnvironment{enhancedline}{o}{
+  \setlength{\lineskip}{\baselineskip-\ccwd}
+  \setlength{\lineskiplimit}{2.5pt}
+}{
+  \IfValueT{#1}{
+    \vspace{#1}
+  }
+  \par
+}
 
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
