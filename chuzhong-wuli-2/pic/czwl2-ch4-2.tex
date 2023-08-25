@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \draw [thick,->] (0, 0) -- (12, 0) node[anchor=north] {时间(分)};
+    \draw [thick,->] (0, 0) -- (0, 6) node[anchor=east] {温度(℃)};
+
+    \foreach \x in {0.5, 1, 1.5, ..., 11} {
+        \draw (\x, 0) -- (\x, 5);
+    }
+
+    \foreach \y in {0.5, 1, 1.5, ..., 5} {
+        \draw (0, \y) -- (11, \y);
+    }
+
+    \foreach \x in {0,10,20} {
+        \draw (\x/2,0.2) -- (\x/2,0) node[anchor=north] {$\x$};
+    }
+    \foreach \y in {50,60,...,100} {
+        \tikzmath{
+            \v = (\y-50)/10;
+        }
+        \draw (0.2,\v) -- (0,\v) node[anchor=east] {$\y$};
+    }
+
+    \coordinate (A) at (0, 0.5);
+    \coordinate (B) at (2.5, 3);
+    \coordinate (C) at (4.5, 3);
+    \coordinate (D) at (5.5, 4);
+    \coordinate (E) at (6.5, 3);
+    \coordinate (F) at (8.5, 3);
+    \coordinate (G) at (11, 0.5);
+
+    \draw [very thick] (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- (G);
+    \foreach \n/\x/\y in {
+            A/-0.3/0, B/-0.3/0.3, C/-0.3/0.3, D/0.3/0.3,
+            E/-0.3/-0.3, F/0.3/0.3, G/0.3/0} {
+        \coordinate (P) at (\x, \y);
+        \node [fill=white, inner sep=0pt, font=\footnotesize] at ($(P) + (\n)$) {$\n$};
+        \draw [fill=black] (\n) circle (2pt);
+    }
+\end{tikzpicture}
