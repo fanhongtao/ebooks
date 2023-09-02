@@ -18,6 +18,7 @@
 \captionsetup[figure]{labelsep=none}
 
 \usepackage{CJKfntef}
+\usepackage{enumitem}
 \usepackage{etoolbox}
 \usepackage{float}
 \usepackage[stable]{footmisc}
@@ -160,6 +161,24 @@
     \label{#1}%
   }%
 }
+
+
+%----------------------------------
+% 实现类似如下效果：
+%  name1 .............. value1
+%  another-name2 .......... v2
+\makeatletter
+\newcommand \cdotfill {\leavevmode \cleaders \hb@xt@ .33em{\hss $\cdot$ \hss }\hfill \kern \z@}
+\makeatother
+
+\newenvironment{dottedlist}[2]{%
+    \newcommand{\pair}[2]{\item ##1 \cdotfill ##2}
+    \begin{itemize}[nosep, leftmargin=#1, rightmargin=#2]
+        \renewcommand{\labelitemi}{}
+}{%
+    \end{itemize}
+}
+
 
 %---------------------------
 \newcommand{\shiyan}[1]{\textbf{【#1】}}
