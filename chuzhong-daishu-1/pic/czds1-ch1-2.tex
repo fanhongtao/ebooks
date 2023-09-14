@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, scale=1.5]
+    \draw [rounded corners=6pt, ground]
+        (0, 0) .. controls (1,0) and (1,0) .. (1.5,3)
+            -- (3, 3) .. controls (3,2) and (3,1) .. (4, 0.2);
+    \draw [<->] (0.5, 0.05) -- (0.5, 1.2)
+        node[pos=.5, rotate=90, fill=white, inner sep=0] {\small 3.6}
+        node[pos=-0.05, fill=white, inner sep=1pt, below] {\small 乙};
+    \draw [dashed] (0.2, 1.2) -- (4, 1.2);
+    \draw [<->] (3.8, 1.2) -- (3.8, 3)
+        node[pos=.5, rotate=90, fill=white, inner sep=0] {\small 5.2};
+    \node at (3, 3) [fill=white, inner sep=1pt, anchor=south east] {\small 甲};
+    \draw [dashed] (3, 3) -- (4.5, 3);
+    \draw (4.1, 1.4) -- (4.3, 1.4) -- (4.2, 1.2) -- cycle;
+    \path [path picture={\draw (path picture bounding box.north west) pic {waterwave};}] (3.2, 1.2) -- (4.5, 1.2) -- (3.9, 0.6) -- cycle;
+\end{tikzpicture}

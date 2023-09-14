@@ -1,0 +1,63 @@
+%----------------------------------
+% 图形相关的项
+% 需要 TexLive 2020 版本
+
+% 绘制温度计(温度范围：-10 ~ 20 ℃)
+\tikzset{
+    % 参数1: 显示的温度。
+    pics/thermometer/.style n args={1}{
+      code = {
+        % 绘制外框
+        \draw [thick] (-1, -0.6) -- (0.8, -0.6) -- (0.8, 6) -- (-1, 6) -- cycle;
+
+        % 绘制玻璃管
+        \draw [thick] (135:0.35) arc (135:405:0.35)
+            to [out=135, in=270] (0.2, 0.5)
+            -- (0.2, 6) -- (-0.2, 6) -- (-0.2, 0.5)
+            to [out=270, in=45] (135:0.35);
+
+        % 绘制刻度
+        \foreach \y in {1,...,7} {
+            \ifnum \y<3
+                \def\value{\the\numexpr5*(3-\y)};
+            \else
+                \def\value{\the\numexpr5*(\y-3)};
+            \fi
+            \draw (-0.2,0.5+0.7*\y) -- (-0.4,0.5+0.7*\y) node[anchor=east] {$\value$};
+            \ifnum \y < 7
+                \foreach \tmp in {1,...,4} {
+                    \draw (-0.2,0.5+0.7*\y+0.14*\tmp) -- (-0.3,0.5+0.7*\y+0.14*\tmp);
+                }
+            \fi
+        }
+
+        % 绘制水银柱
+        \def\h{\the\numexpr0.5+2.1+0.14*#1};
+        \draw [black!80, fill] (135:0.3) arc (135:405:0.3)
+            to [out=135, in=270] (0.15, 0.4)
+            -- (0.15, \h) -- (-0.15, \h) -- (-0.15, 0.4)
+            to [out=270, in=45] (135:0.3);
+      }
+    }
+}
+
+
+% 用于填充的水面的纹路
+\tikzset{
+    waterwave/.pic={
+        \draw [dash=on 17pt off 2pt phase 0pt] (0, -0.01) -- (10, -0.01);
+        \draw [dash=on 15pt off 3pt phase 0pt] (0, -0.1)  -- (10, -0.1);
+        \draw [dash=on 10pt off 4pt phase 0pt] (0, -0.2)  -- (10, -0.2);
+        \draw [dash=on 9pt off 3pt phase 0pt]  (0, -0.3)  -- (10, -0.3);
+        \draw [dash=on 6pt off 2pt phase 0pt]  (0, -0.4)  -- (10, -0.4);
+        \draw [dash=on 3pt off 2pt phase 0pt]  (0, -0.5)  -- (10, -0.5);
+    }
+}
+
+% 路面样式（用于修改 Path）
+\tikzset{
+    ground/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=2mm}}},
+}
+

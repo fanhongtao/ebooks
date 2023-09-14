@@ -35,6 +35,7 @@
 \usetikzlibrary{
   arrows.meta,
   calc,
+  decorations.pathreplacing,
   math,
 }
 
@@ -116,22 +117,99 @@
     {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
 }
 
-\newcounter{cntliti}[section]           % 例题的计数器
-\newcommand{\liti}{ % 例题的标题
-  \stepcounter{cntliti}
-  \textbf{[例题 \thecntliti]}
+\newcounter{cntliti}[subsection]           % 例题的计数器
+\NewDocumentCommand{\liti}{o}{ % 例题的标题
+  \IfNoValueTF{#1} {
+    \stepcounter{cntliti}
+    \textbf{例题 \thecntliti}
+  } {
+    \textbf{例}
+  }
+  \;
 }
 
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
 
-\newcounter{cntlianxi}[chapter]               % “练习”的计数器
 \newcommand{\lianxi}{%
-  \stepcounter{cntlianxi}
+  \vspace{1em}%
+  {\large\textbf{练 \; 习}}\par
+}
+
+\newcounter{cntxiti}               % “习题”的计数器
+\newcommand{\xiti}{%
+  \stepcounter{cntxiti}
   \vspace{1em}
   {\centering \section*{\labelxiti}}
 }
-\newcommand{\labelxiti}{练 \; 习 \; \chinese{cntlianxi}}
+\newcommand{\labelxiti}{习题 \chinese{cntxiti}}
+
+
+\newcommand{\xiaojie}{%
+  \nonumsection[\labelxiaojie]{\Large \labelxiaojie}
+}
+\newcommand{\labelxiaojie}{小 \hspace{2em} 结}
+
+
+\newcounter{cntfuxiti}                       % “复习参考题”的计数器
+\newcommand{\fuxiti}{%
+  \stepcounter{cntfuxiti}
+  \nonumsection[\labelfuxiti]{\Large \labelfuxiti}
+}
+\newcommand{\labelfuxiti}{复习参考题\chinese{cntfuxiti}}
+
+\newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
+\newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
+\counterwithin*{cntxiaoxiaoti}{cntliti}
+
+\newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
+\newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
+\setlength{\lenParent}{0em}
+
+\newenvironment{xiaotis}{% “小题” 环境
+  \NewDocumentCommand \xiaoti {s m} {% 小题的标题
+    \IfBooleanTF {##1}%
+      {%
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\hspace{\lenLabel}##2}%
+      }%
+      {%
+        \stepcounter{cntxiaoti}%
+        \setlength{\lenLabel}{\widthof{\labelxiaoti}}%
+        \hangafter 1\setlength{\hangindent}{\parindent + \lenLabel}{\labelxiaoti ##2}%
+      }%
+  }%
+  \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }% 1. 2. 3. ……
+}{%
+}
+
+% 为命令 `\xiaoxiaoti' 增加一个可选参数，是为了实现：当“小题”没有文字时，第一个“小小题” 与“小题”同行。
+% 对应 《代数二》“习题 十四” 中的第 10 小题。
+% 在此之前，是通过将 “小小题” 上移一行来实现同行显示。如：《代数二》“习题 七” 中的第 10 小题。
+% 但当“小题”本身处于页的最后一行时，上移不能生效，会导致“小题”显示在上一页的页末，而“小小题”显示在下一页的页首。
+\newenvironment{xiaoxiaotis}{% “小小题” 环境
+  \setlength{\lenParent}{\lenParent + \lenLabel}%
+  \NewDocumentCommand{\xiaoxiaoti}{o m} {% 小小题的标题
+    \stepcounter{cntxiaoxiaoti}%
+    \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}%
+    \IfNoValueTF{##1}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}~\labelxiaoxiaoti ##2}}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{~\labelxiaoxiaoti ##2}}%
+  }%
+  \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
+  % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}
+  \newcommand{\xxtsep}{0em}%
+}{%
+}
+
+\newcommand{\twoInLine}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} #2 & #3\end{tabular}}
+\newcommand{\threeInLine}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} #2 & #3 & #4\end{tabular}}
+\newcommand{\fourInLine} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} #2 & #3 & #4 & #5\end{tabular}}
+
+\newcommand{\twoInLineXxt}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3}\end{tabular}}
+\newcommand{\threeInLineXxt}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4}\end{tabular}}
+\newcommand{\fourInLineXxt} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4} & \xiaoxiaoti{#5}\end{tabular}}
+
 
 \newcommand{\jiange}{\vspace{0.5em}} % 手工调整垂直间隔（测试发现 0.5em 比较合适。不支持参数，特殊情况直接使用 \vspace{} 命令。）
 
@@ -177,5 +255,5 @@
 
 
 %---------------------------
-\newcommand{\shiyan}[1]{\textbf{【#1】}}
-\newcommand{\xiaobiaoti}[1]{\textbf{#1} \hspace{1em}}
+\newcommand{\zhuyi}{\textbf{注意} \hspace{1em}}
+
