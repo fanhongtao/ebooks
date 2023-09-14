@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-7,0) -- (7.2,0);
+    \foreach \x in {-7,...,+6} {
+        \draw (\x,0.4) -- (\x,0);
+        \foreach \tmp in {1,...,9} {
+            \draw (\x+\tmp/10, 0.2) -- (\x+\tmp/10, 0);
+        }
+        \draw (\x+0.5, 0.3) -- (\x+0.5, 0);
+    }
+
+    \foreach \x in {-6,...,0} {
+        \node at (\x, -0.3) {$\x$};
+    }
+
+    \foreach \x in {1,...,6} {
+        \node at (\x, -0.3) {$+\x$};
+    }
+
+
+    \foreach \pos/\text in {-4/B, -1.5/D, 0/O, 2.4/C, 5/A} {
+        \filldraw [fill=black] (\pos, 0) circle (0.05);
+        \node at (\pos, 0.6) {$\text$};
+    }
+
+    \draw (1, -0.8) -- (1, -1.2)
+          (2, -0.8) -- (2, -1.2)
+          (2, -1) -- (1, -1)
+          node [left] {单位长度};
+\end{tikzpicture}

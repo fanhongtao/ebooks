@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-7,0) -- (7.2,0);
+    \foreach \x in {-6,...,6} {
+        \draw (\x,0.3) -- (\x,0);
+    }
+
+    \foreach \x in {-5.5,...,5.5} {
+        \draw (\x,0.2) -- (\x,0);
+    }
+
+    \foreach \x in {-5,...,5} {
+        \node at (\x, -0.3) {$\x$};
+    }
+
+    \foreach \pos/\text in {-4/B, -2.5/D, -1/E, 2/A, 4.5/C} {
+        \filldraw [fill=black] (\pos, 0) circle (0.05) +(0, 0.3) node [above] {$\text$};
+    }
+\end{tikzpicture}
