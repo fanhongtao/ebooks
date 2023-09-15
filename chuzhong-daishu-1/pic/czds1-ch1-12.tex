@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [rounded corners=6pt, ground, name path=gnd]
+        (0, 0) -- (1, 0) .. controls (2,-4) and (2,-5) .. (3, -5);
+
+    \draw (3.0, -1.4) -- (3.2, -1.4) -- (3.1, -1.6) -- cycle;
+    \path [path picture={\draw (path picture bounding box.north west) pic {waterwave};}] (1.4, -1.6) -- (3.6, -1.6) -- (2.8, -2.3) -- cycle;
+
+    \path [name path=line1] (0, -1.6 - 0.3*3)  --+(5, 0);
+    \filldraw [name intersections={of=gnd and line1, by=A}, fill=black] (A) circle (0.05) node [right] {$-3$};
+
+    \path [name path=line2] (0, -1.6 - 0.3*8) --+(5, 0);
+    \filldraw [name intersections={of=gnd and line2, by=A}, fill=black] (A) circle (0.05) node [right] {$-8$};
+\end{tikzpicture}

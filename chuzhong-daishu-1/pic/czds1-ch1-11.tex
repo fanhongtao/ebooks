@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-5.5,0) -- (2.5,0);
+    \foreach \x in {-5,-4.5,...,2} {
+        \draw (\x,0.2) -- (\x,0);
+    }
+
+    \foreach \pos/\text in {-5/-10, 0/0, 2/+4} {
+        \node at (\pos, 0) [below] {$\text$};
+    }
+\end{tikzpicture}
