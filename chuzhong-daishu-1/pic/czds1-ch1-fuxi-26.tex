@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth]
+    \clip (0.05, 0) rectangle (7.95, -5.95);
+    \draw (0, 0) -- (8, 0);
+    \fill [pattern = dots] (0, 0) rectangle (8, -6);
+
+    \filldraw [fill=white] (0, -2.2) -- (8, -1.0) --  (8, -1.8) -- (0, -3.0) -- cycle;
+    \filldraw [fill=white] (0, -4.2) -- (8, -3.0) --  (8, -3.8) -- (0, -5.0) -- cycle;
+
+    \filldraw [fill=white] (1.5, 0) rectangle (2.3, -6);
+    \filldraw [fill=white] (5.8, 0) rectangle (6.6, -6);
+
+    \fill [fill=white] (0, -2.2) -- (8, -1.0) --  (8, -1.8) -- (0, -3.0) -- cycle;
+    \fill [fill=white] (0, -4.2) -- (8, -3.0) --  (8, -3.8) -- (0, -5.0) -- cycle;
+
+    \node at (1.4, -2.3) {$A$};
+    \node at (2.5, -4.2) {$B$};
+    \node at (5.7, -3.7) {$C$};
+    \node at (6.8, -1.5) {$D$};
+\end{tikzpicture}
