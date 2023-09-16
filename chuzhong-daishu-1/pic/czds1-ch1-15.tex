@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-4,0) -- (6.5,0);
+    \foreach \x in {-2,...,3} {
+        \draw (\x,0.2) -- (\x,0);
+    }
+
+    \draw [dashed] (-2, 1) -- (-2, -1.5)
+          (0, 2) -- (0, -1.5);
+
+    \foreach \x in {-2,...,0} {
+        \node [fill=white, inner sep=1pt] at (\x, -0.3) {$\x$};
+    }
+
+    \foreach \x in {1,...,3} {
+        \node [fill=white, inner sep=1pt] at (\x, -0.3) {$+\x$};
+    }
+
+    \draw [->] (0, 1.5) -- (3, 1.5) node [pos=0.5, above] {$+3$};
+    \draw (3, 1.5) -- (3, 0.6) node [pos=0.5, right] {$+$};
+    \draw [->] (3, 0.6) -- (-2, 0.6) node [pos=0.5, above] {$-5$};
+    \draw [->] (0, -1.0) -- (-2, -1.0) node [pos=0.5, below] {$-2$};
+\end{tikzpicture}
