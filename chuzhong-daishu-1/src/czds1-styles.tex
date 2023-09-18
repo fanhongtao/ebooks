@@ -29,6 +29,8 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=red}
 
+\usepackage{scalerel}
+
 \usepackage{tabularray}
 \UseTblrLibrary{counter}
 \UseTblrLibrary{siunitx}
@@ -203,6 +205,7 @@
   \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
   % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}
   \newcommand{\xxtsep}{0em}%
+  \def\xxt{\xiaoxiaoti}%定义一个缩写。因为在表格中，如果总写 \xiaoxiaoti，字数太多。影响阅读。
 }{%
 }
 
@@ -262,4 +265,14 @@
 %---------------------------
 \newcommand{\zhuyi}{\textbf{注意} \hspace{1em}}
 \newcommand{\zhongdian}[1]{\textbf{#1}} % 重点（内容）
+
+\newcommand{\shushi}[3]{% 竖式。
+    % 注意，不要在 tblr 中调用此命令。只能在 tabular 中使用。
+    \renewcommand\arraystretch{0.8}
+    $\begin{array}[t]{r@{\;}r@{\quad}r}
+        && #1 \\[-0.3em]
+        #2 &  \vstretch{1.1}{\big)}\mkern-7.3mu & #3 \\
+        \cline{2-3}
+    \end{array}$
+}
 
