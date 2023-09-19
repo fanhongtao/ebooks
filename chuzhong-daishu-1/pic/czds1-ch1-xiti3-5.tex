@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \pos/\text in {0/-9, 0.5/-4, 1/\hphantom{+}0, 1.5/+6, 2/+9, 2.5/+12} {
+        \draw (0, \pos) node {$\text$} (0.4, \pos)[->] --(1, \pos);
+        \draw (1.1, \pos) -- (1.5, \pos);
+        \draw [->] (1.6, \pos) -- (3, \pos);
+    }
+    \node at (1.5, 3) {$-(-9)$};
+    \node at (3.3, 0.5) {$+5$};
+
+    \draw (1.6, 1.5) ellipse
+        [x radius=1.1,y radius=2];
+
+    \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (-0.5, 2.5) -- (-0.5, 0)
+        node [pos=0.5, left=1em, align=center] {输\\入};
+    \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (3.8, 0) -- (3.8, 2.5)
+        node [pos=0.5, right=1em, align=center] {输\\出};
+\end{tikzpicture}
