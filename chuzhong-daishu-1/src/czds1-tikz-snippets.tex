@@ -62,3 +62,22 @@
                     amplitude=0.3cm,segment length=2mm}}},
 }
 
+
+% 绘制一个箭头。
+% 共有四个参数：
+%   1. （箭头下部矩形）的底的长度
+%   2. （箭头下部矩形）的高的长度
+%   3. （箭头上部三角形）的底的长度
+%   4. （箭头上部三角形）的高的长度
+% 调用的例子：
+%   \draw [fill=white] (0, 0) pic {arrow={.2}{.3}{.4}{.2}};
+%   \draw [red, thick, pattern=dots] (0, 0) pic [rotate=90] {arrow={.2}{.3}{.4}{.2}};
+\tikzset{
+    pics/arrow/.style n args={4}{
+      code = {
+        \filldraw [pic actions] (-#1/2, 0) -- (#1/2, 0) -- (#1/2, #2)
+            -- (#3/2, #2) -- (0, #2+#4)
+            -- (-#3/2, #2) -- (-#1/2, #2)
+            -- cycle;
+    }}}
+

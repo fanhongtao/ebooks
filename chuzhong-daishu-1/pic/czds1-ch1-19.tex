@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+    \draw (0, 5.2) -- (0, 0) -- (4, 0);
+    \fill [pattern = dots] (0, 0) rectangle (4, 2);
+    \draw [dashed] (0, 3.5) -- (4, 3.5) node [right] {原水面位置};
+    \draw (0, 2) -- (4, 2) node [right, align=center] {2 小时后\\水面位置};
+    \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (-0.1, 3.5) -- (-0.1, 2)
+        node [pos=0.5, left=1em] {6 厘米};
+    \draw [fill=white] (2.1, 3.4) pic [rotate=180] {arrow={.2}{.4}{.4}{.2}};
+\end{tikzpicture}
