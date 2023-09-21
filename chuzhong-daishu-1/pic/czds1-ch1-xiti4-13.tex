@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \pos/\text in {0/-20, 0.5/-5, 1/\hphantom{+}0, 1.5/+1, 2/+4, 2.5/+8, 3/+10} {
+        \draw (0, \pos) node {$\text$} (0.4, \pos)[->] -> (3.5, \pos);
+    }
+    \node at (1.8, 3.3) {$\div(-5)$};
+    \node at (4.0, 1.5) {$-\frac{1}{5}$};
+
+    \draw (0, 1.5) ellipse [x radius=0.9, y radius=2];
+    \draw (3.7, 1.5) ellipse [x radius=0.9, y radius=2];
+\end{tikzpicture}
