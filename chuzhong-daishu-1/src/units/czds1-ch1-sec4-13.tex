@@ -1,0 +1,147 @@
+\subsection{有理数的乘方}\label{subsec:1-13}
+
+我们来计算：
+1. 边长是 7 厘米的正方形的面积；
+2. 棱长是 5 厘米的正方体的体积（图 \ref{fig:1-20}）。
+\begin{align*}
+    & 7 \times 7 = 49 \; (\text{平方厘米}); \\
+    & 5 \times 5 \times 5 = 125 \; (\text{立方厘米}) \juhao
+\end{align*}
+
+$7 \times 7$，$5 \times 5 \times 5$ 都是相同因数的乘法。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \draw [step=0.5] (0, 0) grid (3.5, 3.5);
+        \draw [step=0.5] (6, 1) pic {cubes={0}{2.5}{0}{2.5}{0}{2.5}};
+    \end{tikzpicture}
+    \caption{}\label{fig:1-20}
+\end{figure}
+
+为了简便起见，相同的因数相乘，可以只写一个因数，而在它的右上角写上相同的因数的个数。
+例如，$7 \times 7$ 记作 $7^2$，$5 \times 5 \times 5$ 记作 $5^3$。
+
+同样，$(-2)(-2)(-2)(-2)$ 记作 $(-2)^4$，
+$\dfrac{3}{4} \times \dfrac{3}{4} \times \dfrac{3}{4} \times \dfrac{3}{4} \times \dfrac{3}{4}$
+记作 $\left(\dfrac{3}{4}\right)^5$。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）$8 \times 8 \times 8$ 怎样记？}
+
+\xiaoti{（口答）$(-6)(-6)(-6)(-6)$ 怎样记？}
+
+\xiaoti{（口答）$0.1^2$ 表示什么意思？}
+
+\xiaoti{（口答）$\left(-\dfrac{2}{5}\right)^3$ 表示什么意思？}
+
+\end{xiaotis}
+\lianxijiange
+
+$n$ 个相同的因数相乘，即
+\begin{minipage}[t]{6em}
+    $a \cdot a \cdot a \cdot \cdots \cdot a$ \\[0.3em]
+    \hspace*{0.3em}\begin{tikzpicture}[>=Stealth]
+        \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (-1.0, -0.2) -- (1.0, -0.2)
+            node [pos=0.5, below=0.3em, align=center] {$n$ 个};
+    \end{tikzpicture}
+\end{minipage}
+记作 $a^n$。
+
+这种求 $n$ 个相同因数的积的运算，叫做\zhongdian{乘方}，乘方的结果叫做\zhongdian{幂}。
+在 $a^n$ 中， $a$ 叫做\zhongdian{底数}，$n$ 叫做\zhongdian{指数}，$a^n$ 读作 $a$ 的 $n$ 次方。
+$a^n$ 看作是 $a$ 的 $n$ 次方的结果时，也可读作 $a$ 的 $n$ 次幂。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        %\draw (0, 0) rectangle (-1, 1) node [pos=0.5] {$a^n$};
+        \node [rectangle, minimum size=1cm, draw=black] {$a^n$};
+        \draw [->] (-1, 0) -- (-0.5, 0) node [pos=0, left] {幂};
+        \draw [->] (1, 0.1) -- (0.2, 0.1) node [pos=0, right] {指数};
+        \draw [->] (-0.1, -1) -- (-0.1, -0.2) node [pos=0, below] {底数};
+    \end{tikzpicture}
+\end{figure}
+
+例如，在 $9^4$ 中，底数是 $9$，指数是 $4$， $9^4$ 读作 $9$ 的 $4$ 次方，或 $9$ 的 $4$ 次幂。
+
+
+\lianxi
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{（口答） $10^2$ 读作什么？ 其中底数是什么， 指数是什么？}
+
+\xiaoti{（口答） $7^3$ 读作什么？ 其中 $3$ 叫什么数， $7$ 叫什么数？}
+
+\end{xiaotis}
+
+\lianxijiange
+
+二次方也叫\zhongdian{平方}， 三次方也叫\zhongdian{立方}。
+象上面的 $10^2$ 可以读作 “10 的平方”， $7^3$ 可以读作 “7 的立方”。
+
+一个数可以看作这个数本身的一次方。例如， 5 就是 $5^1$。 指数 1 通常省略不写。
+
+\lianxi
+\begin{xiaotis}
+\setcounter{cntxiaoti}{0}
+
+\xiaoti{计算：$2^3$，\; $3^2$，\; $0.1^3$，\; $5^4$，\; $\left(\dfrac{2}{3}\right)^2$，\; $1.2^3$，\; $\left(1\dfrac{1}{2}\right)^3$，\; $9^1$ 。}
+
+\xiaoti{计算：\begin{tblr}[t]{columns={4em, l, $$}}
+    (+2)^1,  &  (+2)^2, &  (+2)^3, &  (+2)^4, &  (+2)^5; \\
+    (-2)^1,  &  (-2)^2, &  (-2)^3, &  (-2)^4, &  (-2)^5 \juhao
+\end{tblr}}
+
+\end{xiaotis}
+
+\lianxijiange
+
+
+想一想，正数的 2 次幂、3 次幂、…… 是正数还是负数？
+负数的 2 次幂、3 次幂、…… 是正数还是负数？有些什么规律？
+
+\zhongdian{正数的任何次幂都是正数；负数的奇次幂是负数，负数的偶次幂是正数。}
+
+
+\liti[0] 计算：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={14em, l, colsep=0pt}}
+        \xxt{$(-3)^4$；} & \xxt{$-3^4$；} \\
+        \xxt{$3 \times 2^3$；} & \xxt{$(3 \times 2)^3$；} \\
+        \xxt{$-2 \times 3^4$；} & \xxt{$(-2 \times 3)^4$；} \\
+        \xxt{$8 \div 2^2$；} & \xxt{$(8 \div 2)^2$。}
+    \end{tblr}
+
+\setcounter{cntxiaoxiaoti}{0}
+\jie \begin{tblr}[t]{columns={l, colsep=0pt}}
+    \xxt{$(-3)^4 = 81$；} & \xxt{$-3^4 = -81$；} \\
+    \xxt{$3 \times 2^3 = 3 \times 8 = 24$；} & \xxt{$(3 \times 2)^3 = 6^3 = 216$；} \\
+    \xxt{$-2 \times 3^4 = -2 \times 81 = -162$；} & \xxt{$(-2 \times 3)^4 = (-6)^4 = 1296$；} \\
+    \xxt{$8 \div 2^2 = 8 \div 4 = 2$；} & \xxt{$(8 \div 2)^2 = 4^2 = 16$。}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\zhuyi 乘方与乘除在一起的时候，要先算乘方，再算乘除。如果有括号，就先算括号里面的。
+
+\lianxi
+
+计算：
+
+\begin{xiaoxiaotis}
+\setcounter{cntxiaoxiaoti}{0}
+
+    \begin{tblr}{columns={10em, l, colsep=0pt}}
+        \xxt{$-8^2$；} & \xxt{$(-8)^2$；} & \xxt{$4 \times 2^2$；}\\
+        \xxt{$(4 \times 2)^2$；} & \xxt{$-3 \times 2^3$；} & \xxt{$(-3 \times 2)^3$；}\\
+        \xxt{$(6 \div 3)^2$；} & \xxt{$6 \div 3^2$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+

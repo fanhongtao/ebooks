@@ -81,3 +81,39 @@
             -- cycle;
     }}}
 
+
+% 绘制立方体 （ 代码改编自 https://tex.stackexchange.com/a/48776/121799 ）
+% 依赖的库：
+%   \usetikzlibrary{3d}
+% 共有六个参数：
+%   1. X 的最小值
+%   2. X 的最大值
+%   3. Y 的最小值
+%   4. Y 的最大值
+%   5. Y 的最小值
+%   6. Y 的最大值
+% 调用举例：以步进 0.5，使用粗线条，绘制一个 3 * 2 * 2 的立方体。
+%   \draw [step=0.5, thick] (0, 0) pic {cubes={0}{3}{0}{2}{0}{2}};
+\tikzset{
+    pics/cubes/.style n args={6}{
+      code = {
+        \def\XGridMin{#1}
+        \def\XGridMax{#2}
+        \def\YGridMin{#3}
+        \def\YGridMax{#4}
+        \def\ZGridMin{#5}
+        \def\ZGridMax{#6}
+         %
+        \begin{scope}[canvas is xy plane at z=\ZGridMax]
+            \draw [pic actions] (\XGridMin,\YGridMin) grid (\XGridMax,\YGridMax);
+        \end{scope}
+        \begin{scope}[canvas is yz plane at x=\XGridMax]
+            \draw [pic actions] (\YGridMin,\ZGridMin) grid (\YGridMax,\ZGridMax);
+        \end{scope}
+        \begin{scope}[canvas is xz plane at y=\YGridMax]
+            \draw [pic actions] (\XGridMin,\ZGridMin) grid (\XGridMax,\ZGridMax);
+        \end{scope}
+    }
+  }
+}
+
