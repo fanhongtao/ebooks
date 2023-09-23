@@ -138,7 +138,7 @@
 
 \xiaoti{填写下表: \\
     \begin{tblr}{hlines, vlines,
-        columns={2em, c, $$},
+        columns={3em, c, $$},
         column{1} = {6em, mode=text},
         rows = {rowsep+ = 5pt},
     }
@@ -173,9 +173,12 @@
 \xiaoti{农业中学气象小组每天在早晨 8 时测量室外温度（摄氏），记录如下：\\
     \hspace*{2em}温度单位：℃  \makebox[28em][r]{1982年11月} \\
     \begin{tblr}{hlines, vlines,
-            columns={2em, c, $$},
-            column{1} = {mode=text},
-            column{12} = {4em, mode=text},
+            hline{1, 7} = {1pt, solid},
+            hline{3, 5} = {1}{-}{},
+            hline{3, 5} = {2}{-}{},
+            vline{1, 13} = {1pt, solid, abovepos = 1, belowpos = 1},
+            columns={colsep+ = 0.2em, c, $$},
+            column{1, 12} = {mode=text},
         }
             日期  & 1   & 2   & 3   & 4   & 5   & 6    & 7  & 8   & 9    & 10   & 上旬平均 \\
             温度  & 6   & 6.5 & 7   & 4   & 2.5 & 3    & 1  & 1.5 & -2   & -3   & \\
