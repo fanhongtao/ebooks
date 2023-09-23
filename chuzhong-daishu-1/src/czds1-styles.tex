@@ -141,6 +141,7 @@
 \newcommand{\lianxi}{%
   \vspace{1em}%
   {\large\textbf{练 \; 习}}\par
+  \setcounter{cntxiaoti}{0}
 }
 
 \newcounter{cntxiti}               % “习题”的计数器
@@ -167,6 +168,8 @@
 
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
+\counterwithin*{cntxiaoti}{cntxiti}
+\counterwithin*{cntxiaoti}{cntfuxiti}
 \counterwithin*{cntxiaoxiaoti}{cntliti}
 
 \newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
