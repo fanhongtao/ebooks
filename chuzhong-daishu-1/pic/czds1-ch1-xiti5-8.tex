@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \text/\x/\y in {-7/0/0, -5/0.3/0.6, -4/0.6/1.2, 4/0.8/1.8, 5/0.6/2.4, 7/0.3/3.0} {
+        \node at (\x, \y) {$\text$};
+    }
+    \draw (0, 1.5) ellipse [x radius=1.2, y radius=2.2];
+
+    \foreach \text/\x/\y in {-16/4/1.0, -25/5/0.9, -49/6/1.0, 16/4.1/1.8, 25/5.1/1.9, 49/6.1/1.8} {
+        \node at (\x, \y) {$\text$};
+    }
+    \draw (5.0, 1.4) ellipse [x radius=2.0, y radius=1.1];
+
+    \draw [->] (0.7, 2.4) -- (4.8, 2.0) node [pos=0.5, above, rotate=-8] {平方};
+\end{tikzpicture}
