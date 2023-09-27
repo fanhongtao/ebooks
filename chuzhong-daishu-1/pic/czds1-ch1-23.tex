@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=0.3]
+    \draw (0, 0) -- (0, 10);
+    \foreach \y in {1, ..., 9} {
+        \draw (-0.3, \y) -- (0, \y);
+    }
+    \foreach \y in {0, 5, 10} {
+        \draw (-0.5, \y) -- (0, \y);
+    }
+    \foreach \y/\text in {0/1.55, 4/1.59, 5/1.60, 6/1.61, 10/1.65} {
+        \draw (-0.3, \y) node [left] {\tiny $\text$};
+    }
+    \filldraw [pattern=north east lines, thick] (0, 4.5) rectangle (0.5, 5.5);
+
+    \foreach \y in {4.5, 5.5} {
+        \draw (-0.3, \y) -- (0, \y);
+    }
+    \foreach \y/\text in {4.5/1.595, 5.5/1.605} {
+        \draw (0.5, \y) node [right] {\tiny $\text$};
+    }
+\end{tikzpicture}
