@@ -19,9 +19,9 @@
         % 绘制刻度
         \foreach \y in {1,...,7} {
             \ifnum \y<3
-                \def\value{\the\numexpr5*(3-\y)};
+                \def\value{\the\numexpr5*(3-\y)}
             \else
-                \def\value{\the\numexpr5*(\y-3)};
+                \def\value{\the\numexpr5*(\y-3)}
             \fi
             \draw (-0.2,0.5+0.7*\y) -- (-0.4,0.5+0.7*\y) node[anchor=east] {$\value$};
             \ifnum \y < 7
@@ -32,7 +32,7 @@
         }
 
         % 绘制水银柱
-        \def\h{\the\numexpr0.5+2.1+0.14*#1};
+        \def\h{\the\numexpr0.5+2.1+0.14*#1}
         \draw [black!80, fill] (135:0.3) arc (135:405:0.3)
             to [out=135, in=270] (0.15, 0.4)
             -- (0.15, \h) -- (-0.15, \h) -- (-0.15, 0.4)
