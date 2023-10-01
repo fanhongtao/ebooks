@@ -2,6 +2,58 @@
 % 图形相关的项
 % 需要 TexLive 2020 版本
 
+% 自定义填充格式，用于实现绘制阴影
+% TikZ 提供的 north east lines 等默认 pattern, 或 Lines ，有个问题：使用不同的PDF阅读器，会得到不同的效果。
+% 如：
+%       VSCode 中 LaTeX WorkShop 看到的是线段，
+%       SumatraPDF 看到的是连贯的线条。
+% 所以这里采用自定义的格式。
+% 下面的代码基本是将 Lines 的代码修改而成。
+% Lines实现中，bounding box 是 (-0.5\distance, -0.5\distance) 到 (0.5\distance, 0.5\distance)
+% 这里的 TikZ 实现是 (0, 0) 到 (\distance, \distance)，按说应该没有区别，但实际效果确有不同。
+\pgfdeclarepattern{
+  name=mylines,
+  parameters={
+      \pgfkeysvalueof{/pgf/pattern keys/distance},
+      \pgfkeysvalueof{/pgf/pattern keys/angle},
+      \pgfkeysvalueof{/pgf/pattern keys/xshift},
+      \pgfkeysvalueof{/pgf/pattern keys/yshift},
+      \pgfkeysvalueof{/pgf/pattern keys/line width},
+  },
+  bottom left={%
+    \pgfpoint
+      {0}%
+      {0}},
+  top right={%
+    \pgfpoint
+      {(\pgfkeysvalueof{/pgf/pattern keys/distance})}%
+      {(\pgfkeysvalueof{/pgf/pattern keys/distance})}},
+  tile size={%
+    \pgfpoint
+      {\pgfkeysvalueof{/pgf/pattern keys/distance}}%
+      {\pgfkeysvalueof{/pgf/pattern keys/distance}}},
+  tile transformation={%
+    \pgftransformshift{%
+      \pgfpoint
+        {\pgfkeysvalueof{/pgf/pattern keys/xshift}}%
+        {\pgfkeysvalueof{/pgf/pattern keys/yshift}}}%
+    \pgftransformrotate{\pgfkeysvalueof{/pgf/pattern keys/angle}}},
+  defaults={
+    distance/.initial=3pt,
+    angle/.initial=0,
+    xshift/.initial=0pt,
+    yshift/.initial=0pt,
+    line width/.initial=\the\pgflinewidth,
+  },
+  code={%
+    \pgfsetlinewidth{\pgfkeysvalueof{/pgf/pattern keys/line width}}%
+    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}%
+    \pgfpathlineto{\pgfpoint{(\pgfkeysvalueof{/pgf/pattern keys/distance})}{0pt}}%
+    \pgfusepath{stroke}%
+  },
+}
+
+
 % 绘制温度计(温度范围：-10 ~ 20 ℃)
 \tikzset{
     % 参数1: 显示的温度。

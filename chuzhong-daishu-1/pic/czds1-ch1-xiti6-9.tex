@@ -1,0 +1,89 @@
+{
+\tdplotsetmaincoords{70}{0}
+\begin{tikzpicture}[tdplot_main_coords,scale=1,line cap=butt,line join=round,>=Stealth]
+    \def\r{1.5}
+    \def\h{3}
+    \begin{scope} % 绘制圆柱体
+        \draw[
+            left color=gray!50,
+            right color=gray!30,
+            middle color=white,
+            fill opacity=0.6,
+            pattern={mylines[angle=90, distance={10pt}]},
+        ]
+            plot[smooth,variable=\t,domain=\tdplotmainphi:\tdplotmainphi-180]
+                ({\r*cos(\t)},{\r*sin(\t)},\h)
+            -- plot[smooth,variable=\t,domain=\tdplotmainphi-180:\tdplotmainphi]
+                ({\r*cos(\t)},{\r*sin(\t)},0) -- cycle;
+        \draw plot[smooth,variable=\t,domain=0:360] ({\r*cos(\t)},{\r*sin(\t)},\h);
+
+        \coordinate (O) at (0, 0, \h);
+        \coordinate (A) at ({\r*cos(-50}, {\r*sin(-50)}, \h);
+        \coordinate (B) at ({\r*cos(40}, {\r*sin(40)}, \h);
+        \coordinate (C) at ({\r*cos(130}, {\r*sin(130)}, \h);
+        \coordinate (D) at ({\r*cos(220}, {\r*sin(220)}, \h);
+        \coordinate (E) at ({\r*cos(180}, {\r*sin(180)}, \h);
+
+        \coordinate (O') at (0, 0, 0);
+        \coordinate (A') at ({\r*cos(-50}, {\r*sin(-50)}, 0);
+
+        \draw ($(O)!1.5!(C)$) -- (C);
+        \draw [dashed] (C) -- (A);
+        \draw (A) -- ($(O)!2.5!(A)$);
+
+        \draw (A') -- ($(O')!2.5!(A')$);
+        \draw [<->] ($(O)!2.4!(A)$) -- ($(O')!2.4!(A')$)
+            node [pos=0.5, fill=white, inner sep=1pt] {\scriptsize 高};
+
+        \draw ($(O)!1.5!(B)$) -- (B);
+        \draw [dashed] (B) -- (D);
+        \draw (D) -- ($(O)!1.5!(D)$);
+
+        \draw [->] (O) -- (E)
+            node [pos=0.4, above, fill=white, inner sep=1pt] {\scriptsize 底半径};
+    \end{scope}
+
+    \begin{scope}[xshift=15em] % 绘制圆锥体
+        \coordinate (O) at (0, 0, \h);
+        \coordinate (A) at ({\r*cos(310}, {\r*sin(310)}, \h);
+
+        \coordinate (O') at (0, 0, 0);
+        \coordinate (A') at ({\r*cos(-50}, {\r*sin(-50)}, 0);
+        \coordinate (B') at ({\r*cos(40}, {\r*sin(40)}, 0);
+        \coordinate (C') at ({\r*cos(130}, {\r*sin(130)}, 0);
+        \coordinate (D') at ({\r*cos(220}, {\r*sin(220)}, 0);
+        \coordinate (E') at ({\r*cos(180}, {\r*sin(180)}, 0);
+
+        \draw (O) -- ($(O)!2.5!(A)$);
+
+        \draw ($(O')!1.5!(C')$) -- (C');
+        \draw [dashed] (C') -- (A');
+        \draw (A') -- ($(O')!2.5!(A')$);
+        \draw [<->] ($(O)!2.4!(A)$) -- ($(O')!2.4!(A')$)
+            node [pos=0.5, fill=white, inner sep=1pt] {\scriptsize 高};
+
+        \draw ($(O')!1.5!(B')$) -- (B');
+        \draw [dashed] (B') -- (D');
+        \draw (D') -- ($(O')!1.5!(D')$);
+
+        \draw [dashed] plot[smooth,variable=\t,domain=\tdplotmainphi+20:\tdplotmainphi+160] ({\r*cos(\t)},{\r*sin(\t)},0);
+        \draw[
+            left color=gray!50,
+            right color=gray!30,
+            middle color=white,
+            fill opacity=0.6,
+            %pattern={mylines[angle=90, distance={5pt}]},
+        ]
+            plot[smooth,variable=\t,domain=\tdplotmainphi:\tdplotmainphi-180]
+                ({\r*cos(\t)},{\r*sin(\t)}, 0)
+            -- plot[smooth,variable=\t,domain=\tdplotmainphi-180:\tdplotmainphi]
+                (0,0, \h) -- cycle;
+
+        \foreach \t in {200, 210, ..., 340} % 没有找到根据 \tdplotmainphi 循环的方法，暂时只能写固定的数字
+            \draw [gray] ({\r*cos(\t)},{\r*sin(\t)}, 0) -- (0, 0, \h);
+
+        \draw [->] (O') -- (E')
+            node [pos=0.5, above, fill=white, inner sep=1pt] {\scriptsize 底半径};
+    \end{scope}
+\end{tikzpicture}
+}
