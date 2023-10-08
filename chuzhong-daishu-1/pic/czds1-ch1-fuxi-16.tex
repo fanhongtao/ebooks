@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\angle}{45}
+    \pgfmathsetmacro{\len}{5}
+    \pgfmathsetmacro{\r}{1}
+
+    \coordinate (O) at (0, 0);
+    \coordinate (O') at ({\len * cos(\angle)},  {\len * sin(\angle)});
+    \coordinate (dA) at ({\r * cos(90 + \angle)}, {\r * sin(90 + \angle)});
+    \coordinate (dB) at ({\r * cos(270 + \angle)}, {\r * sin(270 + \angle)});
+
+    \draw (O) circle (\r);
+    \draw [pattern={mylines[angle=45, distance={4pt}]}]
+        ($(O) + (dA)$) -- ($(O') + (dA)$)
+        arc [start angle=90 + \angle, end angle=-90 + \angle, radius=\r]
+        -- ($(O) + (dB)$)
+        arc [start angle=-90 + \angle, end angle=90 + \angle, radius=\r];
+
+    \draw (-1.5*\r, 0) -- (-\r, 0)
+         (\r, 0) -- (1.5*\r, 0);
+    \draw [dashed] (-\r, 0) -- (\r, 0);
+    \draw (0, -1.5*\r) -- (0, -\r)
+         (0, \r) -- (0, 1.5*\r);
+    \draw [dashed] (0, -\r) -- (0, \r);
+
+    \begin{scope}[xshift=15em, >=Stealth]
+        \draw (0, 0) circle (\r);
+        \draw (-1.5*\r, 0) -- (-\r, 0)
+             (\r, 0) -- (1.5*\r, 0);
+        \draw [dashed] (-\r, 0) -- (\r, 0);
+        \draw (0, -1.5*\r) -- (0, -\r)
+            (0, \r) -- (0, 1.5*\r);
+        \draw [dashed] (0, -\r) -- (0, \r);
+
+        \coordinate (X) at ({\r * cos(\angle)}, {\r * sin(\angle)});
+        \coordinate (O) at (0, 0);
+        \draw [<->] (X) -- ($(X)!2!(O)$);
+        \draw (X) -- ($(X)!-1.5!(O)$) -- +(2, 0)
+            node [pos=0.5, above] {$\phi 30\,^{+0.03}_{-0.02}$};
+    \end{scope}
+\end{tikzpicture}

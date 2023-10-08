@@ -1,0 +1,20 @@
+\begin{tikzpicture}[
+    >=Stealth,
+    skip loop/.style={to path={-- ++(#1, 0) |- (\tikztotarget)}},
+]
+    \graph [grow down sep = 2em,
+        nodes={draw, rectangle, minimum width=7em},
+        decision/.style={draw, diamond, aspect=4, inner sep=1pt},
+    ]{
+        sub/"$-2$" [label=above:{输入}] ->
+        add/"$+ (-1.5)$" ->
+        div/"$\div (+2)$" ->
+        decide/"$> -1.6$" [decision, label=3:{否}] ->["是"]
+        stop/"停" [label=below:{输出}];
+    };
+
+    \graph[no placement] {
+        p1 [coordinate, below=3mm of sub];
+        (decide.east) -> [skip loop=10mm] (p1);
+    };
+\end{tikzpicture}
