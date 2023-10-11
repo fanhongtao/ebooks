@@ -169,3 +169,36 @@
   }
 }
 
+
+% 绘制两端有竖线的线段
+\tikzset{
+  xianduan/.style={xianduan/.cd, #1, wrapper},
+  xianduan/.cd,
+    above/.store in=\above,  above=0.5em,
+    below/.store in=\below,  below=0.5em,
+    wrapper/.style={/tikz/.cd, to path={
+        ($(\tikztostart)!\above!90:(\tikztotarget)$)  -- ($(\tikztostart)!\below!-90:(\tikztotarget)$)
+        ($(\tikztotarget)!\above!-90:(\tikztostart)$) -- ($(\tikztotarget)!\below!90:(\tikztostart)$)
+        (\tikztostart) -- (\tikztotarget) \tikztonodes
+    }}
+}
+
+
+% 绘制垂足
+\tikzset{
+    chuizu/.style={chuizu/.cd, #1, wrapper},
+    chuizu/.cd,
+        size/.store in=\size,   size=0.5em,
+        % （从上至下画线时）垂足在显示的方位：right表示显示在右侧（缺省值），left表示在左侧）
+        direction/.is choice,
+            direction/right/.code = {\def\angle{-90}},
+            direction/left/.code  = {\def\angle{90}},
+            direction=right,
+        wrapper/.style={/tikz/.cd, to path={
+            ($(\tikztotarget)!\size!0:(\tikztostart)$)
+                -- ($(\tikztotarget)!1.414*\size!0.5*\angle:(\tikztostart)$)
+                -- ($(\tikztotarget)!\size!\angle:(\tikztostart)$)
+            (\tikztostart) -- (\tikztotarget) \tikztonodes
+        }}
+}
+

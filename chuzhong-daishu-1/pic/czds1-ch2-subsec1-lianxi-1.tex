@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth]
+    \begin{scope}
+        \draw [pattern={mylines[angle=45, distance={5pt}]}] (0, 0) circle (2);
+        \draw [fill=white] (0, 0) circle (1);
+        \draw [loosely dash dot] (2.5, 0) -- (-2.5, 0) (0, -2.5) -- (0, 2.5);
+        \draw [->] (0, 0) -- (120:2) node [pos=0.3, left] {$R$};
+        \draw [->] (0, 0) -- (320:1) node [pos=0.3, right] {$r$};
+        \node at (0, -3) {（1）};
+    \end{scope}
+
+    \begin{scope}[xshift=4cm, every node/.style={fill=white}]
+        \draw [pattern={mylines[angle=135, distance={5pt}]}] (0, -2) rectangle (6, 2);
+        \draw [fill=white] (1, -1) rectangle (5, 1);
+        \draw [<->] (0, 0) -- (1, 0) node [midway, above] {$x$};
+        \draw [<->] (5, 0) -- (6, 0) node [midway, above] {$x$};
+        \draw [<->] (3, -2) -- (3, -1) node [midway, right] {$x$};
+        \draw [<->] (3,  2) -- (3,  1) node [midway, right] {$x$};
+        \draw [<->] (0, -2.4) to [xianduan={above=1em}] node [midway] {30} (6, -2.4);
+        \draw [<->] (6.4, -2) to [xianduan={above=1em}] node [midway] {20} (6.4, 2);
+        \node at (3, -3) {（2）};
+    \end{scope}
+\end{tikzpicture}

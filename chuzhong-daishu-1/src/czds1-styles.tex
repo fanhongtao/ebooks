@@ -178,6 +178,7 @@
 \counterwithin*{cntxiaoti}{cntxiti}
 \counterwithin*{cntxiaoti}{cntfuxiti}
 \counterwithin*{cntxiaoxiaoti}{cntliti}
+\newcommand{\resetxxt}{\setcounter{cntxiaoxiaoti}{0}} % 重置 小小题的计数器
 
 \newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
 \newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
@@ -285,5 +286,14 @@
         #2 &  \vstretch{1.1}{\big)}\mkern-7.3mu & #3 \\
         \cline{2-3}
     \end{array}$
+}
+
+%------------------------
+\NewTblrTheme{nocaption}{
+  \DefTblrTemplate{caption}{default}{}
+  \DefTblrTemplate{caption-tag}{default}{}
+  \DefTblrTemplate{caption-sep}{default}{}
+  \DefTblrTemplate{contfoot-text}{default}{未完待续}
+  \DefTblrTemplate{conthead-text}{default}{（续表）}
 }
 
