@@ -1,0 +1,263 @@
+\xiti
+
+\begin{xiaotis}
+
+\xiaoti{填写下表：}
+
+% 绘制立方体的命令
+% 共有六个参数：
+%   1. 长
+%   2. 长 的 字母
+%   3. 宽
+%   4. 宽 的 字母
+%   5. 高
+%   6. 高 的 字母
+\newcommand{\changfangti}[6]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\x}{#1}
+        \pgfmathsetmacro{\z}{#3}
+        \pgfmathsetmacro{\y}{#5}
+        \draw (0,0,0) -- (\x,0,0) -- (\x,\y,0) -- (0,\y,0) -- cycle;
+        \draw (\x,0,0) -- (\x,\y,0) -- (\x,\y,-\z) -- (\x,0,-\z) -- cycle;
+        \draw (0,\y,0) -- (0,\y,-\z) -- (\x,\y,-\z) -- (\x,\y,0) -- cycle;
+        \draw [dashed] (0,0,0) -- (0,0,-\z) -- (0,\y,-\z);
+        \draw [dashed] (0,0,-\z) -- (\x,0,-\z);
+
+        \node at (\x/2,   0, 0.4)        {$#2$};
+        \node at (\x+0.2, 0, -\z/2)      {$#4$};
+        \node at (\x+0.1, \y/2, -\z-0.2) {$#6$};
+    \end{tikzpicture}
+}
+
+\def\lend{6em}
+\begin{longtblr}[theme=nocaption]{
+    hlines, vlines,
+    colspec={cclcc},
+    cells={valign=m},
+    rowhead = 1,
+}
+    名称 & 图形 &  文字表示的公式 & 字母的意义 & {字母表示\\的公式} \\
+    长方体
+        & \begin{minipage}[c]{3cm}
+            \changfangti{2}{a}{1.2}{b}{0.3}{c}
+          \end{minipage}
+        & $\text{体积} = \text{长} \times \text{宽} \times \text{高}$
+        & \begin{minipage}[c][6em]{\lend}
+            $V$ —— 体积 \\
+            $a$ —— 长 \\
+            $b$ —— 宽 \\
+            $c$ —— 高
+          \end{minipage}
+        &  \\
+    正方体
+        & \begin{minipage}[c]{2cm}
+            \changfangti{1}{a}{1}{a}{1}{a}
+          \end{minipage}
+        & $\text{体积} = \text{棱长}^3$
+        & \begin{minipage}[c][6em]{\lend}
+            $V$ —— 体积 \\
+            $a$ —— 棱长
+          \end{minipage}
+        &  \\
+    圆柱
+        & \begin{minipage}[c]{2cm}
+            \input{../pic/czds1-ch2-xiti7-1-yuanzhu}
+          \end{minipage}
+        & $\text{体积} = \text{底面积} \times \text{高}$
+        & \begin{minipage}[c][6em]{\lend}
+            $V$ —— 体积 \\
+            $r$ —— 底半径 \\
+            $h$ —— 高
+          \end{minipage}
+        &  \\
+    圆锥
+        & \begin{minipage}[c]{2cm}
+            \input{../pic/czds1-ch2-xiti7-1-yuanzhui}
+          \end{minipage}
+        & $\text{体积} = 、\dfrac{1}{3} \times \text{底面积} \times \text{高}$
+        & \begin{minipage}[c][6em]{\lend}
+            $V$ —— 体积 \\
+            $r$ —— 底半径 \\
+            $h$ —— 高
+          \end{minipage}
+        &  \\
+    球
+        & \begin{minipage}[c]{2cm}
+            \input{../pic/czds1-ch2-xiti7-1-qiu}
+          \end{minipage}
+        & $\text{体积} = 、\dfrac{4}{3} \pi \times \text{球半径}^3$
+        & \begin{minipage}[c][6em]{\lend}
+            $V$ —— 体积 \\
+            $r$ —— 球半径
+          \end{minipage}
+        &  \\
+\end{longtblr}
+
+\xiaoti{练习本每本定价 9 分， 铅笔每支定价 6 分。}
+\begin{xiaoxiaotis}
+
+    \xxt{买 5 本练习本和 4 支铅笔共需多少钱？}
+
+    \xxt{买 2 本练习本和 $y$ 支铅笔共需多少钱？}
+
+    \xxt{买 $x$ 本练习本和 $3$ 支铅笔共需多少钱？}
+
+    \xxt{买 $x$ 本练习本和 $y$ 支铅笔共需多少钱？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用代数式表示：}
+\begin{xiaoxiaotis}
+
+    \xxt{ $a$ 与 $b$ 的和乘以 $6$ 的积；}
+
+    \xxt{$x$ 与 $y$ 的积的 $2$ 倍；}
+
+    \xxt{$a$，$b$ 两数的积与 $1$ 的和；}
+
+    \xxt{$a$ 与 $5$ 的差除以 $b$ 的商。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用代数式表示：}
+\begin{xiaoxiaotis}
+
+\begin{enhancedline}
+    \xxt{$x$ 的 $1\dfrac{1}{2}$ 倍与 $7$ 的和；}
+
+    \xxt{$y$ 的 $b$ 倍的 $\dfrac{2}{3}$；}
+
+    \xxt{$x$ 如的相反数与 $-2$ 的差；}
+\end{enhancedline}
+
+    \xxt{$a$ 与 $b$ 的和除以 $c$ 的商；}
+
+    \xxt{比 $x$ 与 $y$ 的积大 $13$ 的数；}
+
+    \xxt{比 $a$ 的 $160\%$ 少 $108$ 的数；}
+
+    \xxt{$a$ 除 $b$ 的商与 $c$ 的倒数的差；}
+
+    \xxt{$x$ 平方的 $3$ 倍与 $y$ 的 $25\%$ 的和；}
+
+    \xxt{$m$，$n$ 两数的立方差；}
+
+    \xxt{$m$，$n$ 两数差的立方。}
+\end{xiaoxiaotis}
+
+
+\xiaoti{用代数式表示：}
+\begin{xiaoxiaotis}
+
+    \xxt{比 $a$，$b$ 两数的和的 $2$ 倍大 $c$ 的数；}
+
+    \xxt{$a$，$b$，$c$ 三数和的平方；}
+
+    \xxt{ 比 $a$，$b$ 两数的立方差的 $3$ 倍小 $c$ 的数；}
+
+    \xxt{$a$，$b$，$c$ 三数的立方和减去 $a$，$b$，$c$ 三数的积。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{设字母 $x$ 表示某数，用代数式表示：}
+\begin{xiaoxiaotis}
+
+    \xxt{某数的平方的 2 倍与 13 的和；}
+
+    \xxt{$-3$ 的绝对值与某数的差的 3 倍；}
+
+    \xxt{某数与这个数的相反数的差；}
+
+    \xxt{某数的立方与 3 的差除以这个数的商。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{设甲数为$x$，乙数为 $y$，用代数式表示：}
+\begin{xiaoxiaotis}
+
+    \xxt{甲乙两数乘积的 3 倍；}
+
+    \xxt{甲乙两数和的平方与甲乙两数差的平方的积；}
+
+    \xxt{甲数的 2 倍与乙数除以 3 的差；}
+
+    \xxt{甲乙两数的平方和与甲乙两数乘积的和。}
+\end{xiaoxiaotis}
+
+
+\xiaoti{设甲数为 $x$，用代数式表示乙数：}
+\begin{xiaoxiaotis}
+
+    \xxt{甲数比乙数少 10 ；}
+
+    \xxt{甲乙两数的差为 $-15$ ；}
+
+    \xxt{甲数的 3 倍比乙数多 6 ；}
+
+    \xxt{甲数的 2 倍比乙数少 9 。}
+\end{xiaoxiaotis}
+
+\xiaoti{用代数式表示下列图中阴影部分的面积：}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \input{../pic/czds1-ch2-xiti7-9-1}
+    \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{7cm}
+    \centering
+    \input{../pic/czds1-ch2-xiti7-9-2}
+    \caption*{（2）}
+    \end{minipage}
+    \caption*{第（9）题}
+\end{figure}
+
+
+
+\xiaoti{李庄乡有棉田 $m$ 公顷， 计划每公顷加施化肥 $a$ 千克， 有稻田 $n$ 公顷， 计划每公顷加施化肥 $b$ 千克， 用代数式表示共需化肥的千克数。}
+
+\xiaoti{某县棉花丰收， $m$ 公顷地每公顷产皮棉 $a$ 千克， $n$ 公顷地每公顷产皮棉 $b$千克。用代数式表示平均每公顷产量。}
+
+\xiaoti{某拖拉机厂 8 月份生产手扶拖拉机 $S$ 台， 9 份的产量比 8 月份的2  倍少 5 台， 用代数式表示9 月份的产量。}
+
+\xiaoti{用拖拉机耕地 120 公顷， 原计划每天耕 $x$ 公顷， 需要几天耕完？ 如果每天多耕 5 公顷， 需要几天耕完？ 比原计划提前几天耕完？}
+
+\xiaoti{一个生产小组要制造 $a$ 个零件， 原计划每天制造 $b$ 个， 要多少天完成？ 如果每天比原计划多制造 $d$ 个， 可以提前几天完成？}
+
+\xiaoti{一个工了原有工人 $a$ 人， 今年增加了一些科技人员， 人数是原来工人人数的 $6\%$， 现在这个工厂有多少工人？}
+
+\xiaoti{解放前， 贫农李大爷全家辛苦劳动一年， 收获粮食 $m$ 千克，其中 $85\%$ 交纳地租。用代数式表示李大爷剩下粮食的千克数。}
+
+\xiaoti{有浓度为 $20\%$ 的盐水 $n$ 千克。 含纯盐多少千克？ 含水多少千克？}
+
+\xiaoti{某汽车修配厂 1980 年装配的汽车数比 1970 年增加 5 倍， 已知这个厂 1970 年装配的汽车是 $Q$ 辆， 用代数式表示 1980 年装配的汽车数。}
+
+\xiaoti{顺次大 1 的整数， 如 14 、15 、16 ， 叫做连续整数。 三个连续整数里，
+    （1）中间的一个是 $m$， 用代数式表示其他两个；
+    （2） 最大的一个是 $n$，用代数式表示其他两个。
+}
+
+\xiaoti{一列慢车从甲站开往乙站， 每小时走 56 千米； 同时， 一列快车从乙站开往甲站， 每小时走 72 千米。 $t$ 小时后两车相遇。 用代数式表示甲乙两站间的路程。}
+
+\xiaoti{有一片稻田需要灌水，单独用甲抽水机 $a$ 小时可灌完， 单独用乙抽水机 $b$ 小时可灌完。 用代数式表示：}
+\begin{xiaoxiaotis}
+
+    \xxt{单独用甲抽水机， 1 小时能完成任务的几分之几；}
+
+    \xxt{单独用乙抽水机， 1 小时能完成任务的几分之几；}
+
+    \xxt{同时开动甲乙两抽水机， 1 小时能完成任务的几分之几。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{开挖一条渠道， 甲施工队单独挖 $a$ 天可以完成。 甲施工队挖了 3 天， 余下的由其他施工队完成。 用代数式表示余下的任务。}
+
+\end{xiaotis}
+

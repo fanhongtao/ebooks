@@ -1,0 +1,23 @@
+% 使用 tikz-3dplot 绘制圆锥
+\tdplotsetmaincoords{50}{0}
+\begin{tikzpicture}[tdplot_main_coords, >=Stealth, scale=0.7]
+    \pgfmathsetmacro{\r}{1}
+    \pgfmathsetmacro{\h}{3}
+
+    \coordinate (O) at (0, 0, \h);      % 锥顶坐标
+    \coordinate (O') at (0, 0, 0);      % 下底圆心
+    \coordinate (A') at ({\r*cos(-50}, {\r*sin(-50)}, 0);
+    \coordinate (B') at ({\r*cos(40}, {\r*sin(40)}, 0);
+    \coordinate (C') at ({\r*cos(180}, {\r*sin(180)}, 0);
+
+    \draw [dashed] plot[smooth,variable=\t,domain=\tdplotmainphi+30:\tdplotmainphi+150] ({\r*cos(\t)},{\r*sin(\t)},0);
+    \draw plot[smooth,variable=\t,domain=\tdplotmainphi:\tdplotmainphi-180]
+            ({\r*cos(\t)},{\r*sin(\t)}, 0)
+        -- plot[smooth,variable=\t,domain=\tdplotmainphi-180:\tdplotmainphi]
+            (0,0, \h) -- cycle;
+
+    \draw [dash dot] ($(O')!1.5!(A')$) -- ($(O')!-1.5!(A')$);
+    \draw [dash dot] ($(O')!1.5!(B')$) -- ($(O')!-1.5!(B')$);
+    \draw (O) -- (O') node [midway, right, inner sep=0.1em] {$h$};
+    \draw [->] (O') -- (C') node [midway, above, inner sep=0.1em] {$r$};
+\end{tikzpicture}

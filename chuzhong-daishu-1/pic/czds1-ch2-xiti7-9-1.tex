@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\r}{0.8}
+    \coordinate (O) at (1.5, 2);
+    \coordinate (A) at ($(O) + (-\r, 0)$);
+    \coordinate (B) at ($(O) + (\r, 0)$);
+    \path (A) arc [start angle=180, end angle=210, x radius=\r, y radius=\r] coordinate (C);
+
+    \draw [fill=gray!50]  (0, 0) -- (0, 2)
+        -- (A) arc [start angle=180, end angle=360, x radius=\r, y radius=\r] -- (B) -- (3, 2)
+        -- (3, 0) --cycle;
+    \draw [dashed] (A) -- (B);
+    \draw [dashed] (1.5, 2.2) -- (1.5, -0.2);
+    \draw [->] (O) -- (C) node [midway, rotate=30] {$r$};
+
+    \draw [<->] (0, -0.4) to[xianduan={above=0.2}] node [midway] {$a$} (3, -0.4);
+    \draw [<->] (3.3, 0) to[xianduan={above=0.2}]  node [midway, rotate=90] {$b$} (3.3, 2);
+\end{tikzpicture}

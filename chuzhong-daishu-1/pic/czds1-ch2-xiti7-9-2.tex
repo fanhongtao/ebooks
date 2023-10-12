@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\x}{0.5}
+    \draw [fill=gray!50] (\x, 0)
+        -- (\x, \x)     -- (0, \x)      -- (0, 3*\x)
+        -- (\x, 3*\x)   -- (\x, 4*\x)   -- (5*\x, 4*\x)
+        -- (5*\x, 3*\x) -- (6*\x, 3*\x) -- (6*\x, \x)
+        -- (5*\x, \x)   -- (5*\x, 0)    -- cycle;
+    \draw [dashed] (3*\x, -0.2) --  +(0, 4*\x+0.4);
+    \draw [dashed] (-0.2, 2*\x) --  +(6*\x+0.4, 0);
+
+    \draw [<->] (-0.3, 0) to [xianduan={below=0.8cm}] node [pos=0.8, left=0.5em, rotate=90] {$x$} (-0.3, \x);
+    \draw (0, -0.2) to [xianduan] node {$x$} (\x, -0.2);
+    \draw [->] (-0.5, -0.2) -- (0, -0.2);
+    \draw [->] (1, -0.2) -- (\x, -0.2);
+    \draw [<->] (0, -0.5) to [xianduan={above=1.2cm}] node {$6x$} (6*\x, -0.5);
+    \draw [<->] (0.3+6*\x, 0) to [xianduan={above=0.8cm}] node [midway, rotate=90] {$4x$} (0.3+6*\x, 4*\x);
+\end{tikzpicture}

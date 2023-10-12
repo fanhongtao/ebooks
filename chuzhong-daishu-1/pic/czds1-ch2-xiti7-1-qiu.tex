@@ -1,0 +1,14 @@
+% 纯 2D 手工绘制球
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \pgfmathsetmacro{\r}{1}
+    \coordinate (O) at (0, 0);      % 球心
+
+    \draw (O) circle (\r);
+    \draw (-\r,0) arc [start angle=180, end angle=360, x radius=\r, y radius=\r/2];
+    \draw [dashed] (\r,0) arc [start angle=0, end angle=180, x radius=\r, y radius=\r/2];
+
+    % 这里"绘制"一小段 arc 是为了获取坐标
+    \path (-\r,0) arc [start angle=180, end angle=210, x radius=\r, y radius=\r/2] coordinate (A);
+    \fill[fill=black] (O) circle (1pt);
+    \draw[->] (O) -- node[above]{$r$} (A);
+\end{tikzpicture}
