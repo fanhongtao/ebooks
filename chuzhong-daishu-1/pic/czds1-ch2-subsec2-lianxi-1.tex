@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw (0, 0) -- (6.5, 0) -- (5, 1.5) -- (4, 1.5) --cycle;
+    \draw [<->] (4, 1.7) to [xianduan] node {$a$} (5, 1.7);
+    \draw [<->] (0, -0.2) to [xianduan] node {$b$} (6.5, -0.2);
+    \draw [<->] (6.7, 0) to [xianduan={above=1.7cm}] node {$h$} (6.7, 1.5);
+\end{tikzpicture}

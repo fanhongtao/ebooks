@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tikzset{
+        pics/sanjiao/.style n args={5}{
+        code = {
+            \coordinate (A) at (0, 0);
+            \coordinate (B) at (#1, 0);
+            \coordinate (C) at (1.8, #2);
+            \coordinate (D) at (1.8, 0);
+            \draw (A) -- (B) node [midway, below] {#3} -- (C) -- cycle;
+            \draw (C) -- (D) node [pos=0.7, fill=white, inner sep=1pt]  {#4};
+            \node at (1.5, -1) {（#5）};
+        }}
+    }
+    \draw (0,0) pic {sanjiao={3}{2}{3厘米}{2厘米}{1}};
+    \draw (4,0) pic {sanjiao={3.5}{2.5}{3{\large $\frac{1}{2}$} 厘米}{2{\large $\frac{1}{4}$} 厘米}{2}};
+    \draw (8,0) pic {sanjiao={3.8}{1.9}{3.8厘米}{1.9厘米}{3}};
+\end{tikzpicture}
