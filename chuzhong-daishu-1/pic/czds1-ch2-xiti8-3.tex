@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth,
+    num/.style={draw, circle, inner sep=1pt, minimum width=2.2em},
+]
+    \foreach \x [count=\xi] in {$-4$, \small$-$\large$\frac{2}{3}$, $0$, \large$\frac{1}{2}$, $3$} {
+        \node [num] at (0, \xi - 1) {\x};
+    }
+    \node [text width=1.5em] at (-0.8, 2) {\baselineskip=5pt 输入\par};
+
+    \foreach \x [count=\xi] in {, , , , $25$} {
+        \node [num] at (6, \xi - 1) {\x};
+    }
+    \node [text width=1.5em] at (7, 2) {\baselineskip=5pt 输出\par};
+
+    \draw [name path=ellipse] (3, 2) ellipse [x radius=1.6,y radius=2.5];
+    % \draw (0.4, 4) arc [start angle=250, end angle=290, radius=7.6];
+    % \draw (0.4, 3) arc [start angle=255, end angle=285, radius=10];
+    % \draw (0.4, 2) arc [start angle=105, end angle=75, radius=10];
+    % \draw (0.4, 1) arc [start angle=105, end angle=75, radius=10];
+    % \draw (0.4, 0) arc [start angle=105, end angle=75, radius=10];
+    \tikzset{
+        pics/huxian/.style n args={6}{
+          code = {
+            \draw [->]     (#1) arc [start angle=#2, end angle=#3, radius=#6] coordinate (A);
+            \draw [dashed] (A)  arc [start angle=#3, end angle=#4, radius=#6] coordinate (B);
+            \draw [->]     (B)  arc [start angle=#4, end angle=#5, radius=#6];
+        }}
+    }
+
+    \draw (0, 0) pic {huxian={0.4,4}{250}{261}{279}{290}{7.6}};
+    \draw (0, 0) pic {huxian={0.4,3}{255}{261.3}{278}{285}{10}};
+    \draw (0, 0) pic {huxian={0.4,2}{105}{99}{81}{75}{10}};
+    \draw (0, 0) pic {huxian={0.4,1}{105}{98.5}{81}{75}{10}};
+    \draw (0, 0) pic {huxian={0.4,0}{105}{96.5}{84}{75}{10}};
+
+    \node at (3, 2) {$3x^2 - 2x + 4$};
+\end{tikzpicture}
