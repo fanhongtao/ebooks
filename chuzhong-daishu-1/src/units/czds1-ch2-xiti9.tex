@@ -1,0 +1,68 @@
+\xiti
+
+\begin{enhancedline}
+\begin{xiaotis}
+
+\begin{wrapfigure}[5]{r}{5cm}
+    \centering
+    \input{../pic/czds1-ch2-xiti9-1}
+    \caption*{（第 1 题）}
+\end{wrapfigure}
+
+% TRICK
+% 下面这一行是为了让 wrapfigure 能够正常工作而添加的。生效的具体原理不明。
+% 但如果不添加此行，wrapfigure 会被排版到第 6 题附近。
+% 如果不使用这个技巧，就得像 czds1-ch1-sec1-xiti.tex 中那样，使用 minipage 来布局。
+% 其中：\hphantom 是真正起作用的语句； \vspace 是为抵消 \hphantom 带来的多余的间隔。
+% 因为在测试过程中，发现如果在第 1 小题前有额外的一行内容，wrapfigure 就能正确排版。所以想到用 \hphantom 来生成一个不可见的内容。
+\hphantom{0}\vspace*{-1em}
+
+\xiaoti{下列整式中，哪些是单项式？把它们填在单项式集合中。\\
+    $abc$\nsep $-2x^3$\nsep $x + y$\nsep $-15$\nsep $-m$\nsep $3x^2 + 4x - 2$\nsep\\
+    $xy - \dfrac{1}{2}a$\nsep $x^4 + x^2y^2 + y^4$\nsep $a^2 - ab + b^2$\nsep $3ab^2$。
+}
+
+\xiaoti{什么是单项式的系数？下列单项式的系数各是多少？\\
+    $15a^2$\nsep $xy$\nsep $\dfrac{2}{3}a^2b^3$\nsep $0.11m^3$\nsep $-a^2bc$\nsep $\dfrac{3x^2y}{5}$。
+}
+
+\xiaoti{单项式的次数是怎样计算的？第 2 题中的单项式的次数各是多少？}
+
+\xiaoti{分别写出下列多项式的各项：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$4x^2 - \dfrac{1}{2}$；}   & \xxt{$a^3 + ab^3 + b^4$；} \\
+        \xxt{$a^4 + b^4 - a^2b^2$；}    & \xxt{$-x^3 - \dfrac{3x^2y}{4} + 2x^2y^2 - y^5$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{多项式的次数是怎样计算的？第 4 题中的多项式各是几次式？}
+
+
+\xiaoti{下列多项式各是几次几项式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$3x^3 - \dfrac{1}{4}$；}   & \xxt{$3a - 2b$；} \\
+        \xxt{$3x^2 - 2x + 1$；}         & \xxt{$a^6 + b^6$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列多项式先按字母 $x$ 的降幂排列，再按字母 $x$ 的升幂排列：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$13x - 3x^2 - 2x^3 - 6$；}     & \xxt{$x^2 + y^2 - 2xy$；} \\
+        \xxt{$3x^2y - 3xy^2 + y^3 - x^3$；} & \xxt{$\dfrac{2}{3}ax^4 + \dfrac{1}{2}bx - \dfrac{1}{6}cx^3 + \dfrac{5}{12}d$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\end{enhancedline}
+
