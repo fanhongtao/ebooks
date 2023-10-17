@@ -243,6 +243,11 @@
 
 
 %----------------------------------
+\counterwithin*{equation}{subsection}
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+%----------------------------------
 \newcounter{mylabel}
 % 针对计数器 mylabel 创建（指定名字）标签
 % 参数1: 标签的id
