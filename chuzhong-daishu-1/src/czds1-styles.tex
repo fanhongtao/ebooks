@@ -248,6 +248,23 @@
 \counterwithin*{equation}{subsection}
 \renewcommand{\theequation}{\arabic{equation}}
 
+\makeatletter
+% 创建指定名字的标签
+% 参数1: 标签的id
+% 参数2: 标签的名字 (\nameref{标签id} 所得到的结果)
+\newcommand{\namedlabel}[2]{%
+  \@bsphack%
+  \protected@write\@auxout{}{%
+    \string\newlabel{#1}{%
+        {\@currentlabel}%
+        {\thepage}%
+        {{#2}}%\@currentlabelname
+        {\@currentHref}{}%
+      }%
+  }%
+  \@bsphack%
+}%
+\makeatother
 
 %----------------------------------
 \newcounter{mylabel}
