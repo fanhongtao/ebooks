@@ -1,0 +1,332 @@
+\subsection{一元一次方程和它的解法}\label{subsec:3-3}
+
+\begin{enhancedline}
+看下面的方程：
+$$ 4 + x = 7\nsep  3x + 5 = 7 - 2x\nsep  \dfrac{y - 2}{6} = \dfrac{y}{3} + 1 \juhao $$
+这些方程，只含有一个未知数，并且未知数的次数是一次。这样的方程，叫做\zhongdian{一元一次方程}。
+
+现在，我们运用方程同解原理来解一元一次方程。
+
+\liti 解方程 $x - 7 = 5$。
+
+\jie 根据\nameref{dl:tongjie-1}，在上面方程的两边都加上 7，得
+$$ x - 7 + 7 = 5 + 7 \juhao $$
+
+合并同类项，得
+$$ x = 12 \juhao $$
+
+为了检验解方程时的计算有没有错误，可以把求得的解代替原方程中的未知数，检查方程左右两边的值是不是相等。
+
+把 $x = 12$ 代入原方程，
+$$ \zuobian = 12 - 7 = 5 \nsep \youbian  = 5\nsep  \zuobian = \youbian \douhao $$
+所以 $x = 12$ 是原方程的解。
+
+\liti 解方程 $7x = 6x - 4$。
+
+\jie 根据\nameref{dl:tongjie-1}，在上面方程的两边都减去 $6x$，得
+$$ 7x - 6x = -4 \juhao $$
+
+合并同类项，得
+$$ x = -4 \juhao $$
+
+检验：把 $x = -4$ 代入原方程，
+\begin{gather*}
+    \zuobian = 7 \times (-4) = -28, \\
+    \youbian = 6 \times (-4) - 4 = -28, \\
+    \zuobian = \youbian,
+\end{gather*}
+所以 $x = -4$ 是原方程的解。
+
+在例 1、例 2 中，我们根据\nameref{dl:tongjie-1}，分别作了下面的变形（图 \ref{fig:3-2}）：
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds1-ch3-2}
+    \caption{}\label{fig:3-2}
+\end{figure}
+从变形前后的两个方程可以看出，这种变形，相当于把方程中的某一项改变符号后，从方程的一边移到另一边。
+我们把这种变形叫做\zhongdian{移项}。必须牢记移项要变号。
+
+在解方程时，我们常常利用移项，把方程中含有未知数的项移到等号的一边，
+把不含未知数的项移到等号的另一边。象例 1 、例 2 中的两个方程可以这样来解：
+
+（1） $x - 7 = 5$。
+
+把 $-7$ 从方程的左边移到右边，得
+$$ x = 5 + 7 \juhao $$
+
+合并同类项，得
+$$ x = 12\juhao $$
+
+（2） $7x = 6x - 4$。
+
+把 $6x$ 从方程的右边移到左边，得
+$$ 7x - 6x = -4\juhao $$
+
+合并同类项，得
+$$ x = -4\juhao $$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{根据\nameref{dl:tongjie-1}} 解下列方程，并写出检验：
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[18em]{$x + 6 = 7$；}{$4x = 3x - 2$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下面的移项对不对？如果不对，错在哪里？应当怎样改正？}
+\begin{xiaoxiaotis}
+
+    \xxt{从 $7 + x = 13$，得到 $x = 13 + 7$；}
+
+    \xxt{从 $5x = 4x + 8$，得到 $5x - 4x = 8$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{用移项解下列方程，并写出检验：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x + 12 = 34$；} & \xxt{$x - 15 = 74$；} \\
+        \xxt{$3x = 2x + 5$；} & \xxt{$7x - 3 = 6x$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+\liti 解下列方程：
+
+\twoInLine{（1）$-5x = 70$；}{（2）$\dfrac{3}{5}x - 8 = 1$。}
+
+\jie （1） $-5x = 70$。
+
+根据\nameref{dl:tongjie-2}，在上面方程的两边都除以 $-5$，得
+$$ \dfrac{-5x}{-5} = \dfrac{70}{-5} \douhao $$
+即
+$$ x = -14 \juhao $$
+
+检验：$\zuobian = -5 \times (-14) = 70$，$\youbian = 70$，
+$$ \zuobian = \youbian \douhao $$
+所以 $x = -14$ 是原方程的解。
+
+（2）$\dfrac{3}{5}x - 8 = 1$。
+
+移项，得
+$$ \dfrac{3}{5}x = 1 + 8 \juhao $$
+
+合并同类项，得
+$$ \dfrac{3}{5}x = 9 \juhao $$
+
+方程的两边都除以 $\dfrac{3}{5}$ \Big( 即乘以 $\dfrac{5}{3}$ \Big)，得
+$$ \dfrac{3}{5}x \cdot \dfrac{5}{3} = 9 \cdot \dfrac{5}{3} \douhao $$
+即
+$$ x = 15 \juhao $$
+
+检验：$\zuobian = \dfrac{3}{5} \times 15 - 8 = 1$，$\youbian = 1$，
+$$ \zuobian = \youbian \douhao $$
+所以 $x = 15$ 是原方程的解。
+
+在例 3 中，我们见到的方程 $-5x = 70$ 和 $\dfrac{3}{5}x = 9$，
+都是形如 $ax = b$ （这里 $a$、 $b$ 是已知数，且 $a \neq 0$）的方程，
+这的方叫做\zhongdian{最简方程}。利用\nameref{dl:tongjie-2}，
+在方程两边都除以未知数的系数，就能得出这类方程的解是 $x = \dfrac{b}{a}$。
+
+\lianxi
+
+解下列方程，并写出检验：
+\begin{xiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xiaoti{$15x = 45$。}               & \xiaoti{$-2x = 30$。} \\
+        \xiaoti{$-18x = -3$。}              & \xiaoti{$3.5x = 7$。} \\
+        \xiaoti{$9x = 0$。}                 & \xiaoti{$32 = 8x$。}
+    \end{tblr}
+
+    \vspace*{-1em}
+    \begin{tblr}{columns={18em, colsep=0pt}, stretch=1.5}
+        \xiaoti{$\dfrac{x}{5} = 3$。}       & \xiaoti{$6x = 16 - 2x$。} \\
+        \xiaoti{$\dfrac{2}{5}x - 4 = 12$。} & \xiaoti{$4 - \dfrac{3}{7}y = 13$。} \\
+        \xiaoti{$13 = \dfrac{t}{2} + 3$。}  & \xiaoti{$\dfrac{1}{2} = \dfrac{1}{3} + 2x$。}
+    \end{tblr}
+
+\end{xiaotis}
+\lianxijiange
+
+\liti 解方程 $5x + 2 = 7x - 8$。
+
+\jie 移项，得
+$$ 2 + 8 = 7x - 5x \juhao$$
+
+合并同类项，得
+$$ 10 = 2x\douhao $$
+即
+$$ 2x = 10 \juhao $$
+
+两边都除以 2，得
+$$ x = 5 \juhao $$
+
+（自己用口算检验。）
+
+\liti 解方程 $2(x - 2) - 3(4x - 1) = 9(1 - x)$。
+
+\jie 去括号，得
+$$ 2x - 4 - 12x + 3 = 9 - 9x \juhao $$
+
+移项，得
+$$ 2x - 12x + 9x = 9 + 4 - 3 \juhao $$
+
+合并同类项，得
+$$ -x = 10 \juhao $$
+
+两边都除以 $-1$，得
+$$x = -10 \juhao $$
+
+（自己检验，最好也用口算。）
+
+\lianxi
+
+解下列方程，并用口算检验：
+\begin{xiaotis}
+
+\xiaoti{$2x + 5 = 25 - 8x$。}
+
+\xiaoti{$\dfrac{x}{2} - 7 = 5 + x$。}
+
+\xiaoti{$5(x + 2) = 2(2x + 7)$。}
+
+\xiaoti{$3(2y + 1) = 2(1 + y) + 3(y + 3)$。}
+
+\end{xiaotis}
+
+\lianxijiange
+
+\liti  解方程 $\dfrac{5y - 1}{6} = \dfrac{7}{3}$。
+
+解这个方程，可以先根据\nameref{dl:tongjie-2}，在方程两边都乘以各分母的最小公倍数
+（本题中 6 与 3 的最小公倍数是 6），把方程里各分母都去掉。
+
+\jie 去分母，得
+$$ \dfrac{5y - 1}{6} \times 6 = \dfrac{7}{3} \times 6 \douhao $$
+即
+$$ 5y - 1 = 14 \juhao$$
+
+移项，得
+$$ 5y = 14 + 1 \juhao $$
+
+合并同类项，得
+$$ 5y = 15 \juhao $$
+
+两边都除以 5， 得
+$$ y = 3 \juhao $$
+
+\liti 解方程 $\dfrac{2x - 1}{3} - \dfrac{10x + 1}{6} = \dfrac{2x + 1}{4} - 1$。
+
+本题中各分母 3、6、4 的最小公倍数是 12 。
+
+\jie 去分母，得
+$$ 4(2x - 1) - 2(10x + 1) = 3(2x + 1) - 12 \juhao $$
+
+去括号，得
+$$ 8x - 4 - 20x - 2 = 6x + 3 - 12 \juhao $$
+
+移项，得
+$$ 8x - 20x - 6x = 3 - 12 + 4 + 2 \juhao $$
+
+合并同类项，得
+$$ -18x = -3 \juhao $$
+
+两边都除以 $-18$，得
+$$ x = \dfrac{1}{6} \juhao $$
+
+\lianxi
+
+解下列方程：
+\begin{xiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xiaoti{$\dfrac{7x - 5}{4} = \dfrac{3}{8}$。}   & \xiaoti{$\dfrac{3 - x}{2} = \dfrac{x - 4}{3}$。} \\
+        \xiaoti{$\dfrac{2x - 1}{6} - \dfrac{5x + 1}{8} = 1$。}  & \xiaoti{$\dfrac{2}{7} (3x + 7) = 2 - 1.5x$。} \\
+    \end{tblr}
+
+    \xiaoti{$\dfrac{30}{100}x + \dfrac{70}{100} (200 - x) = 200 \times \dfrac{54}{100}$。}
+
+\end{xiaotis}
+\lianxijiange
+
+
+解一元一次方程的一般步骤是：
+
+\jiange
+\framebox{\begin{minipage}{0.93\textwidth}
+    \zhongdian{1. 去分母；}
+
+    \zhongdian{2. 去括号；}
+
+    \zhongdian{3. 移项；}
+
+    \zhongdian{4. 合并同类项，化成最简方程 $ax = b \; (a \neq 0)$ 的形式；}
+
+    \zhongdian{5. 方程两边都除以未知数的系数，得出方程的解 $x = \dfrac{b}{a}$。}
+\end{minipage}}\jiange
+
+
+解方程时，上面的有些步骤也可能用不到。要根据方程的形式灵活安排解题步骤。
+熟练后，解方程的步驟（包括检验） 可以简化。
+
+\liti 解方程 $\dfrac{x}{0.7} - \dfrac{1.7 - 2x}{0.3} = 1$。
+
+这个方程的分母含有小数，可以先把分母化成整数再解。
+
+\jie 原方程可以化成
+$$ \dfrac{10x}{7} - \dfrac{17 - 20x}{3} = 1 \juhao $$
+
+去分母，得
+$$ 30x - 7(17 - 20x) = 21 \juhao $$
+
+去括号、移项与合并同类项，得
+$$ 170x  = 140 \juhao $$
+
+两边都除以 170，得
+$$ x = \dfrac{14}{17} \juhao $$
+
+\liti 在梯形面积公式 $S = \dfrac{1}{2}(a + b)h$ 中，
+已知 $S = 120$， $b = 18$， $h = 8$，求 $a$。
+
+\jie  把 $S = 120$， $b = 18$， $h = 8$ 代入公式中，得
+$$ 120 = \dfrac{1}{2} \cdot (a + 18) \cdot 8 \juhao $$
+
+解这个方程：
+\begin{gather*}
+    30 = a + 18 \juhao \\
+    a = 12 \juhao
+\end{gather*}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{解方程：}
+\begin{xiaoxiaotis}
+
+    \xxt{$2.4 - \dfrac{y - 4}{2.5} = \dfrac{3}{5}y$；}
+
+    \xxt{$\dfrac{x - 2}{0.2} - \dfrac{x + 1}{0.5} = 3$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{在梯形面积公式 $S = \dfrac{1}{2}(a + b)h$ 中，}
+\begin{xiaoxiaotis}
+
+    \xxt{$S = 30$， $a = 6$， $h = 4$，求 $b$；}
+
+    \xxt{$S = 60$， $a = 8$， $b = 12$，求 $h$。}
+
+\end{xiaoxiaotis}
+\end{xiaotis}
+
+\end{enhancedline}
+
