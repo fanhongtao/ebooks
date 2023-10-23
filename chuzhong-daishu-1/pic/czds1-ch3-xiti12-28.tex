@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth]
+    \tikzset{
+        pics/huxian/.style n args={2}{
+          code = {
+            \draw [->]  (0, 0) node [left] {$#1$} arc [start angle=105, end angle=75, radius=5] node [right] {$#2$};
+        }}
+    }
+    \draw (0, 1.5) ellipse  [x radius=0.8,y radius=1.2];
+    \draw (3, 1.5) ellipse  [x radius=0.8,y radius=1.2];
+    \draw (0.2, 2.2) pic {huxian={4}{11}};
+    \draw (0.2, 1.6) pic {huxian={9}{?}};
+    \draw (0.2, 1.0) pic {huxian={?}{17}};
+    \node at (1.5, 2.7) {$\times 2 + 3$};
+\end{tikzpicture}
