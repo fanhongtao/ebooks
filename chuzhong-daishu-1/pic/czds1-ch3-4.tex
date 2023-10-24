@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{0}
+    \pgfmathsetmacro{\b}{3.4}
+    \pgfmathsetmacro{\c}{8.9}
+    \pgfmathsetmacro{\d}{10}
+
+    \draw [ultra thick] (\a, 0) node [left] {甲} -- (\d, 0) node[right] {乙};
+    \node at (\c, -0.4) {丙};
+    \foreach \x in {\a, \b, \c, \d} {
+        \draw (\x, 0.2) -- (\x, -0.2);
+    }
+    \draw[decorate, decoration={brace, amplitude=0.2cm}] (\a, 0.3) -- (\b, 0.3)
+        node [pos=0.5, above=0.3em, align=center] {$48x$};
+    \draw[decorate, decoration={brace, amplitude=0.2cm}] (\b, 0.3) -- (\c, 0.3)
+        node [pos=0.5, above=0.3em, align=center] {$72x$};
+    \draw[decorate, decoration={brace, amplitude=0.2cm}] (\c, 0.3) -- (\d, 0.3)
+        node [pos=0.5, above=0.3em, align=center] {$72 \times \dfrac{5}{12}$};
+    \draw[decorate, decoration={brace,mirror, amplitude=0.8cm}] (\a, -0.3) -- (\d, -0.3)
+        node [pos=0.5, below=1cm, align=center] {$360$};
+\end{tikzpicture}

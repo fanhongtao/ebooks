@@ -1,0 +1,47 @@
+{
+\tdplotsetmaincoords{50}{0}
+\begin{tikzpicture}[tdplot_main_coords,line cap=butt,line join=round,>=Stealth]
+    \tikzset{
+        pics/yuanzhuti/.style n args={4}{
+        code = {
+            \pgfmathsetmacro{\r}{#1}
+            \pgfmathsetmacro{\h}{#3}
+            \draw[
+                left color=gray!50,
+                right color=gray!30,
+                middle color=white,
+                fill opacity=0.6,
+                pattern={mylines[angle=90, distance={10pt}]},
+            ]
+                plot[smooth,variable=\t,domain=\tdplotmainphi:\tdplotmainphi-180]
+                    ({\r*cos(\t)},{\r*sin(\t)},\h)
+                -- plot[smooth,variable=\t,domain=\tdplotmainphi-180:\tdplotmainphi]
+                    ({\r*cos(\t)},{\r*sin(\t)},0) -- cycle;
+            \draw plot[smooth,variable=\t,domain=0:360] ({\r*cos(\t)},{\r*sin(\t)},\h);
+
+            \coordinate (O) at (0, 0, \h);
+            \coordinate (A) at ({\r*cos(0}, {\r*sin(0)}, \h);
+            \coordinate (B) at ({\r*cos(180}, {\r*sin(180)}, \h);
+
+            \coordinate (O') at (0, 0, 0);
+            \coordinate (A') at ({\r*cos(0}, {\r*sin(0)}, 0);
+
+            % \draw (A) -- ($(O)!1.5!(A)$);
+            % \draw (A') -- ($(O')!1.5!(A')$);
+            % \draw [<->] ($(O)!1.4!(A)$) -- ($(O')!1.4!(A')$)
+            \draw (A) -- ($(A) + (0.6, 0)$);
+            \draw (A') -- ($(A') + (0.6, 0)$);
+            \draw [<->] ($(A) + (0.4, 0)$) -- ($(A') + (0.4, 0)$)
+                node [pos=0.5, fill=white, inner sep=1pt] {$#4$};
+
+            \draw [<->] (A) -- (B)
+                node [pos=0.4, above, fill=white, inner sep=1pt] {$\phi\;#2$};
+        }}
+    }
+
+    \draw (0, 0) pic {yuanzhuti={1.5}{60}{1.2}{20}};
+    \node at (0, -2.3) {零件毛坯};
+    \draw (5, 0) pic {yuanzhuti={1}{40}{2.7}{x}};
+    \node at (5, -2.3) {圆钢};
+\end{tikzpicture}
+}
