@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{0}
+    \pgfmathsetmacro{\b}{2}
+    \pgfmathsetmacro{\c}{5}
+    \pgfmathsetmacro{\d}{10}
+
+    \draw [ultra thick] (\a, 0) -- (\d, 0);
+    \foreach \x in {\a, \b, \c, \d} {
+        \draw (\x, 0.2) -- (\x, -0.2);
+    }
+    \draw[decorate, decoration={brace, amplitude=0.3cm}] (\a, 0.3) -- (\d, 0.3)
+        node [pos=0.5, above=1em, align=center] {全部工作量 \\ 1};
+    \draw[decorate, decoration={brace,mirror, amplitude=0.3cm}] (\a, -0.3) -- (\b, -0.3)
+        node [pos=0.5, below=1em, align=center] {$\dfrac{4}{20}$ \\[.5em] 甲先单独完 \\ 成的工作量};
+    \draw[decorate, decoration={brace,mirror, amplitude=0.3cm}] (\b, -0.3) -- (\c, -0.3)
+        node [pos=0.5, below=1em, align=center] {$\dfrac{x}{20}$ \\[.5em] 合做时甲完 \\ 成的工作量};
+    \draw[decorate, decoration={brace,mirror, amplitude=0.3cm}] (\c, -0.3) -- (\d, -0.3)
+        node [pos=0.5, below=1em, align=center] {$\dfrac{x}{12}$ \\[.5em] 合做时乙完 \\ 成的工作量};
+\end{tikzpicture}

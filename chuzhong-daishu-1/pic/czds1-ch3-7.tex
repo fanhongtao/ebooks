@@ -1,0 +1,55 @@
+\begin{tikzpicture}
+    \tikzset{
+        rongye/.style={
+            left color=gray!50,
+            right color=gray!30,
+            middle color=white,
+            fill opacity=0.6,
+        },
+        shaobei/.pic={
+            \pgfmathsetmacro{\h}{#1}
+            \path[rounded corners=2pt, rongye]
+                (0.1, -1.95 + \h) -- (0.1, -1.95)
+                -- (1.9, -1.95) -- (1.9, -1.95 + \h) -- cycle;
+            % 下一行是为了消除填充色上部的圆角
+            \path[rongye] (0.1, -1.95 + \h) rectangle (1.9, -1.95+\h-0.05);
+
+            \draw [rounded corners=2pt]
+                    (0, 0) -- (0.05, -0.1) -- (0.05, -2)
+                -- (1.95, -2) -- (1.95, -0.1) -- (2.0, 0);
+            \draw [rounded corners=2pt] (0, 0) -- (0.1, -0.1) -- (0.1, -1.95)
+                -- (1.9, -1.95) -- (1.9, -0.1) -- (2.0, 0);
+            \draw (0, 0) -- (2, 0);
+        }
+    }
+
+    \begin{scope}
+        \draw (0, 0) pic {shaobei = 0.4};
+        \foreach \x/\y in {
+            0.2/-1.85, 0.3/-1.8, 0.5/-1.75,
+            0.8/-1.85, 1.0/-1.7, 1.2/-1.85,
+            1.4/-1.75, 1.6/-1.8, 1.8/-1.75
+        } {
+            \draw (\x, \y) circle(0.03);
+        }
+        \node at (1, -2.4) {$16\%$ 氨水};
+        \node at (1, -2.8) {30 千克};
+    \end{scope}
+
+    \node at (4, -0.6) {加水 $x$ 千克后};
+    \draw [fill=white] (3.5, -1.1) pic [rotate=-90] {arrow={.2}{.6}{.4}{.2}};
+    \draw (3, -2.5) circle(0.03) node [right] {示意含氨量};
+
+    \begin{scope}[xshift=6cm]
+        \draw (0, 0) pic {shaobei = 1.5};
+        \foreach \x/\y in {
+            0.9/-1.6, 1.5/-1.6, 0.4/-1.3,
+            1.3/-1.25, 0.8/-1.0, 1.6/-1.0,
+            0.6/-0.8, 1.0/-0.7, 1.8/-0.8
+        } {
+            \draw (\x, \y) circle(0.03);
+        }
+        \node at (1, -2.4) {$0.15\%$ 氨水};
+        \node at (1, -2.8) {$(30 + x)$ 千克};
+    \end{scope}
+\end{tikzpicture}
