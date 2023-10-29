@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\factor}{0.02}
+    \pgfmathsetmacro{\a}{\factor * 290}
+    \pgfmathsetmacro{\b}{\factor * 410}
+    \pgfmathsetmacro{\ra}{\factor * 40 /2}
+    \pgfmathsetmacro{\rb}{\factor * 60 /2}
+
+    \draw [ultra thick] (0, -\ra) rectangle (\a, \ra);
+    \draw [ultra thick] (\a, -\rb) rectangle (\b, \rb);
+    \draw [loosely dash dot] (-0.2, 0) -- (0.2 + \b, 0);
+    \draw [<->] (0.4+\b, -\rb) to [xianduan={above=0.4cm}] node [rotate=90] {$\phi \, 60$} (0.4+\b, \rb);
+    \draw [<->] (0, -0.2-\rb) to [xianduan={above=0.4cm}] node {$290$} (\a, -0.2-\rb);
+    \draw [<->] (0, -0.6-\rb) to [xianduan={above=0.6cm}] node {$410$} (\b, -0.6-\rb);
+
+    \draw (0, \ra) -- (-0.5, \ra)
+          (0, -\ra) -- (-0.5, -\ra);
+    \draw [->] (-0.3, 0.4 + \ra) -- (-0.3, \ra);
+    \draw [->] (-0.3, -0.8 - \ra) -- (-0.3, -\ra) node [at end, rotate=90, left=1em] {$\phi\, 40$} ;
+    \draw (-0.3, \ra) -- (-0.3, -\ra);
+\end{tikzpicture}

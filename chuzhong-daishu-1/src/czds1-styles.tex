@@ -198,6 +198,10 @@
       }%
   }%
   \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }% 1. 2. 3. ……
+  \newenvironment{withstar}{%
+    \renewcommand{\labelxiaoti}{*\arabic{cntxiaoti}. }% 1. 2. 3. ……
+  }{%
+  }
 }{%
 }
 
