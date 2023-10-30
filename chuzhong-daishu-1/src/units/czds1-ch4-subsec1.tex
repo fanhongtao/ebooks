@@ -1,0 +1,188 @@
+% 原书的目录结构就是如此（缺少 section）
+% 忽略这里的报错： Difference (2) between bookmark levels is greater (hyperref)	than one, level fixed.
+\subsection{不等式}\label{subsec:4-1}
+
+看下面的式子：
+
+\hspace*{2em}\begin{tblr}{columns={8em}}
+    $-7 < -5$, & $3 + 4 > 1 + 4$, \\
+    $2x < 6$, & $a + 2 > a + 1$, \\
+    $5 + 3 \neq 12 - 5$, & $a \neq 0$。
+\end{tblr} \\
+这些式子含有我们已经学过的符号 “$<$”， “$>$” 或 “$\neq$”，这些符号都叫做\zhongdian{不等号}。
+在这些式子中， 有的只表明不等号的左、右两边不相等；
+有的不仅表明不等号的左、右两边不相等， 而且表明哪边大哪边小。
+象这种表示不相等关系的式子，叫做\zhongdian{不等式}。
+
+小于号 “$<$” 和大于号 “$>$” ， 都是表示大小关系的不等号。
+在中学数学中研究的不等式， 如果不特别说明， 都是指表示大小关系的不等式。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答） 用小于号 “$<$” 或大于号 “$>$” 填空：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$-5 \xhx -3$；} & \xxt{$-2 \xhx 0$；} \\
+        \xxt{$9 \xhx -14$；} & \xxt{$3.254 \xhx 3\dfrac{1}{4}$；} \\
+        \xxt{$\dfrac{2}{7} \xhx \dfrac{1}{3}$；} & \xxt{$-\dfrac{1}{2} \xhx -\dfrac{1}{3}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答） 用小于号 “$<$” 或大于号 “$>$” 填空：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$7 + 3 \xhx 4 + 3$；} & \xxt{$7 - 3 \xhx 4 - 3$；} \\
+        \xxt{$7 \times 3 \xhx 4 \times 3$；} & \xxt{$7 \times (-3) \xhx 4 \times (-3)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{用不等式表示：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$a$ 是正数；}        & \xxt{$a$ 是负数；} \\
+        \xxt{$x$ 不等于 1；}      & \xxt{$m + n$ 是正数；} \\
+        \xxt{$x$ 的 4 倍大于 7；} & \xxt{$b$ 与 6 的和小于 5。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+下面我们来研究不等式的基本性质。
+
+看不等式
+$$ 7 > 4 \juhao $$
+
+我们先看看上面做过的练习第 2 题的答案， 然后把 3 换成 5， 做同样的试验：
+
+1. 两边都加上（或都减去）5， 结果怎样？ 不等号的方向变了吗？
+$$ 7 + 5 \xhx 4 + 5\nsep 7 - 5 \xhx 4 - 5 \juhao $$
+
+2. 两边都乘以 5 ， 结果怎样？ 不等号的方向变了吗？
+$$ 7 \times 5 \xhx 4 \times 5 \juhao $$
+
+3. 两边都乘以 $-5$， 结果怎样？ 不等号的方向变了吗？
+$$ 7 \times (-5) \xhx 4 \times (-5) \juhao $$
+
+我们发现：在第 1 种情况和第 2 种情况下，不等号的方向不变；
+在第 3 种情况下， 在不等式的两边都乘以同一个负数后，不等号的方向改变了。
+
+换一个不等式 $-2 < 6$ 再试一试。
+
+一般地说，不等式有下面三条基本性质：
+
+\mylabel{dl:budengshi-1}[不等式基本性质 1]
+\zhongdian{1. 不等式的两边都加上（或都减去）同一个数，不等号的方向不变。}
+
+这就是说：
+如果 $a < b$， 那么 $a + c < b + c$ （或 $a - c < b - c$）；
+如果 $a > b$， 那么 $a + c > b + c$ （或 $a - c > b - c$）。
+
+\begin{enhancedline}
+\mylabel{dl:budengshi-2}[不等式基本性质 2]
+\zhongdian{2. 不等式的两边都乘以（或都除以）同一个正数，不等号的方向不变。}
+
+这就是说：
+如果 $a < b$， 并且 c > 0， 那么 $ac < bc$  \Big( 或 $\dfrac{a}{c} < \dfrac{b}{c}$ \Big)；
+如果 $a > b$， 并且 c > 0， 那么 $ac > bc$  \Big( 或 $\dfrac{a}{c} > \dfrac{b}{c}$ \Big)。
+
+\mylabel{dl:budengshi-3}[不等式基本性质 3]
+\zhongdian{3. 不等式的两边都乘以（或都除以）同一个负数，不等号的方向改变。}
+
+这就是说：
+如果 $a < b$， 并且 c < 0， 那么 $ac > bc$ \Big( 或 $\dfrac{a}{c} > \dfrac{b}{c}$ \Big)；
+如果 $a > b$， 并且 c < 0， 那么 $ac < bc$ \Big( 或 $\dfrac{a}{c} < \dfrac{b}{c}$ \Big)。
+
+想一想：如果不等式的两边都乘以零，会出现什么结果呢？
+\end{enhancedline}
+
+\liti 按照下列条件， 写出仍能成立的不等式：
+
+（1） $5 < 9$， 两边都加上 $-2$ ；
+
+（2） $9 > 5$， 两边都减去 10 ；
+
+（3） $-5 < 3$， 两边都乘以 4 ；
+
+（4） $14 > -8$， 两边都除以 $-2$。
+
+解： （1） 根据\nameref{dl:budengshi-1} ， 在不等式 $5 < 9$ 的两边都加上 $-2$， 不等号的方向不变， 所以
+$$ 5 + (-2) < 9 + (-2) \douhao $$
+即
+$$ 3 < 7 \fenhao $$
+
+（2） 根据\nameref{dl:budengshi-1} ， 得
+$$ 9 - 10 > 5 - 10 \douhao $$
+即
+$$ -1 > -5 \fenhao $$
+
+（3） 根据\nameref{dl:budengshi-2} ， 得
+$$ -5 \times 4 < 3 \times 4 \douhao $$
+即
+$$ -20 < 12 \fenhao $$
+
+（4） 根据\nameref{dl:budengshi-3} ， 得
+$$ 14 \div (-2) < -8 \div (-2) \douhao $$
+即
+$$ -7 < 4 \juhao $$
+
+
+\liti 设 $a > b$，用不等号连结下列各题中的两式：
+
+\begin{tblr}{columns={18em, colsep=0pt}}
+    （1）$a - 3$ 与 $b - 3$； & （2）$2a$ 与 $2b$； \\
+    （3）$-a$ 与 $-b$。
+\end{tblr}
+
+\jie （1）因为 $a > b$，两边都减去 3，由\nameref{dl:budengshi-1}，得
+$$ a - 3 > b - 3 \fenhao $$
+
+（2）因为 $a > b$，而 $2 > 0$，由\nameref{dl:budengshi-2}，得
+$$ 2a > 2b \fenhao $$
+
+（3）因为 $a > b$，而 $-1 < 0$，由\nameref{dl:budengshi-3}，得
+$$ -a < -b \juhao $$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{按照下列条件，写出仍能成立的不等式：}
+\begin{xiaoxiaotis}
+
+    \xxt{$-7 < 8$，两边都加上 $9$；\\
+         $-7 < 8$，两边都加上 $-9$。
+    }
+
+    \xxt{$5 > -2$，两边都减去 $6$；\\
+        $5 > -2$，两边都减去 $-6$。
+    }
+
+    \xxt{$-3 > -4$，两边都乘以 $7$；\\
+         $-3 > -4$，两边都乘以 $-7$。
+    }
+
+    \xxt{$-8 < 0$，两边都除以 $8$；\\
+         $-8 < 0$，两边都除以 $-8$。
+    }
+
+\end{xiaoxiaotis}
+
+\xiaoti{设 $a < b$，用不等号连结下列各题中的两式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$a + 5$ 与 $b + 5$；} & \xxt{$3a$ 与 $3b$；} \\
+        \xxt{$-5a$ 与 $-5b$；}     & \xxt{$\dfrac{a}{3}$ 与 $\dfrac{b}{3}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
