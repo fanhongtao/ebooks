@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=Stealth,scale=0.8]
+    \draw [->] (-7,0) -- (7.5,0);
+    \foreach \x in {-6,...,6} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {$\x$};
+    }
+
+    \pic [transform shape] {infinity interval={start=-3, stop=7, height=0.7}};
+    \draw [fill=white] (-3, 0) circle(0.1);
+\end{tikzpicture}
