@@ -10,6 +10,10 @@
 
 结合我个人的经历，就萌生了将“甲种本”系列电子化的想法，供大家参考使用。**教材好与不好，请自行判断。**
 
+此项目原本打算命名为 `jiazhongben`（“甲种本”的拼音），但创建时居然将拼音写错了，这才命名为 `ebooks`。
+
+目前不仅包括了“甲种本”，还包含有其它书箱，只能说**天意如此**。
+
 范洪滔 2020.08.03
 
 # 项目进度
@@ -30,7 +34,7 @@
 
 # 其它
 
-* 本项目依赖于 [TexLive](http://tug.org/texlive/) 2020，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
+* 本项目依赖于 [TexLive](http://tug.org/texlive/) 2023，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
 * 需要先将各书本目录的 `pic-pdf` 子目录下的 `tex` 文件编译成 `pdf` 文件，才能编译书本。
 * 由俄罗斯的**特别军事行动**所引发的一系列后果，推测 GitHub 在某天不能访问会是大概率事件。所以启用 [备用库](https://gitee.com/fhtao/ebooks)
 
@@ -53,4 +57,5 @@
 |:--:|:--|:--|
 | 1 | 初中物理 第一册 | 完成（2023-07-26 ~ 2023-08-17） |
 | 2 | 初中物理 第二册 | 完成（2023-08-18 ~ 2023-09-09） |
+| 3 | 初中代数 第一册 | 完成（2023-09-11 ~ 2023-11-05） |
 
