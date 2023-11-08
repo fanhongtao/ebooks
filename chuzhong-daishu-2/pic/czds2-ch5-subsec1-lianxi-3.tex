@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth]
+    \tikzset{
+        pics/yingshe/.style n args={2}{
+            code = {
+                \draw [->] (0, 0) node {$#1$} (0.4, 0) --(1.7, 0);
+                \draw (1.7, 0) -- (3, 0) node [right] {$#2$};
+            }
+        }
+    }
+
+    \begin{scope}
+        \foreach \x/\y [count=\i] in {
+            -2/?, -1/?, \hphantom{+}0/?,
+            \hphantom{+}1/?, \hphantom{+}2/6,
+            \hphantom{+}3/9
+        } {
+            \draw (0, 0.5*\i) pic {yingshe={\x}{\y}};
+        }
+        \draw (0, 4) pic {yingshe={x}{y}}  (1.75, 4.1) node[above] {$y = 3x$};
+        \draw (0, 1.75) ellipse [x radius=0.8, y radius=2];
+        \draw (3.2, 1.75) ellipse [x radius=0.8, y radius=2];
+        \draw (1.75, -.8) node {(1)};
+    \end{scope}
+
+    \begin{scope}[xshift=7cm]
+        \foreach \x/\y [count=\i] in {
+            -2/?, -1/?, \hphantom{+}0/1,
+            \hphantom{+}1/?, \hphantom{+}2/?,
+            \hphantom{+}3/7
+        } {
+            \draw (0, 0.5*\i) pic {yingshe={\x}{\y}};
+        }
+        \draw (0, 4) pic {yingshe={x}{y}}  (1.75, 4.1) node[above] {$y - 2x = 1$};
+        \draw (0, 1.75) ellipse [x radius=0.8, y radius=2];
+        \draw (3.2, 1.75) ellipse [x radius=0.8, y radius=2];
+        \draw (1.75, -.8) node {(2)};
+    \end{scope}
+\end{tikzpicture}

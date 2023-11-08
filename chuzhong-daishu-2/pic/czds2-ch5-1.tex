@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \foreach \x/\y [count=\i] in {
+        0/-\dfrac{11}{2},
+        1/-4,
+        5/2,
+        3/\dfrac{10}{3},
+        7/\dfrac{2}{3}
+    } {
+        \node at (2*\i, 0) {$\begin{cases}
+                x = \x \\
+                y = \y
+            \end{cases}$};
+    }
+    \node at (2.8, -1) {……};
+    \node at (8.8, -1) {……};
+
+    \draw (3.5, 0) ellipse [x radius=3.5, y radius=1.2];
+    \draw (8.2, 0) ellipse [x radius=3.5, y radius=1.2];
+    \draw (1.8, -0.7) -- (0.5, -1.6) node [below] {方程(1)的解集};
+    \draw (5.8, -0.7) -- (5.6, -1.6) node [below] {方程(1)，(2) 的公共解集};
+    \draw (9.8, -0.7) -- (10.5, -1.6) node [below] {方程(2)的解集};
+\end{tikzpicture}

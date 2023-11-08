@@ -1,0 +1,173 @@
+\subsection{二元一次方程组}\label{subsec:5-2}
+
+我们再来看下面的问题：
+
+有甲、乙两个数， 甲数的 3 倍比乙数的 2 倍多 11 ，甲数的 2 倍与乙数的 3 倍的和是 16 ， 求甲、乙两数。
+
+这个问题， 用设一个未知数列一元一次方程的方法来求解， 比较困难。
+如果设两个未知数， 例如设甲数是 $x$，乙数是 $y$， 那么就可以列出下面两个二元一次方程：
+\begin{gather}
+    3x - 2y = 11 \douhao \\
+    2x + 3y = 16 \juhao
+\end{gather}
+
+上面的问题就是要求出既适合方程 (1)， 又适合方程 (2) 的 $x$ 与 $y$ 的值，也就是求出这两个方程的公共解。
+
+把这两个方程变形，用含有 $x$ 的代数式表示 $y$ ， 得
+\begin{gather}
+    y = \dfrac{3}{2}x - \dfrac{11}{2} \douhao \\
+    y = \dfrac{16}{3} - \dfrac{2}{3}x \juhao
+\end{gather}
+从 (3) 可以求得方程 (1) 的一些解
+$$
+    \begin{cases}
+        x = 0\douhao \\
+        y = -\dfrac{11}{2}\douhao
+    \end{cases}\quad
+    \begin{cases}
+        x = 1\douhao \\
+        y = -4\douhao
+    \end{cases}\quad
+    \begin{cases}
+        x = 5\douhao \\
+        y = 2\douhao
+    \end{cases}\quad
+    \cdots
+$$
+从 (4) 可以求得方程 (2) 的一些解
+$$
+    \begin{cases}
+        x = 3\douhao \\
+        y = \dfrac{10}{3}\douhao
+    \end{cases}\quad
+    \begin{cases}
+        x = 5\douhao \\
+        y = 2\douhao
+    \end{cases}\quad
+    \begin{cases}
+        x = 7\douhao \\
+        y = \dfrac{2}{3}\douhao
+    \end{cases}\quad
+    \cdots
+$$
+可以看出，其中的
+$$\begin{cases}
+    x = 5\douhao \\
+    y = 2
+\end{cases}$$
+即是方程 (1) 的一个解，又是方程 (2) 的一个解，所以它就是这两个方程的公共解。
+
+上面所说的，可以用图 \ref{fig:5-1} 来表示。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds2-ch5-1}
+    \caption{}\label{fig:5-1}
+\end{figure}
+
+由几个方程组成的一组方程，叫做\zhongdian{方程组}。
+由几个一次方程组成并含有两个未知数的方程组，叫做\zhongdian{二元一次方程组}。
+例如，上面的方程 (1)， (2) 合在一起，就组成一个二元一次方程组，记作
+$$\begin{cases}
+    3x - 2y = 11 \douhao \\
+    2x + 3y = 16 \juhao
+\end{cases}$$
+
+本章中所说的二元一次方程组，都是指由两个一次方程组成的二元一次方程组。
+
+方程组里各个方程的公共解，叫做这个\zhongdian{方程组的解}。
+例如，上面的方程 (1)， (2) 的公共解
+$$\begin{cases}
+    x = 5 \douhao \\
+    y = 2
+\end{cases}$$
+就是方程组
+$$\begin{cases}
+    3x - 2y = 11 \douhao \\
+    2x + 3y = 16
+\end{cases}$$
+的解。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）下列方程组中，哪些是二元一次方程组，哪些不是。为什么？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x + 3y = 5, \\
+                2x - 3y = 3;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                    x + 3y = 6, \\
+                    x^2 - y^2 = 8;
+                \end{cases}$} \\
+        \xxt{$\begin{cases}
+                x + 3y = 9, \\
+                y + z = 7;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                    x + 3y = 5, \\
+                    xy = 2;
+                \end{cases}$} \\
+        \xxt{$\begin{cases}
+                x + 3y = 3, \\
+                \dfrac{x}{6} + \dfrac{2y}{3} = 1;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                x + 3y = 2, \\
+                \dfrac{6}{x} - 2y = 3 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答）在
+    $\begin{cases}
+        x = 1, \\
+        y = -1,
+    \end{cases}$ \quad
+    $\begin{cases}
+        x = 2, \\
+        y = 1,
+    \end{cases}$ \quad
+    $\begin{cases}
+        x = 4, \\
+        y = 5
+    \end{cases}$
+    三对数值中，哪一对是下列方程组的解？
+}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[18em]{
+        $\begin{cases}
+            2x - y = 3 \douhao \\
+            3x + 4y = 10 \fenhao
+        \end{cases}$
+    }{
+        $\begin{cases}
+            y = 2x - 3 \douhao \\
+            4x - 3y = 1 \juhao
+        \end{cases}$
+    }
+
+\end{xiaoxiaotis}
+
+\xiaoti{根据已知条件，求出 $y$ 的值；分别填入下列各图的右圈里，并找出方程组
+    $$\begin{cases}
+        y = 3x \douhao \\
+        y - 2x = 1
+    \end{cases}$$
+    的解。
+}
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds2-ch5-subsec1-lianxi-3}
+    \caption*{（第 3 题）}
+\end{figure}
+
+\end{xiaotis}
+
+
