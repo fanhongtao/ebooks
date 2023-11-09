@@ -1,0 +1,225 @@
+\subsection{用代入法解二元一次方程组}\label{subsec:5-3}
+
+\begin{enhancedline}
+求方程组的解的过程，叫做\zhongdian{解方程组}。
+
+下面我们来学习解二元一次方程组的两种常用方法。
+
+我们学过解一元一次方程，如果能够通过二元一次方程组里的两个方程，得到一个只含一个未知数的一元方程（即一元一次方程），
+求出这个未知数的值，然后再设法求出另一个未知数的值，问题就解决了。
+
+下面我们就按照这条化 “二元” 为 “一元” 的思路来分析具体问题。例如，解方程组
+$$\begin{cases}
+    y = 2x, \\
+    x + y = 3,
+\end{cases}$$
+这就是要求出这两个二元一次方程的公共解。
+如果这两个二元一次方程有公共解，那么两个方程中同一个未知数就应取相同的值。
+因此，第二个方程中的 $y$ 可用第一个方程中表示 $y$ 的代数式来代替：\jiange
+\begin{align}
+    y = &\quad  2x
+        \tikz[overlay, >=Stealth] {
+            \draw (-1.4em, 1.3em) rectangle (.3em, -.8em);
+            \draw [->] (-.8em, -.8em) [->] -- (-.8em, -2.1em);
+        }
+        \quad \douhao \\[1em]
+    x \; + &\quad y = 3 \juhao
+\end{align}
+把 (1) 代入 (2)， 得 $x + 2x = 3$。
+这样，就由两个二元一次方程得到一个一元一次方程，消去了一个未知数。
+解这个一元一次方程， 得 $x = 1$， 把 $x = 1$ 代入 (1)， 就可以得到 $y = 2$。
+
+要检验所得结果是不是原方程组的解，应把这对数值代入原方程组里的每一个方程进行检验。
+
+经过检验可以知道，由上述步骤得到的一对未知数的值
+$$\begin{cases}
+    x = 1, \\
+    y = 2
+\end{cases}$$
+是原方程组的解。
+
+我们再看几个例子。
+
+\liti 解方程组
+\begin{numcases}{}
+    y = 1 - x \douhao  \tag{1} \\
+    3x + 2y = 5 \juhao \tag{2}
+\end{numcases}
+
+\jie 把 (1) 代入 (2)，得
+\begin{align*}
+    & 3x + 2(1 - x) = 5 , \\
+    & 3x + 2 - 2x = 5 ,
+\end{align*}
+
+\fenge{$\therefore$}{$$ x = 3 \juhao $$}
+
+把 $x = 3$ 代入 (1)，得
+$$ y = -2 \juhao $$
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 3, \\
+        y = -2 \juhao
+    \end{cases}$$
+}
+
+检验：把 $x = 3$， $y = -2$ 代入 (1)，得
+\begin{gather*}
+    \zuobian = -2 \douhao \youbian = 1 - 3 = -2 \douhao \\
+    \zuobian = \youbian \fenhao
+\end{gather*}
+再代入 (2)，得
+\begin{gather*}
+    \zuobian = 3 \times 3 + 2 \times (-2) = 5 \douhao \youbian = 5 \douhao \\
+    \zuobian = \youbian \douhao
+\end{gather*}
+所以
+$$\begin{cases}
+    x = 3, \\
+    y = -2
+\end{cases}$$
+是原方程组的解。
+
+（检验可用口算，不必写出，以下同。）
+
+\liti 解方程组
+\begin{numcases}{}
+    2x + 5y = -21 \douhao  \tag{1} \\
+    x + 3y = 8 \juhao \tag{2}
+\end{numcases}
+
+分析：在这个方程组里，方程 (2) 中未知数 $x$ 的系数是 1，为了方便起见，
+可以先把方程 (2) 变形，用含 $y$ 的代数式表示 $x$，然后再解。
+
+\jie 由 (2)，得
+\begin{gather}
+    x = 8 - 3y \juhao \tag{3}
+\end{gather}
+
+把 (3) 代入 (1)，得
+\begin{gather*}
+    2(8 - 3y) + 5y = -21 , \\
+    16 - 6y + 5y = -21 , \\
+    -y = -37 ,
+\end{gather*}
+
+\fenge{$\therefore$}{$$ y = 37 \juhao $$}
+
+把 $y = 37$ 代入 (3)，得
+$$ x = 8 - 3 \times 37 , $$
+
+\fenge{$\therefore$}{$$ x = -103 \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = -103 \douhao \\
+        y = 37 \juhao
+    \end{cases}$$
+}
+
+
+\liti 解方程组
+\begin{numcases}{}
+    2x - 7y = 8 \douhao  \tag{1} \\
+    3x - 8y - 10 = 0 \juhao \tag{2}
+\end{numcases}
+
+分析：在这个方程组里，每个方程中各个未知数的系数都不是 1，但可以运用方程同解原理
+把其中的一个方程变形，使这个方程中的一个未知数的系数为 1， 然后再解。
+
+\jie 由 (1)，得
+\begin{align*}
+    2x &= 8 + 7y, \\
+    x  &= \dfrac{8 + 7y}{2} \juhao \tag{3}
+\end{align*}
+
+把 (3) 代入 (2)，得
+\begin{gather*}
+    \dfrac{3(8 + 7y)}{2} - 8y - 10 = 0, \\
+    24 + 21y - 16y - 20 = 0, \\
+    5y = -4,
+\end{gather*}
+
+\fenge{$\therefore$}{$$ y = -\dfrac{4}{5} \juhao $$}
+
+把 $y = -\dfrac{4}{5}$ 代入 (3)，得
+$$ x = \dfrac{8 + 7 \times \left(-\dfrac{4}{5}\right)}{2} , $$
+
+\fenge{$\therefore$}{$$ x = 1\dfrac{1}{5} \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 1\dfrac{1}{5} \douhao \\
+        y = -\dfrac{4}{5} \juhao
+    \end{cases}$$
+}
+
+
+上面几个例题的解题步骤一般是：
+
+1. 将方程组里的一个方程变形，用含有一个未知数的代数式表示另一个未知数；
+
+2. 用这个代数式代替另一个方程中相应的未知数，使解二元一次方程组转化为解一元一次方程，求得一个未知数的值；
+
+3. 把求得的这个未知数的值代入原方程组里的任意一个方程，求得另一个未知数的值，从而得到方程组的解。
+
+这种解方程组的方法叫做\zhongdian{代入消元法}， 简称\zhongdian{代入法}。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用代入法解下列方程组， 并写出检验：}
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[18em]{
+        $\begin{cases}
+            y = 2x, \\
+            7x - 3y = 1;
+        \end{cases}$
+    }{
+        $\begin{cases}
+            x + 5z = 6, \\
+            3x - 6z = 4 \juhao
+        \end{cases}$
+    }
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用代入法解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                y = 2x - 3, \\
+                3x + 2y = 8;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                6x - 5y = -1, \\
+                x = \dfrac{2}{3};
+              \end{cases}$} \\
+        \xxt{$\begin{cases}
+                2s = 3t, \\
+                3s - 2t = 5;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                2x - z = 5, \\
+                3x + 4z = 2;
+              \end{cases}$} \\
+       \xxt{$\begin{cases}
+                2x + 3y = -1, \\
+                4x - 9y = 8;
+              \end{cases}$}
+            & \xxt{$\begin{cases}
+                3m - 4n = 7, \\
+                9m - 10n + 25 = 0 \juhao
+              \end{cases}$} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\end{enhancedline}
+
