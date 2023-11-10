@@ -1,0 +1,246 @@
+\subsection{用加减法解二元一次方程组}\label{subsec:5-4}
+
+我们再来学习另一种通过消去未知数来解一次方程组的方法。 例如， 解方程组
+\begin{numcases}{}
+    x + y = 5 \douhao \tag{1} \\
+    x - y = 1 \juhao  \tag{2}
+\end{numcases}
+
+在这个方程组的两个方程中， 未知数 $y$ 的系数互为相反数， 如果把这两个方程的两边分别相加，
+就可以消去 $y$， 得到一个一元一次方程。
+\begin{gather*}
+    x \quad + y
+        \tikz [overlay] \draw [thick] (-2em, 1.5em) rectangle (.3em, -2.8em);
+        \; = 5 \douhao \tag{1} \\
+    x \quad - y \; = 1 \juhao  \tag{2}
+\end{gather*}
+
+$(1) + (2)$，得
+\begin{gather*}
+    2x = 6 \juhao \tag{3}
+\end{gather*}
+
+由 (3)，得 $x = 3$。把 $x = 3$ 代入 (1) 或 (2)，得 $y = 2$。经过检验，
+$$\begin{cases}
+    x = 3 \douhao \\
+    y = 2
+\end{cases}$$
+是原方程组的解。
+
+在上面的方程组的两个方程中， 我们又看到， 未知数 $x$ 的系数相等。
+如果把这两个方程的两边分别相减，就可以消去未知数 $x$， 也能得到一个一元一次方程。
+\begin{gather*}
+    x
+        \tikz [overlay] \draw [thick] (-1em, 1.3em) rectangle (.3em, -2.5em);
+        \hspace*{.5em} + y = 5 \douhao \tag{1} \\
+    x \hspace*{.5em} - y = 1 \juhao  \tag{2}
+\end{gather*}
+
+$(1) - (2)$，得
+\begin{gather*}
+    2y = 4 \juhao \tag{4}
+\end{gather*}
+
+由 (4)， 得 $y = 2$ ． 把 $y = 2$ 代入 (1) 或 (2)， 得 $x = 3$。
+
+
+我们再看几个例子。
+
+\liti 解方程组
+\begin{numcases}{}
+    3x + 7y = -20 \douhao \tag{1} \\
+    3x - 5y = 16  \juhao  \tag{2}
+\end{numcases}
+
+分析： 在这两个方程中， 未知数 $x$ 的系数相等，把方程 (1)， (2) 的两边分别相减， 就可以消去 $x$ 。
+
+\jie $(1) - (2)$，得
+$$ 12y = -36 \douhao $$
+
+\fenge{$\therefore$}{$$ y = -3 \juhao $$}
+
+把 $y = -3$ 代入 (1)，得
+$$ 3x + 7 \times (-3) = -20 \juhao $$
+
+\begin{enhancedline}
+\fenge{$\therefore$}{$$ x = \dfrac{1}{3} \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = \dfrac{1}{3} \douhao \\
+        y = -3 \juhao
+    \end{cases}$$
+}
+\end{enhancedline}
+
+\liti 解方程组
+\begin{numcases}{}
+    9u + 2v = 15 \douhao \tag{1} \\
+    3u + 4v = 10 \juhao  \tag{2}
+\end{numcases}
+
+分析： 在这两个方程中， 同一个未知数的系数的绝对值都不相等，
+如果直接把这两个方程的两边分别相加或相减， 都不能消去任何一个未知数。
+但是只要在方程 (1) 的两边都乘以 2 ， 就可以使两个方程中的未知数 $v$ 的系数相等，
+然后再把两个方程的两边分别相减而消去 $v$。
+
+\jie $(1) \times 2$，得
+\begin{gather*}
+    18u + 4v = 30 \juhao \tag{3}
+\end{gather*}
+
+$(3) - (2)$，得
+$$ 15u = 20 \douhao $$
+
+\begin{enhancedline}
+\fenge{$\therefore$}{$$ u = 1\dfrac{1}{3} \juhao $$}
+
+把 $u = 1\dfrac{1}{3}$ 代入 (2)，得
+\begin{align*}
+    3 \times 1\dfrac{1}{3} + 4v &= 10,  \hspace*{4em} \\
+    4v &= 6,
+\end{align*}
+
+\fenge{$\therefore$}{$$ v = 1\dfrac{1}{2} \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        u = 1\dfrac{1}{3} \douhao \\[1em]
+        v = 1\dfrac{1}{2} \juhao
+    \end{cases}$$
+}
+
+想一想： 能不能先消去未知数 $u$，如果能， 应当怎样做。
+\end{enhancedline}
+
+
+\liti 解方程组
+\begin{numcases}{}
+    3x + 4y = 16 \douhao \tag{1} \\
+    5x - 6y = 33 \juhao  \tag{2}
+\end{numcases}
+
+分析： 在方程 (1) 的两边都乘以 3， 方程 (2)  的两边都乘以 2 ，
+就可使未知数 $y$ 的系数的绝对值相等， 然后把两个方程的两边分别相加而消去 $y$。
+
+\jie $(1) \times 3$，得
+\begin{gather*}
+    9x + 12y = 48 \juhao \tag{3}
+\end{gather*}
+
+$(2) \times 2$，得
+\begin{gather*}
+    10x - 12y = 66 \juhao \tag{4}
+\end{gather*}
+
+$(3) + (4)$，得
+$$ 19 = 114 \douhao $$
+
+\fenge{$\therefore$}{$$ x = 6 \juhao $$}
+
+把 $x = 6$ 代入 (1)，得
+\begin{align*}
+    3 \times 6 + 4y = 16, \\
+    4y = -2,
+\end{align*}
+
+\fenge{$\therefore$}{$$ y = -\dfrac{1}{2} \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 6 \douhao \\
+        y = -\dfrac{1}{2} \juhao
+    \end{cases}$$
+}
+
+
+\jiange
+解上面几个例题时， 我们在方程组里一个方程的两边都乘以一个适当的数，
+或者分别在两个方程的两边都乘以一个适当的数， 使其中某一个未知数的系数的绝对值相等，
+然后把方程两边分别相加或相减， 消去这个未知数， 使解二元一次方程组转化为解一元一次方程。
+这种解方程组的方法叫做\zhongdian{加减消元法}， 简称\zhongdian{加减法}。
+用加减法解题时， 一般可以先把方程组里的每个方程整理成含未知数的项在方程左边、常数项在方程右边的形式，
+然后再进行加减消元。
+
+
+\liti 解方程组
+\begin{numcases}{}
+    2(x - 150) = 5(3y + 50) \douhao \tag{1} \\
+    10\% \cdot x + 6\% \cdot y = 8.5\% \times 800 \juhao  \tag{2}
+\end{numcases}
+
+\jie 把方程 (1)，(2) 分别化简，得
+\begin{numcases}{}
+    2x - 15y = 550 \douhao \tag{3} \\
+    5x + 3y = 3400 \juhao  \tag{4}
+\end{numcases}
+
+$(3) + (4) \times 5$，得
+$$ 27x = 17550 \douhao $$
+
+\fenge{$\therefore$}{$$ x = 650 \juhao $$}
+
+把 $x =650$ 代入 (4)，得
+\begin{gather*}
+    5 \times 650 + 3y = 3400 \douhao  \\
+    3y = 150 \douhao
+\end{gather*}
+
+\fenge{$\therefore$}{$$ y = 50 \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 650 \douhao \\
+        y = 50 \juhao
+    \end{cases}$$
+}
+
+
+\lianxi
+
+用加减法解下列方程组：
+\begin{xiaotis}
+
+% 另外一种拼凑的写法：
+% \vspace*{1.5em}
+% \xiaoti{}
+% \begin{xiaoxiaotis}
+
+%     \vspace*{-2.5em}
+%     \begin{tblr}{columns={18em, colsep=0pt}}
+%         \xxt{$\begin{cases} 3x + y = 8, \\ 2x - y = 7; \end{cases}$}
+%             & \xxt{$\begin{cases} 3m + 2n = 16, \\ 3m - n = 1; \end{cases}$} \\
+%         \xxt{$\begin{cases} 3p + 7q = 9, \\ 4p - 7q = 5; \end{cases}$}
+%             & \xxt{$\begin{cases} x + 2z = 9, \\ 3x -z = -1; \end{cases}$} \\
+%         \xxt{$\begin{cases} 5x + 2y = 25, \\ 3x + 4y = 15; \end{cases}$}
+%             & \xxt{$\begin{cases} 3x - 7y = 1, \\ 5x - 4y = 17; \end{cases}$} \\
+%         \xxt{$\begin{cases} 8s + 9t = 23, \\ 17s - 6t = 74; \end{cases}$}
+%             & \xxt{$\begin{cases} 4x - 15y - 17 = 0, \\ 6x - 25y - 23 = 0 \juhao \end{cases}$} \\
+%     \end{tblr}
+
+% \end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \twoInLine[18em]{\xxt[\xxtsep]{$\begin{cases} 3x + y = 8, \\ 2x - y = 7; \end{cases}$}}{\xxt[\xxtsep]{$\begin{cases} 3m + 2n = 16, \\ 3m - n = 1; \end{cases}$}}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases} 3p + 7q = 9, \\ 4p - 7q = 5; \end{cases}$}
+            & \xxt{$\begin{cases} x + 2z = 9, \\ 3x -z = -1; \end{cases}$} \\
+        \xxt{$\begin{cases} 5x + 2y = 25, \\ 3x + 4y = 15; \end{cases}$}
+            & \xxt{$\begin{cases} 3x - 7y = 1, \\ 5x - 4y = 17; \end{cases}$} \\
+        \xxt{$\begin{cases} 8s + 9t = 23, \\ 17s - 6t = 74; \end{cases}$}
+            & \xxt{$\begin{cases} 4x - 15y - 17 = 0, \\ 6x - 25y - 23 = 0 \juhao \end{cases}$} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \xxt[\xxtsep]{$\begin{cases} \dfrac{x}{3} + \dfrac{y}{5} = 1, \\ 3(x + y) + 2(x - 3y) = 15; \end{cases}$}
+
+    \xxt{$\begin{cases} x + y = 60, \\  30\% \cdot x + 6\% \cdot y = 10\% \times 60 \juhao \end{cases}$}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
