@@ -1,0 +1,140 @@
+\subsection{三元一次方程组的解法举例}\label{subsec:5-5}
+
+\begin{enhancedline}
+含有三个未知数，并且含有未知数的项的次数都是 1 的方程叫做\zhongdian{三元一次方程}。
+例如，$x + 3y + 5z = 4$ 就是一个关于与 $x$，$y$，$z$ 的三元一次方程。
+任何三元一次方程都有无数个解。
+
+由几个一次方程组成并含有三个未知数的方程组，叫做\zhongdian{三元一次方程组}。例如，方程组
+\begin{numcases}{}
+    3x + 2y + z = 13 \douhao \tag{1} \\
+    x + y + 2z = 7   \douhao \tag{2} \\
+    2x + 3y - z = 12         \tag{3}
+\end{numcases}
+就是由三个一次方程组成的三元一次方程组。
+
+本章中所说的三元一次方程组，都是指由三个一次方程组成的三元一次方程组。下面我们学习三元一次方程组的一种解法。
+
+解三元一次方程组，可以把方程组里的一个方程分别与另外两个方程结合成两组，
+利用代入法或加减法消去这两组中的同一个未知数， 得到含另外两个未知数的两个二元一次方程，
+解由这两个二元一次方程组成的二元一次方程组， 求得两个未知数的值后， 再求出被消去的那个未知数的值。
+这样， 通过把 “三元” 的问题逐步化为 “二元” 、“一元” 的问题， 从而求得了原方程组的解。 我们看几个例子。
+
+\liti 解前面给出的三元一次方程组。
+
+分析： 在这个方程组里，方程 (1) 中未知数 $z$ 的系数为 1， 可以把方程 (1) 分别与 (2)， (3) 结合，先消去 $z$。
+
+\jie $(1) + (3)$，得
+\begin{gather*}
+    5x + 5y = 25 \juhao \tag{4}
+\end{gather*}
+
+$(1) \times 2 - (2)$，得
+\begin{gather*}
+    5x + 3y = 19 \juhao \tag{5}
+\end{gather*}
+
+把方程 (4)， (5) 组成一个二元一次方程组
+\begin{numcases}{}
+    5x + 5y = 25 \douhao \tag{4} \\
+    5x + 3y = 19 \juhao \tag{5}
+\end{numcases}
+
+解这个二元一次方程组，得
+$$ \begin{cases} x = 2 \douhao \\ y = 3 \juhao \end{cases} $$
+
+把 $x = 2$，$y = 3$ 代入 (1)，得
+$$ 3 \times 2 + 2 \times 3 + z = 13 \douhao $$
+
+\fenge{$\therefore$}{$$ z = 1 \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 2 \douhao \\
+        y = 3 \douhao \\
+        z = 1 \juhao
+    \end{cases}$$
+}
+
+
+要检验所得的结果是不是原方程组的解， 应把这组值代入原方程组里的每一个方程进行检验， 但检验一般不必写出。
+
+
+\liti 解方程组
+\begin{numcases}{}
+    3x + 4z      = 7 \douhao \tag{1} \\
+    2x + 3y + z  = 9 \douhao \tag{2} \\
+    5x - 9y + 7z = 8 \juhao  \tag{3}
+\end{numcases}
+
+分析： 在这个方程组里， 方程 (1) 只含两个未知数 $x$，$z$，
+所以只要由 (2)， (3) 消去 $y$，就可以得到含 $x$，$z$ 的二元一次方程组。因此先消去 $y$ 比较方便。
+
+\jie $(2) \times 3 + (3)$，得
+\begin{gather*}
+    11x + 10z = 35 \juhao \tag{4}
+\end{gather*}
+
+把方程 (1)， (4) 组成一个二元一次方程组
+\begin{numcases}{}
+    3x + 4z   = 7  \douhao \tag{1} \\
+    11x + 10z = 35 \juhao  \tag{4}
+\end{numcases}
+
+解这个二元一次方程组，得
+$$\begin{cases}
+    x =  5 \douhao \\
+    z = -2 \juhao
+\end{cases}$$
+
+把 $x = 5$， $z = -2$ 代入 (2)，得
+\begin{gather*}
+    2 \times 5 + 3y - 2 = 9 \douhao \\
+    3y = 1 \douhao
+\end{gather*}
+
+\fenge{$\therefore$}{$$ y = \dfrac{1}{3} \juhao $$}
+
+\fenge{$\therefore$}{
+    $$\begin{cases}
+        x = 5 \douhao \\
+        y = \dfrac{1}{3} \douhao \\
+        z = -2 \juhao
+    \end{cases}$$
+}
+
+\lianxi
+
+解下列三元一次方程组：
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[18em]{
+        $\begin{cases}
+            3x - y + z  = 4  \douhao \\
+            2x + 3y - z = 12 \douhao \\
+            x  + y  + z = 6  \fenhao
+        \end{cases}$
+    }{
+        $\begin{cases}
+            2x + 4y + 3z = 9  \douhao \\
+            3x - 2y + 5z = 11 \douhao \\
+            5x - 6y + 7z = 13 \fenhao
+        \end{cases}$
+    }
+
+    \twoInLineXxt[18em]{
+        $\begin{cases}
+            4x      -  9z = 17 \douhao \\
+            3x +  y + 15z = 18 \douhao \\
+             x + 2y +  3z =  2 \fenhao
+        \end{cases}$
+    }{
+        $\begin{cases}
+            z = x + y  \douhao \\
+            2x - 3y + 2z = 5 \douhao \\
+            x + 2y - z = 3 \juhao
+        \end{cases}$
+    }
+
+\end{xiaoxiaotis}
+\end{enhancedline}
