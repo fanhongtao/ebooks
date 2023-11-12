@@ -1,0 +1,28 @@
+\begin{tikzpicture}[transform shape, scale=0.8,]
+    \tikzset{
+        fangchengzu/.pic = {
+            \node at (0, 0) {
+                $\begin{cases}
+                    x =  \\
+                    y =
+                \end{cases}$
+            };
+        }
+    }
+    \pic at (0, 0) {fangchengzu};
+    \pic at (2, 1) {fangchengzu};
+    \pic at (2, -1) {fangchengzu};
+    \pic at (4, 0) {fangchengzu};
+    \pic at (6, 1) {fangchengzu};
+    \pic at (6, -1) {fangchengzu};
+    \pic at (8, 0) {fangchengzu};
+
+    \node at (2, -2) {……};
+    \node at (6, -2) {……};
+
+    \draw (1.5, 0) ellipse [x radius=3, y radius=2.2];
+    \draw (6.0, 0) ellipse [x radius=3, y radius=2.2];
+    \draw (0.2, -0.9) -- (-1.5, -2.6) node [below] {方程(1)的解集};
+    \draw (4.0, -0.9) -- (3.8, -2.2) node [below] {方程组 $\begin{cases}y = 1 - x \\ 3x + 2y = 5 \end{cases}$的解};
+    \draw (6.8, -0.9) -- (8.8, -2.6) node [below] {方程(2)的解集};
+\end{tikzpicture}
