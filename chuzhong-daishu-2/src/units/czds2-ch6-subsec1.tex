@@ -1,0 +1,149 @@
+\subsection{同底数的幂的乘法}\label{subsec:6-1}
+
+我们已经学过整式的加减，现在进一步学习整式的乘除。为此，先研究同底数的幂的乘法。我们来计算
+$$ 10^3 \times 10^2,\quad 2^3 \times 2^2 \juhao $$
+
+根据乘方的意义，得
+\begin{align*}
+    10^3 \times 10^2 &= (10 \times 10 \times 10) \times (10 \times 10) \\
+        &= 10 \times 10 \times 10 \times 10 \times 10 \\
+        &= 10^5, \\
+    2^3 \times 2^2 &= (2 \times 2 \times 2) \times (2 \times 2) \\
+        &= 2 \times 2 \times 2 \times 2 \times 2 \\
+        &= 2^5 \juhao
+\end{align*}
+
+从上面看到，$10^3$ 是 3 个 10 连乘，$10^2$ 是 2 个 10 连乘，所以 $10^3 \times 10^2$ 是 5 个 10 连乘。
+同样，$2^3$ 是 3 个 2 连乘，$2^2$ 是 2 个 2 连乘，$2^3 \times 2^2$ 是 5 个 2 连乘。也就是
+\begin{align*}
+    10^3 \times 10^2 = 10^{3+2} \douhao \\
+    2^3  \times 2^2  = 2^{3+2} \juhao
+\end{align*}
+
+同样，
+\begin{align*}
+    a^3 \cdot a^2 &= (aaa) \; (aa) \\
+        &= aaaaa \\
+        &= a^5 \douhao
+\end{align*}
+也就是
+$$ a^3 \cdot a^2 = a^{3+2} \juhao $$
+
+一般地，如果 $m$，$n$ 都是正整数，那么
+\begin{align*}
+    a^m \cdot a^n &= (\underbrace{aa \cdots a}_{m \text{个} a}) \; (\underbrace{aa \cdots a}_{n \text{个} a}) \\
+        &= \underbrace{aa \cdots a}_{(m+n) \text{个} a} = a^{m+n} \douhao
+\end{align*}
+即
+\begin{center}
+    \framebox{\quad $a^m \cdot a^n = a^{m+n}$。\;}
+\end{center}
+这就是说，\zhongdian{同底数的幂相乘，底数不变，指数相加。}
+
+当三个或三个以上同底数的幂相乘时，也具有这一性质。例如
+
+$a^m \cdot a^n \cdot a^p = a^{m+n+p}$ （$m$，$n$，$p$ 都是正整数。）\footnote{本章所有的幂指数都是正整数。}
+
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$10^7 \times 10^4$；} & \xxt{$x^2 \cdot x^5$；} \\
+        \xxt{$y \cdot y^2 \cdot y^3$；} & \xxt{$-a^2 \cdot a^6$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$10^7 \times 10^4 = 10^{7+4} = 10^{11}$；}
+
+\xxt{$x^2 \cdot x^5 = x^{2+5} = x^7$；}
+
+\xxt{$y \cdot y^2 \cdot y^3 = y^{1+2+3} = y^6$；}
+
+\xxt{$-a^2 \cdot a^6 = -(a^2 \cdot a^6) = -a^{2+6} = -a^8$。}
+
+\end{xiaoxiaotis}
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt[18em]{$x^n \cdot x^2$；}{$y^m \cdot y^{m+1}$。}
+
+\resetxxt
+\jie \xxt{$x^n \cdot x^2 = x^{n+2}$；}
+
+\xxt{$y^m \cdot y^{m+1} = y^{m+(m+1)} = y^{2m+1}$。}
+
+\end{xiaoxiaotis}
+
+\liti 把下列各式化成 $(p + q)^n$ 或 $(s - t)^n$ 的形式。
+\begin{xiaoxiaotis}
+
+    \xxt{$(p + q)^3 \cdot (p + q)^2$；}
+
+    \xxt{$(s - t)^2 \cdot (s - t) \cdot (s - t)^4$；}
+
+    \xxt{$(p + q)^m \cdot (p + q)^n$。}
+
+分析： 把 $(p + q)$ 或 $(s - t)$ 看作底数 $a$，就可运用同底数的幂相乘的性质来进行计算。
+
+\resetxxt
+\jie \xxt{$(p + q)^3 \cdot (p + q)^2 = (p + q)^{3+2} = (p + q)^5$；}
+
+\xxt{$(s - t)^2 \cdot (s - t) \cdot (s - t)^4 = (s - t)^{2+1+4} = (s - t)^7$；}
+
+\xxt{$(p + q)^m \cdot (p + q)^n = (p + q)^{m+n}$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$10^5 \cdot 10^6$；} & \xxt{$s^5 \cdot s^8$；} & \xxt{$a^7 \cdot a^3$；} \\
+        \xxt{$y^3 \cdot y^2$；}   & \xxt{$b^5 \cdot b$；}   & \xxt{$x^4 \cdot x^4 \cdot x$；} \\
+        \xxt{$a^n \cdot a$；}     & \xxt{$x^n \cdot x^n$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$10 \times 10^8$；}   & \xxt{$a^4 \cdot a^6$；} & \xxt{$x^5 \cdot x^5$；} \\
+        \xxt{$y^{12} \cdot y^6$；} & \xxt{$x^{10} \cdot x$；} & \xxt{$-b^3 \cdot b^7$；} \\
+        \xxt{$y^4 \cdot y^3 \cdot y^2 \cdot y$；} & \xxt{$x^5 \cdot x^6 \cdot x^3$；} & \xxt{$10^2 \cdot 10^n$；} \\
+        \xxt{$a^n \cdot a^{2n}$；} & \xxt{$y^{m+1} \cdot y^{m-1}$；} & \xxt{$(-2)^2 \cdot (-2)^3$；} \\
+        \xxt{$y^n \cdot y \cdot y^{n+1}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{把下列各式化成 $(x + y)^n$ 的形式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(x + y)^2 \cdot (x + y)^2$；} & \xxt{$(x + y)^3 \cdot (x + y)$；} \\
+        \xxt{$(x + y)^3 \cdot (x + y) \cdot (x + y)^2$；} & \xxt{$(x + y)^{m+1} \cdot (x + y)^{m+n-1}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下面的计算对不对，为什么？如果不对，应怎样改正？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$b^5 \cdot b^5 = 2b^5$；} & \xxt{$x^5 + x^5 = x^{10}$；} \\
+        \xxt{$c \cdot c^3 = c^3$；} & \xxt{$m^3 \cdot m^2 = m^5$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
