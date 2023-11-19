@@ -1,0 +1,109 @@
+\subsection{幂的乘方}\label{subsec:6-3}
+
+我们来计算
+$$(a^4)^3\nsep (a^3)^5 \juhao $$
+
+$(a^4)^3$ 是把幂 $a^4$ 三次方。如果把 $a^4$ 看作是底数，那么根据乘方的意义和底数的幂的乘法性质，得
+$$ (a^4)^3 = a^4 \cdot a^4 \cdot a^4 = a^{4+4+4} = a^{4 \times 3} \douhao $$
+同样，得
+$$ (a^3)^5 = a^3 \cdot a^3 \cdot a^3 \cdot a^3 \cdot  a^3 = a^{3+3+3+3+3} = a^{3 \times 5} \juhao $$
+也就是
+\begin{align*}
+    (a^4)^3 &= a^{4 \times 3} \douhao \\
+    (a^3)^5 &= a^{3 \times 5} \juhao
+\end{align*}
+
+一般地，如果 $m$，$n$ 都是正整数，那么
+\begin{align*}
+    (a^m)^n &= \overbrace{a^m \cdot a^m \cdot \cdots \cdot a^m}^{n \text{个} a^m} \\
+        &= a^{m \overbrace{+ m + \cdots + }^{n \text{个} m} m} = a^{mn} \douhao
+\end{align*}
+即
+\begin{center}
+    \framebox{\quad $(a^m)^n = a^{mn}$。\;}
+\end{center}
+
+这就是说，\zhongdian{幂的乘方，底数不变，指数相乘。}
+
+
+\liti 计算：
+
+\begin{xiaoxiaotis}
+
+    \threeInLineXxt{$(10^7)^2$；}{$(x^3)^2$；}{$(z^4)^4$。}
+
+\resetxxt
+\jie \xxt{$(10^7)^2 = 10^{7 \times 2} = 10^{14}$；}
+
+\xxt{$(x^3)^2 = x^{3 \times 2} = x^6$；}
+
+\xxt{$(z^4)^4 = z^{4 \times 4} = z^{16}$。}
+
+\end{xiaoxiaotis}
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt{$(a^m)^2$；}{$(b^3)^n$。}
+
+\resetxxt
+\jie \xxt{$(a^m)^2 = a^{m \times 2} = a^{2m}$；}
+
+\xxt{$(b^3)^n = b^{3 \times n} = b^{3n}$。}
+
+\end{xiaoxiaotis}
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \twoInLineXxt{$[(x + y)^2]^4$；}{$(a^2)^4 \cdot (a^3)^3$。}
+
+分析： 在第（1）小题中，把 $(x + y)^2$ 看作一个字母的幂进行计算；
+在第（2）小题中，先分别计算 $(a^2)^4$，$(a^3)^3$，然后根据同底数的幂的乘法性质进行计算。
+
+\resetxxt
+\jie \xxt{$[(x + y)^2]^4 = (x + y)^{2 \times 4} = (x + y)^8$；}
+
+\xxt{$(a^2)^4 \cdot (a^3)^3 = a^8 \cdot a^9 = a^{17}$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$(x^4)^2$；} & \xxt{$x^4 \cdot x^2$；} & \xxt{$(y^5)^5$；} \\
+        \xxt{$y^5 \cdot y^5$；} & \xxt{$(a^m)^3$；} & \xxt{$a^m \cdot a^3$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$(10^3)^3$；} & \xxt{$(x^4)^3$；} & \xxt{$(a^2)^5$；} \\
+        \xxt{$-(y^2)^4$；} & \xxt{$-(x^3)^6$；} & \xxt{$(s^m)^5$；} \\
+        \xxt{$[(x + a)^3]^2$；} & \xxt{$[(x + y)^n]^2$；} & \xxt{$(a^2)^3 \cdot a^5$；} \\
+        \xxt{$(a^2)^5 \cdot (a^4)^4$；} & \xxt{$(b^3)^2 \cdot (b^2)^3$；} & \xxt{$(c^2)^n \cdot c^{n+1}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下面的计算对不对，为什么？如果不对，应怎样改正？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(a^5)^2 = a^7$；} & \xxt{$a^5 \cdot a^2 = a^{10}$；} \\
+        \xxt{$(x^4)^7 = x^{28}$；} & \xxt{$(a^{n+1})^2 = a^{2n+1}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
