@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{2.5}
+    \pgfmathsetmacro{\b}{2.0}
+    \pgfmathsetmacro{\c}{1.5}
+    \pgfmathsetmacro{\h}{2}
+
+    \draw (0, 0) rectangle (\a, \h);
+    \draw (\a, 0) rectangle (\a+\b, \h);
+    \draw (\a+\b, 0) rectangle (\a+\b+\c, \h);
+
+    \node at (\a/2, \h/2) {$ma$};
+    \node at (\a+\b/2, \h/2) {$mb$};
+    \node at (\a+\b+\c/2, \h/2) {$mc$};
+
+    \draw [<->] (-0.3, 0) to [xianduan={below=0.3cm}] node [rotate=90] {$m$} (-0.3, \h);
+    \draw [<->] (0, -0.3) to [xianduan={above=0.3cm}] node {$a$} (\a, -0.3);
+    \draw [<->] (\a, -0.3) to [xianduan={above=0.3cm}] node {$b$} (\a+\b, -0.3);
+    \draw [<->] (\a+\b, -0.3) to [xianduan={above=0.3cm}] node {$c$} (\a+\b+\c, -0.3);
+\end{tikzpicture}
