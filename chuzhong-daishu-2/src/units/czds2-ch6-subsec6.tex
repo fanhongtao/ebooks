@@ -1,0 +1,214 @@
+\subsection{多项式的乘法}\label{subsec:6-6}
+
+现在我们来研究多项式的乘法。我们来计算
+$$ (a + b) (m + n) \juhao $$
+
+这是多项式乘以多项式。先把 $(m + n)$ 看成一个单项式，运用单项式与多项式相乘的法则，得
+$$ (a + b) (m + n) = a(m + n) + b(m + n) \douhao $$
+再运用单项式与多项式相乘的法则，就得
+\begin{align*}
+    (a + b) (m + n) &= a(m + n) + b(m + n) \\
+                    &= am + an + bm + bn \douhao
+\end{align*}
+即
+\begin{figure}[H]
+    \begin{minipage}{7cm}
+        \begin{align*}
+                & \tikz [overlay, >=Stealth] {
+                    \draw [->]  (.8em, .6em) arc [start angle=120, end angle=60, radius=3em];
+                    \draw [->]  (.6em, .6em) arc [start angle=120, end angle=60, radius=5em];
+                  }
+                  (a +
+                    \tikz [overlay, >=Stealth] {
+                        \draw [->]  (.2em, -.2em) arc [start angle=240, end angle=300, radius=1.5em];
+                        \draw [->]  (.1em, -.24em) arc [start angle=240, end angle=300, radius=3.5em];
+                    }
+                  b) (m + n) \\[1em]
+            ={} & am + an + bm + bn \juhao
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{7cm}
+        \centering
+        \input{../pic/czds2-ch6-2}
+        \caption{}\label{fig:6-2}
+    \end{minipage}
+\end{figure}
+
+这个结果也可以从图 \ref{fig:6-2} 明显地反映出来。
+
+一般地，\zhongdian{多项式与多项式相乘，先用一个多项式的每一项乘以另一个多项式的每一项，再把所得的积相加。}
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \xxt{$(x + 2y) (5a + 3b)$；}
+
+    \xxt{$(2x - 3) (x + 4)$；}
+
+    \xxt{$(3x + y) (x - 2y)$。}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & (x + 2y) (5a + 3b) \\
+    ={} & x \cdot 5a + x \cdot 3b + 2y \cdot 5a + 2y \cdot 3b \\
+    ={} & 5ax + 3bx + 10ay + 6by \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & (2x - 3) (x + 4) \\
+    ={} & 2x^2 + 8x - 3x - 12 \\
+    ={} & 2x^2 + 5x - 12 \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & (3x + y) (x - 2y) \\
+    ={} & 3x^2 - 6xy + xy - 2y^2 \\
+    ={} & 3x^2 - 5xy - 2y^2 \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+
+\begin{enhancedline}
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \xxt{$\left(-\dfrac{a}{2} + 3b^2\right) (a^2 - 2b)$；}
+
+    \xxt{$(x + y) (x^2 -xy + y^2)$。}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & \left(-\dfrac{a}{2} + 3b^2\right) (a^2 - 2b) \\
+    ={} & -\dfrac{a^3}{2} + ab + 3a^2b^2 - 6b^3 \fenhao
+\end{aligned}$；}
+
+\xxt{$\begin{aligned}[t]
+        & (x + y) (x^2 -xy + y^2) \\
+    ={} & x^3 - x^2y + xy^2 + x^2y - xy^2 + y^3 \\
+    ={} & x^3 + y^3 \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+\end{enhancedline}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(m + n) (u + v)$；} & \xxt{$(x + y) (a - b)$；} \\
+        \xxt{$(p - q) (r + s)$；} & \xxt{$(a - b) (c - d)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(2n + 6) (n - 3)$；} & \xxt{$(2x + 3) (3x - 1)$；} \\
+        \xxt{$(2a - 3b) (a + 5b)$；} & \xxt{$(3x - 2y) (3x + 2y)$；} \\
+        \xxt{$(2a + 3) \left(\dfrac{3}{2}b - 5\right)$；} & \xxt{$(2x + 5) (2x + 5)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, column{2}={20em}}
+        \xxt{$(x + 1) (x^2 - 2x + 3)$；} & \xxt{$(x - 1) (x^2 + x + 1)$；} \\
+        \xxt{$(4x - 3) (5x^2 - 4x + 7)$；} & \xxt{$(3x + 2) (3x - 2) (x^2 - 1)$；} \\
+        \xxt{$(3a - 2) (a - 1) + (a + 1) (a + 2)$；} & \xxt{$(2x^2 - 1)(x - 4) - (x^2 + 3)(2x - 5)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \xxt{$(x + 2)(x + 5)$；}
+
+    \xxt{$(y + 2)(y - 5)$。}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & (x + 2)(x + 5) \\
+    ={} & x^2 + 5x + 2x + 10 \\
+    ={} & x^2 + 7x + 10 \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & (y + 2)(y - 5) \\
+    ={} & y^2 - 5y + 2y - 10 \\
+    ={} & y^2 - 3y - 10 \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+从例 3 可以看出， 含有一个相同字母的两个一次二项式相乘， 得到的积是同一个字母的二次多项式。
+从例 3 还可以看出， 如果因式中一次项的系数都是 1 ， 那么积的二次项系数也是 1 。
+这时， 由于积的一次项是由两个因式中的常数项分别乘以两个因式中的一次项后， 合并同类项得到的，
+因此， 积的一次项系数等于两个因式中常数项的和。 积的常数项等于两个因式中常数项的积。
+因此， 如果用 $a$，$b$ 分别表示两个因式中的常数项， 那么，
+\begin{center}
+    \framebox{\quad $(x + a)(x + b) = x^2 + (a + b)x + ab$。\;}
+\end{center}
+
+\liti 解下列方程：
+\begin{xiaoxiaotis}
+
+    \xxt{$(x + 3)(x - 4) = x^2 - 16$；}
+
+    \xxt{$3x(x + 2) + (x + 1)(x - 1) = 4(x^2 + 8)$。}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+    (x + 3)(x - 4) &= x^2 - 16, \\
+    x^2 - x - 12 &= x^2 - 16, \\
+    -x &= -4, \\
+    x &= 4 \juhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+    3x(x + 2) + (x + 1)(x - 1) &= 4(x^2 + 8), \\
+    3x^2 + 6x + x^2 - 1 &= 4x^2 + 32, \\
+    6x &= 33, \\
+    x &= 5\dfrac{1}{2} \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(x + 1)(x + 4)$；} & \xxt{$(m - 2)(m + 3)$；} \\
+        \xxt{$(y + 4)(y - 5)$；} & \xxt{$(x - 3)(x - 5)$；} \\
+        \xxt{$\left(y - \dfrac{1}{2}\right)\left(y + \dfrac{1}{3}\right)$；} & \xxt{$(7x + 8)(6x - 5)$；} \\
+        \xxt{$\left(\dfrac{1}{2}x + 4\right)\left(6x - \dfrac{3}{4}\right)$；} & \xxt{$(y^2 + y + 1)(y + 2)$；} \\
+        \xxt{$(x + 2)(x + 3) - x(x + 1) - 8$；} & \xxt{$(3y - 1)(2y - 3) + (6y - 5)(y - 4)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{解下列方程：}
+\begin{xiaoxiaotis}
+
+    \xxt{$(2x + 3)(x - 4) - (x + 2)(x - 3) = x^2 + 6$；}
+
+    \xxt{$2x(3x - 5) - (2x - 3)(3x + 4) = 3(x + 4)$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
