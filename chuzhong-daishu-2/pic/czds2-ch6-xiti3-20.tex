@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{.8}
+    \draw [thick, pattern={mylines[angle=45, distance={5pt}]}]
+        (0, 0) -- (\a, 0) -- (\a, 2.5*\a)
+        -- (3*\a, 2.5*\a) -- (3*\a, 0)
+        -- (5*\a, 0) -- (5*\a, 2.5*\a)
+        -- (7*\a, 2.5*\a) -- (7*\a, 0)
+        -- (8*\a, 0) -- (8*\a, 4*\a)
+        -- (0, 4*\a) -- cycle;
+    \draw (0, 2.5*\a) -- (\a, 2.5*\a);
+    \draw [<->] (-0.3, 0) to [xianduan={below=0.3cm}] node [rotate=90] {$2.5a$} (-0.3, 2.5*\a);
+    \draw [<->] (-0.3, 2.5*\a) to [xianduan={below=0.3cm}] node [rotate=90] {$1.5a$} (-0.3, 4*\a);
+    \draw [<->] (0, -0.3) to [xianduan={above=0.3cm}] node {$a$} (\a, -0.3);
+    \draw [<->] (\a, -0.3) to [xianduan={above=0.3cm}] node {$2a$} (3*\a, -0.3);
+    \draw [<->] (3*\a, -0.3) to [xianduan={above=0.3cm}] node {$2a$} (5*\a, -0.3);
+    \draw [<->] (5*\a, -0.3) to [xianduan={above=0.3cm}] node {$2a$} (7*\a, -0.3);
+    \draw [<->] (7*\a, -0.3) to [xianduan={above=0.3cm}] node {$a$} (8*\a, -0.3);
+\end{tikzpicture}
