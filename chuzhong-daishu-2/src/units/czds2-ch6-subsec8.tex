@@ -1,0 +1,244 @@
+\subsection{完全平方公式}\label{subsec:6-8}
+
+我们来计算
+$$ (a + b)^2 \nsep (a - b)^2 \douhao $$
+得
+\begin{align*}
+        & (a + b)^2 \\
+    ={} & (a + b) (a + b) \\
+    ={} & a^2 + ab + ab + b^2\\
+    ={} & a^2 + 2ab + b^2 \douhao \\
+        & (a - b)^2 \\
+    ={} & (a - b) (a - b) \\
+    ={} & a^2 - ab - ab + b^2\\
+    ={} & a^2 - 2ab + b^2 \juhao \\
+\end{align*}
+
+由此得到
+\begin{center}
+    \framebox{\quad $\begin{aligned}[t]
+        (a + b)^2 &= a^2 + 2ab + b^2 \douhao \\
+        (a - b)^2 &= a^2 - 2ab + b^2 \juhao
+    \end{aligned}$ \;}
+\end{center}
+
+这就是说， \zhongdian{两数和（或差） 的平方， 等于它们的平方和， 加上（或者减去）它们的积的 2 倍。}
+这两个公式就是\zhongdian{完全平方公式。}
+
+这两个公式可以分别从图 \ref{fig:6-3} 和图 \ref{fig:6-4} 中看出。
+
+\begin{figure}[H]%[htbp]
+    \centering
+    \begin{minipage}{7cm}
+    \centering
+    \input{../pic/czds2-ch6-3}
+    \caption{}\label{fig:6-3}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{7cm}
+    \centering
+    \input{../pic/czds2-ch6-4}
+    \caption{}\label{fig:6-4}
+    \end{minipage}
+\end{figure}
+
+对于两数和（或差） 的平方，就可以运用上述公式来计算。 例如，计算
+$$ (x + 2y)^2 \nsep (2x - 5y)^2 \juhao $$
+如果在 $(x + 2y)^2$ 中，把 $x$ 看成 $a$，把 $2y$ 看成 $b$，
+在 $(2x - 5y)^2$ 中，把 $2x$ 看成 $a$，把 $5y$ 看成 $b$，那么
+$$ (x + 2y)^2 \nsep (2x - 5y)^2 $$
+就分别是
+$$ (a + b)^2 \nsep (a - b)^2 $$
+的形式。因此，可用完全平方公式来计算，即
+\begin{align*}
+    & (x + 2y)^2 \; = \quad x^2 + 2 \cdot x \cdot 2y + (2y)^2 \juhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-1em, -1em) rectangle (4em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    & (a + b)^2\phantom{x}  \; = \quad
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -1em) rectangle (9em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+        \draw [<->] (4.0em, .8em) -- (4.0em, 2.5em);
+        \draw [<->] (5.4em, .8em) -- (5.4em, 2.5em);
+        \draw [<->] (7.6em, .8em) -- (7.6em, 2.5em);
+    }
+    a^2 + 2 \hspace*{1em} a \hspace*{1em} b \; + \; b^2 \\[1em]
+    & \qquad = x^2 + 4xy + 4y^2 \douhao \\
+    & (2x - 5y)^2 \; = \; (2x)^2 - 2 \cdot 2x \cdot 5y + (5y)^2 \juhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-1em, -1em) rectangle (4.5em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.9em, .8em) -- (2.9em, 2.5em);
+    }
+    & (a - \phantom{x} b)^2\phantom{x}  \; = \quad
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -1em) rectangle (10em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.9em, .8em) -- (2.9em, 2.5em);
+        \draw [<->] (4.5em, .8em) -- (4.5em, 2.5em);
+        \draw [<->] (6.0em, .8em) -- (6.0em, 2.5em);
+        \draw [<->] (8.6em, .8em) -- (8.6em, 2.5em);
+    }
+    a^2 \hspace*{.5em} - 2 \hspace*{1em} a \hspace*{1em} b \; + \;\; b^2 \\[1em]
+    & \qquad = 4x^2 - 20xy + 25y^2 \juhao
+\end{align*}\vspace*{1em}
+
+
+\liti 运用完全平方公式计算：
+\begin{xiaoxiaotis}
+
+    \twoInLine{\xxt{$(-b^2 + 4a^2)^2$}；}{\xxt{$\left(y + \dfrac{1}{2}\right)^2$。}}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & (-b^2 + 4a^2)^2 \\
+    ={} & (-b^2)^2 + 2 \cdot (-b^2) \cdot 4a^2 + (4a^2)^2 \\
+    ={} & b^4 - 8a^2b^2 + 16a^4 \douhao
+\end{aligned}$ \\
+或 \\
+\hspace*{2em} $\begin{aligned}[t]
+        & (-b^2 + 4a^2)^2 \\
+    ={} & (4a^2 - b^2)^2 \\
+    ={} & 16a^4 - 8a^2b^2 + b^4 \fenhao
+\end{aligned}$
+}
+
+\xxt{$\left(y + \dfrac{1}{2}\right)^2 = y^2 + y + \dfrac{1}{4}$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{运用完全平方公式计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(a + 6)^2$；} & \xxt{$(4 + x)^2$；} \\
+        \xxt{$(x - 7)^2$；} & \xxt{$(8 - y)^2$；} \\
+        \xxt{$(3a + b)^2$；} & \xxt{$(4x + 3y)^2$；} \\
+        \xxt{$\left(\dfrac{1}{2}x - 3y\right)^2$；} & \xxt{$(-a^2 - b)^2$；} \\
+        \xxt{$(0.4x + 5y)^2$；} & \xxt{$\left(\dfrac{3}{4}x - \dfrac{2}{3}y^2\right)^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下面各式的计算，错在哪里，为什么？应怎样改正？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(a + b)^2 = a^2 + b^2$；} & \xxt{$(a - b)^2 = a^2 - b^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+\liti 运用完全平方公式计算：
+\begin{xiaoxiaotis}
+
+    \twoInLine{\xxt{$102^2$}；}{\xxt{$199^2$。}}
+
+\resetxxt
+\jie \twoInLine[18em]{
+    \xxt{$\begin{aligned}[t]
+            & 102^2 \\
+        ={} & (100 + 2)^2 \\
+        ={} & 100^2 + 2 \times 100 \times 2 + 2^2 \\
+        ={} & 10000 + 400 + 4 \\
+        ={} & 10404 \fenhao
+    \end{aligned}$}
+}{
+    \xxt{$\begin{aligned}[t]
+            & 199^2 \\
+        ={} & (200 - 1)^2 \\
+        ={} & 200^2 - 2 \times 200 + 1^2 \\
+        ={} & 40000 - 400 + 1 \\
+        ={} & 39601 \juhao
+    \end{aligned}$}
+}
+
+\end{xiaoxiaotis}
+
+
+\liti 运用乘法公式计算：
+\begin{xiaoxiaotis}
+
+    \xxt{$(m + n) (m - n) (m^2 - n^2)$；}
+
+    \xxt{$(a + b + c)^2$；}
+
+    \xxt{$(x + 2y - 3) (x - 2y + 3)$；}
+
+\begin{enhancedline}
+    \xxt{$\left(\dfrac{x}{2} + 5\right)^2 - \left(\dfrac{x}{2} - 5\right)^2$。}\jiange
+\end{enhancedline}
+
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & (m + n) (m - n) (m^2 - n^2) \\
+    ={} & (m^2 - n^2) (m^2 - n^2) = (m^2 - n^2)^2 \\
+    ={} & m^4 - 2m^2n^2 + n^4 \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & (a + b + c)^2 \\
+    ={} & [(a + b) + c]^2 \\
+    ={} & (a + b)^2 + 2(a + b)c + c^2 \\
+    ={} & a^2 + 2ab + b^2 + 2ac + 2bc + c^2 \\
+    ={} & a^2 + b^2 + c^2 + 2ab + 2ac + 2bc \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & (x + 2y - 3) (x - 2y + 3) \\
+    ={} & [x + (2y - 3)] [x - (2y - 3)] \\
+    ={} & x^2 - (2y - 3)^2 \\
+    ={} & x^2 - (4y^2 - 12y + 9) \\
+    ={} & x^2 - 4y^2 + 12y - 9 \fenhao
+\end{aligned}$}
+
+\begin{enhancedline}
+\xxt{$\begin{aligned}[t]
+        & \left(\dfrac{x}{2} + 5\right)^2 - \left(\dfrac{x}{2} - 5\right)^2 \\
+    ={} & \dfrac{x^2}{4} + 5x + 25 - \dfrac{x^2}{4} + 5x - 25 \\
+    ={} & 10x \juhao
+\end{aligned}$}
+\end{enhancedline}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{运用完全平方公式计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(2x + 1)^2$；} & \xxt{$(3y - 4)^2$；} \\
+        \xxt{$91^2$；} & \xxt{$79.8^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{运用乘法公式计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(x + 3) (x - 3) (x^2 - 9)$；} & \xxt{$(x + 6)^2 - (x - 6)^2$；} \\
+        \xxt{$(a + 2b + c)^2$；} & \xxt{$(2a + b + 1) (2a + b - 1)$；} \\
+        \xxt{$(a - 2b + 3c) (a + 2b - 3c)$；} & \xxt{$[(x + y)^2 + (x - y)^2] (x^2 - y^2)$；} \\
+        \xxt{$[(x - 1) (x + 1)]^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+\end{xiaotis}
+
+

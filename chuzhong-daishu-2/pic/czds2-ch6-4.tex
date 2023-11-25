@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{4}
+    \pgfmathsetmacro{\b}{1.5}
+
+    \draw (0, 0) rectangle (\a, \a);
+    \draw [pattern={mylines[angle=45, distance={5pt}]}] (0, \a - \b) rectangle (\a, \a);
+    \draw [pattern={mylines[angle=135, distance={5pt}]}] (\a - \b, 0) rectangle (\a, \a);
+
+    \node at (\a/2 - \b/2, \a/2 - \b/2) {$(a - b)^2$};
+
+    \draw [<->] (0, -0.6) to [xianduan={above=0.6cm}]  node {$a$} (\a, -0.6);
+    \draw [<->] (\a - \b, -0.3) to [xianduan={above=0.3cm}] node {$b$} (\a, -0.3);
+    \draw [<->] (-0.6, 0) to [xianduan={below=0.6cm}]  node {$a$} (-0.6, \a);
+    \draw [<->] (-0.3, \a - \b) to [xianduan={below=0.3cm}] node {$b$} (-0.3, \a);
+\end{tikzpicture}
+
