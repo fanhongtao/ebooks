@@ -1,0 +1,165 @@
+\subsection{立方和与立方差公式}\label{subsec:6-9}
+
+我们来计算
+$$ (a + b)(a^2 - ab + b^2) \nsep (a - b)(a^2 + ab + b^2) $$
+得
+\begin{align*}
+        & (a + b)(a^2 - ab + b^2) \\
+    ={} & a^3 - a^2b + ab^2 + a^2b - ab^2 + b^3 \\
+    ={} & a^3 + b^3 \douhao \\
+        & (a - b)(a^2 + ab + b^2) \\
+    ={} & a^3 + a^2b + ab^2 - a^2b - ab^2 - b^3 \\
+    ={} & a^3 - b^3 \juhao
+\end{align*}
+
+由此得到
+\begin{center}
+    \framebox{\quad $\begin{aligned}[t]
+        (a + b)(a^2 - ab + b^2) = a^3 + b^3 \douhao \\
+        (a - b)(a^2 + ab + b^2) = a^3 - b^3 \juhao
+    \end{aligned}$ \;}
+\end{center}
+
+
+这就是说， \zhongdian{两数和（或差）乘以它们的平方和与它们的积的差（或和），等于这两个的立方和（或差）。}
+这两个公式就是\zhongdian{立方和公式}与\zhongdian{立方差公式}。
+
+对于形如两数和（或差）与它们的平方和减去（或加上）它们的积的差（或和）相乘的乘法，
+就可运用上述公式来计算。例如，计算
+\begin{align*}
+    & (x + 3) (x^2 - 3x + 9) \douhao \\
+    & (2y - 1) (4y^2 + 2y + 1) \juhao
+\end{align*}
+如果在 $(x + 3) (x^2 - 3x + 9)$ 中， 把 $x$ 看成 $a$， 把 $3$ 看成 $b$，
+在 $(2y - 1) (4y^2 + 2y + 1)$ 中， 把 $2y$ 看成 $a$， 把 $1$ 看成 $b$，那么
+\begin{align*}
+    & (x + 3) (x^2 - 3x + 9) \douhao \\
+    & (2y - 1) (4y^2 + 2y + 1)
+\end{align*}
+就分别是
+\begin{align*}
+    & (a + b)(a^2 - ab + b^2) \douhao \\
+    & (a - b)(a^2 + ab + b^2)
+\end{align*}
+的形式。因此，可用立方和与立方差公式来计算，即
+\begin{align*}
+    & (x + 3) (x^2 - 3x + 9) \\
+    ={} & (x + 3) (x^2 - x \cdot 3 + 3^2) \; = \; x^3 + 3^3 = x^3 + 27 \fenhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-1em, -1em) rectangle (10em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+        \draw [<->] (3.7em, .8em) -- (3.7em, 2.5em);
+        \draw [<->] (5.8em, .8em) -- (5.8em, 2.5em);
+        \draw [<->] (7.0em, .8em) -- (7.0em, 2.5em);
+        \draw [<->] (8.8em, .8em) -- (8.8em, 2.5em);
+    }
+    & (a + b) (a^2 - a \hspace*{.8em} b + b^2) \; = \;\;
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.3em, -1em) rectangle (4em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    a^3 + b^3 \\[1em]
+    & (2y - 1) (4y^2 + 2y + 1) \\
+    ={} & (2y - 1) [(2y)^2 + (2y) \cdot 1 + 1^2) \; = \; (2y)^3 - 1^3 = 8y^3 - 1 \juhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-1em, -1em) rectangle (13em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.8em, .8em) -- (2.8em, 2.5em);
+        \draw [<->] (4.7em, .8em) -- (4.7em, 2.5em);
+        \draw [<->] (7.9em, .8em) -- (7.9em, 2.5em);
+        \draw [<->] (9.9em, .8em) -- (9.9em, 2.5em);
+        \draw [<->] (11.8em, .8em) -- (11.8em, 2.5em);
+    }
+    & (a \phantom{x} - b) (\phantom{x}a^2 \phantom{x} + \hspace*{.5em} a \hspace*{1.6em} b + b^2) \; = \phantom{(2}
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -1em) rectangle (4em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (3.1em, .8em) -- (3.1em, 2.5em);
+    }
+    a^3 \hspace*{.4em} - \hspace*{.4em} b^3 \\[1em]
+\end{align*}\vspace*{1em}
+
+
+\begin{enhancedline}
+\liti 运用立方和公式与立方差公式计算：
+\begin{xiaoxiaotis}
+
+    \xxt{$(4 + a) (16 - 4a + a^2)$；}
+
+    \xxt{$\left(5x - \dfrac{1}{2}y\right) \left(25x^2 + \dfrac{5}{2}xy + \dfrac{1}{4}y^2\right)$。}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        & (4 + a) (16 - 4a + a^2) \\
+    ={} & (4 + a) (4^2 - 4 \cdot a + a^2) \\
+    ={} & 4^3 + a^3 = 64 + a^3 \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+        & \left(5x - \dfrac{1}{2}y\right) \left(25x^2 + \dfrac{5}{2}xy + \dfrac{1}{4}y^2\right) \\
+    ={} & \left(5x - \dfrac{1}{2}y\right) \left[(5x)^2 + (5x) \cdot \dfrac{1}{2}y + \left(\dfrac{1}{2}y\right)^2\right] \\
+    ={} & (5x)^3 - \left(\dfrac{1}{2}y\right)^3 \\
+    ={} & 125x^3 - \dfrac{1}{8}y^3 \juhao
+\end{aligned}$} \jiange
+
+\end{xiaoxiaotis}
+\end{enhancedline}
+
+
+\liti 运用乘法公式计算：
+$$ (x + 1) (x - 1) (x^2 + x + 1) (x^2 - x + 1) \juhao $$
+
+\jie $\begin{aligned}[t]
+        & (x + 1) (x - 1) (x^2 + x + 1) (x^2 - x + 1) \\
+    ={} & [(x + 1) (x^2 - x + 1)] [(x - 1) (x^2 + x + 1)] \\
+    ={} & (x^3 + 1) (x^3 - 1) \\
+    ={} & x^6 - 1 \douhao
+\end{aligned}$
+
+或 $\begin{aligned}[t]
+        & (x + 1) (x - 1) (x^2 + x + 1) (x^2 - x + 1) \\
+    ={} & (x^2 - 1) [(x^2 + 1) + x] [(x^2 + 1) - x] \\
+    ={} & (x^2 - 1) [(x^2 + 1)^2 - x^2] \\
+    ={} & (x^2 - 1) (x^4 + 2x^2 + 1 - x^2) \\
+    ={} & (x^2 - 1) (x^4 + x^2 + 1) \\
+    ={} & x^6 - 1 \juhao
+\end{aligned}$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{运用乘法公式计算：}
+\begin{xiaoxiaotis}
+
+    \xxt{$(x^2 + 1) (x^4 - x^2 + 1)$；}
+
+    \xxt{$(y - 3) (y^2 + 3y + 9)$；}
+
+    \xxt{$(5 + c) (25 - 5c + c^2)$；}
+
+    \xxt{$(x^2 - y^2) (x^4 + x^2y^2 + y^4)$；}
+
+    \xxt{$(2x + 5) (4x^2 + 25 - 10x)$；}\jiange
+
+    \xxt{$\left(\dfrac{2}{3}a - \dfrac{1}{2}b\right) \left(\dfrac{4}{9}a^2 + \dfrac{1}{3}ab + \dfrac{1}{4}b^2\right)$。}\jiange
+
+\end{xiaoxiaotis}
+
+\xiaoti{运用乘法公式计算：}
+\begin{xiaoxiaotis}
+
+    \xxt{$(a + 2) (a - 2) (a^2 - 2a + 4) (a^2 + 2a + 4)$；}
+
+    \xxt{$(a - b) (a + b) (a^2 + ab + b^2)$；}
+
+    \xxt{$x(x - 1)^2 - (x^2 - x + 1) (x + 1)$；}
+
+    \xxt{$(y + 1)^2 + (y + 1) (y^2 - 2y + 1)$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
