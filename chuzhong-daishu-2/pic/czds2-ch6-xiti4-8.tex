@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \tikzset{
+        pics/yingshe/.style n args={2}{
+            code = {
+                \draw [->] (0, 0) -- (3, 0);
+                \draw (3, 0) -- (5, 0) node [right] {$#2$};
+                \node at (0, 0) {$#1$};
+            }
+        }
+    }
+
+    \foreach \x/\y [count=\i] in {
+        a+b/a^2-b^2,
+        a^2+ab+b^2/ ,
+        a^3 + a^2b + ab^2 + b^3/
+    } {
+        \draw (0, 3.5-0.7*\i) pic {yingshe={\x}{\y}};
+    }
+    \node at (2.8, 3.2) {乘以$a - b$};
+    \draw (0, 1.75) ellipse [x radius=1.7, y radius=2];
+    \draw (5.5, 1.75) ellipse [x radius=1.7, y radius=2];
+    \node at (0, 0.6) {$\cdots$};
+    \node at (5.5, 0.6) {$\cdots$};
+\end{tikzpicture}
