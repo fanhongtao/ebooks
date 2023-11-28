@@ -1,0 +1,139 @@
+\subsection{同底数的幂的除法}\label{subsec:6-10}
+
+现在我们来学习整式的除法。 我们知道， 除法是乘法的逆运算， 因此可以从整式乘法得出整式除法的法则。
+
+这一节先研究两个同底数的幂的除法。 我们来计算
+$$ 10^5 \div 10^3 \nsep 2^5 \div 2^3 \juhao $$
+
+根据除法是乘法的逆运算， 我们知道， 计算被除数除以除数所得的商， 就是要求一个数， 使它与除数的积等于被除数。
+
+\begin{tblr}{columns={$, colsep=0pt}, column{1}={.35\textwidth}}
+    \because    & 10^2 \times 10^3 = 10^5 \douhao \\
+    \therefore  & 10^5 \div 10^3 = 10^2 \fenhao \\
+    \because    & 2^2 \times 2^3 = 2^5 \douhao \\
+    \therefore  & 2^5 \div 2^3 = 2^2 \juhao
+\end{tblr}\\
+也就是
+\begin{align*}
+    10^5 \div 10^3 = 10^{5-3} \douhao \\
+    2^5 \div 2^3 = 2^{5-3} \juhao
+\end{align*}
+
+同样，
+
+%\fengeYinwei{a^2 \cdot a^3 = a^5 \douhao}
+
+%\fengeSuoyi{a^5 \div a^3 = a^2 \juhao \footnote{这里 $a \neq 0$。在本章中，所遇到的除式的值都不等于零。}}\\
+\begin{tblr}{columns={$, colsep=0pt}, column{1}={.35\textwidth}}
+    \because    & a^2 \cdot a^3 = a^5 \douhao \\
+    \therefore  & a^5 \div a^3 = a^2 \juhao \footnotemark
+\end{tblr}\\
+\footnotetext{这里 $a \neq 0$。在本章中，所遇到的除式的值都不等于零。}
+也就是
+$$ a^5 \div a^3 = a^{5-3} \juhao $$
+
+一般地，如果 $m$，$n$ 都是正整数，并且 $m > n$，那么
+\begin{center}
+    \framebox{\quad $a^m : a^n = a^{m-n} \; (a \neq 0)$。\;}
+\end{center}
+
+这就是说，\zhongdian{同底数的幂相除，底数不变，指数相减。}
+
+\begin{enhancedline}
+同底数的幂相除，如果被除式的指数等于除式的指数，例如
+$$ 3^2 \div 3^2 \nsep  \left(-\dfrac{1}{2}\right)^3 \div \left(-\dfrac{1}{2}\right)^3 \nsep a^m \div a^m \douhao $$
+那么，可以看出所得的商等于 1。
+\end{enhancedline}
+
+这就是说，\zhongdian{指数相等的同底数的幂相除，商等于1。}
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^8 \div x^2$；} & \xxt{$a^9 \div a^4$；} \\
+        \xxt{$(-a)^4 \div (-a)$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$x^8 \div x^2 = x^{8-2} = x^6$；}
+
+\xxt{$a^9 \div a^4 = a^{9-4} = a^5$；}
+
+\xxt{$\begin{aligned}[t]
+        & (-a)^4 \div (-a) = (-a)^{4-1} \\
+    ={} & (-a)^3 \\
+    ={} & -a^3 \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(ab)^5 \div (ab)^2$；} & \xxt{$(a + b)^3 \div (a + b)^2$；} \\
+        \xxt{$y^{n+2} \div y^2$；} & \xxt{$x^{n+m} \div x^{n+m}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$(ab)^5 \div (ab)^2 = (ab)^{5-2} = (ab)^3 = a^3b^3$；}
+
+\xxt{$(a + b)^3 \div (a + b)^2 = (a + b)^{3-2} = a + b$；}
+
+\xxt{$y^{n+2} \div y^2 = y^{n+2-2} = y^n$；}
+
+\xxt{$x^{n+m} \div x^{n+m} = 1$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$x^7 \div x^5$；} & \xxt{$y^9 \div y^8$；} & \xxt{$z^{11} \div z^8$；} \\
+        \xxt{$a^{10} \div a^3$；} & \xxt{$b^6 \div b^6$；} & \xxt{$c^7 \div c^7$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{在下列各式的括号里填上适当的代数式，使等式成立：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^5 \cdot \ewkh = x^9$；} & \xxt{$a^6 \cdot \ewkh = a^{12}$；} \\
+        \xxt{$b^3 \cdot b^3 \cdot \ewkh = b^{30}$；} & \xxt{$x^2 \cdot x^5 \cdot \ewkh = x^{20}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下面的计算对不对？如果不对，应怎样改正？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^6 \div x^3 = x^2$；} & \xxt{$z^5 \div z^4 = z$；} \\
+        \xxt{$a^3 \div a = a^3$；} & \xxt{$(-c)^4 \div (-c)^2 = -c^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(xy)^5 \div (xy)^3$；} & \xxt{$(a + b)^5 \div (a + b)^4$；} \\
+        \xxt{$a^{n+2}  \div a^{n+1}$；} & \xxt{$x^{12} \div x^3 \div x^4$；} \\
+        \xxt{$y^{10} \div (y^4 \div y^2)$；} & \xxt{$(c^{4n} \div c^{2n}) \cdot c^{3n}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
