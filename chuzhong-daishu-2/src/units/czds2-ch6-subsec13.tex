@@ -1,0 +1,184 @@
+\subsection{多项式除以多项式}\label{subsec:6-13}
+
+现在我们可以学习多项式除以多项式了。
+
+两个多项式相除，可以先把这两个多项式都按照同一字母降幂排列，
+然后再仿照两个多位数相除的演算方法，用竖式进行演算。例如，我们来计算
+$$ (7x + 2 + 6x^2) \div (2x + 1) \douhao $$
+仿照 $672 \div 21$，演算如下：
+
+\begin{minipage}{4cm}
+    $$
+    \begin{array}{r@{\;}*{4}{r@{}}}
+        & & & 3 & 2\\
+        \cline{3-5}
+        21 & \vstretch{1.3}{\big)}\mkern-7.3mu & \;\; 6 & 7 & 2 \\
+        & & 6 & 3 \\
+        \cline{3-5}
+        & & & 4 & 2\\
+        & & & 4 & 2 \\
+        \cline{4-5}
+        & & & & 0
+    \end{array}
+    $$
+\end{minipage}
+\begin{minipage}{9cm}
+    $$
+    \begin{array}{r@{\;}r@{}*{5}{r}l}
+        & & & & 3x & + & 2 & \leftarrow \text{商式} \\
+        \cline{3-7}
+        \text{除式 } \rightarrow 2x + 1 & \vstretch{1.3}{\big)}\mkern-7.3mu & \;\; 6x^2 & + & 7x & + & 2 & \leftarrow \text{被除式} \\
+        & & 6x^2 & + & 3x \\
+        \cline{3-7}
+        & & & & 4x & + & 2\\
+        & & & & 4x & + & 2 \\
+        \cline{5-7}
+        & & & & & & 0 & \leftarrow \text{余式}
+    \end{array}
+    $$
+\end{minipage}
+
+\fengeSuoyi{(7x + 2 + 6x^2) \div (2x + 1) = 3x + 2 \juhao}
+
+演算的步骤是：
+
+1. 用除式的第一项 $2x$ 去除被除式的第一项 $6x^2$，得商式的第一项 $3x$；
+
+2. 用商式的第一项 $3x$ 去乘除式，把积 $6x^2 + 3x$ 写在被除式下面（同类项对齐），
+从被除式中减去这个积，得 $4x + 2$ ；
+
+3. 把 $4x + 2$ 当作新的被除式，再按照上面的方法继续演算，直到余式是零
+（或余式的次数低于除式的次数）为止。
+
+一般多项式的除法也可按照上面演算步骤进行。
+
+\liti 计算 $(5x^2 + 2x^3 - 1) \div (1 + 2x)$。
+
+\jie
+$$
+\begin{array}{r@{\;}r@{}*{7}{r}}
+    & & & & x^2 & + & 2x & - & 1 \\
+    \cline{3-9}
+    2x + 1 & \vstretch{1.3}{\big)}\mkern-7.3mu & \;\; 2x^3 & + & 5x^2 &  &  & - & 1 \\
+    & & 2x^3 & + & x^2 \\
+    \cline{3-9}
+    & & & & 4x^2\\
+    & & & & 4x^2 & + & 2x \\
+    \cline{5-9}
+    & & & & & - & 2x & - & 1 \\
+    & & & & & - & 2x & - & 1 \\
+    \cline{5-9}
+    & & & & & & & & 0
+\end{array}
+$$
+
+$\therefore \quad (5x^2 + 2x^3 - 1) \div (1 + 2x) = x^2 + 2x - 1$。
+
+\zhuyi 按照 $x$ 降幂排列，如果被除式有缺项，要留出空位。也可以采用加零的办法补足缺项，
+例如，把 $2x^3 + 5x^2 - 1$ 写成 $2x^3 + 5x^2 + 0 - 1$。
+
+例 1 的余式为零。 如果一个多项式除以另一个多项式的余式为零，
+我们就说这个多项式能被另一个多项式\zhongdian{整除}， 这时也可说除式能整除被除式。
+
+整式除法也有不能整除的情况。按照某个字母降幂排列的整式除法，当余式不是零而次数低于除式的次数时，
+除法演算就不能继续进行了，这说明除式不能整除被除式。
+
+\liti 计算 $(2x^3 + 9x^2 + 3x + 5) \div (x^2 + 4x - 3)$。
+
+\jie
+$$
+\begin{array}{r@{\;}r@{}*{7}{r}}
+    & & & & & & 2x & + & 1 \\
+    \cline{3-9}
+    x^2 + 4x - 3 & \vstretch{1.3}{\big)}\mkern-7.3mu & \;\; 2x^3 & + & 9x^2 & + & 3x & + & 5 \\
+    & & 2x^3 & + & 8x^2 & - & 6x \\
+    \cline{3-9}
+    & & & & x^2 & + & 9x & + & 5 \\
+    & & & & x^2 & + & 4x & - & 5 \\
+    \cline{5-9}
+    & & & & & & 5x & + & 8
+\end{array}
+$$
+
+$\therefore \quad \text{商式} = 2x + 1 \douhao \qquad \text{余式} = 5x + 8$。
+
+我们知道，整数相除，有时不能整除，带有余数，例如，
+
+$$
+\begin{array}{r@{\;}*{4}{r@{}}}
+    & & & 3 & 7\\
+    \cline{3-5}
+    21 & \vstretch{1.3}{\big)}\mkern-7.3mu & \; 7 & 8 & 5 \\
+    & & 6 & 3 \\
+    \cline{3-5}
+    & & 1 & 5 & 5 \\
+    & & 1 & 4 & 7 \\
+    \cline{3-5}
+    & & & & 8
+\end{array}
+$$
+
+在数的带余除法中，有下面的关系：
+\begin{center}
+\begin{tblr}{columns={colsep=0pt},
+    row{1}={$, halign=c},
+}
+    785 & = & 21 & \times & 37 & + & 8 & \juhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [<->] (1.7em, .8em) -- (1.7em, 2.5em);
+        \draw [<->] (5.0em, .8em) -- (5.0em, 2.5em);
+        \draw [<->] (8.0em, .8em) -- (8.0em, 2.5em);
+        \draw [<->] (10.5em, .8em) -- (10.5em, 2.5em);
+    }
+    被除数 & & 除数 & & 商数 & & 余数
+\end{tblr}
+\end{center}
+
+与数的带余除法类似，在上面的例 2 中，也有下面的关系：
+\begin{center}
+    \begin{tblr}{columns={colsep=0pt},
+        row{1}={$},
+        row{2}={halign=c},
+    }
+        (2x^3 + 9x^2 + 3x + 5) & = & (x^2 + 4x - 3) & (2x + 1) & + & (5x + 8) & \juhao \\[1em]
+        \tikz [overlay, >=Stealth] {
+            \draw [<->] (1.7em, .8em) -- (1.7em, 2.5em);
+            \draw [<->] (10.0em, .8em) -- (10.0em, 2.5em);
+            \draw [<->] (14.5em, .8em) -- (14.5em, 2.5em);
+            \draw [<->] (19.0em, .8em) -- (19.0em, 2.5em);
+        }
+        被除式 & & 除式 & 商式 & & 余式
+    \end{tblr}
+\end{center}
+
+一般地，被除式、除式、商式及余式之间有下面的关系：
+
+\begin{center}
+    \framebox{\quad \zhongdian{$\bm{\text{被除式} = \text{除式} \times \text{商式} + \text{余式}}$。}\;}
+\end{center}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, column{2}={20em}}
+        \xxt{$(3x^2 + 14x - 5) \div (x + 5)$；} & \xxt{$(6x^2 + 14x + 4) \div (3x + 1)$；} \\
+        \xxt{$(8x^2 + 53x - 21) \div (x + 7)$；} & \xxt{$(1 + x^2 + x^4) \div (x^2 + 1 - x)$；} \\
+        \xxt{$(x^3 - 3x + x^2 - 8) \div (x - 2)$；} & \xxt{$(3x^3 - 4x - 5x^2 + 3) \div (x^2 - x + 5)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知除式、商式及余式，求被除式：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\text{除式} = 3x - 5$， $\text{商式} = 2x + 7$， $\text{余式} = 10$；}
+
+    \xxt{$\text{除式} = x^2 - 2x + 1$， $\text{商式} = x^2 + 2x - 1$， $\text{余式} = 4x$。}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
