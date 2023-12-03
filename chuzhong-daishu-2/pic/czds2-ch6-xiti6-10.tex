@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{2.5}
+    \pgfmathsetmacro{\b}{1}
+    \pgfmathsetmacro{\h}{\a - \b}
+
+    \draw [ultra thick] (-\a/2, 0) -- (\a/2, 0) -- (\a/2+\b, \h)
+        -- (-\a/2-\b, \h) -- cycle;
+    \draw [thick] (-\a/2, 0) -- (-\a/2, \h);
+    \draw [thick] (\a/2, 0) -- (\a/2, \h);
+
+    \draw [<->] (-\a/2, -0.3)   to [xianduan={above=0.3cm}] node {$a$} (\a/2, -0.3);
+    \draw [<->] (-\a/2, \h+0.3) to [xianduan={below=0.3cm}] node {$a$} (\a/2, \h+0.3);
+
+    \draw [<->] (-\a/2-\b, \h+0.3) to [xianduan={below=0.3cm}] node {$b$} (-\a/2, \h+0.3);
+    \draw [<->] (\a/2, \h+0.3)     to [xianduan={below=0.3cm}] node {$b$} (\a/2+\b, \h+0.3);
+
+    \draw [<->] (\a/2+\b+0.3, 0) to [xianduan={above=1.3cm}]  node [rotate=90] {$a - b$} (\a/2+\b+0.3, \h);
+\end{tikzpicture}

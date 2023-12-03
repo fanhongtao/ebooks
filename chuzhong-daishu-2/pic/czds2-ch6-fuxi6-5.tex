@@ -1,0 +1,10 @@
+\begin{tikzpicture}[every node/.style={minimum size=1cm,draw}, >=Stealth]
+    \foreach \text  [count=\i] in {
+        $n$, 平方, $+n$, $\div n$, $- n$
+    } {
+        \pgfmathsetmacro{\x}{\i * 1.5}
+        \draw (\x, 0) node {\text};
+        \draw [->] (\x+.5, 0) -- (\x+1, 0);
+    }
+    \draw (9, 0) node {答案};
+\end{tikzpicture}
