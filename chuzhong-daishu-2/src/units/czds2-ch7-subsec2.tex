@@ -1,0 +1,174 @@
+\subsection{提公因式法}\label{subsec:7-2}
+
+我们先看一个例子：怎样把多项式 $am + bm - cm$ 分解因式。由单项式与多项式相乘的法则，我们有
+$$ m(a + b - c) = ma + mb - mc \douhao $$
+反过来，就可以得到
+$$ ma + mb - mc = m(a + b - c) \juhao $$
+这就是说，多项式 $ma + mb - mc$ 可以分解成因式 $m$ 与因式 $a + b - c$ 的积。
+
+在等式 $ma + mb - mc = m(a + b - c)$ 中：
+
+左边是要分解因式的多项式 $ma + mb - mc$， 它的各项含有相同的因式 $m$。
+一个多项式每一项都含有的相同的因式，叫做这个多项式各项的\zhongdian{公因式}。
+$m$ 是多项式 $ma + mb - mc$ 各项的公因式。
+
+右边是分解后的式子 $m(a + b - c)$， 它是因式 $m$ 与因式 $a + b - c$ 的积，其中
+$m$ 是 $ma + mb - mc$ 中各项的公因式，
+$a + b - c$ 则等于用 $m$ 去除 $ma + mb - mc$ 所得的商式。
+
+从上面的例子可以看出：如果一个多项式的各项含有公因式，就可以提出这个公因式作为多项式的一个因式；
+用这个因式去除这个多项式，所得的商式就是另一个因式；再把多项式写成这两个因式的积。
+这种分解因式的方法叫做\zhongdian{提公因式法}。
+
+\liti 把 $4a^3b^2 - 6ab^3c$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & 4a^3b^2 - 6ab^3c \\
+    ={} & 2ab^2 \cdot 2a^2 - 2ab^2 \cdot 3bc \\
+    ={} & 2ab^2(2a^2 - 3bc) \juhao
+\end{aligned}$
+
+从例 1 可以看出，所提出的公因式是各项系数的最大公约数与各项都含有的字母的最低次幂的积。
+
+\liti 把 $3x^2 - 6xy + x$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & 3x^2 - 6xy + x \\
+    ={} & x \cdot 3x - x \cdot 6y + x \cdot 1 \\
+    ={} & x(3x - 6y + 1) \juhao
+\end{aligned}$
+
+\zhuyi 在例 2 中，$x = x \cdot 1$， 这个系数 “1” 通常可以省略，但在因式分解时不能漏掉。
+
+\liti 把 $-4m^3 + 16m^2 - 6m$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & -4m^3 + 16m^2 - 6m \\
+    ={} & -(4m^3 - 16m^2 + 6m) \\
+    ={} & -(2m \cdot 2m^2 - 2m \cdot 8m + 2m \cdot 3) \\
+    ={} & -2m(2m^2 - 8m + 3) \juhao
+\end{aligned}$
+
+如果多项式的第一项系数是负数，一般要提出 “$-$” 号，使括号内的第一项系数是正数。
+在提出 “$-$” 号时，多项式的各项都要变号。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）下列由左边到右边的变形，哪些是因式分解，哪些不是，为什么？}
+\begin{xiaoxiaotis}
+
+    \xxt{$(x + 2)(x - 2) = x^2 - 4$；}
+
+    \xxt{$x^2 - 4 = (x + 2)(x - 2)$；}
+
+    \xxt{$x^2 - 4 + 3x = (x + 2)(x - 2) + 3x$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答）如果用提公因式法把下列多项式分解因式，应该分别提出怎样的公因式？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$ax + ay$；} & \xxt{$3mx - 6nx$；} \\
+        \xxt{$4a^2 + 10ab$；} & \xxt{$15a^2 + 5a$；} \\
+        \xxt{$x^2y + xy^2$；} & \xxt{$12xyz - 9x^2y^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$nx - ny$；} & \xxt{$a^2 + ab$；} \\
+        \xxt{$4x^3 - 6x^2$；} & \xxt{$8m^2n + 2mn$；} \\
+        \xxt{$3a^2y - 3ay + 6y$；} & \xxt{$a^2b + 5ab - b$；} \\
+        \xxt{$-x^2 + xy - xz$；} & \xxt{$-24x^2y - 12xy^2 + 28y^3$；} \\
+        \xxt{$-3ma^3 - 6ma^2 + 12ma$；} & \xxt{$56x^3yz + 14x^2y^2z - 21xy^2z^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 把 $2a(b + c) - 3(b + c)$ 分解因式。
+
+分析：把这个多项式看成一个二项式，第一项是 $2a(b + c)$， 第二项是 $-3(b + c)$，
+这两项含有公因式 $b + c$， 所以可以用提公因式法分解因式。
+
+\jie $\begin{aligned}[t]
+        & 2a(b + c) - 3(b + c) \\
+    ={} & (b + c)(2a - 3) \juhao
+\end{aligned}$
+
+
+\liti 把 $6(x - 2) + x(2 - x)$ 分解因式。
+
+分析：这个多项式可以看成一个二项式，因为 $2 - x = -(x - 2)$，
+所以各项含有公因式 $x - 2$，可以用提公因式法分解因式。
+
+\jie $\begin{aligned}[t]
+        & 6(x - 2) + x(2 - x) \\
+    ={} & 6(x - 2) - x(x - 2) \\
+    ={} & (x - 2)(6 - x) \juhao
+\end{aligned}$
+
+
+\liti 把 $5(x - y)^3 + 10(y - x)^2$ 分解因式。
+
+分析：这个多项式可以看作一个二项式，因为 $(y - x)^2 = [-(x - y)]^2 = (x - y)^2$，
+所以各项有公因式 $(x - y)^2$，可以用提公因式法分解因式。
+
+\jie $\begin{aligned}[t]
+        & 5(x - y)^3 + 10(y - x)^2 \\
+    ={} & 5(x - y)^3 + 10(x - y)^2 \\
+    ={} & 5(x - y)^2 \cdot (x - y) + 5(x - y)^2 \cdot 2 \\
+    ={} & 5(x - y)^2 [(x - y) +  2] \\
+    ={} & 5(x - y)^2 (x - y + 2) \juhao
+\end{aligned}$
+
+\liti 把 $18b(a - b)^2 - 12(a - b)^3$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & 18b(a - b)^2 - 12(a - b)^3 \\
+    ={} & 6(a - b)^2 [3b - 2(a - b)] \\
+    ={} & 6(a - b)^2 (3b - 2a + 2b) \\
+    ={} & 6(a - b)^2 (5b - 2a) \juhao
+\end{aligned}$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在下列各式右边的括号前填入适当的符号（正号或负号），使左边与右边相等：}
+\begin{xiaoxiaotis}
+    \newcommand{\kongge}{\hspace*{1em}}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, column{2}={20em}}
+        \xxt{$y - x = \kongge (x - y)$；} & \xxt{$b - a = \kongge (a - b)$；} \\
+        \xxt{$d + c = \kongge (c + d)$；} & \xxt{$-z -y = \kongge (y + z)$；} \\
+        \xxt{$(b - a)^2 = \kongge (a - b)^2$；} & \xxt{$-x^2 + y^2 = \kongge (x^2 - y^2)$；} \\
+        \xxt{$(x - y)^3 = \kongge (y - x)^3$；} & \xxt{$(1 - x)(x - 2) = \kongge (x - 1)(x - 2)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$a(x + y) + b(x + y)$；} & \xxt{$6(p + q)^2 - 2(p + q)$；} \\
+        \xxt{$2(x - y)^2 - x(x - y)$；} & \xxt{$m(a - b) - n(b - a)$；} \\
+        \xxt{$3(y - x)^2 + 2(x - y)$；} & \xxt{$m(m - n)^2 - n(n - m)^2$；} \\
+        \xxt{$mn(m - n) - m(n - m)^2$；} & \xxt{$2x(x + y)^2 - (x + y)^3$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
