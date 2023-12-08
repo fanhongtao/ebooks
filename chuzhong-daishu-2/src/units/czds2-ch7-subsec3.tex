@@ -1,0 +1,471 @@
+\subsection{运用公式法}\label{subsec:7-3}
+
+根据因式分解的意义，可以看出，如果把乘法公式反过来，就可以用来把某些多项式分解因式。
+这种分解因式的方法叫做\zhongdian{运用公式法}。
+
+\subsubsection{平方差公式}
+
+我们知道，
+$$ (a + b)(a - b) = a^2 - b^2 \douhao $$
+反过来， 就得到
+\begin{center}
+    \framebox{\quad $a^2 - b^2 = (a + b)(a - b)$。\;}
+\end{center}
+
+这就是说，两个数的平方差，等于这两个数的和与这两个数的差的积。这个公式叫做\zhongdian{平方差公式}。
+运用这个公式，可以把形式是平方差的多项式分解因式。
+
+例如， 把多项式 $x^2 - 16$ 及 $9m^2 - 4n^2$ 分解因式。
+这两个多项式都不能用提公因式法来进行分解，但我们看到 $16 = 4^2$， $9m^2 = (3m)^2$， $4n^2 = (2n)^2$，
+所以 $x^2 - 16 = x^2 - 4^2$， $9m^2 - 4n^2 = (3m)^2 - (2n)^2$， 都是形式为平方差的多项式，
+可以运用公式 $a^2 - b^2 = (a + b)(a - b)$ 来分解因式，即
+
+\begin{align*}
+    x^2 - 16 \; = \; & x^2 - 4^2 \; = \; (x + 4) (x - 4) \douhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (3.2em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    & a^2 - b^2 \; =  \;\,
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (6em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+        \draw [<->] (3.7em, .8em) -- (3.7em, 2.5em);
+        \draw [<->] (5.4em, .8em) -- (5.4em, 2.5em);
+    }
+    (a + b) (a - b) \\[1em]
+    9m^2 - 4n^2 \; = \; & (3m)^2 - (2n)^2 \; = \; (3m + 2n) (3m - 2n) \juhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (6.2em, 1.5em);
+        \draw [<->] (.6em, .8em) -- (.6em, 2.5em);
+        \draw [<->] (4.7em, .8em) -- (4.7em, 2.5em);
+    }
+    & \; a^2 \quad - \quad b^2 \quad =  \;\;
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (9em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (3.4em, .8em) -- (3.4em, 2.5em);
+        \draw [<->] (5.0em, .8em) -- (5.0em, 2.5em);
+        \draw [<->] (7.9em, .8em) -- (7.9em, 2.5em);
+    }
+    (a \;\; + \;\; b) \; (a \;\; - \;\; b)
+\end{align*}\vspace*{1em}
+
+\liti 把下列各式分解因式：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$1 - 25b^2$；} & \xxt{$x^2y^2 - z^2$；} \\
+        \xxt{$\dfrac{4}{9}m^2 - 0.01n^2$。}
+    \end{tblr}
+
+\resetxxt
+\jie  \begin{tblr}[t]{columns={colsep=0pt}}
+    \xxt{\huitui$\begin{aligned}[t]
+            & 1 - 25b^2 \\
+        ={} & 1^2 - (5b)^2 \\
+        ={} & (1 + 5b)(1 - 5b) \fenhao
+    \end{aligned}$} & \xxt{\huitui$\begin{aligned}[t]
+            & x^2y^2 - z^2 \\
+        ={} & (xy)^2 - z^2 \\
+        ={} & (xy + z)(xy - z) \fenhao
+    \end{aligned}$} \\
+    \xxt{\huitui$\begin{aligned}[t]
+            & \dfrac{4}{9}m^2 - 0.01n^2 \\
+        ={} & \left(\dfrac{2}{3}m\right)^2 - (0.1n)^2 \\
+        ={} & \left(\dfrac{2}{3}m + 0.1n\right) \left(\dfrac{2}{3}m - 0.1n\right) \juhao
+    \end{aligned}$}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\liti 把下列各式分解因式：
+\begin{xiaoxiaotis}
+
+    \xxt{$(x + p)^2 - (x + q)^2$；}
+
+    \xxt{$16(a - b)^2 - 9(a + b)^2$。}
+
+    分析： $(x + p)^2 - (x + q)^2$ 是 $x + p$ 与 $x + q$ 的平方差；
+    另一个式子 $16(a - b)^2 - 9(a + b)^2 = [4(a - b)]^2 - [3(a + b)]^2$，
+    它是 $4(a - b)$ 与 $3(a + b)$ 的平方差。所以它们都可以运用平方差公式分解因式。
+
+\resetxxt
+\jie \xxt{\huitui$\begin{aligned}[t]
+        & (x + p)^2 - (x + q)^2 \\
+    ={} & [(x + p) + (x + q)] [(x + p) - (x + q)] \\
+    ={} & (2x + p + q)(p - q) \fenhao
+\end{aligned}$}
+
+\xxt{\huitui$\begin{aligned}[t]
+        & 16(a - b)^2 - 9(a + b)^2 \\
+    ={} & [4(a - b)]^2 - [3(a + b)]^2 \\
+    ={} & [4(a - b) + 3(a + b)] [4(a - b) - 3(a + b)] \\
+    ={} & (7a - b)(a - 7b) \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+
+\liti 把下列各式分解因式：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^5 - x^3$；} & \xxt{$x^4 - y^4$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}, column{1}={16em}}
+    \xxt{\huitui $\begin{aligned}[t]
+            & x^5 - x^3 \\
+        ={} & x^3(x^2 - 1) \\
+        ={} & x^3(x + 1)(x - 1) \fenhao
+    \end{aligned}$} & \xxt{\huitui $\begin{aligned}[t]
+            & x^4 - y^4 \\
+        ={} & (x^2)^2 - (y^2)^2 \\
+        ={} & (x^2 + y^2)(x^2 - y^2) \\
+        ={} & (x^2 + y^2)(x + y)(x - y) \juhao
+    \end{aligned}$}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\zhuyi (1) 如果多项式的各项含有公因式，就先提出这个公因式，再进一步分解因式；
+
+(2) 分解因式，必须进行到每一个因式都不能再分解为止。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在下列各式右边的括号内填入适当的单项式（系数取正数），使左边与右边相等：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$4x^2 = \ewkh[3em]^2$；} & \xxt{$25m^2 = \ewkh[3em]^2$；} \\
+        \xxt{$36a^4 = \ewkh[3em]^2$；} & \xxt{$0.09b^2 = \ewkh[3em]^2$；} \\
+        \xxt{$81n^6 = \ewkh[3em]^2$；} & \xxt{$\dfrac{16}{49}c^2 = \ewkh[3em]^2$；} \\
+        \xxt{$64x^2y^2 = \ewkh[3em]^2$；} & \xxt{$100p^4q^2 = \ewkh[3em]^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答）把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 4$；} & \xxt{$9 - y^2$；} \\
+        \xxt{$1 - a^2$；} & \xxt{$4x^2 - y^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$a^2 - \dfrac{1}{9}x^2$；} & \xxt{$36 - m^2$；} \\
+        \xxt{$4x^2 - 9y^2$；} & \xxt{$0.81a^2 - 16b^2$；} \\
+        \xxt{$36n^2 - 1$；} & \xxt{$25p^2 - 49q^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{下列多项式可不可以用平方差公式来分解因式？如果可以，应分解成什么式子？如果不可以，说明为什么。}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 + y^2$；} & \xxt{$x^2 - y^2$；} \\
+        \xxt{$-x^2 + y^2$；} & \xxt{$-x^2 - y^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$4a^2 - (b + c)^2$；} & \xxt{$(3m + 2n)^2 - (m - n)^2$；} \\
+        \xxt{$2ab^3 - 2ab$；} & \xxt{$x^3 - 16x$；} \\
+        \xxt{$1 - a^4$；} & \xxt{$-x^4 + 16$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+\subsubsection{完全平方公式}
+
+我们知道，
+\begin{gather*}
+    (a + b)^2 = a^2 + 2ab + b^2 \douhao \\
+    (a - b)^2 = a^2 - 2ab + b^2 \douhao
+\end{gather*}
+反过来，就得到
+\begin{center}
+    \framebox{\quad $\begin{gathered}[t]
+        a^2 + 2ab + b^2 = (a + b)^2 \douhao \\
+        a^2 - 2ab + b^2 = (a - b)^2 \juhao
+    \end{gathered}$\;}
+\end{center}
+
+这就是说，两个数的平方和，加上（或者减去）这两个数的积的 2 倍，等于这两个数的和（或者差）的平方。
+因此，我们把 $a^2 + 2ab + b^2$ 及 $a^2 - 2ab + b^2$ 这样的式子叫做\zhongdian{完全平方式}，
+把上面方框中两个公式叫做\zhongdian{完全平方公式}。
+运用这两个公式，可以把形式是完全平方式的多项式分解因式。
+
+例如，把多项式 $x^2 + 6x + 9$ 及 $4x^2 - 20x + 25$ 分解因式。
+多项式 $x^2 + 6x + 9$ 有三项，第一项是 $x$ 的平方，第三项 9 是 3 的平方，第二项 $6x$ 正好是 $x$ 与 3 的积的 2 倍，
+所以 $x^2 + 6x + 9$ 是一个完全平方式，可以运用完全平方公式 $a^2 + 2ab + b^2 = (a + b)^2$ 把它分解因式，即
+\begin{align*}
+    x^2 + 6x + 9 \; = \; & x^2 + 2 \cdot x \cdot 3 + 3^2 \; = \; (x + 3)^2 \fenhao \\[1em]
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (7.5em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+        \draw [<->] (3.8em, .8em) -- (3.8em, 2.5em);
+        \draw [<->] (4.8em, .8em) -- (4.8em, 2.5em);
+        \draw [<->] (6.5em, .8em) -- (6.5em, 2.5em);
+    }
+    & a^2 + 2 \cdot a \cdot b + b^2 \; =  \;\,
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (4em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    (a + b)^2
+\end{align*}\\[.5em]
+类似地，多项式 $4x^2 - 20x + 25$ 也有三项，第一项 $4x^2$ 是 $2x$ 的平方，第三项 25 是 5 的平方，第二项 $-20x$ 正好是 $2x$ 与 5 的积的 2 倍的相反数，
+所以 $4x^2 - 20x + 25$ 是一个完全平方式，可以运用完全平方公式 $a^2 - 2ab + b^2 = (a - b)^2$ 把它分解因式，即
+\begin{align*}
+    4x^2 - 20x + 25 \; = \; & (2x)^2 - 2 \cdot 2x \cdot 5 + 5^2 \; = \; (2x - 5)^2 \fenhao \\[1em]
+    & \;\;
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (9.0em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (3.4em, .8em) -- (3.4em, 2.5em);
+        \draw [<->] (4.9em, .8em) -- (4.9em, 2.5em);
+        \draw [<->] (6.3em, .8em) -- (6.3em, 2.5em);
+        \draw [<->] (7.9em, .8em) -- (7.9em, 2.5em);
+    }
+    a^2 \enspace - \enspace 2 \cdot \; a \, \cdot b + b^2 \; =  \;\,
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (4em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    (a - b)^2
+\end{align*}\vspace*{1em}
+
+\liti 把 $25x^4 + 10x^2 + 1$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & 25x^4 + 10x^2 + 1 \\
+    ={} & (5x^2)^2 + 2 \cdot 5x^2 \cdot 1 + 1^2 \\
+    ={} & (5x^2 + 1)^2 \juhao
+\end{aligned}$
+
+\liti 把 $-x^2 - 4y^2 + 4xy$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & -x^2 - 4y^2 + 4xy \\
+    ={} & -(x^2 + 4y^2 - 4xy) \\
+    ={} & -(x^2 - 4xy + 4y^2) \\
+    ={} & -[x^2 - 2 \cdot 2xy + (2y)^2] \\
+    ={} & -(x - 2y)^2 \juhao
+\end{aligned}$
+
+\liti 把 $3ax^2 + 6axy + 3ay^2$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & 3ax^2 + 6axy + 3ay^2 \\
+    ={} & 3a(x^2 + 2xy + y^2) \\
+    ={} & 3a(x + y)^2 \juhao
+\end{aligned}$
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 + 2x + 1$；} & \xxt{$4a^2 + 4a + 1$；} \\
+        \xxt{$1 - 6y + 9y^2$；} & \xxt{$1 + m + \dfrac{m^2}{4}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{下列多项式是不是完全平方式？如果是，可以分解成什么式子？如果不是，说明为什么。}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 4x + 4$；} & \xxt{$1 + 16a^2$；} \\
+        \xxt{$4x^2 + 4x - 1$；} & \xxt{$x^2 + xy + y^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 12xy + 36y^2$；} & \xxt{$25p^2 + 10pq + q^2$；} \\
+        \xxt{$\dfrac{m^2}{9} + \dfrac{2mn}{3} + n^2$；} & \xxt{$a^2 - 14ab + 49b^2$；} \\
+        \xxt{$16a^4 + 24a^2b^2 + 9b^4$；} & \xxt{$(x + y)^2 - 10(x + y) + 25$；} \\
+        \xxt{$-2xy - x^2 - y^2$；} & \xxt{$ax^2 + 2a^2x + a^3$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\subsubsection{立方和与立方差公式}
+
+我们知道，
+\begin{gather*}
+    (a + b)(a^2 - ab + b^2) = a^3 + b^3 \douhao \\
+    (a - b)(a^2 + ab + b^2) = a^3 - b^3 \douhao \\
+\end{gather*}
+反过来，就得到
+\begin{center}
+    \framebox{\quad $\begin{gathered}[t]
+        a^3 + b^3 = (a + b)(a^2 - ab + b^2) \douhao \\
+        a^3 - b^3 = (a - b)(a^2 + ab + b^2) \juhao
+    \end{gathered}$\;}
+\end{center}
+
+这就是说，两个数的立方和（或者差），等于这两个数的和（或者差）乘以它们的平方和与它们的积的差（或者和）。
+这两个公式分别叫做\zhongdian{立方和公式}与\zhongdian{立方差公式}。
+运用这两个公式，可以把形式是立方和或立方差的多项式分解因式。
+
+\zhuyi 公式中的因式 $a^2 - ab + b^2$ 与 $a^2 + ab + b^2$ 都是非完全平方式。
+
+例如，把多项式 $x^3 + 8$ 及 $27 - 8a^3$ 分解因式。
+因为 $8 = 2^3$，所以 $x^3 + 8$ 是形式为立方和的多项式，可以运用立方和公式 $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ 来分解因式，即
+\begin{align*}
+    x^3 + 8 \; = \; & x^3 + 2^3 \; = \; (x + 2)(x^2 - x \cdot 2 + 2^2) \\[1em]
+    &
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (3.2em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+    }
+    a^3 + b^3 \; =  \;\,
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (10em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.4em, .8em) -- (2.4em, 2.5em);
+        \draw [<->] (3.6em, .8em) -- (3.6em, 2.5em);
+        \draw [<->] (5.8em, .8em) -- (5.8em, 2.5em);
+        \draw [<->] (7.0em, .8em) -- (7.0em, 2.5em);
+        \draw [<->] (8.8em, .8em) -- (8.8em, 2.5em);
+    }
+    (a + b)(a^2 - a \cdot b + b^2) \\[1em]
+    & = (x + 2)(x^2 - 2x + 4) \fenhao
+\end{align*}
+类似地，因为 $27 = 3^3$，$8a^3 = (2a)^3$，所以 $27 - 8a^3$ 是形式为立方差的多项式，
+可以运用立方差公式 $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ 来分解因式，即
+\begin{align*}
+    27 - 8a^3 \; = \; & 3^3 - (2a)^3 \; = \; (3 - 2a)[3^2 + 3 \cdot 2a + (2a)^2] \\[1em]
+    &
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-0.5em, -1em) rectangle (4.2em, 1.5em);
+        \draw [<->] (.3em, .8em) -- (.3em, 2.5em);
+        \draw [<->] (2.9em, .8em) -- (2.9em, 2.5em);
+    }
+    a^3 - \enspace b^3 \quad =  \;\,
+    \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.2em, -1em) rectangle (12em, 1.5em);
+        \draw [<->] (.7em, .8em) -- (.7em, 2.5em);
+        \draw [<->] (2.9em, .8em) -- (2.9em, 2.5em);
+        \draw [<->] (4.1em, .8em) -- (4.1em, 2.5em);
+        \draw [<->] (6.3em, .8em) -- (6.3em, 2.5em);
+        \draw [<->] (8.0em, .8em) -- (8.0em, 2.5em);
+        \draw [<->] (10.1em, .8em) -- (10.1em, 2.5em);
+    }
+    (a - \enspace b)(a^2 + a \cdot \enspace b + \enspace b^2) \\[1em]
+    & = (3 - 2a)(9 + 6a + 4a^2) \fenhao
+\end{align*}\vspace*{1em}
+
+
+\liti 把下列各式分解因式：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$27 - x^6$；} & \xxt{$1 + \dfrac{a^3b^3}{8}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}, column{1}={16em}}
+    \xxt{\huitui$\begin{aligned}[t]
+            & 27 - x^6 \\
+        ={} & 3^3 - (x^2)^3 \\
+        ={} & (3 - x^2)[3^2 + 3 \cdot x^2 + (x^2)^2] \\
+        ={} & (3 - x^2)(9 + 3x^2 + x^4) \fenhao
+    \end{aligned}$} & \xxt{\huitui$\begin{aligned}[t]
+            & 1 + \dfrac{a^3b^3}{8} \\
+        ={} & 1^3 + \left(\dfrac{ab}{2}\right)^3 \\
+        ={} & \left(1 + \dfrac{ab}{2}\right) \left[1^2 - 1 \cdot \dfrac{ab}{2} + \left(\dfrac{ab}{2}\right)^2\right] \\
+        ={} & \left(1 + \dfrac{ab}{2}\right) \left(1 - \dfrac{ab}{2} + \dfrac{a^2b^2}{4}\right) \juhao
+    \end{aligned}$}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+\liti 把 $x - xy^3$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & x - xy^3 \\
+    ={} & x(1 - y^3) \\
+    ={} & x(1 - y)(1 + y + y^2) \juhao
+\end{aligned}$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在下列各式右边的括号内填入适当的单项式，使左边与右边相等：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$64a^3 = \ewkh[3em]^3$；} & \xxt{$125n^6 = \ewkh[3em]^3$；} \\
+        \xxt{$0.001x^3 = \ewkh[3em]^3$；} & \xxt{$-27a^3b^3 = \ewkh[3em]^3$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$a^3 + 1$；} & \xxt{$1 - m^3$；} \\
+        \xxt{$8p^3 - q^3$；} & \xxt{$27 + x^3$；} \\
+        \xxt{$1 - 27y^6$；} & \xxt{$125m^3 + 8n^3$；} \\
+        \xxt{$p^6 - 64q^3$；} & \xxt{$m^3n^3 - \dfrac{1}{125}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{把下列各式分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$81 + 3x^3$；} & \xxt{$y^4 - 8y$；} \\
+        \xxt{$-27 - a^3$；} & \xxt{$4m^4 - \dfrac{m}{2}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
