@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+    scale=0.8,
+]
+    \pgfmathsetmacro{\a}{6.1}
+    \pgfmathsetmacro{\b}{1.7}
+
+    \draw [ultra thick, pattern={mylines[angle=45, distance={5pt}]}]
+        (0, 0) rectangle (\a, \a);
+    \draw [ultra thick, fill=white] (0, 0) rectangle (\b, \b);
+    \draw [ultra thick, fill=white] (\a - \b, 0) rectangle (\a, \b);
+    \draw [ultra thick, fill=white] (0, \a - \b) rectangle (\b, \a);
+    \draw [ultra thick, fill=white] (\a - \b, \a - \b) rectangle (\a, \a);
+
+    \draw [<->] (\a - \b, -0.3) to [xianduan={above=0.3cm}] node {$b$} (\a, -0.3);
+    \draw [<->] (0, -0.7) to [xianduan={above=0.7cm}] node {$a$} (\a, -0.7);
+\end{tikzpicture}

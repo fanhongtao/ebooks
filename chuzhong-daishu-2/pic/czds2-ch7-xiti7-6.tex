@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+    scale=0.3,
+]
+    \pgfmathsetmacro{\R}{7.8}
+    \pgfmathsetmacro{\r}{1.1}
+    \pgfmathsetmacro{\d}{4}
+
+    \draw [ultra thick, pattern={mylines[angle=45, distance={5pt}]}]
+        (0, 0) circle (\R);
+    \draw [ultra thick, fill=white] (0,  \d) circle (\r);
+    \draw [ultra thick, fill=white] (0, -\d) circle (\r);
+    \draw [ultra thick, fill=white] (\d,  0) circle (\r);
+    \draw [ultra thick, fill=white] (-\d, 0) circle (\r);
+\end{tikzpicture}
+
