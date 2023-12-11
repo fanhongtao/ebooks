@@ -1,0 +1,186 @@
+\subsection{分组分解法}\label{subsec:7-5}
+
+\subsubsection{分组后能提公因式}
+
+现在我们来看怎样把多项式
+$$ ax + ay + bx + by $$
+分解因式。
+
+这个多项式的各项没有公因式，也不能直接运用公式来分解。但是它的前两项有公因式 $a$，后两项有公因式 $b$，
+如果试着把它们按前两项与后两项分成两组，即试着把这个多项式写成
+$$ (ax + ay) + (bx + by) \douhao $$
+从两组分别提出公因式 $a$ 与 $b$ 后，得
+$$ a(x + y) + b(x + y) \douhao $$
+这时，分成的两组又有公因式 $x + y$，于是可以提出 $x + y$ 作为全式的一个因式，
+从而可以把原多项式分解成 $(x + y)(a + b)$。即
+\begin{align*}
+        & ax + ay + bx + by \\
+    ={} & (ax + ay) + (bx + by) \\
+    ={} & a(x + y) + b(x + y) \\
+    ={} & (x + y)(a + b) \juhao
+\end{align*}
+这种利用分组来分解因式的方法叫做\zhongdian{分组分解法}。
+从上面的例子可以看出，如果把一个多项式的项分组并提出公因式之后，各组之间又有公因式，
+那么这个多项式就可以用分组分解法来分解因式。
+
+
+\liti 把 $a^2 - ab + ac - bc$ 分解因式。
+
+分析：把这个多项式的四项按前两项与后两项分成两组，分别提出公因式。$a$ 与 $c$ 后，
+另一个因式正好都是 $a - b$, 这样全式就可以提出公因式 $a - b$。
+
+\jie $\begin{aligned}[t]
+        & a^2 - ab + ac - bc \\
+    ={} & (a^2 - ab) + (ac - bc) \\
+    ={} & a(a - b) + c(a - b) \\
+    ={} & (a - b)(a + c) \juhao
+\end{aligned}$
+
+\liti 把 $2ax - 10ay + 5by - bx$ 分解因式。
+
+分析：把这个多项式的四项按前两项与后两项分成两组，并使两组的项都按 $x$ 的降幂排列，
+然后从两组分别提出公因式 $2a$ 与 $-b$， 这时，另一个因式正好都是 $x -5y$，
+这样全式就可以提出公因式 $x - 5y$。
+
+\jie $\begin{aligned}[t]
+        & 2ax - 10ay + 5by - bx \\
+    ={} & (2ax - 10ay) + (5by - bx) \\
+    ={} & (2ax - 10ay) + (-bx + 5by) \\
+    ={} & 2a(x - 5y) - b(x - 5y) \\
+    ={} & (x - 5y)(2a - b) \juhao
+\end{aligned}$
+
+想一想：例 1、例 2 中还有没有其他分组的办法，因式分解的结果是不是一样。
+
+\liti 把 $3ax + 4by + 4ay + 3bx$ 分解因式。
+
+分析：这个多项式如果接前两项与后两项分组，无法分解因式。
+但如果把第一、三两项作为一组，第二、四两项作为另一组，分别提出公因式 $a$ 与 $b$ 后，
+另一个因式正好都是 $3x + 4y$，这样全式就可以提出公因式 $3x + 4y$。
+
+\jie $\begin{aligned}[t]
+        & 3ax + 4by + 4ay + 3bx \\
+    ={} & (3ax + 4ay) + (4by + 3bx) \\
+    ={} & (3ax + 4ay) + (3bx + 4by) \\
+    ={} & a(3x + 4y) + b(3x + 4y) \\
+    ={} & (3x + 4y)(a + b) \juhao
+\end{aligned}$
+
+\liti 把 $m^2 + 5n - mn - 5m$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & m^2 + 5n - mn - 5m \\
+    ={} & (m^2 - mn) + (5n - 5m) \\
+    ={} & (m^2 - mn) + (-5m + 5n) \\
+    ={} & m(m - n) - 5(m - n) \\
+    ={} & (m - n)(m - 5) \juhao
+\end{aligned}$
+
+想一想：例 3、例 4 中还有没有其他分组的办法，因式分解的结果是不是一样。
+
+
+\lianxi
+\begin{xiaotis}
+
+把下列各式分解因式：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$20(x + y) + x + y$；} & \xxt{$p - q + k(p - q)$；} \\
+        \xxt{$5m(a + b) - a - b$；} & \xxt{$2m - 2n - 4x(m - n)$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$ac + bc + 2a + 2b$；} & \xxt{$a^2 + ab - ac - bc$；} \\
+        \xxt{$3a - ax - 3b + bx$；} & \xxt{$xy - y^2 - yz + xz$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$5ax + 6by + 5ay + 6bx$；} & \xxt{$4x^2 + 3z - 3xz - 4x$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\subsubsection{分组后能运用公式}
+
+\liti 把 $x^2 - y^2 + ax + ay$ 分解因式。
+
+分析：把第一、二两项作为一组，这两项虽然没有公因式，但可以运用平方差公式分解因式，其中一个因式是 $x + y$；
+把第三、四两项作为另一组，在提出公因式后，另一个因式也是 $x + y$。
+这样，全式就可以提出公因式 $x + y$。
+
+\jie $\begin{aligned}[t]
+        & x^2 - y^2 + ax + ay \\
+    ={} & (x^2 - y^2) + (ax + ay) \\
+    ={} & (x + y)(x - y) + a(x + y) \\
+    ={} & (x + y)[(x - y) + a] \\
+    ={} & (x + y)(x - y + a) \juhao
+\end{aligned}$
+
+\liti 把 $a^2 - 2ab + b^2 - c^2$ 分解因式，
+分析；把前三项作为一组，它是一个完全平方式，可以分解成 $(a - b)^2$，
+这时全式可以再运用平方差公式来分解因式.
+
+\jie $\begin{aligned}[t]
+        & a^2 - 2ab + b^2 - c^2 \\
+    ={} & (a^2 -2ab + b^2) - c^2 \\
+    ={} & (a - b)^2 - c^2 \\
+    ={} & [(a - b) + c][(a - b) - c] \\
+    ={} & (a - b + c)(a - b - c) \juhao
+\end{aligned}$
+
+从例 5 、例 6 可以看出：如果能把一个多项式的项适当分组，使分组后能运用公式进行分解，
+那么这个多项式也可以用分组分解法来分解因式。
+
+\liti 把 $x^3 + x^2y - xy^2 - y^3$ 分解因式。
+
+\jie $\begin{aligned}[t]
+        & x^3 + x^2y - xy^2 - y^3 \\
+    ={} & (x^3 + x^2y) - (xy^2 + y^3) \\
+    ={} & x^2(x + y) - y^2(x + y) \\
+    ={} & (x + y)(x^2 - y^2) \\
+    ={} & (x + y)[(x + y)(x - y)] \\
+    ={} & (x + y)^2 (x - y) \juhao
+\end{aligned}$
+
+\zhuyi $x^2 - y^2$ 还能分解因式，因此要继续分解。
+
+现在，我们可以作一个归纳，把一个多项式分解因式，一般可按下列步骤进行：
+
+1． 多项式的各项有公因式时，先提公因式；
+
+2． 各项没有公因式时，看看能不能运用公式来分解因式；
+
+3． 如果用上述方法不能分解，再看它能不能运用分组分解法或其他方法（例如化为 $x^2 + (a + b)x + ab$ 的形式）来分解因式；
+
+4． 分解因式，必须进行到每一个因式都不能再分解为止。
+
+
+\lianxi
+\begin{xiaotis}
+
+把下列各式分解因式：
+
+\xiaoti{$4a^2 - b^2 + 6a - 3b$。}
+
+\xiaoti{$9m^2 - 6m + 2n - n^2$。}
+
+\xiaoti{$x^2 - y^2 - z^2 + 2yz$。}
+
+\xiaoti{$x^3 - x^2y - xy^2 - y^3$。}
+
+\end{xiaotis}
+
