@@ -254,3 +254,25 @@
     height/.initial=1   % 指定参数 height 的默认值
 }
 
+
+% 绘制 “十字相乘法”
+% 共有四个参数：
+%   1. a_1
+%   2. a_2
+%   3. c_1
+%   4. c_2
+\tikzset{
+  pics/cross/.style n args={4}{
+    code = {
+      \begin{scope}[every node/.style={minimum width=3em}]
+        \node [align=right] (a1) at (0, 1) {$#1$};
+        \node [align=right] (a2) at (0, 0) {$#2$};
+        \node [align=left] (c1) at (3, 1) {$#3$};
+        \node [align=left] (c2) at (3, 0) {$#4$};
+        \draw (a2.east) -- (c1.west);
+        \draw (a1.east) -- (c2.west);
+      \end{scope}
+    }
+  }
+}
+

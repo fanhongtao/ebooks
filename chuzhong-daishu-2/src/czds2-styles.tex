@@ -95,7 +95,8 @@
 \newenvironment{starred}{
   \ctexset {
     chapter/name={*第,章},
-    section/name={*}
+    section/name={*},
+    subsection/name={*},
   }
 }{}
 
@@ -125,13 +126,13 @@
 
 % （编号前）带星号的 subsection
 % 参数1: subsection 的标题
-\NewDocumentCommand{\starredsubsection}{o m}{
-  \refstepcounter{subsection}
-  \subsection*{*\thesubsection\quad #2}
-  \IfNoValueTF{#1}
-    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
-    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
-}
+% \NewDocumentCommand{\starredsubsection}{o m}{
+%   \refstepcounter{subsection}
+%   \subsection*{*\thesubsection\quad #2}
+%   \IfNoValueTF{#1}
+%     {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
+%     {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
+% }
 
 \newcounter{cntliti}[subsection]           % 例题的计数器
 \NewDocumentCommand{\liti}{o}{ % 例题的标题

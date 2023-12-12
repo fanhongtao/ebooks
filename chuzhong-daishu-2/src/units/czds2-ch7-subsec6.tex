@@ -1,0 +1,100 @@
+\begin{starred}
+\subsection{十字相乘法\footnote{本节为选学内容。}}\label{subsec:7-6}
+\end{starred}
+
+我们知道
+\begin{align*}
+        & (a_1x + c_1)(a_2x + c_2) \\
+    ={} & a_1a_2x^2 + a_1c_2x + a_2c_1x + c_1c_2 \\
+    ={} & a_1a_2x^2 + (a_1c_2 + a_2c_1)x + c_1c_2 \juhao
+\end{align*}
+反过来，就得到
+\begin{align*}
+        & a_1a_2x^2 + (a_1c_2 + a_2c_1)x + c_1c_2 \\
+    ={} & (a_1x + c_1)(a_2x + c_2) \juhao
+\end{align*}
+
+利用这个等式，我们可以用下面的写法，尝试把某些二次三项式如 $ax^2 + bx + c$ 分解因式。
+先把 $a$ 分解成 $a = a_1a_2$，把 $c$ 分解成 $c = c_1c_2$，
+并把 $a_1$，$a_2$，$c_1$，$c_2$ 排列如下：
+\begin{center}
+    \tikz \draw (0, 0) pic {cross={a_1}{a_2}{c_1}{c_2}};
+\end{center}
+这里按斜线交叉相乘的积的和就是 $a_1c_2 + a_2c_1$，如果它正好等于二次三项式 $ax^2 + bx + c$ 中一次项的系数 $b$，
+那么 $ax^2 + bx + c$ 就可分解成 $(a_1x + c_1)(a_2x + c_2)$，
+其中 $a_1$，$c_1$ 是上图中上面一行的两个数，$a_2$，$c_2$ 是下面一行的两个数。
+
+例如，把二次三项式 $3x^2 + 11x + 10$ 分解因式。我们知道，$3 = 1 \times 3$，$10 = 2 \times 5$，写成
+\begin{center}
+    \tikz \draw (0, 0) pic {cross={1}{3}{2}{5}};
+\end{center}
+后，发现 $1 \times 5 + 2 \times 3$ 正好等于 11，所以
+$$ 3x^2 + 11x + 10 = (x + 2)(3x + 5) \juhao $$
+
+这种经过画十字交叉线的帮助把二次三项式分解因式的方法，叫做\zhongdian{十字相乘法}。
+
+\zhuyi 因为分解因数及十字相乘都有多种可能情况，所以往往要经过多次尝试，才能确定一个二次三项式能否分解和怎样分解。
+比方在上面的二次三项式 $3x^2 + 11x + 10$ 中， 二次项系数 3 可以分解成 1， 3， 或 $-1$，$-3$ 的积，
+常数项 10 可以分解成 1，10，或 $-1$，$-10$， 或 2， 5， 或 $-2$， $-5$ 的积，其中十字相乘
+\begin{center}
+    \tikz \draw (0, 0) pic {cross={1}{3}{2}{5}};
+\end{center}
+能获得成功，而十字相乘如
+\begin{center}
+    \tikz \draw (0, 0) pic {cross={1}{3}{5}{2}};
+\end{center}
+等不能成功。所以用十字相乘法分解因式，往往要经过多次尝试。
+
+\liti[0] 把下列各式分解因式：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$2x^2 - 7x + 3$；} & \xxt{$6x^2 - 7x - 5$；} \\
+        \xxt{$5x^2 + 6xy - 8y^2$。}
+    \end{tblr}
+
+\resetxxt
+\jie \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{\huitui$\begin{aligned}[t]
+                & 2x^2 - 7x + 3 \\
+            ={} & (x - 3)(2x - 1) \fenhao
+        \end{aligned}$} & \tikz [overlay] \draw (0, -0.7) pic {cross={1}{2}{-3}{-1}}; \\
+        \xxt{\huitui$\begin{aligned}[t]
+                & 6x^2 - 7x - 5 \\
+            ={} & (2x + 1)(3x - 5) \fenhao
+        \end{aligned}$} & \tikz [overlay] \draw (0, -0.7) pic {cross={2}{3}{1}{-5}}; \\
+        \xxt{\huitui$\begin{aligned}[t]
+                & 5x^2 + 6xy - 8y^2 \\
+            ={} & (x + 2y)(5x - 4y) \juhao
+        \end{aligned}$} & \tikz [overlay] \draw (0, -0.7) pic {cross={1}{5}{2y}{-4y}};
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\lianxi
+\begin{xiaotis}
+
+把下列各式分解因式：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$2x^2 + 15x + 7$；} & \xxt{$3a^2 - 8a + 4$；} \\
+        \xxt{$8m^2 + 3m - 5$；} & \xxt{$2x^2 - 7x - 15$；} \\
+        \xxt{$5x^2 + 7x - 6$；} & \xxt{$6y^2 - 11y - 10$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$6a^2 + 17ab + 12b^2$；} & \xxt{$15x^2 - xy - 6y^2$；} \\
+        \xxt{$5a^2b^2 + 23ab - 10$；} & \xxt{$10x^2y^2 - 17abxy + 3a^2b^2$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
