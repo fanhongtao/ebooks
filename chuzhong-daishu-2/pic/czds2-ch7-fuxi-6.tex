@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+    material/.style={
+        top color=gray!50,
+        bottom color=gray!30,
+        middle color=white,
+        fill opacity=0.6,
+        pattern={mylines[angle=0, distance={10pt}]},
+    },
+]
+    \pgfmathsetmacro{\factor}{0.02}
+    \pgfmathsetmacro{\d}{45 * \factor}
+    \pgfmathsetmacro{\D}{75 * \factor}
+    \pgfmathsetmacro{\L}{300 * \factor}
+    \pgfmathsetmacro{\r}{\d / 2}
+    \pgfmathsetmacro{\R}{\D / 2}
+
+    \coordinate (O) at (0, 0);
+    \coordinate (O') at (\L, 0);
+    \coordinate (dA) at ({\R * cos(90)}, {\R * sin(90)});
+    \coordinate (dB) at ({\R * cos(270)}, {\R * sin(270)});
+
+    \draw [thick, material] (O) ellipse [x radius=0.3*\r, y radius=\r];
+    \draw [thick] (O) ellipse [x radius=0.3*\R, y radius=\R];
+
+    \draw [thick, material] ($(O) + (dA)$) -- ($(O') + (dA)$)
+        arc [start angle=90, end angle=-90, x radius=0.3*\R, y radius = \R]
+        -- ($(O) + (dB)$)
+        arc [start angle=-90, end angle=90, x radius=0.3*\R, y radius = \R];
+
+    \draw [<->] (-0.5, -\r) to [xianduan={below=0.5cm}]  node[rotate=90] {$d$} (-0.5, \r);
+    \draw [<->] (-0.9, -\R) to [xianduan={below=0.9cm}]  node[rotate=90] {$D$} (-0.9, \R);
+    \draw [<->] (0, -0.3-\R) to [xianduan={above=0.3cm}] node {$L$} (\L, -0.3-\R);
+\end{tikzpicture}
+
