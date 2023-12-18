@@ -1,0 +1,111 @@
+\subsection{约分}\label{subsec:8-3}
+\begin{enhancedline}
+
+与分数的约分类似，根据分式的基本性质，把一个分式的分子与分母的公因式约去，叫做分式的\zhongdian{约分}。
+分子与分母没有公因式的分式叫做\zhongdian{最简分式}。
+约分时，通常要把分子与分母所有的公因式都约去，使所得结果成为最简分式或整式。
+
+例如，分式 $\dfrac{6ab^2}{8b^3}$ 的分子与分母中都有因式 $b$, 这因式的最低次幂是 $b^2$，
+分子和分母的系数的最大公约数是 2， 因此可以约去 $2b^2$，即
+$$ \dfrac{6ab^2}{8b^3} = \dfrac{3a \cdot 2b^2}{4b \cdot 2b^2} = \dfrac{3a}{4b} \juhao $$
+
+又如，分式 $\dfrac{x^3 - 2x^2y}{x^3y - 2xy^2}$ 的分子与分母分别是
+$$ x^3 - 2x^2y = x^2(x - 2y)\nsep x^3y - 2xy^2 = xy(x - 2y) \douhao $$
+它们的公因式是 $x(x - 2y)$，把 $x(x - 2y)$ 约去，得
+$$ \dfrac{x^3 - 2x^2y}{x^3y - 2xy^2} = \dfrac{x^2(x - 2y)}{xy(x - 2y)} = \dfrac{x}{y} \juhao $$
+
+从上面的例子可以看出：把一个分式约分，如果分子、分母都是几个因式的积的形式，就约去分子、分母中相同因式的最低次幂，
+当分子、分母的系数是整数时，还要约去它们的最大公约数；如果分子、分母是多项式，一般先进行因式分解，再约分。
+
+\liti 约分：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{-32a^2b^3c}{24b^2cd}$；} & \xxt{$\dfrac{-35(x - y)^2}{-45(x - y)}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$\dfrac{-32a^2b^3c}{24b^2cd} = -\dfrac{8b^2c \cdot 4a^2b}{8b^2c \cdot 3d} = -\dfrac{4a^2b}{3d}$；}
+
+\xxt{$\dfrac{-35(x - y)^2}{-45(x - y)} = \dfrac{5(x - y) \cdot 7(x - y)}{5(x - y) \cdot 9} = \dfrac{7(x - y)}{9}$。}
+
+\end{xiaoxiaotis}
+
+分子或分母的系数是负数时，一般先把负号提到分式本身的前边去。
+
+\liti 约分：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{m^2 - 3m}{9 - m^2}$；} & \xxt{$\dfrac{(2a - a^2)(a^2 + 4a + 3)}{(a^2 + a)(a^2 + a - 6)}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}, column{1}={16.2em}}
+    \xxt{$\huitui\begin{aligned}[t]
+                &\dfrac{m^2 - 3m}{9 - m^2} \\
+            ={} & \dfrac{m(m - 3)}{-(m^2 - 9)} \\
+            ={} & -\dfrac{m(m - 3)}{(m + 3)(m - 3)} \\
+            ={} & -\dfrac{m}{m + 3} \fenhao
+    \end{aligned}$} & \xxt{\huitui$\begin{aligned}[t]
+            & \dfrac{(2a - a^2)(a^2 + 4a + 3)}{(a^2 + a)(a^2 + a - 6)} \\
+        ={} & \dfrac{[a(-a + 2)][(a + 1)(a + 3)]}{[a(a + 1)][(a - 2)(a + 3)]} \\
+        ={} & \dfrac{-a(a - 2)(a + 1)(a + 3)}{a(a + 1)(a - 2)(a + 3)} \\
+        ={} & -1 \juhao
+    \end{aligned}$}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+为了便于看出分子和分母的公因式，可以把所有因式的各项都按照某一字母的降幂排列。
+如果因式第一项的系数是负数，再把负号提到括号外面去，如上例中 $(-a + 2)$ 写成 $-(a - 2)$。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）约分：}
+\begin{xiaoxiaotis}
+
+    \fourInLineXxt{$\dfrac{6xy}{6x^2}$；}
+                  {$\dfrac{x^3}{x^3}$；}%分子的指数看不清楚，约是 3
+                  {$\dfrac{-a^3}{a^4}$；}
+                  {$\dfrac{a(a + b)}{b(a + b)}$。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{约分：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{4a^2b}{6ab^2}$；} & \xxt{$\dfrac{-4m^3n^2}{2m^3n^6}$；} \\
+        \xxt{$\dfrac{3a^2b(m - 1)}{9ab^2(1 - m)}$；} & \xxt{$\dfrac{12a^3(y - x)^2}{27a(x - y)}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{约分：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{x}{x^2 - x}$；} & \xxt{$\dfrac{x^2y + xy^2}{2xy}$；} \\
+        \xxt{$\dfrac{a^2 + ab}{a^2 + 2ab + b^2}$；} & \xxt{$\dfrac{m^2 - 2m + 1}{1 - m^2}$；} \\
+        \xxt{$\dfrac{9 - x^2}{x^2 + 5x + 6}$；} & \xxt{$\dfrac{y - 2 + y^2}{y^2 + 4y + 4}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答）下列各式对不对？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{x^6}{x^2} = x^3$；} & \xxt{$\dfrac{a + x}{b + x} = \dfrac{a}{b}$；} \\
+        \xxt{$\dfrac{x + y}{x + y} = 0$；} & \xxt{$\dfrac{a^2 + b^2}{a + b} = a + b$；} \\
+        \xxt{$\dfrac{-x + y}{x - y} = -1$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\end{enhancedline}
+
