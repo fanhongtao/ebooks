@@ -1,0 +1,120 @@
+\subsection{通分}\label{subsec:8-7}
+\begin{enhancedline}
+
+与分数的通分类似，根据分式的基本性质，把几个异分母的分式分别化成与原来的分式相等的同分母的分式，叫做分式的\zhongdian{通分}。
+
+例如，把分式 $\dfrac{1}{x^3y^2}$， $\dfrac{1}{x^2y^3}$ 和 $\dfrac{1}{xy^4}$ 通分，可以这样做：
+先找出各分式的公分母。这个公分母应当分别能被 $x^3y^2$，$x^2y^3$ 和 $xy^4$ 整除，这样的式子有
+$x^3y^4$，$x^4y^4$，$x^3y^5$，$x^4y^5$，$\cdots$。
+在这些式子中，$x^3y^4$ 的次数最低，为了计算简便，取 $x^3y^4$ 作为公分母。
+然后，根据分式的基本性质，分别把原来各分式的分子和分母同乘以一个适当的整式，使分母化成 $x^3y^4$，即
+\begin{align*}
+    & \dfrac{1}{x^3y^2} = \dfrac{y^2}{x^3y^2 \cdot y^2} = \dfrac{y^2}{x^3y^4} \douhao \\
+    & \dfrac{1}{x^2y^3} = \dfrac{xy}{x^2y^3 \cdot xy} = \dfrac{xy}{x^3y^4} \douhao \\
+    & \dfrac{1}{xy^4} = \dfrac{x^2}{xy^4 \cdot x^2} = \dfrac{x^2}{x^3y^4} \juhao
+\end{align*}
+
+如果分母是多项式，一般先分解因式。
+
+通分的关键是确定几个分式的公分母。
+通常取各分母所有因式的最高次幂的积作公分母，这样的公分母，叫做\zhongdian{最简公分母}。
+如果各分母的系数都是整数，通常取它们的系数的最小公倍数作为最简公分母的系数。
+
+
+\liti 通分
+\begin{xiaoxiaotis}
+
+    \xxt{$\dfrac{y}{2x} \nsep \dfrac{x}{3y^2} \nsep \dfrac{1}{4xy}$；}
+
+    \xxt{$\dfrac{4a}{5b^2c} \nsep \dfrac{3c}{10a^2b} \nsep \dfrac{5b}{-2ac^2}$。}
+
+\resetxxt
+\jie \xxt{因为分母中系数 2，3，4 的最小公倍数是12，
+    字母因式 $x$，$y$ 的最高次幂分别是 $x$，$y^2$，所以最简公分母是 $12xy^2$。\\
+    $\therefore \qquad \begin{aligned}[t]
+        & \dfrac{y}{2x} = \dfrac{y \cdot 6y^2}{2x \cdot 6y^2} = \dfrac{6y^3}{12xy^2} \douhao \\
+        & \dfrac{x}{3y^2} = \dfrac{x \cdot 4x}{3y^2 \cdot 4x} = \dfrac{4x^2}{12xy^2} \douhao \\
+        & \dfrac{1}{4xy} = \dfrac{1 \cdot 3y}{4xy \cdot 3y} = \dfrac{3y}{12xy^2} \juhao
+    \end{aligned}$
+}
+
+
+\xxt{因为最简公分母是 $10a^2b^2c^2$，所以 \\
+    \hspace*{3em}$\begin{aligned}[t]
+        & \dfrac{4a}{5b^2c} = \dfrac{4a \cdot 2a^2c}{5b^2c \cdot 2a^2c} = \dfrac{8a^3c}{10a^2b^2c^2} \douhao \\
+        & \dfrac{3c}{10a^2b} = \dfrac{3c \cdot bc^2}{10a^2b \cdot bc^2} = \dfrac{3bc^3}{10a^2b^2c^2} \douhao \\
+        & \dfrac{5b}{-2ac^2} = -\dfrac{5b \cdot 5ab^2}{2ac^2 \cdot 5ab^2} = -\dfrac{25ab^3}{10a^2b^2c^2} \juhao
+    \end{aligned}$
+}
+
+
+\end{xiaoxiaotis}
+
+分母的系数是负数时，一般先把负号提到分式本身的前边去。
+
+\liti 通分：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{x}{2(x + 1)} \nsep \dfrac{1}{x - 1}$；} & \xxt{$\dfrac{1}{x^2 - 4} \nsep \dfrac{x}{4 - 2x}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{因为最简公分母是 $2(x + 1)(x - 1)$，所以 \\
+    \hspace*{3em}$\begin{aligned}[t]
+        & \dfrac{x}{2(x + 1)} = \dfrac{x(x - 1)}{2(x + 1)(x - 1)} \douhao \\
+        & \dfrac{1}{x - 1} = \dfrac{2(x + 1)}{2(x + 1)(x - 1)} \fenhao
+    \end{aligned}$
+}
+
+\xxt{把分母分解因式，得 \\
+    \hspace*{3em}$\begin{aligned}[t]
+        & x^2 - 4 = (x + 2)(x - 2) \douhao \\
+        & 4 - 2x = -2(x - 2) \douhao
+    \end{aligned}$\\
+    最简公分母是 $2(x + 2)(x - 2)$。所以 \\
+    \hspace*{3em}$\begin{aligned}[t]
+        & \dfrac{1}{x^2 - 4} = \dfrac{2}{2(x + 2)(x - 2)} \douhao \\
+        & \dfrac{x}{4 - 2x} = -\dfrac{x}{2(x - 2)} = -\dfrac{x(x + 2)}{2(x - 2)(x + 2)} \juhao
+    \end{aligned}$
+}
+
+\end{xiaoxiaotis}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{通分：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep+=.25em}}
+        \xxt{$\dfrac{x}{a} \nsep \dfrac{y}{b}$；} & \xxt{$\dfrac{2}{3a^2} \nsep \dfrac{1}{6ab^2}$；} \\
+        \xxt{$\dfrac{3}{2x^2y} \nsep \dfrac{5}{3xy^2}$；} & \xxt{$\dfrac{a}{2b} \nsep \dfrac{b}{3a^2} \nsep \dfrac{c}{4ab}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{通分：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep+=.25em}}
+        \xxt{$\dfrac{x}{a(x + 2)} \nsep \dfrac{y}{b(x + 2)}$；} & \xxt{$\dfrac{1}{y - x} \nsep \dfrac{1}{2x - 2y}$；} \\
+        \xxt{$\dfrac{b}{a - b} \nsep \dfrac{a}{(b - a)^2}$；} & \xxt{$\dfrac{5}{2(x - 2)} \nsep \dfrac{4}{3(2 - x)^2}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{通分：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep+=.25em}}
+        \xxt{$\dfrac{x + 2}{x - 2} \nsep \dfrac{5}{x^2 - 4}$；} & \xxt{$\dfrac{1}{x^2 - 1} \nsep \dfrac{1}{x^2 - 3x + 2}$；} \\
+        \xxt{$\dfrac{1}{x + 1} \nsep \dfrac{x - 1}{x^2 + 2x + 1} \nsep \dfrac{1}{x - 1}$；} & \xxt{$\dfrac{a}{a - b} \nsep \dfrac{b}{(a + b)^2} \nsep \dfrac{2}{b^2 - a^2}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\end{enhancedline}
+
