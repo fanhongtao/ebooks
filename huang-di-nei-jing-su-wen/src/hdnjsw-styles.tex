@@ -1,0 +1,68 @@
+% 定义本书中使用到的格式
+
+\ctexset {
+  chapter = {
+    pagestyle = chapterFancy,
+    numbering = false,
+  }
+}
+
+\usepackage{fancyhdr}
+\fancypagestyle{chapterFancy}{
+  \fancyhf{}                          % 清除所有的页眉和页脚样式
+  \renewcommand\headrulewidth{0pt}    % 页眉的下划线宽度置为0，即不显示
+  \setlength{\headheight}{13.6pt}
+  \fancyhead[R]{\thepage}             % 页码
+  \fancyhead[L]{\disablepinyin\leftmark\enablepinyin} % Chapter title
+}
+
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=1cm}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=red}
+
+\usepackage{xpinyin}
+
+\ExplSyntaxOn
+\int_new:N \g_pinyin_int % 是否显示拼音的开关。0：不显示拼音; 1: 仅显示指定拼音的字; 2: 显示所有汉字的拼音
+\newcommand{\xianshipinyin}{\int_set:Nn \g_pinyin_int {2}}  % 显示拼音
+\newcommand{\zuishaopinyin}{\int_set:Nn \g_pinyin_int {1}}  % 最少拼音
+\newcommand{\yincangpinyin}{\int_set:Nn \g_pinyin_int {0}}  % 隐藏拼音
+
+% 确保在“最少拼音”情况下，某个汉字要显示拼音
+% 命令有两个参数，
+%    第一个是要显示的汉字，
+%    第二个是该汉字的拼音。
+\newcommand{\zhuyin}[2]{% 注音
+  \bool_if:NTF{\int_compare_p:n {\g_pinyin_int != 0}}{
+    \begin{pinyinscope}
+      \setpinyin{#1}{#2}#1
+    \end{pinyinscope}
+  }{
+    #1
+  }
+}
+% 确保在“最少拼音”情况下，某个汉字要显示拼音
+% 命令有一个参数，
+%    第一个是要显示的汉字。（可以是多个汉字）
+\newcommand{\xianyin}[1]{% 显（示拼）音
+  \bool_if:NTF{\int_compare_p:n {\g_pinyin_int != 0}}{
+    \begin{pinyinscope}
+      #1
+    \end{pinyinscope}
+  }{
+    #1
+  }
+}
+
+\newenvironment{mypinyin}{
+  \bool_if:NTF{\int_compare_p:n {\g_pinyin_int == 2}}{
+    \begin{pinyinscope}
+  }{}
+}{
+  \bool_if:NTF{\int_compare_p:n {\g_pinyin_int == 2}}{
+    \end{pinyinscope}
+  }{}
+}
+\ExplSyntaxOff

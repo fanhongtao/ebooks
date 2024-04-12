@@ -1,0 +1,26 @@
+\documentclass[UTF8, 11pt, oneside]{ctexbook}
+\input{hdnjsw-styles}
+
+\begin{document}
+
+\fontsize{16pt}{22pt}\selectfont
+\CJKfamily{zhkai}
+
+\zuishaopinyin   % 仅显示特定文字的拼音
+% \xianshipinyin % 显示所有文字的拼音（多音字不一定正确）
+
+\include{hdnjsw-title-page}
+
+\frontmatter
+\include{units/hdnjsw-explanation}
+
+\tableofcontents
+\thispagestyle{empty}
+
+\mainmatter
+
+\begin{mypinyin}
+\include{units/hdnjsw-xu}
+\end{mypinyin}
+
+\end{document}
