@@ -1,0 +1,224 @@
+\subsection{可化为一元一次方程的分式方程}\label{subsec:8-11}
+\begin{enhancedline}
+
+我们看下面的问题：把 $\dfrac{1}{5}$ 的分子与分母都加上同一个什么数，能使分数的值变为 $\dfrac{1}{2}$？
+
+设所求的数是 $x$， 那么根据题意可以列出方程
+$$ \dfrac{1 + x}{5 + x} = \dfrac{1}{2} \juhao $$
+
+象这样，分母里含有未知数的方程叫做\zhongdian{分式方程}。
+以前学过的，分母里不含有未知数的方程叫做\zhongdian{整式方程}。
+一元一次方程是最简单的整式方程。
+
+怎样解分式方程呢？如果能把分式方程的分母去掉，使分式方程化成整式方程，就可以利用整式方程的解法求解了。
+
+例如，在分式方程
+$$ \dfrac{1 + x}{5 + x} = \dfrac{1}{2} $$
+的两边都乘以最简公分母 $2(5 + x)$， 得
+$$ 2(5 + x) \cdot \dfrac{1 + x}{5 + x} = \dfrac{1}{2} \cdot 2(5 + x) \juhao $$
+
+约去分母，就得到整式方程
+$$ 2(1 + x) = 5 + x \juhao $$
+
+解这个整式方程，得
+$$ x = 3 \juhao $$
+
+$x = 3$ 是不是原来分式方程的根呢？把 $x = 3$ 代入原方程检验：
+$$ \zuobian = \dfrac{1 + 3}{5 + 3} = \dfrac{4}{8} = \dfrac{1}{2} \nsep  \youbian = \dfrac{1}{2} \juhao $$
+
+左右两边相等，说明 $x = 3$ 是原分式方程的根。
+
+再看另一个分式方程
+$$ \dfrac{2}{x + 1} + \dfrac{3}{x - 1} = \dfrac{6}{x^2 - 1} \juhao $$
+
+在方程的两边都乘以最简公分母 $(x + 1)(x - 1)$，得整式方程
+$$ 2(x - 1) + 3(x + 1) = 6 \juhao $$
+
+解这个整式方程，得 $x = 1$。
+
+把 $x = 1$ 代入原分式方程检验，结果 $x = 1$ 使分式 $\dfrac{3}{x - 1}$ 和
+$\dfrac{6}{x^2 - 1}$ 的分母的值为零，这两个分式没有意义。因此，1 不是原分式方程的根。
+
+实际上，原分式方程无解。
+
+从上面的两个例子可以看出，为了解分式方程，就要在方程两边都乘以同一个含有未知数的整式
+（各分式的最简公分母），把分式方程化为整式方程。
+这样得到的整式方程有时与原分式方程是同解方程，如第一个例子；
+有时与原分式方程不是同解方程，如第二个例子，变形后得到的整式方程产生了一个不适合原分式方程的根。
+
+上面的现象是怎样产生的呢？方程同解原理 2 指出：方程的两边都乘以不等于零的同一个数，所得方程与原方程同解。
+在前面解第一个分式方程的时候，方程的两边都乘以 $2(5 + x)$，接着求出 $x = 3$，
+而 $2(5 + x) = 16$，所以相当于方程两边都乘以 $16$，$16 \neq 0$，因此所得的整式方程与原分式方程同解。
+在解第二个分式方程的时候，方程两边都乘以 $(x + 1)(x - 1)$，接着求出$x = 1$，
+相当于方程两边都乘以零，结果使原分式方程中有的分式没有意义了，这样得到的整式方程就与原分式方程不同解了。
+
+在方程变形时，有时可能产生不适合原方程的根，这种根叫做原方程的\zhongdian{增根}。
+前面第二个例子中求出的整式方程的根 $x = 1$ 就是原分式方程的增根。
+因为解分式方程时可能产生增根，所以解分式方程必须检验。
+为了简便，通常把求得的根代入变形时所乘的整式（最简公分母），看它的值是否为零，
+使这个整式为零的根是原方程的增根，必须舍去。
+
+综上所述，解分式方程的一般步骤是：
+
+\jiange
+\framebox{\begin{minipage}{0.93\textwidth}
+    \zhongdian{1. 在方程的两边都乘以最简公分母，约去分母，化成整式方程；}
+
+    \zhongdian{2. 解这个整式方程；}
+
+    \zhongdian{3. 把整式方程的根代入最筒公分母，看结果是不是零。使最简公分母为零的根是原方程的增根，必须舍去。}
+\end{minipage}}\jiange
+
+\liti 解方程 $\dfrac{5}{x} = \dfrac{7}{x - 2}$。
+
+\jie 方程两边都乘以 $x(x - 2)$，约去分母，得
+$$ 5(x - 2) = 7x \juhao $$
+
+解这个整式方程，得
+$$ x = -5 \juhao $$
+
+检验：当 $x = -5$ 时，
+$$ x(x - 2) = (-5) \times (-5 - 2) = 35 \neq 0 \douhao $$
+所以 $-5$ 是原方程的根。
+
+\liti 解方程 $\dfrac{x-2}{x+2} - \dfrac{16}{x^2-4} = \dfrac{x+2}{x-2}$。
+
+\jie 方程的两边都乘以 $(x+2)(x-2)$，约去分母，得
+$$ (x-2)^2 - 16 = (x+2)^2 \juhao $$
+
+解这个整式方程，得
+$$ x = -2 \juhao $$
+
+检验：当 $x=-2$ 时，$(x+2)(x-2)=0$， 所以 $-2$ 是增根，原方程无解。
+
+
+\liti 在公式 $\dfrac{1}{u} + \dfrac{1}{v} = \dfrac{1}{f}$ 中，$u + v \neq 0$，已知 $u$，$v$，求 $f$。
+
+\jie 公式两边都乘以 $uvf$ ，得
+$$ vf + uf = uv \douhao $$
+即
+$$ (u + v)f = uv \juhao $$
+
+因为 $u + v \neq 0$， 方程两边都除以 $u + v$，得
+$$ f = \dfrac{uv}{u + v} \juhao $$
+
+\zhuyi 本书中含有字母已知数的分式方程，一律不要求检验。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{解下列方程：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\dfrac{2}{x} = \dfrac{3}{x+1}$；} & \xxt{$\dfrac{2}{x+3} = \dfrac{1}{x-1}$；} \\
+        \xxt{$\dfrac{x}{x-3} = 2 + \dfrac{3}{x-3}$；} & \xxt{$\dfrac{1}{x-2} = \dfrac{1-x}{2-x} - 3$；} \\
+        \xxt{$\dfrac{x}{2x-5} + \dfrac{5}{5-2x} = 1$；} & \xxt{$\dfrac{7}{x^2+x} + \dfrac{1}{x^2-x} = \dfrac{6}{x^2-1}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{在公式 $\dfrac{P_1}{V_2} = \dfrac{P_2}{V_1}$ 中，$P_1 \neq 0$，求出表示 $V_1$ 的公式。}
+
+\xiaoti{在公式 $\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2}$ 中，$R \neq R_1$，求出表示 $R_2$ 的公式。}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 解方程组
+\begin{numcases}{}
+    \dfrac{y+6}{x-2} - 2 = 0 \douhao \tag{1} \\
+    \dfrac{x}{x+4} = \dfrac{y+1}{y-3} \juhao \tag{2}
+\end{numcases}
+
+\jie (1) 式两边都乘以 $x-2$，化简，得
+$$ 2x - y = 10 \juhao $$
+
+(2) 式两边都乘以 $(x+4)(y-3)$，化简，得
+$$ x + y = -1 \juhao $$
+
+解方程组
+$$\begin{cases}
+    2x - y = 10 \douhao \\
+    x + y = -1 \douhao
+\end{cases}$$
+得
+$$\begin{cases}
+    x = 3 \douhao \\
+    y = -4 \juhao
+\end{cases}$$
+
+经检验，
+$$\begin{cases}
+    x = 3 \douhao \\
+    y = -4
+\end{cases}$$
+是原方程组的解。
+
+
+\liti 解方程组
+\begin{numcases}{}
+    \dfrac{6}{x} + \dfrac{6}{y} = \dfrac{1}{2} \douhao \tag{1} \\
+    \dfrac{8}{x} - \dfrac{3}{y} = \dfrac{3}{10} \juhao \tag{2}
+\end{numcases}
+
+\jie 设 $\dfrac{1}{x} = X$，$\dfrac{1}{y} = Y$，则原方程组变为
+$$\begin{cases}
+    6X + 6Y = \dfrac{1}{2} \douhao \\[1em]
+    8X - 3Y = \dfrac{3}{10} \juhao
+\end{cases}$$
+
+解这个整式方程组，得
+$$\begin{cases}
+    X = \dfrac{1}{20} \douhao \\[1em]
+    Y = \dfrac{1}{30} \douhao
+\end{cases}$$
+即
+$$\begin{cases}
+    \dfrac{1}{x} = \dfrac{1}{20} \douhao  \\[1em]
+    \dfrac{1}{y} = \dfrac{1}{30} \juhao
+\end{cases}$$
+
+由此得
+$$\begin{cases}
+    x = 20 \douhao \\
+    y = 30 \juhao
+\end{cases}$$
+
+经检验，
+$$\begin{cases}
+    x = 20 \douhao \\
+    y = 30
+\end{cases}$$
+是原方程组的解。
+
+例 5 的解法叫做\zhongdian{换元法}，也就是把适当的含有未知数的式子如 $\dfrac{1}{x}$，$\dfrac{1}{y}$ 换成
+新的未知数 $X$，$Y$，求出 $X$，$Y$ 之后再求 $x$，$y$。
+
+\lianxi
+
+解列方程组：
+
+\begin{xiaoxiaotis}
+
+    \setcounter{cntxiaoxiaoti}{0}
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep=.5em}}
+        \xxt{$\begin{cases}
+                \dfrac{x}{y} = \dfrac{3}{4} \douhao \\[1em]
+                \dfrac{x-1}{y+2} = \dfrac{1}{2} \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                \dfrac{4}{x} + \dfrac{5}{y} = 0 \douhao \\[1em]
+                \dfrac{x}{x+4} - \dfrac{y+3}{y-3} = 0 \fenhao
+            \end{cases}$} \\
+        \xxt{$\begin{cases}
+            \dfrac{2}{x} + \dfrac{3}{y} = 1 \douhao \\[1em]
+            \dfrac{3}{x} - \dfrac{2}{y} = -1 \juhao
+        \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\end{enhancedline}
+
