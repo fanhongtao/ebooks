@@ -1,0 +1,278 @@
+%----------------------------------
+% 图形相关的项
+% 需要 TexLive 2020 版本
+
+% 自定义填充格式，用于实现绘制阴影
+% TikZ 提供的 north east lines 等默认 pattern, 或 Lines ，有个问题：使用不同的PDF阅读器，会得到不同的效果。
+% 如：
+%       VSCode 中 LaTeX WorkShop 看到的是线段，
+%       SumatraPDF 看到的是连贯的线条。
+% 所以这里采用自定义的格式。
+% 下面的代码基本是将 Lines 的代码修改而成。
+% Lines实现中，bounding box 是 (-0.5\distance, -0.5\distance) 到 (0.5\distance, 0.5\distance)
+% 这里的 TikZ 实现是 (0, 0) 到 (\distance, \distance)，按说应该没有区别，但实际效果确有不同。
+\pgfdeclarepattern{
+  name=mylines,
+  parameters={
+      \pgfkeysvalueof{/pgf/pattern keys/distance},
+      \pgfkeysvalueof{/pgf/pattern keys/angle},
+      \pgfkeysvalueof{/pgf/pattern keys/xshift},
+      \pgfkeysvalueof{/pgf/pattern keys/yshift},
+      \pgfkeysvalueof{/pgf/pattern keys/line width},
+  },
+  bottom left={%
+    \pgfpoint
+      {0}%
+      {0}},
+  top right={%
+    \pgfpoint
+      {(\pgfkeysvalueof{/pgf/pattern keys/distance})}%
+      {(\pgfkeysvalueof{/pgf/pattern keys/distance})}},
+  tile size={%
+    \pgfpoint
+      {\pgfkeysvalueof{/pgf/pattern keys/distance}}%
+      {\pgfkeysvalueof{/pgf/pattern keys/distance}}},
+  tile transformation={%
+    \pgftransformshift{%
+      \pgfpoint
+        {\pgfkeysvalueof{/pgf/pattern keys/xshift}}%
+        {\pgfkeysvalueof{/pgf/pattern keys/yshift}}}%
+    \pgftransformrotate{\pgfkeysvalueof{/pgf/pattern keys/angle}}},
+  defaults={
+    distance/.initial=3pt,
+    angle/.initial=0,
+    xshift/.initial=0pt,
+    yshift/.initial=0pt,
+    line width/.initial=\the\pgflinewidth,
+  },
+  code={%
+    \pgfsetlinewidth{\pgfkeysvalueof{/pgf/pattern keys/line width}}%
+    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}%
+    \pgfpathlineto{\pgfpoint{(\pgfkeysvalueof{/pgf/pattern keys/distance})}{0pt}}%
+    \pgfusepath{stroke}%
+  },
+}
+
+
+% 绘制温度计(温度范围：-10 ~ 20 ℃)
+\tikzset{
+    % 参数1: 显示的温度。
+    pics/thermometer/.style n args={1}{
+      code = {
+        % 绘制外框
+        \draw [thick] (-1, -0.6) -- (0.8, -0.6) -- (0.8, 6) -- (-1, 6) -- cycle;
+
+        % 绘制玻璃管
+        \draw [thick] (135:0.35) arc (135:405:0.35)
+            to [out=135, in=270] (0.2, 0.5)
+            -- (0.2, 6) -- (-0.2, 6) -- (-0.2, 0.5)
+            to [out=270, in=45] (135:0.35);
+
+        % 绘制刻度
+        \foreach \y in {1,...,7} {
+            \ifnum \y<3
+                \def\value{\the\numexpr5*(3-\y)}
+            \else
+                \def\value{\the\numexpr5*(\y-3)}
+            \fi
+            \draw (-0.2,0.5+0.7*\y) -- (-0.4,0.5+0.7*\y) node[anchor=east] {$\value$};
+            \ifnum \y < 7
+                \foreach \tmp in {1,...,4} {
+                    \draw (-0.2,0.5+0.7*\y+0.14*\tmp) -- (-0.3,0.5+0.7*\y+0.14*\tmp);
+                }
+            \fi
+        }
+
+        % 绘制水银柱
+        \def\h{\the\numexpr0.5+2.1+0.14*#1}
+        \draw [black!80, fill] (135:0.3) arc (135:405:0.3)
+            to [out=135, in=270] (0.15, 0.4)
+            -- (0.15, \h) -- (-0.15, \h) -- (-0.15, 0.4)
+            to [out=270, in=45] (135:0.3);
+      }
+    }
+}
+
+
+% 用于填充的水面的纹路
+\tikzset{
+    waterwave/.pic={
+        \draw [dash=on 17pt off 2pt phase 0pt] (0, -0.01) -- (10, -0.01);
+        \draw [dash=on 15pt off 3pt phase 0pt] (0, -0.1)  -- (10, -0.1);
+        \draw [dash=on 10pt off 4pt phase 0pt] (0, -0.2)  -- (10, -0.2);
+        \draw [dash=on 9pt off 3pt phase 0pt]  (0, -0.3)  -- (10, -0.3);
+        \draw [dash=on 6pt off 2pt phase 0pt]  (0, -0.4)  -- (10, -0.4);
+        \draw [dash=on 4pt off 2pt phase 0pt]  (0, -0.5)  -- (10, -0.5);
+        \draw [dash=on 3pt off 2pt phase 0pt]  (0, -0.6)  -- (10, -0.6);
+    }
+}
+
+% 路面样式（用于修改 Path）
+\tikzset{
+    ground/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=2mm}}},
+}
+
+
+% 绘制一个箭头。
+% 共有四个参数：
+%   1. （箭头下部矩形）的底的长度
+%   2. （箭头下部矩形）的高的长度
+%   3. （箭头上部三角形）的底的长度
+%   4. （箭头上部三角形）的高的长度
+% 调用的例子：
+%   \draw [fill=white] (0, 0) pic {arrow={.2}{.3}{.4}{.2}};
+%   \draw [red, thick, pattern=dots] (0, 0) pic [rotate=90] {arrow={.2}{.3}{.4}{.2}};
+\tikzset{
+    pics/arrow/.style n args={4}{
+      code = {
+        \filldraw [pic actions] (-#1/2, 0) -- (#1/2, 0) -- (#1/2, #2)
+            -- (#3/2, #2) -- (0, #2+#4)
+            -- (-#3/2, #2) -- (-#1/2, #2)
+            -- cycle;
+    }}}
+
+
+% 绘制立方体 （ 代码改编自 https://tex.stackexchange.com/a/48776/121799 ）
+% 依赖的库：
+%   \usetikzlibrary{3d}
+% 共有六个参数：
+%   1. X 的最小值
+%   2. X 的最大值
+%   3. Y 的最小值
+%   4. Y 的最大值
+%   5. Y 的最小值
+%   6. Y 的最大值
+% 调用举例：以步进 0.5，使用粗线条，绘制一个 3 * 2 * 2 的立方体。
+%   \draw [step=0.5, thick] (0, 0) pic {cubes={0}{3}{0}{2}{0}{2}};
+\tikzset{
+    pics/cubes/.style n args={6}{
+      code = {
+        \def\XGridMin{#1}
+        \def\XGridMax{#2}
+        \def\YGridMin{#3}
+        \def\YGridMax{#4}
+        \def\ZGridMin{#5}
+        \def\ZGridMax{#6}
+         %
+        \begin{scope}[canvas is xy plane at z=\ZGridMax]
+            \draw [pic actions] (\XGridMin,\YGridMin) grid (\XGridMax,\YGridMax);
+        \end{scope}
+        \begin{scope}[canvas is yz plane at x=\XGridMax]
+            \draw [pic actions] (\YGridMin,\ZGridMin) grid (\YGridMax,\ZGridMax);
+        \end{scope}
+        \begin{scope}[canvas is xz plane at y=\YGridMax]
+            \draw [pic actions] (\XGridMin,\ZGridMin) grid (\XGridMax,\ZGridMax);
+        \end{scope}
+    }
+  }
+}
+
+
+% 绘制两端有竖线的线段
+\tikzset{
+  xianduan/.style={xianduan/.cd, #1, wrapper},
+  xianduan/.cd,
+    above/.store in=\above,  above=0.5em,
+    below/.store in=\below,  below=0.5em,
+    wrapper/.style={/tikz/.cd, to path={
+        ($(\tikztostart)!\above!90:(\tikztotarget)$)  -- ($(\tikztostart)!\below!-90:(\tikztotarget)$)
+        ($(\tikztotarget)!\above!-90:(\tikztostart)$) -- ($(\tikztotarget)!\below!90:(\tikztostart)$)
+        (\tikztostart) -- (\tikztotarget) \tikztonodes
+    }}
+}
+
+
+% 绘制垂足
+\tikzset{
+    chuizu/.style={chuizu/.cd, #1, wrapper},
+    chuizu/.cd,
+        size/.store in=\size,   size=0.5em,
+        % （从上至下画线时）垂足在显示的方位：right表示显示在右侧（缺省值），left表示在左侧）
+        direction/.is choice,
+            direction/right/.code = {\def\angle{-90}},
+            direction/left/.code  = {\def\angle{90}},
+            direction=right,
+        wrapper/.style={/tikz/.cd, to path={
+            ($(\tikztotarget)!\size!0:(\tikztostart)$)
+                -- ($(\tikztotarget)!1.414*\size!0.5*\angle:(\tikztostart)$)
+                -- ($(\tikztotarget)!\size!\angle:(\tikztostart)$)
+            (\tikztostart) -- (\tikztotarget) \tikztonodes
+        }}
+}
+
+
+% 在数轴上绘制区间
+\tikzset{
+  infinity interval/.pic={ % 无限区间
+    \begin{scope}[infinity interval options/.cd,#1]
+      \pgfkeysgetvalue{/tikz/infinity interval options/start}{\start}
+      \pgfkeysgetvalue{/tikz/infinity interval options/stop}{\stop}
+      \pgfkeysgetvalue{/tikz/infinity interval options/height}{\height}
+      \ifthenelse {\start < \stop} {
+        \pgfmathsetmacro{\sign}{1}
+      }{
+        \pgfmathsetmacro{\sign}{-1}
+      }
+      \pgfmathsetmacro{\posOne}{\sign * 0.2}
+      \pgfmathsetmacro{\posTwo}{\sign * 0.5}
+
+      \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
+        -- (\stop, \height);
+    \end{scope}
+  },
+  infinity interval options/.is family,
+  infinity interval options/.cd,
+    start/.initial=0,   % 指定参数 start 的默认值
+    stop/.initial=1,    % 指定参数 stop 的默认值
+    height/.initial=1   % 指定参数 height 的默认值
+}
+
+\tikzset{
+  interval/.pic={ % 有限区间
+    \begin{scope}[interval options/.cd,#1]
+      \pgfkeysgetvalue{/tikz/interval options/start}{\start}
+      \pgfkeysgetvalue{/tikz/interval options/stop}{\stop}
+      \pgfkeysgetvalue{/tikz/interval options/height}{\height}
+      \ifthenelse {\start < \stop} {
+        \pgfmathsetmacro{\sign}{1}
+      }{
+        \pgfmathsetmacro{\sign}{-1}
+      }
+      \pgfmathsetmacro{\posOne}{\sign * 0.2}
+      \pgfmathsetmacro{\posTwo}{\sign * 0.5}
+
+      \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
+        -- (\stop-\posTwo, \height) .. controls (\stop-\posTwo, \height) and (\stop-\posOne, \height) .. (\stop, 0);
+      \end{scope}
+  },
+  interval options/.is family,
+  interval options/.cd,
+    start/.initial=0,   % 指定参数 start 的默认值
+    stop/.initial=1,    % 指定参数 stop 的默认值
+    height/.initial=1   % 指定参数 height 的默认值
+}
+
+
+% 绘制 “十字相乘法”
+% 共有四个参数：
+%   1. a_1
+%   2. a_2
+%   3. c_1
+%   4. c_2
+\tikzset{
+  pics/cross/.style n args={4}{
+    code = {
+      \begin{scope}[every node/.style={minimum width=3em}]
+        \node [align=right] (a1) at (0, 1) {$#1$};
+        \node [align=right] (a2) at (0, 0) {$#2$};
+        \node [align=left] (c1) at (3, 1) {$#3$};
+        \node [align=left] (c2) at (3, 0) {$#4$};
+        \draw (a2.east) -- (c1.west);
+        \draw (a1.east) -- (c2.west);
+      \end{scope}
+    }
+  }
+}
+
