@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth]
+    \foreach \a/\b/\c [count=\xi] in {
+            \hphantom{+}8/-8/?,
+            \hphantom{+}\frac{3}{4}/-\frac{3}{4}/?,
+            \hphantom{+}?/\hphantom{+}?/121,
+            \hphantom{+}?/\hphantom{+}?/0.36
+    } {
+        \coordinate (A) at (0, 4-\xi);
+        \coordinate (B) at (0, 4-\xi - 0.5);
+        \coordinate (C) at (4, 4-\xi-0.25);
+        \path
+            let
+                \p{ac} = ($ (A) !.5! (C) $),
+                \p{bc} = ($ (B) !.5! (C) $)
+            in
+                coordinate (AC) at (\p{ac})
+                coordinate (BC) at (\p{bc});
+        \draw [->] (A) node [anchor=east] {$\a$} -- (AC);
+        \draw (AC) -- (C);
+        \draw [->] (B) node [anchor=east] {$\b$} -- (BC);
+        \draw (BC) -- (C) node [anchor=west] {$\c$};
+    }
+
+    \draw (0,   1.3) ellipse [x radius=1.0, y radius=2.2];
+    \draw (4.2, 1.3) ellipse [x radius=1.0, y radius=2.2];
+    \draw (0,   3.8) node {$x$};
+    \draw (4.2, 3.8) node {$x^2$};
+\end{tikzpicture}
