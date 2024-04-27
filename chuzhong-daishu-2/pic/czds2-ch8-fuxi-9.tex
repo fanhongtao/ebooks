@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\r}{1}
+    \pgfmathsetmacro{\R}{1.6}
+    \pgfmathsetmacro{\a}{4}
+
+    \draw [thick, pattern={mylines[angle=45, distance={5pt}]}]
+        (0, \R) arc [start angle=90, end angle=270, radius=\R]
+        -- +(\a, 0)
+        arc [start angle=270, end angle=450, radius=\R]
+        -- cycle;
+    \draw [thick, fill=white]
+        (0, \r) arc [start angle=90, end angle=270, radius=\r]
+        -- +(\a, 0)
+        arc [start angle=270, end angle=450, radius=\r]
+        -- cycle;
+
+    \draw [dash dot] (-1.5*\R, 0) -- (\a + 1.5*\R, 0);
+    \draw [dash dot] (0, 1.2*\R) -- (0, -1.2*\R);
+    \draw [dash dot] (\a, 1.2*\R) -- (\a, -1.2*\R);
+
+    \draw [->] (0, 0) -- (200:\r) node [midway] {$r$};
+    \draw [->] (\a, 0) -- +(320:\R) node [pos=0.4] {$R$};
+    \draw [<->] (0, -0.3-\R) to [xianduan={above=0.3cm}] node {$a$} (\a, -0.3-\R);
+\end{tikzpicture}

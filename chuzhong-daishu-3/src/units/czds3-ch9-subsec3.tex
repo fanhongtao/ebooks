@@ -1,0 +1,280 @@
+\subsection{平方根表}\label{subsec:9-3}
+\begin{enhancedline}
+
+前面我们根据平方运算观察出了一些特殊的整数、小数和分数的平方根。
+但是，对于一般的数，如 $1840$，$\dfrac{7}{11}$，$0.529$ 等就不容易观察出它们的平方根。
+下面，我们介绍用查平方根表来求一个正数的平方根的方法。
+《中学数学用表》中的表三就是平方根表。
+
+利用平方根表，我们可以直接查出 $1.00$ 到 $99.9$ 之间各个只具有三个数位的数的算术平方根，
+查得的结果一般是近似值。
+
+表 \ref{tab:9-1} ， 表 \ref{tab:9-2} 分别给出了平方根表的一部分。
+
+
+
+\begin{table}[H]
+    \begin{tblr}{vlines,
+        hline{1, 7} = {1pt, solid},
+        hline{2} = {solid},
+        vline{1, 21} = {1pt, solid},
+        vline{12} = {1}{-}{},
+        vline{12} = {2}{-}{},
+        columns={colsep=2.5pt, c, $$},
+    }
+        N   & 0     & 1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+        1.0 & 1.000 & 1.005 & 1.010 & 1.015 & 1.020 & 1.025 & 1.030 & 1.034 & 1.039 & 1.044 & 0 & 1 & 1 & 2 & 2 & 3 & 3 & 4 & 4 \\
+        1.1 & 1.049 & 1.054 & 1.058 & 1.063 & 1.068 & 1.072 & 1.077 & 1.082 & 1.086 & 1.091 & 0 & 1 & 1 & 2 & 2 & 3 & 3 & 4 & 4 \\
+        1.2 & 1.095 & 1.100 & 1.105 & 1.109 & 1.114 & 1.118 & 1.122 & 1.127 & 1.131 & 1.136 & 0 & 1 & 1 & 2 & 2 & 3 & 3 & 4 & 4 \\
+        1.3 & 1.140 & 1.145 & 1.149 & 1.153 & 1.158 & 1.162 & 1.166 & 1.170 & 1.175 & 1.179 & 0 & 1 & 1 & 2 & 2 & 3 & 3 & 3 & 4 \\
+        1.4 & 1.183 & 1.187 & 1.192 & 1.196 & 1.200 & 1.204 & 1.208 & 1.212 & 1.217 & 1.221 & 0 & 1 & 1 & 2 & 2 & 2 & 3 & 3 & 4 \\
+    \end{tblr}
+    \caption{}\label{tab:9-1}
+\end{table}
+
+
+\begin{table}[H]
+    \begin{tblr}{vlines,
+        hline{1, 7} = {1pt, solid},
+        hline{2} = {solid},
+        vline{1, 21} = {1pt, solid},
+        vline{12} = {1}{-}{},
+        vline{12} = {2}{-}{},
+        columns={colsep=2.5pt, c, $$},
+    }
+        N   & 0     & 1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 1 & 2 & 3 & 4 & 5 & 6 & 7  & 8  & 9  \\
+        10. & 3.162 & 3.178 & 3.194 & 3.209 & 3.225 & 3.240 & 3.256 & 3.271 & 3.286 & 3.302 & 1 & 3 & 5 & 6 & 8 & 9 & 11 & 12 & 14 \\
+        11. & 3.317 & 3.332 & 3.347 & 3.362 & 3.376 & 3.391 & 3.406 & 3.421 & 3.435 & 3.450 & 1 & 3 & 4 & 6 & 7 & 9 & 10 & 12 & 13 \\
+        12. & 3.464 & 3.479 & 3.493 & 3.507 & 3.521 & 3.536 & 3.550 & 3.564 & 3.578 & 3.592 & 1 & 3 & 4 & 6 & 7 & 8 & 10 & 11 & 13 \\
+        13. & 3.606 & 3.619 & 3.633 & 3.647 & 3.661 & 3.674 & 3.688 & 3.701 & 3.715 & 3.728 & 1 & 3 & 4 & 5 & 7 & 8 & 10 & 11 & 12 \\
+        14. & 3.742 & 3.755 & 3.768 & 3.782 & 3.795 & 3.808 & 3.821 & 3.834 & 3.847 & 3.860 & 1 & 3 & 4 & 5 & 7 & 8 &  9 & 11 & 12 \\
+    \end{tblr}
+    \caption{}\label{tab:9-2}
+\end{table}
+
+表中字母 “$N$” 所在的直列中的数是被开方数的前两位数，
+“$N$” 所在的横行中的数是被开方数的第三位数，
+表中间的四位数是所求的算术平方根，它的第四位数一般是四舍五入得到的。
+表右边的部分是修正值。
+
+\liti 查表求 $\sqrt{1.35}$。
+
+从表 \ref{tab:9-1} 字母 “$N$” 所在的一直列中，先找出被开方数的前两位数 $1.3$，
+然后从 “$N$” 所在的横行里找到被开方数的第三位数 $5$， 行与列交叉处的数 $1.162$，
+就是 $1.35$ 的算术平方根。
+
+\jie $\sqrt{1.35} = 1.162$。
+
+
+\zhuyi 表中查得的结果，虽然大都是近似值，一般仍用等号。
+
+\liti 查表求 $\sqrt{13.5}$。
+
+从表 \ref{tab:9-2} 字母 “$N$” 所在的这一直列中，先找出被开方数的前两位数 $13$，
+然后从 “$N$” 所在的横行里找到被开方数的第三位数 $5$，
+行与列交叉处的数 $3.674$，就是 $13.5$ 的算术平方根。
+
+\jie $\sqrt{13.5} = 3.674$。
+
+\zhuyi 查平方根表时，必须注意被开方数的小数点的位置，
+例如 $1.35$ 与 $13.5$ 两个数的小数点的位置不同，
+应该在表中的不同位置查 $\sqrt{1.35}$ 与 $\sqrt{13.5}$ 的值。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列各数的算术平方根：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$9.73$；}  & \xxt{$97.3$；} & \xxt{$38.5$；} & \xxt{$3.85$；} \\
+        \xxt{$6.8$；}   & \xxt{$68$；}   & \xxt{$5$；}    & \xxt{$4.04$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{查表求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt{2}$；}    & \xxt{$\sqrt{60}$；}   & \xxt{$\sqrt{95}$；}    & \xxt{$-\sqrt{9.5}$；} \\
+        \xxt{$\sqrt{1.48}$；} & \xxt{$\sqrt{70.4}$；} & \xxt{$-\sqrt{47.3}$；} & \xxt{$-\sqrt{8.47}$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{查表求下列各数的平方根：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$3$；}    & \xxt{$7$；}    & \xxt{$38.1$；} & \xxt{$1.44$；} \\
+        \xxt{$42.5$；} & \xxt{$53.8$；} & \xxt{$6.18$；} & \xxt{$83.8$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
+如果被开方数是 $1.000$ 到 $99.99$ 之间的有四个数位的数，应该先查出前三位数的平方根，
+再加上根据第四位数查得的修正值。
+
+\liti 查表求 $\sqrt{1.354}$。
+
+被开方数 $1.354$ 是 $1.000$ 到 $99.99$ 之间的四位数，
+求 $\sqrt{1.354}$ 时， 应该先查得  $\sqrt{1.35} = 1.162$，
+然后再查 $4$ 的修正值是 $2$ （见表 \ref{tab:9-1}）， 这里的 $2$， 表示 $0.002$，
+就是说应在 $1.162$ 的最后一位上加上 $2$，
+所以 $\sqrt{1.354} = 1.162 + 0.002 = 1.164$。
+
+\jie $\sqrt{1.354} = 1.162 + 0.002 = 1.164$。
+
+
+如果被开方数是 $1$ 到 $100$ 之间的多于四个数位的数，可以先把这个数四舍五入成四个数位的数，再查表。
+
+\liti 查表求下列各式的值：
+
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \fourInLineXxt[8em]{$\sqrt{14.02}$；}{$\sqrt{71.236}$；}{$\sqrt{2.3142}$；}{$\sqrt{41\dfrac{1}{4}}$。}
+
+\resetxxt
+
+\jie \xxt{$\sqrt{14.02} = 3.742 + 0.003 = 3.745$；}
+
+\hspace*{1.5em} \xxt{$\sqrt{71.236} \approx \sqrt{71.24} = 8.438 + 0.002 = 8.440$；}
+
+\hspace*{1.5em} \xxt{$\sqrt{2.3142} \approx \sqrt{2.314} = 1.520 + 0.001 = 1.521$；}
+
+\hspace*{1.5em} \xxt{$\sqrt{41\dfrac{1}{4}} = \sqrt{41.25} = 6.419 + 0.004 = 6.423$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt{4.357}$；} & \xxt{$\sqrt{95.42}$；}   & \xxt{$\sqrt{5.174}$；}     \\
+        \xxt{$\sqrt{51.74}$；} & \xxt{$\sqrt{28\dfrac{3}{50}}$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{查表求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt{22.469}$；} & \xxt{$\sqrt{96.131}$；}   & \xxt{$\sqrt{53.706}$；}     \\
+        \xxt{$\sqrt{5.0302}$；} & \xxt{$\sqrt{16\dfrac{1}{40}}$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
+利用平方根表还可以查小于 $1$ 或者大于 $100$ 的数的算术平方根。我们先来看下表：
+
+\begin{tblr}{vlines, hlines, columns={5em, c, $$}}
+    n        & 0.04 & 4 & 400 & 40000 \\
+    \sqrt{n} & 0.2  & 2 & 20  & 200
+\end{tblr}
+
+可以看出，$n$ 扩大到原来的 $100$ 倍，它的算术平方根就扩大到原来的 $10$ 倍；
+反过来， $n$ 缩小到原来的 $\dfrac{1}{100}$、它的算术平方根就缩小到原来的 $\dfrac{1}{10}$。
+也就是说，\zhongdian{已知正数的小数点向右或者向左移动 $2$ 位，它的算术平方根的小数点相应地向右或者向左移动 $1$ 位}。
+根据这个法则，我们就可以查小于 $1$ 或者大于 $100$ 的数的平方根。
+在查这些数的平方根时，小数点的位置一定要两位两位地移动，移到使被查的数成为有一位或者两位整数的数。
+被开方数的小数点每移动两位，查得的平方根的小数点应该向相反的方向移动一位。
+
+\liti 查表求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt{0.236}$；} & \xxt{$\sqrt{23600}$。} \\
+    \end{tblr}
+
+\resetxxt
+\vspace*{.5em}
+\jie \xxt{\hspace*{.5em} $\begin{aligned}[t]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+        \draw [->] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向右 \\[-.6em] 移动两位};
+      } \sqrt{0.236}
+      \hspace*{.5em} \xlongequal{\text{\phantom{查表}}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+        \draw [<-] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向左 \\[-.6em] 移动一位};
+      }
+      0.4858 \\[5em]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+      } \sqrt{{23.6}}\phantom{0}
+      \hspace*{.5em} \xlongequal{\text{查表}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+      } 4.858
+\end{aligned}$}
+
+\vspace*{1em}\hspace*{3em}
+$\therefore \hspace*{1em} \sqrt{0.236} = 0.4858$；
+
+\vspace*{1em}
+\hspace*{1.5em} \xxt{\hspace*{.5em}$\begin{aligned}[t]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (4em, 1.5em);
+        \draw [->] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向左 \\[-.6em] 移动四位};
+      } \sqrt{23600}\phantom{.}
+      \hspace*{.5em} \xlongequal{\text{\phantom{查表}}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+        \draw [<-] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向右 \\[-.6em] 移动两位};
+      }
+      153.6 \\[5em]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (4em, 1.5em);
+      } \sqrt{{2.3600}}
+      \hspace*{.5em} \xlongequal{\text{查表}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+      } 1.536
+\end{aligned}$}
+
+\vspace*{1em}\hspace*{3em}
+$\therefore \hspace*{1em} \sqrt{23600} = 153.6$。
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt{0.0415}$；} & \xxt{$-\sqrt{0.001289}$；} & \xxt{$\sqrt{0.38087}$；}        & \xxt{$\sqrt{64090}$；} \\
+        \xxt{$-\sqrt{725}$；}   & \xxt{$\sqrt{5710052}$；}   & \xxt{$\sqrt{\dfrac{8}{25}}$；}  & \xxt{$\sqrt{170\dfrac{3}{4}}$。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求下列各式中的 $x$：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 = 169$；}     & \xxt{$x^2 - 2.56 = 0$；} \\
+        \xxt{$9x^2 - 64 = 0$；} & \xxt{$3x^2 = 5$ （精确到 $0.01$）。} \\
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\end{enhancedline}
+
