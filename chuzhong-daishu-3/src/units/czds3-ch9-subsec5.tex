@@ -1,0 +1,120 @@
+\subsection{立方根表}\label{subsec:9-5}
+
+《中学数学用表》中表五是立方根表，它的查法同平方根表的查法类似，但要注意下列两点：
+
+1. 《中学数学用表》中的立方根表没有修正值，只能直接查出 $0.100$ 到 $99.9$ 之间的有三个数位的数的立方根，
+如果被开方数有三个以上数位，可以先四舍五入成有三个数位的数，再查表；
+
+2． 要查小于 $0.1$ 或大于 $100$ 的数的立方根，需要先移动被开方数的小数点，
+移动的法则是把被开方数的小数点向右或者向左三位三位地移，使它成为表内可以查到的数，
+被开方数的小数点每移动三位，查得的立方根的小数点向相反方向移动一位。
+
+\liti 查表求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \fourInLineXxt[9em]{$\sqrt[3]{3.78}$；}{$\sqrt[3]{0.854}$；}{$\sqrt[3]{63.54}$；}{$\sqrt[3]{15.857}$。}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}}
+    \xxt{$\sqrt[3]{3.78} = 1.558$；} \\
+    \xxt{$\sqrt[3]{0.854} = 0.9488$；} \\
+    \xxt{$\sqrt[3]{63.54} \approx \sqrt[3]{63.5} = 3.990$；} \\
+    \xxt{$\sqrt[3]{15.857} \approx \sqrt[3]{15.9} = 2.515$。}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+\liti 查表求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \twoInLineXxt[9em]{$\sqrt[3]{0.00525}$；}{$\sqrt[3]{525000}$。}
+
+\resetxxt
+\vspace*{.5em}
+\jie \xxt{\hspace*{.5em} $\begin{aligned}[t]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (4.5em, 1.5em);
+        \draw [->] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向右 \\[-.6em] 移动三位};
+      } \sqrt[3]{0.00525}
+      \hspace*{.5em} \xlongequal{\text{\phantom{查表}}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+        \draw [<-] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向左 \\[-.6em] 移动一位};
+      }
+      0.1738 \\[5em]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (4.5em, 1.5em);
+      } \phantom{0}\sqrt[3]{5.25}\phantom{00}
+      \hspace*{.5em} \xlongequal{\text{查表}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+      } 1.738
+\end{aligned}$}
+
+\vspace*{1em}\hspace*{3em}
+$\therefore \hspace*{1em} \sqrt[3]{0.00525} = 0.1738$；
+
+\vspace*{1em}
+\hspace*{1.5em} \xxt{\hspace*{.5em}$\begin{aligned}[t]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (5em, 1.5em);
+        \draw [->] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向左 \\[-.6em] 移动六位};
+      } \sqrt[3]{525000}\phantom{0.}
+      \hspace*{.5em} \xlongequal{\text{\phantom{查表}}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+        \draw [<-] (1.8em, -.8em) -- (1.8em, -5.5em) node[midway, align=center, fill=white, inner sep=3pt] {小数点向右 \\[-.6em] 移动二位};
+      }
+      80.67 \\[5em]
+    & \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (5em, 1.5em);
+      } \sqrt[3]{0.525000}
+      \hspace*{.5em} \xlongequal{\text{查表}} \hspace*{.5em}
+      \tikz [overlay, >=Stealth] {
+        \draw [dashed] (-.5em, -.8em) rectangle (3.5em, 1.5em);
+      } 0.8067
+\end{aligned}$}
+
+\vspace*{1em}\hspace*{3em}
+$\therefore \hspace*{1em} \sqrt[3]{525000} = 80.67$。
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列各数的立方根：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$3$；}              & \xxt{$8.7$；}    & \xxt{$98.7$；}    & \xxt{$0.35$；} \\
+        \xxt{$65\dfrac{4}{5}$；} & \xxt{$1.847$；}  & \xxt{$25.738$；}  & \xxt{$8\dfrac{1}{8}$；} \\
+        \xxt{$-80$；}            & \xxt{$-16.5$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{查表求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={10em, colsep=0pt}}
+        \xxt{$\sqrt[3]{5}$；}       & \xxt{$\sqrt[3]{68.8}$；}        & \xxt{$\sqrt[3]{0.8725}$；}  & \xxt{$\sqrt[3]{-43.6}$；} \\
+        \xxt{$-\sqrt[3]{0.459}$；}  & \xxt{$\sqrt[3]{0.00094}$；}     & \xxt{$\sqrt[3]{0.037}$；}   & \xxt{$\sqrt[3]{6570}$；} \\
+        \xxt{$\sqrt[3]{420000}$；}  & \xxt{$\sqrt[3]{0.00005087}$；}  & \xxt{$\sqrt[3]{-258}$；}    & \xxt{$-\sqrt[3]{0.0062548}$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{求下列各式中的 $x$：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^3 = 27$；}       & \xxt{$x^3 = \dfrac{1}{8}$；} \\
+        \xxt{$27x^3 + 64 = 0$；} & \xxt{$4x^3 - 5 = 0$（精确到 $0.01$）。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
