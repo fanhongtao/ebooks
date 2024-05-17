@@ -1,0 +1,113 @@
+\subsection{一元二次方程的根的判别式}\label{subsec:11-3}
+\begin{enhancedline}
+
+我们知道，利用配方法可以把任何一个一元二次方程 $ax^2 + bx + c = 0 \quad (a \neq 0)$ 变形为
+$$ \left(x + \dfrac{b}{2a}\right)^2 = \dfrac{b^2 - 4ac}{4a^2} \juhao $$
+
+因为 $a \neq 0$，所以 $4a^2 > 0$，这样，我们有：
+
+(1) 当 $b^2 - 4ac > 0$ 时，方程右边是一个正数，因此，方程有两个不相等的实数根
+$$ x_1 = \dfrac{-b + \sqrt{b^2 - 4ac}}{2a} \nsep x_2 = \dfrac{-b - \sqrt{b^2 - 4ac}}{2a} \fenhao $$
+
+(2) 当 $b^2 - 4ac = 0$ 时，方程右边是 $0$，因此，方程有两个相等的实数根
+$$ x_1 = x_2 = -\dfrac{b}{2a} \fenhao $$
+
+(3) 当 $b^2 - 4ac < 0$ 时，方程右边是一个负数，而 $\left(x + \dfrac{b}{2a}\right)^2$ 不可能为负数，因此，方程没有实数根。
+
+由此可知，根据 $b^2 - 4ac$ 的值的符号可以判定一元二次方程 $ax^2 + bx + c = 0$ 的根的情况。
+我们把 $b^2 - 4ac$ 叫做一元二次方程 $ax^2 + bx + c = 0$ 的\zhongdian{根的判别式}，
+通常用符号 “$\Delta$” \footnote{“$\Delta$”是希腊字母，读作 delta 。} 来表示。
+
+综上所述，\zhongdian{一元二次方程 $\bm{ax^2 + bx + c = 0}$
+    在 $\bm{\Delta > 0}$ 时有两个不相等的实数根，
+    在 $\bm{\Delta = 0}$ 时有两个相等的实数根，
+    在 $\bm{\Delta < 0}$ 时没有实数根。
+}
+
+
+\liti 不解方程，判别下列方程的根的情况：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$2x^2 + 3x - 4 = 0$；} & \xxt{$16y^2 + 9 = 24y$；} \\
+        \xxt{$5(x^2 + 1) - 7x = 0$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$\because \quad \Delta = 3^2 - 4 \times 2 \times (-4) = 9 + 32 > 0$，\\
+    $\therefore$ \quad 原方程有两个不相等的实数根。
+}
+
+\hspace*{1.5em}\xxt{移项，得
+    $$ 16y^2 - 24y + 9 = 0 \juhao $$
+    $\because \quad \Delta = (-24)^2 - 4 \times 16 \times 9 = 576 - 576 = 0$，\\
+    $\therefore$ \quad 原方程有两个相等的实数根。
+}
+
+\hspace*{1.5em}\xxt{原方程就是
+    $$ 5x^2 - 7x + 5 = 0 \juhao $$
+    $\because \quad \Delta = (-7)^2 - 4 \times 5 \times 5 = 49 - 100 < 0$，\\
+    $\therefore$ \quad 原方程没有实数根。
+}
+
+\end{xiaoxiaotis}
+
+\liti $k$ 取什么值时，方程
+$$ 2x^2 - (4k + 1)x + 2k^2 - 1 = 0$$
+\begin{xiaoxiaotis}
+    \xxt{有两个不相等的实数根？} \xxt{有两个相等的实数根？} \xxt{没有实数根？}
+
+\resetxxt
+\jie $\Delta = [-(4k + 1)]^2 - 4 \times 2(2k^2 - 1) = 8k + 9$。
+
+\xxt{当 $8k + 9 > 0$，即 $k > -\dfrac{9}{8}$ 时，方程有两个不相等的实数根；}
+
+\xxt{当 $8k + 9 = 0$，即 $k = -\dfrac{9}{8}$ 时，方程有两个相等的实数根；}
+
+\xxt{当 $8k + 9 < 0$，即 $k < -\dfrac{9}{8}$ 时，方程没有实数根。}
+
+\end{xiaoxiaotis}
+
+
+\liti 求证方程 $(m^2 + 1)x^2 - 2mx + (m^2 + 4) = 0$ 没有实数根。
+
+\zhengming \quad $\begin{aligned}[t]
+    \Delta  &= (-2m)^2 - 4(m^2 + 1)(m^2 + 4) \\
+            &= 4m^2 - 4m^4 - 20m^2 - 16 \\
+            &= -4(m^4 + 4m^2 + 4) \\
+            &= -4(m^2 + 2)^2 \juhao
+\end{aligned}$
+
+不论 $m$ 为任何实数，$(m^2 + 2)^2$ 一定是正数，
+从而 $-4(m^2 + 2)^2$一定是负数，这就是说，
+$$ \Delta < 0 \juhao $$
+
+所以方程 $(m^2 + 1)x^2 - 2mx + (m^2 + 4) = 0$ 没有实数根。
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{不解方程，判别下列方程的根的情况：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}} %, rows={rowsep=0.5em}}
+        \xxt{$3x^2 + 4x - 2 = 0$；}               & \xxt{$2y^2 + 5 = 6y$；} \\
+        \xxt{$4p(p - 1) - 3 = 0$；}               & \xxt{$x^2 + 5 = 2\sqrt{5}x$；} \\
+        \xxt{$\sqrt{3}x^2 - \sqrt{2}x + 2 = 0$；} & \xxt{$3t^2 - 2\sqrt{6}t + 2 = 0$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{$m$ 取什么值时，方程 $x^2 - 2(m + 1)x + (m^2 - 2) = 0$}%
+\begin{xiaoxiaotis}
+    \xxt[\xxtsep]{有两个不相等的实数根？}%
+    \xxt[\xxtsep]{有两个相等的实数根？}%
+    \xxt[\xxtsep]{没有实数根？}
+\end{xiaoxiaotis}
+
+\xiaoti{求证方程 $x^2 + (2k + 1)x - k^2 + k = 0$ 有两个不相等的实数根。}
+
+\end{xiaotis}
+
+\end{enhancedline}
+
