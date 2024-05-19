@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{3.2}
+    \pgfmathsetmacro{\b}{2}
+    \pgfmathsetmacro{\c}{0.2}
+
+    \pgfmathsetmacro{\x}{0.8}
+    \pgfmathsetmacro{\y}{1.0}
+
+    \draw [ultra thick, pattern={mylines[angle=45, distance={5pt}]}] (0, 0) rectangle (\a, \b);
+
+    \draw [ultra thick, fill=white] (0, 0) rectangle (\x, \y);
+    \draw [ultra thick, fill=white] (\x + \c, 0) rectangle (\a, \y);
+    \draw [ultra thick, fill=white] (0, \y + \c) rectangle (\x, \b);
+    \draw [ultra thick, fill=white] (\x + \c, \y + \c) rectangle (\a, \b);
+
+    \draw [<->] (0, -0.3) to [xianduan={above=0.3cm}] node {$32 \; cm$} (\a, -0.3);
+    \draw [<->] (-0.3, 0) to [xianduan={below=0.3cm}]  node [rotate=90] {$20 \; cm$} (-0.3, \b);
+\end{tikzpicture}
+
