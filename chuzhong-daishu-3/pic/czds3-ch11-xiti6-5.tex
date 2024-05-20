@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\w}{18*0.3}
+    \pgfmathsetmacro{\a}{15*0.3}
+    \pgfmathsetmacro{\b}{10*0.3}
+    \draw [<->] (-\w/2, 0.9) to [xianduan={below=0.5cm}] node {$18$\; m} (\w/2, 0.9);
+    \draw [pattern={mylines[angle=45, distance={5pt}]}] (-\w/2, 0) rectangle (\w/2, .5);
+    \draw (-\a/2, 0) -- (-\a/2, -\b) -- (\a/2, -\b) -- (\a/2, 0);
+    \node at (0, -\b/2) {鸡场};
+\end{tikzpicture}
+
