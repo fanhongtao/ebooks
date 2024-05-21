@@ -1,0 +1,220 @@
+\subsection{一元二次方程的根与系数的关系}\label{subsec:11-5}
+\begin{enhancedline}
+
+在解一元二次方程时，我们发现它的根与系数之间有一定的关系。
+
+例如，解方程 $x^2 -5x + 6 = 0$，得
+$$ x_1 = 2 \nsep x_2 = 3 \juhao $$
+
+可以看出，$x_1 + x_2 = 5$，是一次项系数 $-5$ 的相反数； $x_1 \cdot x_2 = 6$，是常数项。
+
+又如，解方程 $2x^2 + 5x - 3 = 0$，得
+$$ x_1 = \dfrac{1}{2} \nsep x_2 = -3 \juhao $$
+
+可以看出，$x_1 + x_2 = -\dfrac{5}{2}$，是一次项系数 $5$ 除以二次项系数 $2$ 所得的商的相反数；
+$x_1 \cdot x_2 = -\dfrac{3}{2}$，是常数项 $-3$ 除以二次项系数 $2$ 所得的商。
+
+一般地，对于一元二次方程 $ax^2 + bx + c = 0 \quad (a \neq 0)$，
+
+\begin{tblr}[]{columns={$}, column{1}={2em}, rows={rowsep=0.5em}}
+    \because   &  x_1 = \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}, \quad  x_2 = \dfrac{-b - \sqrt{b^2 - 4ac}}{2a},  \\
+    \therefore & \begin{aligned}[t]
+                    x_1 + x_2 &= \dfrac{-b + \sqrt{b^2 - 4ac}}{2a} + \dfrac{-b - \sqrt{b^2 - 4ac}}{2a} \\[.5em]
+                              &= \dfrac{-2b}{2a} = -\dfrac{b}{a} \fenhao
+                 \end{aligned}
+\end{tblr}
+
+\begin{tblr}[]{columns={$}, column{1}={2em}, rows={rowsep=0.5em}} % 由于分页，此处手工分拆表格
+               & \begin{aligned}[t]
+                    x_1 \cdot x_2 &= \dfrac{-b + \sqrt{b^2 - 4ac}}{2a} \cdot \dfrac{-b - \sqrt{b^2 - 4ac}}{2a} \\[.5em]
+                                  &= \dfrac{(-b)^2 - (\sqrt{b^2 - 4ac})^2}{4a^2} \\[.5em]
+                                  &= \dfrac{4ac}{4a^2} = \dfrac{c}{a} \juhao
+                 \end{aligned}
+\end{tblr}
+
+
+由此得出，一元二次方程的根与系数有下列关系：
+
+\jiange
+\framebox{\begin{minipage}{0.93\textwidth}
+    \zhongdian{如果 $\bm{ax^2 + bx + c = 0 \quad (a \neq 0)}$ 的两个根是 $\bm{x_1}$， $\bm{x_2}$，}
+
+    \begin{enhancedline}
+        \zhongdian{那么 $\bm{x_1 + x_2 = -\dfrac{b}{a}}$， $\bm{x_1 \cdot x_2 = \dfrac{c}{a}}$。}
+    \end{enhancedline}
+\end{minipage}}
+\jiange
+
+如果把方程 $ax^2 + bx + c = 0 \quad (a \neq 0)$ 变形为
+$$ x^2 + \dfrac{b}{a}x + \dfrac{c}{a} = 0 \douhao $$
+我们就可以把它写成
+$$ x^2 + px + q = 0 $$
+的形式，其中 $p = \dfrac{b}{a}$， $q = \dfrac{c}{a}$。从而得出：
+
+\zhongdian{如果方程 $\bm{x^2 + px + q = 0}$ 的两个根是 $\bm{x_1}$， $\bm{x_2}$， 那么}
+$$ \bm{x_1 + x_2 = -p \nsep x_1 \cdot x_2 = q} \juhao $$
+
+\liti 已知方程 $5x^2 + kx - 6 = 0$ 的一个根是 $2$，求它的另一个根及 $k$ 的值。
+
+\jie 设方程的另一个根是 $x_1$，那么
+$$ x_1 \cdot 2 = -\dfrac{6}{5} \douhao $$
+
+\fengeSuoyi{x_1 = -\dfrac{3}{5} \juhao}
+
+又
+$$ \left(-\dfrac{3}{5}\right) + 2 = -\dfrac{k}{5} \douhao $$
+
+\fengeSuoyi{k = -5\left[\left(-\dfrac{3}{5}\right) + 2\right] = -7 \juhao}
+
+答：方程的另一个根是 $-\dfrac{3}{5}$， $k = -7$。
+
+试一试，能不能把 $x = 2$ 代入原方程，先求出 $k$ 的值，再求出另一个根。
+
+
+\liti 利用根与系数的关系，求一元二次方程 $2x^2 + 3x - 1 = 0$ 两个根的
+\begin{xiaoxiaotis}
+
+    \hspace*{2em} \xxt{平方和}； \xxt{倒数和}。
+
+\resetxxt
+\jie 设方程的两个根是 $x_1$，$x_2$，那么
+$$ x_1 + x_2 = -\dfrac{3}{2} \nsep x_1 \cdot x_2 = -\dfrac{1}{2} \juhao $$
+
+\xxt{\begin{tblr}[t]{columns={$}}
+    \because   & (x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2 \douhao \\
+    \therefore & \begin{aligned}[t]
+                    x_1^2 + x_2^2 &= (x_1 + x_2)^2 - 2x_1x_2 \\
+                                  &= \left(-\dfrac{3}{2}\right)^2 - 2 \times \left(-\dfrac{1}{2}\right) = \dfrac{13}{4} \fenhao
+                 \end{aligned}
+\end{tblr}}
+
+\xxt{$\begin{aligned}[t]
+    \dfrac{1}{x_1} + \dfrac{1}{x_2} &= \dfrac{x_1 + x_2}{x_1 x_2} \\
+                                    &= \dfrac{-\dfrac{3}{2}}{-\dfrac{1}{2}} = 3 \juhao
+\end{aligned}$}
+
+答：方程两个根的平方和是 $\dfrac{13}{4}$，倒数和是 $3$。
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）下列各方程中，两根的和与两根的积各是多少？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 3x + 1 = 0$；}  & \xxt{$3x^2 - 2x - 2 = 0$；} \\
+        \xxt{$2x^2 - 9x + 5 = 0$；} & \xxt{$4x^2 - 7x + 1 = 0$；} \\
+        \xxt{$2x^2 + 3x = 0$；}     & \xxt{$3x^2 - 1 = 0$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知方程 $3x^2 - 19x + m = 0$ 的一个根是 $1$，求它的另一个根及 $m$ 的值。}
+
+\xiaoti{设 $x_1$，$x_2$ 是方程 $2x^2 + 4x - 3 = 0$ 的两个根，利用根与系数的关系，求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(x_1 + 1)(x_2 + 1)$；} & \xxt{$\dfrac{x_2}{x_1} + \dfrac{x_1}{x_2}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+设有两个数 $x_1$，$x_2$。假定以这两个数为根的一元二次方程（二次项系数为 $1$）是
+$$ x^2 + px + q = 0 \douhao $$
+那么，由根与系数的关系，得
+$$ x_1 + x_2 = -p \nsep x_1 \cdot x_2 = q \juhao $$
+因此，
+$$ p = -(x_1 + x_2) \nsep q = x_1 \cdot x_2 \douhao $$
+方程 $x^2 + px + q = 0$ 就是
+$$ x^2 - (x_1 + x_2)x + x_1 \cdot x_2 = 0 \juhao $$
+
+这就是说，\zhongdian{以两个数 $\bm{x_1}$， $\bm{x_2}$ 为根的一元二次方程（二次项系数为 $\bm{1}$）是}
+$$ \bm{x^2 - (x_1 + x_2)x + x_1 \cdot x_2 = 0} \juhao $$
+
+\liti 求一个一元二次方程，使它的两个根是 $-3\dfrac{1}{3}$， $2\dfrac{1}{2}$。
+
+\jie 所求的方程是
+$$ x^2 - \left(-3\dfrac{1}{3} + 2\dfrac{1}{2}\right)x + \left(-3\dfrac{1}{3}\right) \times 2\dfrac{1}{2} = 0 \juhao $$
+即
+$$ x^2 + \dfrac{5}{6}x - \dfrac{25}{3} = 0 \douhao $$
+或
+$$ 6x^2 + 5x - 50 = 0 \juhao $$
+
+
+\liti 已知两个数的和等于 $8$，积等于 $9$，求这两个数。
+
+\jie 因为这两个数的和等于 $8$，积等于 $9$，所以这两个数是方程
+$$ x^2 - 8x + 9 = 0 $$
+的两个根。
+
+解这个方程，得
+$$ x_1 = 4 + \sqrt{7} \nsep x_2 = 4 - \sqrt{7} \juhao $$
+
+因此，这两个数是 $4 + \sqrt{7}$， $4 - \sqrt{7}$。
+
+\end{enhancedline}
+
+
+\liti 已知方程 $x^2 - 2x - 1 = 0$，利用根与系数的关系求一个一元二次方程，使它的根是原方程的各根的立方。
+
+\jie 设方程 $x^2 - 2x - 1 = 0$ 的两个根是 $x_1$， $x_2$， 那么所求的方程的根是 $x_1^3$， $x_2^3$。
+
+$\because \quad x_1 + x_2 = 2 \nsep x_1 \cdot x_2 = 1 \juhao$
+
+$\therefore \quad \begin{aligned}[t]
+    x_1^3 + x_2^3 &= (x_1 + x_2) (x_1^2 - x_1x_2 + x_2^2) \\
+                  &= (x_1 + x_2)[(x_1 + x_2)^2 - 3x_1x_2] \\
+                  &= 2[2^2 - 3 \times (-1)] = 14 \douhao
+\end{aligned}$
+
+\hspace*{2.5em} $x_1^3 \cdot x_2^3 = (x_1 \cdot x_2)^3 = (-1)^3 = -1 \juhao $
+
+因此，所求的方程是
+$$ y^2 - 14y - 1 = 0 \juhao $$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）判定下列各方程后面括号内的两个数是不是它的根：}
+\begin{xiaoxiaotis}
+\begin{enhancedline}
+
+    \xxt{$x^2 + 5x + 4 = 0$，\quad $(1 \nsep 4)$；}
+
+    \xxt{$x^2 - 6x - 7 = 0$，\quad $(-1 \nsep 7)$；}
+
+    \xxt{$2x^2 - 3x + 1 = 0$，\quad $\left(\dfrac{1}{2} \nsep 1\right)$；}
+
+    \xxt{$3x^2 + 5x - 2 = 0$，\quad $\left(-\dfrac{1}{3} \nsep 2\right)$；}
+
+    \xxt{$x^2 - 8x + 11 = 0$，\quad $(4 - \sqrt{5} \nsep 4 + \sqrt{5})$；}
+
+    \xxt{$x^2 - 4x + 1 = 0$，\quad $(-2 - \sqrt{3} \nsep -2 + \sqrt{3})$。}
+
+\end{enhancedline}
+\end{xiaoxiaotis}
+
+
+\xiaoti{求一个一元二次方程，使它的两个根分别为}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$4 \nsep -7$；} & \xxt{$1 + \sqrt{3} \nsep 1 - \sqrt{3}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知两个数的和等于 $-6$， 积等于 $2$， 求这两个数。 }
+
+\xiaoti{利用根与系数的关系，求一个一元二次方程，使它的根分别是方程 $x^2 + 3x - 2 = 0$ 的各根的 $2$ 倍。}
+
+\end{xiaotis}
+
+
