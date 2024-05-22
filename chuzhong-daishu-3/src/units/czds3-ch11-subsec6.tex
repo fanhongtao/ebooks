@@ -1,0 +1,84 @@
+\subsection{二次三项式的因式分解}\label{subsec:11-6}
+\begin{enhancedline}
+
+形如 $ax^2 + bx + c$ 的多项式叫做 $x$ 的二次三项式，这里 $a$，$b$，$c$ 都是已知数，并且 $a \neq 0$。
+我们已学过 $x^2 + (a + b)x + ab$ 型的二次三项式的因式分解，现在再来学习一般的二次三项式的因式分解。
+
+我们知道，在解一元二次方程
+$$ 2x^2 - 6x + 4 = 0 $$
+时，可以先把左边分解因式，得
+\begin{gather*}
+    2(x^2 - 3x + 2) = 0 \douhao \\
+    2(x - 1)(x - 2) = 0 \douhao
+\end{gather*}
+这样，就得到方程的两个根：
+$$ x_1 = 1 \nsep x_2 = 2 \juhao $$
+
+反过来，我们也可以利用求出一元二次方程的根来把二次三项式分解因式。
+
+如果我们用公式法求得一元二次方程
+$$ ax^2 + bx + c = 0 $$
+的两个根是 $x_1$ 和 $x_2$，那么由根与系数的关系可知
+$$ x_1 + x_2 = -\dfrac{b}{a} \nsep x_1 \cdot x_2 = \dfrac{c}{a} \douhao $$
+就是
+$$ \dfrac{b}{a} = -(x_1 + x_2) \nsep \dfrac{c}{a} = x_1 \cdot x_2 \juhao $$
+
+$\therefore \quad \begin{aligned}[t]
+    ax^2 + bx + c &= a\left(x^2 + \dfrac{b}{a}x + \dfrac{c}{a}\right) \\
+                  &= a[x^2 - (x_1 + x_2)x + x_1x_2] \\
+                  &= a(x - x_1)(x - x_2) \juhao
+\end{aligned}$
+
+这就是说，在分解二次三项式 $ax^2 + bx + c$ 的因式时，
+可先用公式求出方程 $ax^2 + bx + c = 0$ 的两个根 $x_1$， $x_2$，然后写成
+$$ ax^2 + bx + c = a(x - x_1)(x - x_2) \juhao $$
+
+\liti 把 $4x^2 + 8x - 1$ 分解因式。
+
+\jie 方程 $4x^2 + 8x - 1 = 0$ 的根是
+\begin{align*}
+    x &= \dfrac{-8 \pm \sqrt{8^2 - 4 \times 4 \times (-1)}}{2 \times 4} \\
+      &= \dfrac{-8 \pm 4\sqrt{5}}{8} = \dfrac{-2 \pm \sqrt{5}}{2} \juhao
+\end{align*}
+即
+$$ x_1 = \dfrac{-2 + \sqrt{5}}{2} \nsep x_2 = \dfrac{-2 - \sqrt{5}}{2} \juhao $$
+
+$\therefore \quad 4x^2 - 8x - 1 = 4\left(x - \dfrac{-2 + \sqrt{2}}{2}\right) \left(x - \dfrac{-2 - \sqrt{5}}{2}\right) = (2x + 2 - \sqrt{5}) (2x + 2 + \sqrt{5}) \juhao$
+
+
+\liti 把 $2x^2 - 8xy + 5y^2$ 分解因式。
+
+分析：把 $-8y$ 看作 $x$ 的系数，$5y^2$ 看作常数项，$2x^2 - 8xy + 5y^2$ 就可看作是 $x$ 的二次三项式。
+
+\jie 把 $2x^2 - 8xy + 5y^2 = 0$ 看作关于 $x$ 的二次方程，它的根是
+\begin{align*}
+    x &= \dfrac{8y \pm \sqrt{(-8y)^2 - 4 \times 2 \times (5y^2)}}{2 \times 2} \\
+      &= \dfrac{8y \pm 2\sqrt{6}y}{4} = \dfrac{4 \pm \sqrt{6}}{2}y \juhao
+\end{align*}
+
+$\therefore \quad 2x^2 - 8xy + 5y^2 = 2\left(x - \dfrac{4 + \sqrt{6}}{2}y\right) \left(x - \dfrac{4 - \sqrt{6}}{2}y\right) \juhao$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 + 20x + 96$；} & \xxt{$6x^2 - 11xy - 7y^2$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{在实数范围内分解因式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 5x + 3$；} & \xxt{$3x^2 + 4xy - y^2$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\end{enhancedline}
+
