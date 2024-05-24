@@ -1,0 +1,101 @@
+\subsection{简单的高次方程}\label{subsec:11-7}
+
+一个整式方程经过整理后，如果只含有一个未知数，并且未知数的最高次数大于 $2$，这样的方程叫做\zhongdian{一元高次方程}。
+有些特殊的一元高次方程，可以化为一元一次方程或者一元二次方程来解。
+
+\liti 解方程 $x^3 - 2x^2 - 15x = 0$。
+
+\jie 将方程左边分解因式，
+\begin{gather*}
+    x(x^2 - 2x - 15) = 0 \douhao \\
+    x(x + 3)(x - 5) = 0 \juhao
+\end{gather*}
+
+由此得 $x = 0$， 或 $x + 3 = 0$， 或 $x - 5 = 0$。
+
+所以原方程有三个根：
+$$ x_1 = 0 \nsep x_2 = -3 \nsep x_3 = 5 \juhao $$
+
+
+\liti 解方程 $x^4 - 6x^2 + 5 = 0$。
+
+\jie 设 $x^2 = y$，那么 $x^4 = y^2$，于是原方程变为
+$$ y^2 - 6y + 5 = 0 \juhao $$
+
+解这个方程，得
+$$ y_1 = 1 \nsep y_2 = 5 \juhao $$
+
+当 $y = 1$ 时， $x^2 = 1$，
+
+\fengeSuoyi{x = \pm 1 \fenhao}
+
+当 $y = 5$ 时， $x^2 = 5$，
+
+\fengeSuoyi{x = \pm \sqrt{5} \juhao}
+
+所以原方程有四个根：
+$$ x_1 = 1 \nsep x_2 = -1 \nsep x_3 = \sqrt{5} \nsep x_4 = -\sqrt{5} \juhao $$
+
+象例 2 那样，只含有未知数的偶次项的一元四次方程，叫做\zhongdian{双二次方程}。
+这类方程，通常用换元法来解，即用辅助未知数 $y$ 代替方程里的 $x^2$， 使这个双二次方程变为关于 $y$ 的一元二次方程。
+求出 $y$ 的值后，就可进一步求出原方程的根。
+
+
+\liti 解方程 $(x^2 - x)^2 - 4(x^2 - x) - 12 = 0$。
+
+\jie 设 $x^2 - x = y$，原方程变为
+$$ y^2 - 4y - 12 = 0 \juhao $$
+
+解这个方程，得
+$$ y_1 = 6 \nsep y_2 = -2 \juhao $$
+
+当 $y = 6$ 时， $x^2 - x = 6$，即
+$$ x^2 - x - 6 = 0 \juhao $$
+
+解这个方程，得
+$$ x_1 = -2 \nsep x_2 = 3 \fenhao $$
+
+当 $y = -2$ 时， $x^2 - x = -2$，即
+$$ x^2 - x + 2 = 0 \juhao $$
+
+$\because$ \quad $\Delta = (-1)^2 - 4 \times 1 \times 2 = -7 < 0$，
+
+$\therefore$ \quad 这个方程没有实数根。
+
+因此，原方程有两个实数根：
+$$ x_1 = -2 \nsep x_2 = 3 \juhao $$
+
+
+\lianxi
+\begin{xiaotis}
+
+解下列方程：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$x^3 - 8x^2 + 15x = 0$；} & \xxt{$x^3 + 7x^2 - 60x = 0$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$x^4 - 13x^2 + 36 = 0$；} & \xxt{$x^4 - 14x^2 + 45 = 0$；} \\
+        \xxt{$3x^4 - 2x^2 - 1 = 0$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$(x^2 + 2x)^2 - 14(x^2 + 2x) - 15 = 0$；} & \xxt{$(x^2 - 3x)^2 - 2(x^2 - 3x) - 8 = 0$。}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
