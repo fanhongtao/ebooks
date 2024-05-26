@@ -1,0 +1,158 @@
+\subsection{无理方程}\label{subsec:11-9}
+\begin{enhancedline}
+
+我们来看下面的方程：
+$$ 8 + x + \sqrt{64 + x^2} = 24 \juhao $$
+
+这个方程的未知数 $x$ 含在根号下。象这样根号下含有未知数的方程，叫做\zhongdian{无理方程}\footnote{根号下含有字母的式子叫做无理式}。
+例如，$x - \sqrt{x - 1} = 3$， $\sqrt{2x - 4} + 1 = \sqrt{x + 5}$， $\sqrt{2x - 3} + \dfrac{2}{\sqrt{2x - 3}} = \sqrt{5x - 1}$
+等都是无理方程。但是象 $x^2 + 2\sqrt{2}x - 1 = 0$， $\dfrac{x}{\sqrt{2} - 1} + \dfrac{1}{x - 2} = 1$ 等都不是无理方程，
+而是整式方程或分式方程。
+
+整式方程和分式方程统称\zhongdian{有理方程}。
+
+下面我们研究无理方程的解法。例如，解方程
+$$ \sqrt{2x^2 + 7x} - 2 = x \juhao $$
+
+解这个方程，可以先移项，把被开方数中含有未知数的根式放在方程的一边，其余的移到另一边，得
+$$ \sqrt{2x^2 + 7x} = x + 2 \juhao $$
+
+两边平方，得到一个有理方程
+$$ 2x^2 + 7x = x^2 + 4x + 4 \juhao $$
+
+整理后，得
+$$ x^2 + 3x - 4 = 0 \juhao $$
+
+解这个方程，得
+$$ x_1 = 1 \nsep x_2 = -4 \juhao $$
+
+检验：把 $x = 1$ 代入原方程，
+
+$\zuobian = \sqrt{2 \times 1^2 + 7 \times 1} - 2 = \sqrt{2 + 7} - 2 = 3 - 2 = 1$，
+
+$\youbian = 1$，
+
+$\therefore$ \quad  $x = 1$ 是原方程的根；
+
+把 $x = -4$ 代入原方程，
+
+$\zuobian = \sqrt{2 \times (-4)^2 + 7 \times (-4)} - 2 = 0$，
+
+$\youbian = -4$，
+
+$\therefore$ \quad  $x = -4$ 是增根。
+
+因此原方程的根是 $x = 1$。
+
+从上例可知，在解无理方程时，为了把无理方程变形为有理方程，需要将方程的两边都乘方相同的次数，
+这样就有产生增根的可能。因此，解无理方程时，必须把变形后得到的有理方程的根，代入原方程进行检验,
+如果适合，就是原方程的根，如果不适合，就是增根。
+
+\liti 解方程 $\sqrt{2x - 4} - \sqrt{x + 5} = 1$。
+
+\jie 移项，得
+$$ \sqrt{2x - 4} = 1 + \sqrt{x + 5} \juhao $$
+
+两边平方，得
+$$ 2x - 4 = 1 + 2\sqrt{x + 5} + x + 5 \douhao $$
+即
+$$ x - 10 = 2\sqrt{x + 5} \juhao $$
+
+两边再平方，得
+$$ x^2 - 20x + 100 = 4(x + 5) \douhao $$
+即
+$$ x^2 - 24x + 80 = 0 \douhao $$
+
+解这个方程，得
+$$ x_1 = 4 \nsep x_2 = 20 \juhao $$
+
+检验：把 $x = 4$ 代入原方程，
+
+$\zuobian = \sqrt{2 \times 4 - 4} - \sqrt{4 + 5} = 2 - 3 = -1$，
+
+$\youbian = 1$，
+
+$\therefore$ \quad  $x = 4$ 是增根。
+
+把 $x = 20$ 代入原方程，
+
+$\zuobian = \sqrt{2 \times 20 - 4} - \sqrt{20 + 5} = 6 - 5 = 1$，
+
+$\youbian = 1$，
+
+$\therefore$ \quad  $x = 20$ 是原方程的根。
+
+因此原方程的根是 $x = 20$。
+
+注意：这个方程，先移项，使左边只有一个被开方数中含有未知数的根式，解起来比较简便。
+
+
+\liti 解方程 $2x^2 + 3x - 5\sqrt{2x^2 + 3x + 9} + 3 = 0$。
+
+分析：这个方程可变形为
+$$ 2x^2 + 3x + 9 - 5\sqrt{2x^2 + 3x + 9} - 6 = 0 \juhao $$
+
+这里，$2x^2 + 3x + 9$ 是 $\sqrt{2x^2 + 3x + 9}$ 的平方。
+如果设 $\sqrt{2x^2 + 3x + 9} = y$，原方程就可变为关于 $y$ 的一元二次方程。
+
+\jie 设 $\sqrt{2x^2 + 3x + 9} = y$，那么 $2x^2 + 3x + 9 = y^2$，
+因此 $2x^2 + 3x = y^2 - 9$。于是原方程变为
+$$ y^2 - 9 - 5y + 3 = 0 \douhao $$
+即
+$$ y^2 - 5y - 6 = 0 \juhao $$
+
+解这个方程，得
+$$ y_1 = -1 \nsep y_2 = 6 \juhao $$
+
+当 $y = -1$ 时，$\sqrt{2x^2 + 3x + 9} = -1$，根据算术根的定义，
+$\sqrt{2x^2 + 3x + 9}$ 不可能等于一个负数，所以方程 $\sqrt{2x^2 + 3x + 9} = -1$ 无解。
+
+当 $y = 6$ 时，$\sqrt{2x^2 + 3x + 9} = 6$，两边平方，得
+$$ 2x^2 + 3x + 9 = 36 \douhao $$
+即
+$$ 2x^2 + 3x - 27 = 0 \juhao $$
+
+解这个方程，得
+$$ x_1 = 3 \nsep x_2 = -\dfrac{9}{2} \juhao $$
+
+检验：把 $x = 3$， $x = -\dfrac{9}{2}$ 分别代入原方程都适合，所以它们都是原方程的根。
+
+从而原方程的根是
+$$ x_1 = 3 \nsep x_2 = -\dfrac{9}{2} \juhao $$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）下列方程是否有解？为什么？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sqrt{x^2 + 3x + 2} = -4$；} & \xxt{$\sqrt{x + 1} + 3 = 2$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列方程：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sqrt{2x + 3} = x$；}                 & \xxt{$\sqrt{2x + 3} = -x$；} \\
+        \xxt{$x + \sqrt{x - 2} = 2$；}              & \xxt{$x - \sqrt{x - 2} = 2$；} \\
+        \xxt{$\sqrt{1 - x} + \sqrt{12 + x} = 5$；}  & \xxt{$\sqrt{3x - 2} + \sqrt{x + 3} = 3$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{用换元法解下列方程：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 + 8x + \sqrt{x^2 + 8x} = 12$；} & \xxt{$x^2 - 3x - \sqrt{x^2 - 3x + 5} = 1$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\end{enhancedline}
+
