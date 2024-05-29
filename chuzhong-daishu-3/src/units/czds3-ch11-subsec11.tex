@@ -1,0 +1,133 @@
+\subsection{由一个二元二次方程和一个二元一次方程组成的方程组}\label{subsec:11-11}
+
+\begin{enhancedline}
+这种形式的方程组一般都可以用代入法来解。
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 - 4y^2 + x + 3y - 1 = 0 \douhao \tag{1} \\
+    2x - y - 1 = 0 \juhao \tag{2}
+\end{numcases}
+
+\jie 由 (2)，得
+\begin{equation}
+    y = 2x - 1 \juhao \tag{3}
+\end{equation}
+
+把 (3) 代入 (1)，得
+$$ x^2 - 4(2x - 1)^2 + x + 3(2x - 1) - 1 = 0 \juhao $$
+
+整理，得
+$$ 15x^2 - 23x + 8 = 0 \juhao $$
+
+解这个方程，得
+$$ x_1 = 1 \nsep x_2 = \dfrac{8}{15} \juhao $$
+
+把 $x_1 = 1$ 代入 (3)，得
+$$ y_1 = 1 \fenhao $$
+
+把 $x_2 = \dfrac{8}{15}$ 代入 (3)，得
+$$ y_2 = \dfrac{1}{15} \juhao $$
+
+所以原方程组的解是
+$$ \begin{cases}
+    x_1 = 1 \douhao \\
+    y_1 = 1 \fenhao
+\end{cases} \qquad \begin{cases}
+    x_2 = \dfrac{8}{15} \douhao \\[1em]
+    y_2 = \dfrac{1}{15} \juhao
+\end{cases}$$
+
+
+
+\liti 解方程组
+$$\begin{cases}
+    x + y = 7 \douhao \\
+    xy = 12 \juhao
+\end{cases}$$
+
+分析：这个方程组可以用代入法解，也可以根据一元二次方程的根与系数的关系，
+把 $x$，$y$ 看作一个一元二次方程的两个根，通过解这个一元二次方程来求 $x$，$y$。
+
+\jie 这个方程组的 $x$，$y$ 是一元二次方程
+$$ z^2 - 7z + 12 = 0 $$
+的两个根。解这个方程，得
+$$ z = 3 \text{，或} \quad z = 4 \juhao $$
+
+所以原方程组的解是
+$$\begin{cases}
+    x_1 = 3 \douhao \\
+    y_1 = 4 \fenhao \\
+\end{cases} \qquad \begin{cases}
+    x_2 = 4 \douhao \\
+    y_2 = 3 \juhao
+\end{cases}$$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{下列各组中  $x$，$y$ 的值是不是方程组
+    $$\begin{cases}
+        x^2 + y^2 = 13 \douhao \\
+        x + y = 5 \juhao
+    \end{cases}$$
+    的解？
+}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x = 2 \douhao \\
+                y = 3 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x = 3 \douhao \\
+                y = 2 \fenhao
+            \end{cases}$} \\
+        \xxt{$\begin{cases}
+                x = 1 \douhao \\
+                y = 4 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x = -2 \douhao \\
+                y = -3 \juhao
+            \end{cases}$}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                y = x + 5 \douhao \\
+                x^2 + y^2 = 625 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x^2 - 6x - 2y + 11 = 0 \douhao \\
+                2x - y + 1 = 0 \fenhao
+            \end{cases}$} \\
+        \SetCell[c=2]{l}\xxt{$\begin{cases}
+                x^2 + xy + y^2 + x + 5y = 0 \fenhao \\
+                x + 2y = 0 \juhao
+            \end{cases}$}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{解下列方程组：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x + y = 3 \douhao \\
+                xy = -10 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                \dfrac{1}{x} + \dfrac{1}{y} = 5 \douhao \\[1em]
+                \dfrac{1}{xy} = 6 \juhao
+            \end{cases}$}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\end{enhancedline}
+
