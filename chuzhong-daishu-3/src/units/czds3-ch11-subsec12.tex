@@ -1,0 +1,480 @@
+\subsection{由两个二元二次方程组成的方程组}\label{subsec:11-12}
+
+对于这种形式的方程组，我们只讲一些特殊的方程组的解法。现举例如下：
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 + y^2 = 20 \douhao \tag{1} \\
+    x^2 - 5xy + 6y^2 = 0 \juhao \tag{2}
+\end{numcases}
+
+\jiange
+分析：在这个方程组中，方程 (2) 的左边可以分解为两个一次因式的积 $(x - 2y)(x - 3y)$，
+而右边为零，因此方程 (2) 可化为两个二元一次方程 $x - 2y = 0$， $x - 3y = 0$，
+它们与方程 (1) 分别组成方程组
+$$ \begin{cases}
+    x^2 + y^2 = 20 \douhao \\
+    x - 2y = 0 \douhao
+\end{cases} \qquad \begin{cases}
+    x^2 + y^2 = 20 \douhao \\
+    x - 3y = 0 \juhao
+\end{cases}$$
+解这两个方程组，就得到原方程组的所有的解。
+
+\jie 由 (2)，得
+$$ (x - 2y)(x - 3y) = 0 \juhao $$
+$\therefore$
+\vspace{-1.5em}$$ x = 2y = 0 \text{，或\quad} x - 3y = 0 \juhao $$
+
+
+因此，原方程组可化为两个方程组
+$$ \begin{cases}
+    x^2 + y^2 = 20 \douhao \\
+    x - 2y = 0 \douhao
+\end{cases} \qquad \begin{cases}
+    x^2 + y^2 = 20 \douhao \\
+    x - 3y = 0 \juhao
+\end{cases}$$
+
+解这两个方程组，得原方程组的解为
+\begin{center}
+    \begin{tblr}{columns={mode=math}}
+        \begin{cases}
+            x_1 = 4 \douhao \\
+            y_1 = 2 \fenhao
+        \end{cases} & \begin{cases}
+            x_2 = -4 \douhao \\
+            y_2 = -2 \fenhao
+        \end{cases} & \begin{cases}
+            x_3 = 3\sqrt{2} \douhao \\
+            y_3 = \sqrt{2} \fenhao
+        \end{cases} & \begin{cases}
+            x_4 = -3\sqrt{2} \douhao \\
+            y_4 = -\sqrt{2} \juhao
+        \end{cases}
+    \end{tblr}
+\end{center}
+
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 + 2xy + y^2 = 9 \douhao \tag{1} \\
+    (x - y)^2 - 3(x - y) + 2 = 0 \juhao \tag{2}
+\end{numcases}
+
+\jiange
+分析：这个方程组的每一个方程都可以化为两个二元一次方程。
+先将由 (1) 化得的第一个二元一次方程分别与由  (2) 化得的两个二元一次方程进行组合，可得到两个二元一次方程组；
+再将由 (1) 化得的第二个二元一次方程分别与由  (2) 化得的两个二元一次方程进行组合，又可得到两个二元一次方程组，
+这样一共可得到四个二元一次方程组。解这四个二元一次方程组，就可以得到原方程组的所有的解。
+
+\jie 由 (1)，得
+$$ (x + y)^2 = 9 \douhao $$
+
+$\therefore$
+\vspace{-1.5em}$$ x + y = 3 \text{，或 \quad } x + y = -3 \juhao $$
+
+由 (2)，得
+$$ (x - y - 1) (x - y - 2) = 0 \douhao $$
+
+$\therefore$
+\vspace{-1.5em}$$ x - y - 1 = 0 \text{，或 \quad } x - y - 2 = 0 \juhao $$
+
+因此，原方程组可化为四个方程组
+\begin{center}
+    \begin{tblr}{columns={mode=math}}
+        \begin{cases}
+            x + y = 3 \douhao \\
+            x - y - 1 = 0 \douhao
+        \end{cases} & \begin{cases}
+            x + y = 3 \douhao \\
+            x - y - 2 = 0 \douhao
+        \end{cases} \\[1em]
+        \begin{cases}
+            x + y = -3 \douhao \\
+            x - y - 1 = 0 \douhao
+        \end{cases} & \begin{cases}
+            x + y = -3 \douhao \\
+            x - y - 2 = 0 \juhao
+        \end{cases}
+    \end{tblr}
+\end{center}
+
+解这四个方程组，得原方程组的解为
+$$\begin{cases}
+    x_1 = 2 \douhao \\
+    y_1 = 1 \fenhao
+\end{cases} \quad \begin{cases}
+    x_2 = \dfrac{5}{2} \douhao \\[1em]
+    y_2 = \dfrac{1}{2} \fenhao
+\end{cases} \quad \begin{cases}
+    x_3 = -1 \douhao \\
+    y_3 = -2 \fenhao
+\end{cases} \quad \begin{cases}
+    x_4 = -\dfrac{1}{2} \douhao \\[1em]
+    y_4 = -\dfrac{5}{2} \juhao
+\end{cases}$$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{把下列方程代为两个二元一次方程：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$x^2 - 3xy + 2y^2 = 0$；} & \xxt{$2x^2 - 5xy - 3y^2 = 0$；} \\
+        \xxt{$x^2 - 6xy + 9y^2 = 16$；} & \xxt{$(x + y)^2 - 3(x + y) - 10 = 0$；} \\
+        \xxt{$x^2 - 4xy + 4y^2 - 2x + 4y = 3$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+解下列方程组（第 2 ～\, 3 题）：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={colsep=0pt}, column{1}={21em}} % 指定 21 em 是为了和第 3 题对齐。更美观
+        \xxt{$\begin{cases}
+                (x - y)(x - 2y) = 0 \douhao \\
+                3x^2 + 2xy = 20 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x^2 + y^2 = 5 \douhao \\
+                2x^2 - 3xy - 2y^2 = 0 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={colsep=0pt}, column{1}={21em}}
+        \xxt{$\begin{cases}
+                (x - 2y - 1)(x - 2y + 1) = 0 \douhao \\
+                (3x - 2y + 1)(2x + y - 3) = 0 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x^2 + 2xy + y^2 = 25 \douhao \\
+                9x^2 - 12xy + 4y^2 = 9 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 + 3xy = 28 \douhao \tag{1} \\
+    2xy - y^2 = 7 \juhao \tag{2}
+\end{numcases}
+
+\jiange
+分析：这个方程组的两个方程都不含未知数的一次项，消去常数项后就可得到形如 $ax^2 + byx + cy^2 = 0$ 的方程，
+解由这个方程与原方程组的任何一个方程组成的方程组，就可以求得原方程组的解。
+
+\jie $(1) - (2) \times 4$，得
+\begin{gather*}
+    x^2 - 5xy + 4y^2 = 0 \douhao \\
+    (x - y)(x - 4y) = 0 \juhao
+\end{gather*}
+
+\fengeSuoyi{x - y = 0 \text{，或 \quad} x - 4y = 0 \juhao}
+
+因此，原方程组可化为两个方程组
+$$\begin{cases}
+    x- y = 0 \douhao \\
+    2xy - y^2 = 7 \douhao
+\end{cases} \qquad \begin{cases}
+    x - 4y = 0 \douhao \\
+    2xy - y^2 = 7 \juhao
+\end{cases}$$
+
+解这两个方程组，得原方程组的解为
+\begin{center}
+    \begin{tblr}{columns={mode=math}}
+        \begin{cases}
+            x_1 = \sqrt{7} \douhao \\
+            y_1 = \sqrt{7} \fenhao
+        \end{cases} & \begin{cases}
+            x_2 = -\sqrt{7} \douhao \\
+            y_2 = -\sqrt{7} \fenhao
+        \end{cases} & \begin{cases}
+            x_3 = 4 \douhao \\
+            y_3 = 1 \fenhao
+        \end{cases} & \begin{cases}
+            x_4 = -4 \douhao \\
+            y_4 = -1 \juhao
+        \end{cases}
+    \end{tblr}
+\end{center}
+
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 + y^2 = 5 \douhao \tag{1} \\
+    xy = 2 \juhao \tag{2}
+\end{numcases}
+
+\jiange
+分析：这个方程组可以象例 3 那样解。
+但根据方程组的特点，也可以把方程 (1) 加上方程 $(2) \times 2$，得到一个新方程，
+它的左边是一个完全平方式，右边是常数，通过两边开平方，就可以得到两个一次方程；
+同样，把方程 (1) 减去方程 $(2) \times 2$， 也可以由此得到两个一次方程。
+这两对一次方程同例 2 一样，一共可以组成四个二元一次方程组。
+解这四个二元一次方程组，就可以得到原方程组的所有的解。
+
+\jie $(1) + (2) \times 2$，得
+$$ (x + y)^2 = 9 \douhao $$
+
+$\therefore$
+\vspace{-1.5em}\begin{equation}
+    x + y = \pm 3 \juhao \tag{3}
+\end{equation}
+
+$(1) - (2) \times 2$，得
+$$ (x - y)^2 = 1 \douhao $$
+
+$\therefore$
+\vspace{-1.5em}\begin{equation}
+    x - y = \pm 1 \juhao \tag{4}
+\end{equation}
+
+由 (3)，(4)，原方程组可化为四个方程组
+\begin{center}
+    \begin{tblr}{columns={mode=math}}
+        \begin{cases}
+            x + y = 3 \douhao \\
+            x - y = 1 \douhao
+        \end{cases} & \begin{cases}
+            x + y = 3 \douhao \\
+            x - y = -1 \douhao
+        \end{cases} \\
+        \begin{cases}
+            x + y = -3 \douhao \\
+            x - y = 1 \douhao
+        \end{cases} & \begin{cases}
+            x + y = -3 \douhao \\
+            x - y = -1 \juhao
+        \end{cases}
+    \end{tblr}
+\end{center}
+
+解这四个方程组，得原方程组的解为
+$$\begin{cases}
+    x_1 = 2 \douhao \\
+    y_1 = 1 \fenhao
+\end{cases} \quad \begin{cases}
+    x_2 = 1 \douhao \\
+    y_2 = 2 \fenhao
+\end{cases} \quad \begin{cases}
+    x_3 = -1 \douhao \\
+    y_3 = -2 \fenhao
+\end{cases} \quad \begin{cases}
+    x_4 = -2 \douhao \\
+    y_4 = -1 \juhao
+\end{cases}$$
+
+
+\lianxi
+\begin{xiaotis}
+
+解下列方程组（第 1 ～\, 2 题）：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x^2 - 2xy - y^2 = 2 \douhao \\
+                xy + y^2 = 4 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                3x^2 - y^2 = 8 \douhao \\
+                x^2 + xy - y^2 = 4 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x^2 + y^2 = 20 \douhao \\
+                xy = 8 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                x^2 + y^2 = 13 \douhao \\
+                xy  = -6 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{（口答）已知方程组
+    \begin{numcases}{}
+        x^2 + y^2 = 5 \douhao \tag{1} \\
+        x^2 - y^2 = 3 \juhao \tag{2}
+    \end{numcases}
+    下面的解法是否正确？如果不正确，应当怎样改正？
+}
+
+\hspace*{1.5em}\begin{minipage}{0.9\textwidth}
+    \jie $[(1) + (2)] \div 2$，得
+    $$ x^2 = 4 \douhao $$
+
+    $\therefore$
+    \vspace{-1.5em}$$ x = \pm 2 \juhao $$
+
+    $[(1) - (2)] \div 2$，得
+    $$ y^2 = 1 \douhao $$
+
+    $\therefore$
+    \vspace{-1.5em}$$ y = \pm 1 \juhao $$
+
+    因此，原方程组的解是
+    $$\begin{cases}
+        x_1 = 2 \douhao \\
+        y_1 = 1 \fenhao \\
+    \end{cases} \quad \begin{cases}
+        x_2 = -2 \douhao \\
+        y_2 = -1 \juhao
+    \end{cases}$$
+\end{minipage}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 解方程组
+\begin{numcases}{}
+    x^2 - 2y^2  - y = 1 \douhao \tag{1} \\
+    2x^2 - 4y^2 + x = 6 \juhao \tag{2}
+\end{numcases}
+
+
+\begin{enhancedline}
+分析：这个方程组的两个方程的二次项系数对应比例 $\left(\text{即} \dfrac{1}{2} = \dfrac{-2}{-4}\right)$，
+把方程 (2) 减去方程 $(1) \times 2$，就可得到一个一次方程。
+解由这个一次方程和原方程组的任何一个方程组成的方程组，就可以求得原方程组的解。
+\end{enhancedline}
+
+\jie $(2) - (1) \times 2$，得
+$$ x + 2y = 4 \douhao $$
+
+称项，得
+\begin{equation}
+    x = 4 - 2y \juhao \tag{3}
+\end{equation}
+
+把 (3) 代入 (1) 并整理，得
+$$ 2y^2 - 17y + 15 = 0 \juhao $$
+
+解这个方程，得
+$$ y_1 = 1 \nsep y_2 = \dfrac{15}{2} \juhao $$
+
+把 $y_1 = 1$ 代入 (3)，得
+$$ x_1 = 2 \fenhao $$
+
+把 $y_2 = \dfrac{15}{2}$ 代入 (3)，得
+$$ x_2 = -11 \juhao $$
+
+所以原方程组的解是
+$$\begin{cases}
+    x_1 = 2 \douhao \\
+    y_1 = 1 \fenhao
+\end{cases} \quad \begin{cases}
+    x_2 = -11 \douhao \\
+    y_2 = \dfrac{15}{2} \juhao
+\end{cases}$$
+
+
+\liti 解方程组
+\begin{numcases}{}
+    3x^2 - 9xy + 2y^2 - 6x - 3y + 1 = 0 \douhao \tag{1} \\
+    x^2 - 3xy + y^2 - 2x - 3y + 3 = 0 \juhao \tag{2}
+\end{numcases}
+
+\begin{enhancedline}
+分析：在这个方程组的两个方程中，含 $x$ 的项的系数对应成比例
+$\left(\text{即} \dfrac{3}{1} = \dfrac{-9}{-3} = \dfrac{-6}{-2}\right)$，
+用加减法可以得到一个只含未知数 $y$ 的方程．解这个方程求出 $y$，再代入原方程组的任何一个方程，就可求得 $x$。
+\end{enhancedline}
+
+\jie $(2) \times 3 - (1)$，得
+$$ y^2 - 6y + 8 = 0 \juhao $$
+
+解这个方程，得
+$$ y = 2 \text{，或\quad} y = 4 \juhao $$
+
+原方程组可化为两个方程组
+\begin{gather*}
+    \begin{cases}
+        y = 2 \douhao \\
+        x^2 - 3xy + y^2 - 2x - 3y + 3 = 0 \douhao
+    \end{cases} \\
+    \begin{cases}
+        y = 4 \douhao \\
+        x^2 - 3xy + y^2 - 2x - 3y + 3 = 0 \juhao
+    \end{cases}
+\end{gather*}
+
+解这两个方程组，得原方程组的解为
+\begin{center}
+    \begin{tblr}{columns={mode=math}}
+        \begin{cases}
+            x_1 = 4 + \sqrt{15} \douhao \\
+            y_1 = 2 \fenhao
+        \end{cases} & \begin{cases}
+            x_2 = 4 - \sqrt{15} \douhao \\
+            y_2 = 2 \fenhao
+        \end{cases} & \begin{cases}
+            x_3 = 7 + \sqrt{42} \douhao \\
+            y_3 = 4 \fenhao
+        \end{cases} & \begin{cases}
+            x_4 = 7 - \sqrt{42} \douhao \\
+            y_4 = 4 \juhao
+        \end{cases}
+    \end{tblr}
+\end{center}
+
+
+\lianxi
+\begin{xiaotis}
+
+解下列方程组：
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                x + y + xy = 5 \douhao \\
+                2x + y - xy = 2 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                2x^2 - xy - 3x = 0 \douhao \\
+                xy - 2x^2 - 2y + 1 = 0 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \huitui\begin{tblr}[t]{columns={18em, colsep=0pt}}
+        \xxt{$\begin{cases}
+                2x^2 + y^2 + x - y = 12 \douhao \\
+                x^2 + y^2 - y = 6 \fenhao
+            \end{cases}$} & \xxt{$\begin{cases}
+                2x^2 - y^2 + 4x - 2y = 13 \douhao \\
+                x^2 - y^2 + 2x + y = 8 \juhao
+            \end{cases}$}
+    \end{tblr}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+
