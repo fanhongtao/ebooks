@@ -191,13 +191,13 @@
         size/.store in=\size,   size=0.5em,
         % （从上至下画线时）垂足在显示的方位：right表示显示在右侧（缺省值），left表示在左侧）
         direction/.is choice,
-            direction/right/.code = {\def\angle{-90}},
-            direction/left/.code  = {\def\angle{90}},
+            direction/right/.code = {\def\chuizuangle{-90}},
+            direction/left/.code  = {\def\chuizuangle{90}},
             direction=right,
         wrapper/.style={/tikz/.cd, to path={
             ($(\tikztotarget)!\size!0:(\tikztostart)$)
-                -- ($(\tikztotarget)!1.414*\size!0.5*\angle:(\tikztostart)$)
-                -- ($(\tikztotarget)!\size!\angle:(\tikztostart)$)
+                -- ($(\tikztotarget)!1.414*\size!0.5*\chuizuangle:(\tikztostart)$)
+                -- ($(\tikztotarget)!\size!\chuizuangle:(\tikztostart)$)
             (\tikztostart) -- (\tikztotarget) \tikztonodes
         }}
 }
