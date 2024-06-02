@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\a}{6*0.3}
+    \pgfmathsetmacro{\b}{12*0.3}
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\a, 0);
+    \coordinate (C) at (\a, \b);
+    \coordinate (P) at (2*0.3, 0);
+    \coordinate (Q) at (\a, 4*0.3);
+
+    \draw [ultra thick] (A) -- (B) -- (C) -- cycle;
+    \draw (A) node [anchor=north east] {$A$};
+    \draw (B) node [anchor=north west] {$B$};
+    \draw (C) node [above] {$C$};
+
+    \draw (P) + (0.5, 0.2) node {$P$};
+    \draw (Q) node [left=0.25, above] {$Q$};
+    \draw [ultra thick] (P) -- (Q);
+
+    \draw [<->] (0, -0.2) to [xianduan] node {$6$\; cm} (\a, -0.2);
+    \draw [<->] (\a + 0.2, 0) to [xianduan] node [rotate=90] {$12$\; cm} (\a + 0.2, \b);
+
+    \draw [->] (0.1, 0.2) -- (2*0.3, 0.2);
+    \draw [->] (\a - 0.2, 0) -- (\a - 0.2, 2*0.3);
+\end{tikzpicture}
+
