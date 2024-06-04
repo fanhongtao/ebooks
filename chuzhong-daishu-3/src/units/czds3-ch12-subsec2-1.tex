@@ -1,0 +1,149 @@
+\subsubsection{根式}
+
+前面已经学过二次根式及其一些性质，现在进一步学习一般根式和它的一些性质。
+
+\begin{enhancedline}
+我们知道，当 $n$ 是奇数时，实数 $a$ 的 $n$ 次方根用符号 $\sqrt[n]{a}$ 来表示；
+当 $n$ 是偶数时，非负数 $a$ 的 $n$ 次算术根用符号 $\sqrt[n]{a}$ 来表示。
+式子 $\sqrt[n]{a}$ 叫做\zhongdian{根式}，这里 $n$ 叫做根指数，$a$ 叫做被开方数。
+我们知道，根指数 $n$ 等于 $2$ 的根式是二次根式（这时根指数 $2$ 省略不写）。
+$n$ 等于 $3$，$4$，$5$，$\cdots$ 时，相应的根式是三次，四次，五次，… \; 根式。
+当 $n$ 是奇数时，$a$ 可以是任何实数；
+当 $n$ 是偶数时，$a$ 可以是任何非负数。
+例如，$\sqrt{5}$，$\sqrt[3]{-5}$，$\sqrt[4]{\dfrac{2}{3}}$，$\sqrt[3]{a}$，
+$\sqrt[6]{b^2 + 1}$，$\sqrt{(a - b)^2}$ 等都是根式， $5\sqrt[4]{x^2 + y^2}$ 也是根式。
+应当注意，在实数范围内，负数的偶次方根没有意义。
+\end{enhancedline}
+
+根据方根的意义，可得
+
+(1) \; $(\sqrt{5})^2 = 5 \nsep (\sqrt[3]{-2})^3 = -2$；
+
+(2) \; $\sqrt[3]{(-2)^3} = -2 \nsep \sqrt[5]{2^5} = 2$；
+
+(3) \; $\sqrt{2^2} = 2 \nsep \sqrt{(-2)^2} = |-2| = -(-2) = 2 \nsep$
+
+\phantom{(3)} \; $\sqrt[4]{(-3)^4} = |-3| = -(-3) = 3$。
+
+一般地，如果 $\sqrt[n]{a}$ 有意义，那么
+
+\jiange
+\framebox{\begin{minipage}{0.93\textwidth}
+    \zhongdian{(1) $\bm{(\sqrt[n]{a})^n = a}$；}
+
+    \zhongdian{(2) 当 $\bm{n}$ 为奇数时，$\bm{\sqrt[n]{a^n} = a}$；}
+
+    \zhongdian{(3) 当 $\bm{n}$ 为偶数时，$\bm{\sqrt[n]{a^n} = |a| = }\begin{cases}
+        \hspace*{1em}\bm{a \quad (a \geqslant 0) \douhao} \\
+        \bm{-a \quad (a < 0) \juhao}
+    \end{cases}$}
+\end{minipage}}
+\jiange
+
+
+因为负数的偶次方根没有意义，负数的奇次方根都可以化成被开方数是正数的同次方根的相反数，
+例如 $\sqrt[5]{-2} = -\sqrt[5]{2}$，所以我们研究根式的性质时，只要研究算术根的性质就可以了。
+我们规定：在本章里，如果没有特别说明，根号内出现的字母，都表示正数。
+
+根据公式 $(\sqrt[n]{a})^n = a$，当 $a \geqslant 0$ 时，可以进行下面的计算：
+\begin{gather*}
+    (\sqrt[8]{a^6})^8 = a^6 \fenhao \\
+    (\sqrt[4]{a^3})^8 = [(\sqrt[4]{a^3})^4]^2 = (a^3)^2 = a^6 \juhao
+\end{gather*}
+
+$\sqrt[8]{a^6}$ 和 $\sqrt[4]{a^3}$ 都是 $a^6$的 $8$ 次算术根，
+而 $a^6$ 的 $8$ 次算术根只有一个，所以当 $a \geqslant 0$ 时，应当有
+$$ \sqrt[8]{a^6} = \sqrt[4]{a^3} \juhao $$
+
+用同样的方法，可以推得
+\begin{center}
+    \framebox{\quad $\sqrt[np]{a^{mp}} = \sqrt[n]{a^m} \quad (a \geqslant 0)$。\quad}
+\end{center}
+\fenge{和}{$$ \sqrt[p]{a^{mp}} = a^m \quad (a \geqslant 0) \juhao $$}\\
+这里 $m$ 是正整数，$n$，$p$ 都是大于 $1$ 的整数。
+
+这就是说，一个根式的被开方数如果是一个非负数的幂，
+那么这个根式的根指数与被开方数的指数都乘以或者除以同一个正整数，根式的值不变。
+这个性质叫做\zhongdian{根式的基本性质}。
+
+对于根式的基本性质，应当特别注意 $a \geqslant 0$ 这个条件，否则就不一定有这个性质。例如，
+$\sqrt[6]{(-8)^2} = \sqrt[6]{64} = 2$，$\sqrt[3]{-8} = -2$，所以 $\sqrt[6]{(-8)^2} \neq \sqrt[3]{-8}$。
+
+根指数相同的根式叫做\zhongdian{同次根式}；
+根指数不同的根式叫做\zhongdian{异次根式}。
+利用根式的基本性质，可以把异次根式化为同次根式，或者约简某些根式中被开方数的指数及根指数。
+
+
+\liti 把 $\sqrt{a}\nsep \sqrt[3]{a^2b}\nsep \sqrt[6]{a}$ 化成同次根式。
+
+分析：这三个根式的根指数 $2$， $3$， $6$ 的最小公倍数是 $6$，可以把它们都化成六次根式。
+
+\jie \begin{tblr}[t]{columns={$}}
+    \sqrt{a} = \sqrt[6]{a^3} \douhao \\
+    \sqrt[3]{a^2b} = \sqrt[6]{(a^2b)^2} = \sqrt[6]{a^4b^2} \douhao \\
+    \sqrt[6]{a} = \sqrt[6]{a} \juhao
+\end{tblr}
+
+
+\liti 把 $\sqrt[3]{-5}\nsep \sqrt[4]{3}$ 化成同次根式。
+
+\jie \begin{tblr}[t]{columns={$}}
+    \sqrt[3]{-5} = -\sqrt[3]{5} = -\sqrt[12]{5^4} = -\sqrt[12]{625} \douhao \\
+    \sqrt[4]{3} = \sqrt[12]{3^3} = \sqrt[12]{27} \juhao
+\end{tblr}
+
+
+\liti 约简下列根式中被开方数的指数及根指数：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em}\xxt{$\sqrt[5]{a^{10}}$；} \xxt{$\sqrt[6]{(-3)^2x^4}$；}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}}
+    \xxt{$\sqrt[5]{a^{10}} = a^2$；}\\
+    \xxt{$\sqrt[6]{(-3)^2x^4} = \sqrt[6]{3^2x^4} = \sqrt[6]{(3x^2)^2} = \sqrt[3]{3x^2}$。}
+\end{tblr}
+\end{xiaoxiaotis}
+
+
+\liti 求 $\sqrt[6]{8}$ 精确到 $0.001$ 的近似值。
+
+\jie $\sqrt[6]{8} = \sqrt[6]{2^3} = \sqrt{2} \approx 1.414$。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{设 $x$ 表示实数，求下列各式在什么条件下有意义：\\
+    $\sqrt{x}\nsep  \sqrt{-x}\nsep  \sqrt[3]{x}\nsep  \sqrt[3]{-x}\nsep  \sqrt[4]{1 - x}\nsep  \sqrt[4]{x - 1}$。
+}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sqrt{x^2 - 2x + 1} \quad (x > 1)$；} & \xxt{$\sqrt[4]{(x^2 - 2x + 1)^2} \quad (x < 1)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列根式化成同次根式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={colsep=0pt}, column{1}={18em}}
+        \xxt{$\sqrt{5}\nsep  \sqrt[4]{2}$；} & \xxt{$\sqrt[3]{6y^2}\nsep  \sqrt[5]{-y}$；} \\
+        \xxt{$\sqrt{2mn}\nsep  \sqrt[5]{-6m^2n}\nsep  \sqrt[10]{5m}$；} & \xxt{$\sqrt{x + y}\nsep  \sqrt[4]{x^2 + y^2}\nsep  \sqrt[6]{(x + y)^5}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{约简下列根式中被开方数的指数及根指数：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\sqrt[4]{x^2}$；} & \xxt{$\sqrt[3]{y^9}$；} & \xxt{$\sqrt[12]{x^4y^6}$；} \\
+        \xxt{$\sqrt[6]{(-5)^4a^4b^2}$；} & \xxt{$\sqrt[4]{16x^8y^{12}}$；} & \xxt{$\sqrt[16]{a^{4m}b^{8n}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}

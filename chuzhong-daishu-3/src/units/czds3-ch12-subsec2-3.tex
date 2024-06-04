@@ -1,0 +1,240 @@
+\subsubsection{根式的性质}
+\begin{enhancedline}
+
+当 $m$，$n$ 都是正整数时，根据幂的运算性质可得
+
+(1) \; $(ab)^{\frac{1}{n}} = a^{\frac{1}{n}} b^{\frac{1}{n}} \quad (a \geqslant 0,\; b \geqslant 0)$；
+
+(2) \; $\left(\dfrac{a}{b}\right)^{\frac{1}{n}} = \dfrac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}} \quad (a \geqslant 0,\; b > 0)$；
+
+(3) \; $(a^{\frac{1}{n}})^m = a^{\frac{m}{n}} \quad (a \geqslant 0)$；
+
+(4) \; $(a^{\frac{1}{n}})^{\frac{1}{m}} = a^{\frac{1}{mn}} \quad (a \geqslant 0)$。
+
+按照分数指数幂的意义，可把这几个式子表示成根式的形式，即
+
+($1'$) \; $\sqrt[n]{ab} = \sqrt[n]{a} \sqrt[n]{b} \quad (a \geqslant 0,\; b \geqslant 0)$；
+
+($2'$) \; $\sqrt[\uproot{6}n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}} \quad (a \geqslant 0,\; b > 0)$；
+
+($3'$) \; $(\sqrt[n]{a})^m = \sqrt[n]{a^m} \quad (a \geqslant 0)$；
+
+($4'$) \; $\sqrt[m]{\sqrt[n]{a}} = \sqrt[mn]{a} \quad (a \geqslant 0)$。
+
+这几个公式，可以看作关于根式运算的几个性质。
+
+($1'$) 式表明：积的算术根，等于积中各个因式的同次算术根的积。例如，
+$$ \sqrt[3]{27 \times 64} = \sqrt[3]{27} \times \sqrt[3]{64} = 3 \times 4 = 12 \juhao $$
+
+($2'$) 式表明：商的算术根，等于被除式的同次算术根除以除式的同次算术根所得的商。例如，
+$$ \sqrt[\uproot{6}3]{\dfrac{27}{64}} = \dfrac{\sqrt[3]{27}}{\sqrt[3]{64}} = \dfrac{3}{4} \juhao $$
+
+($3'$) 式表明：根式乘方，把被开方数乘方，根指数不变。例如，
+$$ (\sqrt[3]{5})^2 = \sqrt[3]{5^2} = \sqrt[3]{25} \juhao $$
+
+($4'$) 式表明：根式开方，被开方数不变，把根指数相乘。例如，
+$$ \sqrt{\sqrt[3]{2}} = \sqrt[6]{2} \nsep \sqrt[3]{\sqrt[3]{2}} = \sqrt[9]{2} \juhao $$
+
+把 ($1'$) 式和 ($2'$) 式反过来，就是根式相乘、除的公式，这就是说，
+同次根式相乘（或相除），把被开方数相乘（或相除），根指数不变。例如，
+\begin{align*}
+    & 5\sqrt[3]{4} \cdot 2\sqrt[3]{2} = 10\sqrt[3]{8} = 20 \douhao \\
+    & 5\sqrt[3]{4} \div 2\sqrt[3]{2} = \dfrac{5}{2}\sqrt[3]{2} \juhao
+\end{align*}
+
+如果是异次根式相乘（或相除），可以根据根式的基本性质，先化成同次根式，再相乘（或相除）。例如，
+\begin{align*}
+    & \sqrt{3} \cdot \sqrt[3]{2} = \sqrt[6]{27} \cdot \sqrt[6]{4} = \sqrt[6]{108} \douhao \\
+    & \sqrt{3} \div \sqrt[3]{3} = \sqrt[6]{27} \div \sqrt[6]{9} = \sqrt[6]{3} \juhao
+\end{align*}
+
+利用这几个公式，可以进行根式的乘、除、乘方与开方运算.
+
+利用 ($1'$) 式，可以把根式里被开方数中能开得尽方的因式用与根指数相同次数的算术根代替移到根号外面，
+也可以把根号外面的非负因式乘方以后（乘方的次数与根指数相同）移到根号里面。例如，
+\begin{align*}
+    & \sqrt{a^2b} = \sqrt{a^2} \cdot \sqrt{b} = a\sqrt{b} \douhao \\
+    & \sqrt[3]{a^6b^5} = \sqrt[3]{a^6 \cdot b^3 \cdot b^2} = \sqrt[3]{a^6} \cdot \sqrt[3]{b^3} \cdot \sqrt[3]{b^2} = a^2b\sqrt[3]{b^2} \douhao \\
+    & x\sqrt[3]{y^2} = \sqrt[3]{x^3} \cdot \sqrt[3]{y^2} = \sqrt[3]{x^3y^2} \douhao \\
+    & x^3\sqrt{y} = \sqrt{x^6} \cdot \sqrt{y} = \sqrt{x^6y} \; (x > 0) \juhao
+\end{align*}
+
+
+利用 ($2'$) 式，可以把根号里面的分母化去。例如，
+\begin{align*}
+    & \sqrt[\uproot{6}3]{\dfrac{2}{27}} = \sqrt[\uproot{6}3]{\dfrac{2}{3^3}} = \dfrac{1}{3}\sqrt[3]{2} \douhao \\
+    & \sqrt[\uproot{6}3]{\dfrac{3}{4}} = \sqrt[\uproot{6}3]{\dfrac{3 \times 2}{2^2 \times 2}} = \dfrac{1}{2}\sqrt[3]{6} \juhao
+\end{align*}
+
+根式化简，结果应符合以下三项要求：
+
+第一，被开方数的每一个因式的指数都小于根指数；
+
+第二，被开方数不含分母；
+
+第三，被开方数的指数和根指数是互质数。
+
+符合这三项要求的根式叫做\zhongdian{最简根式}。
+例如根式 $a\sqrt[3]{a^2b}$ 是最简根式， 而 $\sqrt[3]{a^4b}$，$a\sqrt[4]{a^2b^2}$
+以及 $a\sqrt[\uproot{6}5]{\dfrac{b}{a^3}}$ 都不是最简根式。
+计算结果用根式表示时，根式应为最简根式。
+
+几个根式化成最简根式以后，如果被开方数都相同，根指数也都相同，
+这几个根式就叫做\zhongdian{同类根式}。例如，因为
+\begin{align*}
+    & \sqrt{12} = \sqrt{2^2 \times 3} = 2\sqrt{3} \douhao \\
+    & \sqrt[6]{27} = \sqrt[6]{3^3} = \sqrt{3} \douhao \\
+    & \sqrt{\dfrac{1}{3}} = \sqrt{\dfrac{1 \times 3}{3 \times 3}} = \dfrac{1}{3}\sqrt{3} \douhao
+\end{align*}
+所以， $\sqrt{12}$， $\sqrt[6]{27}$， $\sqrt{\dfrac{1}{3}}$ 是同类根式。
+又 $\sqrt[3]{x}$， $\sqrt{x}$ 不是同类根式，
+$4\sqrt[3]{a^2}$， $4\sqrt[3]{a}$ 也不是同类根式。
+
+\end{enhancedline}
+
+根式相加减，就是把同类根式分别合并。例如，
+\begin{align*}
+    & a\sqrt[n]{x} + b\sqrt[m]{y} - c\sqrt[n]{x} + d\sqrt[m]{y} \\
+    & = (a - c)\sqrt[n]{x} + (b + d)\sqrt[m]{y} \juhao
+\end{align*}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sqrt{a^2b^4}$；} & \xxt{$\sqrt{121 \times 64 \times 256}$；} \\
+        \xxt{$\sqrt[3]{a^9b^3t^{12}}$；} & \xxt{$\sqrt[3]{-343 \times 512 \times 729}$；} \\
+        \xxt{$\sqrt[4]{16a^8b^{12}}$；} & \xxt{$\sqrt[n]{a^{2n} b^n c^{3n}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$\sqrt{\dfrac{2}{81}}$；}
+            & \xxt{$\sqrt{\dfrac{n}{49m^4}}$；}
+            & \xxt{$\sqrt[\uproot{6}3]{\dfrac{2}{27}}$；} \\
+        \xxt{$\sqrt[\uproot{6}4]{\dfrac{a^5}{16b^4}}$；}
+            & \xxt{$\sqrt[\uproot{6}3]{\dfrac{8x^3y^6}{27a^6b^8}}$；}
+            & \xxt{$\sqrt[\uproot{6}n]{\dfrac{a^n b^{2n}}{c^{3n} d^n}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$(\sqrt[3]{a^2b})^2$；}  & \xxt{$(3\sqrt[5]{a^4b^3})^2$；} \\
+        \xxt{$(m\sqrt[4]{mn^2})^3$；} & \xxt{$\left(-\dfrac{x}{y} \sqrt{\dfrac{y}{x}}\right)^3$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sqrt{\sqrt[3]{a^4b^2}}$；} & \xxt{$\sqrt[3]{2\sqrt{7}}$；} \\
+        \xxt{$\sqrt{a\sqrt[3]{a}}$；} & \xxt{$\sqrt[n]{2\sqrt{2}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列各式中根号内能开得尽方的因式适当改变后移到根号外，
+    使被开方数的每一个因式的指数都小于根指数：
+}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$\sqrt{8a^3}$；} & \xxt{$\sqrt{16t^5}$；} & \xxt{$\dfrac{1}{2}\sqrt{64p^3q^7}$；} \\
+        \xxt{$\sqrt[3]{2t^4}$；} & \xxt{$\sqrt[3]{27a^5}$；} & \xxt{$\dfrac{1}{3}\sqrt[3]{27a^4b^5}$；} \\
+        \xxt{$\sqrt[n]{a^{2n} b^{n+2}}$；} &  \SetCell[c=2]{l}\xxt{$\sqrt[4]{x^5 - x^4y} \; (x > y)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{化去根号内的分母：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$\sqrt{\dfrac{n^2}{8m}}$；} & \xxt{$\sqrt[\uproot{6}3]{\dfrac{b^2}{9a^2}}$；} \\
+        \xxt{$\sqrt[\uproot{6}3]{\dfrac{ax^3}{27m^2n^3}}$；} & \xxt{$\dfrac{1}{x} \sqrt[\uproot{6}n]{\dfrac{1}{a^{n-2}}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列根式化成最简根式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$\sqrt{\dfrac{16c^3}{9a^5b}}$；} & \xxt{$\sqrt[3]{54a^4b^7}$；} \\
+        \xxt{$x^2 \sqrt[\uproot{6}3]{\dfrac{3y}{2x^2}}$；} & \xxt{$n \sqrt[\uproot{6}4]{\dfrac{1}{n^4} + \dfrac{1}{n^2}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\sqrt{8} + \sqrt[3]{54} - 6\sqrt[\uproot{6}3]{\dfrac{2}{27}} + 3\sqrt{18}$；}
+
+    \xxt{$7b\sqrt[3]{a} + 5\sqrt{a^2x} - b^2 \sqrt[\uproot{6}3]{\dfrac{27a}{b^3}} - 6\sqrt{\dfrac{b^2x}{9}}$。}
+
+\end{xiaoxiaotis}
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 利用分数指数计算下列各式：
+\begin{xiaoxiaotis}
+
+    \jiange
+    \xxt{$\dfrac{a^2 \cdot \sqrt[5]{a^3}}{\sqrt{a} \cdot \sqrt[10]{a^7}}$；}
+    \xxt{$(\sqrt[3]{5} - \sqrt{125}) \div \sqrt[4]{5}$；}
+    \xxt{$\sqrt[3]{xy^2 (\sqrt{xy})^3}$。}\jiange
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+    & \dfrac{a^2 \cdot \sqrt[5]{a^3}}{\sqrt{a} \cdot \sqrt[10]{a^7}} = \dfrac{a^2 \cdot a^{\frac{3}{5}}}{a^{\frac{1}{2}} \cdot a^{\frac{7}{10}}} = a^{2 + \frac{3}{5} - \frac{1}{2} - \frac{7}{10}} \\
+    & = a^{\frac{7}{5}} = \sqrt[5]{a^7} = a\sqrt[5]{a^2} \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+    & (\sqrt[3]{5} - \sqrt{125}) \div \sqrt[4]{5} = (5^{\frac{1}{3}} - 5^{\frac{3}{2}}) \div 5^{\frac{1}{4}} \\
+    & = 5^{\frac{1}{3} - \frac{1}{4}} - 5^{\frac{3}{2} - \frac{1}{4}} = 5^{\frac{1}{12}} - 5^{\frac{5}{4}} \\
+    & = \sqrt[12]{5} - \sqrt[4]{5^5} = \sqrt[12]{5} - 5\sqrt[4]{5} \fenhao
+\end{aligned}$}
+
+\xxt{$\begin{aligned}[t]
+    & \sqrt[3]{xy^2 (\sqrt{xy})^3} = \sqrt[\uproot{6}3]{xy^2 (x^{\frac{1}{2}} y^{\frac{1}{2}})^3} \\
+    & = (x^{\frac{5}{2}} y^{\frac{7}{2}})^{\frac{1}{3}} = x^{\frac{5}{6}} y^{\frac{7}{6}} = \sqrt[6]{x^5} \cdot \sqrt[6]{y^7} \\
+    &= y\sqrt[6]{x^5y} \juhao
+\end{aligned}$}
+
+\end{xiaoxiaotis}
+
+除特殊情况外，一般利用分数指数进行根式的乘法、除法、乘方、开方等计算比较简便。
+所以，我们在进行根式运算时，一般都利用分数指数进行计算。
+
+
+\lianxi
+
+计算：
+\begin{xiaoxiaotis}
+\resetxxt
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$2 \cdot \sqrt{2} \cdot \sqrt[4]{2} \cdot \sqrt[8]{2}$；} & \xxt{$\dfrac{\sqrt{3} \cdot \sqrt[3]{9}}{\sqrt[6]{3}}$；} \\
+        \xxt{$\sqrt{\dfrac{3y}{x}} \cdot \sqrt{\dfrac{3x^2}{y}}$；} & \xxt{$\dfrac{\sqrt{x} \cdot \sqrt[3]{x^2}}{x \cdot \sqrt[6]{x}}$；} \\
+        \xxt{$\sqrt{\sqrt[3]{4}}$；} & \xxt{$\sqrt[3]{a\sqrt[4]{a^3}}$；} \\
+        \xxt{$\dfrac{-3 a^{\frac{2}{3}} b^{\frac{3}{4}} c^2}{9 a^{\frac{1}{3}} b^{\frac{1}{2}} c^{\frac{3}{2}}}$；} & \xxt{$(x^\frac{1}{3} y^\frac{3}{4} - x^\frac{1}{2}) x^\frac{1}{2} y^\frac{1}{4}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
