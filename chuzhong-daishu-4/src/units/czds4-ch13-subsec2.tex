@@ -1,0 +1,153 @@
+\subsection{积、商、幂、方根的对数}\label{subsec:13-2}
+
+我们学过了指数的定义及运算，知道如果 $a > 0$，那么
+\begin{gather*}
+    a^p \cdot a^q = a^{p + q} \douhao \\
+    a^p \div a^q = a^{p - q} \douhao \\
+    (a^p)^n = a^{np} \douhao \\
+    \sqrt[n]{a^p} = a^{\frac{p}{n}} \juhao
+\end{gather*}
+根据这些等式和对数的定义，我们可以得到对数的运算性质。
+
+1. 设 $\log_{a}{M} = p$， $\log_{a}{N} = q$，由对数的意义，得
+$$ M = a^p \douhao N = a^q \juhao $$
+
+$\therefore$ \quad $M \cdot N = a^p \cdot a^q = a^{p + q}$，
+
+$\therefore$ \quad $\log_{a}{MN} = p + q = \log_{a}{M} + \log_{a}{N}$。
+
+这就是说，\zhongdian{两个正数的积的对数，等于同一底数的这两个数的对数的和，} 即
+$$ \bm{\log_{a}{MN} = \log_{a}{M} + \log_{a}{N} \juhao} $$
+
+当因数多于两个时，上述性质仍然成立，例如
+$$ \log_{a}{LMN} = \log_{a}{L} + \log_{a}{M} + \log_{a}{N} \juhao$$
+
+
+\begin{enhancedline}
+2. 设 $\log_{a}{M} = p$， $\log_{a}{N} = q$，则
+\begin{gather*}
+    M = a^p \douhao N = a^q \juhao \\
+    \dfrac{M}{N} = \dfrac{a^p}{a^q} = a^{p - q} \douhao
+\end{gather*}
+
+$\therefore$ \quad $\log_{a}{\dfrac{M}{N}} = p - q = \log_{a}{M} - \log_{a}{N}$。
+
+这就是说，\zhongdian{两个正数的商的对数，等于同一底数的被除数的对数减去除数的对数的差，} 即
+$$ \bm{\log_{a}{\dfrac{M}{N}} = \log_{a}{M} - \log_{a}{N}} \juhao $$
+\end{enhancedline}
+
+3. 设 $\log_{a}{M} = p$，则
+\begin{gather*}
+    M = a^p \douhao \\
+    M^n = (a^p)^n = a^{np} \douhao
+\end{gather*}
+
+$\therefore$ \quad $\log_a{M^n} = np = n\log_{a}{M} \juhao$
+
+这就是说，\zhongdian{一个正数的幂的对数，等于幂的底数的对数乘以幂指数，} 即
+$$ \bm{\log_a{M^n} = n\log_{a}{M}} \juhao $$
+
+\begin{enhancedline}
+4. \zhongdian{一个正的算术根的对数，等于被开方数的对数除以根指数，} 即
+$$ \bm{\log_{a}{\sqrt[n]{M}} = \dfrac{1}{n}\log_{a}{M}} \juhao $$
+
+同学们可以自己证明这个性质。
+
+
+\liti 用 $\log_{a}{x}$，$\log_{a}{y}$，$\log_{a}{z}$ 表示下列各式：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\log_{a}{\dfrac{xy}{z}}$；} & \xxt{$\log_{a}{x^3y^5}$；} \\
+        \xxt{$\log_{a}{\dfrac{\sqrt{x}}{yz}}$；} & \xxt{$\log_{a}{\dfrac{x^2\sqrt{y}}{\sqrt[3]{z}}}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \xxt{$\begin{aligned}[t]
+        \log_{a}{\dfrac{xy}{z}} &= \log_{a}{xy} - \log_{a}{z} \\
+            &= \log_{a}{x} + \log_{a}{y} - \log_{a}{z} \fenhao
+    \end{aligned}$}
+
+    \hspace*{1.5em} \xxt{$\begin{aligned}[t]
+        \log_{a}{x^3y^5} &= \log_{a}{x^3} + \log_{a}{y^5} \\
+            &= 3\log_{a}{x} + 5\log_{a}{y} \fenhao
+    \end{aligned}$}
+
+    \hspace*{1.5em} \xxt{$\begin{aligned}[t]
+        \log_{a}{\dfrac{\sqrt{x}}{yz}} &= \log_{a}{\sqrt{x}} - \log_{a}{yz} \\
+            &= \dfrac{1}{2}\log_{a}{x} - (\log_{a}{y} + \log_{a}{z}) \\
+            &= \dfrac{1}{2}\log_{a}{x} - \log_{a}{y} - \log_{a}{z} \fenhao
+    \end{aligned}$}
+
+    \hspace*{1.5em} \xxt{$\begin{aligned}[t]
+        \log_{a}{\dfrac{x^2\sqrt{y}}{\sqrt[3]{z}}} &= \log_{a}{x^2\sqrt{y}} - \log_{a}{\sqrt[3]{z}} \\
+            &= \log_{a}{x^2} + \log_{a}{\sqrt{y}} - \log_{a}{\sqrt[3]{z}} \\
+            &= 2\log_{a}{x} + \dfrac{1}{2}\log_{a}{y} - \dfrac{1}{3}\log_{a}{z} \juhao
+    \end{aligned}$}
+
+\end{xiaoxiaotis}
+
+
+\liti 计算：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\log_{10}{\sqrt[5]{100}}$；} & \xxt{$\log_{2}{(4^7 \cdot 2^5)}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={18em, colsep=0pt}}
+    \xxt{$\log_{10}{\sqrt[5]{100}} = \dfrac{1}{5}\log_{10}{100} = \dfrac{2}{5}$；}
+        & \xxt{$\begin{aligned}[t]
+            \log_{2}{(4^7 \cdot 2^5)} &= \log_{2}{4^7} + \log_{2}{2^5} \\
+                &= 7\log_{2}{4} + 5\log_{2}{2} \\
+                &= 7 \times 2 + 5 \times 1 = 19 \juhao
+        \end{aligned}$}
+\end{tblr}
+\end{xiaoxiaotis}
+\end{enhancedline}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用 $\log_{10}{x}$，$\log_{10}{y}$，$\log_{10}{z}$，$\log_{10}{(x + y)}$，$\log_{10}{(x - y)}$ 表示下列各式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\log_{10}{xyz}$；} & \xxt{$\log_{10}{(x + y)z}$；} & \xxt{$\log_{10}{(x^2 - y^2)}$；} \\
+        \xxt{$\log_{10}{\dfrac{xy^2}{z}}$；} & \xxt{$\log_{10}{\dfrac{xy}{(x + y)z}}$；} & \xxt{$\log_{10}{\dfrac{x^2 - xy}{100}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\log_{3}{(27 \times 9^2)}$；} & \xxt{$\log_{10}{100^2}$；} \\
+        \xxt{$\log_{10}{0.0001^3}$；}       & \xxt{$\log_{7}{\sqrt[3]{49}}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\log_{2}{6} - \log_{2}{3}$；} & \xxt{$\log_{10}{5} + \log_{10}{2}$；} \\
+        \xxt{$\log_{5}{3} + \log_{5}{\dfrac{1}{3}}$；} & \xxt{$\log_{3}{5} - \log_{3}{15}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{下面的式子对不对？为什么？}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\log_{2}{(8 - 2)} = \log_{2}{8} - \log_{2}{2}$；} & \xxt{$\log_{10}{(4 - 2)} = \dfrac{\log_{10}{4}}{\log_{10}{2}}$；} \\
+        \xxt{$\dfrac{\log_{2}{4}}{\log_{2}{8}} = \log_{2}{4} - \log_{2}{8}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
