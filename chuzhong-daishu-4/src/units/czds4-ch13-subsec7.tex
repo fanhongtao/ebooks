@@ -1,0 +1,237 @@
+\subsection{利用对数进行计算}\label{subsec:13-7}
+
+利用积、商、幂、方根的对数的运算性质，可以比较简捷地进行乘、除、乘方、开方的计算。
+
+在利用对数进行计算的时候，因为我们所用的表中只有四个有效数字，所以计算得到的结果最多只能保留四个有效数字。
+
+\liti 计算 $17.95 \times 0.08304$。
+
+\jie 设 $x = 17.95 \times 0.08304$，则
+$$\lg{x} = \lg{17.95} + \lg{0.08304} \juhao $$
+\begin{center}
+\vspace*{-1em}
+\begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+    % hline{3}={2}{text=$(+$},
+}
+    \lg{17.95} = 1.2541 \\
+    \lg{0.08304} = \overline{2}.9193 \tikz [overlay] {\draw (1em, -0.5em) node {$(+$};} \\
+    \lg{x} = 0.1734
+\end{tblr}
+\end{center}
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 1.490 \juhao $$
+
+这里正尾数和正尾数相加得正尾数，并且进位得正整数 $1$， 所以数是 $1 + (-2) + 1 = 0$。
+在利用对数进行计算时，要特别注意关于负首数的计算问题。
+
+\begin{enhancedline}
+\liti 计算 $\dfrac{0.1674}{4785}$。
+
+\jie 设 $x = \dfrac{0.1674}{4785}$，则
+$$\lg{x} = \lg{0.1674} - \lg{4785} \juhao $$
+\end{enhancedline}
+\begin{center}
+\vspace*{-0.5em}
+\begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+    % hline{3}={2}{text=$(+$},
+}
+    \lg{0.1674} = \overline{1}.2238 \\
+    \lg{4785} = 3.6799 \tikz [overlay] {\draw (1em, -0.5em) node {$(-$};} \\
+    \lg{x} = \overline{5}.5439
+\end{tblr}
+\end{center}
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 0.00003498 \juhao $$
+
+这里尾数 $0.2238$ 借 $1$ 减去 $0.6799$ 得正尾数 $0.5439$，首数是 $-1 - 1 - 3 = -5$。
+
+
+\liti 计算 $0.5084^4$。
+
+\jie 设 $x = 0.5084^4$，则 $\lg{x} = 4\lg{0.5084}$。
+$$\lg{0.5084} = \overline{1}.7062 $$
+\begin{center}
+\vspace*{-0.5em}
+\begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={solid},
+}
+           & \overline{1}.7062 \\
+    \times & 4 \\
+           & \overline{2}.8248
+\end{tblr}
+\end{center}
+$$ \lg{x} = \overline{2}.8248 \juhao $$
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 0.06680 \juhao $$
+
+这里正尾数 $0.7062$ 乘以 $4$ 得正尾数 $0.8248$ 和正首数 $2$，首数是 $(-1) \times 4 + 2 = -2$。
+
+
+\liti 计算 $\sqrt[5]{0.02781}$。
+
+\begin{enhancedline}
+\jie 设 $x = \sqrt[5]{0.02781}$，则 $\lg{x} = \dfrac{1}{5}\lg{0.02781}$。
+$$\lg{0.02781} = \overline{2}.4442 = -5 + 3.4442 \juhao $$
+\end{enhancedline}
+\begin{center}
+\vspace*{-1em}
+\begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    column{1}={rightsep=5pt},
+    column{2}={leftsep=5pt},
+    rows={rowsep=0em},
+    hline{2}={2}{solid},
+    vline{2}={1}{solid}
+}
+    5 & -5 + 3.4442 \\
+      & -1 + 0.6888
+\end{tblr}
+\end{center}
+$$ \lg{x} = \overline{1}.6888 \juhao $$
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 0.4884 \juhao $$
+
+这里 $\overline{2}.4442$ 的首数 $-2$ 不能被 $5$ 整除，我们把 $-2$ 化成 $-5 + 3$，
+其中 $-5$ 是一个能被 $5$ 整除的负数，$3$ 是小于5 的正数。
+$-5$ 除以 $5$ 得首数 $-1$， $3$ 与原来的正尾数 $0.4442$ 合并后除以 $5$ 得正尾数 $0.6888$。
+
+
+\begin{enhancedline}
+\liti 计算 $\dfrac{5.16^3}{2.78 \times \sqrt{0.637}}$。
+
+\jie 设 $x = \dfrac{5.16^3}{2.78 \times \sqrt{0.637}}$，则
+\end{enhancedline}
+
+\begin{gather*}
+    \lg{x} = 3\lg{5.16} - \left(\lg{2.78} + \dfrac{1}{2}\lg{0.637}\right) \juhao \\
+    \lg{2.78} = 0.4440 \douhao \\
+    \dfrac{1}{2}\lg{0.637} = \dfrac{1}{2} \times \overline{1}.8041 = \overline{1}.9021 \douhao \\
+    3\lg{5.16} = 3 \times 0.7126 = 2.1378 \juhao
+\end{gather*}
+
+\begin{center}
+    \vspace*{-1em}
+    \begin{tblr}[]{column{1}={rightsep=5em}}
+        \begin{tblr}[t]{
+            columns={r, mode=math, colsep=0em},
+            rows={rowsep=0em},
+            hline{3}={1}{solid},
+        }
+            0.4440 \\
+            \overline{1}.9021 \tikz [overlay] {\draw (1em, -0.5em) node {$(+$};} \\
+            0.3461
+        \end{tblr} &
+        \begin{tblr}[t]{
+            columns={r, mode=math, colsep=0em},
+            rows={rowsep=0em},
+            hline{3}={1}{solid},
+        }
+            2.1378 \\
+            0.3461 \tikz [overlay] {\draw (1em, -0.5em) node {$(-$};} \\
+            1.7917
+        \end{tblr}
+    \end{tblr}
+\end{center}
+$$ \lg{x} = 1.7917 \juhao $$
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 61.90 \juhao $$
+
+
+\liti 计算 $2.31^3 \times \sqrt[5]{72} + 1.2^2$。
+
+分析：这是含有乘法与加法的混合计算题，可以根据对数的运算性质，
+先计算 $2.31^3 \times \sqrt[5]{72}$，再将结果与 $1.2^2$ 相加。
+
+\jie 设 $x = 2.31^3 \times \sqrt[5]{72}$，则
+$$\lg{x} = 3\lg{2.31} + \dfrac{1}{5}\lg{72} \juhao $$
+\begin{center}
+\vspace*{-1em}
+\begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    % rows={rowsep=0em},
+    row{1}={abovesep=0.5em},
+    row{2}={belowsep=0.5em},
+    hline{3}={1}{solid},
+}
+    3\lg{2.31} = 3 \times 0.3636 = 1.0908 \\
+    \dfrac{1}{5}\lg{72} = \dfrac{1}{5} \times 1.8573 = 0.3715 \tikz [overlay] {\draw (1em, -1.2em) node {$(+$};} \\
+    \lg{x} = 1.4623
+\end{tblr}
+\end{center}
+
+$\therefore$ \quad $x = 28.99$。
+
+又 $1.2^2 = 1.44$，
+
+$\therefore$ \quad $2.31^3 \times \sqrt[5]{72} + 1.2^2 = 28.99 + 1.44 = 30.43$。
+
+
+\liti 某农场的粮食产量经过五年增长了 $65\%$。求每年比上一年平均增长的百分数。
+
+分析：设原来的产量是 $1$， 每年比上一年平均增长的百分数是 $x$，那么
+经过一年的产量是 $1 + x$，
+经过二年的产量是 $(1 + x) + (1 + x) \cdot x = (1 + x)^2$，
+经过三年的产量是 $(1 + x)^2 + (1 + x)^2 \cdot x = (1 + x)^3$，……
+经过五年的产量是 $(1 + x)^5$。
+
+\jie 设原来的产量是 $1$， 每年比上一年平均增长的百分数是 $x$，则
+\begin{gather*}
+    (1 + x)^5 = 1 + 65\% \juhao \\
+    1 + x = \sqrt[5]{1.65} \douhao \\
+    \lg{(1 + x)} = \dfrac{1}{5}\lg{1.65} = \dfrac{1}{5} \times 0.2175 = 0.0435 \douhao
+\end{gather*}
+
+$\therefore$
+\vspace*{-1.5em} $$ 1 + x = 1.105 \juhao $$
+
+$\therefore$
+\vspace*{-1.5em} $$ x = 0.105 = 10.5\% \juhao $$
+
+答：每年比上一年平均增长 $10.5\%$。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\overline{1}.5483 + \overline{2}.8712$；} & \xxt{$\overline{2}.7125 - \overline{1}.9418$；} & \xxt{$\overline{4}.5082 \times 3$；} \\
+        \xxt{$\overline{3}.6479 \times 5$；} & \xxt{$\overline{2}.2418 \div 2$；} & \xxt{$\overline{1}.1535 \div 3$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{利用对数查表计算：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$15.4 \times 2.47$；} & \xxt{$0.064 \times 1.87$；} & \xxt{$4.254 \div 0.1658$；} \\
+        \xxt{$7.58^3$；} & \xxt{$\sqrt[3]{13}$；} & \xxt{$\dfrac{65.36}{2.72 \times 435^2}$；} \\
+        \xxt{$\dfrac{\sqrt{62.3} \times 47.6^2}{86.08}$；} &  \SetCell[c=2]{l}\xxt{$(0.235)^7 \div \sqrt[5]{0.2771}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{长方体的体积是 $45.8\;\text{cm}^3$，长是 $3.5$ cm， 宽是 $2.4$ cm，求它的高。}
+
+\xiaoti{已知圆的面积等于 $0.6567\;\text{m}^2$，求它的周长。}
+
+\xiaoti{某种产品的产量平均每年比上一年增长 $12.5\%$，求经过 $6$ 年产量比原来增长的百分数。}
+
+\end{xiaotis}
+
