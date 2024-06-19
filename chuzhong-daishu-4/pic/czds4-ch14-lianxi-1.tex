@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [thick, ->] (-7.5, 0) -- (8, 0) node[below=0.1] {$x$};
+    \draw [thick, ->] (0, -9) -- (0, 10) node[left=0.1] {$y$};
+    \foreach \x in {-6, ..., -1, 1, 2, ..., 6} {
+        \draw (\x, -8.2) -- (\x, 9);
+    }
+    \foreach \y in {-8, ..., -1, 1, 2, ..., 9} {
+        \draw (-7, \y) -- (7, \y);
+    }
+
+    \foreach \x in {-6, ..., -1, 1, 2, ..., 6} {
+        \draw (\x, 0) node[below=0.1] {\small $\x$};
+    }
+
+    \foreach \y in {-7, ..., -1, 1, 2, ..., 8} {
+        \draw (0, \y) node[right=0.1] {\small $\y$};
+    }
+
+    \filldraw [fill=black] ( 3,  5) circle (0.1) node [above=0.1] {\small $A$};
+    \filldraw [fill=black] (-6,  5) circle (0.1) node [above=0.1] {\small $B$};
+    \filldraw [fill=black] (-2, -5) circle (0.1) node [below=0.1] {\small $C$};
+    \filldraw [fill=black] ( 5, -7) circle (0.1) node [above=0.1] {\small $D$};
+    \filldraw [fill=black] ( 5,  0) circle (0.1) node [above=0.1] {\small $E$};
+    \filldraw [fill=black] ( 0,  7) circle (0.1) node [left =0.1] {\small $F$};
+    \filldraw [fill=black] ( 0, -4) circle (0.1) node [left =0.1] {\small $G$};
+    \filldraw [fill=black] (-5,  0) circle (0.1) node [above=0.1] {\small $H$};
+    \filldraw [fill=black] ( 0,  0) circle (0.1) node [above left=0.1] {\small $O$};
+\end{tikzpicture}
+

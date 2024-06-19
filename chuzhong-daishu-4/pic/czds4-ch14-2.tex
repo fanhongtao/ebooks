@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, scale=0.55]
+    \draw [->] (-6,0) node[anchor=east] {$x'$} -- (6,0) node[anchor=north] {$x$};
+    \draw [->] (0,-6) node[anchor=east] {$y'$} -- (0,6) node[anchor=east]  {$y$};
+    \node at (-0.3,-0.3) {\small $O$};
+    \foreach \x in {-5,...,-1} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {\small $\x$};
+    }
+    \foreach \x in {1,...,5} {
+        \draw (\x,0.2) -- (\x,0) node[anchor=north] {\small $\x$};
+    }
+    \foreach \y in {1,...,5} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\small $\y$};
+    }
+    \foreach \y in {-5,...,-1} {
+        \draw (0.2,\y) -- (0,\y) node[anchor=east] {\small $\y$};
+    }
+
+    \draw ( 3,  3) node {第一象限};
+    \draw (-3,  3) node {第二象限};
+    \draw (-3, -3) node {第三象限};
+    \draw ( 3, -3) node {第四象限};
+\end{tikzpicture}
+

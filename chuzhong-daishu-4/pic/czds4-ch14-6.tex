@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [->] (-1, 0) -- (5, 0) node[anchor=north] {$x$};
+    \draw [->] (0, -1) -- (0, 5) node[anchor=east] {$y$};
+    \draw (0, 0) node [anchor=north east] {\small $O$};
+    \foreach \x in {1, 2, 3, 4} {
+        \draw (\x, 0.2) -- (\x, 0) node[anchor=north] {\small $\x$};
+    }
+    \foreach \y in {1, 2, 3, 4} {
+        \draw (0.2, \y) -- (0, \y) node[anchor=east] {\small $\y$};
+    }
+
+    \draw [very thick] (0, 0) rectangle (4, 4);
+    \draw (0, 0) node [anchor=south west] {$A$};
+    \draw (4, 0) node [anchor=south west] {$B$};
+    \draw (4, 4) node [anchor=south west] {$C$};
+    \draw (0, 4) node [anchor=south west] {$D$};
+\end{tikzpicture}
+

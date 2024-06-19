@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\x}{2.1}
+    \pgfmathsetmacro{\y}{1.4}
+    \draw (0, 0) rectangle (5, 3);
+    \draw [dashed] (0, \y) -- (\x, \y) -- (\x, 0);
+    \filldraw [fill=black] (\x, \y) circle (0.05);
+    \draw (\x, \y) node[right] {$M$};
+    \draw [<->] (0, -0.3) to [xianduan] node {$30$} (\x, -0.3);
+    \draw [<->] (-0.3, 0) to [xianduan] node [rotate=90] {$20$} (-0.3, \y);
+\end{tikzpicture}
+
