@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6,
+    every node/.style={inner sep=1pt},
+]
+    \draw [->] (-4, 0) -- (4.5, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -2) -- (0, 4.5) node[left=0.2em] {$y$};
+    \draw (0, 0) node [above left] {\small $O$};
+
+    \coordinate (A) at (-1, 2.5);
+    \coordinate (B) at (2, 0);
+    \coordinate (C) at (-2, 0);
+    \pgfmathsetmacro{\r}{0.7}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \filldraw [fill=black] (A) circle (0.05);
+    \filldraw [fill=black] (B) circle (0.05);
+    \filldraw [fill=black] (C) circle (0.05);
+
+    \draw [thick] (A) node [below right] {\small $A$} circle (\r);
+    \draw [thick] (B) node [below right] {\small $B$} circle (\r);
+    \draw [thick] (C) node [below right] {\small $C$} circle (\r);
+
+    \path (A) +(30:\R)  coordinate(pa);
+    \path (C) +(150:\R) coordinate(pc);
+    \path (B) +(270:\R) coordinate(pb);
+
+    \draw [rounded corners] (pa)
+        arc [radius=\R, start angle=30,  end angle=150]
+        to [bend left] (pc)
+        arc [radius=\R, start angle=150, end angle=270]
+        to [bend left] (pb)
+        arc [radius=\R, start angle=270, end angle=390]
+        to [bend left] (pa);
+\end{tikzpicture}
+

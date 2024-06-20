@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\rxa}{-1}
+    \pgfmathsetmacro{\rya}{-2.7}
+    \pgfmathsetmacro{\rxb}{6}
+    \pgfmathsetmacro{\ryb}{3.8}
+    \draw [thick] (\rxa, \rya) rectangle (\rxb, \ryb);
+
+    \pgfmathsetmacro{\xa}{0}
+    \pgfmathsetmacro{\ya}{0}
+    \pgfmathsetmacro{\xb}{2.8}
+    \pgfmathsetmacro{\yb}{2.6}
+    \pgfmathsetmacro{\xc}{4.8}
+    \pgfmathsetmacro{\yc}{-1.5}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \draw [thick] (\xa, \ya) node [below right] {$A$} circle (\r);
+    \draw [thick] (\xb, \yb) node [below right] {$B$} circle (\r);
+    \draw [thick] (\xc, \yc) node [below right] {$C$} circle (\r);
+
+    \filldraw [fill=black] (\xb, \yb) circle (0.05);
+    \filldraw [fill=black] (\xc, \yc) circle (0.05);
+
+    \draw [->] (-2, 0) -- (7, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -3.5) -- (0, 4.5) node[left=0.2em] {$y$};
+\end{tikzpicture}
+

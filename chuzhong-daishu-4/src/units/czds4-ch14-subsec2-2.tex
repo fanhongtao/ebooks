@@ -1,0 +1,116 @@
+\subsubsection{平面内任意两点间的距离}
+
+\begin{wrapfigure}[8]{r}{6cm}
+    \centering
+    \input{../pic/czds4-ch14-8}
+    \caption{}\label{fig:14-8}
+\end{wrapfigure}
+
+设 $P_1(x_1,\; y_1)$，$P_2(x_2,\; y_2)$ 是坐标平面内的任意两点（图 \ref{fig:14-8}），
+  从点 $P_1$，$P_2$ 分别画 $x$ 轴的垂线 $P_1M_1$，$P_2M_2$，与 $x$ 轴交于点 $M_1(x_1,\; 0)$，$M_2(x_2,\; 0)$。
+再从点 $P_1$，$P_2$ 分别画 $y$ 轴的垂线 $P_1N_1$，$P_2N_2$，与 $y$ 轴交于点 $N_1(0,\; y_1)$，$N_2(0,\; y_2)$。
+直线 $P_1N_1$ 与 $P_2M_2$ 相交于点 $Q$。
+
+因为 $\triangle P_1QP_2$ 是直角三角形，根据勾股定理，得
+
+\begin{tblr}{columns={mode=math}, column{1}={10em}}
+                & P_1P_2^2 = P_1Q^2 +QP_2^2 \juhao \\
+    \because    & P_1Q = M_1M_2 = |x_2 - x_1| \douhao \\
+                & QP_2 = N_1N_2 = |y_2 - y_1| \douhao \\
+    \therefore  & \begin{aligned}[t]
+                        P_1P_2^2 &= |x_2 - x_1|^2 + |y_2 - y_1|^2 \\
+                                 &= (x_2 - x_1)^2 + (y_2 - y_1)^2 \juhao
+                   \end{aligned}
+\end{tblr}
+
+由此得到 $P_1(x_1,\; y_1)$，$P_2(x_2,\; y_2)$ 两点间的距离公式：
+\begin{center}
+    \framebox{ \quad $\bm{P_1P_2 = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$}。\quad }
+\end{center}
+
+
+\liti 求两点 $P_1(-3,\; 5)$，$P_2(1,\; 2)$ 间的距离。
+
+\jie $x_1 = -3$，$y_1 = 5$； $x_2 = 1$，$y_2 = 2$。
+
+代入两点间的距离公式，得
+
+\qquad $\begin{aligned}[t]
+    P_1P_2 & = \sqrt{[1 - (-3)]^2 + (2 - 5)^2} \\
+           &= \sqrt{4^2 + (-3)^2} \\
+           &= 5 \juhao
+\end{aligned}$
+
+
+\liti 在图 \ref{fig:14-9} 给出的零件图上（如果没有特别注明，本书中零件图上的尺寸单位都是毫米），
+选择如图 \ref{fig:14-10} 所示的坐标系，分别求孔心 $A$，$B$ 及 $B$，$C$ 间的距离（精确到 $0.01$ 毫米）。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+    \centering
+    \input{../pic/czds4-ch14-9}
+    \caption{}\label{fig:14-9}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7.5cm}
+    \centering
+    \input{../pic/czds4-ch14-10}
+    \caption{}\label{fig:14-10}
+    \end{minipage}
+\end{figure}
+
+\jie 孔心的坐标是
+$$ A(0,\; 0) \nsep B(28,\; 26) \nsep C(48,\; -15) \juhao $$
+将点的坐标代入两点间的距离公式，得
+\begin{align*}
+    & AB = \sqrt{(28 - 0)^2 + (26 - 0)^2} = \sqrt{1460} \approx 38.21 \douhao \\
+    & BC = \sqrt{(48 - 28)^2 + (-15 - 26)^2} = \sqrt{2081} \approx 45.62 \douhao
+\end{align*}
+即孔心 $A$，$B$ 间的距离约是 $38.21$ 毫米， $B$，$C$ 间的距离约是 $45.62$ 毫米。
+
+
+\lianxi
+\begin{xiaotis}
+
+\jiange
+\begin{minipage}{9cm}
+
+\xiaoti{求下列两点间的距离：}
+\begin{xiaoxiaotis}
+
+    \xxt{$P_1(-1,\; 0)$，$P_2(2,\; 0)$；}
+
+    \xxt{$P_1(0,\; 6)$，$P_2(0,\; -2)$；}
+
+    \xxt{$A(-2,\; 0)$，$B(-4,\; 3)$；}
+
+    \xxt{$A(2,\; -5)$，$C(2,\; 3)$；}
+
+    \xxt{$M(-3,\; 8)$，$N(-1,\; -2)$；}
+
+    \xxt{$O(0,\; 0)$，$P(2,\; -3)$；}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{如图，已知零件图上孔心的坐标为 $A(-20,\; 50)$，$B(40,\; 0)$，$C(-40,\; 0)$，
+    求每两孔中心间的距离（精确到 $0.01$ 毫米。）
+}
+\end{minipage}
+\begin{minipage}{6cm}
+    \begin{figure}[H]
+        \centering
+        \input{../pic/czds4-ch14-subsec2-2-lianxi-2}
+        \caption*{（第 2 题）}
+    \end{figure}
+\end{minipage}
+
+\jiange
+\xiaoti{甲船在某港口东 $50$ 海里、北 $30$ 海里处，乙船在同一港口东 $17$ 海里、南 $26$ 海里处。
+    选择坐标系求甲、乙两船间的距离。
+}
+
+\end{xiaotis}
+

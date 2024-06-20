@@ -1,0 +1,14 @@
+
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [->] (-9, 0) -- (9, 0);
+    \foreach \x in {-8, ..., 8} {
+        \draw (\x, 0.2) -- (\x, 0) node[anchor=north] {\small $\x$};
+    }
+
+    \filldraw [fill=black] ( 7, 0) circle (0.05) node [anchor=south] {\small $A$};
+    \filldraw [fill=black] ( 2, 0) circle (0.05) node [anchor=south] {\small $B$};
+    \filldraw [fill=black] (-3, 0) circle (0.05) node [anchor=south] {\small $C$};
+    \filldraw [fill=black] (-7, 0) circle (0.05) node [anchor=south] {\small $D$};
+    \filldraw [fill=black] ( 0, 0) circle (0.05) node [anchor=south] {\small $O$};
+\end{tikzpicture}
+

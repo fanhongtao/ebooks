@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [->] (-4, 0) -- (4, 0) node[anchor=north] {$x$};
+    \draw [->] (0, -3) -- (0, 4) node[anchor=east] {$y$};
+    \draw (0, 0) node [anchor=north east] {$O$};
+
+    \pgfmathsetmacro{\xa}{-3}
+    \pgfmathsetmacro{\ya}{-1.5}
+    \pgfmathsetmacro{\xb}{1.5}
+    \pgfmathsetmacro{\yb}{3}
+
+    \draw (\xa, 0)   coordinate (ma) node [above] {$M_1$};
+    \draw (\xa, \ya) coordinate (pa) node [left] {$P_1$};
+    \draw (0,   \ya) coordinate (na) node [below left] {$N_1$};
+    \draw (\xb, \ya) coordinate (q)  node [right] {$Q$};
+    \draw (\xb, 0)   coordinate (mb) node [above right] {$M_2$};
+    \draw (\xb, \yb) coordinate (pb) node [right] {$P_2$};
+    \draw (0,   \yb) coordinate (nb) node [left] {$N_2$};
+
+    \draw (pa) -- (pb);
+    \draw [dashed] (ma) -- (pa) -- (na) -- (q) -- (mb) -- (pb) -- (nb);
+\end{tikzpicture}
+

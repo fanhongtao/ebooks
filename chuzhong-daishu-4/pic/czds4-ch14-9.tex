@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\rxa}{-1}
+    \pgfmathsetmacro{\rya}{-2.7}
+    \pgfmathsetmacro{\rxb}{6}
+    \pgfmathsetmacro{\ryb}{3.8}
+    \draw [thick] (\rxa, \rya) rectangle (\rxb, \ryb);
+
+    \pgfmathsetmacro{\xa}{0}
+    \pgfmathsetmacro{\ya}{0}
+    \pgfmathsetmacro{\xb}{2.8}
+    \pgfmathsetmacro{\yb}{2.6}
+    \pgfmathsetmacro{\xc}{4.8}
+    \pgfmathsetmacro{\yc}{-1.5}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \draw [thick] (\xa, \ya) node [below right] {$A$} circle (\r);
+    \draw [thick] (\xb, \yb) node [below right] {$B$} circle (\r);
+    \draw [thick] (\xc, \yc) node [below right] {$C$} circle (\r);
+
+    \draw [densely dash dot] (-1.8, \ya) -- (\xa + 1, \ya);
+    \draw [densely dash dot] (-1.8, \yb) -- (\xb + 1, \yb);
+    \draw [densely dash dot] (-1.8, \yc) -- (\xc + 1, \yc);
+
+    \draw [densely dash dot] (\xa, -3.5) -- (\xa,  \ya + 1);
+    \draw [densely dash dot] (\xb, -3.5) -- (\xb,  \yb + 1);
+    \draw [densely dash dot] (\xc, -3.5) -- (\xc,  \yc + 1);
+
+    \draw [<->] (-1.4, \yc) to [xianduan] node [rotate=90] {$15$} (-1.4, \ya);
+    \draw [<->] (-1.4, \ya) to [xianduan] node [rotate=90] {$26$} (-1.4, \yb);
+
+    \draw [<->] (\xa, -3) to [xianduan] node {$28$} (\xb, -3);
+    \draw [<->] (\xb, -3) to [xianduan] node {$20$} (\xc, -3);
+\end{tikzpicture}
+

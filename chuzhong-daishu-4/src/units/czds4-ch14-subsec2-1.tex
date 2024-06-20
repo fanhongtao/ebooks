@@ -1,0 +1,61 @@
+\subsubsection{同一轴上两点间的距离}
+
+图 \ref{fig:14-7} 是一条数轴，数轴上的点 $A$，$B$，$C$，$D$ 的坐标分别是 $7$，$2$，$-3$，$-7$。
+我们来看一看数轴上任意两点间的距离（也就是连结这两点的线段的长度）能不能用这两点的坐标来表示。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds4-ch14-7}
+    \caption{}\label{fig:14-7}
+\end{figure}
+
+由图 \ref{fig:14-7} 可以看出，线段 $BA$，$OA$，$OB$ 之间的关系是 $BA = OA - OB$。
+因为 $OA = 7$，$OB = 2$，所以 $BA = 7 - 2$。但 $7$，$2$ 分别是点 $A$，$B$ 在数轴上的坐标，
+这就是说，线段 $BA$ 的长度等于点 $A$ 的坐标减去点 $B$ 的坐标。
+我们知道，$7 - 2 = |7 - 2| = |2 - 7|$，所以利用绝对值符号，我们就可以说，
+线段 $AB$ 的长度（也就是点 $A$ 与 $B$ 之间的距离）等于 $A$，$B$ 两点的坐标之差的绝对值。类似地，
+\begin{align*}
+    & CB = OB + CO = 2 + 3 = |2 - (-3)| = |(-3) - 2| \douhao \\
+    & DC = DO - CO = 7 - 3 = |(-7) - (-3)| = |(-3) - (-7)| \juhao
+\end{align*}
+
+一般地，\zhongdian{数轴上任意两点间的距离，等于这两点的坐标之差的绝对值。}
+也就是说，如果数轴上 $A$，$B$ 两点的坐标分别为  $x_{_A}$，$x_{_B}$，%说明：因为写成 $x_A$，$x_B$ 时，下标的位置太靠上，不好看，所以写成 $x_{_A}$
+那么 \zhongdian{$A$，$B$ 两点间的距离公式为}
+\begin{center}
+    \framebox{\quad \zhongdian{$\bm{AB = |x_{_B} - x_{_A}|}$。}\quad }
+\end{center}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在 (1) 到 (6) 各图（数轴上每一格等于一个单位长度）中，就线段 $AB$ 填写下表：}
+
+\begin{figure}[H]
+    \centering
+    \input{../pic/czds4-ch14-subsec2-1-lianxi-1}
+    \caption*{（第 1 题）}
+\end{figure}
+
+\begin{center}
+    \begin{tblr}{hlines, vlines,
+        columns={c},
+        column{2-5}={6em},
+    }
+        图号 & $x_{_A}$ & $x_{_B}$ & $x_{_B} - x_{_A}$ & $AB$的长度 \\
+        (1) &          &          &                    &            \\
+        (2) &          &          &                    &            \\
+        (3) &          &          &                    &            \\
+        (4) &          &          &                    &            \\
+        (5) & $2$      & $-5$     &    $-7$            &  $7$       \\
+        (6) &          &          &                    &            \\
+    \end{tblr}
+\end{center}
+
+\xiaoti{已知数轴上的点 $A$，$B$，$C$，$D$ 的坐标分别是 $-5$，$7$，$-2$，$3$，
+    求点 $A$ 与 $B$，$B$ 与 $C$，$C$ 与 $D$，$C$ 与 $A$ 之间的距离。
+}
+
+\end{xiaotis}
+
