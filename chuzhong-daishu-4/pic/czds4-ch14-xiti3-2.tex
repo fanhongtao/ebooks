@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-1.5, 0) -- (2.5, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -.5) -- (0, 2.5) node[left=0.2em] {$y$};
+    \draw (0, 0) coordinate(O) node [below left] {\small $O$};
+
+    \coordinate [label=above:\small $A$] (A) at (45:2);
+    \coordinate [label=above:\small $B$] (B) at (120:1.5);
+
+    \draw (A) -- (O) --(B);
+    \draw [<->] (1, 0) arc (0:45:1) node [midway, above right] {$45^\circ$};
+    \draw [<->] (.8, 0) arc (0:120:.8) node [pos=.75, above=0.2] {$120^\circ$};
+\end{tikzpicture}
+
