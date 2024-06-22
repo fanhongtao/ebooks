@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\factor}{0.2}
+    \draw [->] (-0.5, 0) -- (5.5, 0) node[right=0.1] {$t$(时)}  coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3.5) node[left=0.2em] {$T$(℃)} coordinate(y axis);
+    \draw (0, 0) coordinate(O) node [below left] {\small $0$};
+    \foreach \x in {2, 4, ..., 24} {
+        \draw (\factor * \x, 0.1) -- (\factor * \x, 0) node [below] {\small $\x$};
+    }
+    \foreach \y in {2, 4, ..., 14} {
+        \draw (0.1, \factor * \y) -- (0, \factor * \y) node[left] {\small $\y$};
+    }
+
+    \coordinate (a) at ($\factor*(0, 5)$);
+    \coordinate (b) at ($\factor*(4, 1.8)$);
+    \coordinate (c) at ($\factor*(14, 11.8)$);
+    \coordinate (d) at ($\factor*(24, 7)$);
+
+    % 随意绘制的曲线
+    \draw
+        (a) to [bend left] (b)
+        plot [smooth] coordinates{
+            (b)
+            ($\factor*(6, 3.3)$)
+            ($\factor*(8, 4.2)$)
+            ($\factor*(10, 6.0)$)
+            ($\factor*(10.5, 7.5)$)
+            ($\factor*(12, 9.5)$)
+            (c)
+            ($\factor*(16, 11.7)$)
+            ($\factor*(18, 11.5)$)
+            ($\factor*(20, 9.8)$)
+            ($\factor*(22, 8.5)$)
+            (d)
+        };
+
+    % 几条辅助线
+    \draw [dashed] (b -| y axis) -- (b) -- (b |- x axis);
+    \draw [dashed] (c -| y axis) -- (c) -- (c |- x axis);
+    \draw [dashed] (d) -- (d |- x axis);
+\end{tikzpicture}
+
