@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \pgfmathsetmacro{\factorx}{0.1}
+    \pgfmathsetmacro{\factory}{0.005}
+    \draw [->] (0, 0) -- (5.2, 0) node[below=0.1] {水深(米)};
+    \draw [->] (0, 0) -- (0, 3.8) node[left=0.2em] {库容(万($\lfm$))};
+    \draw (0, 0) coordinate(O) node [below left] {\small $0$};
+    \foreach \x in {5, 10, ..., 40} {
+        \draw (\factorx * \x, 0) -- (\factorx * \x, -0.15) node [below] {\small $\x$};
+    }
+    \foreach \y in {100, 200, ..., 600} {
+        \draw (0, \factory * \y) -- (-0.15, \factory * \y) node[left] {\small $\y$};
+    }
+    \foreach \y in {50, 150, ..., 550} {
+        \draw (0, \factory * \y) -- (-0.15, \factory * \y);
+    }
+
+    \draw plot [smooth] coordinates{
+        %            x               y
+        (            0,              0)
+        (\factorx *  5, \factory *  25)
+        (\factorx * 10, \factory *  50)
+        (\factorx * 15, \factory * 100)
+        (\factorx * 20, \factory * 175)
+        (\factorx * 25, \factory * 275)
+        (\factorx * 30, \factory * 450)
+        (\factorx * 32, \factory * 550)
+    };
+\end{tikzpicture}
+

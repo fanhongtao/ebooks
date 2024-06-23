@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.4]
+    \draw [->] (-4.5, 0) -- (5, 0) node[anchor=north] {$x$};
+    \draw [->] (0,-9.0) -- (0, 9)  node[anchor=east]  {$y$};
+    \draw (0, 0) node [below right] {$O$};
+    \foreach \x in {-4, ..., 4} {
+        \draw (\x, 0.2) -- (\x, 0);
+    }
+    \foreach \y in {-8, ..., 8} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+
+    \draw[domain=-4.1:4.1,samples=50] plot (\x, {(\x^3)/8});
+    \foreach \x in {-4, ..., 4} {
+        \draw [fill=black] (\x, {(\x^3)/8}) circle(0.1);
+    }
+\end{tikzpicture}
+

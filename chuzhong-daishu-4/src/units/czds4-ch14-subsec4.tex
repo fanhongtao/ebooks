@@ -1,0 +1,94 @@
+\subsection{函数的表示法}\label{subsec:14-4}
+
+表示函数的方法，最常用的有以下三种。
+
+\begin{enhancedline}
+
+\zhongdian{1. 解析法} \quad 就是用等式来表示一个变量是另一个变量的函数。
+这个等式叫做函数的\zhongdian{解析表达式}（或\zhongdian{函数关系式}），简称\zhongdian{解析式}，
+例如 $s = 60\,t$，$A = \pi r^2$，$y = \sqrt{x - 2}$，$V = \dfrac{4}{3}\pi r^3$，
+$s = \dfrac{1}{1 - u^2}$，$z = \dfrac{1}{\sqrt{t^2 - 5}}$，等等。
+
+\zhongdian{2. 列表法} \quad 就是列出表格来表示一个变量是另一个变量的函数。
+如第 14.3 节例 (3) 中的水库存水量与水深的对照表，以及平方表、平方根表、对数表等数学用表，
+都是用列表法来表示函数的。
+
+\zhongdian{3. 图象法} \quad 把自变量 $x$ 的一个值和函数 $y$ 的对应值分别作为点的横坐标和纵坐标，
+可以在直角坐标系内描出一个点，所有这些点的集合，叫做这个函数的\zhongdian{图象}。
+图象法就是用图象来表示一个变量是另一个变量的函数。如第 14.3 节例 (4) 中的气温随时间的变化图。
+
+知道函数的解析式，要画函数的图象，一般分为\zhongdian{列表、描点、连线}三个步骤，
+即先列出自变量和函数的一些对应值，用这些对应值为坐标，描出图象上的一些点，然后用一条或几条平滑曲线（包括直线），
+按照自变量由小到大的顺序，把所描的点连结起来。这种画函数图象的方法叫做\zhongdian{描点法}。
+显然，用描点法所画的图象一般是近似的、部分的，要使画出的图象更精确，需要描出图象上的更多的点。
+
+\liti[0] 画出函数 $y = \dfrac{1}{8}x^3$ 的图象。
+
+\jie 1. 列表。 在 $x$ 的取值范围内取一些值，算出 $y$ 的对应值，列成下表：
+
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+        hlines, vlines,
+        columns={mode=math, c},
+        column{7,9,11}={1.5em},
+        row{2}={rowsep=0.5em},
+    }
+        x                   & \cdots & -4 & -3    & -2 & -1    & 0 & 1    & 2 & 3    & 4 & \cdots \\
+        y = \dfrac{1}{8}x^3 & \cdots & -8 & -3.38 & -1 & -0.13 & 0 & 0.13 & 1 & 3.38 & 8 & \cdots \\
+    \end{tblr}
+\end{table}
+
+2. 描点。根据表里这些对应值，在坐标系内描点。
+
+3. 连线。用平滑曲线，按自变量由小到大的顺序，把所描的点连结起来，就是函数 $y = \dfrac{1}{8}x^3$ 的图象（图 \ref{fig:14-12}）。
+\end{enhancedline}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{5cm}
+    \centering
+    \input{../pic/czds4-ch14-12}
+    \caption{}\label{fig:14-12}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{9cm}
+    \centering
+    \input{../pic/czds4-ch14-subsec4-lianxi-2}
+    \caption*{（第 2 题）}
+    \end{minipage}
+\end{figure}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用解析式表示下列函数：}
+\begin{xiaoxiaotis}
+
+    \xxt{如果每升高 $1$ 千米，气温就下降 $6$ ℃，求气温降低数 $T$(℃) 与高度增加数 $h$(千米) 之间的函数关系式；}
+
+    \xxt{某工厂现有煤 $1500$ 吨，求这些煤能用的天数 $y$ 与这家工厂每天平均用煤的吨数 $x$ 之间的函数关系式。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{根据某水库的水深 - 库容曲线图，填写下表：\\[1em]
+    \begin{tblr}[]{
+        hlines, vlines,
+        column{1}={c}, column{2-6}={4em, c}
+    }
+        水深(米)          & 5 & 10 & 15 & 20 & 25 \\
+        库容(万($\lfm$))  &   &    &    &    &
+    \end{tblr} \jiange
+}
+
+\xiaoti{画出下列函数的图象：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$y = x$；} & \xxt{$y = x + 1$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
