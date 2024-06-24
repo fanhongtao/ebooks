@@ -1,0 +1,17 @@
+% \begin{tikzpicture}[every node/.style={minimum size=1cm,draw}, >=Stealth]
+%     \coordinate (a) at (0, 0);
+%     \foreach \text  [count=\i] in {
+%         输入$x$, $-2$, $\times 3$, $+1$,  输出$y$
+%     } {
+%         \ifnum \i > 1 \relax
+%             \draw [->] (N.east) -- +(0.5, 0) coordinate (a);
+%         \fi
+%         \draw (a) node [right] (N) {\text};
+%     }
+% \end{tikzpicture}
+\begin{tikzpicture}[every node/.style={minimum size=1cm,draw}, >=Stealth]
+    \graph [grow right sep=0.5cm] {
+        "输入$x$" -> "$-2$" -> "$\times 3$" -> "$+1$" -> "输出$y$"
+    };
+\end{tikzpicture}
+% 不使用 \graph 的写法见 czds4-ch14-xiti4-1-1

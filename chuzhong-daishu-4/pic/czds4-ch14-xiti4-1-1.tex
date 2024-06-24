@@ -1,0 +1,12 @@
+\begin{tikzpicture}[every node/.style={minimum size=1cm,draw}, >=Stealth]
+    \coordinate (a) at (0, 0);
+    \foreach \text  [count=\i] in {
+        输入$x$, $\times 3$, $-1$,  输出$y$
+    } {
+        \ifnum \i > 1 \relax
+            \draw [->] (N.east) -- +(0.5, 0) coordinate (a);
+        \fi
+        \draw (a) node [right] (N) {\text};
+    }
+\end{tikzpicture}
+% 使用 \graph 的写法见 czds4-ch14-xiti4-1-2
