@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [->] (-3.5, 0) -- (3.5, 0) node[anchor=north] {$x$};
+    \draw [->] (0, -5.0) -- (0, 5) node[anchor=east] {$y$};
+    \draw [xshift=-.5em] (0, 0) node [below left] {\small $O$};
+    \foreach \x in {-2, -1, 1, 2} {
+        \draw (\x, 0) -- (\x, 0.2) node [above]{\small $\x$};
+    }
+    \foreach \y in {1, ..., 4} {
+        \draw (0.2, \y) -- (0, \y) node [left] {\small $\y$};
+    }
+    \foreach \y in {-4, ..., -1} {
+        \draw (0, \y) -- (0.2, \y) node [right] {\small $\y$};
+    }
+
+    \draw[domain=-2.3:2.3,samples=50] plot (\x, {2*\x}) node [above] {$y = 2x$};
+    \foreach \x in {-2, ..., 2} {
+        \draw [fill=black] (\x, 2*\x) circle(0.1);
+    }
+\end{tikzpicture}
+
