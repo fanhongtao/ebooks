@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -2) -- (0, 10) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+    \foreach \x in {-4, ..., 4} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+    \foreach \y in {-1, ..., 9} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+
+    \draw[domain=-4.1:4.1,  samples=50] plot (\x, {\x*\x/2}) (3, 4) node [right] {$y = \frac{1}{2}x^2$};
+    \draw[domain=-2.1:2.1,  samples=50] plot (\x, {2*\x*\x}) node [above] {$y = 2x^2$};
+\end{tikzpicture}
+

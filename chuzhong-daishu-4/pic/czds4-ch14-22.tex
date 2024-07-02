@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -2) -- (0, 7) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+    \foreach \x in {-4, ..., 4} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+    \foreach \y in {-1, ..., 6} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+
+    \draw[domain=-2.2:2.2,  samples=50] plot (\x, {\x*\x}) node [above] {$y = x^2$};
+    \foreach \x in {-2, -1.5, ..., 2} {
+        \draw [fill=black] (\x, \x*\x) circle(0.1);
+    }
+\end{tikzpicture}
+
