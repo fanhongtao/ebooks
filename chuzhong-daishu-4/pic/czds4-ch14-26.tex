@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-8, 0) -- (2, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -7) -- (0, 4) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below right=0.3em] {\small $O$};
+    \foreach \x in {-6, ..., -1} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+    \draw (-1, 0) node [below=0.2em, xshift=-0.5em] {\small $-1$};
+    \draw (-3, 0) node [above=0.2em, xshift=-0.7em] {\small $-3$};
+    \draw (-5, 0) node [above=0.2em, xshift=-0.5em] {\small $-5$};
+
+    \foreach \y in {-5, ..., 2} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+    \draw (0, 2) node [left=0.2em] {\small $2$};
+
+
+    \draw [dashed] (-3, -5.5) -- (-3, 3) node [above] {\small $x = -3$};
+    \draw[domain=1:-7,  samples=50] plot (\x, {-1/2*(\x)^2 - 3*\x - 5/2}) node [below, xshift=2.5em] {\small $y = -\dfrac{1}{2}x^2 - 3x - \dfrac{5}{2}$};
+    \foreach \x in {-6, ..., 0} {
+        \draw [fill=black] (\x, {-1/2*(\x)^2 - 3*\x - 5/2}) circle(0.1);
+    }
+\end{tikzpicture}
+

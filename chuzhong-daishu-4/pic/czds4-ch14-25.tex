@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-8, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -3) -- (0, 8) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+    \foreach \x in {-6, ..., 4} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+    \foreach \y in {-2, ..., 6} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+
+    \draw[domain=-3.3:3.3,  samples=50] plot (\x, {\x*\x/2}) node [above] {$y = \frac{1}{2}x^2$};
+    \draw[domain=0.3:-6.3,  samples=50] plot (\x, {(\x+3)^2/2}) node [above] {$y = \frac{1}{2}(x+3)^2$};
+    \draw[domain=0.3:-6.3,  samples=50] plot (\x, {(\x+3)^2/2-2}) (-7, -2) node {$y = \frac{1}{2}(x+3)^2-2$};
+    \draw [dashed] (-3, -3) -- (-3, 8);
+\end{tikzpicture}
+

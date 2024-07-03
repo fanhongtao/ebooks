@@ -1,0 +1,183 @@
+\subsection{二次函数 $y = ax^2 + bx + c$ 的图象和性质}\label{subsec:14-11}
+\begin{enhancedline}
+
+\liti 在同一坐标系内，画出函数
+\begin{gather*}
+    y = \dfrac{1}{2}x^2 \douhao \\
+    y = \dfrac{1}{2}(x + 3)^2 \douhao \\
+    y = \dfrac{1}{2}(x + 3)^2 - 2
+\end{gather*}
+的图象。
+
+\jie 在 $x$ 的取值范围内列出这几个函数的对应值表：
+
+\begin{table}[H]
+    % \hspace*{2em}
+    \begin{tblr}{
+        hlines, vlines,
+        columns={2.5em, mode=math, c, colsep=0pt},
+        column{1}={9em},
+        rows={rowsep=0.5em},
+    }
+        x                             & \cdots & -6            & -5 & -4             & -3            & -2             & -1           & 0             & 1            & 2 & 3             & \cdots \\
+        y = \dfrac{1}{2}x^2           &        &               &    & \cdots         & 4\dfrac{1}{2} &  2             & \dfrac{1}{2} & 0             & \dfrac{1}{2} & 2 & 4\dfrac{1}{2} & \cdots \\
+        y = \dfrac{1}{2}(x + 3)^2     & \cdots & 4\dfrac{1}{2} &  2 & \dfrac{1}{2}   & 0             & \dfrac{1}{2}   & 2            & 4\dfrac{1}{2} & \cdots       &   &               &        \\
+        y = \dfrac{1}{2}(x + 3)^2 - 2 & \cdots & 2\dfrac{1}{2} &  0 & -1\dfrac{1}{2} & -2            & -1\dfrac{1}{2} & 0            & 2\dfrac{1}{2} & \cdots       &   &               &        \\
+    \end{tblr}
+\end{table}
+
+用描点法画出它们的图象（图 \ref{fig:14-25}）。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds4-ch14-25}
+    \caption{}\label{fig:14-25}
+\end{figure}
+
+从图中可以看出，把函数 $y = \dfrac{1}{2}x^2$ 的图象向左平移 $3$ 个单位，就得到函数 $y = \dfrac{1}{2}(x + 3)^2$ 的图象；
+再把函数 $y = \dfrac{1}{2}(x + 3)^2$ 的图象向下平移 $2$ 个单位，就得到函数 $y = \dfrac{1}{2}(x + 3)^2 - 2$ 的图象。
+由于 $\dfrac{1}{2}(x + 3)^2 - 2 = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2}$，这也就是函数 $y = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2}$ 的图象。
+
+由此可知，函数 $y = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2}$ 与函数 $y = \dfrac{1}{2}x^2$ 的图象，形状是一样的，只是位置不同。
+容易知道，函数 $y = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2} = \dfrac{1}{2}(x + 3)^2 - 2$ 当 $x = -3$ 时的值最小，最小值是 $-2$，
+因此抛物线  $y = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2}$ 的顶点是 $(-3,\, -2)$，
+对称轴是经过点 $(-3,\, -2)$ 且与 $y$ 轴平行的直线 $x = -3$。\footnote{“直线 $x = -3$” 的意思是：
+    这条直线是由横坐标为 $-3$ 的一切点所构成的，它平行于 $y$ 轴。 “直线 $x = h$” 的意思也是这样。
+}
+
+一般地，函数 $y = ax^2 + bx + c$ 的图象与函数 $y = ax^2$ 的图象的形状是一样的，只是位置不同。由于
+\begin{align*}
+    y &= ax^2 + bx + c = a\left(x^2 + \dfrac{b}{a}x + \dfrac{c}{a}\right) \\
+      &= a \left[x^2 + 2 \cdot \dfrac{b}{2a}x + \left(\dfrac{b}{2a}\right)^2 - \left(\dfrac{b}{2a}\right)^2 + \dfrac{c}{a}\right] \\
+      &= a \left(x + \dfrac{b}{2a}\right)^2 + \dfrac{4ac - b^2}{4a} \douhao
+\end{align*}
+所以它的图象可以通过平行移动 $y = ax^2$ 的图象得到：
+当 $\dfrac{b}{2a} > 0$ 时，向左移动 $\dfrac{b}{2a}$ 个单位；
+当 $\dfrac{b}{2a} < 0$ 时，向右移动 $\left|\dfrac{b}{2a}\right|$ 个单位；
+当 $\dfrac{4ac - b^2}{4a} > 0$ 时，向上移动 $\dfrac{4ac - b^2}{4a}$ 个单位；
+当 $\dfrac{4ac - b^2}{4a} < 0$ 时，向下移动 $\left|\dfrac{4ac - b^2}{4a}\right|$ 个单位。
+因比函数 $y = ax^2 + bx + c$ 的图象是一条抛物线，
+它的顶点是 $\left(-\dfrac{b}{2a},\; \dfrac{4ac - b^2}{4a}\right)$，
+对称轴是平行于 $y$ 轴的直线 $x = -\dfrac{b}{2a}$。
+当 $a > 0$ 时，抛物线 $y = ax^2 + bx + c$ 的开口向上，它的顶点是最低点。因此，
+当 $a > 0$ 且 $x = -\dfrac{b}{2a}$ 时，函数 $y$ 有最小值，即
+$$ y_{_\text{最小值}} = \dfrac{4ac - b^2}{4a} \juhao $$
+当 $a < 0$ 时，抛物线 $y = ax^2 + bx + c$ 的开口向下，它的顶点是最高点。因此，
+当 $a < 0$ 且 $x = -\dfrac{b}{2a}$ 时，函数 $y$ 有最大值，即
+$$ y_{_\text{最大值}} = \dfrac{4ac - b^2}{4a} \juhao $$
+
+综上所述，\zhongdian{二次函数 $\bm{y = ax^2 + bx + c}$ 有下列性质：}
+
+\zhongdian{(1) 抛物线 $\bm{y = ax^2 + bx + c}$ 的顶点是
+    $\bm{\left(-\dfrac{b}{2a},\; \dfrac{4ac - b^2}{4a}\right)}$，
+    对称轴是直线 $\bm{x = -\dfrac{b}{2a}}$。
+}
+
+\zhongdian{(2)
+    当 $\bm{a > 0}$ 时，抛物线的开口向上，并且向上无限伸展；
+    当 $\bm{a < 0}$ 时，抛物线的开口向下，并且向下无限伸展。
+}
+
+\zhongdian{(3)
+    当 $\bm{a > 0}$ 时，在对称轴的左侧，$\bm{y}$ 随着 $\bm{x}$ 的增大而减小；在对称轴的右侧，$\bm{y}$ 随着 $\bm{x}$ 的增大而增大；
+    函数 $\bm{y}$ 当 $\bm{x = -\dfrac{b}{2a}}$ 时有最小值 $\bm{\dfrac{4ac - b^2}{4a}}$。
+    当 $\bm{a < 0}$ 时，在对称轴的左侧，$\bm{y}$ 随着 $\bm{x}$ 的增大而增大；在对称轴的右侧，$\bm{y}$ 随着 $\bm{x}$ 的增大而减小；
+    函数 $\bm{y}$ 当 $\bm{x = -\dfrac{b}{2a}}$ 时有最大值 $\bm{\dfrac{4ac - b^2}{4a}}$。
+}
+
+
+\liti 求抛物线 $y = -\dfrac{1}{2}x^2 - 3x - \dfrac{5}{2}$ 的对称轴和顶点坐标，并画图。
+
+\jie 在函数式 $y = -\dfrac{1}{2}x^2 - 3x - \dfrac{5}{2}$ 中，$a = -\dfrac{1}{2}$，$b = -3$，$c = -\dfrac{5}{2}$，所以
+$$ -\dfrac{b}{2a} = 3 \nsep \dfrac{4ac - b^2}{4a} = 2 \juhao $$
+
+也可将 $-\dfrac{1}{2}x^2 - 3x - \dfrac{5}{2}$ 配方，得
+\begin{align*}
+    y &= -\dfrac{1}{2}(x^2 + 6x + 5) \\
+      &= -\dfrac{1}{2}[(x + 3)^2 - 4] \\
+      &= -\dfrac{1}{2}(x + 3)^2 + 2 \juhao
+\end{align*}
+
+因此，抛物线 $y = -\dfrac{1}{2}x^2 - 3x - \dfrac{5}{2}$ 的对称轴是 $x = -3$，顶点坐标是 $(-3,\; 2)$。
+
+在 $x$ 的取值范围内，根据函数的对称性，列出函数的对应值表：
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+        hlines, vlines,
+        columns={2em, mode=math, c},
+        column{1}={4em},
+        rows={rowsep=0.5em},
+    }
+        x & \cdots & -6             & -5 & -4            & -3 & -2            & -1 & 0              & \cdots \\
+        y & \cdots & -2\dfrac{1}{2} & 0  & 1\dfrac{1}{2} &  2 & 1\dfrac{1}{2} & 0  & -2\dfrac{1}{2} & \cdots
+    \end{tblr}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds4-ch14-26}
+    \caption{}\label{fig:14-26}
+\end{figure}
+
+用描点法画出它的图象（图 \ref{fig:14-26}）。
+
+
+
+\liti 求二次函数 $y = 2x^2 - 8x + 1$ 的最大值或最小值。
+
+\jie $y = 2x^2 - 8x + 1 = 2(x^2 - 4x + 4) - 8 + 1 = 2(x - 2)^2 - 7$。
+
+因为 $a = 2 > 0$，所以 $y$ 有最小值。当 $x = 2$ 时，得到
+$$ y_{_\text{最小值}} = -7 \juhao $$
+
+\end{enhancedline}
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{用配方法把下列函数化成 $y = a(x + h)^2 + k$ 的形式，并指出它们的图象的开口方向、顶点和对称轴（不画图）：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, row{3}={rowsep=0.5em}}
+        \xxt{$y = x^2 - 2x - 3$；}  & \xxt{$y = x^2 + 6x + 10$；} \\
+        \xxt{$y = 2x^2 - 3x + 4$；} & \xxt{$y = -2x^2 - 5x + 7$；} \\
+        \xxt{$y = 3x^2 + 2x$；}     & \xxt{$y = \dfrac{5}{2}x - 2 - 3x^2$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{画出下列函数的图象}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, row{2}={rowsep=0.5em}}
+        \xxt{$y = -x^2 - 2x$；}      & \xxt{$y = 1 - 3x^2$；} \\
+        \xxt{$y = -2x^2 + 8x - 8$；} & \xxt{$y = \dfrac{1}{2}x^2 + 3x + \dfrac{5}{2}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \xxt[\xxtsep]{求函数 $y = 2(x - 3)^2$ 在 $x = 1$，$2$，$2.5$，$2.9$，$3$，$3.1$，$3.5$，$4$，$5$ 时的值。这些值中哪一个最小？函数的最小值是什么？}
+
+    \xxt{求函数 $y = 4 - (x + 2)^2$ 在 $x = -5$，$-4$，$-3$，$-2$，$-1$，$0$，$1$ 时的值。这些值中哪一个最大？函数的最大值是什么？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{求下列函数的最大值或最小值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$y = x^2 - 2x + 4$；} & \xxt{$y = -x^2 + 3x$；} \\
+        \xxt{$S = 1 - 2\,t - t^2$；} & \xxt{$u = 2V^2 + 4V - 5$；} \\
+        \xxt{$V = -3\,t^2 + 4t$；}   & \xxt{$y = x(8 - x)$；} \\
+        \xxt{$h = 100 - 5\,t^2$；}   & \xxt{$y = (x - 2)(2x + 1)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
