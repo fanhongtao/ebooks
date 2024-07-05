@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (1, 0) -- (6, 0);
+
+    \pic [transform shape] {interval={start=2, stop=5, height=0.7, infinity=true}};
+    \draw [fill=white] (2, 0) circle(0.1) node [below=0.2em] {$2$};
+
+    \pic [transform shape] {interval={start=3, stop=5, height=0.5, infinity=true}};
+    \draw [fill=white] (3, 0) circle(0.1) node [below=0.2em] {$3$};
+\end{tikzpicture}
+

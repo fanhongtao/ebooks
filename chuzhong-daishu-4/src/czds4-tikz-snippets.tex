@@ -205,53 +205,33 @@
 
 % 在数轴上绘制区间
 \tikzset{
-  infinity interval/.pic={ % 无限区间
-    \begin{scope}[infinity interval options/.cd,#1]
-      \pgfkeysgetvalue{/tikz/infinity interval options/start}{\start}
-      \pgfkeysgetvalue{/tikz/infinity interval options/stop}{\stop}
-      \pgfkeysgetvalue{/tikz/infinity interval options/height}{\height}
-      \ifthenelse {\start < \stop} {
-        \pgfmathsetmacro{\sign}{1}
-      }{
-        \pgfmathsetmacro{\sign}{-1}
-      }
-      \pgfmathsetmacro{\posOne}{\sign * 0.2}
-      \pgfmathsetmacro{\posTwo}{\sign * 0.5}
-
-      \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
-        -- (\stop, \height);
-    \end{scope}
-  },
-  infinity interval options/.is family,
-  infinity interval options/.cd,
-    start/.initial=0,   % 指定参数 start 的默认值
-    stop/.initial=1,    % 指定参数 stop 的默认值
-    height/.initial=1   % 指定参数 height 的默认值
-}
-
-\tikzset{
-  interval/.pic={ % 有限区间
+  interval/.pic={
     \begin{scope}[interval options/.cd,#1]
       \pgfkeysgetvalue{/tikz/interval options/start}{\start}
       \pgfkeysgetvalue{/tikz/interval options/stop}{\stop}
       \pgfkeysgetvalue{/tikz/interval options/height}{\height}
-      \ifthenelse {\start < \stop} {
-        \pgfmathsetmacro{\sign}{1}
-      }{
-        \pgfmathsetmacro{\sign}{-1}
-      }
+      \pgfmathsetmacro{\sign}{\start < \stop ? 1 : -1}
       \pgfmathsetmacro{\posOne}{\sign * 0.2}
       \pgfmathsetmacro{\posTwo}{\sign * 0.5}
 
-      \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
-        -- (\stop-\posTwo, \height) .. controls (\stop-\posTwo, \height) and (\stop-\posOne, \height) .. (\stop, 0);
-      \end{scope}
+      \ifthenelse {\infinity = 1} {
+        \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
+          -- (\stop, \height);
+      } {
+        \draw (\start, 0) .. controls (\start+\posOne, \height) and (\start+\posTwo, \height) .. (\start+\posTwo, \height)
+          -- (\stop-\posTwo, \height) .. controls (\stop-\posTwo, \height) and (\stop-\posOne, \height) .. (\stop, 0);
+      }
+    \end{scope}
   },
   interval options/.is family,
   interval options/.cd,
-    start/.initial=0,   % 指定参数 start 的默认值
-    stop/.initial=1,    % 指定参数 stop 的默认值
-    height/.initial=1   % 指定参数 height 的默认值
+    start/.initial=0,    % 指定参数 start 的默认值
+    stop/.initial=1,     % 指定参数 stop 的默认值
+    height/.initial=1,   % 指定参数 height 的默认值
+    infinity/.is choice, % 是否是 无限区间。 true: 无限区间； false: 有限区间。
+      infinity/true/.code  = {\pgfmathsetmacro{\infinity}{1}},
+      infinity/false/.code = {\pgfmathsetmacro{\infinity}{0}},
+      infinity=false,    % 缺省为：有限区间
 }
 
 
