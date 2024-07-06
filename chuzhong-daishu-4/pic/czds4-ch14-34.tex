@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth, scale=0.6]
+    \draw [->] (-3, 0) -- (3, 0);
+
+    \draw (0, 0.2) -- (0, 0) node[below] {\small $O$};
+
+    \pic [transform shape] {interval={start=-2, stop=2, height=0.5}};
+    \draw [fill=white] (-2, 0) circle(0.1) node [below=0.2em] {$-a$};
+    \draw [fill=white] ( 2, 0) circle(0.1) node [below=0.2em] {$a$};
+\end{tikzpicture}
+
