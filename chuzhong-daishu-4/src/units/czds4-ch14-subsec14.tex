@@ -1,0 +1,187 @@
+\subsection{一元二次不等式及其解法}\label{subsec:14-14}
+
+含有一个未知数并且未知数的最高次数是二次的不等式叫做\zhongdian{一元二次不等式}，它的一般形式是
+$$ ax^2 + bx + c > 0 \text{，或\;} ax^2 + bx + c < 0 \; (a \neq 0) \juhao $$
+
+\begin{wrapfigure}[12]{r}{5.5cm}
+    \centering
+    \input{../pic/czds4-ch14-36}
+    \caption{}\label{fig:14-36}
+\end{wrapfigure}
+
+下面利用二次函数的图象来讨论一元二次不等式的解法。
+
+例如，对于二次函数 $y = x^2 - x - 6$，我们来求
+
+(1) $x$ 取哪些值时，$y = 0$；
+
+(2) $x$ 取哪些值时，$y > 0$；
+
+(3) $x$ 取哪些值时，$y < 0$；
+
+
+画出抛物线 $y = x^2 - x - 6$ 的图象，如图 \ref{fig:14-36} 所示，它与 $x$ 轴相交于两点 $(-2,\; 0)$ 和 $(3,\; 0)$，
+这两点将 $x$ 轴分成三段。从图 \ref{fig:14-36} 可以看出：
+
+(1) 当 $x = -2$，或 $x = 3$ 时，$y = 0$；
+
+(2) 当 $x < -2$，或 $x > 3$ 时，$y > 0$；
+
+(3) 当 $-2 < x < 3$ 时，$y < 0$。
+
+这就是说，抛物线 $y = x^2 - x - 6$ 与 $x$ 轴有两个交点，
+即方程 $x^2 - x - 6 = 0$ 有两个不相等的实根（相异实根）$x_1 = -2$，$x_2 = 3$。
+在这个情况下，不等式
+$$ x^2 - x - 6 > 0 $$
+的解集是
+$$ x < -2 \text{，或\;} x > 3 \fenhao $$
+而不等式
+$$ x^2 - x - 6 < 0 $$
+的解集则是
+$$ -2 < x < 3 \juhao $$
+
+一般地，对于二次函数 $y = ax^2 + bx + c \; (a > 0)$，设 $\Delta = b^2 - 4ac$。
+
+1. 如果 $\Delta > 0$，此时抛物线 $y = ax^2 + bx + c$ 与 $x$ 轴有两个交点（图 \ref{fig:14-37}），
+即方程 $ax^2 + bx + c = 0$ 有两个相异实根 $x_1$，$x_2 \; (x_1 < x_2)$。
+那么，不等式 $ax^2 + bx + c > 0$ 的解集是
+$$ x < x_1 \text{，或\;} x > x_2 \fenhao $$
+而不等式 $ax^2 + bx + c < 0$ 的解集则是
+$$ x_1 < x < x_2 \juhao $$
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+    \centering
+    \input{../pic/czds4-ch14-37}
+    \caption{}\label{fig:14-37}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+    \centering
+    \input{../pic/czds4-ch14-38}
+    \caption{}\label{fig:14-38}
+    \end{minipage}
+\end{figure}
+
+
+\begin{enhancedline}
+2. 如果 $\Delta = 0$，此时抛物线 $y = ax^2 + bx + c$ 与 $x$ 轴只有一个交点（图 \ref{fig:14-38}），
+即方程 $ax^2 + bx + c = 0$ 有两个相等的实根 $x_1 = x_2 = -\dfrac{b}{2a}$。
+那么，不等式 $ax^2 + bx + c > 0$ 的解集是所有不等于 $-\dfrac{b}{2a}$ 的实数，
+而不等式 $ax^2 + bx + c < 0$ 的解集则是空集。
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czds4-ch14-39}
+    \caption{}\label{fig:14-39}
+\end{wrapfigure}
+
+3. 如果 $\Delta < 0$，此时抛物线  $y = ax^2 + bx + c$ 与 $x$ 轴没有交点（图 \ref{fig:14-39}），
+即方程 $ax^2 + bx + c = 0$ 无实根。
+那么，不等式 $ax^2 + bx + c > 0$ 的解集是全体实数，
+而不等式 $ax^2 + bx + c < 0$ 的解集则是空集。
+
+
+
+二次项系数是负数（即 $a < 0$）的不等式，可以先化成二次项系数是正数的不等式，再求它的解集。
+
+
+\liti 解不等式 $(x + 4)(x - 1) < 0$。
+
+\jie  如果将 $(x + 4)(x - 1)$ 展开，它是一个二次项系数为正数的二次函数。
+因为方程 $(x + 4)(x - 1) = 0$ 的根是
+$$ x_1 = -4\nsep x_2 = 1 \douhao $$
+所以不等式的解集是
+$$ -4 < x < 1 \juhao $$
+
+
+\liti 解不等式 $2x^2 - 3x - 2 > 0$。
+
+\jie 因为 $\Delta = b^2 - 4ac > 0$，方程 $2x^2 - 3x - 2 = 0$ 的根是
+$$ x_1 = -\dfrac{1}{2}\nsep x_2 = 2 \douhao $$
+所以不等式的解集是
+$$ x < -\dfrac{1}{2} \text{，或\;} x > 2 \juhao $$
+
+
+\liti 解不等式 $-3x^2 + 6x > 2$。
+
+\jie 两边都乘以 $-1$，移项 得
+$$ 3x^2 - 6x + 2 < 0 \juhao $$
+
+因为 $\Delta > 0$， 方程 $3x^2 - 6x + 2 = 0$ 的解是
+$$ x_1 = 1 - \dfrac{\sqrt{3}}{3}\nsep x_2 = 1 + \dfrac{\sqrt{3}}{3} \douhao $$
+所以原不等式的解集是
+$$ 1 - \dfrac{\sqrt{3}}{3} < x < 1 + \dfrac{\sqrt{3}}{3} \juhao $$
+
+
+\liti 解不等式 $4x^2 - 4x + 1 > 0$。
+
+\jie 因为 $\Delta = 0$， 方程 $4x^2 - 4x + 1 = 0$ 有两个相等的实根
+$$ x_1 = x_2 = \dfrac{1}{2} \douhao $$
+
+所以不等式的解集是所有不等于 $\dfrac{1}{2}$ 的实数。
+
+
+
+\liti 解不等式 $-x^2 + 2x - 3 > 0$。
+
+\jie 两边都乘以 $-1$，得
+$$ x^2 - 2x + 3 < 0 \juhao $$
+
+因为 $\Delta < 0$， 方程 $x^2 - 2x + 3 = 0$ 无实根，
+即不等式 $x^2 - 2x + 3 < 0$ 的解集是空集。
+所以，原不等式 $-x^2 + 2x - 3 > 0$ 的解集是空集。
+\end{enhancedline}
+
+
+\liti $m$ 是什么实数的时候，方程 $x^2 - (m + 2)x + 4 = 0$ 有实根？
+
+\jie 这个方程的判别式是
+$$ [-(m + 2)]^2 - 4 \times 1 \times 4 = m^2 + 4m - 12 \juhao $$
+
+我们知道：判别式大于或等于零的时候，原方程有实根；判别式小于零的时候，原方程没有实根。
+
+由 $m^2 + 4m - 12 = 0$， 得 $m = 2$ 或 $m = -6$；
+
+由 $m^2 + 4m - 12 > 0$， 得 $m < -6$ 或 $m > 2$。
+
+由此可知，当 $m \leqslant -6$ 或 $m \geqslant 2$ 时，原方程有实根。
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{解下列不等式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}, row{4}={rowsep=0.5em}}
+        \xxt{$(x + 2)(x - 3) > 0$；}        & \xxt{$x(x - 2) < 0$；} \\
+        \xxt{$3x^2 - 7x + 2 < 0$；}         & \xxt{$4x^2 + 4x + 1 < 0$；} \\
+        \xxt{$-6x^2 - x + 2 \leqslant 0$；} & \xxt{$x(x - 1) < x(2x - 3) + 2$；} \\
+        \xxt{$x^2 + 10 \geqslant 6x + 1$；} & \xxt{$x^2 - 4\dfrac{1}{3}x + 5\dfrac{1}{3} \leqslant 0$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{$x$ 是什么实数时，函数 $y = x^2 - 4x + 1$ 的值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{等于零？} & \xxt{是正数？} & \xxt{是负数？}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{$x$ 是什么实数时，$\sqrt{x^2 + x - 12}$ 有意义？}
+
+
+\xiaoti{$k$ 是什么实数时，方程
+    $$ x^2 + 2x - 11 = k(3 - x) $$
+    有实数根？
+}
+
+\end{xiaotis}
+
+

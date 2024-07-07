@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -8) -- (0, 3) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+
+    \draw (-2, 0) node [below=0.2em, xshift=-0.7em] {\small $x_1$};
+    \draw ( 3, 0) node [below=0.2em, xshift=0.5em]  {\small $x_2$};
+
+    \draw[domain=-2.3:3.3,  samples=50] plot (\x, {(\x)^2 - \x - 6});
+    \foreach \x in {-2, 3} {
+        \draw [fill=black] (\x, {(\x)^2 - \x - 6}) circle(0.1);
+    }
+
+    \draw (-4, 0.6) node {\small $y > 0$};
+    \draw (4.2, 0.6) node {\small $y > 0$};
+    \draw (1.2, -2.6) node {\small $y < 0$};
+\end{tikzpicture}
+

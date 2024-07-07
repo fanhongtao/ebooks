@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-3, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -2) -- (0, 6) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+
+    \draw (1, 0) node [below=0.3em, xshift=0.7em] {\small $x_1 = x_2$};
+
+    \draw[domain=-1.3:3.3,  samples=50] plot (\x, {(\x)^2 - 2*\x + 1});
+    \foreach \x in {1} {
+        \draw [fill=black] (\x, {(\x)^2 - 2*\x + 1}) circle(0.1);
+    }
+
+    \draw (-2, 1.6) node {\small $y > 0$};
+    \draw (4.2, 1.6) node {\small $y > 0$};
+\end{tikzpicture}
+

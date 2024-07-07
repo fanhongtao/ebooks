@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -8) -- (0, 3) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+    \foreach \x in {-4, ..., 4} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+    \draw (-2, 0) node [below=0.2em, xshift=-0.7em] {\small $-2$};
+    \draw ( 3, 0) node [below=0.2em, xshift=0.5em] {\small $3$};
+
+    \foreach \y in {-7, ..., 2} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+    \draw (0, -6) node [left=0.3em] {\small $-6$};
+
+
+    \draw[domain=-2.3:3.3,  samples=50] plot (\x, {(\x)^2 - \x - 6}) node [above] {\small $y = x^2 - x - 6$};
+    \foreach \x in {-2, 0, 3} {
+        \draw [fill=black] (\x, {(\x)^2 - \x - 6}) circle(0.1);
+    }
+
+    \draw (-4, 0.6) node {\small $y > 0$};
+    \draw (4.2, 0.6) node {\small $y > 0$};
+    \draw (1.2, -2.6) node {\small $y < 0$};
+\end{tikzpicture}
+
