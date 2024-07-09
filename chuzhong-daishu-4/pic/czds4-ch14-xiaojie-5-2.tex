@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-3, 0) -- (3, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -3) -- (0, 3) node[left=0.2em]  {$y$};
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+
+    \draw[very thick, domain=-2:2, samples=5] plot (\x, {-1.3*\x});
+\end{tikzpicture}
+

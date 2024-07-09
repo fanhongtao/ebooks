@@ -1,0 +1,94 @@
+\xiaojie
+
+一、本章主要内容是直角坐标系和两点间距离公式，函数的概念和函数的表示法，
+正比例函数、反比例函数、一次函数、二次函数的图象和性质，
+以及一元一次不等式组、一元二次不等式的解法。
+
+
+二、利用平面直角坐标系，可以由一对有序实数确定平面内一点的位置。
+在坐标平面内，点与它的坐标成一一对应。
+设 $P_1(x_1,\; y_1)$，$P_2(x_2,\; y_2)$ 是坐标平面内的意两点，
+那么，$P_1$，$P_2$ 之间的距离可用公式
+$$ P_1P_2 = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$
+来计算。
+
+
+三、客观世界中，无论什么事物的运动都采取两种状态，相对地静止的状态和显著地变动的状态。
+常量和变量，就是这两种状态在数量上的某种反映。常量和变量是相对的，是对某一变化过程而言的。
+在一定的条件下，它们可以向其反面转化。
+
+
+四、变量在变化过程中不是孤立的，而是相互联系的。函数反映了变量之间的某种联系。
+函数的本质就是两个变量之间的一种对应关系。
+表示函数的方法，最常用的是解析法、列表法、图象法三种。
+
+
+五、一次函数 $y = kx + b \; (k \neq 0)$ 是最简单的函数。
+当 $b = 0$ 时，一次函数就是正比例函数 $y = kx$。
+它们的图象和性质如下：
+\begin{table}[H]
+    \begin{tblr}{
+        hlines, vlines,
+        columns={c},
+    }
+        \SetCell[c=4]{c}{一次函数 $y = kx + b \; (k \neq 0)$} \\
+        \SetCell[c=2]{c}{$b = 0$ （正比例函数 $y = kx$）} & & \SetCell[c=2]{c}{$b \neq 0$} & \\
+        $k > 0$ & $k < 0$ & $k > 0$ & $k < 0$ \\
+        \input{../pic/czds4-ch14-xiaojie-5-1}
+            & \input{../pic/czds4-ch14-xiaojie-5-2}
+            & \input{../pic/czds4-ch14-xiaojie-5-3}
+            & \input{../pic/czds4-ch14-xiaojie-5-4}
+    \end{tblr}
+\end{table}
+
+
+六、反比例函数 $y = \dfrac{k}{x} \; (k \neq 0)$ 的图象是双曲线。
+
+
+七、二次函数 $y = ax^2 + bx + c \; (a \neq 0)$ 的图象是以 $x = -\dfrac{b}{2a}$ 为对称轴，
+以 $\left(-\dfrac{b}{2a},\; \dfrac{4ac - b^2}{4a}\right)$ 为顶点的抛物线。
+如果 $a > 0 \; (a < 0)$，
+当 $x < -\dfrac{b}{2a}$ 时，$y$ 随 $x$ 增大而减小（增大）；
+当 $x = -\dfrac{b}{2a}$ 时，$y$ 取最小（大）值 $\dfrac{4ac - b^2}{4a}$；
+当 $x > -\dfrac{b}{2a}$ 时；$y$ 随 $x$ 增大而增大（减小）。
+
+
+八、二次函数、一元二次方程、一元二次不等式的主要结论与三者之间的密切联系，如下表所示：
+\begin{table}[H]
+    \begin{tblr}{
+        hlines, vlines,
+        columns={c, colsep=3pt},
+        rows={m},
+        column{1}={2em},
+        column{3}={4.5cm},
+    }
+        \SetCell[c=2]{c}{判别式 \\ $\Delta = b^2 - 4ac$} & & $\Delta > 0$ & $\Delta = 0$ & $\Delta < 0$ \\
+        \SetCell[c=2]{c}{二次函数 \\ $y = ax^2 + bx + c$ \\ $(a > 0)$ 的图象}
+            &
+            & \begin{minipage}{3.5cm} \input{../pic/czds4-ch14-xiaojie-8-1} \end{minipage}
+            & \begin{minipage}{3.5cm} \input{../pic/czds4-ch14-xiaojie-8-2} \end{minipage}
+            & \begin{minipage}{3.5cm} \input{../pic/czds4-ch14-xiaojie-8-3} \end{minipage} \\
+        \SetCell[c=2]{c}{一元二次方程 \\ $ax^2 + bx + c = 0$ \\ $(a > 0)$ 的根} &
+            & {有两相异实根 \\[0.5em] $x_{1,\,2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ \\[0.5em] $(x_1 < x_2)$}
+            & {有两相等实根\\[0.5em] $x_1 = x_2 = -\dfrac{b}{2a}$}
+            & 没有实根 \\
+        \SetCell[r=2]{c}{一元二次不等式的解集}
+            & { $ax^2 + bx + c > 0$ \\ $(a > 0)$ }
+            & $x < x_1$，或\; $x > x_2$
+            &  {所有不等于\\[0.5em] $-\dfrac{b}{2a}$ 的实数}
+            & 全体实数 \\
+        & { $ax^2 + bx + c < 0$ \\ $(a > 0)$ }
+            & $x_1 < x < x_2$
+            & 空集
+            & 空集 \\
+    \end{tblr}
+\end{table}
+
+
+九、一元一次不等式组的解集是这个不等式组中所有不等式的解集的公共部分。
+
+
+十、当 $a > 0$ 时， $|x| < a$ 的解集是 $-a < x < a$；
+$|x| > a$ 的解集是 $x > a$，或 $x < -a$。
+
+

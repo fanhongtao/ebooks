@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [name path=x axis, ->] (-1.5, 0) -- (4.5, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -1) -- (0, 5) node[left=0.2em]  {$y$};
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+
+    \pgfmathsetmacro{\a}{1}
+    \pgfmathsetmacro{\b}{-2}
+    \pgfmathsetmacro{\c}{1}
+
+    \draw[name path=parabola, domain=-1.1:3.1, samples=50] plot (\x, {\a*(\x)^2 + \b*\x + \c});
+    \fill [black] (-0.5*\b/\a, 0) circle (0.1) node[below=0.3em, xshift=0.7em] {\small $x_1 = x_2$};
+\end{tikzpicture}
+

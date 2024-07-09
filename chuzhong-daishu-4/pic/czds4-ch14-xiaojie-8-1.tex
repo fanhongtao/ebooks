@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [name path=x axis, ->] (-2.5, 0) -- (3.5, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -3) -- (0, 3) node[left=0.2em]  {$y$};
+    \draw (0, 0) node [below left=0.1em] {\small $O$};
+
+    \pgfmathsetmacro{\a}{1}
+    \pgfmathsetmacro{\b}{-1}
+    \pgfmathsetmacro{\c}{-2}
+
+    \draw[name path=parabola, domain=-1.5:2.5, samples=50] plot (\x, {\a*(\x)^2 + \b*\x + \c});
+    \fill [black, name intersections={of=x axis and parabola}]
+        (intersection-1) circle (0.1) node[above left, xshift=-0.3em] {\small $x_1$}
+        (intersection-2) circle (0.1) node[above right, xshift=0.3em] {\small $x_2$};
+\end{tikzpicture}
+

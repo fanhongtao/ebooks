@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.5,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw [->] (-3, 0) -- (3, 0) node[below=0.2em] {$x$};
+    \draw [->] (0, -3) -- (0, 3) node[left=0.2em]  {$y$};
+    \draw (0, 0) node [above right] {\small $O$};
+
+    \pgfmathsetmacro{\k}{-0.8}
+    \pgfmathsetmacro{\b}{1.2}
+    \draw[very thick, domain=-1.5:3.0, samples=5] plot (\x, {\k*\x + \b});
+    \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (0, \b) -- (0, 0)
+                node [pos=0.2, left=0.5em] {\small $b > 0$};
+    \draw[very thick, domain=-2.5:2.0, samples=5] plot (\x, {\k*\x - \b});
+    \draw[decorate,decoration={brace,mirror,amplitude=0.2cm}] (0, -\b) -- (0, 0)
+                node [pos=0.2, right=0.5em] {\small $b < 0$};
+\end{tikzpicture}
+
