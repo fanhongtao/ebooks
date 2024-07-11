@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) node [below left=0.3em] {\small $O$};
+
+    \pgfmathsetmacro{\jiao}{30}
+    \coordinate (A) at (\jiao:5);
+    \coordinate (P)  at (\jiao:3);
+    \coordinate (Pp) at (\jiao:4);
+
+    \draw (0, 0) -- (A);
+    \draw [->] (1, 0) arc (0:\jiao:1) node [midway, right] {$\alpha$};
+    \draw [densely dashed] (P)  node [above, xshift=-1.5em] {$P(x,y)$}    -- (P  |- x axis) node [below] {$M$} node [midway, right] {$y$};
+    \draw [densely dashed] (Pp) node [above, xshift=-1.5em] {$P'(x',y')$} -- (Pp |- x axis) node [below] {$M'$};
+    \draw (P)  to [chuizu={skipline=true}] (P  |- x axis);  %\draw (P  |- x axis) +(0, 0.2) -- +(0.2, 0.2) -- +(0.2, 0);
+    \draw (Pp) to [chuizu={skipline=true}] (Pp |- x axis);  %\draw (Pp |- x axis) +(0, 0.2) -- +(0.2, 0.2) -- +(0.2, 0);
+
+    \draw (1.5, 0) node [below] {$x$};
+    \draw (\jiao:1.5) node [above] {$r$};
+\end{tikzpicture}
+

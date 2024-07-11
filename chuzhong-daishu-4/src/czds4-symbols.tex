@@ -2,6 +2,10 @@
 % （重）定义一些数学符号
 %  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
 \newcommand{\celsius}{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}} % 摄氏度
+\newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
+    \mathrel{\text{%
+            \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
+}}}
 
 
 %特殊符号

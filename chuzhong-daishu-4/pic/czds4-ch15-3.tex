@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=0.7]
+    \draw [->] (-0.5, 0) -- (5, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 6) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left=0.3em] {\small $O$};
+    \foreach \x in {1, ..., 4} {
+        \draw (\x, 0) -- (\x, 0.2);
+    }
+
+    \foreach \y in {1, ..., 5} {
+        \draw (0.2, \y) -- (0, \y);
+    }
+
+    \pgfmathsetmacro{\jiao}{53.13}
+    \coordinate (P)  at (3, 4);
+    \draw (O) -- ($(O) ! 1.3 ! (P)$);
+    \draw [->] (1.5, 0) arc (0:\jiao:1.5) node [midway, above right] {$\alpha$};
+    \draw [densely dashed] (P)  node [right] {$P(3,4)$}    -- (P  |- x axis);
+\end{tikzpicture}
+

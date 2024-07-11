@@ -109,9 +109,19 @@
 
 % 路面样式（用于修改 Path）
 \tikzset{
-    ground/.style={
-        postaction={draw,decorate,decoration={border,angle=-45,
-                    amplitude=0.3cm,segment length=2mm}}},
+    ground/.style={ground/.cd, #1, wrapper},
+    ground/.cd,
+      angle/.initial=-45,
+      wrapper/.style={/tikz/.cd,
+        postaction={
+          draw,
+          decorate,
+          decoration={
+            border,
+            angle=\pgfkeysvalueof{/tikz/ground/angle},
+            amplitude=0.3cm,
+            segment length=2mm}}
+      },
 }
 
 
@@ -194,11 +204,15 @@
             direction/right/.code = {\def\chuizuangle{-90}},
             direction/left/.code  = {\def\chuizuangle{90}},
             direction=right,
+        skipline/.is choice,
+            skipline/true/.code  = {\def\mainpath{(\tikztostart)    (\tikztotarget)}},
+            skipline/false/.code = {\def\mainpath{(\tikztostart) -- (\tikztotarget)}},
+            skipline=false,
         wrapper/.style={/tikz/.cd, to path={
             ($(\tikztotarget)!\size!0:(\tikztostart)$)
                 -- ($(\tikztotarget)!1.414*\size!0.5*\chuizuangle:(\tikztostart)$)
                 -- ($(\tikztotarget)!\size!\chuizuangle:(\tikztostart)$)
-            (\tikztostart) -- (\tikztotarget) \tikztonodes
+            \mainpath \tikztonodes
         }}
 }
 

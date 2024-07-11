@@ -1,0 +1,121 @@
+\subsection{三角函数}\label{subsec:15-1}
+\begin{enhancedline}
+
+修建扬水站时，沿着与水平面成 $\alpha$ 角的斜坡铺设水管。
+如图 \ref{fig:15-1}，当水管从坡底 $O$ 处向上铺设到 $P$ 处，$P$ 离水平面的高为 $MP$，
+继续向上铺设到 $P'$ 处，$P'$ 离水平面的高为 $M'P'$，铺设的水管越长，管口离水平面也越高。
+容易看出，$\triangle OPM \xiangsi \triangle OP'M'$，因此 $\dfrac{MP}{OP} = \dfrac{M'P'}{OP'}$。
+这就是说，当角 $\alpha$ 的大小一定时，管口离水平面的高与管长的比是一个定值。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+    \centering
+    \input{../pic/czds4-ch15-1}
+    \caption{}\label{fig:15-1}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+    \centering
+    \input{../pic/czds4-ch15-2}
+    \caption{}\label{fig:15-2}
+    \end{minipage}
+\end{figure}
+
+想一想：当角 $\alpha$ 是 $30^\circ$ 时，上面所说的比值是多少。
+
+上面的实例启发我们进一步研究与角有关的一些比。
+
+设有一个角 $\alpha$，我们以它的顶点作为原点，以它的始边作为 $x$ 轴的正半轴 $Ox$，建立直角坐标系（图 \ref{fig:15-2}）。
+在角 $\alpha$ 的终边上任取一点 $P(x,\; y)$，它和原点 $O(0,\; 0)$ 的距离是
+$r = \sqrt{x^2 + y^2}$ （$r$ 总是正的）。可以得到比值
+$$ \dfrac{y}{r}\nsep  \dfrac{x}{r}\nsep \dfrac{y}{x}\nsep \dfrac{x}{y} \juhao $$
+设 $P'(x',\; y')$ 是角 $\alpha$ 的终边上另一点，$P'$ 到 $O$ 的距离为
+$r' = \sqrt{x'^{\,2} + y'^{\,2}}$。又可以得到比值
+$$ \dfrac{y'}{r'}\nsep  \dfrac{x'}{r'}\nsep \dfrac{y'}{x'}\nsep \dfrac{x'}{y'} \juhao $$
+
+过 $P$ 和 $P'$ 分别画 $x$ 轴的垂线 $MP$ 和 $M'P'$, 那么 $\triangle OPM \xiangsi \triangle OP'M'$，
+且 $x$ 和 $x'$、$y$ 和 $y'$ 的符号相同，所以
+$$ \dfrac{y}{r} = \dfrac{y'}{r'} \nsep \dfrac{x}{r} = \dfrac{x'}{r'} \nsep \dfrac{y}{x} = \dfrac{y'}{x'} \nsep \dfrac{x}{y} = \dfrac{x'}{y'} \juhao $$
+由此可知，对于确定的角 $\alpha$，这四个比值都是由角 $\alpha$ 的大小唯一确定的，
+与点 $P$ 在角 $\alpha$ 的终边上的位置无关，
+所以这四个比值都是自变量 $\alpha$ 的函数．我们把
+
+$\dfrac{y}{r}$ 叫做角 $\alpha$ 的\zhongdian{正弦}，记作 $\sin\alpha$， 即 $\sin\alpha = \dfrac{y}{r}$；
+
+$\dfrac{x}{r}$ 叫做角 $\alpha$ 的\zhongdian{余弦}，记作 $\cos\alpha$， 即 $\cos\alpha = \dfrac{x}{r}$；
+
+$\dfrac{y}{x}$ 叫做角 $\alpha$ 的\zhongdian{正切}，记作 $\tan\alpha$， 即 $\tan\alpha = \dfrac{y}{x}$；\footnote{
+    录注：原书中 $\tan\alpha$ 写作 $\text{tg}\,\alpha$，$\cot\alpha$ 写作 $\text{ctg}\,\alpha$。录入过程中，统一按 $\tan\alpha$、$\cot\alpha$ 的形式录入。
+}
+
+$\dfrac{x}{y}$ 叫做角 $\alpha$ 的\zhongdian{余切}，记作 $\cot\alpha$，\footnotemark 即 $\cot\alpha = \dfrac{x}{y}$；
+\footnotetext{“$\text{tg}\,\alpha$” 也可以记作“$\tan\alpha$”，“$\text{ctg}\,\alpha$” 也可以记作“$\cot\alpha$”。}
+
+
+角 $\alpha$ 的正弦 $\sin\alpha$，角 $\alpha$ 的余弦 $\cos\alpha$，
+角 $\alpha$ 的正切 $\tan\alpha$，角 $\alpha$ 的余切 $\cot\alpha$
+都叫做角 $\alpha$ 的\zhongdian{三角函数}。
+
+\zhuyi “$\sin\alpha$” 是一个完整的符号，它表示角 $\alpha$ 的正弦，不能理解成 $\sin \cdot \alpha$。
+其他三角函数的符号也是这样。
+
+
+\liti 已知角 $\alpha$ 的终边经过点 $P(3,\; 4)$， 求角 $\alpha$ 的四个三角函数值（图 \ref{fig:15-3}）。
+
+\begin{wrapfigure}[9]{r}{5cm}
+    \centering
+    \input{../pic/czds4-ch15-3}
+    \caption{}\label{fig:15-3}
+\end{wrapfigure}
+
+
+\jie $\because \quad x = 3\nsep y = 4$，
+
+$\therefore$ \quad $r = \sqrt{x^2 + y^2} = \sqrt{3^2 + 4^2} = 5$。
+
+$\therefore$ \quad \begin{tblr}[t]{columns={colsep=0pt, mode=math}, rows={rowsep=0.5em}}
+    \sin\alpha = \dfrac{y}{r} = \dfrac{4}{5} \douhao \\
+    \cos\alpha = \dfrac{x}{r} = \dfrac{3}{5} \douhao \\
+    \tan\alpha = \dfrac{y}{x} = \dfrac{4}{3} \douhao \\
+    \cot\alpha = \dfrac{x}{y} = \dfrac{3}{4} \juhao \\
+\end{tblr}
+
+
+\liti 求证：
+\begin{xiaoxiaotis}
+
+    \xxt{$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$；} \quad
+    \xxt{$\sin^2\alpha + \cos^2\alpha = 1$。}\footnote{$\sin^2\alpha$ 表示 $(\sin\alpha)^2$，其他三角函数的幂也这样表示。}
+
+\resetxxt
+\zhengming \xxt{根据三角函数的定义，}
+$$ \dfrac{\sin\alpha}{\cos\alpha} = \dfrac{\phantom{.}\dfrac{y}{r}\phantom{.}}{\dfrac{x}{r}} = \dfrac{y}{x} = \tan\alpha \douhao $$
+
+\fenge{即}{\centering $\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$；}
+
+\xxt{$\sin^2\alpha + \cos^2\alpha = \left(\dfrac{y}{r}\right)^2 + \left(\dfrac{x}{r}\right)^2 = \dfrac{y^2 + x^2}{r^2}$，}
+
+\fengeYinwei{y^2 + x^2 = r^2 \douhao }
+
+\fengeSuoyi{\sin^2\alpha + \cos^2\alpha = \dfrac{r^2}{r^2} = 1 \juhao}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）$\sin\beta$ 是角 $\beta$ 的哪种三角数，表示怎样的比？$\tan\beta$ 呢？ $\cos\beta$ 呢？$\cot\beta$ 呢？}
+
+\xiaoti{已知角 $\alpha$ 的终边分别经过下列各点，求角 $\alpha$ 的四个三角函数值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={9em, colsep=0pt}}
+        \xxt{$(4,\; 3)$；} & \xxt{$(5,\; 12)$；} & \xxt{$(2,\; 2)$；} & \xxt{$(2,\; 3)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
+\end{enhancedline}

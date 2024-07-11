@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth]
+    \tikzset{
+        shuiguan/.pic={
+            \draw (0, 0.1) rectangle (0.6, 0.2);
+            \draw (0.6, 0.1) -- (0.75, 0) -- (0.75, 0.3) -- (0.6, 0.2);
+        }
+    }
+
+    \pgfmathsetmacro{\jiao}{30}
+    \coordinate (O) at (0, 0);
+    \coordinate (A) at (\jiao:5);
+    \coordinate (B) at (0:5);
+
+    \begin{scope}
+        \clip (O) rectangle (A); %删除左正角 (ground) 多余的斜线
+        \draw [ground, name path=gnd] (0, 0) -- (A);
+    \end{scope}
+
+    \draw [thick] (A) -- (O) node [below left] {$O$} -- (B);
+    \draw [->] (1, 0) arc (0:\jiao:1) node [midway, right] {$\alpha$};
+    \foreach \x in {0, ..., 3} {
+        \draw [rotate=\jiao, transform shape] (0.75 * \x, 0) pic {shuiguan};
+    }
+
+    \coordinate (P)  at (\jiao:3);
+    \coordinate (Pp) at (\jiao:4);
+    \draw (P)  node [above, xshift=0.3em] {$P$}  to[chuizu={direction=left}] (P  |- B) node [below] {$M$};
+    \draw (Pp) node [above] {$P'$} to[chuizu={direction=left}] (Pp |- B) node [below] {$M'$};
+\end{tikzpicture}
+
