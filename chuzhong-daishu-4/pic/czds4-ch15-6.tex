@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.5, 0) -- (3, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3.5) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left=0.3em] {\small $O$};
+
+    \pgfmathsetmacro{\jiao}{60}
+    \coordinate (A) at (\jiao:3.5);
+    \coordinate (P)  at (\jiao:3);
+    \coordinate (M) at (P |- x axis);
+
+    \draw [thick] (O) -- (A);
+    \draw [->] (0.5, 0) arc (0:\jiao:0.5) node [midway, right] {$\jiao^\circ$};
+    \draw (P)  node [above, xshift=-0.3em] {$P$}  to[chuizu={direction=left}] (M)  node [below] {$M$};
+    \path (P) -- (M) node [midway, right] {$\sqrt{3}a$};
+    \path (O) -- (M) node [midway, below] {$a$};
+    \path (O) -- (P) node [midway, above, rotate=\jiao] {$2a$};
+\end{tikzpicture}
+

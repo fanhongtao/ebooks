@@ -1,0 +1,136 @@
+\subsection{$30^\circ$，$45^\circ$，$60^\circ$ 角的三角函数值}\label{subsec:15-2}
+
+我们知道，对于给定的角 $\alpha$，它的四个三角函数值是唯一确定的，对于某些特殊角，
+我们可以用下面的方法求出它的三角函数值。
+
+(1) 如图 \ref{fig:15-4}， $\alpha = 30^\circ$，我们在角 $\alpha$ 的终边上取点 $P$。
+设点 $P$ 的纵坐标是 $a$，过点 $P$ 画 $x$ 轴的线 $MP$。
+在直角三角形 $OPM$ 中，$\angle POM = 30^\circ$，$MP = a$，
+则 $OP = 2a$。（为什么？）由勾股定理，
+$$ OM = \sqrt{(2a)^2 - a^2} = \sqrt{3}a \juhao $$
+也就是说， 点 $P$ 的坐标是 $(\sqrt{3}a,\; a)$，$r = 2a$，所以
+
+\hspace*{2em} \begin{tblr}{columns={mode=math, colsep=0pt}, rows={rowsep=0.5em}}
+    \sin 30^\circ = \dfrac{y}{r} = \dfrac{a}{2a} = \dfrac{1}{2} \douhao \\
+    \cos 30^\circ = \dfrac{x}{r} = \dfrac{\sqrt{3}a}{2a} = \dfrac{\sqrt{3}}{2} \douhao \\
+    \tan 30^\circ = \dfrac{y}{x} = \dfrac{a}{\sqrt{3}a} = \dfrac{\sqrt{3}}{3} \douhao \\
+    \cot 30^\circ = \dfrac{x}{y} = \dfrac{\sqrt{3}a}{a} = \sqrt{3} \juhao \\
+\end{tblr}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{5cm}
+    \centering
+    \input{../pic/czds4-ch15-4}
+    \caption{}\label{fig:15-4}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{5cm}
+    \centering
+    \input{../pic/czds4-ch15-5}
+    \caption{}\label{fig:15-5}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+    \centering
+    \input{../pic/czds4-ch15-6}
+    \caption{}\label{fig:15-6}
+    \end{minipage}
+\end{figure}
+
+(2) 如图 \ref{fig:15-5}，$\alpha = 45^\circ$，我们在角 $\alpha$ 的终边上取点 $P$。
+设点 $P$ 的纵坐标是 $a$，则点 $P$ 的横坐标也是 $a$。（为什么？）
+由勾股定理，$r = \sqrt{2}a$。所以
+
+\hspace*{2em} \begin{tblr}{columns={mode=math, colsep=0pt}, rows={rowsep=0.5em}}
+    \sin 45^\circ = \dfrac{y}{r} = \dfrac{a}{\sqrt{2}a} = \dfrac{\sqrt{2}}{2} \douhao \\
+    \cos 45^\circ = \dfrac{x}{r} = \dfrac{a}{\sqrt{2}a} = \dfrac{\sqrt{2}}{2} \douhao \\
+    \tan 45^\circ = \dfrac{y}{x} = \dfrac{a}{a} = 1 \douhao \\
+    \cot 45^\circ = \dfrac{x}{y} = \dfrac{a}{a} = 1 \juhao \\
+\end{tblr}
+
+
+(3) 如图 \ref{fig:15-6}，$\alpha = 60^\circ$，我们在角 $\alpha$ 的终边上取点 $P$。
+设点 $P$ 的横坐标为 $a$，则 $r = OP = 2a$。（为什么？）
+由勾股定理，点 $P$ 的纵坐标 $y = \sqrt{(2a)^2 - a^2} = \sqrt{3}a$。所以
+
+\hspace*{2em} \begin{tblr}{columns={mode=math, colsep=0pt}, rows={rowsep=0.5em}}
+    \sin 60^\circ = \dfrac{y}{r} = \dfrac{\sqrt{3}a}{2a} = \dfrac{\sqrt{3}}{2} \douhao \\
+    \cos 60^\circ = \dfrac{x}{r} = \dfrac{a}{2a} = \dfrac{1}{2} \douhao \\
+    \tan 60^\circ = \dfrac{y}{x} = \dfrac{\sqrt{3}a}{a} = \sqrt{3} \douhao \\
+    \cot 60^\circ = \dfrac{x}{y} = \dfrac{a}{\sqrt{3}a} = \dfrac{\sqrt{3}}{3} \juhao \\
+\end{tblr}
+
+以上这些特殊角的三角函数值，今后经常要用到。为了便于记忆，列表如下：
+
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+        hlines,vlines,
+        columns={c},
+        column{2-4}={5em, mode=math, colsep=0pt},
+        rows={m, rowsep=0.5em},
+    }
+        \diagboxthree{三角函数}{三角函数值}{角} & 30^\circ            & 45^\circ             & 60^\circ \\
+        正弦                                   & \dfrac{1}{2}        & \dfrac{\sqrt{2}}{2}  & \dfrac{\sqrt{3}}{2} \\
+        余弦                                   & \dfrac{\sqrt{3}}{2} & \dfrac{\sqrt{2}}{2}  & \dfrac{1}{2} \\
+        正切                                   & \dfrac{\sqrt{3}}{3} & 1                    & \sqrt{3} \\
+        余切                                   & \sqrt{3}            & 1                    & \dfrac{\sqrt{3}}{3} \\
+    \end{tblr}
+\end{table}
+
+
+\begin{enhancedline}
+\liti[0]  求下列各式的值：
+\begin{xiaoxiaotis}
+
+    \xxt{$2\sin 30^\circ + 3\cos 60^\circ + \tan 45^\circ$；}
+
+    \xxt{$\sin^2 45^\circ + \cot 60^\circ \cos 30^\circ$；}
+
+    \xxt{$\dfrac{1}{2}\cos 30^\circ + \dfrac{\sqrt{2}}{2}\cos 45^\circ + \sin 60^\circ \cos 60^\circ$。}
+
+\resetxxt
+\jie  \xxt{$2\sin 30^\circ + 3\cos 60^\circ + \tan 45^\circ = 2 \times \dfrac{1}{2} + 3 \times \dfrac{1}{2} + 1 = 3\dfrac{1}{2}$；}
+
+\xxt{$\sin^2 45^\circ + \cot 60^\circ \cos 30^\circ = \left(\dfrac{\sqrt{2}}{2}\right)^2 + \dfrac{\sqrt{3}}{3} \times \dfrac{\sqrt{3}}{2} = \dfrac{1}{2} + \dfrac{1}{2} = 1$；}
+
+\xxt{$\dfrac{1}{2}\cos 30^\circ + \dfrac{\sqrt{2}}{2}\cos 45^\circ + \sin 60^\circ \cos 60^\circ = \dfrac{1}{2} \times \dfrac{\sqrt{3}}{2} + \dfrac{\sqrt{2}}{2} \times \dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{3}}{2} \times \dfrac{1}{2} = \dfrac{2 + 2\sqrt{3}}{4} = \dfrac{1 + \sqrt{3}}{2}$。}
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）$\sin 30^\circ$ 与 $\cos 60^\circ$ 的值各是多少？
+    $\tan 45^\circ$ 与 $\cot 45^\circ$ 呢？
+    $\sin 45^\circ$ 与 $\cos 45^\circ$ 呢？
+    $\sin 60^\circ$ 与 $\cos 30^\circ$ 呢？
+    $\tan 60^\circ$ 与 $\cot 30^\circ$ 呢？
+    $\tan 30^\circ$ 与 $\cot 60^\circ$ 呢？
+}
+
+\xiaoti{求下列各式的值：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\sin 30^\circ - 3\tan 30^\circ + 2\cos 30^\circ$；}
+
+    \xxt{$2\cos 30^\circ + \tan 60^\circ - 6\cot 60^\circ$；}
+
+    \xxt{$5\cot 30^\circ - 2\cos 60^\circ + 2\sin 60^\circ$；}
+
+    \xxt{$\cos^2 45^\circ + \sin^2 45^\circ$；}
+
+    \xxt{$\dfrac{\sin 60^\circ - \cot 45^\circ}{\tan 60^\circ - 2 \tan 45^\circ}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{在直角坐标系中，以原点为顶点，$x$ 轴的正半轴为始边，在第一象限内画出 $40^\circ$ 的角。
+    量出它的终边上一点的坐标及这个点到原点的距离，然后计算 $40^\circ$ 角的四个三角函数值（精确到 $0.01$）。
+}
+
+\end{xiaotis}
+\end{enhancedline}
+
