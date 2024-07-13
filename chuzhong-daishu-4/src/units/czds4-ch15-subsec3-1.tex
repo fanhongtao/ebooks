@@ -1,0 +1,231 @@
+\subsubsection{正弦和余弦表}
+
+\liti 查表求 $\sin 37^\circ24'$ 的值。
+
+从正弦表\textbf{左边}的直列里查出 $37^\circ$，
+从\textbf{顶端}的横行里查出 $24'$。
+$37^\circ$ 所在的行和 $24'$ 所在的列相交处的数字是 $6074$，
+它实际表示 $0.6074$（这里整数部分为 $0$，可从左上角第一个数值 $0.5736$ 的整数部分看出），
+这就是 $\sin 37^\circ24'$ 的值。
+
+\begin{table}[H]
+    \newcommand{\x}{\cdots}
+    \centering
+    \caption*{正 弦}
+    \NewDocumentCommand{\myarrow}{m m m O{1em}} {
+        \tikz [overlay, >=Stealth] {
+            \begin{scope}[xshift=#1, yshift=#2]
+                \draw [->, rotate=#3] (0, 0) -- +(#4, 0);
+            \end{scope}
+        }
+    }
+    \begin{tblr}{
+        hline{1, 9} = {1pt, solid},
+        hline{2, 8} = {solid},
+        vlines,
+        vline{1, 2, 7, 8, 11} = {1pt, solid},
+        columns={c, mode=math},
+        column{1}={3em},
+        column{7-10}={2em},
+    }
+        A        & \myarrow{-1.2em}{.3em}{0} 0'     & \x  & 24'    & \x\x  & 60' &     & 1'  & 2'  & 3' \\
+        35^\circ \myarrow{.8em}{.8em}{-90} & 0.5736 &     &  \myarrow{0em}{.8em}{-90}[3em] &  &   &   &   &  \myarrow{0em}{.8em}{-90}[3em] &   \\
+        \vdots   &        &     &        &             &     &     &     &     \\
+        37^\circ & \myarrow{1.2em}{.3em}{0}[2em] &     & 6074   & \x\x  & \x  & \x \myarrow{0.2em}{.3em}{0}[2em] &     & 5   &     \\
+        \vdots   &        &     &        &             &     &     &     &     \\
+    \end{tblr}
+\end{table}
+
+\jie \hspace*{2em} $\sin 37^\circ24'= 0.6074$。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列正弦的值，然后按照从小到的顺序，用 “$<$” 号把它们连接起来：\\
+    $\sin 78^\circ \nsep \sin 11^\circ24' \nsep \sin 40^\circ48' \nsep \sin 8^\circ30'$。
+}
+
+\xiaoti{查表求下列正弦的值，然后按照从大到小的顺序，用 “$>$” 号把它们连接起来：\\
+    $\sin 54' \nsep \sin 89^\circ12' \nsep \sin 55^\circ6' \nsep \sin 23^\circ18'$。
+}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\liti 查表求 $\sin 37^\circ26'$ 的值。
+
+在正弦表顶端的横行里找不到 $26'$，但 $26'$ 在 $24'$ 和 $30'$ 之间而靠近 $24'$，
+比 $24'$ 多 $2'$。所以先查出 $\sin 37^\circ24' = 0.6074$，
+再在表右边修正值栏标有 $2'$ 的一列和 $37^\circ$ 所在的行相交处查得 $5$，
+它实际表示 $0.6074$ 的最后一个数位上的 $5$，即 $0.0005$。
+从正弦表中可以看出，当角度在 $0^\circ$ 与 $90^\circ$ 间变化时，
+正弦值随着角度的增大（或减小）而增大（或减小），这从 $\sin 37^\circ24' = 0.6074$、
+$\sin 37^\circ30' = 0.6088$ 也可看出。所以，把 $0.6074$ 加上 $2'$ 的修正值 $0.0005$，
+即得 $\sin 37^\circ26'$ 的值。
+
+\jie \hspace*{2em} \begin{TrigonometricTblr}
+    \sin 37^\circ24' &   & = &       0.6074  & \\
+           ( + \,2'  & ) &   & (+ \, 0.0005  & ) \\
+    \sin 37^\circ26' &   & = &       0.6079  & \juhao
+\end{TrigonometricTblr}
+
+
+\liti 查表求 $\sin 37^\circ23'$ 的值。
+
+$23'$ 在 $18'$ 和 $24'$ 之间而靠近 $24'$，比 $24'$ 少 $1'$。
+所以先查出 $\sin 37^\circ24' = 0.6074$，再减去 $1'$ 的修正值 $0.0002$。
+
+\jie \hspace*{2em} \begin{TrigonometricTblr}
+    \sin 37^\circ24' &   & = &       0.6074 & \\
+            (- \, 1' & ) &   & (- \, 0.0002 & ) \\
+    \sin 37^\circ23' &   & = &       0.6072 & \juhao
+\end{TrigonometricTblr}
+
+
+\lianxi
+
+查表求下列正弦的值：
+
+\begin{xiaoxiaotis}
+\resetxxt
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\sin 48^\circ40'$；} & \xxt{$\sin 86^\circ19'$；} \\
+        \xxt{$\sin 21^\circ8'$；}  & \xxt{$\sin 70^\circ57'$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\lianxijiange
+
+
+余弦表的用法和正弦表类似，但要主意以下两点区别：
+
+(1) 查余弦值时，“度” 数在表\textbf{右边}的直列里去查，“分” 数在\textbf{底端}的横行里去查。
+
+(2) 查修正值时，要注意角度在 $0^\circ$ 与 $90^\circ$ 间变化时，
+余弦值随着角度的增大（或减小）而减小（或增大）。
+
+
+\liti 查表求 $\cos 43^\circ26'$ 的值。
+
+$26'$ 在 $24'$ 和 $30'$ 之间而靠近 $24'$，比 $24'$ 多 $2'$。
+所以先查出 $\cos 43^\circ24'$ 的值，再减去 $2'$ 的修正值 $0.0004$。
+
+
+\begin{table}[H]
+    \newcommand{\x}{\cdots}
+    \centering
+    \NewDocumentCommand{\myarrow}{m m m O{1em}} {
+        \tikz [overlay, >=Stealth] {
+            \begin{scope}[xshift=#1, yshift=#2]
+                \draw [->, rotate=#3] (0, 0) -- +(#4, 0);
+            \end{scope}
+        }
+    }
+    \begin{tblr}{
+        hline{4} = {solid},
+        hline{5} = {1pt, solid},
+        vlines,
+        vline{1, 2, 5, 6, 8} = {1pt, solid},
+        columns={c, mode=math},
+        column{1, 5}={3em},
+        column{6-8}={2em},
+    }
+        &       &        &       & \vdots   &     &     &    \\
+        & \x\x  &  7266   & \myarrow{1em}{.3em}{180}[2em] & 43^\circ & \myarrow{-1em}{.3em}{0}[2em]    &  4  &    \\
+        &       &  \myarrow{0em}{-0.5em}{90}[2em]      &       & \myarrow{-1.5em}{-0.5em}{90}[2em]  \vdots   &     &  \myarrow{0em}{-0.5em}{90}[2em]    &    \\
+        & \x\x  & 24'    & \x\x \myarrow{0.3em}{0.8em}{180}[2em] &   A      & 1'  & 2'  & 3' \\
+    \end{tblr}
+    \caption*{余 弦}
+\end{table}
+
+\jie \hspace*{2em} \begin{TrigonometricTblr}
+    \cos 43^\circ24' &   & = &       0.7266 &   \\
+            (+ \, 2' & ) &   & (- \, 0.0004 & ) \\
+    \cos 43^\circ26' &   & = &       0.7262 & \juhao
+\end{TrigonometricTblr}
+
+
+\lianxi
+
+查表求下列余弦的值：
+
+\begin{xiaoxiaotis}
+\resetxxt
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\cos 63^\circ$；}    & \xxt{$\cos 27^\circ12'$；} & \xxt{$\cos 85^\circ36'$；} \\
+        \xxt{$\cos 3^\circ12'$；}  & \xxt{$\cos 21^\circ44'$；} & \xxt{$\cos 54^\circ23'$；} \\
+        \xxt{$\cos 12^\circ31'$；} & \xxt{$\cos 38^\circ39'$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\lianxijiange
+
+
+反过来，已知一个锐角的正弦或余弦值，可用 “正弦和余弦表” 查出这个锐角的值。
+
+\liti 已知 $\sin\alpha = 0.2974$，求锐角 $\alpha$。
+
+从正弦表中找出 $0.2974$，由这个数所在的行向\textbf{左}查得 $17^\circ$，
+由 $0.2974$ 所在的列向\textbf{上}查得 $18'$，即
+$$ 0.2974 = \sin 17^\circ18' \juhao $$
+
+\jie 查表得 $\sin 17^\circ18' = 0.2974$，所以
+
+\hspace*{1.5em} 锐角 $\alpha = 17^\circ18'$。
+
+
+\liti 已知 $\cos\alpha = 0.7857$，求锐角 $\alpha$。
+
+在余弦表中找不出 $0.7857$，但能找出同它最接近的数 $0.7859$，
+由 $0.7859$ 所在的行向\textbf{右}查得 $38^\circ$，
+由 $0.7859$ 所在的列向\textbf{下} 查得 $12'$，
+即 $0.7859 = \cos 38^\circ12'$。
+但是 $\cos\alpha = 0.7857$，比 $0.7859$ 小 $0.0002$，
+这说明锐角 $\alpha$ 比 $38^\circ12'$ 要大。
+由 $0.7859$ 所在的行向右查得修正值 $0.0002$ 对应的角度是 $1'$，所以
+
+\hspace*{4em} \begin{TrigonometricTblr}
+          0.7859 &   & = & \cos 38^\circ12' &   \\
+    (- \, 0.0002 & ) &   &         (+ \, 1' & ) \\
+          0.7857 &   & = & \cos 38^\circ13' & \juhao
+\end{TrigonometricTblr}
+
+\jie 查表得 $\cos 38^\circ12' = 0.7859$，所以
+
+\hspace*{4em} \begin{TrigonometricTblr}
+          0.7859 &   & = & \cos 38^\circ12' &   \\
+    (- \, 0.0002 & ) &   &         (+ \, 1' & ) \\
+          0.7857 &   & = & \cos 38^\circ13' & \juhao
+\end{TrigonometricTblr}
+
+即  \qquad 锐角 $\alpha = 38^\circ13'$。
+
+
+\liti 已知 $\cos\beta = 0.4511$，求锐角 $\beta$。
+
+从余弦表中找出与 $0.4511$ 最接近的数 $0.4509 = \cos 63^\circ12'$。
+但是 $\cos\beta = 0.4511$，比 $0.4509$ 大 $0.0002$，
+由 $0.4509$ 所在的行向右查修正值只有 $0.0003$ 最接近 $0.0002$，
+所对应的角度是 $1'$, 所以
+
+\hspace*{4em} \begin{TrigonometricTblr}
+          0.4509 &   & = & \cos 63^\circ12' &   \\
+    (+ \, 0.0003 & ) &   &         (- \, 1' & ) \\
+          0.4512 &   & = & \cos 63^\circ11' & \juhao
+\end{TrigonometricTblr}
+
+这就是说，从表中只能查得与 $0.4511$ 最接近的数 $0.4512 = \cos 63^\circ11'$，
+我们就取锐角 $\beta = 63^\circ11'$。
+
+\jie \hspace*{2em} \begin{TrigonometricTblr}
+          0.4509 &   & = & \cos 63^\circ12' &   \\
+    (+ \, 0.0003 & ) &   &         (- \, 1' & ) \\
+          0.4512 &   & = & \cos 63^\circ11' & \juhao
+\end{TrigonometricTblr}
+
+$\therefore$ \qquad 锐角 $\beta = 63^\circ11'$。
+

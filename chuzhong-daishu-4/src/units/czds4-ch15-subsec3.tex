@@ -1,0 +1,27 @@
+\subsection{三角函数表}\label{subsec:15-3}
+
+上节我们求出了 $30^\circ$，$45^\circ$，$60^\circ$ 这些特殊角的三角函数值，
+但是用这种方法求任意角的三角函数值不仅很繁，而且一般是有困难。我们可以查三角函数表。
+从《中学数学用表》中给出的 “正弦和余弦表”、“正切和余切表”，
+可以查出 $0^\circ$ 到 $90^\circ$ 间每隔 $1'$ 的各个角所对应的三角函数值
+（一般是含有四个有效数字的近以值）。下面举例说明表的用法。
+
+
+\begingroup
+\NewDocumentEnvironment{TrigonometricTblr}{+b}{
+    \begin{tblr}[t]{
+        columns={mode=math, colsep=3pt, r},
+        column{1}={rightsep=0pt},
+        column{2}={leftsep=0pt},
+        column{4}={rightsep=0pt},
+        column{5}={colsep=0pt, l},
+        rows={rowsep=0pt},
+    }
+        #1
+    \end{tblr}
+}{}
+
+\input{../src/units/czds4-ch15-subsec3-1}
+\input{../src/units/czds4-ch15-subsec3-2}
+
+\endgroup
