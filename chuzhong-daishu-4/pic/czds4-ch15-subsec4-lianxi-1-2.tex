@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{sqrt(14)}
+    \pgfmathsetmacro{\b}{2.5}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\jiao}{asin(\b/\c)}
+
+    \begin{scope}[rotate=-90-\jiao]
+        \coordinate (A) at (\b, 0);
+        \coordinate (B) at (0, \a);
+        \coordinate (C) at (0, 0);
+
+        \draw (A) node [below] {$A$} to [chuizu={direction=left}] node [midway, above left] {$5$}  (C);
+        \draw (C) node [above] {$C$} -- (B) node [midway, above right] {$2\sqrt{14}$};
+        \draw (B) node [below] {$B$} -- (A) node [midway, below] {$9$};
+    \end{scope}
+\end{tikzpicture}
+
+

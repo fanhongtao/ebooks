@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{1.5}
+    \pgfmathsetmacro{\b}{3}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\r}{0.5}
+    \pgfmathsetmacro{\jiao}{asin(\a/\c)}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (C) at (\b, 0);
+
+    \draw (A) to [chuizu] node [midway, below] {邻边} (C);
+    \draw (C)  -- (B) node [midway, right] {对边};
+    \draw (B) -- (A) node [pos=0.3, above left, rotate=\jiao] {斜边};
+    \draw (0:\r) arc (0:\jiao:\r) node [pos=0.8, right] {$\alpha$};
+\end{tikzpicture}
+

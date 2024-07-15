@@ -1,0 +1,163 @@
+\subsection{直角三角形中边与角间的关系}\label{subsec:15-4}
+
+\begin{wrapfigure}[7]{r}{5cm}
+    \centering
+    \input{../pic/czds4-ch15-7}
+    \caption{}\label{fig:15-7}
+\end{wrapfigure}
+
+在生产实际和科学研究中，经常需要求出线段的长度或角的大小，这种问题常常可以归结为求一个三角形的边长或角的大小。
+由三角形中已知的边和角，计算未知的边或角，叫做\zhongdian{解三角形}。现在先来研究解直角三角形的问题。
+为此，我们用三角函数来表示直角三角形中边与角间的关系。
+
+如图 \ref{fig:15-7}，直角三角形 $ABC$ 中，$C$ 是直角，斜边是 $c$；
+锐角 $A$ 的对边是 $a$，邻边是 $b$;
+锐角 $B$ 的对边是 $b$，邻边是 $a$。\footnote{本章中，直角三角形 $ABC$ 的边和角的符号都是这样表示。}
+如图 \ref{fig:15-8} （1） 或（2）， 建立直角坐标系。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czds4-ch15-8-1}
+        \caption*{(1)}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czds4-ch15-8-2}
+        \caption*{(2)}
+    \end{minipage}
+    \caption{}\label{fig:15-8}
+\end{figure}
+
+根据三角函数的定义，可得：
+
+(1) \begin{tblr}[t]{columns={mode=math}}
+    \sin A = \dfrac{a}{c} \douhao & \cos A = \dfrac{b}{c} \douhao \\
+    \tan A = \dfrac{a}{b} \douhao & \cot A = \dfrac{b}{a} \fenhao
+\end{tblr}
+
+(2) \begin{tblr}[t]{columns={mode=math}}
+    \sin B = \dfrac{b}{c} \douhao & \cos B = \dfrac{a}{c} \douhao \\
+    \tan B = \dfrac{b}{a} \douhao & \cot B = \dfrac{a}{b} \juhao
+\end{tblr}
+
+
+% \begin{wrapfigure}[7]{r}{5cm}
+%     \centering
+%     \input{../pic/czds4-ch15-9}
+%     \caption{}\label{fig:15-9}
+% \end{wrapfigure}
+
+如果用 $\alpha$ 表示直角三角形的一个锐角，那么（1） 和 （2） 可以概括为（图 \ref{fig:15-9}）：
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-9}
+        \caption{}\label{fig:15-9}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-10}
+        \caption{}\label{fig:15-10}
+    \end{minipage}
+\end{figure}
+
+
+\begin{center}
+\framebox[22em]{\zhongdian{
+    \begin{tblr}[t]{columns={mode=math}, rows={rowsep=0.5em}}
+        \bm{\sin \alpha = \dfrac{\alpha \text{的对边}}{\text{斜边}}} \douhao          & \bm{\cos \alpha = \dfrac{\alpha \text{的邻边}}{\text{斜边}}} \douhao \\
+        \bm{\tan \alpha = \dfrac{\alpha \text{的对边}}{\alpha \text{的邻边}}} \douhao & \bm{\cot \alpha = \dfrac{\alpha \text{的邻边}}{\alpha \text{的对边}}} \juhao
+    \end{tblr}
+}}
+\end{center}
+
+这四个式子给出了直角三角形中边与角之间的关系。
+今后在解直角三角形时，可以不必借助于直角坐标系，直接应用这些关系式。
+
+由于 $B = 90^\circ - A$，从 (1) 和 (2) 还可得到
+\begin{center}
+    \framebox[25em]{
+        \begin{tblr}[t]{columns={mode=math}}
+            \bm{\sin (90^\circ - A) = \cos A} \douhao  & \bm{\cos (90^\circ - A) = \sin A} \douhao \\
+            \bm{\tan (90^\circ - A) = \cot A} \douhao  & \bm{\cot (90^\circ - A) = \tan A} \juhao
+        \end{tblr}
+    }
+\end{center}
+因为 $90^\circ - A$ 与 $A$ 的三角函数之间有上述关系，所以在求三角数值的表中，
+正弦与余弦可以合用一个表，正切与余切可以合用一个表。
+
+
+% \begin{wrapfigure}[10]{r}{5cm}
+%     \centering
+%     \input{../pic/czds4-ch15-10}
+%     \caption{}\label{fig:15-10}
+% \end{wrapfigure}
+
+\liti[0] 在直角三角形 $ABC$ 中，已知 $a = 12$，$b = 5$。求角 $A$、角 $B$ 的四个三角函数值（图 \ref{fig:15-10}）。
+
+\jie 由勾股定理，得
+
+\hspace*{1.5em} $c = \sqrt{a^2 + b^2} = \sqrt{12^2 + 5^2} = 13$。
+
+$\therefore$ \quad \begin{tblr}[t]{columns={mode=math}, rows={rowsep=0.5em}}
+    \sin A = \dfrac{a}{c} = \dfrac{12}{13} \douhao & \cos A = \dfrac{b}{c} = \dfrac{5}{13} \douhao &  \\
+    \tan A = \dfrac{a}{b} = \dfrac{12}{5} \douhao  & \cot A = \dfrac{b}{a} = \dfrac{5}{12} \douhao &  \\
+    \sin B = \cos A = \dfrac{5}{13} \douhao        & \cos B = \sin A = \dfrac{12}{13} \douhao \\
+    \tan B = \cot A = \dfrac{5}{12} \douhao        & \cot B = \tan A = \dfrac{12}{5} \juhao \\
+\end{tblr}
+
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{（口答）分别说出图中角 $A$、角 $B$ 的四个三角函数值：}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec4-lianxi-1-1}
+        \caption*{(1)}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec4-lianxi-1-2}
+        \caption*{(2)}
+    \end{minipage}
+    \caption*{(第 1 题)}
+\end{figure}
+
+
+\xiaoti{在直角三角形 $ABC$ 中：}
+\begin{xiaoxiaotis}
+
+    \xxt{已知 $a = 2$，$b = 1$，求角 $A$ 的四个三角函数值；}
+
+    \xxt{已知 $a = 3$，$c = 4$，求角 $B$ 的四个三角函数值；}
+
+    \xxt{已知 $b = 2$，$c = \sqrt{29}$，求角 $A$、角 $B$ 的四个三角函数值。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{把下列各式写成角 $A$ 或角 $B$ 的三角函数的形式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\cos (90^\circ - A)$；} & \xxt{$\tan (90^\circ - B)$；} \\
+        \xxt{$\sin (90^\circ - B)$；} & \xxt{$\cot (90^\circ - A)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\end{xiaotis}
+

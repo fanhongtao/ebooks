@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{3.6}
+    \pgfmathsetmacro{\b}{1.5}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\r}{0.5}
+    \pgfmathsetmacro{\jiaoa}{asin(\a/\c)}
+    \pgfmathsetmacro{\jiaob}{asin(\b/\c)}
+
+    \coordinate (A) at (\b, 0);
+    \coordinate (B) at (0, \a);
+    \coordinate (C) at (0, 0);
+
+    \draw (A) node [below] {$A$} to [chuizu={direction=left}] node [midway, below] {$b$} (C);
+    \draw (C) node [below] {$C$} -- (B) node [midway, left] {$a$};
+    \draw (B) node [left]  {$B$} -- (A) node [midway, above right] {$c$};
+    \draw (\b, 0) + (180:\r) arc (180:(180-\jiaoa):\r);
+    \draw [double] (0, \a) + (270:\r) arc (270:(270+\jiaob):\r);
+\end{tikzpicture}
+

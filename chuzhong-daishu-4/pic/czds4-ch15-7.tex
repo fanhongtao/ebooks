@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{1.5}
+    \pgfmathsetmacro{\b}{3}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (C) at (\b, 0);
+
+    \draw (A) node [below] {$A$} to [chuizu] node [midway, below] {$b$} (C) ;
+    \draw (C) node [below] {$C$} -- (B) node [midway, right] {$a$};
+    \draw (B) node [above] {$B$} -- (A) node [midway, above left] {$c$};
+\end{tikzpicture}
+

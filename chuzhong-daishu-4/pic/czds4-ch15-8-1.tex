@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth]
+    \pgfmathsetmacro{\a}{1.5}
+    \pgfmathsetmacro{\b}{3}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\r}{0.5}
+    \pgfmathsetmacro{\jiao}{asin(\a/\c)}
+
+    \draw [->] (-0.5, 0) -- (4, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 4) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left=0.3em] {\small $O$};
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (C) at (\b, 0);
+
+    \draw (A) node [below right] {$A$} to[chuizu] node [midway, below] {$b$} (C);
+    \draw (C) node [below] {$C$} -- (B) node [midway, right] {$a$};
+    \draw (B) node [above] {$B(b,a)$} -- (A) node [midway, above left] {$c$};
+    \draw (0:\r) arc (0:\jiao:\r);
+\end{tikzpicture}
+
