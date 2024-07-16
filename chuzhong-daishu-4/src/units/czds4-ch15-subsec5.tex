@@ -1,0 +1,295 @@
+\subsection{解直角三角形}\label{subsec:15-5}
+
+我们知道，直角三角形 $ABC$ 的六个元素（三条边和三个角），除直角 $C$ 外，其余五个元素之间有如下的关系：
+
+(1) 三边之间的关系
+$$ a^2 + b^2 = c^2 \quad \text{（勾股定理）；} $$
+
+(2) 锐角之间的关系
+$$ A + B = 90^\circ \fenhao $$
+
+(3) 边角之间的关系
+\begin{table}[H]
+    \centering
+    \begin{tblr}{columns={mode=math}, rows={rowsep=0.5em}}
+        \sin \alpha = \dfrac{\alpha \text{的对边}}{\text{斜边}} \douhao          & \cos \alpha = \dfrac{\alpha \text{的邻边}}{\text{斜边}} \douhao \\
+        \tan \alpha = \dfrac{\alpha \text{的对边}}{\alpha \text{的邻边}} \douhao & \cot \alpha = \dfrac{\alpha \text{的邻边}}{\alpha \text{的对边}} \douhao
+    \end{tblr}
+\end{table}
+式中的 $\alpha$ 表示锐角 $A$ 或锐角 $B$。
+
+利用这些关系，知道其中的两个元素（至少有一个是边），就可以求出其余的三个未知元素。
+就是说，解直角三角形的问题，只需知道直角三角形除直角外的两个元素（至少有一个是边）就可解决。举例说明如下。
+
+\begin{wrapfigure}[10]{r}{5cm}
+    \centering
+    \input{../pic/czds4-ch15-11}
+    \caption{}\label{fig:15-11}
+\end{wrapfigure}
+
+\liti 如图 \ref{fig:15-11} ，在直角三角形 $ABC$ 中，已知 $b = 35$，$c = 45$，
+求 $A$，$B$（精确到 $1^\circ$）和 $a$（保留两个有效数字）。
+
+\begin{enhancedline}
+\jie (1) $\cos A = \exdfrac{b}{c} = \dfrac{35}{45} \approx 0.7778$，查表得 $A \approx 39^\circ$。
+
+(2) $B = 90^\circ - A \approx 90^\circ - 39^\circ = 51^\circ$。
+
+(3) $a = \sqrt{c^2 - b^2} = \sqrt{45^2 - 35^2} = \sqrt{(45 + 35)(45 - 35)} = \sqrt{800}$，\\
+查平方根表得
+$$ a = 28.28 \approx 28 \juhao $$
+
+在例 1 中，由于已知边 $b$，$c$，所以求角 $A$ 时，我们选取含有角 $A$ 和边 $b$，$c$ 的关系式 $\cos A = \exdfrac{b}{c}$。
+
+
+\liti 在直角三角形 $ABC$ 中，已知 $a = 15$，$A = 35^\circ27'$，求 $b$，$c$ 和 $B$（边长保留两个有效数字）。
+
+\jie (1) \begin{tblr}[t]{columns={mode=math}}
+    \because   & \cot A = \exdfrac{b}{a} \douhao \\
+    \therefore & b = a \, \cot A = 15 \times \cot 35^\circ27' = 15 \times 1.4045 \approx 21 \juhao
+\end{tblr}
+
+(2) \begin{tblr}[t]{columns={mode=math}, rows={rowsep=0.5em}}
+    \because   & \sin A = \exdfrac{a}{c} \douhao \\
+    \therefore & c = \dfrac{a}{\sin A} = \dfrac{15}{\sin 35^\circ27'} = \dfrac{15}{0.5800} \approx 26 \juhao \\[.5em]
+\end{tblr}
+
+(3) $B = 90^\circ - 35^\circ27' = 54^\circ33'$。
+
+在例 2 中，已知 $a$ 和 $A$。求 $b$ 时，虽然也可选用关系式 $\tan A = \exdfrac{a}{b}$，
+但计算时需要用除法 $b = \dfrac{a}{\tan A}$，所以我们选用关系式 $\cot A = \exdfrac{b}{a}$。
+\end{enhancedline}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在直角三角形 $ABC$ 中：}
+\begin{xiaoxiaotis}
+
+    \xxt{已知 $c$，$A$，写出求 $a$ 和 $b$ 的关系式。}
+
+    \xxt{已知 $b$，$A$，写出求 $a$ 的关系式；已知 $a$，$A$，写出求 $b$ 的关系式。}
+
+    \xxt{已知 $a$，$b$ 怎样求 $A$？已知 $a$，$c$ 怎样求 $A$？已知 $b$，$c$ 怎样求 $A$？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{根据下列条件解直角三角形：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$c = 10 \nsep A = 30^\circ$；} & \xxt{$b = 15 \nsep B = 45^\circ$；} \\
+        \xxt{$a = 51 \nsep c = 70$；}       & \xxt{$a = 22 \nsep b = 12$。}
+    \end{tblr}
+
+    \hspace*{1.5em} （第（3），（4）题要求角度精确到 $1^\circ$，边长保留两个有效数字。）
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+\begin{enhancedline}
+由上面的例题可以看出，在解直角三角形时，经常要进行多位数的乘、除运算，特别是对已知角的三角函数值进行乘、除运算。
+例如计算 $15 \times \cot 35^\circ27'$，$\dfrac{15}{\sin 35^\circ27'}$ 等等。
+为了利用对数使计算简化，我们需要求得三角函数值的对数，
+例如需要求 $\lg \cot 35^\circ27'$，$\lg \sin 35^\circ27'$ 等等。
+利用“正弦对数和余弦对数表”、“正切对数和余切对数表”可以直接查出已知锐角的三角函数值的对数。
+这些表的用法与“正弦和余弦表”、“正切和余切表”类似，可参看表中的说明。
+\end{enhancedline}
+
+
+\liti 查表求下列各三角函数值的对数：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\lg{\sin 34^\circ16'}$；} & \xxt{$\lg{\cos 68^\circ38'}$；} \\
+        \xxt{$\lg{\tan 5^\circ48'}$；}  & \xxt{$\lg{\cot 21^\circ59'}$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={18em, colsep=0pt}}
+    \xxt{$\lg{\sin 34^\circ16'} = \overline{1}.7505$；} & \xxt{$\lg{\cos 68^\circ38'} = \overline{1}.5615$；} \\
+    \xxt{$\lg{\tan 5^\circ48'}  = \overline{1}.0068$；} & \xxt{$\lg{\cot 21^\circ59'} = 0.3940$。}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+反过来，利用这些表还可以由一个锐角的三角函数值的对数，查出这个锐角。
+
+\liti 求下列各式中的锐角 $\alpha$ ：
+\begin{xiaoxiaotis}
+
+    \hspace*{1.5em} \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$\lg{\sin \alpha} = \overline{2}.9104$；} & \xxt{$\lg{\cos \alpha} = \overline{1}.9169$；} \\
+        \xxt{$\lg{\tan \alpha} = 0.0021$；}            & \xxt{$\lg{\cot \alpha} = \overline{1}.9884$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={18em, colsep=0pt}}
+    \xxt{$\alpha = 4^\circ40'$；} & \xxt{$\alpha = 34^\circ19'$；} \\
+    \xxt{$\alpha = 45^\circ8'$；} & \xxt{$\alpha = 45^\circ46'$。}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+下面我们举例说明利用对数解直角三角形的方法。
+
+\liti 已知直角三角形 $ABC$ 中，$c = 287.4$，$B = 42^\circ6'$，解这个三角形。\footnote{
+    在本章中，如无特别说明，解三角形时。角度精确到 $1'$，边长保留四个有效数字。
+}
+
+\jie (1) $A = 90^\circ - 42^\circ6' = 47^\circ54'$。
+
+(2) \begin{tblr}[t]{columns={mode=math}, row{1}={abovesep=0.5em}}
+    \because   & \cos B = \exdfrac{a}{c} \douhao \\
+    \therefore & a = c \, \cos B \juhao \\
+\end{tblr}
+
+两边取对数得
+
+\hspace*{2em} $\lg{a} = \lg{c} + \lg{\cos B}$。
+
+\hspace*{2em} \begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+}
+    \lg{287.4} = 2.4585 \\
+    \lg{\cos 42^\circ6'} = \overline{1}.8704 \tikz [overlay] {\draw (1em, -0.5em) node {$(+$};} \\
+    \lg{a} = 2.3289
+\end{tblr}
+
+查反对数表得
+
+\hspace*{2em} $a = 213.2$。
+
+
+(3) \begin{tblr}[t]{columns={mode=math}, row{1}={abovesep=0.5em}}
+    \because   & \sin B = \exdfrac{b}{c} \douhao \\
+    \therefore & b = c \, \sin B \juhao \\
+\end{tblr}
+
+两边取对数得
+
+\hspace*{2em} $\lg b = \lg c + \lg \sin B$。
+
+\hspace*{2em} \begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+}
+    \lg{287.4} = 2.4585 \\
+    \lg{\sin 42^\circ6'} = \overline{1}.8264 \tikz [overlay] {\draw (1em, -0.5em) node {$(+$};} \\
+    \lg{b} = 2.2849
+\end{tblr}
+
+查反对数表得
+
+\hspace*{2em} $b = 192.7$。
+
+
+
+\begin{enhancedline}
+\liti 已知直角三角形 $ABC$ 中，$a = 104.0$，$b = 20.49$，解这个三角形。
+
+\jie (1) $\tan A = \exdfrac{a}{b}$。
+
+两边取对数得
+
+\hspace*{2em} $\lg{\tan A} = \lg{a} - \lg{b}$。
+
+\hspace*{2em} \begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+}
+    \lg{104.0} = 2.0170 \\
+    \lg{20.49} = 1.3115 \tikz [overlay] {\draw (1em, -0.5em) node {$(-$};} \\
+    \lg{\tan A} = 0.7055
+\end{tblr}
+
+查表得
+
+\hspace*{2em} $A = 78^\circ51'$。
+
+
+(2) $B = 90^\circ - 78^\circ51' = 11^\circ9'$。
+
+(3) 因为 $\sin A = \exdfrac{a}{c}$，所以 $c = \dfrac{a}{\sin A}$。
+
+两边取对数得
+
+\hspace*{2em} $\lg{c} = \lg{a} - \lg{\sin A}$。
+
+\hspace*{2em} \begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+}
+    \lg{104.0} = 2.0170 \\
+    \lg{\sin 78^\circ51'} = \overline{1}.9917 \tikz [overlay] {\draw (1em, -0.5em) node {$(-$};} \\
+    \lg{c} = 2.0253
+\end{tblr}
+
+查反对数表得
+
+\hspace*{2em} $c = 106.0$。
+\end{enhancedline}
+
+例 6 中的 $c$ 也可利用勾股定理，查平方表、平方根表来计算。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{查表求下列各三角函数值的对数：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\lg{\sin 21^\circ36'}$；} & \xxt{$\lg{\sin 5^\circ47'}$；}  & \xxt{$\lg{\cos 32^\circ8'}$；} \\
+    \end{tblr}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\lg{\cos 66^\circ10'}$；} & \xxt{$\lg{\tan 27^\circ41'}$；} & \xxt{$\lg{\tan 70^\circ43'}$；} \\
+        \xxt{$\lg{\cot 69^\circ2'}$；}  & \xxt{$\lg{\cot 89^\circ24'}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\begin{minipage}[t]{10cm}
+    \xiaoti{求下列各式中的锐角 $\alpha$：}
+    \begin{xiaoxiaotis}
+
+        \begin{tblr}{columns={colsep=0pt}}
+            \xxt{$\lg{\sin \alpha} = \overline{1}.4001$；} & \xxt{$\lg{\cos \alpha} = \overline{2}.9301$；} \\
+            \xxt{$\lg{\tan \alpha} = \overline{2}.0318$；} & \xxt{$\lg{\cot \alpha} = \overline{1}.5018$。}
+        \end{tblr}
+    \end{xiaoxiaotis}
+
+    \xiaoti{根据下列条件解直角三角形：}
+    \begin{xiaoxiaotis}
+
+        \xxt{$a = 30.01 \nsep B = 80^\circ24'$；}
+
+        \xxt{$c = 0.8328 \nsep b = 0.2954$。}
+
+    \end{xiaoxiaotis}
+
+
+    \xiaoti{如图，已知 $\alpha = 37^\circ$，$OP = 26$，求点 $P$ 的坐标（保留两个有效数字）。}
+\end{minipage}
+\quad
+\begin{minipage}[t]{4cm}
+    \begin{figure}[H]
+        \centering
+        \input{../pic/czds4-ch15-subsec5-lianxi-4}
+        \caption*{(第 4 题)}
+    \end{figure}
+\end{minipage}
+
+\end{xiaotis}
+

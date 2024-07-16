@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth]
+    \draw [->] (-0.4, 0) -- (3, 0) node[below=0.2em] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.4) -- (0, 2) node[left=0.2em]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {\small $O$};
+
+    \pgfmathsetmacro{\jiao}{36}
+    \coordinate (A) at (\jiao:3);
+    \coordinate (P) at (\jiao:2.6);
+    \pgfmathsetmacro{\r}{0.5}
+
+    \draw (O) -- (A);
+    \draw [->] (0:\r) arc (0:\jiao:\r) node [midway, right] {$\alpha$};
+    \draw [fill=black] (P) circle (0.05) node [above] {$P$};
+\end{tikzpicture}

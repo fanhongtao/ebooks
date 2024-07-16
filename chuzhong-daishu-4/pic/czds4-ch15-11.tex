@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.1}
+    \pgfmathsetmacro{\b}{35 * \factor}
+    \pgfmathsetmacro{\c}{45 * \factor}
+    \pgfmathsetmacro{\a}{sqrt(\c*\c - \b*\b)}
+    \pgfmathsetmacro{\r}{0.5}
+    \pgfmathsetmacro{\jiaoa}{asin(\a/\c)}
+    \pgfmathsetmacro{\jiaob}{asin(\b/\c)}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (C) at (\b, 0);
+
+    \draw (A) node [below] {$A$} to [chuizu] node [midway, below] {$35$} (C);
+    \draw (C) node [below] {$C$} -- (B) node [midway, right] {$a$};
+    \draw (B) node [above] {$B$} -- (A) node [midway, above, rotate=\jiaoa] {$45$};
+    \draw (0:\r) arc (0:\jiaoa:\r);
+    \draw [double] (\b, \a) + (270:\r) arc (270:(270 -\jiaob):\r);
+\end{tikzpicture}
+
