@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+    \pgfmathsetmacro{\b}{3}       % AC 的长度
+    \pgfmathsetmacro{\jiaoa}{26}
+    \pgfmathsetmacro{\a}{tan(\jiaoa) * \b}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (C) at (\b, 0);
+    \coordinate (D) at (2*\b, 0);
+
+    \draw (A) node [left] {$A$} -- (C);
+    \draw (C) node [below] {$C$} -- (B) node [midway, right==0.2em] {\small 中柱};
+    \draw (B) node [above] {$B$} -- (A) node [midway, above, rotate=\jiaoa] {\small 上弦};
+    \draw (0:\r) arc (0:\jiaoa:\r) node [pos=0.8, right=0.5em] {\footnotesize $\jiaoa^\circ$};
+
+    \draw (B) -- (D) -- (C);
+    % \draw [<->] ($(A) + (0, -0.7cm)$) to [xianduan={above=0.7cm}] node {\small 跨度} ($(D) + (0, -0.7cm)$);
+    \draw [<->, transform canvas = {yshift=-0.7cm}] (A) to [xianduan={above=0.7cm}] node {\small 跨度} (D);
+\end{tikzpicture}
+

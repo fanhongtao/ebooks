@@ -1,0 +1,46 @@
+\begin{tikzpicture}[
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+% 各坐标点的相对位置
+% H      A    D      K
+%     B  E    F  C
+%
+% I                  J
+
+    % 以 B 为原点，通过直角三角形 ABE 计算坐标
+    \pgfmathsetmacro{\factor}{0.02}
+    \pgfmathsetmacro{\jiaob}{55}
+    \pgfmathsetmacro{\b}{70 * \factor}  % AE=70mm
+    \pgfmathsetmacro{\a}{49 * \factor}  % BE=70mm
+    \pgfmathsetmacro{\e}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\ad}{180 * \factor} % AD=180mm
+    \pgfmathsetmacro{\x}{100 * \factor} % A 点扩展点 H 的水平间隔
+    \pgfmathsetmacro{\y}{130 * \factor} % 扩展点 H 点扩展点 I 垂直间隔
+
+    \coordinate (B) at (0,  0);
+    \coordinate (A) at (\a, \b);
+    \coordinate (E) at (\a, 0);
+    \coordinate (F) at (\a + \ad, 0);
+    \coordinate (C) at (\a + \ad + \a, 0);
+    \coordinate (D) at (\a + \ad, \b);
+
+    \coordinate (H) at ($(A) - (\x, 0)$);
+    \coordinate (I) at ($(H) - (0, \y)$);
+    \coordinate (K) at ($(D) + (\x, 0)$);
+    \coordinate (J) at ($(K) - (0, \y)$);
+
+    \draw [thick, pattern={mylines[angle=45, distance={5pt}]}]
+        (H) -- (I) -- (J) -- (K)
+            -- (D) -- (C) -- (B) -- (A) -- cycle;
+    \draw [dashed] (A) -- (D);
+    \draw (A) to[chuizu={direction=left}] (E);
+    \draw (D) to[chuizu={direction=right}] (F);
+
+    \node [above] at (A) {$A$};
+    \node [left]  at (B) {$B$};
+    \node [right] at (C) {$C$};
+    \node [above] at (D) {$D$};
+    \node [below] at (E) {$E$};
+    \node [below] at (F) {$F$};
+\end{tikzpicture}
+

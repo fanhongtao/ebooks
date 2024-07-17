@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\c}{3} % 用 3 表示 12/2
+    \pgfmathsetmacro{\jiaoa}{22}
+    \pgfmathsetmacro{\a}{\c * tan(\jiaoa)}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (C) at (\c, \a);
+    \coordinate (D) at (\c, 0);
+    \coordinate (B) at (2*\c, 0);
+
+    \coordinate (AC1) at ($(A)!0.33!(C)$);
+    \coordinate (AC2) at ($(A)!0.66!(C)$);
+    \coordinate (BC1) at ($(B)!0.33!(C)$);
+    \coordinate (BC2) at ($(B)!0.66!(C)$);
+
+    \draw (A) node [left] {$A$} -- (B) node [right] {$B$} -- (C) node [above] {$C$} --cycle;
+    \draw (C) -- (D) node [below] {$D$};
+    \draw (D) -- (AC2) -- (AC2 |- A) -- (AC1) -- (AC1 |- A);
+    \draw (D) -- (BC2) -- (BC2 |- A) -- (BC1) -- (BC1 |- A);
+\end{tikzpicture}
+

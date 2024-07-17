@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+    % 以 A 为原点
+    \pgfmathsetmacro{\b}{3}       % 表示 5.5 米
+    \pgfmathsetmacro{\jiaoa}{24}
+    \pgfmathsetmacro{\a}{tan(\jiaoa) * \b}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (-\b, \a);
+    \coordinate (C) at (-\b, 0);
+
+    \draw (A) -- ($(A)!1.3!(B)$);
+    \draw (A) -- ($(A)!1.3!(C)$);
+    \draw (180:\r) arc (180:180-\jiaoa:\r) node [pos=0.8, left=0.5em] {\small $\jiaoa^\circ$};
+    \draw (A) -- ($(A) + (0, 0.5)$);
+    \draw (B) -- ($(B)!-0.3!(C)$);
+    \draw [dashed] (B) -- (C);
+    \draw (B) to [chuizu={skipline=true}] (C);
+    %\draw (C) rectangle ($(C) + (0.2, 0.2)$);
+    \node [right] at (A) {$A$};
+    \node [above right] at (B) {$B$};
+    \node [below left]  at (C) {$C$};
+    %\draw [<->] ($(C) + (0, -1em)$) to [xianduan={above=1em}] node {\small $5.5$ 米} ($(A) + (0, -1em)$);
+    \draw [<->, transform canvas = {yshift=-1em}] (C) to [xianduan={above=1em}] node {\small $5.5$ 米} (A);
+\end{tikzpicture}
+

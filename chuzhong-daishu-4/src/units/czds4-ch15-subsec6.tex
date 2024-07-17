@@ -1,0 +1,218 @@
+\subsection{应用举例}\label{subsec:15-6}
+\begin{enhancedline}
+
+解直角三角形的应用非常广泛，下面举一些例子。
+
+\liti 厂房屋顶人字架（等腰三角形）的跨度为 $10$ 米，角 $A$ 为 $26^\circ$（图 \ref{fig:15-12}）。
+求中柱 $BC$（$C$ 为底边中点）和上弦 $AB$ 的长（精确到 $0.01$ 米）。
+
+\jie 由题意可知，$\triangle ABC$ 为直角三角形，其中 $C = 90^\circ$，$A = 26^\circ$，$AC = 5 \; \mi$。
+
+$\because$   \quad $\tan A = \dfrac{BC}{AC}$，
+
+$\therefore$ \quad $BC = AC \cdot \tan A = 5 \times \tan 26^\circ = 5 \times 0.4877 \approx 2.44 \; (\mi)$。
+
+$\because$   \quad $\cos A = \dfrac{AC}{AB}$，
+
+$\therefore$ \quad $AB = \dfrac{AC}{\cos A} = \dfrac{5}{\cos 26^\circ}$。
+
+两边取对数，得
+
+\hspace*{2em} $\lg{AB} = \lg{5} - \lg{\cos 26^\circ}$。
+
+\hspace*{2em} \begin{tblr}[t]{
+    columns={r, mode=math, colsep=0em},
+    rows={rowsep=0em},
+    hline{3}={1}{solid},
+}
+    \lg{5} = 0.6990 \\
+    \lg{\cos 26^\circ} = \overline{1}.9537 \tikz [overlay] {\draw (1em, -0.5em) node {$(-$};} \\
+    \lg{AB} = 0.7453
+\end{tblr}
+
+查反对数表得
+
+\hspace*{2em} $AB = 5.563 \approx 5.56 \; (\mi)$。
+
+答， $BC$ 约为 $2.44$ 米，$AB$ 约为 $5.56$ 米。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{6.5cm}
+        \centering
+        \input{../pic/czds4-ch15-12}
+        \caption{}\label{fig:15-12}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{8cm}
+        \centering
+        \input{../pic/czds4-ch15-13}
+        \caption{}\label{fig:15-13}
+    \end{minipage}
+\end{figure}
+
+
+\begingroup
+\renewcommand{\haomi}{\mathord{\text{mm}}}%毫米
+
+\liti 燕尾槽的横断面是等腰梯形。图 \ref{fig:15-13} 是一燕尾槽的横断面，其中燕尾角 $B$ 是 $55^\circ$，
+外口宽 $AD$ 是 $180\;\haomi$， 燕尾槽的深度是 $70\;\haomi$。
+求它的里口宽 $BC$（精确到 $1\;\haomi$）。
+
+分析：连结 $AD$，并分别作 $AE$，$DF$ 垂直于 $BC$，则 $AD = EF$，$BE = FC$。
+又 $BC = BE + EF + FC = 2BE + AD$。由于 $AD$ 已知，只要求出 $BE$，这个问题就解决了。
+
+\jie 作 $AE \perp BC$，$DF \perp BC$。在直角三角形 $ABE$ 中，
+
+$\because$   \quad $\cot B = \dfrac{BE}{AE}$，
+
+$\therefore$ \quad $BE = AE \cdot \cot B = 70 \times \cot 55^\circ = 70 \times 0.7002 \approx 49 \; (\haomi)$。
+
+$\therefore$ \quad $BC = 2BE + AD \approx 2 \times 49.0 + 180 = 278 \; (\haomi)$。
+
+答：燕尾槽的里口宽 $BC$ 约为 $278 \; \haomi$。
+\endgroup
+
+
+\liti 如图 \ref{fig:15-14}，在山坡上种树，要求株距（两树间的水平距离）是 $5.5$ 米。
+测得斜坡的倾斜角是 $24^\circ$，求斜坡上相邻两树间的倾斜距离是多少米（精确到 $0.1$ 米）。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{8cm}
+        \centering
+        %\input{../pic/czds4-ch15-14-1}
+        \includegraphics[width=0.6\textwidth]{../pic/czds4-ch15-14-1}
+        \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czds4-ch15-14-2}
+        \caption*{（2）}
+    \end{minipage}
+    \caption{}\label{fig:15-14}
+\end{figure}
+
+
+分析：如图 \ref{fig:15-14} （2）， $\angle A = 24^\circ$，水平距离 $AC = 5.5$米，$BC \perp AC$，
+$\triangle ABC$ 是直角三角形。只要解 $\triangle ABC$ 求出 $AB$，问题就解决了。
+
+\jie 在 $\triangle ABC$ 中， $\angle C = 90^\circ$，
+
+\hspace*{3em} \begin{tblr}{rows={rowsep=0.5em, mode=math}}
+    \cos A = \dfrac{AC}{AB} \douhao \\
+    AB = \dfrac{AC}{\cos A} = \dfrac{5.5}{0.9135} \approx 6.0 \; (\mi) \juhao
+\end{tblr}
+
+答：斜坡上相邻两树间的倾斜距离约是 $6.0$ 米。
+
+\begin{wrapfigure}[7]{r}{7.5cm}
+    \centering
+    \input{../pic/czds4-ch15-15}
+    \caption{}\label{fig:15-15}
+\end{wrapfigure}
+
+在筑坝、开渠、挖河和修路时，设计图纸上都要注明斜坡的倾斜程度。
+通常把坡面的铅直高度 $h$ 和水平宽度 $l$ 的比叫做\zhongdian{坡度}
+（或叫做\zhongdian{坡比}）（图 \ref{fig:15-15}），用字母 $i$ 表示，即
+$$ i = \exdfrac{h}{l} \juhao $$
+坡度一般写成 $1:m$ 的形式，如 $i = 1:5 \left(\text{即 \;} i = \exdfrac{1}{5} \right)$。
+
+如果把坡面与水平面的夹角记作 $\alpha$（叫做\zhongdian{坡角}），那么
+$$ i = \exdfrac{h}{l} = \tan \alpha \juhao $$
+显然，坡度越大（于是 $\alpha$ 角越大），坡面就越陡。
+
+
+\begingroup
+\renewcommand{\mi}{\mathord{\text{m}}}%米
+
+\liti 水库大坝的横断面是梯形（图 \ref{fig:15-16}），坝顶宽 $6 \;\mi$，坝高 $23 \; \mi$，
+斜坡 $AB$ 的坡度 $i = 1:3$，斜坡 $CD$ 的坡度 $i' = 1:2.5$。
+求斜坡 $AB$ 的坡角 $\alpha$，坝底宽 $AD$ 和斜坡 $AB$ 的长（精确到 $0.1 \; \mi$）。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czds4-ch15-16}
+    \caption{}\label{fig:15-16}
+\end{figure}
+
+\jie 在图 \ref{fig:15-16} 中，作 $BE \perp AD$，$CF \perp AD$。在直角三角形 $ABE$ 和 $CDF$ 中，
+
+$\because$   \quad $\dfrac{BE}{AE} = 1:3$，$\dfrac{CF}{FD} = 1:2.5$，
+
+$\therefore$ \quad $AE = 3BE = 3 \times 23 = 69 \; (\mi)$，
+
+\hspace*{2em}$FD = 2.5CF = 2.5 \times 23 = 57.5 \; (\mi)$。
+
+$\therefore$ \quad $AD = AE + EF + FD = 69 + 6 + 57.5 = 132.5 \; (\mi)$。
+
+因为斜坡 $AB$ 的坡度 $i = \tan \alpha = \exdfrac{1}{3} \approx 0.3333$，查表得
+$$ \alpha \approx 18^\circ26' \juhao $$
+
+$\because$   \quad $\dfrac{BE}{AB} = \sin \alpha$，
+
+$\therefore$ \quad $AB = \dfrac{BE}{\sin \alpha} = \dfrac{23}{\sin 18^\circ26'} = 72.73 \approx 72.7 \; (\mi)$。
+
+答：斜坡 $AB$ 的坡角 $\alpha$ 约为 $18^\circ26'$，坝底宽 $AD$ 为 $132.5$ 米，斜坡 $AB$ 的长约为 $72.7$ 米。
+
+在例 4 中，也可由 $\dfrac{BE}{AE} = 1:3$， 得 $\dfrac{BE}{AB} = 1:\sqrt{10}$，求得
+$$ AB = \sqrt{10} \cdot BE = \sqrt{10} \times 23 \approx 72.7 \; (\mi) \juhao $$
+\endgroup
+\end{enhancedline}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{如图，某厂车间的人字屋架为等腰三角形，跨度 $AB = 12$ 米，$\angle A = 22^\circ$，
+    求中柱 $CD$ 和上弦 $AC$ 的长（精确到 $0.01$ 米）。
+}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{8cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec6-lianxi-1}
+        \caption*{（第 1 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec6-lianxi-2}
+        \caption*{（第 2 题）}
+    \end{minipage}
+\end{figure}
+
+
+\xiaoti{如图，在离地面高 $5$ 米处引拉线固定电线杆，拉线和地面成 $60^\circ$ 角，求拉线 $AC$ 的长，
+    拉线下端点 $A$ 离杆底 $D$ 多远（精确到 $0.01$ 米）。
+}
+
+\xiaoti{如图，沿 $AC$ 方向开山修渠，为了加快施工进度，要在小山的另一边同时施工。
+    从 $AC$ 上的一点 $B$ 取 $\angle ABD = 140^\circ$，$BD = 520 \; \mi$，$\angle D = 50^\circ$，
+    那么开挖点 $E$ 离 $D$ 多远（精确到 $0.1$ 米），才能使 $A$，$C$，$E$ 成一直线？
+}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec6-lianxi-3}
+        \caption*{（第 3 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{8cm}
+        \centering
+        \input{../pic/czds4-ch15-subsec6-lianxi-4}
+        \caption*{（第 4 题）}
+    \end{minipage}
+\end{figure}
+
+\xiaoti{如图，一铁路路基的横断面为等腰梯形 $ABCD$，
+    根据图示数据计算出路基下底宽 $AD$（精确到 $0.1$ 米）和坡角 $\alpha$。
+}
+
+\end{xiaotis}
+

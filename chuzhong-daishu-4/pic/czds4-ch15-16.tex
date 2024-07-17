@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\r}{0.5}
+    \pgfmathsetmacro{\a}{2.3}
+    \pgfmathsetmacro{\e}{3 * \a}
+    \pgfmathsetmacro{\b}{sqrt(\e*\e - \a*\a)}
+    \pgfmathsetmacro{\jiaoa}{asin(\a/\e)}
+    \pgfmathsetmacro{\d}{\a}
+    \pgfmathsetmacro{\f}{2.5 * \a}
+    \pgfmathsetmacro{\c}{sqrt(\f*\f - \d*\d)}
+    \pgfmathsetmacro{\jiaod}{asin(\d/\f)}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\b, \a);
+    \coordinate (E) at (\b, 0);
+    \coordinate (C) at ($(B) + (0.6, 0)$);
+    \coordinate (F) at ($(E) + (0.6, 0)$);
+    \coordinate (D) at ($(F) + (\c, 0)$);
+
+    \draw (A) -- (B) node [midway, above, rotate=\jiaoa] {$1:3$};
+    \draw (B) -- (C) node [midway, above] {\small $6$m};
+    \draw (C) -- (D) node [midway, above, rotate=-\jiaod] {$1:2.5$};
+    \draw (A) -- (D);
+    \draw [dashed] (B) -- (E) node [midway, above, rotate=90] {\small $23$m};
+    \draw [dashed] (C) -- (F);
+    \draw (B) to [chuizu={skipline=true}] (E);
+    \draw (C) to [chuizu={skipline=true}] (F);
+
+    \draw (B) node [above left]  {$B$};
+    \draw (C) node [above right] {$C$};
+    \foreach \x in {A, E, F, D} {
+        \draw (\x) node [below] {$\x$};
+    }
+\end{tikzpicture}
+

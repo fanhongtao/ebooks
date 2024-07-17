@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth]
+    \pgfmathsetmacro{\r}{0.3}
+    \pgfmathsetmacro{\p}{0.08}
+    \pgfmathsetmacro{\a}{2}
+    \pgfmathsetmacro{\jiaoa}{60}
+    \pgfmathsetmacro{\c}{\a * cot(\jiaoa)}
+
+    \coordinate (A) at (-\c - \p, 0);
+    \coordinate (C1) at (-\p, \a);
+    \coordinate (D1) at (-\p, 0);
+    \coordinate (B) at (\c + \p, 0);
+    \coordinate (C2) at (\p, \a);
+    \coordinate (D2) at (\p, 0);
+
+    \draw (A) node [below=0.6em] {$A$} -- (C1) node [left] {$C$} -- (D1) node [below=0.6em] {$D$} -- cycle;
+    \draw (A) + (0:\r) arc (0:\jiaoa:\r) node [midway, above right] {\small $\jiaoa^\circ$};
+    \draw (B) node [below=0.6em] {$B$} -- (C2) -- (D2) -- cycle;
+    \draw (D1) rectangle ($(D1) + (2*\p, 3.5)$);
+    \draw [ground={angle=-135}, name path=gnd] [thick] (-2, 0) -- (2, 0);
+    \draw [<->] (1.6, 0) to [xianduan={above=1.5cm}] node [above, rotate=90] {$5$m} (1.6, \a);
+    \draw [fill=black] ($(C1) - (\p, \p/2)$) rectangle ($(C1) + (3*\p, \p/2)$);
+
+    \begin{scope}[yshift=2.5cm]
+        \pgfmathsetmacro{\len}{6*\p}
+        \draw [fill=black] (-\len/2, 0) rectangle (\len/2, \p);
+        \foreach \x in {-4, ..., 4} {
+            \draw (\len*\x/10,\p)  -- +(0, 0.06);
+        }
+    \end{scope}
+
+    \begin{scope}[yshift=3.1cm]
+        \draw (-4*\p, 0) rectangle (4*\p, \p);
+        \foreach \x in {-4, ..., 4} {
+            \draw (8*\p*\x/10,\p)  -- +(0, 0.06);
+        }
+    \end{scope}
+\end{tikzpicture}
+

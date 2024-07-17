@@ -270,3 +270,33 @@
   }
 }
 
+
+% 绘制 “山”
+\tikzset{
+  mountain/.pic={
+    \draw [thick, rounded corners] (0, 0) -- (2, 0)
+      .. controls (6, 1) and (8, 4) .. (9, 8)
+      .. controls (14, 16) and (7, 22) .. (10, 34)
+      .. controls (9, 40) and (-1, 40) .. (-2, 34)
+      -- (-5, 28)
+      .. controls (-10, 10) and (-10, 6) .. (0, 0)
+      ;
+    \draw [thick, rounded corners] (0, 10)
+      .. controls (2, 11) and (5, 16) .. (6, 20)
+      .. controls (3, 26) and (7, 30) .. (4, 32)
+      .. controls (0, 28) and (1, 26) .. (0, 24)
+      .. controls (-3, 22) and (-5, 14) .. (-2, 12)
+      .. controls (-2, 11) and (-2, 8) .. (0, 10)
+      ;
+    \draw [thick, rounded corners] (0, 14)
+      .. controls (1, 14) and (5, 20) .. (2, 23)
+      .. controls (1.1, 21) and (0.4, 19.5) .. (1, 20)
+      .. controls (-1.5, 18) and (-2, 15) .. (0, 14)
+      ;
+    \begin{scope} [rotate around={-40:(0, 17)}]
+      \draw [fill=black] (-2.5, 16) rectangle (3.5, 17);
+    \end{scope}
+  }
+}
+
+

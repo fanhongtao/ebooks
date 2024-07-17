@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+    scale=0.8,
+]
+% 各坐标点 (A-G) 的相对位置
+%       C    D
+% A  B       |
+%            E   F  G
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at ($(A) + (1, 0)$);
+    \coordinate (C) at ($(B) + (2, 2)$);
+    \coordinate (D) at ($(C) + (2, 0)$);
+    \coordinate (E) at ($(D) - (0, 3)$);
+    \coordinate (F) at ($(E) + (3, 0)$);
+    \coordinate (G) at ($(F) + (1, 0)$);
+
+    \draw (A) -- (B) -- (C) -- (D)  -- (F) -- (G);
+    \draw [dashed] (D) -- (E) -- (F);
+    \draw (D) to [chuizu={skipline=true}] (E);
+    % \draw [<->] ($(E) + (0, -1em)$) to [xianduan={above=1em}] node {$l$} ($(F) + (0, -1em)$);
+    % \draw [<->] ($(E) + (-1em, 0)$) to [xianduan={below=1em}] node [rotate=90] {$h$} ($(D) + (-1em, 0)$);
+    \draw [<->, transform canvas = {yshift=-1em}] (E) to [xianduan={above=1em}] node {$l$} (F);
+    \draw [<->, transform canvas = {xshift=-1em}] (E) to [xianduan={below=1em}] node [rotate=90] {$h$} (D);
+    \draw (D) -- (F) node [midway, above, rotate=-45] {$i = h : l$};
+
+    \pgfmathsetmacro{\r}{0.7}
+    \draw (F) + (180:\r)  arc (180:135:\r);
+
+    \coordinate (X) at ($(F) + (0.5, 1.2)$);
+    \path [path picture={\draw (path picture bounding box.north west) pic {waterwave};}]
+        (X) -- ($(X) + (-1.4, 0.7)$) -- ($(X) + (0.8, 0.7)$) -- cycle;
+\end{tikzpicture}
+

@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (2, 0);
+    \coordinate (C) at (3, 0);
+    \coordinate (D) at ($(B) + (320:5)$);
+
+    \draw (A) node [above] {$A$}
+        -- (B) node [above] {$B$}
+        -- (C) node [above] {$C$};
+    \draw (B) -- (D) node [right] {$D$};
+    \path [name path=p1] (A) -- +(6, 0);
+    \path [name path=p2] (D) -- +(90:4);
+    \draw [name intersections={of=p1 and p2, by=E}]
+        (D) -- (E) node [right] {$E$};
+
+    \pgfmathsetmacro{\r}{0.5}
+    \draw (B) + (180:\r) arc (180:320:\r) node [midway, below left] {\small $140^\circ$};
+    \draw (D) + (90:\r) arc (90:140:\r) node [pos=0.7, above] {\small $50^\circ$};
+
+    \pic [scale=0.1] at (4.4, -1.5) {mountain};
+\end{tikzpicture}
+
