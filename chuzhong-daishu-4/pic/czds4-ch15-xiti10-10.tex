@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+% 各坐标点的相对位置
+%          B -- C
+%          |    |
+%  A ---   E -- F -- D
+    \pgfmathsetmacro{\factor}{0.5}
+    \pgfmathsetmacro{\bc}{2.8 * \factor}
+    \pgfmathsetmacro{\be}{4.2 * \factor}
+    \pgfmathsetmacro{\cd}{7.5 * \factor}
+    \pgfmathsetmacro{\ae}{\be * 2.5}
+    \pgfmathsetmacro{\jiaoa}{atan(\be/\ae)}
+    \pgfmathsetmacro{\jiaod}{asin(\be/\cd)}
+    \pgfmathsetmacro{\df}{\be * cot(\jiaod)} % \cf = \be
+    \pgfmathsetmacro{\r}{0.7}
+
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (\ae, \be);
+    \coordinate (C) at (\ae + \bc, \be);
+    \coordinate (E) at (\ae, 0);
+    \coordinate (D) at (\ae + \bc + \df, 0); % \ef = \bc
+
+    \draw (A) node [below] {$A$}
+        -- (B) node [above left] {$B$} node [midway, above, rotate=\jiaoa] {$i = 1:2.5$}
+        -- (C) node [above right] {$C$} node [midway, above] {$2.8$米}
+        -- (D) node [below] {$D$} node [midway, above, rotate=-\jiaod] {$7.5$米}
+        -- (E) node [below] {$E$}
+        -- cycle;
+    \draw [dashed] (B) -- (E) node [midway, below, rotate=90] {$4.2$米};
+    \draw (B) to[chuizu={skipline=true}] (E);
+
+    \draw (A) + (0:\r) arc (0:\jiaoa:\r) node [midway, right] {$\alpha$};
+    \draw [double] (D) + (180:\r) arc (180:180-\jiaod:\r) node [midway, left] {$\beta$};
+\end{tikzpicture}
+

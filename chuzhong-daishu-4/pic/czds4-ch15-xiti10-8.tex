@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+% 各坐标点的相对位置
+%  B
+%  |
+%  |       A
+%  E       D
+    \pgfmathsetmacro{\factor}{0.04}
+    \pgfmathsetmacro{\b}{150 * \factor}
+    \pgfmathsetmacro{\jiaoa}{30.2} % 30度12分
+    \pgfmathsetmacro{\a}{tan(\jiaoa) * \b}
+    \pgfmathsetmacro{\ad}{1.52 * \factor}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \coordinate (E) at (0, 0);
+    \coordinate (D) at (4, 0);
+    \coordinate (A) at (4, 0.5);
+
+    \draw [name path=p1] (E) -- +(0, 3);
+    \path [name path=p2] (A) -- +(180-\jiaoa:5);
+    \path [name intersections={of=p1 and p2, by=B}];
+
+    \draw [thick, ground={angle=-135}] (-1, 0) -- (5, 0);
+    \draw [<->] ([yshift=-1.8em] E) to [xianduan={above=1.8em}] node {$150$米} ([yshift=-1.8em] D);
+
+    \draw (E) node [below, xshift=-0.7em] {$E$}  -- (B) node [above] {$B$};
+    \draw (D) node [below, xshift=0.7em]  {$D$} -- (A) node [right] {$A$};
+    \draw (B) -- (A) -- +(180:2);
+    \draw (A) + (180:\r) arc (180:180-\jiaoa:\r) node [midway, left] {$30^\circ12'$};
+
+    \coordinate (B1) at (-0.4, 0);
+    \coordinate (B2) at ( 0.4, 0);
+    \draw [name path=b1] (B) -- (B1);
+    \draw [name path=b2] (B) -- (B2);
+    \foreach \y in {0.8, 1.4, 1.9, 2.3, 2.5, 2.7} {
+        \path [name path=xline] (-1, \y) -- (1, \y);
+        \path [name intersections={of=b1 and xline, by=NB1}];
+        \path [name intersections={of=b2 and xline, by=NB2}];
+        \draw (B1) -- (NB2) -- (NB1) -- (B2);
+        \coordinate (B1) at (NB1);
+        \coordinate (B2) at (NB2);
+    }
+\end{tikzpicture}
+

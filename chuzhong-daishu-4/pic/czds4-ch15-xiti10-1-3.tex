@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.4}
+    \pgfmathsetmacro{\a}{8 * \factor}
+    \pgfmathsetmacro{\c}{sqrt{73} * \factor}
+    \pgfmathsetmacro{\b}{sqrt(\c*\c - \a*\a)}
+
+    \begin{scope}[rotate=-75]
+        \coordinate (A) at (\b, 0);
+        \coordinate (B) at (0, \a);
+        \coordinate (C) at (0, 0);
+
+        \draw (A) node [below] {$A$} to [chuizu={direction=left}] (C);
+        \draw (C) node [above] {$C$} -- (B) node [midway, above] {$8$};
+        \draw (B) node [right]  {$B$} -- (A) node [midway, below right] {$\sqrt{73}$};
+    \end{scope}
+\end{tikzpicture}
+

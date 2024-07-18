@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,]
+    \coordinate (O) at (0, 0);
+    \pgfmathsetmacro{\jiao}{30}
+
+    \draw (O) -- +(3, 0) node [above] {水平线};
+    \draw (0, -1) -- (0, 1) node [midway, left, align=center] {铅\\[-0.5em]垂\\[-0.5em]线};
+
+    \pgfmathsetmacro{\jiao}{20}
+    \pgfmathsetmacro{\r}{1.0}
+    \draw [->] (O) -- (\jiao:2.5) node [right] {视线};
+    \draw (0:\r) arc (0:\jiao:\r) node [pos=0.7, right=0.5em] {\small 仰角};
+
+    \pgfmathsetmacro{\r}{0.7}
+    \draw [->] (O) -- (-\jiao:2.5) node [right] {视线};
+    \draw [double] (0:\r) arc (0:-\jiao:\r) node [pos=0.8, right=1.0em] {\small 俯角};
+\end{tikzpicture}

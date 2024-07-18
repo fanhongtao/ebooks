@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.04}
+    \pgfmathsetmacro{\b}{55 * \factor}
+    \pgfmathsetmacro{\c}{73 * \factor}
+    \pgfmathsetmacro{\a}{sqrt(\c*\c - \b*\b)}
+
+    \coordinate (B) at (0, 0);
+    \coordinate (A) at (\a, -\b);
+    \coordinate (C) at (\a, 0);
+
+    \draw (A) node [below] {$A$} to [chuizu] node [midway, right] {$55$} (C) ;
+    \draw (C) node [above] {$C$} -- (B);
+    \draw (B) node [above] {$B$} -- (A) node [midway, below left] {$73$};
+\end{tikzpicture}
+

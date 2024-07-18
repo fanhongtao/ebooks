@@ -1,0 +1,54 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+% 各坐标点的相对位置
+%      K  L                E  F
+%    J      A          D        G
+%               B   C  M
+%  I                               H
+    \pgfmathsetmacro{\factor}{2.5}
+    \pgfmathsetmacro{\bc}{0.5 * \factor}
+    \pgfmathsetmacro{\jiaob}{atan(1/1.5)}
+
+    % 下面的数据原题中没有给出，是自己填写的。
+    \pgfmathsetmacro{\cm}{1.5}
+    \pgfmathsetmacro{\dm}{1}   % \dm:\cm = 1:1.5
+    \pgfmathsetmacro{\r}{0.7}
+
+    % 以 BC 的中点为原点，这样，
+    %    B、C 是关于 y 轴的对称点，
+    %    A、D 是关于 y 轴的对称点，
+    %    ……
+    \coordinate (O) at (0, 0);
+    \coordinate (C) at (\bc/2, 0);
+    \coordinate (D) at ($(C) + (\cm, \dm)$);
+    \coordinate (E) at ($(C)!1.5!(D)$);
+    \coordinate (F) at ($(E) + (0.6, 0)$);
+    \coordinate (H) at ($(E) + (2, -2.5)$);
+
+    \coordinate (A) at ($(D -| O)!-1!(D)$);
+    \path [name path=ad] (A) -- ($(A)!1.5!(D)$);
+    \path [name path=fh] (F) -- (H);
+    \path [name intersections={of=ad and fh, by=G}];
+
+    \coordinate (B) at ($(C -| O)!-1!(C)$);
+    \coordinate (I) at ($(H -| O)!-1!(H)$);
+    \coordinate (J) at ($(G -| O)!-1!(G)$);
+    \coordinate (K) at ($(F -| O)!-1!(F)$);
+    \coordinate (L) at ($(E -| O)!-1!(E)$);
+
+    \fill [pattern={mylines[angle=45, distance={5pt}]}]
+        (A) -- (B)  -- (C) -- (D)
+        -- (G) -- (H) -- (I) -- (J) -- cycle;
+    \draw [thick]
+        (A) node [above, xshift=0.1em] {$A$}
+        -- (B) node [below] {$B$} node [pos=0.6, above, rotate=-\jiaob] {\small $1:1.5$}
+        -- (C) node [below] {$C$} node [midway, above] {（三）}
+        -- (D) node [above, xshift=-0.1em] {$D$}
+        -- (E) -- (F) node [pos=0.4, below] {（二）}
+        -- (H) -- (I) -- (K)
+        -- (L) node [pos=0.6, below] {（一）}
+        --cycle;
+    \draw [dashed, thick] (J) -- (G);
+\end{tikzpicture}
+

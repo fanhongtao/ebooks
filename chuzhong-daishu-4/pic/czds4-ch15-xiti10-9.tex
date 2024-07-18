@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth,
+    every node/.style={fill=white, inner sep=1pt, outer sep=3pt},
+]
+% 各坐标点的相对位置
+%          D -- E
+%  A ---   C    |
+%  |       B    |
+%  G------------F
+    \pgfmathsetmacro{\factor}{0.016}
+    \pgfmathsetmacro{\ag}{124 * \factor}
+    \pgfmathsetmacro{\ac}{140 * \factor}
+    \pgfmathsetmacro{\bd}{83  * \factor}
+    \pgfmathsetmacro{\ef}{150 * \factor}
+    \pgfmathsetmacro{\bc}{\ag + \bd - \ef}
+    \pgfmathsetmacro{\jiaoa}{atan(\bc/\ac)}
+    %\pgfmathsetmacro{\jiaoa}{atan2(\bc,\ac)}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \coordinate (G) at (0,   0);
+    \coordinate (A) at (0,   \ag);
+    \coordinate (B) at (\ac, \bc);
+    \coordinate (C) at (\ac, \ag);
+    \coordinate (D) at (\ac, \ef);
+    \coordinate (E) at ($(D) + (1, 0)$);
+    \coordinate (F) at ($(E) - (0, \ef)$);
+
+    \draw [thick] (G) -- (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+    \draw [dashed] (A) -- (C);
+    \draw (A) + (0:\r) arc (0:-\jiaoa:\r) node [pos=0.8, right] {$\alpha$};
+    \draw [<->] ([yshift= 0.7em] A) to [xianduan={above=0.3em, below=0.7em}] node {$140$} ([yshift= 0.7em] C);
+    \draw [<->] ([xshift=-1em] G) to [xianduan={below=1em}] node [rotate=90] {$124$} ([xshift=-1em] A);
+    \draw [<->] ([xshift= 1em] B) to [xianduan={above=1em}] node [rotate=90] {$83$}  ([xshift= 1em] D);
+    \draw [<->] ([xshift= 1em] F) to [xianduan={above=1em}] node [rotate=90] {$150$} ([xshift= 1em] E);
+\end{tikzpicture}
+

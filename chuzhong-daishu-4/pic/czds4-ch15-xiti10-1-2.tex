@@ -1,0 +1,19 @@
+
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.2}
+    \pgfmathsetmacro{\a}{16 * \factor}
+    \pgfmathsetmacro{\b}{10 * \factor}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)}
+    \pgfmathsetmacro{\jiao}{asin(\b/\c)}
+
+    \begin{scope}[rotate=-90-\jiao]
+        \coordinate (A) at (\b, 0);
+        \coordinate (B) at (0, \a);
+        \coordinate (C) at (0, 0);
+
+        \draw (A) node [below] {$A$} to [chuizu={direction=left}] node [midway, above left] {$10$}  (C);
+        \draw (C) node [above] {$C$} -- (B) node [midway, above right] {$16$};
+        \draw (B) node [below] {$B$} -- (A);
+    \end{scope}
+\end{tikzpicture}
+
