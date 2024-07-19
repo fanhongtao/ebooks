@@ -1,0 +1,11 @@
+\begin{tikzpicture}[>=Stealth,]
+    \draw [->] (-0.5, 0) -- (2, 0) node [below] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 2) node [left]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {$O$};
+    \coordinate (P) at (0, 1.2);
+    \filldraw [fill=black] (P) circle (0.05) node [right] {$P(x, y)$};
+    %\draw [->] (0:0.5) arc (0:90:0.5) node[midway, right=0.3em] {$90^\circ$};
+    \draw pic [draw, ->, "$90^\circ$", angle eccentricity=1.8] {angle=x axis--O--P};
+    \node [left] at (0, 0.8) {$r$};
+\end{tikzpicture}
+

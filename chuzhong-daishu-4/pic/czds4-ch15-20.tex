@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth,]
+    \draw [->] (-2.5, 0) -- (2.5, 0) node [below] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3) node [left]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {$O$};
+
+    \coordinate (P)  at (-1.5, 2);
+    \coordinate (P1) at ( 1.5, 2);
+
+    \draw (O) -- ($(O)!1.2!(P)$);
+    \draw (O) -- ($(O)!1.2!(P1)$);
+    \draw [dashed] (P) node [left]  {$P(x, y)$} -- (P1) node [right] {$P_1(x, y)$};
+
+    \draw pic [draw, ->, "$\alpha$", angle radius=2em] {angle=x axis--O--P1};
+    \draw pic [draw, ->, "$180^\circ - \alpha$" {xshift=1cm, yshift=-0.5cm}, angle eccentricity=1.4, angle radius=3em] {angle=x axis--O--P};
+
+    \node [above right, inner sep=1pt] at ($(O)!0.6!(P)$)  {$r$};
+    \node [above left,  inner sep=1pt] at ($(O)!0.6!(P1)$) {$r$};
+\end{tikzpicture}
+

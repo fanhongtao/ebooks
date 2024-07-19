@@ -1,0 +1,199 @@
+\subsection{化钝角三角函数为锐角三角函数}\label{subsec:15-7}
+
+在生产实际和科学研究中，也常遇到解斜三角形（锐角三角形或钝角三角形）的问题。
+为了研究斜三角形中边和角间的关系，我们先讨论 $90^\circ \leqslant \alpha < 180^\circ$ 时，
+角 $\alpha$ 的三角函数的情况。
+
+当 $\alpha = 90^\circ$ 时，角 $\alpha$ 的终边与 $y$ 轴的正半轴 $Oy$ 重合（图 \ref{fig:15-17}），
+这时角 $\alpha$ 的终边上任一点 $P(x,\; y)$，有 $x = 0$，$y = r = OP$。所以
+\begin{center}
+    \begin{tblr}{rows={mode=math, rowsep=0.5em}}
+        \sin{90^\circ} = \exdfrac{y}{r} = 1 \douhao & \cos{90^\circ} = \exdfrac{x}{r} = 0 \douhao \\
+        \tan{90^\circ} \text{不存在} \douhao & \cot{90^\circ} = \exdfrac{x}{y} = 0 \juhao
+    \end{tblr}
+\end{center}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{6.5cm}
+        \centering
+        \input{../pic/czds4-ch15-17}
+        \caption{}\label{fig:15-17}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{8cm}
+        \centering
+        \input{../pic/czds4-ch15-18}
+        \caption{}\label{fig:15-18}
+    \end{minipage}
+\end{figure}
+
+
+当 $90^\circ < \alpha < 180^\circ$ 时，角 $\alpha$ 的终边在第二象限（图 \ref{fig:15-18}），
+这时角 $\alpha$ 的终边上任一点 $P(x,\; y)$，有 $x < 0$，$y > 0$，$r = OP > 0$。所以
+\begin{center}
+    \begin{tblr}{rows={mode=math, rowsep=0.5em}}
+        \sin{\alpha} = \exdfrac{y}{r} > 0 \douhao & \cos{\alpha} = \exdfrac{x}{r} < 0 \douhao \\
+        \tan{\alpha} = \exdfrac{y}{x} < 0 \douhao & \cot{\alpha} = \exdfrac{x}{y} < 0 \juhao
+    \end{tblr}
+\end{center}
+
+我们知道锐角三角函数的值都是正的。（为什么？）
+但是，对于钝角三角函数来说，除正弦的值仍是正的以外，余弦、正切、余切的值都是负的。
+
+
+\liti 已知角 $\alpha$ 的终边经过点 $P(-3, 4)$，求角 $\alpha$ 在的四个三角函数值（图\ref{fig:15-19}）。
+
+\begin{wrapfigure}[4]{r}{5cm}
+    \centering
+    \input{../pic/czds4-ch15-19}
+    \caption{}\label{fig:15-19}
+\end{wrapfigure}
+
+
+\jie $\because$ \quad $x = -3 \nsep y = 4$，
+
+$\therefore$ \quad $r = \sqrt{(-3)^2 + 4^2} = \sqrt{25} = 5$。
+
+$\therefore$ \quad  \begin{tblr}[t]{rows={mode=math, rowsep=0.5em}}
+    \sin{\alpha} = \exdfrac{y}{r} = \exdfrac{4}{5} \douhao \\
+    \cos{\alpha} = \exdfrac{x}{r} = -\exdfrac{3}{5} \douhao \\
+    \tan{\alpha} = \exdfrac{y}{x} = -\exdfrac{4}{3} \douhao \\
+    \cot{\alpha} = \exdfrac{x}{y} = -\exdfrac{3}{4} \juhao
+\end{tblr}
+
+对于给定的一个钝角，怎样求出它的三角函数值呢？
+
+锐角的三角函数值可以查表求得，如果我们能够把钝角的三角函数转化为锐角的三角函数，
+那么求钝角的三角函数值的问题就解决了。
+
+容易知道，任意一个钝角都可以表示成 $180^\circ - \alpha$ 的形式，其中 $\alpha$ 为锐角。
+例如，$120^\circ = 180^\circ - 60^\circ$。
+我们来研究钝角 $180^\circ - \alpha$ 与锐角 $\alpha$ 的三角函数之间的关系。
+
+\begin{wrapfigure}[7]{r}{6.5cm}
+    \centering
+    \input{../pic/czds4-ch15-20}
+    \caption{}\label{fig:15-20}
+\end{wrapfigure}
+
+如图 \ref{fig:15-20}， 在钝角 $180^\circ - \alpha$ 的终边上任取
+一点 $P(x,\; y)$，设 $OP = r$。
+在锐角 $\alpha$ 的终边上取点 $P_1(x_1,\; y_1)$，使 $OP_1 = r$，
+那么，因为 $OP$ 和 $OP_1$ 与 $y$ 轴成相等的角，且 $OP = OP_1$，
+所以点 $P$ 和 $P_1$ 关于 $y$ 轴对称。
+于是，这两个点的坐标有下面的关系：
+$$ x = -x_1 \nsep y = y_1 \juhao $$
+
+$\therefore$ \quad  \begin{tblr}[t]{rows={mode=math, rowsep=0.5em}}
+    \sin{(180^\circ - \alpha)} = \exdfrac{y}{r} = \dfrac{y_1}{r} = \sin{\alpha} \douhao \\
+    \cos{(180^\circ - \alpha)} = \exdfrac{x}{r} = \dfrac{-x_1}{r} = -\cos{\alpha} \douhao \\
+    \tan{(180^\circ - \alpha)} = \exdfrac{y}{x} = \dfrac{y_1}{-x_1} = -\tan{\alpha} \douhao \\
+    \cot{(180^\circ - \alpha)} = \exdfrac{x}{y} = \dfrac{-x_1}{y_1} = -\cot{\alpha} \juhao
+\end{tblr}
+
+当 $\alpha$ 为锐角时，有
+
+\begin{center}
+    \framebox[28em]{
+        \begin{tblr}[t]{rows={mode=math, rowsep=0.5em}}
+            \bm{\sin (180^\circ - \alpha) =  \sin \alpha} \douhao  & \bm{\cos (180^\circ - \alpha) = -\cos \alpha} \douhao \\
+            \bm{\tan (180^\circ - \alpha) = -\tan \alpha} \douhao  & \bm{\cot (180^\circ - \alpha) = -\cot \alpha} \juhao
+        \end{tblr}
+    }
+\end{center}
+
+这些公式今后经常用到，要记住。
+
+
+\liti 求下列三角函数值：
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={9em, colsep=0pt}}
+        \xxt{$\sin 120^\circ$；} & \xxt{$\cos 158^\circ14'$；} & \xxt{$\tan 135^\circ$；} & \xxt{$\cot 150^\circ18'$。}
+    \end{tblr}
+
+\resetxxt
+\jie \begin{tblr}[t]{columns={colsep=0pt}}
+    \xxt{$\sin 120^\circ = \sin (180^\circ - 60^\circ) = \sin 60^\circ = \dfrac{\sqrt{3}}{2}$；} \\
+    \xxt{$\cos 158^\circ14' = \cos (180^\circ - 21^\circ46') = -\cos 21^\circ46' = -0.9287$；} \\
+    \xxt{$\tan 135^\circ = \tan (180^\circ - 45^\circ) = -\tan 45^\circ = -1$；} \\
+    \xxt{$\cot 150^\circ18' = \cot (180^\circ - 29^\circ42') = -\cot 29^\circ42' = -1.753$。}
+\end{tblr}
+
+\end{xiaoxiaotis}
+
+
+
+\liti%
+\begin{xiaoxiaotis}%
+    \hspace*{-1.5em}\begin{tblr}[t]{columns={colsep=0pt}}
+        \xxt[\xxtsep]{已知 $\sin\alpha = \exdfrac{5}{6}$，$0^\circ < \alpha < 180^\circ$，求 $\alpha$；} \\
+        \xxt{已知 $\cos\alpha = -0.8728$，$0^\circ < \alpha < 180^\circ$，求 $\alpha$。}
+    \end{tblr}
+
+\begin{enhancedline}
+\jie （1） 已知 $\sin\alpha = \exdfrac{5}{6} \approx 0.8333$，$0^\circ < \alpha < 180^\circ$，
+所以 $\alpha$ 可以是锐角，也可以是钝角。从“正弦和余弦表”查得 $\sin 56^\circ27' = 0.8333$，
+\end{enhancedline}
+
+$\therefore$ \quad $a_1 = 56^\circ27'$。
+
+又 $\because$ \quad $\sin (180^\circ - 56^\circ27') = \sin 56^\circ27' = 0.83333$，
+
+$\therefore$ \quad $a_2 = 180^\circ - 56^\circ27' = 123^\circ33'$。
+
+本题有两解：
+$$ a_1 = 56^\circ27' \nsep a_2 = 123^\circ33' \juhao $$
+
+
+（2）已知 $\cos\alpha$ 为负值，且 $0^\circ < \alpha < 180^\circ$，所以 $\alpha$ 是钝角。
+设 $\alpha = 180^\circ - \theta$，$\theta$ 为锐角，于是
+$$ \cos\alpha = \cos (180^\circ - \theta) = -\cos\theta = -0.8728 \juhao $$
+
+可得 $\cos\theta = 0.8728$，
+
+查表得 $\theta = 29^\circ13'$，所以
+$$ \alpha = 180^\circ - 29^\circ13' = 150^\circ47' \juhao $$
+
+\end{xiaoxiaotis}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{已知角 $\alpha$ 的终边分别经过下列各点，求角 $\alpha$ 的四个三角函数值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={9em, colsep=0pt}}
+        \xxt{$(-2,\; 2)$；} & \xxt{$(-1,\; \sqrt{3})$；} & \xxt{$(-2,\; \sqrt{5})$；} & \xxt{$(0,\; 3)$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\xiaoti{求下列三角函数值：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\sin{135^\circ} \nsep \cos{120^\circ} \nsep \tan{150^\circ} \nsep \cot{150^\circ}$；}
+
+    \xxt{$\sin{118^\circ8'} \nsep \cos{100^\circ24'} \nsep \tan{95^\circ12'} \nsep \cot{151^\circ42'}$；}
+
+    \xxt{$\cos{123^\circ26'} \nsep \sin{90^\circ10'} \nsep \cot{134^\circ43'} \nsep \tan{172^\circ21'}$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知 $0^\circ < \theta < 180^\circ$，求下列各式中的 $\theta$ 值：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}, rows={rowsep=0.5em}}
+        \xxt{$\sin\theta = \exdfrac{1}{2}$；} & \xxt{$\sin\theta = 0.6517$；} & \xxt{$\cos\theta = -\dfrac{\sqrt{3}}{2}$；} \\
+        \xxt{$\cos\theta = -0.3541$；} & \xxt{$\tan\theta = -3.566$；} & \xxt{$\cot\theta = -\dfrac{\sqrt{3}}{3}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+
+\end{xiaotis}
+
+
+

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth,]
+    \draw [->] (-3.5, 0) -- (1.5, 0) node [below] {$x$} coordinate(x axis);
+    \draw [->] (0, -1) -- (0, 2) node [left]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {$O$};
+
+    \pgfmathsetmacro{\jiao}{150}
+    \coordinate (P) at (\jiao:3);
+    \coordinate (M) at (P |- O);
+
+    \draw (O) -- ($(O)!1.2!(P)$);
+    % \draw [->] (0:0.5) arc (0:\jiao:0.5) node[midway, right=0.3em] {$\alpha$};
+    \draw pic [draw, ->, "$\alpha$", angle eccentricity=1.4] {angle=x axis--O--P};
+    \filldraw [fill=black] (P) circle (0.05) node [right] {$P(x, y)$};
+    % \draw [dashed] (P) -- (M) node [below] {$M$} node [midway, left] {$y$};
+    % \draw (P) to[chuizu={skipline=true}] (M);
+    \draw [dashed] (P) -- (M) node [below] {$M$} node [midway, left] {$y$}
+        pic [draw, solid, angle radius=0.5em] {right angle=P--M--x axis};
+    \node [above] at ($(O)!0.5!(P)$) {$r$};
+    \node [below] at ($(O)!0.5!(M)$) {$x$};
+\end{tikzpicture}
+
