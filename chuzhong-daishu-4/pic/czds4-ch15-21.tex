@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth,]
+    \draw [->] (-2, 0) -- (3, 0) node [below] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3) node [left]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {$O$};
+
+    \coordinate (A) at (O);
+    \coordinate (B) at (-1.5, 2);
+    \coordinate (C) at (2, 0);
+    \coordinate (B') at (B |- O);
+
+    \draw [thick] (A) node[below right] {$A$}
+         -- (B) node [above] {$B(x,y)$} node [midway, below left] {$c$}
+         -- (C) node [below] {$C(b,0)$} node [midway, above] {$a$}
+         -- cycle  node [midway, below] {$b$};
+    \draw pic [draw, ->] {angle=C--A--B};
+    \draw [dashed] (B) -- (B') node [midway, left]  {$y$};
+    \node [below] at ($(O)!0.6!(B')$)  {$x$};
+\end{tikzpicture}
+

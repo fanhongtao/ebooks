@@ -1,0 +1,201 @@
+\subsection{余弦定理}\label{subsec:15-8}
+
+在本节和下节，我们在证明两个重要定理——余弦定理和正弦定理，并说明怎样利用这两个定理来解斜三角形。
+
+\begin{wrapfigure}[7]{r}{6.5cm}
+    \centering
+    \input{../pic/czds4-ch15-21}
+    \caption{}\label{fig:15-21}
+\end{wrapfigure}
+
+\begin{enhancedline}
+以三角形 $ABC$ 的顶点 $A$ 为原点，射线 $AC$ 为 $x$ 轴的正半轴，建立直角坐标系。如图 \ref{fig:15-21}。
+这时，顶点 $B$ 可看作角 $A$ 终边上的一个点，它到原点的距离 $r = c$。
+设点 $B$ 的坐标为 $(x,\; y)$，由三角函数的定义可知，不论角 $A$ 是锐角、钝角还是直角，
+都有 $\exdfrac{x}{c} = \cos A$，$\exdfrac{y}{c} = \sin A$，
+所以 $x = c \, \cos A$，$y = c \, \sin A$，即点 $B$ 的坐标是 $(c \, \cos A,\; c \, \cos A)$。
+又点 $C$ 的坐标是 $(b,\; 0)$，根据两点间的距离公式，可得
+$$ a = BC = \sqrt{(b - c \cos A)^2 + (-c \sin A)^2} \douhao $$
+两边平方，得
+$$ a^2 = (b - c \cos A)^2 + (-c \sin A)^2 \juhao $$
+\end{enhancedline}
+
+化简等式右边：
+\begin{align*}
+        & (b - c \cos A)^2 + (-c \sin A)^2 \\
+    ={} & b^2 - 2bc \cos A + c^2\cos^2 A + c^2 \sin^2 A \\
+    ={} & b^2 + c^2(\sin^2 A + \cos^2 A) - 2bc \cos A \\
+    ={} & b^2 + c^2 - 2bc \cos A \douhao
+\end{align*}
+于是
+\begin{equation}
+    a^2 = b^2 + c^2 - 2bc \cos A \juhao \tag{1}
+\end{equation}
+
+如果以 $\triangle ABC$ 的顶点 $B$ 或顶点 $C$ 为原点，如图 \ref{fig:15-22} 建立直角坐标系，同样可以证明：
+\begin{gather}
+    b^2 = c^2 + a^2 - 2ca \cos B \juhao \tag{2} \\
+    c^2 = a^2 + b^2 - 2ab \cos C \juhao \tag{3}
+\end{gather}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-22-1}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch15-22-2}
+    \end{minipage}
+    \caption{}\label{fig:15-22}
+\end{figure}
+
+由此，我们得到关于任意三角形的三条边和一个角间关系的重要定理：
+
+\zhongdian{余弦定理 \quad 三角形任何一边的平方等于其他两边平方的和减去这两边与它们夹角的余弦的积的两倍。}
+
+\begin{center}
+    \framebox[20em]{
+        $\begin{gathered}
+            \bm{a^2 = b^2 + c^2 - 2bc \cos A \douhao} \\
+            \bm{b^2 = c^2 + a^2 - 2ca \cos B \douhao} \\
+            \bm{c^2 = a^2 + b^2 - 2ab \cos C \juhao}
+        \end{gathered}$
+    }
+\end{center}
+
+如果三角形 $ABC$ 中有一个角是直角，例如，$C = 90^\circ$，这时 $\cos C = 0$，
+由余弦定理可得 $c^2 = a^2 + b^2$，这就是勾股定理。
+由此可见，余弦定理是勾股定理的推广，而勾股定理是余弦定理的特例。
+
+由 (1), (2), (3) 式可得：
+
+\begin{gather*}
+    \bm{\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}} \douhao \\[0.5em]
+    \bm{\cos B = \dfrac{c^2 + a^2 - b^2}{2ca}} \douhao \\[0.5em]
+    \bm{\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}} \juhao \\
+\end{gather*}
+
+利用余弦定理可以解决以下两类解斜三角形的问题：
+
+(1) 已知三边，求三个角；
+
+(2) 已知两边和它们的夹角，求第三边和其他两个角。
+
+
+\liti 在 $\triangle ABC$ 中，已知 $a = 7$， $b = 10$，$c = 6$，求 $A$，$B$ 和 $C$ （精确到 $1^\circ$）。
+
+\begin{enhancedline}
+\jie (1) $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc} = \dfrac{10^2 + 6^2 - 7^2}{2 \times 10 \times 6} = \dfrac{87}{120} = 0.7250$，
+
+查表，得
+
+\hspace*{4em} $A \approx 44^\circ$。
+
+(2) $\cos C = \dfrac{a^2 + b^2 - c^2}{2ab} = \dfrac{7^2 + 10^2 - 6^2}{2 \times 7 \times 10} = \dfrac{113}{140} \approx 0.8071$，
+
+查表，得
+
+\hspace*{4em} $C \approx 36^\circ$。
+
+(3) $\cos B = 180^\circ - (A + C) \approx 180^\circ - (44^\circ + 36^\circ)  = 100^\circ$。
+\end{enhancedline}
+
+
+\zhuyi 例 1 中我们先利用余弦定理求出两个锐角 $A$ 和 $C$，然后利用“三角形内角和定理” 求角 $B$，
+$B = 100^\circ$，是一个钝角。
+如果用余弦定理求角 $B$，由于角 $B$ 是钝角，$\cos B$ 应该取负值。
+一般已知三角形的三边求角时，根据“三角形中大边所对的角较大”，
+我们只要先求较小的边所对的角，这时所求的角必为锐角（想一想这是为什么）。
+
+
+\liti 在 $\triangle ABC$ 中，已知
+$$ a = 2.730 \nsep b = 3.696 \nsep C = 82^\circ28' \douhao $$
+解这个三角形。
+
+\jie (1) $c^2 = a^2 + b^2 - 2ab \cos C$。
+
+设 $u = 2ab \cos C$，
+
+两边取对数，查表计算得
+\begin{align*}
+    \lg{u} &= \lg{2} + \lg{a} + \lg{b} + \lg{\cos C} \\
+           &= \lg{2} + \lg{2.730} + \lg{3.696} + \lg{\cos 82^\circ28'} \\
+           &= 0.3010 + 0.4362 + 0.5677 + \overline{1}.1176 \\
+           &= 0.4225 \douhao
+\end{align*}
+查反对数表，得
+$$ u = 2.645 \juhao $$
+
+$\therefore$ \quad $c^2 = a^2 + b^2 - u = 2.730^2 + 3.696^2 - 2.645$。
+
+查平方表得平方数并进行加减，得
+$$ c^2 = 18.47 \douhao $$
+查平方根表，得
+$$ c = 4.298 \juhao $$
+
+\begin{enhancedline}
+(2) $\begin{aligned}[t]
+    \cos A &= \dfrac{b^2 + c^2 - a^2}{2bc} \\
+           &= \dfrac{3.696^2 + 4.298^2 - 2.730^2}{2 \times 3.696 \times 4.298} \\
+           &= \dfrac{24.68}{2 \times 3.696 \times 4.298} \juhao \\[1em]
+\end{aligned}$
+\end{enhancedline}
+
+两边取对数，查表计算，得
+
+$\begin{aligned}
+    \lg{\cos A} &= \lg{24.68} - (\lg{2} + \lg{3.696} + \lg{4.298}) \\
+                &= 1.3923 - (0.3010 + 0.5677 + 0.6333) \\
+                &= \overline{1}.8903 \douhao
+\end{aligned}$
+
+查表得
+$$ A = 39^\circ2' \juhao $$
+
+(3) $\begin{aligned}[t]
+    B &= 180^\circ - (A + c) \\
+      &= 180^\circ - (39^\circ2' + 82^\circ28') = 58^\circ30' \juhao
+\end{aligned}$
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在三角形 $ABC$ 中：}
+\begin{xiaoxiaotis}
+
+    \xxt{已知 $b = 8$，$c = 3$，$A = 60^\circ$，求 $a$；}
+
+    \xxt{已知 $a = 20$，$b = 29$，$c = 21$，求 $B$；}
+
+    \xxt{已知 $a = 3\sqrt{3}$，$c = 2$，$B = 150^\circ$，求 $b$；}
+
+    \xxt{已知 $a = 2$，$b = \sqrt{2}$，$c = \sqrt{3} + 1$，求 $A$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{根据下列条件解三角形：}
+\begin{xiaoxiaotis}
+
+    \xxt{$a = 31$，$b = 42$，$c = 27$；}
+
+    \xxt{$a = 9$，$b = 10$，$c = 15$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{根据下列条件解三角形：}
+\begin{xiaoxiaotis}
+
+    \xxt{$a = 40.87$，$c = 59.02$，$B = 85^\circ24'$；}
+
+    \xxt{$b = 38$，$c = 40$，$A = 106^\circ$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+
