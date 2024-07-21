@@ -1,0 +1,190 @@
+\subsection{正弦定理}\label{subsec:15-9}
+
+\begin{enhancedline}
+
+\begin{wrapfigure}[10]{r}{6.5cm}
+    \centering
+    \input{../pic/czds4-ch15-23}
+    \caption{}\label{fig:15-23}
+\end{wrapfigure}
+
+如图 \ref{fig:15-23}，以 $\triangle ABC$ 的顶点 $A$ 为原点，边 $AC$ 所在的射线为 $x$ 轴的正半轴建立直角坐标系。
+由上节我们知道，顶点 $B$ 的坐标是 $B(c\cos{A},\; c\sin{A})$。
+容易知道，$AC$ 边上的高 $BE$ 就是点 $B$ 的纵坐标 $c\sin{A}$，
+于是 $\triangle ABC$ 的面积
+$$ S_{\triangle} = \exdfrac{1}{2} \times AC \times BE = \exdfrac{1}{2}bc \sin{A} \juhao $$
+
+同样可得（参看图 \ref{fig:15-22}）：
+$$ S_{\triangle} = \exdfrac{1}{2}ca \sin{B} \nsep S_{\triangle} = \exdfrac{1}{2}ab \sin{C} \juhao $$
+
+由此，我们得到关于任意三角形面积的公式：
+\begin{center}
+    \framebox[24em]{
+        $\bm{ S_{\triangle} = \exdfrac{1}{2}bc \sin{A} = \exdfrac{1}{2}ca \sin{B} = \exdfrac{1}{2}ab \sin{C} }$。
+    }
+\end{center}
+
+也就是说\zhongdian{三角形的面积等于任意两边与它们夹角的正弦的积的一半。}
+
+将等式
+$$ \exdfrac{1}{2}bc \sin{A} = \exdfrac{1}{2}ca \sin{B} = \exdfrac{1}{2}ab \sin{C} $$
+各除以 $\exdfrac{1}{2}abc$，可得
+$$ \dfrac{\sin{A}}{a} = \dfrac{\sin{B}}{b} = \dfrac{\sin{C}}{c} \juhao $$
+
+由此，我们得到关于任意三角形边和角间的关系的另一个重要定理：
+
+\zhongdian{正弦定理 \quad 在一个三角形中，各边和它所对角的正弦的比相等。}
+\begin{center}
+    \framebox[14em]{
+        $\bm{ \dfrac{a}{\sin{A}} = \dfrac{b}{\sin{B}} = \dfrac{c}{\sin{C}} }$。
+    }
+\end{center}
+
+如果三角形 $ABC$ 中有一个角是直角，例如，$C = 90^\circ$，
+这时 $\sin{C} = 1$， 由正弦定理可得 $\sin{A} = \exdfrac{a}{c}$，$\sin{B} = \exdfrac{b}{c}$，
+这和 \ref{subsec:15-4} 节直角三角形中边和角间的关系是一致的。
+
+利用正弦定理与三角形内角和定理，可以解决以下两类解斜三角形的问题：
+
+(1) 已知两角和任一边，求其他两边和一角；
+
+(2) 已知两边和其中一边的对角，求另一边的对角（ 而进一步求出其他的边和角）。
+
+
+\liti 在 $\triangle ABC$ 中，已知 $c = 10$，$A = 45^\circ$，$C = 30^\circ$，
+求 $b$ 和 $S_{\triangle}$ （结果保留两个有效数字）。
+
+\jie (1) $\because$ \quad $\dfrac{b}{\sin{B}} = \dfrac{c}{\sin{C}}$，$B = 180^\circ - (A + C)$，
+
+$\therefore$ \quad $\begin{aligned}[t]
+    b &= \dfrac{c \sin{[180^\circ - (A + C)]}}{\sin{C}} \\
+      &= \dfrac{10\sin{[180^\circ - (45^\circ + 30^\circ)]}}{\sin{30^\circ}} \\
+      &= \dfrac{10\sin{75^\circ}}{\exdfrac{1}{2}} \\
+      &\approx 19.3 \approx 19 \juhao
+\end{aligned}$
+
+(2) $\begin{aligned}[t]
+    S_{\triangle} &= \exdfrac{1}{2}bc \sin{A} \\
+                  &\approx \exdfrac{1}{2} \times 19.3 \times 10 \times \sin{45^\circ} \\
+                  &\approx 68 \juhao
+\end{aligned}$
+
+
+\liti 在 $\triangle ABC$ 中，已知 $a = 20$，$b = 28$，$A = 40^\circ$，
+求 $B$ （精确到 $1^\circ$） 和 $c$ （保留两个有效数字）。
+
+\jie (1) $\begin{aligned}[t]
+    \sin{B} &= \dfrac{b \sin{A}}{a} = \dfrac{28 \sin{40^\circ}}{20} \\
+            &\approx 0.8999 \juhao
+\end{aligned}$
+
+查表可得锐角 $B_1 = 64^\circ$。
+
+又因 $\sin(180^\circ - B_1) = \sin{B_1}$，钝角 $B_2 = 180^\circ - B_1$ 也符合题设条件，可得
+$$ B_2 = 180^\circ - 64^\circ = 116^\circ \juhao $$
+
+(2) 当 $B_1 = 64^\circ$ 时，
+
+$\begin{aligned}
+    c_1 &= \dfrac{a \sin{C}}{\sin{A}} = \dfrac{a \sin{[180^\circ - (A + B_1)]}}{\sin{A}} \\
+        &= \dfrac{20 \cdot \sin{[180^\circ - (40^\circ + 64^\circ)]}}{\sin{40^\circ}} \\
+        &= \dfrac{20 \cdot \sin{76^\circ}}{\sin{40^\circ}} \\
+        &\approx 30 \fenhao
+\end{aligned}$
+
+当 $B_2 = 116^\circ$ 时，
+
+$\begin{aligned}
+    c_2 &= \dfrac{a \sin{[180^\circ - (A + B_2)]}}{\sin{A}} \\
+        &= \dfrac{20 \cdot \sin{[180^\circ - (40^\circ + 116^\circ)]}}{\sin{40^\circ}} \\
+        &= \dfrac{20 \cdot \sin{24^\circ}}{\sin{40^\circ}} \\
+        &\approx 13 \juhao
+\end{aligned}$
+
+
+想一想，例 2 用余弦定理怎样求解。
+
+\begin{wrapfigure}[10]{r}{6.5cm}
+    \centering
+    \input{../pic/czds4-ch15-24}
+    \caption{}\label{fig:15-24}
+\end{wrapfigure}
+
+在图 \ref{fig:15-24} 中，我们画 $\angle PAQ = 40^\circ$，在 $AQ$ 上取 $AC = b = 28$ mm，
+以 $C$ 为圆心，$a = 20$ mm 为半径画弧。可以看到，所画的弧与 $AP$ 相交于两点 $B_1$、$B_2$，
+因而可以作出两个三角形，$\triangle AB_1C$ 和 $\triangle AB_2C$ 都符合题设条件，这就表示例 2 有两解。
+
+
+\liti 在 $\triangle ABC$ 中，已知 $a = 60$， $b = 50$， $A = 38^\circ$，
+求 $B$ （精确到 $1^\circ$） 和 $c$ （保留两个有效数字）。
+
+\jie (1) 已知 $b < a$，所以 $B < A$， $B$ 也为锐角。
+
+$\sin{B} = \dfrac{b \sin{A}}{a} = \dfrac{50 \sin{38^\circ}}{60} \approx 0.5131$。
+
+查表可得锐角 $B = 31^\circ$。
+
+(2) $\begin{aligned}[t]
+    c &= \dfrac{a \sin{C}}{\sin{A}} = \dfrac{a \sin{[180^\circ - (A + B)]}}{\sin{A}} = \dfrac{a \sin{(A + B)}}{\sin{A}} \\
+      &= \dfrac{60 \sin{(38^\circ + 31^\circ)}}{\sin{38^\circ}} = \dfrac{60 \sin{69^\circ}}{\sin{38^\circ}} \approx 91 \juhao
+\end{aligned}$
+
+
+\liti 在 $\triangle ABC$ 中，已知 $a = 18$， $b = 20$， $A = 150^\circ$，
+解这个三角形。
+
+\jie 这里 $A$ 为钝角，$a$ 应是最大边，但 $b > a$，所以本题无解。
+
+对于 例 3 和例 4，照图 \ref{fig:15-24} 的方法，试画三角形．结果怎样？
+
+一般地，已知两边和其中一边的对角解三角形，有两解、一解、无解三种情况。
+图 \ref{fig:15-25} 说明了在 $\triangle ABC$ 中，已知 $a$， $b$ 和 $A$ 时解三角形的各种情况。
+
+(1) $A$ 为锐角：
+
+\begin{figure}[H]%[htbp]
+    \centering
+    \input{../pic/czds4-ch15-25-1}
+\end{figure}
+
+
+(2) $A$ 为直角或钝角：
+
+\begin{figure}[H]%[htbp]
+    \centering
+    \input{../pic/czds4-ch15-25-2}
+    \caption{}\label{fig:15-25}
+\end{figure}
+
+
+\end{enhancedline}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{在三角形 $ABC$ 中：}
+\begin{xiaoxiaotis}
+
+    \xxt{已知 $c = \sqrt{3}$， $A = 45^\circ$， $B = 60^\circ$， 求 $b$， $S_{\triangle}$；}
+
+    \xxt{已知 $b = 12$， $A = 30^\circ$， $B = 120^\circ$， 求 $a$。}
+
+    \hspace*{1.5em} （结果保留两个有效数字）
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{根据下列条件解三角形（如果有解，角度精确到 $1^\circ$， 边长保留两个有效数字）：}
+\begin{xiaoxiaotis}
+
+    \xxt{$a = 15$， $b = 10$， $A = 60^\circ$；}
+
+    \xxt{$b = 40$， $c = 20$， $C = 25^\circ$；}
+
+    \xxt{$b = 11$， $a = 25$， $B = 30^\circ$。}
+
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+

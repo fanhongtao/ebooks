@@ -1,0 +1,83 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \pgfmathsetmacro{\r}{0.6}
+        \coordinate (A) at (0, 0);
+        \coordinate (C) at (1.4, 1);
+        \coordinate (B) at (2, 0);
+        \draw [thick] (B)
+            -- (A) node [below] {$A$}
+            -- (C) node [above] {$C$} node [midway, above] {$b$}
+            -- ($(C) + (300:\r)$) node [pos=0.3, right] {$a$};
+        \draw pic [draw] {angle=B--A--C};
+        \draw [densely dashed] (C) + (260:\r) arc (260:340:\r);
+
+        \node at (1, -1) {$a < b\sin A$};
+        \node at (1, -1.5) {无解};
+    \end{scope}
+
+    \begin{scope}[xshift=3.5cm]
+        \pgfmathsetmacro{\r}{1}
+        \coordinate (A) at (0, 0);
+        \coordinate (C) at (1.4, 1);
+        \coordinate (B) at (1.4, 0);
+        \draw [thick] (B)
+            -- (A) node [below] {$A$}
+            -- (C) node [above] {$C$} node [midway, above] {$b$}
+            -- (B) node [below] {$B$} node [midway, right] {$a$};
+        \draw [thick] (B) -- ($(B)!-0.3!(A)$);
+        \draw pic [draw] {angle=B--A--C};
+        \draw [densely dashed] (C) + (235:\r) arc (235:305:\r);
+        \draw pic [draw, angle radius=0.5em] {right angle=A--B--C};
+
+        \node at (1, -1) {$a = b\sin A$};
+        \node at (1, -1.5) {一解};
+    \end{scope}
+
+    \begin{scope}[xshift=7cm]
+        \pgfmathsetmacro{\a}{1.3}
+        \coordinate (A) at (0, 0);
+        \coordinate (C) at (1.4, 1);
+        \coordinate (P) at (3, 0);
+
+        \draw [thick] (A) -- (C) node [above] {$C$} node [midway, above] {$b$};
+        \draw [thick, name path=ap] (A) node [left] {$A$} -- (P);
+        \path [name path=cb] (C) + (180:\a) arc (180:360:\a);
+        \draw [name intersections={of=ap and cb, by={B2, B1}}];
+        \draw (C) -- (B1) node [below, xshift= 0.4em] {$B_1$} node [pos=0.7, left]  {$a$};
+        \draw (C) -- (B2) node [below, xshift=-0.4em] {$B_2$} node [pos=0.7, right] {$a$};
+
+        \pgfmathanglebetweenpoints{\pgfpointanchor{B2}{base}}{\pgfpointanchor{C}{base}}
+        \pgfmathsetmacro{\jiaocbp}{\pgfmathresult}
+        \draw [dashed] (B2) arc (180+\jiaocbp:360-\jiaocbp:\a);
+        \draw (B2) arc (180+\jiaocbp:180+\jiaocbp-10:\a)
+              (B1) arc (360-\jiaocbp:360-\jiaocbp+10:\a);
+
+        \node at (1, -1) {$b\sin A < a < b$};
+        \node at (1, -1.5) {两解};
+    \end{scope}
+
+
+    \begin{scope}[xshift=11cm]
+        \pgfmathsetmacro{\a}{1.9}
+        \coordinate (A) at (0, 0);
+        \coordinate (C) at (1.4, 1);
+        \coordinate (P) at (4, 0);
+
+        \path [name path=ap] (A) -- (P);
+        \path [name path=cb] (C) + (270:\a) arc (270:360:\a);
+        \path [name intersections={of=ap and cb, by={B}}];
+
+        \draw [thick] (B)
+            -- (A) node [below] {$A$}
+            -- (C) node [above] {$C$} node [midway, above] {$b$}
+            -- (B) node [below] {$B$} node [midway, right] {$a$};
+        \draw (B) -- (P);
+        \draw pic [draw] {angle=B--A--C};
+        \draw [densely dashed] (C) + (310:\a) arc (310:340:\a);
+        \draw [densely dashed] (C) + (200:\a) arc (200:230:\a);
+
+        \node at (1.5, -1) {$a \geqslant b$};
+        \node at (1.5, -1.5) {一解};
+    \end{scope}
+\end{tikzpicture}
+

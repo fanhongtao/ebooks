@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,]
+    \draw [->] (-1.8, 0) -- (3, 0) node [below] {$x$} coordinate(x axis);
+    \draw [->] (0, -0.5) -- (0, 3) node [left]  {$y$} coordinate(y axis);
+    \draw (0, 0) coordinate (O) node [below left] {$O$};
+
+    \coordinate (A) at (O);
+    \coordinate (B) at (-1.2, 2);
+    \coordinate (C) at (2.5, 0);
+    \coordinate (E) at (B |- O);
+
+    \draw [thick] (A) node[below right] {$A$}
+         -- (B) node [above, xshift=2.7em] {$B(c \cos A,\; c \sin A)$} node [midway, below left] {$c$}
+         -- (C) node [below] {$C$} node [midway, above] {$a$}
+         -- cycle  node [midway, below] {$b$};
+    \draw [dashed] (B) -- (E) node [below] {$E$}
+        pic [draw, solid, angle radius=0.5em] {right angle=O--E--B};
+\end{tikzpicture}
+
