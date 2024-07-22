@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\r}{0.8}
+    \coordinate ["$Q$" {below, yshift=-0.3em}] (Q) at (0, 0);
+    \coordinate ["$P$" {below, yshift=-0.3em}] (P) at (1, 0);
+    \coordinate ["$B$" {below, xshift=-0.5em}] (B) at (3.5, 0);
+    \coordinate ["$O$" below] (O) at ($(B) + (\r, 0)$);
+    \coordinate ["$A$" above] (A) at ($(O) + (60:\r)$);
+
+    \draw (Q) -- (O) -- (A) -- (P);
+    \draw [dashed] (O) circle (\r);
+    \draw pic [draw, <-, "$\alpha$" {xshift=-0.7em, yshift=0.5em}, angle radius=0.8em] {angle=A--O--B};
+    \foreach \x in {Q, P} {
+        \draw [fill=black] (\x) +(-0.5em, -0.3em) rectangle +(0.5em, 0.3em);
+    }
+    \draw [<->] ([yshift=1.0em] Q) to [xianduan={below=1.0em}] node [above] {$x$} ([yshift=1.0em] P);
+\end{tikzpicture}
+

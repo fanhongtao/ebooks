@@ -1,0 +1,122 @@
+\begin{tikzpicture}[
+    every node/.style={fill=white, inner sep=1pt, outer sep=2pt},
+]
+    \pgfmathsetmacro{\factor}{0.01}
+    \pgfmathsetmacro{\ab}{340 * \factor}
+    \pgfmathsetmacro{\bc}{85 * \factor}
+    \pgfmathsetmacro{\aa}{81 * \factor} %AA_0
+    \pgfmathsetmacro{\r}{0.12}      % A、B、C 点小圆圈的半径
+    \pgfmathsetmacro{\R}{0.24}      % A、B、C 点（不完整的）大圆圈的半径
+    \pgfmathsetmacro{\z}{20}        % A、B、C 点（不完整的）大圆圈缺口的偏移度数
+    \pgfmathsetmacro{\jiaoa}{14.25} % A=14度15分
+
+    \coordinate ["$A_0$" below] (A0) at (0, 0);
+    \coordinate ["$B_0$" below left] (B0) at (\ab, 0);
+    \coordinate ["$C$" {below, yshift=-0.5em}] (C)  at (\ab + \bc, 0);
+    \coordinate ["$B$" {above, yshift=0.5em}] (B)  at ($(C) + (100:\bc)$);
+    \coordinate ["$A$" {right, xshift=0.2em, yshift=-0.2em}] (A)  at (\aa, 0);
+
+    \draw pic [draw, "\tiny $80^\circ$", angle radius=1.2em, angle eccentricity=1] {angle=B--C--A};
+    \filldraw [fill=black] (A0) circle (0.05);
+    \draw [densely dash dot] (-1.2, 0) -- (5.5, 0);
+    \draw [densely dash dot] (B) -- (C);
+    \draw [dashed] (C) circle (\bc);
+    \draw (C) circle (\r);
+    \draw (C) + (100+\z:\R) coordinate (X1)
+        arc (100+\z:360+100-\z:\R) coordinate (X2);
+    \draw (B) circle (\r);
+    \draw [name path=circle b] (B) + (280+\z:\R) coordinate (X4)
+        arc (280+\z:360+280-\z:\R) coordinate (X3);
+    \draw (X1) -- (X3) (X2) -- (X4);
+
+    \draw [densely dash dot] (A) -- (B);
+    \draw (A) circle (\r);
+    \draw (A) + (\jiaoa+\z:\R) coordinate (X5)
+        arc (\jiaoa+\z:360+\jiaoa-\z:\R) coordinate (X6);
+    \path [name path=x5] (X5) -- +(\jiaoa:\ab-\R);
+    \path [name path=x6] (X6) -- +(\jiaoa:\ab-\R);
+    \draw [name intersections={of=x5 and circle b, by=X7}] (X5) -- (X7);
+    \draw [name intersections={of=x6 and circle b, by=X8}] (X6) -- (X8);
+
+    %---------------------- 绘制带阴影的部件----------------------------------------------------------
+    \begin{scope}
+        % 从左到右: xa, xb, xc, ...
+        % 从下到上: ya, yb, yc, ...
+        \pgfmathsetmacro{\d}{0.2}    % 阴影部分的宽度
+        \pgfmathsetmacro{\h}{1}      % “L” 型部件的高度
+        \pgfmathsetmacro{\pa}{-0.7}  % 定义三个不同的位置
+        \pgfmathsetmacro{\pb}{-0.3}
+        \pgfmathsetmacro{\pc}{2}
+
+        \begin{scope} % 靠近 A 点的 “[” 型部件
+            \pgfmathsetmacro{\xb}{\aa - \R}
+            \pgfmathsetmacro{\xa}{\xb - \d}
+            \pgfmathsetmacro{\xc}{\xb + 2 * \R + 0.2}
+            \pgfmathsetmacro{\yb}{0 - \R}
+            \pgfmathsetmacro{\ya}{\yb - \d}
+            \pgfmathsetmacro{\yc}{0 + \R + 0.1}
+            \pgfmathsetmacro{\yd}{\yc + \d}
+
+            \draw [thick, pattern={mylines[angle=45, distance={5pt}]}]
+                (\xa, \ya) -- (\xa, \yd) -- (\xc, \yd) -- (\xc, \yc)
+                -- (\xb, \yc) -- (\xb, \yb) -- (\xc, \yb) -- (\xc, \ya)
+                -- cycle;
+        \end{scope}
+
+        \begin{scope} % “[” 型部件上、下方的 “L” 型部件
+            \pgfmathsetmacro{\xa}{\pb}
+            \pgfmathsetmacro{\xb}{\xa + \d}
+            \pgfmathsetmacro{\xc}{\pc}
+
+            \begin{scope} % 上方的 “L” 型部件
+                \pgfmathsetmacro{\ya}{0 + \R + 0.1 + \d} % "["部件上边
+                \pgfmathsetmacro{\yb}{\ya + \d}
+                \pgfmathsetmacro{\yc}{\ya + \h}
+
+                \path [pattern={mylines[angle=45, distance={5pt}]}]
+                    (\xb, \yc) -- (\xb, \yb)
+                    -- (\xc, \yb) -- (\xc, \ya)
+                    -- (\xa, \ya) -- (\xa, \yc)
+                    -- cycle;
+                \draw [thick]
+                    (\xb, \yc) -- (\xb, \yb)
+                    -- (\xc, \yb) -- (\xc, \ya)
+                    -- (\xa, \ya) -- (\xa, \yc);
+            \end{scope}
+
+            \begin{scope} % 下方的 “L” 型部件
+                \pgfmathsetmacro{\yc}{0 - \R - \d} % "["部件下边
+                \pgfmathsetmacro{\yb}{\yc - \d}
+                \pgfmathsetmacro{\ya}{\yc - \h}
+
+                \path [pattern={mylines[angle=45, distance={5pt}]}]
+                    (\xa, \ya) -- (\xa, \yc)
+                    -- (\xc, \yc) -- (\xc, \yb)
+                    -- (\xb, \yb) -- (\xb, \ya)
+                    -- cycle;
+                \draw [thick]
+                    (\xa, \ya) -- (\xa, \yc)
+                    -- (\xc, \yc) -- (\xc, \yb)
+                    -- (\xb, \yb) -- (\xb, \ya);
+            \end{scope}
+        \end{scope}
+
+        \begin{scope} % “[” 型部件左侧的 “(” 型部件
+            \pgfmathsetmacro{\xa}{\pa}
+            \pgfmathsetmacro{\xb}{\xa - \d}
+            \pgfmathsetmacro{\yb}{0 - \R - \d} % "["部件下边
+            \pgfmathsetmacro{\ya}{\yb - \h}
+            \pgfmathsetmacro{\yc}{0 + \R + 0.1 + \d} % "["部件上边
+            \pgfmathsetmacro{\yd}{\yc + \h}
+            \path [pattern={mylines[angle=45, distance={5pt}]}]
+                (\xa, \ya) -- (\xa, \yb) to [out=115,in=245] (\xa, \yc) -- (\xa, \yd)
+                -- (\xb, \yd) -- (\xb, \yc) to [out=245, in=115] (\xb, \yb) -- (\xb, \ya)
+                -- cycle;
+            \draw [thick]
+                (\xa, \ya) -- (\xa, \yb) to [out=115,in=245] (\xa, \yc) -- (\xa, \yd)
+                (\xb, \ya) -- (\xb, \yb) to [out=115,in=245] (\xb, \yc) -- (\xb, \yd);
+        \end{scope}
+    \end{scope}
+
+\end{tikzpicture}
+

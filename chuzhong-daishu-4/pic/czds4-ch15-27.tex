@@ -1,0 +1,25 @@
+\begin{tikzpicture}[
+    river/.style={decorate, decoration={random steps,segment length=3pt,amplitude=2pt}},
+    scale=0.8,
+]
+    \pgfmathsetmacro{\factor}{0.06}
+    \pgfmathsetmacro{\bc}{78.35 * \factor}
+    \pgfmathsetmacro{\jiaob}{69.717} % 69度43分
+    % \pgfmathsetmacro{\jiaoc}{41.2}   % 41度12分
+    \pgfmathsetmacro{\ab}{55.26 * \factor}
+    \coordinate (B) at (0, 0);
+    \coordinate (C) at (\bc, 0);
+    \coordinate (A) at (\jiaob:\ab);
+    \draw [thick] (B) node [left] {$B$} -- (C) node [right] {$C$};
+    \draw [dashed] (B) -- (A) node [above] {$A$} -- (C);
+    \draw pic [draw, angle radius=0.8em] {angle=C--B--A};
+    \draw pic [draw, angle radius=0.8em] {angle=A--C--B};
+
+    \begin{scope}[xshift=2cm, yshift=8.5cm]
+        \foreach \x in {1, ..., 4, 7, 8, 9, 10} {
+            \pgfmathsetmacro{\r}{6 + \x/5}
+            \draw [river] (240:\r) arc (240:300:\r);
+        }
+    \end{scope}
+\end{tikzpicture}
+

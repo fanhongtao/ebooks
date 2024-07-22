@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    \pgfmathsetmacro{\factor}{0.04}
+    \pgfmathsetmacro{\ab}{112.5 * \factor}
+    %\pgfmathsetmacro{\bc}{75.4  * \factor}
+    \pgfmathsetmacro{\x}{23.56  * \factor}
+    \pgfmathsetmacro{\y}{71.62  * \factor}
+    \pgfmathsetmacro{\angleb}{atan(\y/\x)}
+
+    \coordinate (B) at (0, 0);
+    \coordinate (A) at (\ab, 0);
+    \coordinate (C) at (\x, \y);
+    \coordinate (D) at (\x, 0);
+    \pgfmathsetmacro{\r}{0.4}
+    \pgfmathsetmacro{\R}{0.6}
+    \pgfmathsetmacro{\RR}{1.1}
+
+    \draw [thick] (A) node [above=1.2em] {\small $A$} circle (\r);
+    \draw [thick] (B) node [above=1.2em] {\small $B$} circle (\r);
+    \draw [thick] (C) node [above] {\small $C$} circle (\R);
+
+    \path (C) +(45:\RR)  coordinate(pc);
+    \path (B) +(165:\RR) coordinate(pb);
+    \path (A) +(285:\RR) coordinate(pa);
+
+    \draw [dashed] (A) -- (B) -- (C) -- cycle;
+    \draw [dashed] (C) -- (D) node [midway, right] {$y$}
+        pic [draw, solid, angle radius=0.5em] {right angle=C--D--A};
+    \draw ($(B)!0.6!(D)$) node [above] {$x$};
+
+    \draw [rounded corners] (pc)
+        arc [radius=\RR, start angle=45,  end angle=165]
+        -- (pb)
+        arc [radius=\RR, start angle=165, end angle=285]
+        -- (pa)
+        arc [radius=\RR, start angle=285, end angle=405]
+        -- (pc);
+\end{tikzpicture}
+

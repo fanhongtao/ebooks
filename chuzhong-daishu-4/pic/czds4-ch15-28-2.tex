@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.01}
+    \pgfmathsetmacro{\ab}{340 * \factor}
+    \pgfmathsetmacro{\bc}{85 * \factor}
+    \pgfmathsetmacro{\aa}{81 * \factor} %AA_0
+
+    \coordinate (A0) at (0, 0);
+    \coordinate (B0) at (\ab, 0);
+    \coordinate (C)  at (\ab + \bc, 0);
+    \coordinate (B)  at ($(C) + (100:\bc)$);
+    \coordinate (A)  at (\aa, 0);
+
+    \draw (A0) node[below=0.5em] {$A_0$} -- (C) node [below] {$C$};
+    \draw (A) node [below=0.5em] {$A$}   -- (B) node [above] {$B$};
+    \draw (C) circle (\bc) -- (B);
+    \draw pic [draw, "$80^\circ$" {xshift=-0.7em, yshift=0.5em}, angle radius=0.8em] {angle=B--C--A};
+    \draw (B0) node [below left] {$B_0$};
+    \foreach \x in {A0, A} {
+        \draw (\x) +(0, 0.3em) -- +(0, -0.3em);
+    }
+
+    % 添加占位用的 path，这样，显示时，两个图的 x 轴（直线AC）在同一水平位置
+    \pgfmathsetmacro{\R}{0.24}      % A、B、C 点（不完整的）大圆圈的半径
+    \pgfmathsetmacro{\d}{0.2}    % 阴影部分的宽度
+    \pgfmathsetmacro{\h}{1}      % “L” 型部件的高度
+    \pgfmathsetmacro{\yabove}{0 + \R + 0.1 + \d} % "["部件下边
+    \pgfmathsetmacro{\ybelow}{0 - \R - \d} % "["部件下边
+    \path (0, \yabove + \h) -- (0, \ybelow -\h);
+\end{tikzpicture}
+
