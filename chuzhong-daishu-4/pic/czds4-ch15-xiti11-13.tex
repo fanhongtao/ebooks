@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth]
+    % 各坐标点的相对位置
+    %
+    %   N
+    %   B
+    %        M  A
+    %        C
+    \pgfmathsetmacro{\factor}{0.3}
+    \pgfmathsetmacro{\bc}{35 * 0.5 * \factor}
+    \pgfmathsetmacro{\nba}{126}
+    \pgfmathsetmacro{\nbc}{148}
+    \pgfmathsetmacro{\mca}{78}
+
+    \pgfmathsetmacro{\abc}{\nbc - \nba}
+    \pgfmathsetmacro{\mcb}{180  - \nbc}
+    \pgfmathsetmacro{\acb}{\mca + \mcb}
+    \pgfmathsetmacro{\bac}{180 - \abc - \acb}
+    \pgfmathsetmacro{\ac}{\bc * sin(\abc) / sin(\bac)}
+
+    \coordinate ["$C$" below] (C) at (0, 0);
+    \coordinate ["$A$" right] (A) at (90 - \mca:\ac);
+    \coordinate ["$B$" left]  (B) at (90 + \mcb:\bc);
+
+    \draw [->] (C) -- +(0, 1) coordinate (M) node [above] {北};
+    \draw [->] (B) -- +(0, 1.3) coordinate (N) node [above] {北};
+    \begin{scope}[every node/.style={fill=white, inner sep=1pt, outer sep=2pt},]
+        \draw pic [draw, <-, "$78^\circ$", angle radius=1.5em, angle eccentricity=1.6] {angle=A--C--M};
+        \draw pic [draw, <-, "$126^\circ$" {yshift=0.2em}, angle radius=2.7em, angle eccentricity=1.2] {angle=A--B--N};
+        \draw pic [draw, <-, "$148^\circ$" {yshift=0.2em}, angle radius=1.2em, angle eccentricity=1.2] {angle=C--B--N};
+    \end{scope}
+
+    \draw [very thick] (A) -- (B) -- (C) -- cycle;
+    \draw [dashed] (B) -- ($(B)!-0.2!(C)$);
+\end{tikzpicture}
+

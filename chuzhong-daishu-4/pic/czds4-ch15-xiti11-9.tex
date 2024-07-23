@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.1}
+    \pgfmathsetmacro{\ac}{57 * \factor}
+    \pgfmathsetmacro{\bac}{27} % \alpha
+    \pgfmathsetmacro{\acb}{35} % \beta
+
+    \pgfmathsetmacro{\abc}{180 - \bac - \acb}
+    \pgfmathsetmacro{\ab}{sin(\acb) * \ac / sin(\abc)}
+
+    \coordinate ["$A$" below] (A) at (0, 0);
+    \coordinate ["$B$" below] (B) at (\ab, 0);
+    \coordinate ["$C$" above] (C) at (\bac:\ac);
+    \coordinate ["$D$" above] (D) at ($(C) - (\ab, 0)$);
+
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw (A) -- (C);
+    \draw pic [draw, "$\alpha$", angle radius=1.5em, angle eccentricity=1.5] {angle=B--A--C};
+    \draw pic [draw, "$\beta$",  angle radius=1.8em, angle eccentricity=1.5] {angle=C--A--D};
+\end{tikzpicture}
+
+

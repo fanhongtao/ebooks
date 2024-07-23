@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.05}
+    \pgfmathsetmacro{\oa}{39.8 * \factor}
+    \pgfmathsetmacro{\ob}{36.7 * \factor}
+    \pgfmathsetmacro{\oc}{42.3 * \factor}
+    \pgfmathsetmacro{\od}{44.1 * \factor}
+    \pgfmathsetmacro{\aob}{88}
+    \pgfmathsetmacro{\boc}{76}
+    \pgfmathsetmacro{\cod}{102.5}
+
+    % 以 OA 为 x 轴负方向绘图，然后旋转一定的角度，让 BC 看起来向是水平的。
+    \begin{scope}[rotate=-32] % 32度 是估计的一个值，没有计算。
+        \coordinate ["$O$"] (O) at (0, 0);
+        \coordinate ["$A$" left] (A) at (-\oa, 0);
+        \coordinate ["$B$" left] (B) at (180+\aob:\ob);
+        \coordinate ["$C$" right] (C) at (180+\aob+\boc:\oc);
+        \coordinate ["$D$"] (D) at (180+\aob+\boc+\cod:\od);
+
+        \draw (O) -- (A)
+              (O) -- (B)
+              (O) -- (C)
+              (O) -- (D);
+        \draw (A) -- (B) -- (C) -- (D) --cycle;
+        \draw pic [draw, "$88^\circ$", angle radius=1.5em, angle eccentricity=1.5] {angle=A--O--B};
+        \draw pic [draw, "$76^\circ$", angle radius=1.8em, angle eccentricity=1.5] {angle=B--O--C};
+        \draw pic [draw, "$102^\circ30'$", angle radius=1.4em, angle eccentricity=1.4] {angle=C--O--D};
+    \end{scope}
+\end{tikzpicture}
+

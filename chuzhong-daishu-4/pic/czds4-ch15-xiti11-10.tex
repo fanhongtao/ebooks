@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.008}
+    \pgfmathsetmacro{\ac}{482.8 * \factor}
+    \pgfmathsetmacro{\bc}{631.5 * \factor}
+    \pgfmathsetmacro{\ad}{80.12 * \factor}
+    \pgfmathsetmacro{\be}{40.24 * \factor}
+    \pgfmathsetmacro{\acb}{56.3}
+
+    \pgfmathsetmacro{\ab}{sqrt(\ac^2 + \bc^2 - 2 * \ac * \bc * cos(\acb))}
+    \pgfmathsetmacro{\abc}{asin( sin(\acb) * \ac / \ab)}
+
+    \coordinate ["$C$" left] (C) at (0, 0);
+    \coordinate ["$B$" right] (B) at (\bc, 0);
+    \coordinate ["$A$" above] (A) at (\acb:\ac);
+    \coordinate ["$D$" {above, xshift=0.2em, yshift=0.5em}] (D) at ($(A) + (360-\abc:\ad)$);
+    \coordinate ["$E$" right] (E) at ($(B) + (180-\abc:\be)$);
+
+    \draw [very thick] (D) -- (A) -- (C) -- (B) -- (E);
+    \draw pic [draw, angle radius=1.5em] {angle=B--C--A};
+
+    % 利用已有的 “山” 的 pic， 绘制后手工调整到（大致）与 D 点重合
+    \pic [scale=0.087, rotate around=45:(E)] at (E) {mountain};
+\end{tikzpicture}
+
