@@ -1,0 +1,103 @@
+\xiaojie
+
+一、本章内容主要是三角函数的初步概念及解三角形的方法。
+
+
+二、设角 $\alpha$ 的顶点在原点 $O$，始边与 $x$ 轴的正半轴重合，
+终边上任一点 $P$ 的坐标是 $(x,\; y)$, $OP = r$。角 $\alpha$ 的三角函数是：
+\begin{center}
+    \begin{tblr}{columns={colsep=0pt}, rows={rowsep=0.5em}}
+        $\alpha$ 的正弦 $\sin\alpha = \exdfrac{y}{r}$， & $\alpha$ 的余弦 $\cos\alpha = \exdfrac{x}{r}$， \\
+        $\alpha$ 的正切 $\tan\alpha = \exdfrac{y}{x}$， & $\alpha$ 的余切 $\cot\alpha = \exdfrac{x}{y}$。
+    \end{tblr}
+\end{center}
+
+三角函数间有下列关系：
+
+(1) \begin{tblr}[t]{columns={mode=math, colsep=0pt},}
+    \sin(90^\circ - \alpha) = \cos\alpha \douhao \\
+    \cos(90^\circ - \alpha) = \sin\alpha \douhao \\
+    \tan(90^\circ - \alpha) = \cot\alpha \douhao \\
+    \cot(90^\circ - \alpha) = \tan\alpha \juhao \\
+\end{tblr}
+
+(2) \begin{tblr}[t]{columns={mode=math, colsep=0pt},}
+    \sin(180^\circ - \alpha) = \sin\alpha \douhao \\
+    \cos(180^\circ - \alpha) = -\cos\alpha \douhao \\
+    \tan(180^\circ - \alpha) = -\tan\alpha \douhao \\
+    \cot(180^\circ - \alpha) = -\cot\alpha \juhao \\
+\end{tblr}
+
+
+三、特殊角的三角函数值：
+
+\begin{table}[H]
+    \centering
+    \newcommand{\tbhead}{\diagboxthree[width=8em, height=4em, trim=l]{三角函数}{三角函数值}{$\alpha$}}
+    \begin{tblr}{
+        hlines,vlines,
+        columns={c, mode=math},
+        column{2-5}={5em, colsep=0pt},
+        cell{1}{1}={mode=text},
+        rows={m, rowsep=0.5em},
+    }
+        \tbhead     & 30^\circ            & 40^\circ             & 60^\circ             & 90^\circ\\
+        \sin\alpha  & \exdfrac{1}{2}      & \dfrac{\sqrt{2}}{2}  & \dfrac{\sqrt{3}}{2}  & 1 \\
+        \cos\alpha  & \dfrac{\sqrt{3}}{2} & \dfrac{\sqrt{2}}{2}  & \exdfrac{1}{2}       & 0 \\
+        \tan\alpha  & \dfrac{\sqrt{3}}{3} & 1                    & \sqrt{3}             & \text{不存在} \\
+        \cot\alpha  & \sqrt{3}            & 1                    & \dfrac{\sqrt{3}}{3}  & 0 \\
+    \end{tblr}
+\end{table}
+
+锐角的三角函数值可以查三角函数表求得。
+求钝角的三角函数值，可以根据角 $(180^\circ - \alpha)$ 与角 $\alpha$ 间的三角函数关系式，
+把它转化为求锐角的三角函数值。
+
+反过来，如果已知锐角或钝角的三角函数值，可以求得这个锐角或钝角的值。
+
+
+
+四、设直角三角形的一个锐角是 $\alpha$，
+\begin{center}
+    \begin{tblr}{columns={mode=math}, column{1}={leftsep=0pt}, rows={rowsep=0.5em}}
+        \sin \alpha = \dfrac{\alpha \text{的对边}}{\text{斜边}} \douhao          & \cos \alpha = \dfrac{\alpha \text{的邻边}}{\text{斜边}} \douhao \\
+        \tan \alpha = \dfrac{\alpha \text{的对边}}{\alpha \text{的邻边}} \douhao & \cot \alpha = \dfrac{\alpha \text{的邻边}}{\alpha \text{的对边}} \juhao
+    \end{tblr}
+\end{center}
+
+利用这些关系式以及勾股定理和两锐角互余的关系，可以解直角三角形，
+关键在于适当选用恰含一个未量的关系式。
+
+
+五、任意三角形 $ABC$ 中，边与角间有如下的关系：
+
+(1) 余弦定理
+\begin{gather*}
+    a^2 = b^2 + c^2 - 2bc \cos A \douhao \\
+    b^2 = c^2 + a^2 - 2ca \cos B \douhao \\
+    c^2 = a^2 + b^2 - 2ab \cos C \fenhao
+\end{gather*}
+
+(2) 正弦定理
+$$ \dfrac{a}{\sin{A}} = \dfrac{b}{\sin{B}} = \dfrac{c}{\sin{C}} \juhao $$
+
+
+解任意三角形的问题可以分为下列四种类型：
+
+(1) 已知三边；
+
+(2) 已知两边和它们的夹角；
+
+(3) 已知两角和一边；
+
+(4) 已知两边和其中一边的对角。
+
+一般地，
+(1)， (2) 两种类型可用余弦定理和三角形内角和定理来解；
+(3)， (4) 两种类型可用正弦定理和三角形内角和定理来解。
+第 (1)，(2)，(3) 三种类型的问题，或者只有一解，或者无解。
+第 (4) 种类型的问题，可有两解、一解或无解。
+
+根据三角形中已知的边与角（至少包含一条边）的大小，可以计算出未知的边与角的大小。
+这样从数量上进一步阐明了三角形中各元素间的关系，使我们对三角形的认识又深入了一步。
+
