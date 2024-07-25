@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth]
+    % 各坐标点的相对位置
+    %
+    %          M
+    %          C
+    %               B
+    %   N
+    %   A
+    \pgfmathsetmacro{\factor}{0.3}
+    \pgfmathsetmacro{\nac}{45}
+    \pgfmathsetmacro{\ac}{10 * \factor}
+    \pgfmathsetmacro{\mcb}{105}
+
+    \pgfmathsetmacro{\mca}{180 - \nac}
+    \pgfmathsetmacro{\acb}{360 - \mca - \mcb}
+    \pgfmathsetmacro{\cab}{asin(sin(\acb) * 9/21)}% V_cb : V_ab
+    \pgfmathsetmacro{\cba}{180 - \cab - \acb}
+    \pgfmathsetmacro{\ab}{\ac * sin(\acb) / sin(\cba)}
+
+    \coordinate ["$A$" below] (A) at (0, 0);
+    \coordinate ["$B$" right] (B) at (90 - \nac - \cab:\ab);
+    \coordinate ["$C$" above left] (C) at (90 - \nac:\ac);
+
+    \draw [very thick] (A) -- (B) -- (C) -- cycle;
+
+    \draw [->] (C) -- +(0, 1) coordinate (M) node [above] {北}
+        pic [draw, solid, <-, angle radius=0.8em, "$105^\circ$" {xshift=0.5em}, angle eccentricity=1.8] {angle=B--C--M};
+
+    \draw [->] (A) -- +(0, 2) coordinate (N) node [above] {北}
+        pic [draw, solid, <-, angle radius=1.5em, "$45^\circ$" {yshift=0.2em}, angle eccentricity=1.3] {angle=C--A--N};
+    \draw pic [draw, solid, <-, angle radius=2.9em, "$?$", angle eccentricity=1.3] {angle=B--A--N};
+
+    \coordinate (M) at ($(B) + (0.7, -0.6)$);
+    \pic [scale=0.03] at (M) {mountain};
+\end{tikzpicture}
+

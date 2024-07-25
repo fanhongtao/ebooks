@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+    river/.style={decorate, decoration={random steps,segment length=3pt,amplitude=2pt}},
+]
+    \pgfmathsetmacro{\factor}{0.02}
+    \pgfmathsetmacro{\ac}{149.46 * \factor}
+    \pgfmathsetmacro{\cd}{52.61 * \factor}
+    \pgfmathsetmacro{\adb}{108.25}
+    \pgfmathsetmacro{\acb}{120.417} % 120度25分
+
+    % 设 E 是 B 在 CD 上的垂足
+    \pgfmathsetmacro{\bde}{180 - \adb}
+    \pgfmathsetmacro{\bce}{180 - \acb}
+    % BE = tan(\bde) * DE
+    % BE = tan(\bce) * CE = tan(\bce) * (DE +CE)
+    \pgfmathsetmacro{\de}{(\cd * tan(\bce)) / (tan(\bde) - tan(\bce))}
+    \pgfmathsetmacro{\be}{\de * tan(\bde)}
+
+    \coordinate (E) at (0, 0);
+    \coordinate ["$B$" left] (B) at (0, \be);
+    \coordinate ["$D$" below] (D) at (\de, 0);
+    \coordinate ["$C$" below] (C) at (\de + \cd, 0);
+    \coordinate ["$A$" below] (A) at (\de + \cd + \ac, 0);
+
+    \draw [thick] (A) -- (D);
+    \draw [dashed] (B) -- (A);
+    \draw [dashed] (B) -- (C) pic [draw, solid, angle radius=0.8em] {angle=A--C--B};
+    \draw [dashed] (B) -- (D) pic [draw, solid, angle radius=0.8em] {angle=A--D--B};
+
+
+    \begin{scope}[yshift=1.1cm]
+        \foreach \x in {1, ..., 5} {
+            \coordinate (X) at (0, \x/5);
+            \draw [river] (X) to [out=-10, in=160] +(2, -0.7)
+                to [out=0, in=190] +(5, -0.6);
+        }
+    \end{scope}
+    % 利用已有的 “山” 的 pic， 绘制后手工调整到适合的位置
+    \coordinate (M) at ($(A)!0.4!(B)$);
+    \pic [scale=0.087, rotate around=55:(M)] at (M) {mountain};
+\end{tikzpicture}
+

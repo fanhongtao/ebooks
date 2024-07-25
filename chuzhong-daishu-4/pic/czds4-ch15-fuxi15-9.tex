@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth]
+    % 各坐标点的相对位置
+    %  C -- E
+    %  |
+    %  D -- F
+    %  |          A
+    %  G  ----    B
+    \pgfmathsetmacro{\factor}{0.5}
+    \pgfmathsetmacro{\cd}{3.40 * \factor}
+    \pgfmathsetmacro{\bg}{5.00 * \factor}
+    \pgfmathsetmacro{\ace}{45}
+    \pgfmathsetmacro{\bdf}{30}
+
+    \pgfmathsetmacro{\dbg}{\bdf}
+    \pgfmathsetmacro{\dg}{\bg * tan(\dbg)}
+    \pgfmathsetmacro{\bd}{\dg / sin(\dbg)}
+
+    \coordinate ["$B$" right] (B) at (0, 0);
+    \coordinate ["$D$" below left] (D) at (-\bg, \dg);
+    \coordinate ["$C$" above] (C) at (-\bg, \dg + \cd);
+    \path [name path=ca] (C) -- +(-\ace:\bd*1.5); % AC < 1.5 * BD
+    \path [name path=ba] (B) -- +(0, \cd);        % AB 小于 CD
+    \path [name intersections={of=ca and ba, by=A}];
+    \node at (A) [right] {$A$};
+
+    \coordinate (E) at ($(C) + (1, 0)$);
+    \coordinate (F) at ($(D) + (1, 0)$);
+    \coordinate (G) at (-\bg, 0);
+
+    \draw [very thick] (A) -- (B) -- (D) -- (C) -- cycle;
+    \draw (C) -- (E) pic [draw, "$45^\circ$" {xshift=0.5em}, angle radius=1.5em, angle eccentricity=1.3] {angle=A--C--E};
+    \draw (D) -- (F) pic [draw, "$30^\circ$" {xshift=0.5em}, angle radius=1.5em, angle eccentricity=1.3] {angle=B--D--F};
+
+    \draw (D) -- (G);
+    \draw [<->] ([yshift=-1.0em] G) to [xianduan={above=1.0em}] node [above] {$5.00$ 米} ([yshift=-1.0em] B);
+    \draw [<->] ([xshift=-1.0em] C) to [xianduan={above=1.0em}] node [above, rotate=90] {$3.40$ 米} ([xshift=-1.0em] D);
+\end{tikzpicture}
+

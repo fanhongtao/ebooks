@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\factor}{0.09}
+    \pgfmathsetmacro{\ab}{15.8 * \factor}
+    \pgfmathsetmacro{\bc}{60.5 * \factor}
+    \pgfmathsetmacro{\abc}{80}
+
+    \coordinate (B) at (0, 0);
+    \coordinate (C) at (\bc, 0);
+    \coordinate (A) at (\abc:\ab);
+
+    %---------------------------------
+    \pgfmathsetmacro{\ra}{\ab/2}
+    \pgfmathsetmacro{\rb}{\ab/2.5}
+    \pgfmathsetmacro{\rc}{\ab/4.5}
+
+    \draw [thick] (A) circle (\ra/2);
+    \draw [thick] (A) circle (\ra);
+    \draw [thick] (B) circle (\rb/4);
+    \draw [thick] (B) circle (\rb/2);
+    \draw [thick] (C) circle (\rc/4);
+    \draw [thick] (C) circle (\rc/2);
+
+    \draw [thick] (C) + (200:\rc) coordinate (X1)
+        arc (200:440:\rc) coordinate(X2)
+        to [out=155, in=25] ($(X2) + (-4.5, 0)$)
+        .. controls +(-0.5, -0.2) and +(-0.0, -0.2) .. ($(A) + (-55:\ra)$)
+    ;
+
+    \draw [thick] (X1)
+        to [out=145, in=25] ($(B) + (-45:\rb)$)
+        arc (-45:-180:\rb)
+        to [out=75, in=-65] ($(A) + (225:\ra)$)
+    ;
+
+    \draw [<->] ([yshift=-2.0em] B) to [xianduan={above=2.0em}] node [above] {$60.5$} ([yshift=-2.0em] C);
+    \draw [<->,  transform canvas={shift=(170:2.5em)}] (A) to [xianduan={above=2.5em}] node [above, rotate=\abc] {$15.8$} (B);
+
+    \begin{scope}[every node/.style={fill=white, inner sep=0pt},]
+        \draw [dashed] (A) node [above=0.15em] {$A$}
+            -- (B) node [below left=0.2em] {$B$}
+            -- (C) node [above=0.5em] {$C$} -- cycle;
+        \draw (B) + (40:1.3em) node [rotate=-40] {\small $80^\circ$};
+    \end{scope}
+
+\end{tikzpicture}
+
