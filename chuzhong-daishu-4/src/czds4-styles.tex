@@ -351,3 +351,12 @@
   \DefTblrTemplate{conthead-text}{default}{（续表）}
 }
 
+
+\NewTblrEnviron{datatblr}
+\SetTblrInner[datatblr]{rows={mode=math, r, rowsep=0pt}}
+\newenvironment{data}{
+  \vspace*{-0.5em}\begin{center}
+}{
+  \end{center}\vspace*{-0.5em}
+}
+

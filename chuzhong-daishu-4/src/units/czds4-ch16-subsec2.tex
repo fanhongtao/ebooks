@@ -1,0 +1,246 @@
+\subsection{平均数}\label{subsec:16-2}
+
+某班第一小组在一次数学测验中的成绩如下：
+$$ 86 \quad 91  \quad 100  \quad  72  \quad  93 \quad 89 \quad 90 \quad 85 \quad 75 \quad 95 $$
+这个小组的平均成绩是多少？
+
+\begin{enhancedline}
+很明显，这个平均成绩是
+$$ \dfrac{86 + 91 + \cdots + 95}{10} = 87.6 \juhao $$
+
+一般地，如果有 $n$ 个数
+$$ x_1 \nsep x_2 \nsep \cdots \nsep x_n \douhao $$
+那么
+\begin{gather}
+    \overline{x} = \exdfrac{1}{n} (x_1 + x_2 +  \cdots + x_n) \tag{1}
+\end{gather}
+叫做这 $n$ 个数的\zhongdian{平均数}，$\overline{x}$ 读作“$x$拔”。
+
+为了书写方便，有时将 $x_1 + x_2 +  \cdots + x_n$ 记作
+$\displaystyle \sum_{i=1}^n x_i$，
+其中 “$\Sigma$” 是求和符号，读作“西格马”。
+$\displaystyle \sum_{i=1}^n x_i$ 读作
+“$\Sigma$ —— $x$  —— $i$， $i$ 从 $1$ 到 $n$”，
+表示从 $x_1$ 加到 $x_n$ 的和。于是公式 (1) 可以写成
+\begin{gather}
+    \overline{x} = \exdfrac{1}{n} \sum_{i=1}^n x_i \juhao \tag{1}
+\end{gather}
+\end{enhancedline}
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算下列各组数的平均数：}
+\begin{xiaoxiaotis}
+
+    \xxt{$1.4 \quad 2.8 \quad 5.3 \quad 3.7 \quad 2.3$}
+
+    \xxt{$-0.3 \quad 0.2 \quad 0.3 \quad -0.4 \quad 0.6 \quad 0.3 \quad 0.5 \quad -0.4$}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{用求和符号 “$\Sigma$” 表示下列各式：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={18em, colsep=0pt}}
+        \xxt{$P_1 + P_2 +  \cdots + P_{10}$；} & \xxt{$y_1 + y_2 + \cdots + y_n$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{xiaotis}
+\lianxijiange
+
+
+在一次毕业考试中，考生有一万多名。我们想了解这一万多名考生的数学平均成绩。
+但如果将他们的成绩全部加在一起再除以考生总数，十分麻烦。
+这时，可以采取用样本估计总体的方法，即从中抽查部分考生的成绩，
+用他们的平均成绩去估计所有考生的平均成绩。
+
+总体中所有个体的平均数叫做\zhongdian{总体平均数}，
+样本中所有个体的平均数叫做\zhongdian{样本平均数}。
+对于由一万多名考生的成绩组成的总体来说，所有考生的平均成绩就是总体平均数，
+所抽查的部分考生的平均成绩就是样本平均数。
+通常我们用样本平均数去估计总体平均数。
+一般来说，样本容量越大，这种估计也就越精确。
+例如，抽查的考生越多，所抽查的考生的平均成绩就越接近总平均成绩。
+
+
+\liti 从参加毕业考试的学生中，抽查了 $30$ 名学生的数学成绩，分数如下：
+\begin{data}
+    \begin{datatblr}{}
+        90 & 84 & 84 & 86 & 87 & 98 & 78 & 82 & 90 & 93 \\
+        68 & 95 & 84 & 71 & 78 & 61 & 94 & 88 & 77 & 100 \\
+        70 & 97 & 85 & 68 & 99 & 88 & 85 & 92 & 93 & 97
+    \end{datatblr}
+\end{data}
+计算样本平均数（结果保留到个位）。
+
+\begin{enhancedline}
+\jie $\begin{aligned}[t]
+    \overline{x} &= \dfrac{1}{30} (90 + 84 + \cdots + 97) \\
+                 &= \dfrac{2562}{30} \\
+                 &\approx 85 \juhao
+\end{aligned}$\\
+即样本平均数为 $85$．
+\end{enhancedline}
+
+于是可以估计，参加毕业考试的学生的数学平均成绩约为 $85$ 分。
+
+
+\liti 从一批机器零件毛坯中取出了 $20$ 件，称得它们的重量如下（单位：千克）：
+\begin{data}
+    \begin{datatblr}{}
+        210 & 208 & 200 & 205 & 202 & 218 & 206 & 214 & 215 & 207 \\
+        195 & 207 & 218 & 192 & 202 & 216 & 185 & 227 & 187 & 215
+    \end{datatblr}
+\end{data}
+计算样本平均数（结果保留到个位）。
+
+\begin{enhancedline}
+\jie $\begin{aligned}[t]
+    \overline{x} &= \dfrac{1}{20} (210 + 208 + \cdots + 215) \\
+                 &= \dfrac{4129}{20} \\
+                 &\approx 206 \; (\qianke) \juhao
+\end{aligned}$\\
+即样本平均数为 $206$ 千克。
+\end{enhancedline}
+
+于是可以估计，这批机器零件毛坯平均每件约重 $206$ 千克。
+
+本题中的样本数据较大，而且都在 $200$ 左右波动。
+这时，也可以采用下面的算法：
+
+将上面各数据同时减去 $200$，得到一组新数据：
+\begin{data}
+    \begin{datatblr}{colsep=0.8em}
+        10 & 8 &  0 &  5 & 2 & 18 &   6 & 14 &  15 & 7 \\
+        -5 & 7 & 18 & -8 & 2 & 16 & -15 & 27 & -13 & 15
+    \end{datatblr}
+\end{data}
+计算这组新数据的平均数，得
+\begin{enhancedline} \begin{align*}
+    \overline{x'} &= \dfrac{1}{20} (10 + 8 + \cdots + 15) \\
+                  &= \dfrac{129}{20} \\
+                  &\approx 6 \douhao
+\end{align*} \end{enhancedline}
+于是，所求的平均数应该是
+\begin{align*}
+    \overline{x} &= \overline{x'} + 200 \\
+                 &\approx 6 + 200 \\
+                 &= 206 \; (\qianke) \juhao
+\end{align*}
+所得结果与前面的结果一样。我们看到，采用这种算法，
+可以使参与计算的数据变小，计算起来比较简便。
+
+一般地，如果将一组数据 $x_1$，$x_2$，$\cdots$，$x_n$
+同时减去一个适当的常数 $a$\footnotemark 得到
+\footnotetext{常数 $a$ 通常取接近于样本平均数（约略估计）的较“整”的数。}
+$$ x_1' = x_1 - a \nsep x_2' = x_2 - a \nsep \cdots \nsep x_n' = x_n - a \douhao $$
+那么
+$$ x_1 = x_1' + a \nsep x_2 = x_2' + a \nsep \cdots \nsep x_n = x_n' + a \juhao $$
+因此
+\begin{enhancedline} \begin{align*}
+    \overline{n} &= \exdfrac{1}{n}(x_1 + x_2 + \cdots + x_n) \\
+                 &= \exdfrac{1}{n}[(x_1' + a) + (x_2' + a) + \cdots + (x_n' + a)] \\
+                 &= \exdfrac{1}{n} [(x_1' + x_2' + \cdots + x_n') + na] \\
+                 &= \exdfrac{1}{n} (x_1' + x_2' + \cdots + x_n') + \exdfrac{1}{n} \cdot na \\
+                 &= \overline{x'} + a \juhao
+\end{align*} \end{enhancedline}
+即
+\begin{gather*} % 因为在方框外有公式编号，所以这里采用手工绘制方框的方式。（虽然 \boxed 可以用，但画的框太小，不美观）
+    \tikz[overlay, >=Stealth] {
+        \draw (-1.5em, -0.8em) rectangle (6em, 1.5em);
+    }\overline{x} = \overline{x'} + a \juhao \tag{2}
+\end{gather*}\vspace*{0.5em}
+
+在例 2 的第二种算法中，正是利用了公式 (2)。
+
+
+\liti 某工人在 $30$ 天中加工一种零件的日产量，有 $2$ 天是 $51$ 件，$3$ 天是 $52$ 件，
+$6$ 天是 $53$ 件，$8$ 天是 $54$ 件，$7$ 天是 $55$ 件，$3$ 天是 $56$ 件，$1$ 天是 $57$ 件。
+计算这个工人 $30$ 天中的平均日产量（结果保留到个位）。
+
+\jie 在上面 $30$ 个数据中，$51$ 出现 $2$ 次，$52$ 出现 $3$ 次，$53$ 出现 $6$ 次，
+$54$ 出现 $8$ 次，$55$ 出现 $7$ 次，$56$ 出现 $3$ 次，$57$ 出现 $1$ 次。
+由于这组数据都比 $50$ 稍大一点，我们利用公式 (2) 计算它们的平均数，
+并将公式中的常数 $a$ 取作 $50$。
+
+将数据 $51$，$52$，$53$，$54$，$55$，$56$， $57$ 同时去 $50$，得到
+$$ 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 $$
+它们出现的次数依次是
+$$ 2 \quad 3 \quad 6 \quad 8 \quad 7 \quad 3 \quad 1 $$
+那么，这组新数据的平均数是
+\begin{enhancedline} \begin{align*}
+    \overline{x'} &= \dfrac{1 \times 2 + 2 \times 3 + \cdots + 7 \times 1}{30} \\
+                  &= \dfrac{118}{30} \\
+                  &\approx 4 \juhao
+\end{align*} \end{enhancedline}
+
+根据公式 (2)，
+\begin{align*}
+    \overline{x} &= \overline{x'} + a \\
+                 &\approx 4 + 50 \\
+                 &= 54 \; (\text{件}) \juhao
+\end{align*}
+即这个工人 $30$ 天中的平均日产量为 $54$ 件。
+
+于是可以估计，这个工人在这 $30$ 天前后的一段时间内，平均日产量约为 $54$ 件。
+
+\begin{enhancedline}
+一般来说，如果在 $n$ 个数中，$x_1$ 出现 $f_1$ 次，$x_2$ 出现 $f_2$ 次，$\cdots$，
+$x_k$ 出现 $f_k$ 次（这里 $f_1 + f_2 + \cdots + f_k = n$），
+那么根据公式 (1) ，这 $n$ 个数的平均数可以表示为
+\begin{gather*}
+    \overline{x} = \dfrac{x_1f_2 + x_2f_2 + \cdots + x_kf_k}{n} \douhao \footnotemark \tag{$1'$}
+\end{gather*}
+\footnotetext{这个平均数叫做\zhongdian{加权平均数}，其中 $f_1$， $f_2$，$\cdots$，$f_k$ 叫做 \zhongdian{权}。}
+或简记作
+\begin{gather*}
+    \overline{x} = \exdfrac{1}{n} \sum_{i=1}^k x_if_i \juhao \tag{$1'$}
+\end{gather*}
+\end{enhancedline}
+
+
+正如例 3 那样，当样本中有不少数据多次重复出现时，利用公式 ($1'$) 计算样本平均数比较简便。
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{抽测了 $10$ 株棉花的高， 结果如下（单位： 厘米）：\\
+    \hspace*{8em}
+    \begin{datatblr}{}
+        25 & 41 & 40 & 43 & 22 & 14 & 19 & 39 & 21 & 42
+    \end{datatblr} \\
+    计算样本平均数（结果保留到个位）。
+}
+
+\xiaoti{利用公式 (2) 计算下面各组数据的平均数（结果保留到个位）：}
+\begin{xiaoxiaotis}
+
+    \xxt{$105 \quad 103 \quad 101 \quad 100 \quad 114 \quad 108 \quad 110 \quad 106 \quad 98 \quad 102$}
+
+    \xxt{$4203 \quad 4204 \quad 4200 \quad 4194 \quad 4204 \quad 4201 \quad 4195 \quad 4199$}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{从一所中学某年级的六个班中抽测了 $24$ 名男学生的身高，结果如下〈单位：厘米）：\\
+    \hspace*{8em}
+    \begin{datatblr}{}
+        155 & 157 & 159 & 162 & 162 & 163 & 164 & 164 \\
+        165 & 165 & 165 & 166 & 166 & 167 & 167 & 168 \\
+        168 & 169 & 169 & 170 & 171 & 171 & 172 & 174
+    \end{datatblr} \\
+    这个年男学生的平均身高约是多少（结果保留到个位）？
+}
+
+
+\xiaoti{在一个班的 $40$ 名学生中，$14$ 岁的 $5$ 人，$15$ 岁的有 $30$ 人，$16$ 岁的有 $4$ 人，
+    $17$ 岁的 $1$ 人。计算这个班学生的平均年龄（结果保留到小数点后第一位）。
+}
+
+\end{xiaotis}
+
+
