@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \draw (0, 0) -- (5.5, 0) node [below=1.1em, xshift=-2em] {数据序号};
+    \draw (0, 0) -- (0,   4) node [left, align=center] {零件\\[-0.5em]直径\\[-0.5em]（毫米）};
+    \foreach \x in {1, ..., 10} {
+        \draw (\x/2, 0.2) -- (\x/2, 0) node [below] {$\x$};
+        \draw (\x/2, 1) -- (\x/2, 3);
+    }
+    \foreach \y [count=\i] in {39.8, 39.9, 40, 40.1, 40.2} {
+        \draw (5, 0.5+\i/2) -- (0, 0.5+\i/2) node [left] {$\y$};
+    }
+
+    \foreach \x/\y in {
+        1/40, 2/39.8, 3/40.1, 4/40.2, 5/39.9,
+        6/40, 7/40.2, 8/39.8, 9/40.2, 10/39.8
+    } {
+        \filldraw [fill=black] (\x/2, \y*5-39.8*5+1) circle (0.1); % (\y - 39.8) * 2/10 + 1
+    }
+\end{tikzpicture}
+

@@ -1,0 +1,152 @@
+\subsection{方差}\label{subsec:16-3}
+\begin{enhancedline}
+
+两台机床同时生产直径是 $40$ 毫米的零件，从产品抽出 $10$ 件进行测量，结果如下（单位：毫米）：
+\begin{data}
+    \begin{tblr}{hlines, vlines, columns={mode=math, 2em, c}, column{1}={mode=text, 4em}}
+        机床甲 & 40 & 39.8 & 40.1 & 40.2 & 39.9 & 40   & 40.2 & 39.8 & 40.2 & 39.8 \\
+        机床乙 & 40 & 40   & 39.9 & 40   & 39.9 & 40.2 & 40   & 40.1 & 40   & 39.9
+    \end{tblr}
+\end{data}
+利用公式 (2) 分别计算这两组数据的平均数（在公式 (2) 中取 $a = 40$），得
+\begin{align*}
+    & \overline{x}_{\text{甲}} = 40 + \dfrac{1}{10} [0 + (-0.2) + \cdots + (-0.2)] = 40 \douhao \\
+    & \overline{x}_{\text{乙}} = 40 + \dfrac{1}{10} [0 +      0 + \cdots + (-0.1)] = 40 \douhao
+\end{align*}
+即这两组零件直径数据的平均数都是 $40$ 毫米。这时能不能说，在使零件的直径符合规定方面，
+两台机床加工的情况一样呢？
+
+上面表中的数据如图 \ref{fig:16-1} 所示。从图中看到，
+机床甲生产的零件的直径与规定尺寸偏差较大，各点偏离 $40$ 毫米线较多；
+机床乙生产的零件的直径与规定尺寸偏差较小，各点比较集中在 $40$ 毫米线的附近。
+这说明，在使零件的直径符合规定方面，机床乙比机床甲要好。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch16-1-1}
+        \caption*{（机床甲）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czds4-ch16-1-2}
+        \caption*{（机床乙）}
+    \end{minipage}
+    \caption{}\label{fig:16-1}
+\end{figure}
+
+
+怎样用数量来表示样本的数据偏离平均数的大小呢？
+在本例中，机床甲生产的 $10$ 个零件直径的毫米数分别与样本平均数 $40$ 的偏差是：
+$$ 0 \quad -0.2 \quad 0.1 \quad 0.2 \quad -0.1 \quad 0 \quad 0.2 \quad -0.2 \quad 0.2 \quad -0.2 $$
+我们容易想到，是否可以用上面各个偏差的和来衡量零件直径相对于平均直径的偏差大小呢？
+不可以，因为不难验证，由于正偏差与负偏差相互抵消，上面各偏差的和等于零。
+要解决这个矛盾，办法不止一种，这里采用将上面各偏差平方后再相加的办法，这样，其中各项就不可能是负数了。
+还有一个问题，各偏差的平方和与样本容量有关，样本容量越大，各偏差的平方和也越大。
+为了排除样本容量的影响，我们将各偏差平方和再除以样本容量 $n$，
+即用各偏差平方的平均数〈用 $s^2$ 表示）来衡量样本的数据偏离样本平均数的大小，
+于是，对于机床甲，
+\begin{align*}
+    s^2 &= \dfrac{1}{10} [(40 - 40)^2 + (39.8 - 40)^2 + \cdots + (39.8 - 40)^2] \\
+        &= \dfrac{1}{10} [0^2 + (-0.2)^2 + \cdots + (-0.2)^2] \\
+        &= \dfrac{1}{10} \times 0.26 = 0.026 \; (\pfhm) \fenhao
+\end{align*}
+对于机床乙，
+\begin{align*}
+    s^2 &= \dfrac{1}{10} [(40 - 40)^2 + (40 - 40)^2 + \cdots + (39.9 - 40)^2] \\
+        &= \dfrac{1}{10} [0^2 + 0^2 + \cdots + (-0.1)^2] \\
+        &= \dfrac{1}{10} \times 0.08 = 0.008 \; (\pfhm) \juhao
+\end{align*}
+
+由于 $0.026 > 0.008$，说明机床甲生产的零件直径与规定尺寸偏差较大，机床乙生产的零件直径与规定尺寸偏差较小。
+
+一般地，样本中各数据与样本平均数的差的平方的平均数
+\begin{gather*}
+    s^2 = \exdfrac{1}{n} [(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \cdots + (x_n - \overline{x})^2] \tag{3}
+\end{gather*}
+叫做\zhongdian{样本方差}，用来衡量一个样本的波动大小（即样本中的数据偏离样本平均数的大小）。
+样本方差越大，说明样本的波动越大。
+
+为了书写方便，样本方差常写作：
+\begin{gather*}
+    s^2 = \exdfrac{1}{n} \sum_{i=1}^n (x_i - \overline{x})^2 \juhao \tag{3}
+\end{gather*}
+
+当样本容量很大时，样本方差很接近反映总体波动大小的特征数——\zhongdian{总体方差}。
+通常是用样本方差去估计总体方差。这样，通过比较两个样本方差，可以近似地比较相应的两个总体方差的大小。
+
+
+
+\liti[0] 已知两个样本：
+\begin{data}
+    \begin{datatblr}{column{1}={mode=text}, columns={2em}}
+        甲 & 9.9  & 10.3 & 9.8 & 10.1 & 10.4 & 10  & 9.8 & 9.7 \\
+        乙 & 10.2 & 10   & 9.5 & 10.3 & 10.5 & 9.6 & 9.8 & 10.1
+    \end{datatblr}
+\end{data}
+分别计算两个样本方差。
+
+\jie 根据公式 (2) （取 $a = 10$），有
+\begin{align*}
+    \overline{x}_\text{甲} &= 10 + \exdfrac{1}{8} (-0.1 + 0.3 - 0.2 + 0.1 + 0.4 + 0 - 0.2 - 0.3) \\
+                    &= 10 + \exdfrac{1}{8} \times 0 = 10 \fenhao \\
+    \overline{x}_\text{乙} &= 10 + \exdfrac{1}{8} (0.2 + 0 - 0.5 + 0.3 + 0.5 - 0.4 - 0.2 + 0.1) \\
+                    &= 10 + \exdfrac{1}{8} \times 0 = 10 \juhao
+\end{align*}
+于是，
+\begin{align*}
+    s^2_\text{甲} &= \exdfrac{1}{8} [(9.9 - 10)^2 + (10.3 - 10)^2 + \cdots + (9.7 - 10)^2] \\
+                  &= \exdfrac{1}{8} [(-0.1)^2 + 0.3^2 + \cdots + (-0.3)^2] \\
+                  &= \exdfrac{1}{8} [0.01 + 0.09 + \cdots + 0.09] \\
+                  &= \exdfrac{1}{8} \times 0.44 = 0.055 \fenhao \\
+    s^2_\text{乙} &= \exdfrac{1}{8} [(10.2 - 10)^2 + (10 - 10)^2 + \cdots + (10.1 - 10)^2] \\
+                  &= \exdfrac{1}{8} [0.2^2 + 0^2 + \cdots + 0.1^2] \\
+                  &= \exdfrac{1}{8} [0.04 + 0 + \cdots + 0.01] \\
+                  &= \exdfrac{1}{8} \times 0.84 = 0.105 \juhao
+\end{align*}
+
+从 $s^2_\text{甲} < s^2_\text{乙}$ 知道，样本乙比样本甲的波动大。
+
+在有些情况下，需要用到样本方差的算术平方根
+\begin{gather*}
+    s = \sqrt{\exdfrac{1}{n} \sum_{i=1}^n (x_i - \overline{x})^2} \; \douhao \tag{4}
+\end{gather*}
+并把它叫做\zhongdian{样本标准差}，它也是一个用来衡量样本波动大小的重要的量。
+样本数据与样本方差的度量单位是不一致的。如在本节有关零件直径的例子中，
+样本数据的单位是毫米，而样本方差的单位是$\pfhm$。
+但样本数据与样本标准差的度量单位却是一致的。
+
+在本节有关零件直径的例子中，两个样本标准差分别是：
+\begin{align*}
+    & s_\text{甲} = \sqrt{0.026} \approx 0.16 \; (\haomi) \fenhao \\
+    & s_\text{乙} = \sqrt{0.008} \approx 0.089 \; (\haomi) \juhao
+\end{align*}
+
+
+\lianxi
+\begin{xiaotis}
+
+\xiaoti{计算下列各样本的方差与标准差（结果保留到小数点后第一位）：}
+\begin{xiaoxiaotis}
+
+    \xxt{$-1 \quad 2 \quad 0 \quad -3 \quad -2 \quad 3 \quad 0 \quad 1$；}
+
+    \xxt{$28 \quad 24 \quad 25 \quad 23 \quad 27 \quad 24 \quad 22 \quad 24 \quad 25 \quad 28$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{从甲、乙两名车工车出的同一种零件中，各抽出 $5$ 个，
+    量得它们的直径（单位：毫米）如下（图纸上规定的尺寸是 $10$ 毫米）：\\
+    \hspace*{2em}\begin{datatblr}{column{1}={mode=text}}
+        甲生产的零件尺寸 & 10.05 & 10.02 & 9.97  & 9.96 & 10.00 \\
+        乙生产的零件尺寸 & 10.00 & 10.01 & 10.02 & 9.97 & 10.00
+    \end{datatblr} \\
+    分别计算上面两个样本的平均数与方差，说明在使零件的直径符合规定方面，谁做得较好。
+}
+
+\end{xiaotis}
+\end{enhancedline}
+
