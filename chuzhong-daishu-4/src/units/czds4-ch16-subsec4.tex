@@ -1,0 +1,281 @@
+\subsection{方差的简化计算\footnote{方差简化计算公式的推导不作为要求。}}\label{subsec:16-4}
+\begin{enhancedline}
+
+按照公式 (3) 计算样本方差，计算量比较大，下面介绍方差的简化计算方法。
+
+为了简化讨论，我们假定样本中仅包含 $3$ 个数据 $x_1$，$x_2$，$x_3$，
+它们的平均数是 $\overline{x}$，那么样本方差是
+$$ s^2 = \exdfrac{1}{3} [(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + (x_3 - \overline{x})^2] \juhao $$
+
+将方括号内的各项展开后再整理，得到
+\begin{align*}
+    s^2 &= \exdfrac{1}{3} [(x_1^2 - 2x_1\overline{x} + \overline{x}^2) + (x_2^2 - 2x_2\overline{x} + \overline{x}^2) + (x_3^2 - 2x_3\overline{x} + \overline{x}^2)] \\
+        &= \exdfrac{1}{3} [(x_1^2 + x_2^2 + x_3^2) - 2(x_1 + x_2 + x_3)\overline{x} + 3\overline{x}^2] \\
+        &= \exdfrac{1}{3} [(x_1^2 + x_2^2 + x_3^2) - 2 \times 3 \times \dfrac{(x_1 + x_2 + x_3)}{3} \overline{x} + 3\overline{x}^2] \\
+        &= \exdfrac{1}{3} [(x_1^2 + x_2^2 + x_3^2) - 2 \times 3 \overline{x}^2 + 3\overline{x}^2] \\
+        &= \exdfrac{1}{3} [(x_1^2 + x_2^2 + x_3^2) - 3\overline{x}^2] \juhao
+\end{align*}
+
+一般地，如果样本的容量是 $n$，那么样本方差可以用下面的公式计算：
+
+\begin{gather*} % 因为在方框外有公式编号，所以这里采用手工绘制方框的方式。
+    \tikz[overlay, >=Stealth] {
+        \draw (-1.5em, -1.0em) rectangle (17em, 1.7em);
+    }s^2  = \exdfrac{1}{n} [(x_1^2 + x_2^2 + \cdots + x_n^2) - n\overline{x}^2] \douhao \tag{5}
+\end{gather*}
+或简记作
+\begin{gather*} % 因为在方框外有公式编号，所以这里采用手工绘制方框的方式。
+    \tikz[overlay, >=Stealth] {
+        \draw (-1.5em, -1.4em) rectangle (12em, 2.0em);
+    }s^2  = \exdfrac{1}{n} (\sum_{i=1}^n x_i^2 - n\overline{x}^2) \juhao \tag{5}
+\end{gather*}\vspace*{0.5em}
+
+用公式 (5) 计算样本方差，是直接计算各个数据的平方，而不必计算各个数据与样本平均数的差的平方，
+因此它比用公式  (3) 计算少一个步骤，有时比较方便。
+
+
+\liti 计算下面样本的方差（结果保留到小数点后第一位）：
+$$ 3 \quad -1 \quad 2 \quad 1 \quad -3 \quad 3 $$
+
+\jie 从计算知道，样本平均数不是整数。这时用公式 (3) 计算样本方差比较麻烦，我们用公式 (5) 来计算。
+
+\begin{align*}
+    s^2 &= \exdfrac{1}{6} \left[ 3^2 + (-1)^2 + 2^2 + 1^2 + (-3)^2 + 3^2 - 6 \times \left(\dfrac{3 - 1 + 2 + 1 - 3 + 3}{6}\right)^2\right] \\
+        &= \exdfrac{1}{6} \left[ 9 + 1 + 4 + 1 + 9 + 9 - 6 \times \left(\dfrac{5}{6}\right)^2\right] \\
+        &= \exdfrac{1}{6} \left(33 - 6 \times \dfrac{25}{36}\right) \\
+        &= \exdfrac{1}{6} \times 33 - \dfrac{25}{36} \\
+        &\approx 5.5 - 0.7 = 4.8 \juhao
+\end{align*}
+
+
+\lianxi
+
+计算下面样本的方差（结果保留到小数点后第一位）：
+$$ 5 \quad 4 \quad 4 \quad 3 \quad 4 \quad 3 \quad 2 \quad 3 \quad 5 \quad 3 $$
+
+\lianxijiange
+
+
+当样本数据较大时，用公式 (5) 计算样本方差仍然比较麻烦。
+如果数据相互比较接近，为了减小参与计算的数据，我们可以仿照前面简化计算平均数的办法，
+将每个数据同时减去一个与样本平均数接近的常数 $a$。
+假定样本中包含 $3$ 个数据 $x_1$，$x_2$，$x_3$，我们作替换
+$$ x_1' = x_1 - a \nsep x_2' = x_2 - a \nsep x_3' = x_3 - a \douhao $$
+那么，
+$$ x_1 = x_1' + a \nsep x_2 = x_2' + a \nsep x_3 = x_3' + a \douhao $$
+又根据公式 (2)，有
+$$ \overline{x} = \overline{x'} + a \douhao $$
+其中 $\overline{x'}$ 是 $x_1'$，$x_2'$ 和 $x_3'$ 的平均数，于是，
+\begin{align*}
+    s^2 &= \exdfrac{1}{3} [(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + (x_3 - \overline{x})^2] \\
+        &= \exdfrac{1}{3} \{[(x_1' + a) - (\overline{x'} + a)]^2
+            + [(x_2' + a) - (\overline{x'} + a)]^2
+            + [(x_3' + a) - (\overline{x'} + a)]^2\} \\
+        &= \exdfrac{1}{3} [(x_1' - \overline{x'})^2 + (x_2' - \overline{x'})^2 + (x_3' - \overline{x'})^2] \\
+        &= \exdfrac{1}{3} [(x_1'^2 + x_2'^2 + x_3'^2) - 3\overline{x'}^2] \juhao \quad \text{（根据公式 (5)）}
+\end{align*}
+
+
+一般地，如果样本的容量是 $n$，那么有
+
+\begin{gather*} % 因为在方框外有公式编号，所以这里采用手工绘制方框的方式。
+    \tikz[overlay, >=Stealth] {
+        \draw (-1.5em, -1.0em) rectangle (17em, 1.7em);
+    }s^2  = \exdfrac{1}{n} [(x_1'^2 + x_2'^2 + \cdots + x_n'^2) - n\overline{x'}^2] \douhao \tag{6}
+\end{gather*}
+其中
+$$ x_1' = x_1 - a \nsep x_2' = x_2 - a \nsep \cdots \nsep x_n' = x_n - a \douhao $$
+这里 $a$ 是接近样本平均数的常数。
+
+上式可以简记为
+\begin{gather*} % 因为在方框外有公式编号，所以这里采用手工绘制方框的方式。
+    \tikz[overlay, >=Stealth] {
+        \draw (-1.5em, -1.4em) rectangle (12em, 2.0em);
+    }s^2  = \exdfrac{1}{n} (\sum_{i=1}^n x_i'^2 - n\overline{x'}^2) \juhao \tag{6}
+\end{gather*}\vspace*{0.5em}
+
+由于在替换 $x_i' = x_i - a \; (i = 1, 2, \cdots, n)$ 中所取的常数 $a$ 在与样本平均数 $\overline{x}$ 比较接近，
+各数据 $x_i'$ 比较小，因此当样本数据较大时，用公式 (6) 计算样本方差比较简便。
+
+
+
+\liti 从小麦地里抽取了甲、乙两种小麦各 $10$ 株，测得株高如下（单位：厘米）：
+\begin{data}
+    \begin{datatblr}{column{1}={mode=text}, columns={2em}}
+        甲 & 76 & 90 & 84 & 86 & 81 & 87 & 86 & 82 & 85 & 83 \\
+        乙 & 82 & 84 & 85 & 89 & 79 & 80 & 91 & 89 & 79 & 74
+    \end{datatblr}
+\end{data}
+哪种小麦长得比较整齐？
+
+\jie 根据题意，是要比较两个样本方差的大小。
+因为样本数据较大，我们用公式 (6) 来计算两个样本方差，步骤如下：
+
+(1) 确定替换 $x_i' = x_i - a$ 中的常数 $a$。
+
+由于样本数据都在 $80$ 左右波动，我们取 $a = 80$。
+
+(2) 如表 \ref{tab:16-1} 、表 \ref{tab:16-2} 所示，分别计算各个 $x_i'$ 及 $x_i'^2 \; (i = 1, 2, \cdots, 10)$，
+然后计算各个 $x_i'$ 的和以及各个 $x_i'^2$ 的和，并填入表中。
+
+\begin{table}[H]
+    \newcommand{\btr}{{$x_i'$ \\[-0.5em] $(x_i - 80)$}}
+    \newcommand{\hj}{\text{合计}}
+    \centering
+    \begin{minipage}{7cm}
+        \centering
+        \caption{（甲种小麦）}\label{tab:16-1}
+        \begin{tblr}{hlines, vlines, columns={4em}, rows={mode=math, c, m}, cell{1}{2}={mode=text}}
+            x_i & \btr & x_i'^2 \\
+            76  &  -4  &  16  \\
+            90  &  10  & 100  \\
+            84  &   4  &  16  \\
+            86  &   6  &  36  \\
+            81  &   1  &   1  \\
+            87  &   7  &  49  \\
+            86  &   6  &  36  \\
+            82  &   2  &   4  \\
+            85  &   5  &  25  \\
+            83  &   3  &   9  \\
+            \hj &  40  & 292
+        \end{tblr}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{7cm}
+        \centering
+        \caption{（乙种小麦）}\label{tab:16-2}
+        \begin{tblr}{hlines, vlines, columns={4em}, rows={mode=math, c, m}, cell{1}{2}={mode=text}}
+            x_i & \btr & x_i'^2 \\
+            82  &   2  &   4  \\
+            84  &   4  &  16  \\
+            85  &   5  &  25  \\
+            89  &   9  &  81  \\
+            79  &  -1  &   1  \\
+            80  &   0  &   0  \\
+            91  &  11  & 121  \\
+            89  &   9  &  81  \\
+            79  &  -1  &   1  \\
+            74  &  -6  &  36  \\
+            \hj &  32  & 366
+        \end{tblr}
+    \end{minipage}
+\end{table}
+
+
+(3) 将表中有关数据代入公式 (6) 进行计算：
+\begin{align*}
+    s_\text{甲}^2 &= \dfrac{1}{10} \left( \sum_{i=1}^{10} x_i'^2 - 10\overline{x'}^2 \right) \\
+                  &= \dfrac{1}{10} \left[ 292 - 10 \times \left(\dfrac{40}{10}\right)^2 \right] \\
+                  &= \dfrac{1}{10} [292 - 160] = \dfrac{1}{10} \times 132 \\
+                  &= 13.2 \fenhao
+\end{align*}
+
+\begin{align*}
+    s_\text{乙}^2 &= \dfrac{1}{10} \left( \sum_{i=1}^{10} x_i'^2 - 10\overline{x'}^2 \right) \\
+                  &= \dfrac{1}{10} \left[ 366 - 10 \times \left(\dfrac{32}{10}\right)^2 \right] \\
+                  &= \dfrac{1}{10} [366 - 102.4] = \dfrac{1}{10} \times 263.6 \\
+                  &= 26.36 \juhao
+\end{align*}
+
+因为 $s_\text{甲}^2 < s_\text{乙}^2$，可以估计，甲种小麦比乙种小麦长得整齐。
+
+
+
+\liti 一个农科站在 $8$ 个面积相等的试验点对某两个早稻品种进行栽培对比试验，
+两个品种在各试验点的产量如下（单位：$500$ 克）：
+\begin{data}
+    \begin{datatblr}{column{1}={mode=text}, columns={2em}}
+        甲 & 804 & 984 & 989 & 817 & 919 & 840 & 912 & 1001 \\
+        乙 & 856 & 932 & 930 & 855 & 872 & 910 & 897 & 918
+    \end{datatblr}
+\end{data}
+哪个品种的产量比较稳定？
+
+\jie 根据题意，是要比较两个样本方差的大小。
+由于样本数据较大，我们仿照例 2 的步骤，根据公式 (6) 来计算两个样本方差。
+
+(1) 由于两个样本中的数据都在 $900$ 左右波动，我们在替换 $x_i' = x_i - a$ 中，取 $a = 900$。
+
+(2) 如 表 \ref{tab:16-3}、表 \ref{tab:16-4} 所示，分别计算各个 $x_i'$ 及 $x_i'^2$，
+然后计算各个 $x_i'$ 的和以及各个 $x_i'^2$ 的和，并填入表中。
+
+\begin{table}[H]
+    \newcommand{\btr}{{$x_i'$ \\[-0.5em] $(x_i - 900)$}}
+    \newcommand{\hj}{\text{合计}}
+    \centering
+    \begin{minipage}{7cm}
+        \centering
+        \caption{（甲种水稻）}\label{tab:16-3}
+        \begin{tblr}{hlines, vlines, columns={4em}, rows={mode=math, c, m}, cell{1}{2}={mode=text}}
+            x_i  & \btr & x_i'^2 \\
+            804  & -96  &  9216  \\
+            984  &  84  &  7056  \\
+            989  &  89  &  7921  \\
+            817  & -83  &  6889  \\
+            919  &  19  &   361  \\
+            840  & -60  &  3600  \\
+            912  &  12  &   144  \\
+            1001 & 101  & 10201  \\
+            \hj  &  66  & 45388
+        \end{tblr}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{7cm}
+        \centering
+        \caption{（乙种水稻）}\label{tab:16-4}
+        \begin{tblr}{hlines, vlines, columns={4em}, rows={mode=math, c, m}, cell{1}{2}={mode=text}}
+            x_i  & \btr & x_i'^2 \\
+            856  & -44  &  1936  \\
+            932  &  32  &  1024  \\
+            930  &  30  &   900  \\
+            855  & -45  &  2025  \\
+            872  & -28  &   784  \\
+            910  &  10  &   100  \\
+            897  &  -3  &     9  \\
+            918  &  18  &   324  \\
+            \hj  & -30  &  7102
+        \end{tblr}
+    \end{minipage}
+\end{table}
+
+
+(3) 将表中有关数据代入公式 (6) 进行计算：
+
+\begin{align*}
+    s_\text{甲}^2 &= \exdfrac{1}{8} \left( \sum_{i=1}^{8} x_i'^2 - 8\overline{x'}^2 \right) \\
+                  &= \exdfrac{1}{8} \left[ 45388 - 8 \times \left(\dfrac{66}{8}\right)^2 \right] \\
+                  &= \exdfrac{1}{8} [45388 - 554.5] \\
+                  &= \exdfrac{1}{8} \times 44843.5 \\
+                  &\approx 5605 \fenhao
+\end{align*}
+
+
+\begin{align*}
+    s_\text{乙}^2 &= \exdfrac{1}{8} \left( \sum_{i=1}^{8} x_i'^2 - 8\overline{x'}^2 \right) \\
+                  &= \exdfrac{1}{8} \left[ 7102 - 8 \times \left(\dfrac{-30}{8}\right)^2 \right] \\
+                  &= \exdfrac{1}{8} [7102 - 112.5] \\
+                  &= \exdfrac{1}{8} \times 6989.5 \\
+                  &\approx 874 \fenhao
+\end{align*}
+
+因为 $s_\text{乙}^2 < s_\text{甲}^2$，可以估计，乙种水稻比甲种水稻的产量稳定。
+
+
+我们看到，样本平均数和方差的计算往往较烦。
+为便于计算，所取的样本容量应尽可能 “整” 一点。如 $10$， $20$， $30$ 等。
+
+
+\lianxi
+
+计算下列各样本方差（结果保留到小数点后第一位）：
+
+\begin{xiaoxiaotis}
+
+    \xxt{105 \quad 103 \quad 101 \quad 100 \quad 114 \quad 108 \quad 110 \quad 106 \quad \phantom{0}98 \quad 102}
+
+    \xxt{423 \quad 421 \quad 419 \quad 420 \quad 421 \quad 417 \quad 422 \quad 419 \quad 423 \quad 418}
+
+\end{xiaoxiaotis}
+
+\end{enhancedline}
+
