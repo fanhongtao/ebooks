@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\h}{0.2}
+
+    \draw [->] (0, 0) -- (10, 0) node [above, align=center] {身高\\[-0.5em]（厘米）};
+    \draw [->] (0, 0) -- (0, 5)  node [right] {$\dfrac{\text{频率}}{\text{组距}}$};
+    \foreach \x/\y [count=\i] in {
+        145.5/1,  148.5/3,  151.5/6,  154.5/8,
+        157.5/18, 160.5/11, 163.5/10, 166.5/3
+    } {
+        \draw (\i, 0) rectangle (\i+1, \y*\h);
+        \draw (\i, 0) node [below] {$\x$};
+    }
+    \draw (9, 0) node [below] {$169.5$};
+\end{tikzpicture}
+

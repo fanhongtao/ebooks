@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\h}{0.5}
+
+    \draw [->] (0, 0) -- (14, 0) node [above, align=center]       {穗长\\[-0.5em]（厘米）} coordinate(x axis);
+    \draw [->] (0, 0) -- (0, 6)  node [below right, align=center] {累积\\[-0.5em] 频率}   coordinate(y axis);
+
+    \foreach \x [count=\i] in {3.95, 4.25, 4.55, 4.85, 5.15, 5.45, 5.75, 6.05, 6.35, 6.65, 6.95, 7.25, 7.55} {
+        \draw (\i, 0) -- (\i, -0.1) node [below] {$\x$};
+    }
+    \foreach \y [count=\i] in {0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1.00} {
+        \draw (0.1, \i * \h) -- (0, \i * \h) node [left] {$\y$};
+    }
+    \foreach \x/\y [count=\i] in {
+        3.95/0.00,  4.25/0.01,  4.55/0.02,  4.85/0.04,
+        5.15/0.09,  5.45/0.20,  5.75/0.35,  6.05/0.63,
+        6.35/0.76,  6.65/0.87,  6.95/0.97,  7.25/0.99, 7.55/1.00
+    } {
+        \coordinate (CUR) at (\i, \y * 5);
+        \filldraw [fill=black] (CUR) circle (0.05);
+        \ifnum \i > 1
+            \draw (OLD) -- (CUR);
+        \fi
+        \coordinate (OLD) at (CUR);
+    }
+
+    \coordinate (five) at (4.5, 0.07*5); % 5厘米， 0.07
+    \draw [dashed] (five |- x axis) -- (five) -- (five -| y axis);
+\end{tikzpicture}
+

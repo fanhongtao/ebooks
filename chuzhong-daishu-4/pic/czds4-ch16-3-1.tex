@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\h}{0.2}
+
+    \draw [->] (0, 0) -- (14, 0) node [above, align=center] {穗长\\[-0.5em]（厘米）};
+    \draw [->] (0, 0) -- (0, 6)  node [right] {$\dfrac{\text{频率}}{\text{组距}}$};
+    \foreach \x/\y [count=\i] in {
+        3.95/1,   4.25/1,   4.55/2,   4.85/5,
+        5.15/11,  5.45/15,  5.75/28,  6.05/13,
+        6.35/11,  6.65/10,  6.95/2,   7.25/1
+    } {
+        \draw (\i, 0) rectangle (\i+1, \y*\h);
+        \draw (\i, 0) node [below] {$\x$};
+    }
+    \draw (13, 0) node [below] {$7.55$};
+\end{tikzpicture}
+
