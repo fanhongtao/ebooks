@@ -1,0 +1,44 @@
+\begin{tikzpicture}[
+    shan/.style={decorate, decoration={random steps,segment length=2pt,amplitude=1pt}},
+]
+    \pgfmathsetmacro{\factor}{0.05}
+    \pgfmathsetmacro{\ab}{50 * \factor}
+    \pgfmathsetmacro{\dcb}{40}
+    \pgfmathsetmacro{\dca}{70}
+
+    % 因为 cot(DCB) = CD/BD
+    % 所以 CD = cot(DCB) * BD
+    % 同理 CD = cot(DCA) * AD = cot(DCA) * (AB + BD)
+    % 所以 cot(DCB) * BD = cot(DCA) * (AB + BD)
+    % 化简后得：
+    %      BD = [ cot(DCA) * AB ] / [ cot(DCB) - cot(DCA) ]
+    \pgfmathsetmacro{\bd}{cot(\dca) * \ab / (cot(\dcb) - cot(\dca))}
+    \pgfmathsetmacro{\cd}{cot(\dcb) * \bd}
+
+    \coordinate ["$D$" below] (D) at (0, 0);
+    \coordinate ["$C$" below] (C) at (-\cd, 0);
+    \coordinate ["$B$" right] (B) at (0, \bd);
+    \coordinate ["$A$" above] (A) at (0, \bd + \ab);
+
+    \draw [thick] (-1.8, 0) -- (1.2, 0);
+    \draw [thick] (C) -- (A);
+    \draw [thick] (C) -- (B);
+    \draw [dashed] (D) -- (B);
+
+    \coordinate (B1) at ($(B) + (-0.2, 0)$);
+    \coordinate (B2) at ($(B) + ( 0.2, 0)$);
+    \draw [name path=b1] (A) -- (B1);
+    \draw [name path=b2] (A) -- (B2);
+    \foreach \y in {1, ..., 8} {
+        \path [name path=xline] (-1, \bd + \ab*\y/9) -- (1, \bd + \ab*\y/9);
+        \path [name intersections={of=b1 and xline, by=NB1}];
+        \path [name intersections={of=b2 and xline, by=NB2}];
+        \draw (B1) -- (NB2) -- (NB1) -- (B2);
+        \coordinate (B1) at (NB1);
+        \coordinate (B2) at (NB2);
+    }
+
+    \draw [shan] (-0.9, 0) to [out=30, in=180] (B);
+    \draw [shan] (0.9, 0) to [out=150, in=0] (B);
+\end{tikzpicture}
+
