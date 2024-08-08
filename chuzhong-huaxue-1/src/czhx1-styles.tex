@@ -61,6 +61,28 @@
 \usepackage{xparse}
 \usepackage{xpinyin}
 
+% 化学相关的包
+\usepackage[version=4, arrows=pgf-filled]{mhchem}
+
+\newenvironment{fangchengshi}{
+  \csname gather*\endcsname    %\begin{gather*}
+}{
+  \csname endgather*\endcsname %\end{gather*}
+}
+
+
+\newcounter{shiyan}[chapter]
+\renewcommand{\theshiyan}{\thechapter-\arabic{shiyan}}
+\newcommand{\shiyantitle}{〔实验 \theshiyan〕}
+\makeatletter
+\newenvironment{shiyan}{%实验
+  \refstepcounter{shiyan}
+  \protected@edef\@currentlabelname{\shiyantitle}
+  \small \CJKfamily{zhkai} \shiyantitle
+}{\par}
+\makeatother
+
+
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
 % 参数1: 最后一行需要额外增加的高度（用于调整和后继行的间隔）
 \NewDocumentEnvironment{enhancedline}{o}{
@@ -103,6 +125,17 @@
   }
 }{}
 
+
+% 没有编号但又需要添加到目录中的 chapter (No num(ber) chapter)。
+% 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
+% 参数2: 正文中的文字
+\NewDocumentCommand{\nonumchapter}{o m}{%
+  \touchcounter{chapter}
+  \section*{#2}
+  \IfNoValueTF{#1}
+    {\addcontentsline{toc}{chapter}{#2}}
+    {\addcontentsline{toc}{chapter}{#1}}
+}
 
 % 没有编号但又需要添加到目录中的 section (No num(ber) section)。
 % 参数1: 目录中的文字（可选，如果没有指定，则使用参数2的值）
@@ -157,14 +190,13 @@
   \setcounter{cntxiaoti}{0}
 }
 
-\newcounter{cntxiti}               % “习题”的计数器
-\newcommand{\xiti}{%
-  \stepcounter{cntxiti}
-  \vspace{1em}
-  {\centering \section*{\labelxiti}}
+\newenvironment{xiti}{
+  {\centering \subsection*{习 题}}
+  \begin{xiaotis}
+}{
+  \end{xiaotis}
+  \vspace*{1em}
 }
-\newcommand{\labelxiti}{习题 \chinese{cntxiti}}
-
 
 \newcommand{\xiaojie}{%
   \nonumsection[\labelxiaojie]{\Large \labelxiaojie}
@@ -181,7 +213,6 @@
 
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
-\counterwithin*{cntxiaoti}{cntxiti}
 \counterwithin*{cntxiaoti}{cntfuxiti}
 \counterwithin*{cntxiaoxiaoti}{cntliti}
 \newcommand{\resetxxt}{\setcounter{cntxiaoxiaoti}{0}} % 重置 小小题的计数器
