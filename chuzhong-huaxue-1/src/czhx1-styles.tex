@@ -4,9 +4,6 @@
   chapter = {
     pagestyle = headings,
   },
-  section = {
-     aftername={、},
-  }
 }
 
 \usepackage{array}
@@ -82,6 +79,9 @@
 }{\par}
 \makeatother
 
+\newenvironment{yuedu}{%阅读
+  \small \CJKfamily{zhkai}
+}{}
 
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
 % 参数1: 最后一行需要额外增加的高度（用于调整和后继行的间隔）
@@ -103,10 +103,8 @@
 \robustify{\circled}
 \newcommand{\tc}[1]{\text{\circled{#1}}}
 
-\counterwithout*{subsection}{section}
-\counterwithin*{subsection}{chapter}
 \setcounter{secnumdepth}{3}
-\renewcommand{\thesection}{\chinese{section}}
+\renewcommand{\thesection}{第\chinese{section}节}
 \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
@@ -263,7 +261,7 @@
 }
 
 \newcommand{\ewkh}[1][2em]{(\hspace{#1})}%英文括号
-\newcommand{\xhx}[1][2em]{\CJKunderline{\hspace{#1}}}%下划线
+\newcommand{\xhx}[1][2em]{\CJKunderline{\hspace*{#1}}}%下划线
 
 \newcommand{\twoInLine}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} #2 & #3\end{tabular}}
 \newcommand{\threeInLine}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} #2 & #3 & #4\end{tabular}}
