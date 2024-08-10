@@ -4,6 +4,9 @@
   chapter = {
     pagestyle = headings,
   },
+  subsection = {
+     aftername={、},
+  },
 }
 
 \usepackage{array}
@@ -55,6 +58,8 @@
 \usepackage{tikz-3dplot}
 
 \usepackage{wrapfig}
+\newcommand{\wrapfiguretrick}{\hphantom{0}\vspace*{-1em}} % TRICK, see czds1-ch2-xiti9.tex
+
 \usepackage{xparse}
 \usepackage{xpinyin}
 
@@ -103,9 +108,10 @@
 \robustify{\circled}
 \newcommand{\tc}[1]{\text{\circled{#1}}}
 
+\setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{3}
 \renewcommand{\thesection}{第\chinese{section}节}
-\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
+\renewcommand{\thesubsection}{\chinese{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}\;}
@@ -181,6 +187,7 @@
 
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
+\newcommand{\taolun}{\textbf{〔讨论〕}}
 
 \newcommand{\lianxi}{%
   \vspace{1em}%
