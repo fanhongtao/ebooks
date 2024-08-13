@@ -1,0 +1,35 @@
+\begin{tikzpicture}[
+    myarrow/.style={line width=3pt, -{Stealth[length=5mm]}, gray},
+]
+    \tikzset{
+        oxygen/.pic={% 绘制 “氧原子”
+            \shade[ball color=gray!20] (0, 0) circle (.5cm);
+            \draw[pattern={mylines[angle=0, distance={3pt}]}] (0, 0) circle(.5cm);
+        }
+    }
+
+    \begin{scope}[yshift=2cm]
+        \shade[ball color=black!50] (0, 0) circle (.6cm);
+        \draw (1.1, 0) pic {oxygen}
+            node[below=0.6cm, xshift=-0.5cm] {氧化汞分子};
+
+        \draw [myarrow] (3, 0) -- (4, 0);
+
+        \shade[ball color=black!50] (5, 0) circle (.6cm) node [below=0.6cm] {汞原子};
+        \node at (5.8, 0) {\Large $+$};
+        \draw (6.6, 0) pic {oxygen} node[below=0.6cm] {氧原子};
+    \end{scope}
+
+    \begin{scope}
+        \draw (0, 0) pic {oxygen} node[below=0.6cm] {氧原子};
+        \node at (0.8, 0) {\Large $+$};
+        \draw (1.6, 0) pic {oxygen} node[below=0.6cm] {氧原子};
+
+        \draw [myarrow] (3, 0) -- (4, 0);
+
+        \draw (5, 0) pic {oxygen}
+              (6, 0) pic {oxygen}
+              node[below=0.6cm, xshift=-0.5cm] {氧分子};
+    \end{scope}
+\end{tikzpicture}
+
