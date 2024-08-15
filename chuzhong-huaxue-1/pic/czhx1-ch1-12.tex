@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{3}
+    \coordinate (O) at (0, 0);
+    \foreach \per/\text [remember=\start as \laststart (initially -30)] in {
+        1.20/其它,
+        0.76/氢,   2.00/镁,    2.47/钾,
+        2.74/钠,   3.45/钙,    4.75/铁,
+        7.73/铝,    26.30/硅,  48.60/氧
+    } {
+        \pgfmathsetmacro{\start}{\laststart + \per * 3.6}
+        \draw (O) -- (\laststart:\R) arc (\laststart:\start:\R) -- (O);
+    }
+
+    \draw (-1, -1) node {氧 $48.60\%$};
+    \draw (-0.6,  1.5) node {硅 $26.30\%$};
+    \draw (2, 2)       -- +(1.4, 0) node [right] {铝 $7.73\%$};
+    \draw (2.4, 1.3)   -- +(1.0, 0) node [right] {铁 $4.75\%$};
+    \draw (2.8, 0.6)   -- +(0.6, 0) node [right] {钙 $3.45\%$};
+    \draw (2.8, -0.1)  -- +(0.6, 0.2) node [right] {钠 $2.74\%$};
+    \draw (2.8, -0.5)  -- +(0.6, 0.0) node [right] {钾 $2.47\%$};
+    \draw (2.7, -1.0)  -- +(0.7, 0.0) node [right] {镁 $2.00\%$};
+    \draw (2.65, -1.2) -- +(0.75, -0.2) node [right] {氢 $0.76\%$};
+    \draw (2.55, -1.3) -- +(0.55, -0.5) node [right] {其它 $1.20\%$};
+\end{tikzpicture}
+
