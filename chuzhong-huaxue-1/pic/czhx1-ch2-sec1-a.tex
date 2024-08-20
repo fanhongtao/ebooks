@@ -1,0 +1,39 @@
+\begin{tikzpicture}[
+    myarrow/.style={line width=3pt, -{Stealth[length=5mm]}, gray},
+]
+    \tikzset{
+        oxygen/.pic={% 绘制 “氧原子”
+            \shade[ball color=gray!20] (0, 0) circle (.5cm);
+            \draw[pattern={mylines[angle=0, distance={3pt}]}] (0, 0) circle(.5cm);
+        },
+        hydrogen/.pic={% 绘制 “氢原子”
+            \shade[ball color=gray!20] (0, 0) circle (.3cm);
+            \draw[pattern={grid}] (0, 0) circle(.3cm);
+        },
+        water/.pic={% 水分子
+            \draw (0, 0) pic{oxygen};
+            \draw (45:0.8) pic{hydrogen};
+            \draw (-45:0.8) pic{hydrogen};
+        }
+    }
+
+    \draw (0,  1) pic {water};
+    \draw (0, -1) pic {water};
+
+    \draw [myarrow] (2, 0) -- (3, 0);
+
+    \draw (3.5, 0.7) pic{hydrogen}
+          (4.1, 0.7) pic{hydrogen};
+    \draw (3.5, -0.7) pic{hydrogen}
+          (4.1, -0.7) pic{hydrogen};
+
+    \node at (5.0, 0) {\Large $+$};
+
+    \draw (6, 0) pic {oxygen}
+          (7, 0) pic {oxygen};
+
+    \draw (0, -2.4) node {水分子};
+    \draw (4, -2.4) node {氢气分子};
+    \draw (6.5, -2.4) node {氧气分子};
+\end{tikzpicture}
+
