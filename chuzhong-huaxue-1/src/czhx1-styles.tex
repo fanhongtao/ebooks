@@ -64,6 +64,24 @@
 \usepackage{xpinyin}
 
 % 化学相关的包
+\usepackage{chemfig}
+
+% 第二章 第五节
+% 为了使用 chemfig 绘制电子式（中的 X）而进行的扩展。
+\def\chargex{% 绘制 X
+  \begingroup
+    \tikz\draw (0,0) node {\tiny $\times$};%
+  \endgroup
+}
+\def\chargexdot{% 绘制小黑点 和 X
+  \begingroup
+    \tikzpicture[anchor=center, rotate=90]
+      \draw [fill=black] (-0.15 em,0)circle(0.15ex) (0.15 em,0) node {\tiny $\times$};%
+    \endtikzpicture
+  \endgroup
+}
+
+
 \usepackage[version=4, arrows=pgf-filled]{mhchem}
 
 \newenvironment{fangchengshi}{

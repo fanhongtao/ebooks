@@ -1,0 +1,19 @@
+\begin{tikzpicture}[
+    >=Stealth, scale=0.6, transform shape
+]
+    \draw (0, 0) pic{atom={number=11}} node [above=2em] {\ce{Na}};
+    \draw (6, 0) pic{atom={number=17, direction=left}} node [above=2em] {\ce{Cl}};
+    \draw [->] (2.3, 0) -- (3.7, 0);
+
+    \draw [->] (0, -1) -- (0, -2.5);
+    \draw [->] (6, -1) -- (6, -2.5);
+
+    \draw (0, -4) pic{atom={number=11, layer={2,8}}} node [above=2em] {\ce{Na+}};
+    \draw (6, -4) pic{atom={number=17, layer={2,8,8}, direction=left}} node [above=2em] {\ce{Cl-}};
+
+    \draw [->] (0, -5) -- (1.4, -6.5);
+    \draw [->] (6, -5) -- (4.6, -6.5);
+
+    \draw (2.2, -7) circle(0.5) node {\ce{Na+}}
+          (3.5, -7) circle(0.8) node {\ce{Cl-}};
+\end{tikzpicture}
