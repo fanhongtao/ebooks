@@ -85,6 +85,12 @@
 \usepackage[version=4, arrows=pgf-filled]{mhchem}
 
 \newenvironment{fangchengshi}{
+  \newcommand{\dengshi}[3]{% 在方程式下方，（通过tikz绘图的方式）书写（用于计算参与物质用量的）等式。如：czdhx1-ch3-sec4.tex
+    {\setlength{\lineskip}{2pt}
+    \tikz[overlay] \draw (##1, ##2) node {\footnotesize $\begin{gathered}
+      ##3
+    \end{gathered}$};}
+  }
   \csname gather*\endcsname    %\begin{gather*}
 }{
   \csname endgather*\endcsname %\end{gather*}
