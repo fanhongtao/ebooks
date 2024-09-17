@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.8, >=Stealth,
+    every node/.style={fill=white, inner sep=1pt},
+]
+    \draw (-0.5, 0) -- (14.5, 0);
+    \foreach \x in {0, 1, ..., 14} {
+        \ifnum \x = 7
+            \draw (\x, -0.5) -- (\x, 0.4) node [above=0.1em] {$\x$};
+        \else
+            \draw (\x, 0) -- (\x, 0.2) node [above=0.2em] {$\x$};
+        \fi
+    }
+
+    \draw [<->, very thick] (0.5, -1) -- (13.5, -1)
+        node [midway] {中性}
+        node [pos=0.2, below=0.5em] {酸性增强}
+        node [pos=0.8, below=0.5em] {碱性增强};
+\end{tikzpicture}
+
