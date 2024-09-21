@@ -1,0 +1,83 @@
+\begin{tikzpicture}[
+    >=Stealth, scale=0.7, transform shape,
+    element/.style={draw, shape=circle, double, align=center, minimum width=1.6cm, fill=white},
+    box/.style={draw, shape=rectangle, minimum width=1.2cm},
+    round/.style={rounded corners=4pt},
+]
+    \pgfmathsetmacro{\x}{7}
+    \pgfmathsetmacro{\y}{3.5}
+    \coordinate (E11) at (0,  0);
+    \coordinate (E12) at (\x, 0);
+    \coordinate (E21) at (0,  \y);
+    \coordinate (E22) at (\x, \y);
+    \coordinate (E31) at (0,  2*\y);
+    \coordinate (E32) at (\x, 2*\y);
+    \coordinate (E41) at (0,  3*\y);
+    \coordinate (E42) at (\x, 3*\y);
+
+    \draw [->,round] ($(E11)+(0,-0.5)$) -- ++(\x/2,0)  -- ++(0, 0.5);
+    \draw [->,round] ($(E12)+(0,-0.5)$) -- ++(-\x/2,0) -- ++(0, 0.5)  coordinate(N);
+    \draw (N) node[box,above]{两种新盐};
+
+    \coordinate (X) at ($(E11)!0.6!(E22)$);
+    \draw [->,round] (E11) -- (X) -- ++(0.9,0);
+    \draw [->,rounded corners=8pt] (E22) -- (X) -- ++(0.9,0) coordinate(N);
+    \draw (N) node[box,right]{酸和盐};
+
+    \coordinate (X) at ($(E12)!0.6!(E21)$);
+    \draw [->,round] (E12) -- (X) -- ++(-0.9,0);
+    \draw [->,rounded corners=8pt] (E21) -- (X) -- ++(-0.9,0) coordinate(N);
+    \draw (N) node[box,left]{碱和盐};
+
+    \draw [->,round] ($(E21)+(0,-0.3)$) -- ++(\x/2,0)  -- ++(0, 0.5);
+    \draw [->,round] ($(E22)+(0,-0.3)$) -- ++(-\x/2,0) -- ++(0, 0.5)  coordinate(N);
+    \draw (N) node[box,above,minimum width=1.8cm]{盐和水};
+
+    \coordinate (X) at ($(E21)!0.4!(E32)$);
+    \draw [->,round] (E21) -- (X) -- ++(0,-0.5);
+    \draw [->,round] (E32) -- (X) -- ++(0,-0.5);
+
+    \coordinate (X) at ($(E22)!0.4!(E31)$);
+    \draw [->,round] (E22) -- (X) -- ++(0,-0.5);
+    \draw [->,round] (E31) -- (X) -- ++(0,-0.5);
+
+    \coordinate (X) at ($(E31)!0.5!(E32)$);
+    \draw [->,round] (E31) -- (X) -- ++(0, 1.5);
+    \draw [->,round] (E32) -- (X) -- ++(0, 1.5)  coordinate(N);
+    \draw (N) node[box,above,minimum width=1.8cm]{盐};
+
+    \coordinate (X) at ($(E41)!0.5!(E42)$);
+    \draw [->,round] (E41) -- (X) -- ++(0, -1.4);
+    \draw [->,round] (E42) -- (X) -- ++(0, -1.4);
+
+    \draw (E11) node (N11) [element]{盐};
+    \draw (E12) node (N12) [element]{盐};
+    \draw (E21) node (N21) [element]{碱};
+    \draw (E22) node (N22) [element]{酸};
+    \draw (E31) node (N31) [element]{碱性\\[-0.5em] 氧化物};
+    \draw (E32) node (N32) [element]{酸性\\[-0.5em] 氧化物};
+    \draw (E41) node (N41) [element, name=N41]{金属};
+    \draw (E42) node (N42) [element]{非金属};
+
+    \draw (N22) --  ++(1.5, 0) coordinate (X1);
+    \draw (N41.north) -- ++(0, 0.5) -- ++(\x,0) -- ++(1.5, 0) coordinate (X2);
+    \coordinate (X) at ($(X1)!0.3!(X2)$);
+    \draw [->,round] (X1) -- (X) -- ++(0.9,0);
+    \draw [->,round] (X2) -- (X) -- ++(0.9,0) coordinate (N);
+    \draw (N) node[box,right]{盐和氢气};
+
+    \draw (N11) -- ++(-1.5, 0) coordinate (X1);
+    \draw (N41) -- ++(-1.5, 0) coordinate (X2);
+    \coordinate (X) at ($(X1)!0.57!(X2)$);
+    \draw [->,round] (X1) -- (X) -- ++(-0.9,0);
+    \draw [->,round] (X2) -- (X) -- ++(-0.9,0) coordinate (N);
+    \draw (N) node[box,left]{盐和金属};
+
+    \draw [->] (N41.south) -- (N31.north);
+    \draw [->] (N42.south) -- (N32.north);
+    \draw [->] (N31.south) -- (N21.north);
+    \draw [->] (N32.south) -- (N22.north);
+    \draw [->] (N21.south) -- (N11.north);
+    \draw [->] (N22.south) -- (N12.north);
+\end{tikzpicture}
+
