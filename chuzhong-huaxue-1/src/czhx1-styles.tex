@@ -160,7 +160,8 @@
 % 参数2: 正文中的文字
 \NewDocumentCommand{\nonumchapter}{o m}{%
   \touchcounter{chapter}
-  \section*{#2}
+  \chapter*{#2}
+  \markright{#2}
   \IfNoValueTF{#1}
     {\addcontentsline{toc}{chapter}{#2}}
     {\addcontentsline{toc}{chapter}{#1}}
