@@ -8,5 +8,30 @@
 \renewcommand{\thefigure}{\arabic{figure}\;}
 \input{../src/units/czdhx1-xssy-caozuo}
 
+
+\ctexset {
+    section={
+        name={实验,},
+        number=\chinese{section},
+    },
+}
+\newenvironment{shiyanmudi}{
+    \textbf{实验目的}　
+}{}
+\newenvironment{shiyanyongpin}{
+    \textbf{实验用品}　
+}{}
+\newenvironment{shiyanbuzhou}{
+    \textbf{实验步骤} \par
+}{}
+\newenvironment{wentihetaolun}{
+    \textbf{问题和讨论} \par
+}{}
+\newenvironment{shiyanxiti}{
+    \textbf{实验习题} \par
+}{}
+
+\input{../src/units/czdhx1-xssy-sy1}
+
 \endgroup
 
