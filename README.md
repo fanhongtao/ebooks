@@ -28,9 +28,7 @@
 | 2 | 代数 第二册 | 完成 (2020-10-21 ~ 2022-03-18)  |
 | 3 | 代数 第三册 | 完成 (2022-03-19 ~ 2022-06-08) |
 | 4 | 立体几何 全一册 | 录入中 (2022-06-13 ~ )  |
-| 5 | 化学 第一册 | NA |
-| 6 | 化学 第二册 | NA |
-| 7 | 化学 第三册 | NA |
+
 
 # 其它
 
@@ -49,6 +47,10 @@
 [LaTeX 工作室](https://www.latexstudio.net/) 上，名叫 “海波” 用户的提供了：
 
 * [平面解析几何 全一册](https://www.latexstudio.net/index/details/index/mid/2401.html)
+
+[geezhu](https://github.com/geezhu/) 完成了：
+
+* [《化学》（全三册甲种本）、物理（物理全两册乙种本）、《平面解析几何》以及《微积分初步》](https://github.com/geezhu/Category-A-Textbook)
 
 
 # 初中课本
