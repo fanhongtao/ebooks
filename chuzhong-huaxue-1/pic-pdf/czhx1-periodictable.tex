@@ -1,0 +1,19 @@
+\documentclass[UTF8, 11pt, oneside]{ctexart}
+\usepackage{CJKfntef}
+\usepackage[height=22.2cm]{geometry}
+
+\usepackage{fontspec}
+\usepackage{lscape}
+\usepackage[userlang=nl]{pgf-PeriodicTable}
+\usepackage[graphics,tightpage,active]{preview}
+
+\xeCJKsetup{AutoFallBack=true}
+\setCJKmainfont{SimSun}[FallBack=SimSun-ExtB]
+
+\begin{document}
+\PreviewEnvironment{landscape}
+\begin{landscape}
+    \pgfPT[show title=false]
+\end{landscape}
+
+\end{document}
