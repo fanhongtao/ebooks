@@ -1,0 +1,95 @@
+%----------------------------------
+% （重）定义一些数学符号
+%  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
+\newcommand{\celsius}{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}} % 摄氏度
+\newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
+    \mathrel{\text{%
+            \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
+}}}
+
+
+%特殊符号
+\newcommand{\nsep}{,\quad}% 连续的数字之间的分隔符
+\newcommand{\douhao}{\mathord{\text{，}}}%（中文的）逗号
+\newcommand{\juhao}{\mathord{\text{。}}}%（中文的）句号
+\newcommand{\fenhao}{\mathord{\text{；}}}%（中文的）分号
+\newcommand{\dao}{\mathord{\text{～}}}%（中文的）波浪号
+
+% “正” 字的五步
+\newcommand{\za}{\hbox{\lower-0.8ex\hbox{\scalebox{0.9}[1]{一}}}}
+\newcommand{\zb}{丅}
+\newcommand{\zc}{\hbox{丅{\kern-.5em\lower0.1ex\hbox{\scalebox{0.4}[1]{一}}}}}
+\newcommand{\zd}{\hbox{丅{\kern-.5em\lower0.1ex\hbox{\scalebox{0.4}[1]{一}}}{\kern-1.2em\lower0.1ex\hbox{\scalebox{1}[0.6]{丨}}}}}
+\newcommand{\ze}{正}
+
+
+%方程
+\newcommand{\zuobian}{\text{左边}}
+\newcommand{\youbian}{\text{右边}}
+
+%------------------ 物理单位
+% 长度单位
+\newcommand{\qianmi}{\mathord{\text{千米}}}%千米
+\newcommand{\mi}{\mathord{\text{米}}}%米
+\newcommand{\fenmi}{\mathord{\text{分米}}}%分米
+\newcommand{\limi}{\mathord{\text{厘米}}}%厘米
+\newcommand{\haomi}{\mathord{\text{毫米}}}%毫米
+\newcommand{\weimi}{\mathord{\text{微米}}}%微米
+
+% 面积单位
+\newcommand{\pfqm}{\mathord{\text{千米}^2}}%平方千米
+\newcommand{\pfm}{\mathord{\text{米}^2}}%平方米
+\newcommand{\pflm}{\mathord{\text{厘米}^2}}%平方厘米
+\newcommand{\pfhm}{\mathord{\text{毫米}^2}}%平方毫米
+
+% 体积单位
+\newcommand{\lfm}{\mathord{\text{米}^3}}%立方米
+\newcommand{\lffm}{\mathord{\text{分米}^3}}%立方分米
+\newcommand{\lflm}{\mathord{\text{厘米}^3}}%立方厘米
+\newcommand{\lfhm}{\mathord{\text{毫米}^3}}%立方毫米
+
+% 质量单位
+\newcommand{\haoke}{\mathord{\text{毫克}}}%毫克
+\newcommand{\ke}{\mathord{\text{克}}}%克
+\newcommand{\qianke}{\mathord{\text{千克}}}%千克
+
+\newcommand{\qkmlfm}{\mathord{\text{千克}/\text{米}^3}}%千克每立方米
+\newcommand{\kmlflm}{\mathord{\text{克}/\text{厘米}^3}}%克每立方厘米
+
+% 力的单位
+\newcommand{\niudun}{\mathord{\text{牛顿}}}%牛顿
+\newcommand{\ndmqk}{\mathord{\text{牛顿/千克}}}%牛顿每千克
+\newcommand{\ndmpfm}{\mathord{\text{牛顿}/\text{米}^2}}%牛顿每平方米
+\newcommand{\pasika}{\mathord{\text{帕斯卡}}}%帕斯卡
+
+% 功的单位
+\newcommand{\niudunmi}{\mathord{\text{牛顿·米}}}%牛顿·米
+\newcommand{\jiaoer}{\mathord{\text{焦耳}}}%焦耳
+\newcommand{\jemm}{\mathord{\text{焦耳/秒}}}%焦耳每秒
+\newcommand{\wate}{\mathord{\text{瓦特}}}%瓦特
+\newcommand{\qianwa}{\mathord{\text{千瓦}}}%千瓦
+\newcommand{\mali}{\mathord{\text{马力}}}%马力
+
+% 时间单位
+\newcommand{\miao}{\mathord{\text{秒}}}%秒
+\newcommand{\xiaoshi}{\mathord{\text{小时}}}%小时
+
+% 速度单位
+\newcommand{\qmmm}{\mathord{\text{千米/秒}}}%千米/秒
+\newcommand{\mmm}{\mathord{\text{米/秒}}}%米/秒
+\newcommand{\lmmm}{\mathord{\text{厘米/秒}}}%厘米/秒
+\newcommand{\mmf}{\mathord{\text{米/分}}}%米/分
+
+% 热量单位
+\newcommand{\qianka}{\mathord{\text{千卡}}}%千卡
+\newcommand{\ka}{\mathord{\text{卡}}}%卡
+\newcommand{\kmkssd}{\mathord{\text{卡/(克·℃)}}}%卡每克摄氏度
+\newcommand{\qkmqkssd}{\mathord{\text{千卡/(千克·℃)}}}%千卡每千克摄氏度
+
+% 电的单位
+\newcommand{\kulun}{\mathord{\text{库仑}}}%库仑
+\newcommand{\anpei}{\mathord{\text{安培}}}%安培
+\newcommand{\fute}{\mathord{\text{伏特}}}%伏特
+\newcommand{\oumu}{\mathord{\text{欧姆}}}%欧姆
+\newcommand{\qianwashi}{\mathord{\text{千瓦时}}}%千瓦时
+\newcommand{\du}{\mathord{\text{度}}}%度
