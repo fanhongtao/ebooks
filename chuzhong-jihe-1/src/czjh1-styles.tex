@@ -61,6 +61,22 @@
 \usepackage{xparse}
 \usepackage{xpinyin}
 
+\usepackage{tkz-euclide}
+\tkzSetUpPoint[fill=black]
+
+% 《几何》中的公理、定理、推论，有的有编号，有的又没有。
+%  而内容中，有的部分是黑体，又或间隔有（用于解释的）普通文本。
+%  所以很难统一规则。
+%  为了最大限度的复原原课本，故不采用 \newtheorem 定义的环境，
+%     \newtheorem{theorem}{定理}[subsection]
+%  而是自己定义一些简单的环境。
+\NewDocumentEnvironment{xingzhi}{o}{%
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+
+
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
 % 参数1: 最后一行需要额外增加的高度（用于调整和后继行的间隔）
 \NewDocumentEnvironment{enhancedline}{o}{
@@ -151,10 +167,14 @@
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
 
-\newcommand{\lianxi}{%
-  \vspace{1em}%
+\newenvironment{lianxi}{
+  \vspace*{1em}
   {\large\textbf{练 \; 习}}\par
   \setcounter{cntxiaoti}{0}
+  \begin{xiaotis}
+}{
+  \end{xiaotis}
+  \vspace*{1em}
 }
 
 \newcounter{cntxiti}               % “习题”的计数器
