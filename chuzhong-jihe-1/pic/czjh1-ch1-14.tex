@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=1.5]
+	\tkzDefPoints{0/0/A, 3/0/B, 2/0.8/C}
+	\tkzDefMidPoint(A,B)  \tkzGetPoint{O}
+	\tkzDrawPolygon(A,B,C)
+	\tkzDrawArc(O,B)(A)
+	\tkzLabelPoints[left](A)
+	\tkzLabelPoints[right](B)
+	\tkzLabelPoints[above](C)
+
+	\tkzDefPoints{0.8/-0.4/a, 1.2/-0.2/b, 2.3/-0.8/c}
+	\tkzDrawSegments(A,a a,b b,c c,B)
+\end{tikzpicture}
+

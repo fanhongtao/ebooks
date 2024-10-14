@@ -70,7 +70,13 @@
 %  为了最大限度的复原原课本，故不采用 \newtheorem 定义的环境，
 %     \newtheorem{theorem}{定理}[subsection]
 %  而是自己定义一些简单的环境。
-\NewDocumentEnvironment{xingzhi}{o}{%
+\NewDocumentEnvironment{xingzhi}{o}{% 性质
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+
+\NewDocumentEnvironment{gongli}{o}{% 公理
   \bfseries
   \IfNoValueF {#1}
     {#1　}%
