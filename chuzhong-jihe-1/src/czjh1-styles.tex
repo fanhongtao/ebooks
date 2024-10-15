@@ -173,6 +173,14 @@
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
 
+\newcounter{huafa}
+\NewDocumentCommand{\huafa}{o} {
+  \IfNoValueTF{#1}
+    {\textbf{画法：}}
+    {\setcounter{huafa}{#1} \textbf{画法\chinese{huafa}：}}
+}
+
+
 \newenvironment{lianxi}{
   \vspace*{1em}
   {\large\textbf{练 \; 习}}\par

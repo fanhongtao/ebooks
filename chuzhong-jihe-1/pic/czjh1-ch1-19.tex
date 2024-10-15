@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 4/0/B, 2.5/0/C, 2/0/M, 0/1/a, 2/1/b, 2.5/1/c, 4/1/d}
+	\tkzDrawSegments[xianduan={below=0pt}](a,b  c,d)
+	\tkzLabelSegment[above](a,b){$a$}
+	\tkzLabelSegment[above](c,d){$b$}
+	\tkzDrawLine[add=0 and 0.2](A,B)
+	\tkzDrawSegments[xianduan={below=0pt}](A,M  C,B)
+	\tkzDrawSegments[dim={$2a$,-2em,}](A,B)
+	\tkzDrawSegments[dim={$b$,-1em,}](C,B)
+	\tkzLabelPoints[above=0.3em](A,B,C)
+\end{tikzpicture}
+

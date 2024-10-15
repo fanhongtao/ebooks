@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 1/0/B, 2/0/C, 3/0/D,  5/0/E, 0/1/a, 1/1/b}
+	\tkzDrawSegment[xianduan={below=0pt}](a,b)
+	\tkzLabelSegment[above](a,b){$a$}
+	\tkzDrawLine[add=0 and 0.2](A,E)
+	\tkzDrawSegments[xianduan={below=0pt}](A,B  B,C  C,D)
+	\tkzDrawSegments[dim={$a$,-10pt,}](A,B  B,C  C,D)
+	\tkzLabelPoints[above=0.3em](A,B,C,D,E)
+\end{tikzpicture}
+

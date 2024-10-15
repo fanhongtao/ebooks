@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 2.4/0/B, 1.2/0/C}
+	\tkzDrawSegments[xianduan={below=0pt}](A,B)
+
+    % 将 1.2 cm 对应的箭头放在线段外侧
+    % \tkzDrawSegments[dim={$1.2$cm,-1em,}](A,C)
+    \tkzDefPoints{0/-0.3/a1, -0.3/-0.3/a2, 1.2/-0.3/c1, 1.5/-0.3/c2}
+    \tkzDrawLine[add=0 and 0.5](C,c1)
+    \tkzDrawSegments[-latex](a2,a1  c2,c1)
+    \tkzLabelSegment[](A,C){\small $1.2$ cm}
+
+	\tkzDrawSegments[dim={$2.4$ cm,-2em,}](A,B)
+	\tkzLabelPoints[above=0.3em](A,B,C)
+\end{tikzpicture}
+

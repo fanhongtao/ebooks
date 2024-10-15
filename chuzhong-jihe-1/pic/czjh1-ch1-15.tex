@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{scope}
+		\tkzDefPoints{0/0/A, 2/0/B, 3/0/C,  -3/0/a, -1/0/b}
+		\tkzDrawSegment[xianduan={below=0pt}](a,b)
+		\tkzLabelSegment[above](a,b){$a$}
+		\tkzDrawLine[add=0 and 0.1](A,C)
+		\tkzLabelLine[pos=1.1,right=1em](A,C){甲}
+		\tkzDrawSegment[xianduan={below=0pt}](A,B)
+		\tkzDrawSegment[dim={$20$,-10pt,}](A,B)
+		\tkzLabelPoints[above=0.3em](A,B,C)
+	\end{scope}
+
+	\begin{scope}[yshift=-1.5cm]
+		\tkzDefPoints{0/0/A, 2/0/B, 3/0/C,  -3/0/a, -1/0/b}
+		\tkzDrawSegment[xianduan={below=0pt}](a,b)
+		\tkzLabelSegment[above](a,b){$a$}
+		\tkzDrawLine[add=0 and 0.1](A,C)
+		\tkzLabelLine[pos=1.1,right=1em](A,C){乙}
+		\tkzDrawSegment[xianduan={below=0pt}](A,B)
+		\tkzDrawSegment[dim={$a$,-10pt,}](A,B)
+		\tkzLabelPoints[above=0.3em](A,B,C)
+	\end{scope}
+\end{tikzpicture}
+
