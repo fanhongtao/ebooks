@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\h}{3.1}
+	\pgfmathsetmacro{\n}{0.5}
+	\pgfmathsetmacro{\m}{0.8}
+	\pgfmathsetmacro{\l}{1.8}
+	\pgfmathsetmacro{\x}{0.8}
+	\pgfmathsetmacro{\y}{2.8}
+	\tkzDefPoints{0/0/A, \n/0/B, \n/\x/C,  \n+\l/\x+\x/D, \n+\l/\x/E,  \h/\x/F,  \h/\y/G,  0/\y/H}
+	\tkzDrawPolygon[thick](A,...,H)
+	\tkzDefPoints{\n+\l/0/E', \h/0/F'}
+
+	%\tkzDrawSegment[dim={$n$,-10pt,}](A,B)
+	\tkzDefPoints{-0.3/-0.35/x1, 0/-0.35/x2}
+	\tkzDrawSegment[-latex](x1,x2)
+	\tkzLabelSegment[below=5pt](A,B){$n$}
+
+	\tkzDrawSegment[dim={$l$,-10pt,}](B,E')
+	\tkzDrawSegment[dim={$m$,-10pt,}](E',F')  \tkzDrawSegments(E,E'  F,F')
+	\tkzDrawSegment[dim={$h$,-20pt,}](A,F')
+\end{tikzpicture}

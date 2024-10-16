@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 4/0/B,  0/0.5/A1,  4/0.5/B1,  0/-0.5/A2,  4/-0.5/B2, 2/10/O}
+	\tkzDrawPolygon(A,B,B1,A1)
+	\tkzLabelSegment[right=1em](B,B1){甲}
+
+	\tkzDrawArc(O,A)(B)
+	\tkzDrawArc(O,A2)(B2)
+	\tkzDrawSegments(A,A2  B,B2)
+	\tkzLabelSegment[right=1em](B,B2){乙}
+\end{tikzpicture}
+

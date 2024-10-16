@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=0.8]
+	\pgfmathsetmacro{\x}{0.6}
+	\pgfmathsetmacro{\y}{5.1}
+	\pgfmathsetmacro{\z}{1.9}
+	\pgfmathsetmacro{\a}{\x+\y+\z}
+	\pgfmathsetmacro{\b}{2.6}
+	\pgfmathsetmacro{\bb}{\b/2}
+	\pgfmathsetmacro{\d}{0.2}
+	\pgfmathsetmacro{\m}{0.3}
+	\pgfmathsetmacro{\n}{0.2}
+
+	\tkzDefPoints{0/0/A1,  0/\b/A2,
+				 \x/0/B1,    \x/\b/B2,     \x/\m/B3,        \x/\b-\m/B4,
+				 \x+\y/\m/C1, \x+\y/\b-\m/C2,  \x+\y+\d/\m+\n/C3, \x+\y+\d/\b-\m-\n/C4,
+				 \a/\m+\n+\n/D1, \a/\b-\m-\n-\n/D2,  \a-\d/\m+\n/D3, \a-\d/\b-\m-\n/D4,
+				 0/\bb/O1, \a/\bb/O2}
+	\tkzDrawPolygon[thick](A1,B1,B2,A2)
+	\tkzDrawPolygon[thick](B3,C1,C2,B4)
+	\tkzDrawPolygon[thick](C1,C3,D3,D4,C4,C2)
+	\tkzDrawPolygon[thick](D1,D2,D4,D3)
+	\tkzDrawLine[dash dot,add=0.1 and 0.2](O1,O2)
+
+	\tkzDefPoints{0/-1/A, \x/-1/B, \x+\y/-1/C, \a/-1/D}
+
+	\tkzDrawLine[add=0.1 and 0.2](A,D)
+	\tkzDrawSegments(A1,A  B1,B  C1,C D1,D)
+
+	%\tkzDrawSegment[dim={$x$,10pt,}](A,B)
+	\tkzDefPoints{-0.4/-0.6/x1, 0/-0.6/x2}
+	\tkzDrawSegment[-latex](x1,x2)
+	\tkzLabelSegment[above=5pt](A,B){$x$}
+
+	\tkzDrawSegment[dim={$y$,10pt,}](B,C)
+	\tkzLabelPoints[below](A,B,C,D)
+\end{tikzpicture}
+
