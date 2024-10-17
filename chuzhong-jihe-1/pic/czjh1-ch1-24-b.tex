@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/O, 1.5/0/A, 1.5/0/B, -1.5/0/B'}
+	\tkzDrawLine[add=0 and 0.3](O,A)
+	\tkzMarkAngle[size=0.5](A,O,B')
+	\tkzMarkAngle[-stealth,size=0.5](B',O,B)  % euclide 不支持360的角，所以分两段来绘制
+	\tkzDrawPoint[fill=black](O)
+	\tkzLabelPoints[below](O)
+	\tkzLabelPoint[below](B){$(B)$}
+	\tkzLabelPoints[above](A)
+\end{tikzpicture}
+

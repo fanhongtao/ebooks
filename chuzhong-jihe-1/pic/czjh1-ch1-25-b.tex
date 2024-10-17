@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, 1.3/1.3/A, 2/0/C}
+	\tkzDrawLines[add=0.2 and 0.2](A,B  B,C  C,A)
+	\tkzLabelPoints[above](A)
+	\tkzLabelPoints[below](B, C)
+	\tkzMarkAngles[size=0.3](B,A,C  C,B,A  A,C,B)
+	\tkzLabelAngle[pos=0.5](B,A,C){$\alpha$}
+	\tkzLabelAngle[pos=0.5](C,B,A){$\beta$}
+	\tkzLabelAngle[pos=0.5](A,C,B){$\gamma$}
+\end{tikzpicture}
+
