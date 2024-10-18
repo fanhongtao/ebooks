@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{0.3}
+
+	\pgfmathsetmacro{\ab}{2}
+	\pgfmathsetmacro{\ac}{\ab * sqrt(3)}
+	\tkzDefPoints{0/0/A, \ab/0/B, 0/\ac/C}
+	\tkzDefMidPoint(B,C)    \tkzGetPoint{a}
+	\tkzDefMidPoint(A,C)    \tkzGetPoint{b}
+	\tkzInterLL(A,a)(B,b)   \tkzGetPoint{O}
+	\tkzDefCircle[R](O,\r)  \tkzGetPoint{o}
+	\tkzDrawPolygon(A,B,C)
+	\tkzDrawCircle(O,o)
+	\tkzMarkAngle[size=0.3](B,A,C)
+
+	\pgfmathsetmacro{\nab}{2.5}
+	\tkzDefPoints{0/0/nA, \nab/0/nB, 0/\nab/nC}
+	\tkzDefMidPoint(nB,nC)      \tkzGetPoint{na}
+	\tkzDefMidPoint(nA,nC)      \tkzGetPoint{nb}
+	\tkzInterLL(nA,na)(nB,nb)   \tkzGetPoint{nO}
+	\tkzDefCircle[R](nO,\r)      \tkzGetPoint{no}
+	\tkzInterLL(nB,nC)(B,C)     \tkzGetPoint{M}
+
+	%\tkzDrawPolygon(nA,nB,nC)
+	\tkzDrawSegments(nA,nB  nA,nC  nB,M)
+	\tkzDrawSegments[dashed](M,nC)
+
+	\tkzDrawCircle[dashed](nO,no)
+	\tkzMarkAngle[size=0.3](nB,nA,nC)
+\end{tikzpicture}
+
