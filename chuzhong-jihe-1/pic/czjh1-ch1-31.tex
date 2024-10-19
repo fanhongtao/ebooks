@@ -1,0 +1,35 @@
+
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{2.5}
+	\pgfmathsetmacro{\R}{3.5}
+	\pgfmathsetmacro{\a}{70}
+	\pgfmathsetmacro{\b}{30}
+
+	\begin{scope} [xshift=-1cm]
+		\tkzDefPoints{0/0/B, \r/0/A}
+		\tkzDefPoint(\a:\r){C}
+		\tkzDrawSegments(B,A  B,C)
+		\tkzMarkAngle[size=0.5](A,B,C)
+		\tkzLabelAngle[pos=0.8](A,B,C){$1$}
+	\end{scope}
+
+	\begin{scope} [xshift=2cm]
+		\tkzDefPoints{0/0/B, \r/0/A}
+		\tkzDefPoint(\b:\r){C}
+		\tkzDrawSegments(B,A  B,C)
+		\tkzMarkAngle[arc=ll, size=0.5](A,B,C)
+		\tkzLabelAngle[pos=0.8](A,B,C){$2$}
+	\end{scope}
+
+	\begin{scope} [yshift=-4cm]
+		\tkzDefPoints{0/0/B, \R/0/A}
+		\tkzDefPoint(\a:\R){C}
+		\tkzDefPoint(\b:\R){D}
+		\tkzDrawSegments(B,A  B,C B,D)
+		\tkzMarkAngle[size=0.5](A,B,C)
+		\tkzMarkAngle[arc=ll, size=0.8](A,B,D)
+		\tkzLabelPoints[below](B, A)
+		\tkzLabelPoints[right](C, D)
+	\end{scope}
+\end{tikzpicture}
+
