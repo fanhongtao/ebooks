@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{2.5}
+	\pgfmathsetmacro{\a}{55}
+	\pgfmathsetmacro{\b}{35}
+
+	\begin{scope}
+		\tkzDefPoints{0/0/B, \r/0/A}
+		\tkzDefPoint(\a:\r){C}
+		\tkzDrawSegments(B,A  B,C)
+		\tkzMarkAngle[size=0.5](A,B,C)
+		\tkzLabelAngle[pos=0.8](A,B,C){$1$}
+	\end{scope}
+
+	\begin{scope}[xshift=4cm]
+		\tkzDefPoints{0/0/B, \r/0/A}
+		\tkzDefPoint(\b:\r){C}
+		\tkzDrawSegments(B,A  B,C)
+		\tkzMarkAngle[size=0.5](A,B,C)
+		\tkzLabelAngle[pos=0.8](A,B,C){$2$}
+	\end{scope}
+
+	\begin{scope}[xshift=8cm]
+		\tkzDefPoints{0/0/B, \r/0/A}
+		\tkzDefPoint(\b:\r){C}
+		\tkzDrawSegments(B,A  B,C)
+		\tkzMarkAngle[size=0.5](A,B,C)
+		\tkzLabelAngle[pos=0.8](A,B,C){$3$}
+	\end{scope}
+\end{tikzpicture}
+

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{2}
+	\pgfmathsetmacro{\a}{60}
+
+	\tkzDefPoints{0/0/O, -2/0/X1, 2/0/X2, 0/-2/Y1,  0/2/Y2}
+	\tkzDefPoint(\a:\r){A}
+
+	\tkzDrawSegments(X1,X2  Y1,Y2  O,A)
+	\tkzMarkAngle[size=0.5](A,O,Y2)  \tkzLabelAngle[pos=1.1](A,O,Y2){$30^\circ$}
+
+	\tkzLabelPoints[below right](A)
+	\tkzLabelPoints[below left](O)
+	\tkzLabelPoint[left](X1){西}
+	\tkzLabelPoint[right](X2){东}
+	\tkzLabelPoint[below](Y1){南}
+	\tkzLabelPoint[above](Y2){北}
+	\tkzLabelPoint[above, xshift=1em](A){北偏东$30^\circ$}
+\end{tikzpicture}
+

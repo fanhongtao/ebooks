@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/C, -0.5/3/A,  2/0/B, 1.5/3/D}
+	\tkzInterLL(C,D)(A,B)   \tkzGetPoint{O}
+	\tkzDrawSegments(A,B  C,D)
+	\tkzMarkAngle[size=0.4](A,O,C)  \tkzLabelAngle[pos=0.7](A,O,C){$1$}
+	\tkzMarkAngle[size=0.6](D,O,A)  \tkzLabelAngle[pos=0.9](D,O,A){$2$}
+	\tkzMarkAngle[size=0.4](B,O,D)  \tkzLabelAngle[pos=0.7](B,O,D){$3$}
+	\tkzLabelPoints[left](A, C)
+	\tkzLabelPoints[right](B, D)
+\end{tikzpicture}
+
