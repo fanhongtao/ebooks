@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{2}
+	\tkzDefPoints{0/0/O, -\r/0/A, \r/0/B}
+	\tkzDefPoint(58:\r){D}
+	\tkzDefPoint(107:\r){C}
+
+	\tkzDrawSegments(O,A  O,B  O,C  O,D)
+	\tkzLabelPoints[below](A, O, B)
+	\tkzLabelPoints[left](C)
+	\tkzLabelPoints[right](D)
+\end{tikzpicture}
+
