@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\tkzDefPoints{-2/1.5/A, 2/-1.5/B, 2/2/C, -2/-2/D}
+	\tkzInterLL(A,B)(C,D)   \tkzGetPoint{O}
+	\tkzDefLine[bisector](A,O,D) \tkzGetPoint{E}
+	\tkzDefLine[bisector](B,O,C) \tkzGetPoint{G}
+	\tkzDefLine[bisector](A,O,C) \tkzGetPoint{H}
+	\tkzDefLine[bisector](B,O,D) \tkzGetPoint{F}
+
+	\tkzDrawSegments(A,B  C,D)
+	\tkzDrawSegments[dashed](E,G)
+	\tkzDrawSegments[dashed](H,F)
+	\tkzLabelPoints[left](A)
+	\tkzLabelPoints[right](C,H)
+	\tkzLabelPoints[below](D,F,B, E,G)
+	\tkzLabelPoints[below=0.5em, xshift=-0.5em](O)
+\end{tikzpicture}
+

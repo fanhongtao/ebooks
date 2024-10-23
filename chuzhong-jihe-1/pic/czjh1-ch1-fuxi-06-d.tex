@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\a}{1.0}
+	\pgfmathsetmacro{\b}{1.5}
+	\pgfmathsetmacro{\c}{2.0}
+	\pgfmathsetmacro{\xc}{\c/2}
+
+	\tkzDefPoints{0/0/A, 0/0.1/pa, \a/0/E, \a+\a/0/B, \a+\a+\b/0/C, \a+\a+\b-\xc/0/D, \a+\a+\b+0.5/0/M}
+	\tkzDrawSegment(A,M)
+	\tkzDrawSegment(A,pa)
+	\tkzLabelPoints[above=0.3em](A)
+	\tkzLabelPoints[above](M)
+
+	\tkzDrawSegments[dim={$a$,-1em,}](A,E)
+	\tkzDrawSegments[dim={$a$,-1em,}](E,B)
+	\tkzLabelPoints[above=0.3em](B)
+\end{tikzpicture}
+
