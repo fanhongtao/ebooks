@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 4/0/B, 0/1/C, 3/-1/D, 2/0/O}
+	\tkzDrawSegments(A,B  C,O  O,D)
+
+	\tkzMarkAngle[size=0.5](C,O,A)  \tkzLabelAngle[pos=0.8](C,O,A){$1$}
+	\tkzMarkAngle[size=0.5](D,O,B)  \tkzLabelAngle[pos=0.8](D,O,B){$2$}
+
+	\tkzLabelPoints[below](A, B, D)
+	\tkzLabelPoints[left](C)
+	\tkzLabelPoints[above](O)
+\end{tikzpicture}
+
