@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	\pgfmathsetmacro{\r}{1.5}
+	\pgfmathsetmacro{\a}{45}
+	\tkzDefPoints{0/0/O}
+	\tkzDefPoint(\a:\r){C}
+	\tkzDefPoint(90+\a:\r){A}
+	\tkzDefPoint(180+\a:\r){D}
+	\tkzDefPoint(270+\a:\r){B}
+
+	\tkzDrawSegments(A,B  C,D)
+	\tkzMarkRightAngle(B,O,C)
+	\tkzLabelPoints[below](A,B,C,D)
+	\tkzLabelPoints[left](O)
+\end{tikzpicture}
+

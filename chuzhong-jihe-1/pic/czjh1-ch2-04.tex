@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=0.8]
+	\tkzDefPoints{0/0/A, 4/0/B, 0.5/-1.5/C, 3.5/1.5/D}
+	\tkzInterLL(A,B)(C,D)   \tkzGetPoint{O}
+
+	\tkzDrawSegments(A,B  C,D)
+	\tkzLabelPoints[below](A,O,B)
+	\tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+

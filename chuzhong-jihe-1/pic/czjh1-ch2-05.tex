@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=0.8]
+	\tkzDefPoints{-2/0/A, 2/0/B, 0/-1.5/C, 0/1.5/D}
+	\tkzInterLL(A,B)(C,D)   \tkzGetPoint{O}
+
+	\tkzDrawSegments(A,B  C,D)
+	\tkzMarkRightAngle(B,O,D)
+	\tkzLabelSegment[pos=1.0, right](A,B){水平线}
+	\tkzLabelSegment[pos=1.0, above](C,D){垂直线}
+\end{tikzpicture}
+

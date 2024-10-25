@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\tkzDefPoints{-2/0/A, 2/0/B, 0/1.5/C, 0/-1.5/D}
+	\tkzInterLL(A,B)(C,D)   \tkzGetPoint{M}
+
+	\tkzDrawSegments[xianduan={below=0pt}](A,B)
+	\tkzDrawSegments(C,D)
+	\tkzMarkRightAngle(B,M,C)
+	\tkzLabelPoints[below](A,B)
+	\tkzLabelPoints[right](C,D)
+	\tkzLabelPoints[above left](M)
+\end{tikzpicture}
+

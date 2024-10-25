@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\tkzDefPoints{-2/0/A, -1/0/B, 0/0/O, 1/0/C, 2/0/D, 0/2/P}
+
+	\tkzDrawLine[add=0.3 and 0.3](A,D)
+	\tkzDrawLines[add=0.3 and 0.3](A,P  B,P  O,P  C,P  D,P)
+	\tkzLabelLine[pos=1.35,right](A,D){$l$}
+	\tkzDrawPoint[fill=black](P)
+	\tkzLabelPoints[right](P)
+	\tkzLabelPoints[below](A,B)
+	\tkzLabelPoints[below right](O)
+	\tkzLabelPoints[below right, xshift=0.3em](C)
+\end{tikzpicture}
+
