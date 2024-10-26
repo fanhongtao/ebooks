@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/D, 5/0/E, 2.5/2/A, 0.5/-0.8/B, 4.5/-0.8/C}
+	\tkzInterLL(A,B)(D,E)   \tkzGetPoint{F}
+	\tkzInterLL(A,C)(D,E)   \tkzGetPoint{G}
+
+	\tkzDrawSegments(A,B  A,C  D,E)
+
+	\tkzMarkAngle[size=0.3](A,F,D)  \tkzLabelAngle[pos=0.5](A,F,D){$1$}
+	\tkzMarkAngle[size=0.4](D,F,B)  \tkzLabelAngle[pos=0.6](D,F,B){$2$}
+	\tkzMarkAngle[size=0.3](B,F,E)  \tkzLabelAngle[pos=0.5](B,F,E){$3$}
+	\tkzMarkAngle[size=0.4](E,F,A)  \tkzLabelAngle[pos=0.6](E,F,A){$4$}
+
+	\tkzMarkAngle[size=0.4](A,G,D)  \tkzLabelAngle[pos=0.6](A,G,D){$5$}
+	\tkzMarkAngle[size=0.3](D,G,C)  \tkzLabelAngle[pos=0.5](D,G,C){$6$}
+	\tkzMarkAngle[size=0.4](C,G,E)  \tkzLabelAngle[pos=0.6](C,G,E){$7$}
+	\tkzMarkAngle[size=0.3](E,G,A)  \tkzLabelAngle[pos=0.5](E,G,A){$8$}
+
+	\tkzLabelPoints[right](A)
+	\tkzLabelPoints[below](B,C)
+	\tkzLabelPoints[above](D,E)
+\end{tikzpicture}
+
