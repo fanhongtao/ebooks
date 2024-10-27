@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\r}{2}
+    \pgfmathsetmacro{\a}{35}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\r){A}
+    \tkzDefPoint(0:\r){B}
+    \tkzDefPoint(180+\a:\r){C}
+    \tkzDefPoint(\a:\r){D}
+    \tkzDefPoint(180-\a:\r){E}
+
+    \tkzDrawSegments(O,A  O,B  O,C  O,D  O,E)
+    \tkzLabelPoints[below](B, C, D, O)
+    \tkzLabelPoints[left](A, E)
+\end{tikzpicture}
+
