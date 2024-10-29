@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \foreach \x in {0, .5, 1, ..., 5} {
+        \tkzDefPoints{\x/0/A, \x/5/B}
+        \tkzDrawSegment(A,B)
+    }
+    \foreach \y in {0, .5, 1, ..., 5} {
+        \tkzDefPoints{0/\y/C, 5/\y/D}
+        \tkzDrawSegment(C,D)
+    }
+
+    \tkzDefPoints{0/0/O, 5/0/X, 0/5/Y, 5/5/A}
+    \tkzLabelPoints[left](O,Y)
+    \tkzLabelPoints[right](X,A)
+\end{tikzpicture}
+

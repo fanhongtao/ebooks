@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/E, 2/0/F, 0/0.8/C, 2/0.8/D,  0/1.6/A,  2/1.6/B}
+    \tkzInterCC(B,D)(D,B)   \tkzGetFirstPoint{P}
+
+    \tkzDrawSegments(A,B  C,D  E,F)
+    \tkzDrawArc[rotate, dashed](B,D)(80)
+    \tkzDrawArc[rotate, dashed](D,B)(-80)
+    \tkzDrawPoint(P)
+    \tkzLabelPoints[left](A, C, E)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[below](D)
+    \tkzLabelPoints[right](F, P)
+\end{tikzpicture}
+
