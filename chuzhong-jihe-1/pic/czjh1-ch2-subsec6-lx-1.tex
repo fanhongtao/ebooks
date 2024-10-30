@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/E, 4/0/F, 1/0/O, 3/0/P}
+
+    \tkzDefPointOnCircle[R = center O angle 80  radius 1.5] \tkzGetPoint{A}
+    \tkzDefPointOnCircle[R = center O angle 260 radius 1.5] \tkzGetPoint{B}
+    \tkzDefPointOnCircle[R = center P angle 80  radius 1.5] \tkzGetPoint{C}
+    \tkzDefPointOnCircle[R = center P angle 260 radius 1.5] \tkzGetPoint{D}
+
+    \tkzDrawSegments(A,B  C,D  E,F)
+    \tkzMarkAngles[size=0.3](F,O,A  F,P,C)
+    \tkzMarkAngles[size=0.4](C,P,E  B,O,F)
+    \tkzLabelAngle[pos=0.5](F,O,A){$1$}
+    \tkzLabelAngle[pos=0.5](F,P,C){$2$}
+    \tkzLabelAngle[pos=0.6](C,P,E){$3$}
+    \tkzLabelAngle[pos=0.6](B,O,F){$4$}
+    \tkzLabelPoints[below](E,F)
+    \tkzLabelPoints[right](A,B,C,D)
+\end{tikzpicture}
+

@@ -1,0 +1,129 @@
+\subsection{平行线的判定}\label{subsec:czjh1-2-6}
+
+现在，我们来研究怎样才能判断两条直线是平行线。
+
+在上一节画平行线 $AB$、$CD$（图 \ref{fig:czjh1-2-15}） 时，我们是把三角板由虚线位置推到实线位置画出的，
+这就是说，把尺边 $EF$ 看作截线，使同位角相等，作出的直线 $AB$、$CD$ 就是平行线。
+我们把这个事实作为判定两条直线平行的公理：
+
+\begin{gongli}[公理]
+    两条直线被第三条直线所截，如果同位角等，那么这两条直线平行。
+\end{gongli}
+
+这个公理可以简单说成：\begin{gongli}
+    同位角相等，两直线平行。
+\end{gongli}
+
+例如，两条直线 $AB$、$CD$ 被直线 $EF$ 所截（图 \ref{fig:czjh1-2-17}），
+如果已知同位角 $\angle 1$ 与 $\angle 2$ 都是 $85^\circ$，
+那么 $\angle 1 = \angle 2$，就可以判定 $AB \pingxing CD$。
+根据的就是 “同位角相等，两直线平行”。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-17}
+        \caption{}\label{fig:czjh1-2-17}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-18}
+        \caption{}\label{fig:czjh1-2-18}
+    \end{minipage}
+\end{figure}
+
+
+根据公理，由同位角相等可以判定两条直线平行。
+那么由内错角、同旁内角的关系是否也可以判定两条直线平行呢？
+我们来看图\ref{fig:czjh1-2-18}。 因为由同位角 $\angle 1 = \angle 2$，就可以推出 $AB \pingxing CD$。
+所以只要找出在什么情形下，$\angle 1 = \angle 2$ 就可以了。
+在图中我们发现 $\angle 1 = \angle 3$，$\angle 1$ 与 $\angle 4$ 互补。
+如果内错角 $\angle 3 = \angle 2$， 或同旁内角 $\angle 4$ 与 $\angle 2$ 互补，
+就可以推出 $\angle 1 = \angle 2$，于是 $AB \pingxing CD$。下面我们写出推理过程：
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $\angle 3 = \angle 2$（已知）\\
+    $\angle 1 = \angle 3$（对顶角相等）
+\end{zmtblr}
+
+$\therefore$ \quad $\angle 1 = \angle 2$（等量代换）
+
+$\therefore$ \quad $AB \pingxing CD$（同位角相等，两直线平行）
+
+因此，我们得到另一个平行线的判定方法：
+
+\begin{gongli}
+    两条直线被第三条直线所截，如果内错角相等，那么这两条直线平行。
+\end{gongli}
+
+这句话可以简单说成：\begin{gongli}
+    内错角相等，两直线平行。
+\end{gongli}
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $\angle 4$ 与 $\angle 2$ 互补（已知）\\
+    $\angle 1$ 与 $\angle 4$ 互补（邻补角定义）
+\end{zmtblr}
+
+$\therefore$ \quad $\angle 1 = \angle 2$（同角的补角相等）
+
+$\therefore$ \quad $AB \pingxing CD$（同位角相等，两直线平行）
+
+由此，我们得到又一个平行线的判定方法：
+
+\begin{gongli}
+    两条直线被第三条直线所截，如果同旁内角互补，那么这两条直线平行。
+\end{gongli}
+
+这句话可以简单说成\begin{gongli}%
+    同旁内角互补，两直线平行。
+\end{gongli}
+
+
+\begin{lianxi}
+
+口答下列各题：
+
+\xiaoti{如图，直线 $AB$ 和 $CD$ 被直线 $EF$ 所截。}
+\begin{xiaoxiaotis}
+
+    \xxt{量得 $\angle 1 = 80^\circ$， $\angle 2 = 80^\circ$， 就可以判定 $AB \pingxing CD$。它的根据是什么？}
+
+    \xxt{量得 $\angle 3 = 100^\circ$， $\angle 4 = 100^\circ$， 也可以判定 $AB \pingxing CD$。它的根据是什么？}
+
+    \xxt{量得 $\angle 1 = 80^\circ$， $\angle 3 = 100^\circ$， 也可以判定 $AB \pingxing CD$。它的根据是什么？}
+
+\end{xiaoxiaotis}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-subsec6-lx-1}
+        \caption*{（第 1 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-subsec6-lx-2}
+        \caption*{（第 2 题）}
+    \end{minipage}
+\end{figure}
+
+
+\xiaoti{如图， $BE$ 是 $AB$ 的延长线。量得 $\angle CBE = \angle A = \angle C$。}
+\begin{xiaoxiaotis}
+
+    \xxt{从 $\angle CBE  = \angle A$， 可以判定哪两条直线平行？它的根据是什么？}
+
+    \xxt{从 $\angle CBE  = \angle C$， 可以判定哪两条直线平行？它的根据是什么？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{图 \ref{fig:czjh1-2-7} 中， 木工用角尺画出工件边缘的几条垂线，这些垂线是否平行？能否用几何语言说出这个事实。}
+
+\end{lianxi}
+
