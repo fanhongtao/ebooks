@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 1/0/B}
+    \tkzDefPointOnCircle[R = center B angle 38  radius 1.5] \tkzGetPoint{C}
+    \tkzDefLine[parallel=through C](A,B) \tkzGetPoint{D}
+    \tkzDrawSegments[dashed](A,B  B,C  C,D)
+    \tkzMarkAngles[size=0.3](C,B,A  B,C,D)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[above](C)
+
+    \begin{scope}[yshift=0.5cm]
+        \tkzDefPoints{0/0/A, 1/0/B}
+        \tkzDefPointOnCircle[R = center B angle 38  radius 1.5] \tkzGetPoint{C}
+        \tkzDefLine[parallel=through C](A,B) \tkzGetPoint{D}
+        \tkzDrawSegments[thick](A,B  B,C  C,D)
+    \end{scope}
+    \begin{scope}[yshift=-0.5cm]
+        \tkzDefPoints{0/0/A, 1/0/B}
+        \tkzDefPointOnCircle[R = center B angle 38  radius 1.5] \tkzGetPoint{C}
+        \tkzDefLine[parallel=through C](A,B) \tkzGetPoint{D}
+        \tkzDrawSegments[thick](A,B  B,C  C,D)
+    \end{scope}
+\end{tikzpicture}
+

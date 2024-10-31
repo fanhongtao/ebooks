@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 4/0/D, 0/1.5/A, 4/1.5/B, 3/2.5/E, 1/-1/F}
+    \tkzInterLL(A,B)(E,F)  \tkzGetPoint{O}
+    \tkzInterLL(C,D)(E,F)  \tkzGetPoint{P}
+    \tkzDefPoints{0.3/2/A'}
+    \tkzDefPointOnLine[pos=1.8](A',O)  \tkzGetPoint{B'}
+
+    \tkzDrawSegments(A,B  C,D  E,F)
+    \tkzDrawSegments[dashed](A',B')
+    \tkzMarkAngles[size=0.3](B,O,E  D,P,E)
+    \tkzLabelAngle[pos=0.5](B,O,E){$1$}
+    \tkzLabelAngle[pos=0.5](D,P,E){$2$}
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[above left](A')
+    \tkzLabelPoints[below](C,D,B')
+    \tkzLabelPoints[right](B,E,F)
+    \tkzLabelPoints[below left, xshift=-0.3em](O)
+\end{tikzpicture}
+
