@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C}
+    \tkzDefPointOnCircle[R = center B angle 44  radius 3] \tkzGetPoint{a1}
+    \tkzDefPointOnCircle[R = center C angle 123 radius 3] \tkzGetPoint{a2}
+    \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+
+    \tkzDefLine[parallel=through A](B,C) \tkzGetPoint{d}
+    \tkzDefPointBy[projection= onto A--d](C)  \tkzGetPoint{E}
+    \tkzDefPointBy[projection= onto A--d](B)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(D,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](D,E)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+\end{tikzpicture}
+

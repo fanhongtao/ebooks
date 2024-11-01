@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 2.5/3/A}
+    \tkzDefPointOnLine[pos=0.4](A,B)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=0.4](A,C)  \tkzGetPoint{E}
+    \tkzDefLine[parallel=through E](A,B) \tkzGetPoint{f}
+    \tkzInterLL(E,f)(B,C)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(D,E  E,F)
+    \tkzMarkAngles[size=0.3](E,D,A  D,E,F  C,F,E)
+    \tkzMarkAngles[size=0.4](A,E,D)
+    \tkzLabelAngle[pos=0.5](E,D,A){$1$}
+    \tkzLabelAngle[pos=0.5](D,E,F){$2$}
+    \tkzLabelAngle[pos=0.5](C,F,E){$4$}
+    \tkzLabelAngle[pos=0.6](A,E,D){$3$}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[right](E)
+    \tkzLabelPoints[below](C,F)
+\end{tikzpicture}
+

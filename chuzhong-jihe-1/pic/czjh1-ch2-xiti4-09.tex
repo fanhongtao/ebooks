@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/E, 4/0/F, 0/2/A, 4.5/2/D}
+    \tkzDefPointOnCircle[R = center E angle 58  radius 3] \tkzGetPoint{b}
+    \tkzDefPointOnCircle[R = center F angle 102 radius 3] \tkzGetPoint{c}
+    \tkzInterLL(E,b)(A,D)  \tkzGetPoint{B}
+    \tkzInterLL(F,c)(A,D)  \tkzGetPoint{C}
+
+    \tkzDrawPolygon(B,C,F,E)
+    \tkzDrawSegments(A,D)
+    \tkzMarkAngles[size=0.3](A,B,E  A,C,F)
+    \tkzMarkAngles[size=0.4](E,B,D  F,C,D)
+    \tkzLabelAngle[pos=0.5](A,B,E){$1$}
+    \tkzLabelAngle[pos=0.5](A,C,F){$3$}
+    \tkzLabelAngle[pos=0.6](E,B,D){$2$}
+    \tkzLabelAngle[pos=0.6](F,C,D){$4$}
+    \tkzLabelPoints[above](B,C)
+    \tkzLabelPoints[left](A,E)
+    \tkzLabelPoints[right](D,F)
+\end{tikzpicture}
+

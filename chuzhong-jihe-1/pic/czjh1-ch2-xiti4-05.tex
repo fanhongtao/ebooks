@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C1, 4/0/C2, 0/1.2/B1, 4/1.2/B2, 0/2.2/A1, 4/2.2/A2,  2/0/C3}
+    \tkzDefPointOnCircle[R = center C3 angle 78  radius 3] \tkzGetPoint{L1}
+    \tkzDefPointOnLine[pos=1.3](L1,C3)  \tkzGetPoint{L2}
+
+    \tkzInterLL(A1,A2)(L1,L2)  \tkzGetPoint{A3}
+    \tkzInterLL(B1,B2)(L1,L2)  \tkzGetPoint{B3}
+
+    \tkzDrawSegments(A1,A2  B1,B2  C1,C2  L1,L2)
+    \tkzMarkAngles[size=0.3](A1,A3,L2  B1,B3,L2  C2,C3,L1)
+    \tkzLabelAngle[pos=0.5](A1,A3,L2){$1$}
+    \tkzLabelAngle[pos=0.5](B1,B3,L2){$2$}
+    \tkzLabelAngle[pos=0.5](C2,C3,L1){$3$}
+    \tkzLabelSegment[pos=1.0, right](A1,A2){$a$}
+    \tkzLabelSegment[pos=1.0, right](B1,B2){$b$}
+    \tkzLabelSegment[pos=1.0, right](C1,C2){$c$}
+    \tkzLabelSegment[pos=0.0, right](L1,L2){$l$}
+\end{tikzpicture}
+
