@@ -1,0 +1,159 @@
+\subsection{证明}\label{subsec:czjh1-2-9}
+
+前面，我们学过一些定理，如 “对顶角相等”；“内错角相等，两直线平行” 等。
+它们的正确性是经过推理证实的，推理的过程就是证明。
+
+一个命题，除了公理之外，它是真命题还是假命题，需要经过证明才能知道。
+证明要从命题的题设出发，通过推理来判断命题的结论是否成立。
+结论成立，就是真命题，结论不成立，就是假命题。学习几何就要学会证明。
+
+下面我们来看一个证明的例子。
+
+\begin{dingli}[定理]
+    如果两条直线都和第三条直线垂直，那么这两条直线平行。
+\end{dingli}
+
+已知：如图 \ref{fig:czjh1-2-22}，$AB \perp EF$， $CD \perp EF$。
+
+求证：$AB \pingxing CD$。
+
+\zhengming $\because$ \quad $AB \perp EF$（已知），
+
+$\therefore$ \quad $\angle 1 = 90^\circ$ （垂直的定义）。
+
+$\because$ \quad $CD \perp EF$（已知），
+
+$\therefore$ \quad $\angle 2 = 90^\circ$ （垂直的定义）。
+
+$\therefore$ \quad $\angle 1 = \angle 2$ （等量代换）。
+
+$\therefore$ \quad $AB \pingxing CD$（同位角相等，两直线平行）。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-22}
+        \caption{}\label{fig:czjh1-2-22}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch2-23}
+        \caption{}\label{fig:czjh1-2-23}
+    \end{minipage}
+\end{figure}
+
+
+从上例可以看出，证明是从题设出发，经过由 “$\because$ …，$\therefore$ …” 组成的推理，直到得出结论。
+推理的每一步都必须有根据，根据是题设和已证事项、定义、公理和定理。
+
+证明一个命题，一般步骤如下：
+
+1. 按题意画出图形；
+
+2. 分清命题的题设与结论，结合图形，在已知一项中写出题设，在求证一项中写出结论；
+
+3. 在证明一项中，写出证明过程。
+
+下面，我们按以上步骤，再来证明一个命题：
+
+\begin{dingli}[定理]
+    如果一条直线和两条平行线中的一条垂直，那么，这条直线也和另一条垂直。
+\end{dingli}
+
+我们先来画出符合题意的图形。
+先画出两条平行线 $AB \pingxing CD$。再画一条直线 $EF \perp AB$ 。
+这样我们就画出了符合题意的图形（图 \ref{fig:czjh1-2-23}）。
+
+下面，我们再来写已知求证。命题的题设是 “一条直线和两条平行线中的一条垂直”。
+体现在图上是 $AB \pingxing CD$， $EF \perp AB$。
+命题的结论是 “这条直线也和另一条垂直”。体现在图上是 $EF \perp CD$。于是有：
+
+已知：$AB \pingxing CD$， $EF \perp AB$（图 \ref{fig:czjh1-2-23}）。
+
+求证： $EF \perp CD$。
+
+\zhengming $\because$ \quad $AB \pingxing CD$（已知）,
+
+$\therefore$ \quad $\angle 1 = \angle 2$ （两直线平行，同位角相等）。
+
+$\because$ \quad $EF \perp AB$ （已知），
+
+$\therefore$ \quad $\angle 1 = 90^\circ$（垂直定义）。
+
+$\therefore$ \quad $\angle 2 = 90^\circ$（等量代换）。
+
+$\therefore$ \quad $EF \perp CD$（垂直定义）。
+
+有些命题是假命题。 要证明一个命题是假命题，只要能举出一个例子说明这个命题不成立就可以。
+例如，证明 “相等的角是对顶角” 是假命题时，可画一个角的平分线，得到两个相等的角，
+但它们不是对顶角，就可以肯定要证的命题是假命题了。
+
+
+\begin{lianxi}
+
+\xiaoti{抄写下列各命题的证明步驟，并写出推理根据：}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{3.5cm}
+        \centering
+        \input{../pic/czjh1-ch2-subsec9-lx-1-a}
+        \caption*{甲}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6.5cm}
+        \centering
+        \input{../pic/czjh1-ch2-subsec9-lx-1-b}
+        \caption*{乙}
+    \end{minipage}
+    \begin{minipage}[b]{4cm}
+        \centering
+        \input{../pic/czjh1-ch2-subsec9-lx-1-c}
+        \caption*{丙}
+    \end{minipage}
+    \caption*{（第 11 题）}
+\end{figure}
+\begin{xiaoxiaotis}
+
+    \xxt{已知：如图甲， $A$、$B$、$C$、$D$ 四点在一条直线上，$AB = CD$。 \\
+        求证： $AC = BD$。\\
+        \zhengming $\because$ \quad $AB = CD$ （\hspace*{2cm}）， \\
+        $\therefore$ \quad $AB + BC = CD + BC$（\hspace*{2cm}）， \\
+        即 \quad $AC = BD$。
+    }
+
+    \begin{enhancedline}
+    \xxt{已知：如图乙，$\angle ABC = \angle A'B'C'$，$BD$、$B'D'$ 分别是 $\angle ABC$、$\angle A'B'C'$ 的平分线。\\
+        求证：$\angle 1 = \angle 2$。 \\
+        \zhengming $\because$ \quad  $\angle ABC = \angle A'B'C'$（\hspace*{2cm}）， \\
+        $\therefore$ \quad $\exdfrac{1}{2} \angle ABC = \exdfrac{1}{2} \angle A'B'C'$ （\hspace*{2cm}）。 \\
+        $\because$ \quad \begin{zmtblr}[t]{}
+            $\angle 1 = \exdfrac{1}{2} \angle ABC$ （角平分线定义）， \\[1em]
+            $\angle 2 = \exdfrac{1}{2} \angle A'B'C'$ （\hspace*{2cm}），
+        \end{zmtblr} \\
+        $\therefore$ \quad $\angle 1 = \angle 2$（\hspace*{2cm}）。
+    }
+    \end{enhancedline}
+
+    \xxt{已知：如图丙，$\angle AOB = \angle COD$。\\
+        求证： $\angle 1 = \angle 2$。 \\
+        \zhengming $\because$ \quad $\angle AOB = \angle COD$（\hspace*{2cm}）， \\
+        $\therefore$ \quad $\angle AOB - \angle BOC = \angle COD - \angle BOC$（\hspace*{2cm}）， \\
+        即 \quad $\angle 1 = \angle 2$。
+    }
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{证明下列命题是假命题：}
+\begin{xiaoxiaotis}
+
+    \xxt{一个角的补角大于这个角；}
+
+    \xxt{正数与负数的和是负数。}
+
+\end{xiaoxiaotis}
+
+\end{lianxi}
+

@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 2.5/0/D}
+    \tkzDefPoint(80:2.5){A}
+    \tkzDefPoint(60:2.5){C}
+    \tkzDefPoint(20:2.5){B}
+
+    \tkzDrawSegments(O,A  O,B  O,C  O,D)
+    \tkzMarkAngles[size=0.6](C,O,A  D,O,B)
+    \tkzLabelAngle[pos=0.9](C,O,A){$1$}
+    \tkzLabelAngle[pos=0.9](D,O,B){$2$}
+    \tkzLabelPoints[below](O,D)
+    \tkzLabelPoints[right](A,B,C)
+\end{tikzpicture}
+

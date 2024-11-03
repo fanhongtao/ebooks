@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/B, 2.5/0/C}
+        \tkzDefPoint(50:2.5){A}
+        \tkzDefPoint(25:2.5){D}
+
+        \tkzDrawSegments(B,A  B,C  B,D)
+        \tkzMarkAngles[size=0.6](C,B,D)
+        \tkzLabelAngle[pos=0.9](C,B,D){$1$}
+        \tkzLabelPoints[below](B,C)
+        \tkzLabelPoints[right](A,D)
+    \end{scope}
+
+    \begin{scope}[xshift=3.2cm]
+        \tkzDefPoints{0/0/B', 2.5/0/C'}
+        \tkzDefPoint(50:2.5){A'}
+        \tkzDefPoint(25:2.5){D'}
+
+        \tkzDrawSegments(B',A'  B',C'  B',D')
+        \tkzMarkAngles[size=0.6](C',B',D')
+        \tkzLabelAngle[pos=0.9](C',B',D'){$2$}
+        \tkzLabelPoints[below](B',C')
+        \tkzLabelPoints[right](A',D')
+    \end{scope}
+\end{tikzpicture}
+
