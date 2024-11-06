@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3.5/0/C, 3/0/O}
+    \tkzDefPointOnCircle[R = center O angle -50  radius 0.75] \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=5](E,O)  \tkzGetPoint{D}
+    \tkzDefPointOnCircle[R = center A angle 45  radius 3] \tkzGetPoint{B}
+    \tkzInterLL(A,B)(E,D)  \tkzGetPoint{P}
+
+    \tkzDrawSegments(A,B  A,C  D,E)
+    \tkzMarkAngles[size=0.3](D,P,A  E,O,C)
+    \tkzMarkAngles[size=0.4](D,O,A  A,P,E)
+    \tkzLabelAngle[pos=0.5](D,P,A){$1$}
+    \tkzLabelAngle[pos=0.5](E,O,C){$2$}
+    \tkzLabelAngle[pos=0.6](D,O,A){$3$}
+    \tkzLabelAngle[pos=0.6](A,P,E){$4$}
+
+    \tkzLabelPoints[below](A,E)
+    \tkzLabelPoints[above right](C)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right](B)
+\end{tikzpicture}
+

@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C}
+    \tkzDefPointOnCircle[R = center B angle 70  radius 1] \tkzGetPoint{a1}
+    \tkzDefPointOnCircle[R = center C angle 130 radius 1] \tkzGetPoint{a2}
+    \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+
+    \tkzDefLine[bisector](A,C,B) \tkzGetPoint{d}
+    \tkzInterLL(A,B)(C,d)        \tkzGetPoint{D}
+    \tkzDefLine[parallel=through D](B,C) \tkzGetPoint{e}
+    \tkzInterLL(D,e)(A,C)        \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  D,E)
+
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right](E)
+\end{tikzpicture}
+

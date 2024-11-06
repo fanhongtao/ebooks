@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/-2.5/C, 0/-1/b1, 3/0/d1}
+    \tkzDefPointOnCircle[R = center C angle 165  radius 1] \tkzGetPoint{b2}
+    \tkzDefPointOnCircle[R = center A angle 8    radius 1] \tkzGetPoint{d2}
+    \tkzInterLL(A,b1)(C,b2)  \tkzGetPoint{B}
+    \tkzInterLL(A,d2)(C,d1)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C,D)
+
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+

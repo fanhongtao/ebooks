@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/X1, 3/0/X2, 0.5/3/D, 3.5/3/E}
+    \tkzDefPointOnLine[pos=0.7](X1,D)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=0.3](X2,E)  \tkzGetPoint{C}
+    \tkzDefPointBy[rotation=center B angle -60](D)  \tkzGetPoint{a1}
+    \tkzDefPointBy[rotation=center C angle  36](E)  \tkzGetPoint{a2}
+    \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+    \tkzDefLine[normed, parallel=through A](X1,D) \tkzGetPoint{F}
+    \tkzDefPointOnLine[pos=3](F,A)  \tkzGetPoint{G}
+    \tkzDefLine[bisector](B,A,C) \tkzGetPoint{p}
+    \tkzDefPointOnLine[pos=1.8](A,p)  \tkzGetPoint{P}
+
+    \tkzDrawSegments(X1,X2  X1,D  X2,E  B,A  C,A  F,G  A,P)
+    \tkzMarkAngles[size=0.5](A,B,D  E,C,A)
+    \tkzLabelAngle[pos=0.8](A,B,D){$60^\circ$}
+    \tkzLabelAngle[pos=1.2](E,C,A){$36^\circ$}
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[right](F,A,E,C)
+    \tkzLabelPoints[below](G,P)
+\end{tikzpicture}
+

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 4/0/D,  0/3/A,  4/3/B}
+    \tkzDefLine[bisector](A,B,C) \tkzGetPoint{E}
+    \tkzDefLine[bisector](D,C,B) \tkzGetPoint{F}
+
+    \tkzDrawSegments(A,B  B,C  C,D  B,E  C,F)
+    \tkzMarkAngles[size=0.8](A,B,E  D,C,F)
+    \tkzLabelAngle[pos=1.4](A,B,E){$1$}
+    \tkzLabelAngle[pos=1.4](D,C,F){$2$}
+    \tkzLabelPoints[below](A,E,C,D)
+    \tkzLabelPoints[right](B,F)
+\end{tikzpicture}
+

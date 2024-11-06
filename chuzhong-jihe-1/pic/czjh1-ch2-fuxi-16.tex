@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 4/0/D, 0/2/A, 4/2/B,  1.2/3/G,  0.8/-1/H,  2.5/3/E,  3.2/-1/F}
+    \tkzInterLL(G,H)(A,B)    \tkzGetPoint{X1}
+    \tkzInterLL(G,H)(C,D)    \tkzGetPoint{X2}
+    \tkzInterLL(E,F)(A,B)    \tkzGetPoint{X3}
+    \tkzInterLL(E,F)(C,D)    \tkzGetPoint{X4}
+
+    \tkzDrawSegments(A,B  C,D  E,F  G,H)
+    \tkzMarkAngles[size=0.3](A,X1,H  G,X2,C  B,X3,E  D,X4,E)
+    \tkzLabelAngle[pos=0.6](A,X1,H){$1$}
+    \tkzLabelAngle[pos=0.6](G,X2,C){$2$}
+    \tkzLabelAngle[pos=0.6](B,X3,E){$3$}
+    \tkzLabelAngle[pos=0.6](D,X4,E){$4$}
+    \tkzLabelPoints[above](G,E)
+    \tkzLabelPoints[below](A,B,C,D,H,F)
+\end{tikzpicture}
+

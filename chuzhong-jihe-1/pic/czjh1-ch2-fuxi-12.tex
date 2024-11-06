@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 1.2/1.2/C}
+    \tkzDefLine[parallel=through B, normed](C,A) \tkzGetPoint{D}
+    \tkzInterLL(A,B)(C,D)  \tkzGetPoint{O}
+
+    \tkzDrawSegments(A,B  C,D  A,C  B,D)
+    \tkzLabelPoints[below](A,D,O)
+    \tkzLabelPoints[above](B,C)
+\end{tikzpicture}
+

@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/D, 4/0/E, 0.7/0/F, 3.3/0/G}
+    \tkzDefPointBy[rotation=center F angle  70](G)  \tkzGetPoint{a1}
+    \tkzDefPointBy[rotation=center G angle -50](F)  \tkzGetPoint{a2}
+    \tkzInterLL(F,a1)(G,a2)  \tkzGetPoint{A}
+    \tkzDefPointOnLine[pos=1.4](A,F)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=1.4](A,G)  \tkzGetPoint{C}
+
+    \tkzDrawSegments(D,E  A,B  A,C)
+    \tkzMarkAngles[size=0.4](E,F,A  A,G,D  D,F,B  C,G,E)
+    \tkzLabelAngle[pos=0.7](E,F,A){$1$}
+    \tkzLabelAngle[pos=0.7](A,G,D){$2$}
+    \tkzLabelAngle[pos=0.7](D,F,B){$3$}
+    \tkzLabelAngle[pos=0.7](C,G,E){$4$}
+    \tkzLabelPoints[above](A,D,E)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[below right](F)
+    \tkzLabelPoints[below left](G)
+\end{tikzpicture}
+

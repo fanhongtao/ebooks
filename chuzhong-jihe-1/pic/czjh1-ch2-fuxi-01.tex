@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3.5/0/B, 1.75/0/O}
+    \tkzDefPointOnCircle[R = center O angle 230  radius 1.5] \tkzGetPoint{C}
+    \tkzDefPointOnLine[pos=2](C,O)  \tkzGetPoint{D}
+
+    \tkzDrawSegments(A,B  C,D)
+    \tkzLabelPoints[below](A,O,B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+
