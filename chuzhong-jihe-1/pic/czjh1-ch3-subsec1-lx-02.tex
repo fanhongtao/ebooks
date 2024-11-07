@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3.5/0/C, 3.1/2/A}
+    \tkzDefLine[bisector](B,A,C)  \tkzGetPoint{d}
+    \tkzInterLL(A,d)(B,C)  \tkzGetPoint{D}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](B,A,C)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D  A,E  A,F)
+    \tkzMarkRightAngle[size=0.2](A,F,B)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](B,D)
+    \tkzLabelPoints[below,xshift=-0.5em](E)
+    \tkzLabelPoints[below,xshift=-0.3em](F)
+\end{tikzpicture}
+
