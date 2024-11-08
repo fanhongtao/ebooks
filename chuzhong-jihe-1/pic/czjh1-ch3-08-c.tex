@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C}
+    \tkzDefTriangle[equilateral](B,C)  \tkzGetPoint{A}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzMarkSegments[mark=|](A,B  A,C  B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+\end{tikzpicture}
+

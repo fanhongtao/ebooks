@@ -81,7 +81,12 @@
   \IfNoValueF {#1}
     {#1　}%
 }{}
-\NewDocumentEnvironment{dingli}{o}{%
+\NewDocumentEnvironment{dingli}{o}{% 定理
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+\NewDocumentEnvironment{tuilun}{o}{% 推论
   \bfseries
   \IfNoValueF {#1}
     {#1　}%

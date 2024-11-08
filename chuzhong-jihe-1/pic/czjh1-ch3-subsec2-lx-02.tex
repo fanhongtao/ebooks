@@ -1,0 +1,16 @@
+% 满足题设的三角形，角 A = 36度， 角 B = 角 C = 72度。
+\begin{tikzpicture}
+    \pgfmathsetmacro{\bc}{2}
+    \tkzDefPoints{0/0/B, \bc/0/C}
+    \tkzDefPointBy[rotation=center B angle  72](C)  \tkzGetPoint{a1}
+    \tkzDefPointBy[rotation=center C angle -72](B)  \tkzGetPoint{a2}
+    \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+    \tkzInterCC[R](A,\bc)(B,\bc)  \tkzGetFirstPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(B,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+
