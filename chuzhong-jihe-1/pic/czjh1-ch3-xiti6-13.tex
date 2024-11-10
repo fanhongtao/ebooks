@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C}
+
+    % \tkzDefPointBy[rotation=center B angle  66](C)  \tkzGetPoint{a1}
+    % \tkzDefPointBy[rotation=center C angle -54](B)  \tkzGetPoint{a2}
+    % \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+    \tkzDefTriangle[two angles=66 and 54](B,C)  \tkzGetPoint{A}
+
+    \tkzDefLine[bisector](B,A,C)  \tkzGetPoint{d}
+    \tkzInterLL(A,d)(B,C)         \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D)
+    \tkzMarkAngles[size=0.5](B,A,D)
+    \tkzMarkAngles[size=0.6](D,A,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,D)
+\end{tikzpicture}

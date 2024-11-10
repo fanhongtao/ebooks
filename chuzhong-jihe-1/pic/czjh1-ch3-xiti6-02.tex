@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/B, 2/0/C, 2/3/A}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzMarkRightAngle(A,C,B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+
+    \begin{scope}[xshift=3cm]
+        \tkzDefPoints{0/0/B, 1.5/0/C, 2.5/2.8/A}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+
+    \begin{scope}[xshift=6cm]
+        \tkzDefPoints{0/0/B, 3.2/0/C, 2.5/2.3/A}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+\end{tikzpicture}
+

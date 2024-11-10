@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/E, 3.5/0/F,  0/1.5/A, 3.5/1.5/C}
+    \tkzDefPointBy[rotation=center A angle  32](C)  \tkzGetPoint{b}
+    \tkzDefPointBy[rotation=center C angle -65](A)  \tkzGetPoint{d}
+    \tkzInterLL(A,b)(C,d)  \tkzGetPoint{O}
+    \tkzDefPointOnLine[pos=0.7](A,O)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=0.6](C,O)  \tkzGetPoint{D}
+    \tkzDefLine[mediator,K=0.5](B,D)  \tkzGetFirstPoint{M}
+
+    \tkzDrawSegments(B,A  A,E  E,F  F,C  C,D)
+    \tkzDrawSegments[dashed](A,C)
+    \tkzDrawArc(M,B)(D)
+    \tkzLabelPoints[above](B,D)
+    \tkzLabelPoints[left](A,E)
+    \tkzLabelPoints[right](C,F)
+\end{tikzpicture}
+
