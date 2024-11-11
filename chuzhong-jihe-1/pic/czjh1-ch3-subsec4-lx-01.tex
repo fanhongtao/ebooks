@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 0.7/1.8/C, 1.7/1/O}
+    \tkzDefPointOnLine[pos=2](A,O)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=2](C,O)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,O,C)
+    \tkzDrawPolygon(B,O,D)
+    \tkzMarkAngles[arc=l,  size=0.4](B,A,C)
+    \tkzMarkAngles[arc=ll, size=0.4](A,C,D)
+    \tkzMarkAngles[arc=l,  size=0.4](A,B,D)
+    \tkzMarkAngles[arc=ll, size=0.4](B,D,C)
+    \tkzLabelPoints[above](C,B)
+    \tkzLabelPoints[below](A,O,D)
+\end{tikzpicture}
+

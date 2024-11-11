@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    % 两个 scope 的区别，仅仅在于各点的名称不同。
+    % 所以将绘制代码抽取出来（复用）
+    \def\drawtriangle{
+        \tkzDefPoints{0/0/B, 3.5/0/C, 2.8/2/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzMarkSegment[mark=|](B,C)
+        \tkzMarkSegment[mark=||](A,C)
+        \tkzMarkSegment[mark=|||](A,B)
+        \tkzMarkAngle[arc=l, size=0.3](B,A,C)
+        \tkzMarkAngle[arc=ll, size=0.3](C,B,A)
+        \tkzMarkAngle[arc=lll, size=0.3](A,C,B)
+    }
+
+    \begin{scope}
+        \drawtriangle
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+
+    \begin{scope}[xshift=5cm]
+        \drawtriangle
+        \tkzLabelPoint[above](A){$A'$}
+        \tkzLabelPoint[below](B){$B'$}
+        \tkzLabelPoint[below](C){$C'$}
+    \end{scope}
+\end{tikzpicture}
+

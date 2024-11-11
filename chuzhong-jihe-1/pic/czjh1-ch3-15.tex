@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3.5/0/C, 2.8/2/A}
+    \tkzDefPoints{4.25/0/M, 4.25/1/N}
+    \tkzDefPointBy[reflection = over M--N](A)  \tkzGetPoint{A'}
+    \tkzDefPointBy[reflection = over M--N](B)  \tkzGetPoint{B'}
+    \tkzDefPointBy[reflection = over M--N](C)  \tkzGetPoint{C'}
+
+    % 绘制左侧的三角形
+    \tkzDrawPolygon(A,B,C)
+    \tkzMarkSegment[mark=|](B,C)
+    \tkzMarkSegment[mark=||](A,C)
+    \tkzMarkSegment[mark=|||](A,B)
+    \tkzMarkAngle[arc=l, size=0.3](B,A,C)
+    \tkzMarkAngle[arc=ll, size=0.3](C,B,A)
+    \tkzMarkAngle[arc=lll, size=0.3](A,C,B)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+
+    % 绘制右侧的三角形
+    \tkzDrawPolygon(A',B',C')
+    \tkzMarkSegment[mark=|](B',C')
+    \tkzMarkSegment[mark=||](A',C')
+    \tkzMarkSegment[mark=|||](A',B')
+    \tkzMarkAngle[arc=l, size=0.3](C',A',B')
+    \tkzMarkAngle[arc=ll, size=0.3](A',B',C')
+    \tkzMarkAngle[arc=lll, size=0.3](B',C',A')
+    \tkzLabelPoints[above](A')
+    \tkzLabelPoints[below](B',C')
+\end{tikzpicture}
+

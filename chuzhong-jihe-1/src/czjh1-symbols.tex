@@ -9,7 +9,10 @@
 \newcommand\pingxing{% 平行
     \mathrel{\tikz[baseline] \draw (0em,-0.3ex) -- (.4em,1.7ex) (.2em,-0.3ex) -- (.6em,1.7ex);%
 }}
-
+\newcommand*\quandeng{% 全等
+  \mathrel{%
+    \tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
+}}
 
 %特殊符号
 \newcommand{\nsep}{,\quad}% 连续的数字之间的分隔符
