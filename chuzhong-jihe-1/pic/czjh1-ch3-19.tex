@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/D, 1.8/0/A, 2.5/3.0/B}
+    \tkzDefPointBy[rotation=center A angle -20](D)  \tkzGetPoint{E}
+    \tkzDefPointBy[rotation=center A angle -20](B)  \tkzGetPoint{C}
+
+    \tkzDrawPolygon(D,A,B)
+    \tkzDrawPolygon(E,A,C)
+    \tkzMarkAngles[size=0.6](E,A,D  C,A,B)
+    \tkzLabelAngle[pos=1.0](E,A,D){$1$}
+    \tkzLabelAngle[pos=1.0](C,A,B){$2$}
+    \tkzLabelPoints[left](E,D)
+    \tkzLabelPoints[right](A,C)
+    \tkzLabelPoints[above](B)
+\end{tikzpicture}
+

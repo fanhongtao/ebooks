@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C,  1.5/3/A}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{F}
+    \tkzDefMidPoint(A,C)  \tkzGetPoint{E}
+
+    \tkzDrawSegments(A,B  A,C  B,E  C,F)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[left](F)
+    \tkzLabelPoints[right](E)
+\end{tikzpicture}
+

@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 2/0/B,  2.5/0/C, 4.5/0/D, 0/1.5/E, 4.5/-1.5/F}
+
+    \tkzDrawSegments(A,D  A,E  B,E  C,F  D,F)
+    \tkzMarkRightAngle(E,A,B)
+    \tkzMarkRightAngle(C,D,F)
+    \tkzLabelPoints[above](E,C,D)
+    \tkzLabelPoints[below](A,B,F)
+\end{tikzpicture}
+

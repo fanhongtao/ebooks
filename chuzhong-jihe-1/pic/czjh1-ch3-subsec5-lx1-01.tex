@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 0.8/1.2/E}
+    \tkzDefPointBy[rotation=center E angle -100](C)  \tkzGetPoint{A}
+    \tkzDefPointOnLine[pos=2.5](A,E)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=2.5](C,E)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,E,D)
+    \tkzDrawPolygon(C,E,B)
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B,D,E)
+\end{tikzpicture}
+
