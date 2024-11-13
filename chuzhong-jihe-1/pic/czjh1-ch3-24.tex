@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    % 两个 scope 的区别，仅仅在于各点的名称不同。
+    % 所以将绘制代码抽取出来（复用）
+    \def\drawtriangle{
+        \tkzDefPoints{0/0/B, 3.5/0/C, 2.8/2/A}
+        \tkzDefLine[bisector](B,A,C) \tkzGetPoint{d}
+        \tkzInterLL(A,d)(B,C)        \tkzGetPoint{D}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+        \tkzMarkAngle[size=0.4](B,A,D)
+    }
+
+    \begin{scope}
+        \drawtriangle
+        \tkzLabelAngle[pos=0.7](B,A,D){$1$}
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C,D)
+    \end{scope}
+
+    \begin{scope}[xshift=4.5cm]
+        \drawtriangle
+        \tkzLabelAngle[pos=0.7](B,A,D){$2$}
+        \tkzLabelPoint[above](A){$A'$}
+        \tkzLabelPoint[below](B){$B'$}
+        \tkzLabelPoint[below](C){$C'$}
+        \tkzLabelPoint[below](D){$D'$}
+    \end{scope}
+\end{tikzpicture}
+

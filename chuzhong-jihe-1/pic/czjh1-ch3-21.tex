@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2.5/0/C}
+    \tkzDefPointBy[rotation=center B angle  30](C)  \tkzGetPoint{D}
+    \tkzDefPointBy[rotation=center C angle -45](B)  \tkzGetPoint{e}
+    \tkzDefPointOnLine[pos=0.8](C,e)  \tkzGetPoint{E}
+    \tkzInterLL(B,D)(C,E)  \tkzGetPoint{A}
+
+    \tkzDrawSegments(B,C  B,D  C,E)
+    \tkzLabelPoints[above](A,E,D)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+\end{tikzpicture}
+

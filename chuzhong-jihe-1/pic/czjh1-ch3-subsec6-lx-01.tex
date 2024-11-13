@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 0/3/A}
+    \tkzDefPointBy[rotation=center C angle  60](A)  \tkzGetPoint{b1}
+    \tkzDefPointBy[rotation=center A angle -30](C)  \tkzGetPoint{b2}
+    \tkzInterLL(C,b1)(A,b2)  \tkzGetPoint{B}
+    \tkzDefPointBy[reflection = over A--C](B)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A,C,D)
+    \tkzMarkAngle[size=0.4](B,A,C)
+    \tkzMarkAngle[size=0.5](C,A,D)
+    \tkzLabelAngle[pos=0.7](B,A,C){$1$}
+    \tkzLabelAngle[pos=0.8](C,A,D){$2$}
+    \tkzMarkRightAngle(A,B,C)
+    \tkzMarkRightAngle(A,D,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,D)
+\end{tikzpicture}
+

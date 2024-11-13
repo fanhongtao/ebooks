@@ -1,0 +1,150 @@
+\subsection{三角形全等的判定 II}\label{subsec:czjh1-3-6}
+
+现在研究三角形全等的另一个判定方法。
+
+画一个三角形，使它的两个角分别等于 $30^\circ$ 和 $45^\circ$， 它们所夹的边的长等于 2.5 cm。
+
+\huafa 1. 画线段 $BC = 2.5 \;\limi$ （图 \ref{fig:czjh1-3-21}）。
+
+2. 在 $BC$ 的同旁，分别以 $B$、$C$ 为顶点， 画 $\angle CBD = 30^\circ$、
+$\angle BCE = 45^\circ$，$BD$ 和 $CE$ 相交于 $A$。
+
+$\triangle ABC$ 就是所求的三角形。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch3-21}
+        \caption{}\label{fig:czjh1-3-21}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{9cm}
+        \centering
+        \input{../pic/czjh1-ch3-22}
+        \caption{}\label{fig:czjh1-3-22}
+    \end{minipage}
+\end{figure}
+
+
+如果按照上面的条件，用同样的方法另画一个 $\triangle A'B'C'$，
+再把 $\triangle A'B'C'$ 剪下来放到 $\triangle ABC$ 上，
+$\triangle A'B'C'$ 与 $\triangle ABC$ 能够完全重合。
+所以，只要是按上面条件画出的三角形，总是全等的。我们也把这个事实作为公理：
+
+\begin{gongli}[角边角公理]
+    有两角和它们的夹边对应相等的两个三角形全等
+\end{gongli}（可以简写成 “\zhongdian{角边角}” 或 “$\bm{ASA}$” ） 。
+
+例如， 在图 \ref{fig:czjh1-3-22} 的 $\triangle ABC$ 和 $\triangle A'B'C'$ 中，如果
+$\angle B = \angle B'$， $BC = B'C'$， $\angle C = \angle C'$，那么
+$$ \triangle ABC \quandeng \triangle A'B'C' \juhao $$
+
+在 $\triangle ABC$ 和 $\triangle A'B'C'$ 中， 如果 $AB = A'B'$，$\angle B = \angle B'$，
+$\angle C = \angle C'$( 图 \ref{fig:czjh1-3-22}）， 那么， 由三角形内角和定理可得 $\angle A = \angle A'$。
+根据角边角公理， $\triangle ABC \quandeng \triangle A'B'C'$。因此，有下面推论：
+
+\begin{tuilun}[推论]
+    有两角和其中一角的对边对应相等的两个三角形全等
+\end{tuilun}（可以简写成 “\zhongdian{角角边}” 或 “$\bm{AAS}$” ） 。
+
+
+\liti  已知：点 $D$ 在 $AB$ 上，点 $E$ 在 $AC$ 上，$BE$ 和 $CD$ 相交于点 $O$，
+$AB = AC$， $\angle B= \angle C$ （图 \ref{fig:czjh1-3-23}）。
+
+求证： $BD = CE$。
+
+分析： $BD$ 和 $CE$ 分别在 $\triangle BOD$ 和 $\triangle COE$ 中，
+由已知条件不能直接证明 $\triangle BOD \quandeng \triangle COE$。
+但已知 $AB = AC$，$AB$、$BD$ 及 $AC$、$CE$ 分别在一条直线上，
+如果能证 $AD = AE$，就可以得到 $BD = CE$。
+而 $AD$ 和 $AE$ 分别在 $\triangle ADC$ 和 $\triangle AEB$ 中，
+可由已知条件证得 $\triangle ADC \quandeng \triangle AEB$。
+
+\begin{wrapfigure}[7]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-23}
+    \caption{}\label{fig:czjh1-3-23}
+\end{wrapfigure}
+
+\zhengming 在 $\triangle ADC$ 和 $\triangle AEB$ 中，
+
+\hspace{2em}$\begin{cases}
+    \angle A = \angle A &\text{（公共角），} \\
+    AC = AB & \text{（已知），} \\
+    \angle C = \angle B & \text{（已知），} \\
+\end{cases}$
+
+$\therefore$ \quad  $\triangle ACD \quandeng \triangle ABE$ （$ASA$）。
+
+$\therefore$ \quad $AD = AE$ （全等三角形对应边相等）。
+
+又 $\because$ \quad $AB = AC$ （已知），
+
+$\therefore$ \quad $BD = CE$ （等式性质）。
+
+
+\liti 求证：全等三角形对应角的平分线相等。
+
+已知：$\triangle ABC \quandeng \triangle A'B'C'$， $AD$、$A'D"$ 分别是
+$\triangle ABC$ 和 $\triangle A'B'C'$ 的角平分线（图 \ref{fig:czjh1-3-24}）。
+
+求证：$AD = A'D'$。
+
+\zhengming $\because$ \quad $\triangle ABC \quandeng \triangle A'B'C'$ （已知），
+
+\begin{minipage}[b]{2em}$\therefore$ \\ \phantom{a} \end{minipage} %  为了让 “所以” 符号与 “AB = A'B'” 同行显示
+% \quad
+$\left.\begin{aligned}
+    & AB = A'B' \\
+    & \angle B = \angle B' \\
+    & \angle BAC = \angle B'A'C'
+\end{aligned} \right\} \qquad \text{（全等三角形对应边、对应角相等）。}$
+
+\begin{enhancedline}
+$\because$ \quad $\begin{aligned}[t]
+    &\angle 1 = \exdfrac{1}{2} \angle BAC \quad \text{（已知），} \\
+    &\angle 2 = \exdfrac{1}{2} \angle B'A'C' \quad \text{（已知），} \\
+\end{aligned}$
+
+$\therefore$ \quad $\angle 1 = \angle 2$（等量代换）。
+\end{enhancedline}
+
+在 $\triangle ABD$ 和 $\triangle A'B'D'$ 中，
+
+\hspace{2em}$\begin{cases}
+    \angle B = \angle B' & \text{（已证），} \\
+    AB = A'B' & \text{（已证），} \\
+    \angle 1 = \angle 2 & \text{（已证），} \\
+\end{cases}$
+
+$\therefore$ \quad $\triangle ABD \quandeng \triangle A'B'D'$ （$ASA$）。
+
+$\therefore$ \quad $AD = A'D'$ （全等三角形对应边相等）。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{9cm}
+        \centering
+        \input{../pic/czjh1-ch3-24}
+        \caption{}\label{fig:czjh1-3-24}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{5cm}
+        \centering
+        \input{../pic/czjh1-ch3-subsec6-lx-01}
+        \caption*{（第 1 题）}
+    \end{minipage}
+\end{figure}
+
+\begin{lianxi}
+
+\xiaoti{已知：如图，$AB \perp BC$，$AD \perp BC$，垂足分别为 $B$、$D$，$\angle 1 = \angle 2$。\\
+    求证： $AB = AD$。
+}
+
+\xiaoti{求证：全等三角形对应边上的高相等。}
+
+\end{lianxi}
+
