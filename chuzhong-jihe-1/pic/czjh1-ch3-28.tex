@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  3/0/B,  0.5/2/D, 3.5/2/C}
+    \tkzDefPointOnLine[pos=0.3](A,C)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=0.3](C,A)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  D,E  B,F)
+    \tkzMarkAngles[size=0.5](A,C,B  C,A,D)
+    \tkzLabelAngle[pos=0.8](A,C,B){$1$}
+    \tkzLabelAngle[pos=0.8](C,A,D){$2$}
+    \tkzLabelPoints[left](A,D)
+    \tkzLabelPoints[right](B,C)
+    \tkzLabelPoints[below, xshift=0.3em](E)
+    \tkzLabelPoints[above, xshift=-0.3em](F)
+\end{tikzpicture}
+
