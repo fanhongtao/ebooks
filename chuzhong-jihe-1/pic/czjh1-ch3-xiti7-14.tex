@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  2/0/B, 3/0/M}
+    \tkzDefPoint(30:3.5){D}
+    \tkzDefPoint(-30:3.5){C}
+
+    \tkzDrawSegment(A,M)
+    \tkzDrawPolygon(A,B,D)
+    \tkzDrawPolygon(A,B,C)
+    \tkzMarkAngle[size=0.6](C,A,M)  \tkzLabelAngle[pos=0.9](C,A,M){$1$}
+    \tkzMarkAngle[size=0.5](M,A,D) \tkzLabelAngle[pos=0.8](M,A,D){$2$}
+    \tkzMarkAngle[size=0.4](C,B,M)  \tkzLabelAngle[pos=0.7](C,B,M){$3$}
+    \tkzMarkAngle[size=0.3](M,B,D) \tkzLabelAngle[pos=0.6](M,B,D){$4$}
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above left](B)
+\end{tikzpicture}
+

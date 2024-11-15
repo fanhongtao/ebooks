@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\ab}{2.5}
+    \pgfmathsetmacro{\db}{1.5}
+    \tkzDefPoints{0/0/D, 0/1.5/A}
+    \tkzInterCC[R](A,\ab)(D,\db)  \tkzGetPoints{C}{B}
+    \tkzDefPointOnLine[pos=2.1](A,D)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,E,C)
+    \tkzDrawSegments(A,E  B,D  C,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](E)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[left,yshift=0.3em](D)
+\end{tikzpicture}
+

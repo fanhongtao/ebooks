@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/F, 0/3/A, -1.5/2/B, -1/0/C}
+    \tkzDefPointBy[reflection = over A--F](B)  \tkzGetPoint{E}
+    \tkzDefPointBy[reflection = over A--F](C)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C,D,E)
+    \tkzDrawSegments(A,F)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](F)
+    \tkzLabelPoints[left](B,C)
+    \tkzLabelPoints[right](D,E)
+\end{tikzpicture}
+

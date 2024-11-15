@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  2.5/0/E,  2.5/2.5/C}
+    \tkzCalcLength(A,C)    \tkzGetLength{ac}
+    \tkzDefPoint(\ac,0){B}
+    \tkzInterLC(A,C)(A,E)  \tkzGetSecondPoint{D}
+    \tkzInterLL(B,D)(C,E)  \tkzGetPoint{O}
+
+    \tkzDrawPolygon(A,C,E)
+    \tkzDrawPolygon(A,B,D)
+    \tkzMarkAngles[size=0.3](A,C,E  D,B,A)
+    \tkzLabelPoints[below](A,B,E)
+    \tkzLabelPoints[right](O)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[above,xshift=-0.3em](D)
+\end{tikzpicture}
+

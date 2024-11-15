@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\ab}{1.5}
+    \pgfmathsetmacro{\ac}{3.5}
+    \tkzDefPoints{0/0/B,  3.5/0/C}
+    \tkzInterCC[R](B,\ab)(C,\ac)  \tkzGetFirstPoint{A}
+    \tkzInterCC[R](B,\ac)(C,\ab)  \tkzGetFirstPoint{D}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(D,C,B)
+    \tkzLabelPoints[above](A,O,D)
+    \tkzLabelPoints[below](B,C)
+\end{tikzpicture}
+

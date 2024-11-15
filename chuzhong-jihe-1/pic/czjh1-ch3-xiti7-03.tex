@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  0.6/0/D,  2.4/0/E, 3.0/0/C,  1.5/2.5/A}
+
+    \tkzDrawPolygon(A,B,E)
+    \tkzDrawPolygon(A,C,D)
+    \tkzMarkAngles[size=0.4](A,E,B  C,D,A)
+    \tkzLabelAngle[pos=0.6](A,E,B){$1$}
+    \tkzLabelAngle[pos=0.6](C,D,A){$2$}
+    \tkzLabelPoints[below](B,D,E,C)
+    \tkzLabelPoints[above](A)
+\end{tikzpicture}
+

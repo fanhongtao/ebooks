@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  3.0/0/C,  1.5/3/A,  1.5/0.8/E, 1.5/0/D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D  B,E  C,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,D,C)
+    \tkzLabelPoints[right,yshift=0.5em](E)
+\end{tikzpicture}
+

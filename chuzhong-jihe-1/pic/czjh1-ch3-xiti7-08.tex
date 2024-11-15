@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  4/0/B}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{M}
+    \tkzDefShiftPoint[M](70:2.5){D}
+    \tkzDefShiftPoint[M](110:2.5){C}
+
+    \tkzDrawPolygon(A,M,C)
+    \tkzDrawPolygon(B,M,D)
+    \tkzMarkAngles[size=0.4](C,M,A  B,M,D)
+    \tkzLabelAngle[pos=0.6](C,M,A){$1$}
+    \tkzLabelAngle[pos=0.6](B,M,D){$2$}
+    \tkzLabelPoints[below](A,M,B)
+    \tkzLabelPoints[above](C,D)
+\end{tikzpicture}
+
