@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  0.6/0/D,  2.4/0/E, 3.0/0/C,  1.5/2.5/A, 1.5/0/F}
+
+    \tkzDrawPolygon(A,B,E)
+    \tkzDrawSegment[dashed](A,F)
+    \tkzMarkRightAngle(A,F,C)
+    \tkzDrawPolygon(A,C,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,D,E,C,F)
+\end{tikzpicture}
+

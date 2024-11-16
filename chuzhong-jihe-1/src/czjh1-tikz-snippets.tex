@@ -301,3 +301,20 @@
 }
 
 
+% ---------------
+
+% tkz-euclide 中，想要对一个角进行标识，要分两步：
+%     1. “标记”（tkzMarkAngle）：绘制表示角的弧线
+%     2. “标注”（tkzLabelAngle）： 给角编号（或名字）。如：$1$，$\alpha$
+%  由于在这两个命令中都要写组成角的三个点，感觉很麻烦。
+%  所以，提供一个命令实现简单的“标记”（Mark）和“标注”（Label）
+%  "简单"是指，仅绘制弧线和指定角的编号（或名字）
+\def\extkzLabelAngel[#1](#2,#3,#4)#5{%
+\begingroup
+  \pgfmathsetmacro{\anglepos}{0.3+#1}
+  \tkzMarkAngle[size=#1](#2,#3,#4)
+  \tkzLabelAngle[pos=\anglepos](#2,#3,#4){#5}
+\endgroup
+}
+
+

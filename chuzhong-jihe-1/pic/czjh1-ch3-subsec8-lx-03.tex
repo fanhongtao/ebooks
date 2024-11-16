@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  -0.8/1/C}
+    \tkzDefPointBy[rotation=center C angle 30](A)  \tkzGetPoint{e}
+    \tkzDefPointOnLine[pos=1.4](C,e)  \tkzGetPoint{E} % CE > AC
+    \tkzDefPointOnLine[pos=1.8](C,E)  \tkzGetPoint{D}
+    \tkzInterLC(A,E)(D,E)             \tkzGetFirstPoint{b}
+    \tkzDefPointOnLine[pos=1.4](E,b)  \tkzGetPoint{B} % BD > ED
+
+    \tkzDrawPolygon(A,C,E)
+    \tkzDrawPolygon(B,D,E)
+    \tkzLabelPoints[above](C,E)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[below](A,D)
+\end{tikzpicture}
+

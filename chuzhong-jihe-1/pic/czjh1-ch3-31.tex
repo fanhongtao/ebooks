@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.4/0/C,  1.2/3/A,  1.2/0/D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment[dashed](A,D)
+    \tkzMarkRightAngle(A,D,C)
+    \extkzLabelAngel[0.5](B,A,D){$1$}
+    \extkzLabelAngel[0.6](D,A,C){$2$}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,D)
+\end{tikzpicture}
+

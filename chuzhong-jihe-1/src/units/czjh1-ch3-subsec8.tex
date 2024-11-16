@@ -1,0 +1,187 @@
+\subsection{等腰三角形的性质}\label{subsec:czjh1-3-8}
+
+等腰三角形是一种特殊的三角形，它有许多重要性质。我们先做个实验，
+取一张等腰三角形的纸片（图 \ref{fig:czjh1-3-31}），把两腰 $AB$、$AC$ 叠在一起，我们发现，两个底角互相重合。
+这说明等腰三角形的两个底角相等。下面我们来证明这个性质。
+
+\begin{dingli}[等腰三角形的性质定理]
+    等腰三角形的两个底角等。
+\end{dingli}（简写成 “\zhongdian{等边对等角}”。）
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-31}
+    \caption{}\label{fig:czjh1-3-31}
+\end{wrapfigure}
+
+
+已知： $\triangle ABC$ 中， $AB = AC$（图 \ref{fig:czjh1-3-31}）。
+
+求证： $\angle B = \angle C$。
+
+\zhengming 作顶角的平分线 $AD$。
+
+在 $\triangle BAD$ 和 $\triangle CAD$ 中，
+
+\hspace{2em} $\begin{cases}
+    AB = AC \quad \text{（已知），} \\
+    \angle 1 = \angle 2 \quad \text{（角的平分线的定义），} \\
+    AD = AD \quad \text{（公共边），} \\
+\end{cases}$
+
+$\therefore$ \quad $\triangle BAD \quandeng \triangle CAD$ （$SAS$）。
+
+$\therefore$ \quad $\angle B = \angle C$ （全等三角形的对应角相等）。
+
+从上面的证明过程中，可以知道
+$$ BD = CD \douhao  \angle ADB = \angle ADC = Rt \angle \douhao $$
+所以 $AD$ 平分 $BC$, 并且 $AD \perp BC$。得
+
+\begin{tuilun}[推论 1]
+    等腰三角形顶角的平分线平分底边并且垂直于底边。
+\end{tuilun}
+
+从推论 1 可以知道，\zhongdian{等腰三角形的顶角平分线、底边上的中线、底边上的高互相重合。}
+
+\begin{tuilun}[推论 2]
+    等边三角形的各角都相等，并且每一个角都等于 $60^\circ$。
+\end{tuilun}
+
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-32}
+    \caption{}\label{fig:czjh1-3-32}
+\end{wrapfigure}
+
+
+\liti 求证：等腰三角形两个底角的平分线相等。
+
+已知： 在 $\triangle ABC$ 中， $AB = AC$，
+$BD$ 和 $CE$ 分别是 $\angle B$ 和 $\angle C$ 的平分线（图 \ref{fig:czjh1-3-32}）。
+
+求证： $BD = CE$。
+
+\zhengming $\because$ \quad $AB = AC$ （已知），
+
+$\therefore$ \quad $\angle ABC = \angle ACB$ （等边对等角）。
+
+又 $\because$ \quad \begin{zmtblr}[t]{}
+    $\angle 1 = \exdfrac{1}{2} \angle ABC$， \\[.5em]
+    $\angle 2 = \exdfrac{1}{2} \angle ACB$ （已知），
+\end{zmtblr}
+
+$\therefore$ \quad $\angle 1 = \angle 2$ （等式性质）。
+
+在 $\triangle BDC$ 和 $\triangle CEB$ 中，
+
+\hspace{2em} $\begin{cases}
+    \angle ACB = \angle ABC \quad \text{（已证），} \\
+    BC = CB \quad \text{（公共边），} \\
+    \angle 1 = \angle 2 \quad \text{（已证），} \\
+\end{cases}$
+
+$\therefore$ \quad $\triangle BDC \quandeng \triangle CEB$ （$ASA$）。
+
+$\therefore$ \quad $BD = CE$ （全等三角形对应边相等）。
+
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-33}
+    \caption{}\label{fig:czjh1-3-33}
+\end{wrapfigure}
+
+\liti 已知：点 $D$、$E$ 在 $BC$ 上， $AB = AC$， $AD = AE$ （图 \ref{fig:czjh1-3-33}）。
+
+求证： $BD = CE$。
+
+\zhengming 作 $AF \perp BC$，垂足是 $F$。
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $AB = AC$， \\
+    $AD = AE$ （已知）， \\
+    $AF \perp BC$ （辅助线作法），
+\end{zmtblr}
+
+$\therefore$ \quad $BF = CF$， $DF = EF$ （等腰三角形底边上的高与底边上的中线互相重合）。
+
+$\therefore$ \quad $BD = CE$ （等式性质）。
+
+
+
+% \begin{wrapfigure}[8]{r}{5cm}
+%     \centering
+%     \input{../pic/czjh1-ch3-34}
+%     \caption{}\label{fig:czjh1-3-34}
+% \end{wrapfigure}
+
+\liti \begin{xingzhi}
+    在一个三角形中，如果两条边不等，那么它们所对的角也不等，大边所对的角较大。
+\end{xingzhi}（简写成“\zhongdian{大边对大角}”。）
+
+已知： $\triangle ABC$ 中， $AB > AC$ （图 \ref{fig:czjh1-3-34}）。
+
+求证： $\angle ACB > \angle B$。
+
+\zhengming 在较大的边 $AB$ 上截取 $AD$， 使 $AD = AC$。连接 $CD$。
+
+$\because$ \quad $AD = AC$ （辅助线作法），
+
+$\therefore$ \quad $\angle ADC = \angle ACD$ （等腰三角形底角相等）。
+
+$\because$ \quad $\angle ACB > \angle ACD$ （角的大小定义），
+
+$\therefore$ \quad $\angle ACB > \angle ADC$ （等量代换）。
+
+$\because$ \quad $\angle ADC > \angle B$ （三角形的外角大于不相邻的内角），
+
+$\therefore$ \quad $\angle ACB > \angle B$ （不等式性质）。
+
+注意：证明三角形的边或角不等的问题，常通过添加辅助线的办法，把它化成相等的情况进行研究。
+辅助线的一般作法是，在大边上（或大角内）作出一部分等小边（或小角），得到等腰三角形。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-34}
+        \caption{}\label{fig:czjh1-3-34}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-subsec8-lx-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+\end{figure}
+
+
+\begin{lianxi}
+
+\xiaoti{（口答）}%
+\begin{xiaoxiaotis}%
+    \xxt[-1em]{怎样从等腰三角形的性质定理得出推论；等腰直角三角形的每一个锐角都等于 $45^\circ$？}
+
+    \xxt{如果等腰三角形的一个底角等于 $75^\circ$， 那么它的顶角等于多少度？}
+
+    \xxt{等腰直角三角形斜边上的高杷直角分成两个角，求这两个角的度数。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{（口答）}%
+\begin{xiaoxiaotis}%
+    \xxt[-1em]{$\triangle ABC$ 中， 已知 $BC > AB > AC$， 比较三个角的大小；}
+
+    \xxt{如果一个三角形最大的边所对的角是锐角，那么这个三角形一定是锐角三角形。为什么？}
+
+\end{xiaoxiaotis}
+
+\xiaoti{已知： $AB$ 和 $CD$ 相交于点 $E$， $CE > AC$， $BD > ED$。\\
+    求证： $\angle A > \angle B$。
+}
+
+\end{lianxi}
+

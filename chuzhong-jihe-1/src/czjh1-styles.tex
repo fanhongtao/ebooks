@@ -266,7 +266,7 @@
     \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}%
     \IfNoValueTF{##1}%
       {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}~\labelxiaoxiaoti ##2}}%
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{~\labelxiaoxiaoti ##2}}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{##1}~\labelxiaoxiaoti ##2}}%
   }%
   \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
   % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}

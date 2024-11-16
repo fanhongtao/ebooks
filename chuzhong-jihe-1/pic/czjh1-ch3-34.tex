@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  3.0/0/C,  2.5/2/A}
+    \tkzInterLC[common=C](A,B)(A,C)  \tkzGetFirstPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment[dashed](C,D)
+    \tkzMarkSegments[mark=|](A,D  A,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[left](D)
+\end{tikzpicture}
+
