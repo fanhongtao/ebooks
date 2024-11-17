@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.4/0/C,  1.2/3/A}
+    \tkzDefPointOnLine[pos=1.4](B,A)  \tkzGetPoint{E}
+    \tkzDefLine[bisector](C,A,E)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D  A,E)
+    \extkzLabelAngel[0.3](D,A,E){$1$}
+    \extkzLabelAngel[0.4](C,A,D){$2$}
+    \tkzMarkSegments(A,B  A,C)
+    \tkzLabelPoints[left](A,E)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[right](D)
+\end{tikzpicture}
+

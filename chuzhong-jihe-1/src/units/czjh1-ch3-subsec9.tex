@@ -1,0 +1,176 @@
+\subsection{等腰三角形的判定}\label{subsec:czjh1-3-9}
+
+我们已经知道，等腰三角形有两个角（底角）相等，现在来证明有两个角相等的三角形一定是等腰三角形。
+
+\begin{dingli}[等腰三角形的判定定理]
+    如果一个三角形有两个角相等，那么这两个角所对的边也相等。
+\end{dingli} （简写成 “\zhongdian{等角对等边}”。）
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-35}
+    \caption{}\label{fig:czjh1-3-35}
+\end{wrapfigure}
+
+已知： $\triangle ABC$ 中，$\angle B = \angle C$ （图 \ref{fig:czjh1-3-35}）。
+
+求证： $AB = AC$。
+
+\zhengming 作 $\angle BAC$ 的平分线 $AD$。
+
+在 $\triangle BAD$ 和 $\triangle CAD$ 中，
+
+\hspace{2em} $\begin{cases}
+    \angle 1 = \angle 2 \quad \text{（角平分线的定义），} \\
+    \angle B = \angle C \quad \text{（已知），} \\
+    AD = AD \quad \text{（公共边），} \\
+\end{cases}$
+
+$\therefore$ \quad $\triangle BAD \quandeng \triangle CAD$ （$AAS$）。
+
+$\therefore$ \quad $AB = AC$ （全等三角形的对应边相等）。
+
+\begin{tuilun}[推论 1]
+    三个角都相等的三角形是等边三角形。
+\end{tuilun}
+
+\begin{tuilun}[推论 2]
+    有一个角等于 $60^\circ$ 的等腰三角形是等边三角形。
+\end{tuilun}
+
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch3-36}
+    \caption{}\label{fig:czjh1-3-36}
+\end{wrapfigure}
+
+
+\liti 求证：如果三角形一个外角的平分线平行于三角形的一边，那么这个三角形是等腰三角形。
+
+已知： $\angle 1 = \angle 2$， $AD \pingxing BC$ （图 \ref{fig:czjh1-3-36}）。
+
+求证： $AB = AC$。
+
+分析：要证明 $AB = AC$，可先证明 $\angle B = \angle C$。 因为已知 $\angle 1 = \angle 2$,
+所以可以设法找出 $\angle B$、 $\angle C$ 与 $\angle 1$、 $\angle 2$ 的关系。
+
+\zhengming $\because$ \quad $AD \pingxing BC$ （已知），
+
+$\therefore$ \quad \begin{zmtblr}[t]{}
+    $\angle 1 = \angle B$ （两直线平行，同位角相等）， \\
+    $\angle 2 = \angle C$ （两直线平行，内错角相等）。 \\
+\end{zmtblr}
+
+$\because$ \quad $\angle 1 = \angle 2$ （已知）
+
+$\therefore$ \quad $\angle B = \angle C$ （等量代换）。
+
+$\therefore$ \quad $AB = AC$ （等角对等边）。
+
+
+
+% \begin{wrapfigure}[8]{r}{5cm}
+%     \centering
+%     \input{../pic/czjh1-ch3-37}
+%     \caption{}\label{fig:czjh1-3-37}
+% \end{wrapfigure}
+
+\liti 上午 8 时，一条船从 $A$ 处出发以每小时 15 海里的速度向正北航行， 10 时到达 $B$处。
+从 $A$、$B$ 望灯塔 $C$， 测得 $\angle NAC = 42^\circ$， $\angle NBC = 84^\circ$。
+求从 $B$ 处到灯塔 $C$ 的距离（图 \ref{fig:czjh1-3-37}）。
+
+\jie $\because$ \quad $\angle NBC = \angle A + \angle C$ （三角形的一个外角等于不相邻的两个内角的和），
+
+$\therefore$ \quad $\angle C = 84^\circ - 42^\circ = 42^\circ$。
+
+$\therefore$ \quad  $BA = BC$ （等角对等边）。
+
+$\because$ \quad $AB = 15 \times (10 - 8) = 30$，
+
+$\therefore$ \quad $BC = 30 \text{(海里)}$。
+
+答 \quad $B$ 到灯塔的距离是30 海里。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-37}
+        \caption{}\label{fig:czjh1-3-37}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-38}
+        \caption{}\label{fig:czjh1-3-38}
+    \end{minipage}
+\end{figure}
+
+% \begin{wrapfigure}[8]{r}{5cm}
+%     \centering
+%     \input{../pic/czjh1-ch3-38}
+%     \caption{}\label{fig:czjh1-3-38}
+% \end{wrapfigure}
+
+\liti \begin{xingzhi}
+    在一个三角形中，如果两个角不等，那么它们所对的边也不等，大角所对的边较大
+\end{xingzhi} （简写成 “\zhongdian{大角对大边}”）。
+
+已知： $\triangle ABC$ 中， $\angle ACB > \angle B$ （图 \ref{fig:czjh1-3-38}）。
+
+求证： $AB > AC$。
+
+\zhengming 在较大的 $\angle ACB$ 内作 $\angle BCD = \angle B$， $CD$ 交 $AB$ 于 $D$。
+
+$\therefore$ \quad $BD = DC$ （等角对等边）。
+
+在 $\triangle ADC$ 中，
+
+\qquad $AD + DC > AC$  （三角形两边的和大于第三边），
+
+$\therefore$ \quad $AD + BD > AC$ （等量代换）。
+
+即 \quad $AB > AC$。
+
+
+
+\begin{lianxi}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \xxt[\xxtsep]{如图甲，已知 $\angle A = 36^\circ$， $\angle DBC = 36^\circ$，
+        $\angle C = 72^\circ$。计算 $\angle 1$ 和 $\angle 2$ 的度数，并说明图中有哪些等腰三角形。
+    }
+
+    \xxt{如图乙，$CD$ 是等腰直角三角形斜边上的高。找出图中的等腰直角三角形。}
+
+\end{xiaoxiaotis}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-subsec9-lx-01-a}
+        \caption*{甲}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-subsec9-lx-01-b}
+        \caption*{乙}
+    \end{minipage}
+    \caption*{（第 1 题）}
+\end{figure}
+
+
+\xiaoti{（口答）在 $\triangle ABC$ 中， $\angle A = 70^\circ$， $\angle B = 50^\circ$。比较三边的大小。}
+
+\xiaoti{（口答）直角三角形的斜边大于直角边，即斜线段大于垂线段。为什么？}
+
+\xiaoti{（口答）在 $\triangle ABC$ 中，如果 $AB$ 最大，那么 $\angle A$、 $\angle B$ 一定是锐角。为什么？}
+
+\end{lianxi}
+
+

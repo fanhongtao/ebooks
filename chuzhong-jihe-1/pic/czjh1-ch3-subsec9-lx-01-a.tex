@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  3/0/C}
+    \tkzDefTriangle[golden](B,C)  \tkzGetPoint{A}
+    \tkzDefPointBy[rotation=center B angle 36](C)  \tkzGetPoint{d}
+    \tkzInterLL(A,C)(B,d)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(B,D)
+    \extkzLabelAngel[0.4](B,D,C){$1$}
+    \extkzLabelAngel[0.5](D,B,A){$2$}
+    \extkzLabelAngel[0.8](B,A,C){$36^\circ$}
+    \extkzLabelAngel[0.8](C,B,D){$36^\circ$}
+    \extkzLabelAngel[0.5](D,C,B){$72^\circ$}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[right](D)
+\end{tikzpicture}
+

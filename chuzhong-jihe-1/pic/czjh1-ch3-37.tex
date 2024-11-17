@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  0/2/B,  0/3.0/N}
+    \tkzDefPointBy[rotation=center A angle 42](N)  \tkzGetPoint{c1}
+    \tkzDefPointBy[rotation=center B angle 84](N)  \tkzGetPoint{c2}
+    \tkzInterLL(A,c1)(B,c2)  \tkzGetPoint{C}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawLine[add=0.3 and 0](A,N)
+    \extkzLabelAngel[0.6](N,A,C){$42^\circ$}
+    \extkzLabelAngel[0.4](N,B,C){$84^\circ$}
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[right](A,B,N)
+\end{tikzpicture}
+
