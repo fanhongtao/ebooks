@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2/0/C}
+    \tkzDefPointBy[rotation=center B angle  50](C)  \tkzGetPoint{a1}
+    \tkzDefPointBy[rotation=center C angle -70](B)  \tkzGetPoint{a2}
+    \tkzInterLL(B,a1)(C,a2)  \tkzGetPoint{A}
+    % \tkzDefTriangle[two angles=50 and 70](B,C)  \tkzGetPoint{A}
+    \tkzDefPointBy[rotation=center B angle  130](A)  \tkzGetPoint{D}
+    \tkzDefPointBy[rotation=center C angle -110](A)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D  D,B  A,E  C,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,D,E)
+\end{tikzpicture}
+

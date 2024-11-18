@@ -1,0 +1,22 @@
+% 分析题目给的条件，可知： 三角形 ABC 和 三角形 AED 全等，得 AC = AD, 即: 三角形 ACD 是等腰三角形
+% 设 CD 的中点 F， 则四边形 ABCF 和 AEDF 关于 AF 轴对称，所以直接定义点的坐标。
+\begin{tikzpicture}
+    \tkzDefPoints{-1.2/0/C,  1.2/0/D, 0/3/A, -1.8/1.4/B, 1.8/1.4/E} % (0/0/F)
+    \tkzDrawPolygon(A,B,C,D,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[right](E)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[below](C,D)
+\end{tikzpicture}
+
+% 也可以绘制一个正五边形（题中没说 AB 与 BC 是否相等，取相等的情况，也是满足题意的）
+% \begin{tikzpicture}
+%     \tkzDefPoints{0/0/C,  2.5/0/D}
+%     \tkzDefRegPolygon[side,sides=5,name=P](C,D)
+%     \tkzDrawPolygon(P1,P...,P5)
+%     \tkzLabelPoint[right](P3){E}
+%     \tkzLabelPoint[above](P4){A}
+%     \tkzLabelPoint[left](P5){B}
+%     \tkzLabelPoints[below](C,D)
+% \end{tikzpicture}
+

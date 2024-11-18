@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  2.5/0/B}
+    \tkzDefPoint(70:4){D}
+    \tkzDefShiftPoint[B](50:1.5){C}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[left](A,D)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above=0.5em](C)
+    %\tkzCalcLength(C,D) \tkzLabelSegment(C,D){\tkzLengthResult}
+\end{tikzpicture}
+
