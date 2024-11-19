@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/B,  4/0/C,  3/2/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+    \end{scope}
+
+    \begin{scope}[xshift=6cm]
+        \tkzDefPoints{0/0/B,  4/0/C,  3/-2/A, 3/2/A'}
+        \tkzDrawPolygons(A,B,C  A',B,C)
+        \tkzDrawSegment[dashed](A',A)
+        \extkzLabelAngel[0.5](B,A',A){$1$}
+        \extkzLabelAngel[0.6](A,A',C){$3$}
+        \extkzLabelAngel[0.5](A',A,B){$2$}
+        \extkzLabelAngel[0.6](C,A,A'){$4$}
+        \tkzLabelPoints[above](A')
+        \tkzLabelPoint[above left](B){$B'$}
+        \tkzLabelPoint[below left](B){$(B)$}
+        \tkzLabelPoint[above right](C){$C'$}
+        \tkzLabelPoint[below right](C){$(C)$}
+        \tkzLabelPoints[below](A)
+    \end{scope}
+\end{tikzpicture}
+

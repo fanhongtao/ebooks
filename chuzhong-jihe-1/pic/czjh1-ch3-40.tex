@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/B,  4/0/C,  3.5/2/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+    \end{scope}
+
+    \begin{scope}[xshift=6cm]
+        \tkzDefPoints{0/0/B',  4/0/C', 3.5/2/A'}
+        \tkzDrawPolygons(A',B',C')
+        \tkzCompass(B',A')
+        \tkzCompass(C',A')
+        \tkzLabelPoints[above,xshift=0.3em](A')
+        \tkzLabelPoints[left](B')
+        \tkzLabelPoints[right](C')
+    \end{scope}
+\end{tikzpicture}
+
