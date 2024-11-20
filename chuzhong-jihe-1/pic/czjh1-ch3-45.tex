@@ -1,0 +1,17 @@
+% 严格按照作图的步骤绘制
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B}
+    \tkzDrawSegments[xianduan={below=0pt}](A,B)
+    \tkzLabelPoints(A,B)
+
+    % 1
+    \tkzCalcLength(A,B)  \tkzGetLength{ab}
+    \pgfmathsetmacro{\r}{0.6*\ab}
+    \tkzInterCC[R](A,\r)(B,\r)  \tkzGetPoints{C}{D}
+    \tkzCompasss(A,C  B,C  A,D  B,D)
+    \tkzLabelPoints[right](C,D)
+
+    % 2
+    \tkzDrawLine[add=0.2 and 0.2](C,D)
+\end{tikzpicture}
+

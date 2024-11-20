@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 2.5/1.5/M}
+    \tkzDrawSegment(A,B)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above, xshift=-0.3em](M)
+
+    % 1
+    \tkzDefPointOnLine[pos=0.3](A,B)  \tkzGetPoint{N}
+    \tkzDefPointOnLine[pos=1.7](N,M)  \tkzGetPoint{P}
+    \tkzLabelPoints[below, xshift=0.3em](N)
+    \tkzLabelPoints[left](P)
+    \tkzDrawLine[add=0 and 0.4](P,N)
+
+    % 2
+    \tkzDefLine[parallel=through M,normed](A,B)  \tkzGetPoint{x}
+    \tkzDefPointOnLine[pos=1.5](M,x)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=-2.3](M,x)  \tkzGetPoint{C}
+    \tkzDrawSegment(C,D)
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[right](D)
+    \tkzMarkAngle[size=0.5](B,N,M)
+    \tkzMarkAngle[size=0.5](D,M,P)
+\end{tikzpicture}
+

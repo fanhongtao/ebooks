@@ -1,0 +1,42 @@
+% 严格按照作图的步骤绘制
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 2/0/A}
+    \tkzDefPoint(40:2){B}
+    \tkzDrawSegments(O,A  O,B)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](A)
+    \tkzLabelPoints[above right](B)
+
+    % 1
+    \tkzDefPoints{3.5/0/O', 5.5/0/A'}
+    \tkzDrawSegment(O',A')
+    \tkzLabelPoints[left](O')
+    \tkzLabelPoints[right](A')
+
+    % 2
+    \pgfmathsetmacro{\r}{1.5}
+    \tkzInterLC[R,near](A,O)(O,\r)  \tkzGetFirstPoint{C}
+    \tkzInterLC[R,near](B,O)(O,\r)  \tkzGetFirstPoint{D}
+    \tkzDrawArc[delta=10](O,C)(D)
+    \tkzLabelPoints[below left](C)
+    \tkzLabelPoints[left](D)
+    \tkzDrawSegment[dashed](C,D)
+
+    % 3
+    \tkzDrawArc[R](O',\r)(-10,50)
+    \tkzInterLC[R,near](A',O')(O',\r)  \tkzGetFirstPoint{C'}
+    \tkzLabelPoints[below left](C')
+
+    % 4
+    \tkzCalcLength(C,D)  \tkzGetLength{cd}
+    \tkzDrawArc[R](C',\cd)(90,125)
+    \tkzInterCC[R](O',\r)(C',\cd)  \tkzGetFirstPoint{D'}
+    \tkzLabelPoints[left=0.5em](D')
+    \tkzDrawSegment[dashed](C',D')
+
+    % 5
+    \tkzDefPointOnLine[pos=1.4](O',D')  \tkzGetPoint{B'}
+    \tkzDrawSegment(O',B')
+    \tkzLabelPoints[above right](B')
+\end{tikzpicture}
+

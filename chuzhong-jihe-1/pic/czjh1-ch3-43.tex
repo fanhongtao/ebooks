@@ -1,0 +1,25 @@
+% 严格按照作图的步骤绘制
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B}
+    \tkzDefPointOnLine[pos=0.45](A,B)  \tkzGetPoint{C}
+    \tkzDrawSegments(A,B)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[below left](C)
+
+    % 1
+    \pgfmathsetmacro{\r}{1.3}
+    \tkzInterLC[R,near](A,C)(C,\r)  \tkzGetFirstPoint{D}
+    \tkzInterLC[R,near](B,C)(C,\r)  \tkzGetFirstPoint{E}
+    \tkzCompasss[delta=8](C,D  C,E)
+    \tkzLabelPoints[below=0.3em](D,E)
+
+    % 2
+    \tkzCalcLength(D,E)  \tkzGetLength{de}
+    \pgfmathsetmacro{\r}{0.75*\de}
+    \tkzInterCC[R](D,\r)(E,\r)  \tkzGetFirstPoint{F}
+    \tkzCompasss(D,F  E,F)
+    \tkzLabelPoints[above right,yshift=0.3em](F)
+
+    % 3
+    \tkzDrawLine[add=0.3 and 0.3](C,F)
+\end{tikzpicture}
