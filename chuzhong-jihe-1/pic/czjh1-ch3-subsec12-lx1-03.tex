@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=0.5]
+    \tkzDefPoints{0/0/A, 10/0/B, 5/0/D, 2.5/0/E}
+    \tkzDefLine[perpendicular=through E](A,B)  \tkzGetPoint{x}
+    \tkzCalcLength(A,D)  \tkzGetLength{ad}
+    \tkzInterLC[R](E,x)(D,\ad)  \tkzGetFirstPoint{C}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  C,E)
+    \tkzMarkRightAngle[size=0.4](A,C,B)
+    \tkzMarkRightAngle[size=0.4](C,E,A)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below](D,E)
+\end{tikzpicture}
+

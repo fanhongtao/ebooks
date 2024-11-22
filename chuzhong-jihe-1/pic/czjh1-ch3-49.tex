@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=0.5]
+    \tkzDefPoints{0/0/A, 1/0/c}
+    \tkzDefPoint(30:7.4){B}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](A,B,c)  \tkzGetPoint{C}
+    \tkzDefLine[altitude](A,D,c)  \tkzGetPoint{E}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  D,E)
+    \tkzLabelPoints[below](A,C,E)
+    \tkzLabelPoints[above](B,D)
+\end{tikzpicture}
+

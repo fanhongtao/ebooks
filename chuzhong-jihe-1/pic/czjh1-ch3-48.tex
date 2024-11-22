@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2/0/C, 2/3/A}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{D}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(C,D)
+    \tkzMarkAngle[size=0.6](A,C,D)
+    \extkzLabelAngel[0.4](D,C,B){$1$}
+    \tkzLabelPoints[right](A)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[below](B,C)
+\end{tikzpicture}
+

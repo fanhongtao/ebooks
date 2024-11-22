@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B}
+    \tkzDefTriangle[two angles=60 and 30](A,B)  \tkzGetPoint{C}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](A,C,B)  \tkzGetPoint{E}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  C,E)
+    \tkzMarkRightAngle(A,C,B)
+    \tkzMarkRightAngle(C,E,A)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below](D,E)
+\end{tikzpicture}
+
