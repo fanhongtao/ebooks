@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{2.5}
+    \pgfmathsetmacro{\c}{3}
+
+    \tkzDefPoints{0/0/c1, \c/0/c2, 0/0.8/a1, \a/0.8/a2}
+    \tkzDrawSegments[xianduan={below=0pt}](c1,c2)
+    \tkzLabelSegment[above](c1,c2){$c$}
+    \tkzDrawSegments[xianduan={below=0pt}](a1,a2)
+    \tkzLabelSegment[above](a1,a2){$a$}
+
+    \begin{scope}[yshift=-3cm]
+        % 1
+        \tkzDefPoints{0/0/B, \a/0/C}
+        \tkzDrawSegment(B,C)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelSegment[below](B,C){$a$}
+
+        % 2
+        \tkzDefLine[perpendicular=through C,normed](B,C)  \tkzGetPoint{d}
+        \tkzDefPointOnLine[pos=2.5](C,d)  \tkzGetPoint{D}
+        \tkzDrawSegment(C,D)
+        \tkzLabelPoints[right](D)
+
+        % 3
+        \tkzInterLC[R,near](D,C)(B,\c)  \tkzGetFirstPoint{A}
+        \tkzCompass(B,A)
+        \tkzLabelPoints[right](A)
+
+        % 4
+        \tkzDrawSegments(A,B)
+        \tkzLabelSegment[above](B,A){$c$}
+    \end{scope}
+\end{tikzpicture}
+

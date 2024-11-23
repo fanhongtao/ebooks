@@ -1,0 +1,138 @@
+\subsection{直角三角形全等的判定}\label{subsec:czjh1-3-13}
+
+要判定两个直角三角形全等，除了可以应用一般三角形全等的判定公理和判定定理外，还有下面的判定定理。
+
+\begin{dingli}[斜边、直角边定理]
+    有斜边和一条直角边对应相等的两个直角三角形全等
+\end{dingli}（可以简写成“\zhongdian{斜边、直角边}” 或 “$\bm{HL}$”）。
+
+
+已知：在 $\triangle ABC$ 和 $\triangle A'B'C'$  中，
+$\angle ACB = \angle A'C'B' = Rt \angle$，
+$AB = A'B'$， $AC = A'C'$ （图 \ref{fig:czjh1-3-51}）。
+
+求证； $Rt \triangle ABC \quandeng Rt \triangle A'B'C'$。
+
+\zhengming 把 $\triangle ABC$ 和 $\triangle A'B'C'$ 拼在一起，
+使相等的直角边 $AC$ 和 $A'C'$ 重合，
+并且使点 $B$ 和 $B'$  在 $A'C'$  的两旁。
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $\angle A'C'B' = Rt \angle$， \\
+    $\angle A'C'B = \angle ACB = Rt \angle$，
+\end{zmtblr}
+
+$\therefore$ \quad $\angle B'C'B = 2 Rt \angle$。
+
+$\therefore$ \quad $B'$、$C'$、$B$ 的同一条直线上。
+
+在 $\triangle A'B'B$ 中，
+
+$\because$ \quad $A'B' = AB = A'B$，
+
+$\therefore$ \quad $\angle B' = \angle B$ （等边对等角）。
+
+在 $\triangle ABC$ 和 $\triangle A'B'C'$ 中，
+
+$\angle ACB = \angle A'C'B'$， $\angle B = \angle B'$， $AB = A'B'$，
+
+$\therefore$ \quad $\triangle ABC \quandeng \triangle A'B'C'$ （$AAS$）。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{8cm}
+        \centering
+        \input{../pic/czjh1-ch3-51}
+        \caption{}\label{fig:czjh1-3-51}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh1-ch3-52}
+        \caption{}\label{fig:czjh1-3-52}
+    \end{minipage}
+\end{figure}
+
+
+这个定理的条件，实际上是已知两边和其中一边的对角对应相等，前面我们已经讲过，
+具备这样的条件的两个三角形不一定全等。但是，如果这个角是个直角，那么这两个三角形就会全等了。
+
+\liti 已知： $\triangle ABC$ 中， $D$ 是 $BC$ 的中点， $DF \perp AB$，
+$DE \perp AC$， 垂足分别是 $F$、$E$， $DF = DE$ （图 \ref{fig:czjh1-3-52}）。
+
+求证： $AB = AC$。
+
+\zhengming 在 $Rt \triangle DBF$ 和 $Rt \triangle DCE$ 中，
+
+\qquad $DB = DC$， $DF = DE$，
+
+$\therefore$ \quad $Rt \triangle DBF \quandeng Rt \triangle DCE$ （$HL$）。
+
+$\therefore$ \quad $\angle B = \angle C$。
+
+$\therefore$ \quad $AB = AC$ （等角对等边）。
+
+
+
+\liti 已知斜边和一条直角边，求作直角三角形。
+
+已知：线段 $c$ 和 $a$ （图 \ref{fig:czjh1-3-53}）.
+
+求作：$Rt \triangle ABC$，使它的斜边 $AB = c$，一条直角边 $BC = a$。
+
+\zuofa 1. 作线段 $BC = a$。
+
+2. 过点 $C$ 作直线  $CD \perp BC$。
+
+3. 以点 $B$ 为圆心，$c$ 为半径作弧，交 $CD$ 于点 $A$。
+
+4. 连接 $AB$。
+
+$\triangle ABC$ 就是所求的直角三角形。
+
+\zhengming $\because$ \quad $CD \perp BC$，
+
+$\therefore$ \quad $\angle C = Rt \angle$。
+
+又 $AB = c$， $BC = a$，
+
+所以 $\triangle ABC$ 为所求的三角形。
+
+\textbf{讨论：} 因为 $Rt \triangle$ 中，斜边一定要大于直角边，所以  $c \leqslant a$ 时，此题无解。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-53}
+        \caption{}\label{fig:czjh1-3-53}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch3-subsec13-lx-02}
+        \caption*{（第 2 题）}
+    \end{minipage}
+\end{figure}
+
+
+\begin{lianxi}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \xxt[\xxtsep]{两条直角边对应相等的两个直角三角形是否全等？为什么？}
+
+    \xxt{两个锐角对应相等的两个直角三角形是否全等？为什么？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知：如图， $CE \perp AB$， $DF \perp AB$， $AC \pingxing AB$，且 $AC = DB$。 \\
+    求证： $CE = DF$。
+}
+
+\xiaoti{求证：有两条高相等的三角形是等腰三角形。}
+
+\end{lianxi}
+
+

@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/B, 2/0/C, 2/3/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzMarkRightAngle(A,C,B)
+        \tkzMarkSegment(A,B)
+        \tkzMarkSegment[mark=||](A,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+
+
+    \begin{scope}[xshift=3.0cm]
+        \tkzDefPoints{0/0/B', 2/0/C, 2/3/A, 4/0/B}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawPolygon(A,B',C)
+        \tkzMarkRightAngle(A,C,B)
+        \tkzMarkRightAngle(A,C,B')
+        \tkzMarkSegments(A,B  A,B')
+        \tkzMarkSegment[mark=||](A,C)
+        \tkzLabelPoint[above,xshift=1em](A){$A'(A)$}
+        \tkzLabelPoints[below](B,B')
+        \tkzLabelPoint[below,xshift=1em](C){$C'(C)$}
+    \end{scope}
+\end{tikzpicture}
+

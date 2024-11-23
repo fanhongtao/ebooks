@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{2.0}
+    \pgfmathsetmacro{\c}{1.2}
+    \tkzDefPoints{0/0/A, \c/0/E, \c/\a/C}
+    \tkzDefShiftPoint[E](0.6,0){F}
+    \tkzDefShiftPoint[F](\c,0){B}
+    \tkzDefShiftPoint[F](0,-\a){D}
+
+    \tkzDrawSegments(E,C  C,A  A,B  B,D  D,F)
+    \tkzMarkRightAngle(A,E,C)
+    \tkzMarkRightAngle(B,F,D)
+    \tkzLabelPoints[above](C,F)
+    \tkzLabelPoints[below](E,D)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+\end{tikzpicture}
+
