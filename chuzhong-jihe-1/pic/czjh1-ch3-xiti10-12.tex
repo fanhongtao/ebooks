@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.8]
+    \tkzDefPoints{0/0/B, 4/0/C,  3/2/A}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](A,C,D)  \tkzGetPoint{F}
+    \tkzDefLine[altitude](A,B,D)  \tkzGetPoint{E}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,E  B,E  C,F)
+    \tkzMarkRightAngle(A,E,B)
+    \tkzMarkRightAngle(C,F,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below,xshift=0.3em](D)
+    \tkzLabelPoints[below right](E)
+    \tkzLabelPoints[left,yshift=0.1em](F)
+\end{tikzpicture}
+

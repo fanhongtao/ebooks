@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 5/0/B}
+    \tkzDefTriangle[two angles=60 and 30](A,B)  \tkzGetPoint{C}
+    \tkzDefLine[altitude](A,C,B)  \tkzGetPoint{D}
+    \tkzDefLine[bisector,normed](A,C,B) \tkzGetPoint{e}
+    \tkzInterLL(A,B)(C,e)  \tkzGetPoint{E}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{M}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  C,E  C,M)
+    \tkzMarkRightAngle(C,D,A)
+    \extkzLabelAngel[1.0](D,C,E){$1$}
+    \extkzLabelAngel[0.8](E,C,M){$2$}
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below](D,E,M)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+\end{tikzpicture}
+

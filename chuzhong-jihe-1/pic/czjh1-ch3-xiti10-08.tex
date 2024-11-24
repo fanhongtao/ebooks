@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.8]
+    \tkzDefPoints{0/0/O, 4/0/C}
+    \tkzDefTriangle[two angles=30 and 60](O,C)  \tkzGetPoint{A}
+    \tkzDefPointBy[reflection=over O--C](A)  \tkzGetPoint{B}
+    \tkzDrawPolygon(O,A,C)
+    \tkzDrawPolygon(O,B,C)
+    \tkzMarkRightAngle(O,A,C)
+    \tkzMarkRightAngle(O,B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](C)
+\end{tikzpicture}
+
