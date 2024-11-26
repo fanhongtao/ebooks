@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/0/B}
+    \tkzDefLine[mediator, normed](A,B)  \tkzGetPoints{m}{N}
+    \tkzDefPointOnLine[pos=2.5](N,m)  \tkzGetPoint{M}
+    \tkzInterLL(A,B)(M,N)  \tkzGetPoint{C}
+    \tkzDefPointOnLine[pos=0.2](M,N)  \tkzGetPoint{P}
+    \tkzDrawPolygon(A,B,P)
+    \tkzDrawSegments[dashed](M,N)
+    \tkzMarkRightAngle(B,C,M)
+    \tkzLabelPoints[right](M,N,P)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[below right](C)
+\end{tikzpicture}
+
