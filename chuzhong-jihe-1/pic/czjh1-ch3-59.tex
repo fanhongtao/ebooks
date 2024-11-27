@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 3.6/2.8/A}
+    \tkzDefSpcTriangle[in](A,B,C){M,N,P}
+    \tkzInterLL(A,M)(B,N)  \tkzGetPoint{R}
+    \tkzDefSpcTriangle[intouch](A,B,C){D,E,F}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,M  B,N  C,P)
+    \tkzDrawSegments[dashed](R,D  R,E  R,F)
+    \tkzMarkRightAngle[size=0.2](R,F,A)
+    \tkzMarkRightAngle[size=0.2](R,D,C)
+    \tkzMarkRightAngle[size=0.2](R,E,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](D)
+    \tkzLabelPoints[right](E)
+    \tkzLabelPoints[above](F)
+    \tkzLabelPoints[below,xshift=-0.2em](M)
+    \tkzLabelPoints[above right](N)
+    \tkzLabelPoints[left](P)
+    \tkzLabelPoints[above right](R)
+\end{tikzpicture}
+

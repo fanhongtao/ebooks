@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 4/0/C}
+    \tkzDefPoint(30:3.5){A}
+    \tkzDefPoint(-30:3.5){B}
+    \tkzDefPointOnLine[pos=0.8](O,C)  \tkzGetPoint{P}
+    \tkzDefLine[altitude](O,P,A)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](O,P,B)  \tkzGetPoint{E}
+
+    \tkzDrawSegments(O,A  O,B  P,D  P,E)
+    \tkzDrawSegments[dashed](O,C)
+    \tkzMarkRightAngle(P,D,O)
+    \tkzMarkRightAngle(P,E,O)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[above left](D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[below, xshift=0.3em](P)
+    \tkzLabelPoints[below left](E)
+    \tkzLabelPoints[above](C)
+\end{tikzpicture}
+
