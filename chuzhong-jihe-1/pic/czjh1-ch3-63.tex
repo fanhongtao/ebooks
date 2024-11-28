@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/M, 4/0/N}
+    \tkzDefPoints{0.4/0.8/A, 3.5/1.5/B}
+    \tkzDefPointBy[reflection=over M--N](A)  \tkzGetPoint{A'}
+    \tkzInterLL(M,N)(A',B)  \tkzGetPoint{C}
+    \tkzDefShiftPoint[C](1,0){C'}
+
+    \tkzDrawSegments(M,N  A',B)
+    \tkzDrawSegments[dashed](A,A'  A,C  A,C'  A',C'  B,C')
+    \tkzLabelSegment[below, pos=0.9](M,N){$a$}
+    \tkzLabelPoints[above](A,B)
+    \tkzLabelPoints[below](A', C')
+    \tkzLabelPoints[below,yshift=0.2em](C)
+\end{tikzpicture}
+

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/N, 0/4/M}
+    \tkzDefPoints{-0.8/0.8/C, -2.0/0.2/B,  -1.3/3/A}
+    \tkzDefPointBy[reflection=over M--N](A)  \tkzGetPoint{A'}
+    \tkzDefPointBy[reflection=over M--N](B)  \tkzGetPoint{B'}
+    \tkzDefPointBy[reflection=over M--N](C)  \tkzGetPoint{C'}
+    \tkzInterLL(M,N)(A,A')  \tkzGetPoint{P}
+    \tkzDrawSegments(M,N)
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A',B',C')
+    \tkzDrawSegment[dashed](A,A')
+    \tkzMarkRightAngle(A,P,N)
+    \tkzLabelPoints[right](M,N)
+    \tkzLabelPoints[above](A,A')
+    \tkzLabelPoints[left](B,C')
+    \tkzLabelPoints[right](C,B')
+    \tkzLabelPoints[above right](P)
+\end{tikzpicture}
+
