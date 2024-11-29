@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C}
+    \tkzDefTriangle[two angles=70 and 70](B,C)  \tkzGetPoint{A}
+    \tkzDefLine[mediator,normed](A,B)  \tkzGetPoints{m}{N}
+    \tkzInterLL(A,C)(m,N)  \tkzGetPoint{D}
+    \tkzInterLL(A,B)(m,N)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=1.3](N,D)  \tkzGetPoint{M}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(M,N  B,D)
+    \tkzMarkRightAngle(M,E,B)
+    \tkzMarkSegments[](A,E  B,E)
+    \tkzLabelPoints[above](A,N)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C,M)
+    \tkzLabelPoints[above right](D)
+\end{tikzpicture}
+

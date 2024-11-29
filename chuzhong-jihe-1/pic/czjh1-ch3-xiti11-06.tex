@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 4/0/A}
+    \tkzDefPoint(55:4){B}
+    \tkzDefLine[bisector](A,O,B)  \tkzGetPoint{e}
+    \tkzDefPointOnLine[pos=0.8](O,e)  \tkzGetPoint{E}
+    \tkzDefPointBy[projection= onto O--A](E)  \tkzGetPoint{C}
+    \tkzDefPointBy[projection= onto O--B](E)  \tkzGetPoint{D}
+
+    \tkzDrawSegments(O,A  O,B  O,e  E,C  E,D  C,D)
+    \tkzMarkRightAngle(E,C,A)
+    \tkzMarkRightAngle(E,D,B)
+    \tkzLabelPoints[below](O,A,C)
+    \tkzLabelPoints[above](B,E)
+    \tkzLabelPoints[above left](D)
+\end{tikzpicture}
+

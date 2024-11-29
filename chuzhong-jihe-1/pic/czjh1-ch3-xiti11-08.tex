@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2/0/C,  1.5/2/A}
+    \tkzDefPointOnLine[pos=1.5](A,B)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=1.5](A,C)  \tkzGetPoint{E}
+    \tkzDefLine[bisector,normed](D,B,C)  \tkzGetPoint{M}
+    \tkzDefLine[bisector,normed](B,C,E)  \tkzGetPoint{N}
+    \tkzInterLL(B,M)(C,N)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(B,D  C,E  B,M  C,N)
+    \tkzDrawLine[add=0 and 1.5](B,M)
+    \tkzDrawLine[add=0 and 1.7](C,N)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[right](C,E,F)
+\end{tikzpicture}
+

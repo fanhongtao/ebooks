@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 4/0/A}
+    \tkzDefPoint(55:4){B}
+    \tkzDefPoints{3/1/C, 5/2/D}
+
+    \tkzDrawSegments(O,A  O,B)
+    \tkzDrawPoints(C,D)
+    \tkzLabelPoints[below](O,A)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[below right](C,D)
+
+    % \tkzDefLine[mediator](C,D)  \tkzGetPoints{c}{d}
+    % \tkzDefLine[bisector](A,O,B)  \tkzGetPoint{e}
+    % \tkzInterLL(c,d)(O,e)  \tkzGetPoint{P}
+    % \tkzDrawPoints(P)
+    % \tkzLabelPoints[below](P)
+\end{tikzpicture}
+

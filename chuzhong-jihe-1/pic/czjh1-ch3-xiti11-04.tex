@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 1/2.2/C,  3.5/1.5/D}
+
+    \tkzDrawPoints(A,B,C,D)
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B,D)
+
+    % \tkzDefLine[mediator](A,C) \tkzGetPoints{a}{c}
+    % \tkzDefLine[mediator](B,D) \tkzGetPoints{b}{d}
+    % \tkzDrawSegments(a,c  b,d)
+    % \tkzInterLL(a,c)(b,d)  \tkzGetPoint{P}
+    % \tkzDrawPoints(P)
+    % \tkzLabelPoints[below](P)
+\end{tikzpicture}
+
