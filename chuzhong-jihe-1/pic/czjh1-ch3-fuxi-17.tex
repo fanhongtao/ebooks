@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 0.5/2.5/D,  2.5/2.5/C}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+
+    \tkzDrawPolygon(A,B,D,C)
+    \tkzLabelPoints[above](C,D)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[left,xshift=-.3em](O)
+
+    % OA < OB
+    % \tkzCalcLength(O,A)  \tkzLabelSegment(O,A){$\tkzLengthResult$}
+    % \tkzCalcLength(O,B)  \tkzLabelSegment(O,B){$\tkzLengthResult$}
+\end{tikzpicture}
+

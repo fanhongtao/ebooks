@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 2/0/D}
+    \tkzDefRegPolygon[side,sides=5,name=P](C,D)
+
+    % 为了绘制的代码更简洁明了，先将 P5 这样的点重新命名
+    % \coordinate 是 tikz 的语句，而非 tkz-euclide 的。
+    % 如果不重命名，应该这样写：
+    %    \tkzDrawSegments(P4,C  C,P3  P3,P5  P5,D  D,P4)
+    %    \tkzLabelPoints[above](P4){$A$}
+    %    ...
+    \coordinate (A) at (P4);
+    \coordinate (B) at (P5);
+    \coordinate (E) at (P3);
+
+    \tkzDrawSegments(A,C  C,E  E,B  B,D  D,A)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,C)
+    \tkzLabelPoints[right](D,E)
+\end{tikzpicture}
+

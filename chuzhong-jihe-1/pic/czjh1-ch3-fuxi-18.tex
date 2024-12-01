@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 1/2/A}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(A,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,D)
+
+    % 角 BAD > 角 DAC
+    % \tkzFindAngle(B,A,D) \tkzGetAngle{an} \tkzLabelAngle(B,A,D){$\pgfmathprintnumber{\an}$}
+    % \tkzFindAngle(D,A,C) \tkzGetAngle{an} \tkzLabelAngle[pos=0.5](D,A,C){$\pgfmathprintnumber{\an}$}
+\end{tikzpicture}
+

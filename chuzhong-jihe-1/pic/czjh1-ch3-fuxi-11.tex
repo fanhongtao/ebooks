@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C}
+    \tkzDefTriangle[equilateral](B,C)  \tkzGetPoint{A}
+    \tkzDefPointOnLine[pos=0.7](A,B)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=0.7](B,C)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=0.7](C,A)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(D,E,F)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C,E)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right, yshift=.3em](F)
+\end{tikzpicture}
+
