@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  3/1/O}
+    \tkzDefPoint(4,0){A_1}
+    \tkzDefPoint(50:4){A_2}
+    \tkzDefPointBy[projection= onto A--A_1](O)  \tkzGetPoint{B}
+    \tkzDefPointBy[projection= onto A--A_2](O)  \tkzGetPoint{C}
+    \tkzDefPointOnLine[pos=2.2](B,O)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=1.5](C,O)  \tkzGetPoint{D}
+    \tkzDrawSegments(A,A_1  A,A_2  B,E  C,D)
+    \tkzMarkRightAngle(A,B,E)
+    \tkzMarkRightAngle(A,C,D)
+    \extkzLabelAngel[0.3](C,O,B){$1$}
+    \extkzLabelAngel[0.5](B,O,D){$2$}
+    \extkzLabelAngel[0.3](D,O,E){$3$}
+    \extkzLabelAngel[0.5](E,O,C){$4$}
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[right](D,E)
+    \tkzLabelPoints[above left](C)
+\end{tikzpicture}
+

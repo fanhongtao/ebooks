@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 1/3/D}
+    \tkzDefPoint(35:4){C}
+    \tkzDefPointBy[projection= onto A--C](D)  \tkzGetPoint{O}
+    \tkzDefPointBy[projection= onto A--B](D)  \tkzGetPoint{E}
+    \tkzInterLL(A,C)(D,E)  \tkzGetPoint{M}
+    \tkzDrawSegments(A,B  A,C  D,O)
+    \tkzDrawSegment[->,>=Latex,thick](D,M)
+    \tkzDrawSegment[dashed](M,E)
+    \tkzMarkRightAngle[size=0.2](C,O,D)
+    \tkzMarkRightAngle[size=0.2](B,E,D)
+    \extkzLabelAngel[0.3](B,A,C){$\alpha$}
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below](E,B)
+    \tkzLabelPoints[above](D)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](O)
+\end{tikzpicture}
+

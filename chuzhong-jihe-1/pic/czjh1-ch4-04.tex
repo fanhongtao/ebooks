@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A_2, 1/-1/A_3, 3/-0.9/A_4, 4/0/A_5, 3.8/1/A_6, 2.5/1.6/A_n, 1/1.2/A_1, 1.8/0/O}
+
+    \foreach \x in {1,...,5} {
+        \pgfmathsetmacro{\n}{\x+1}
+        \tkzDrawSegment(A_\x,A_\n)
+        \tkzDrawSegment(A_\x,O)
+    }
+    \tkzDrawSegments(A_1,A_n  A_n,O  O,A_6)
+    \tkzDrawSegment[dashed](A_6,A_n)
+
+    \tkzLabelPoints[left](A_2)
+    \tkzLabelPoints[below](A_3,A_4,O)
+    \tkzLabelPoints[right](A_5,A_6)
+    \tkzLabelPoints[above](A_n,A_1)
+\end{tikzpicture}
+
