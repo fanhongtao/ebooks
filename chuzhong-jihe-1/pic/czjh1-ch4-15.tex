@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.0/0/C, 1.2/1.5/A}
+    \tkzDefLine[parallel=through A](B,C)  \tkzGetPoint{a}
+    \tkzDefLine[parallel=through B](A,C)  \tkzGetPoint{b}
+    \tkzDefLine[parallel=through C](A,B)  \tkzGetPoint{c}
+    \tkzInterLL(A,a)(B,b)  \tkzGetPoint{C'}
+    \tkzInterLL(A,a)(C,c)  \tkzGetPoint{B'}
+    \tkzInterLL(B,b)(C,c)  \tkzGetPoint{A'}
+    \tkzDefLine[altitude](B,A,C)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](A,B,C)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](A,C,B)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A',B',C')
+    \tkzDrawSegments(A,D  B,E  C,F)
+    \tkzMarkRightAngle[size=0.2](A,D,C)
+    \tkzMarkRightAngle[size=0.2](B,E,C)
+    \tkzMarkRightAngle[size=0.2](C,F,B)
+
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](A', D)
+    \tkzLabelPoints[left](C',B)
+    \tkzLabelPoints[right](C,B')
+    \tkzLabelPoints[above right=-0.3em](E)
+    \tkzLabelPoints[above left=-0.3em](F)
+\end{tikzpicture}
+

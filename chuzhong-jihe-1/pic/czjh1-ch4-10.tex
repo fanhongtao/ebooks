@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/D, 3.3/1.5/C, 0.8/1.5/A}
+    \tkzDrawLines[add=0.3 and 0.3](A,C  B,D)
+    \tkzDrawSegments(A,B  C,D)
+    \tkzLabelSegment[pos=0, left=.8cm](A,C){$l_1$}
+    \tkzLabelSegment[pos=0, left=.8cm](B,D){$l_2$}
+    \tkzLabelPoints[above](A,C)
+    \tkzLabelPoints[below](B,D)
+\end{tikzpicture}
+

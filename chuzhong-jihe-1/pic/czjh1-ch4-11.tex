@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, -2/0/b1, 2/0/b2, 0/1.5/A, -2/1.5/a1, 2/1.5/a2}
+    \tkzDrawSegments(a1,a2  b1,b2  A,B)
+    \tkzMarkRightAngle(A,B,b2)
+    \tkzLabelSegment[pos=0, left](a1,a2){$l_1$}
+    \tkzLabelSegment[pos=0, left](b1,b2){$l_2$}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+\end{tikzpicture}
+

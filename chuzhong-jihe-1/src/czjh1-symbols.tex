@@ -13,6 +13,14 @@
   \mathrel{%
     \tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
 }}
+%平行四边形
+\newcommand*\Pxsbx[1][1]{%
+    \mathord{%
+        \tikz[baseline,scale=#1]
+        \draw (0,.1ex) -- (.8em,.1ex) -- (1em,1.4ex) -- (.2em,1.4ex) -- cycle;}}
+\newcommand*\pxsbx{
+    \mathchoice{\Pxsbx}{\Pxsbx}{\Pxsbx[0.6]}{\Pxsbx[0.4]}
+}
 
 %特殊符号
 \newcommand{\nsep}{,\quad}% 连续的数字之间的分隔符

@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 3.3/1.5/D, 0.8/1.5/A}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \extkzLabelAngel[0.3](B,A,C){$1$}
+    \extkzLabelAngel[0.4](D,B,A){$2$}
+    \extkzLabelAngel[0.4](B,D,C){$3$}
+    \extkzLabelAngel[0.3](D,C,A){$4$}
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above](O)
+\end{tikzpicture}
+
