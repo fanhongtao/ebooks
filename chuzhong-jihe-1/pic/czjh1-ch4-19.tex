@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 1.5/1.5/A}
+    \tkzDrawSegment(B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B,C)
+
+    % 思路 1
+    % 1.1
+    \tkzDrawSegment(A,B)
+    % 1.2
+    \tkzInterCC[with nodes](A,B,C)(C,A,B)  \tkzGetFirstPoint{D}
+    \tkzLabelPoints[right](D)
+    % 1.3
+    \tkzCompasss(A,D  C,D)
+    \tkzDrawSegments(A,D  C,D)
+
+    % 思路 2
+    % 2.1
+    \tkzDrawSegment[red](A,C)
+    % 2.2
+    \tkzInterCC[with nodes](A,B,C)(B,A,C)  \tkzGetSecondPoint{E}
+    \tkzLabelPoints[left](E)
+    % 2.3
+    \tkzCompasss(A,E  B,E)
+    \tkzDrawSegments[red](A,E  B,E)
+\end{tikzpicture}
+

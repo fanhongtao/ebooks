@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 3.3/1.5/D, 0.8/1.5/A}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegment[dashed](A,C)
+    \extkzLabelAngel[0.3](B,A,C){$1$}
+    \extkzLabelAngel[0.5](A,C,B){$3$}
+    \extkzLabelAngel[0.3](D,C,A){$2$}
+    \extkzLabelAngel[0.5](C,A,D){$4$}
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+

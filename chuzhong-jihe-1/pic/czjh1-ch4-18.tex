@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 3.3/1.5/D, 0.8/1.5/A}
+    \tkzDefMidPoint(A,D)  \tkzGetPoint{E}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{F}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(B,E  D,F)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above](E)
+    \tkzLabelPoints[below](F)
+\end{tikzpicture}
+
