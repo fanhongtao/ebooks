@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=0.4]
+    \pgfmathsetmacro{\be}{2}
+    \pgfmathsetmacro{\df}{3}
+    % 角 1 = 60 度， 角 C = 120 度， 角 B = 角 D = 60 度，角 BAE = 角 FAD = 30 度
+    \pgfmathsetmacro{\ab}{2 * \be} % 30 度角所对边为斜边一半
+    \pgfmathsetmacro{\ad}{2 * \df}
+
+    \tkzDefPoints{0/0/B, \ad/0/C}
+    \tkzDefPoint(60:\ab){A}
+    \tkzDefShiftPoint[C](60:\ab){D}
+
+    \tkzDefPointBy[projection= onto B--C](A)  \tkzGetPoint{E}
+    \tkzDefPointBy[projection= onto C--D](A)  \tkzGetPoint{F}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,E  A,F)
+    \tkzMarkRightAngle[size=.5](A,E,B)
+    \tkzMarkRightAngle[size=.5](A,F,D)
+    \tkzMarkAngle[size=0.8](E,A,F)
+    \tkzLabelAngle[pos=1.5](E,A,F){$1$}
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[below](E)
+    \tkzLabelPoints[right](F)
+\end{tikzpicture}
+

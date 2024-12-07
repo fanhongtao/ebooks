@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 0.3/1.5/A, 2.8/1.5/D, 0.8/1.0/E, 3.3/1.0/F}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawPolygon(A,E,F,D)
+    \tkzDrawPolygons(A,B,E  D,C,F)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[below](E)
+    \tkzLabelPoints[right](F)
+\end{tikzpicture}
+

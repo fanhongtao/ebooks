@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,  2.5/0/B, 3.3/1.5/C, 0.8/1.5/D}
+    \tkzDefPointBy[projection= onto A--C](B)  \tkzGetPoint{M}
+    \tkzDefPointBy[projection= onto A--C](D)  \tkzGetPoint{N}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,M  B,N  D,M  D,N)
+    \tkzMarkRightAngle[size=.2](B,M,A)
+    \tkzMarkRightAngle[size=.2](D,N,C)
+    \tkzLabelPoints[left](A,D)
+    \tkzLabelPoints[right](B,C)
+    \tkzLabelPoints[left=.3em](N)
+    \tkzLabelPoints[right,yshift=-.3em](M)
+\end{tikzpicture}
+
