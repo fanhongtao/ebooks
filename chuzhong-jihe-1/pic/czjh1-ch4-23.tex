@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  2.5/0/C, 0/1.5/A, 2.5/1.5/D}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above](O)
+\end{tikzpicture}
+
