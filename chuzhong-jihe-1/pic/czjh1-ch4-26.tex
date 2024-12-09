@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B,  4/0/C, 0/2.5/A, 4/2.5/D}
+    \tkzDefLine[mediator](A,C)  \tkzGetPoints{e}{f}
+    \tkzInterLL(A,D)(e,f)   \tkzGetPoint{E}
+    \tkzInterLL(B,C)(e,f)   \tkzGetPoint{F}
+    \tkzInterLL(A,C)(e,f)   \tkzGetPoint{O}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  E,F  A,F  C,E)
+    \tkzMarkRightAngle(E,O,A)
+    \extkzLabelAngel[0.5](C,A,D){$1$}
+    \extkzLabelAngel[0.5](A,C,B){$2$}
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[right=.5em](O)
+    \tkzLabelPoints[above](E)
+    \tkzLabelPoints[below](F)
+\end{tikzpicture}
+

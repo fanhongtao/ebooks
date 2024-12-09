@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{2.5}
+    \tkzDefPoints{0/0/B,  \a/0/C}
+    \tkzDefPoint(60:\a){A}
+    \tkzDefShiftPoint[C](60:\a){D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{2.5}
+    \tkzDefPoints{0/0/B,  \a/0/C}
+    \tkzDefPoint(60:\a){A}
+    \tkzDefShiftPoint[C](60:\a){D}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above,xshift=0.3em,yshift=0.3em](O)
+\end{tikzpicture}
+
