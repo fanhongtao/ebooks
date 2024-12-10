@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{3.5}
+    \tkzDefPoints{0/0/B,  \a/0/C, 0/\a/A, \a/\a/D}
+    \tkzDefPointOnLine[pos=0.3](A,B)  \tkzGetPoint{A'}
+    \tkzDefPointOnLine[pos=0.3](B,C)  \tkzGetPoint{B'}
+    \tkzDefPointOnLine[pos=0.3](C,D)  \tkzGetPoint{C'}
+    \tkzDefPointOnLine[pos=0.3](D,A)  \tkzGetPoint{D'}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawPolygon(A',B',C',D')
+    \extkzLabelAngel[0.4](D',A',A){$1$}
+    \extkzLabelAngel[0.8](A,D',A'){$2$}
+    \extkzLabelAngel[0.8](B,A',B'){$3$}
+    \tkzLabelPoints[left](A,B,A')
+    \tkzLabelPoints[right](C,D,C')
+    \tkzLabelPoints[above](D')
+    \tkzLabelPoints[below](B')
+\end{tikzpicture}
+
