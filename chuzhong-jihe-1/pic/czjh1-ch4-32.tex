@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=1.2]
+    \tkzDefPoints{0/0/B,  2.5/0/C, 3.3/1.5/D, 0.8/1.5/A}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above=.3em](O)
+    \tkzLabelPoint[left,xshift=-0.5em,yshift=-1em](A){$(C)$}
+    \tkzLabelPoint[left,xshift=.3em,yshift=-1em](B){$(D)$}
+    \tkzLabelPoint[right,xshift=-.5em,yshift=-1em](C){$(A)$}
+    \tkzLabelPoint[right,xshift=-.5em,yshift=-1em](D){$(B)$}
+\end{tikzpicture}
+

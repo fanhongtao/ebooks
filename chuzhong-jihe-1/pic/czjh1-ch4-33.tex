@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \pgfmathsetmacro{\a}{1.5}
+        \pgfmathsetmacro{\b}{1}
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoints{-\a/-\b/B, \a/-\b/C, -\a/\b/A, \a/\b/D}
+        \tkzDefPoints{-\a/0/x1,  \a/0/x2,  0/-\b/y1, 0/\b/y2}
+        \tkzDrawPolygon[thick](A,B,C,D)
+        \tkzDrawLines[add=0.2 and 0.2](x1,x2  y1,y2)
+        \tkzLabelPoints[above right](O)
+    \end{scope}
+
+    \begin{scope}[xshift=4cm]
+        \pgfmathsetmacro{\a}{1}
+        \pgfmathsetmacro{\b}{1.5}
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoints{-\a/0/B, 0/-\b/C, 0/\b/A, \a/0/D}
+        \tkzDrawPolygon[thick](A,B,C,D)
+        \tkzDrawLines[add=0.2 and 0.2](A,C  B,D)
+        \tkzLabelPoints[above right](O)
+    \end{scope}
+
+
+    \begin{scope}[xshift=8cm]
+        \pgfmathsetmacro{\a}{1.5}
+        \pgfmathsetmacro{\b}{1.5}
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoints{-\a/-\b/B, \a/-\b/C, -\a/\b/A, \a/\b/D}
+        \tkzDefPoints{-\a/0/x1,  \a/0/x2,  0/-\b/y1, 0/\b/y2}
+        \tkzDrawPolygon[thick](A,B,C,D)
+        \tkzDrawLines[add=0.2 and 0.2](x1,x2  y1,y2)
+        \tkzDrawLines[add=0.1 and 0.1](A,C  B,D)
+        \tkzLabelPoints[above right,xshift=1em](O)
+    \end{scope}
+\end{tikzpicture}
+

@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O,  0.7/-0.8/A,  1.8/-0.6/B, 2.2/0/C,  1.4/0.6/D}
+    \tkzDefPointBy[symmetry=center O](A)  \tkzGetPoint{A'}
+    \tkzDefPointBy[symmetry=center O](B)  \tkzGetPoint{B'}
+    \tkzDefPointBy[symmetry=center O](C)  \tkzGetPoint{C'}
+    \tkzDefPointBy[symmetry=center O](D)  \tkzGetPoint{D'}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawPolygon(A',B',C',D')
+    \tkzDrawSegments[dashed](A,A'  B,B'  C,C'  D,D')
+    \tkzDrawArc[towards,dashed](O,A)(A')
+    \tkzDrawArc[towards,dashed](O,B)(B')
+    \tkzDrawArc[towards,dashed,red](O,C)(C')
+    \tkzDrawArc[towards,dashed,red](O,D)(D')
+    \tkzLabelPoints[below](A,B,D')
+    \tkzLabelPoints[above](A',B',D)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[left](C')
+\end{tikzpicture}
+
