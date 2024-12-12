@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 0/4/A, 4/4/D}
+
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{L1}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{B1}
+    \tkzDefMidPoint(C,D)  \tkzGetPoint{R1}
+    \tkzDefMidPoint(D,A)  \tkzGetPoint{A1}
+    \tkzInterLL(A1,B1)(L1,R1)  \tkzGetPoint{O1}
+
+    \tkzDefMidPoint(A1,O1)  \tkzGetPoint{L2}
+    \tkzDefMidPoint(O1,R1)  \tkzGetPoint{B2}
+    \tkzDefMidPoint(R1,D)   \tkzGetPoint{R2}
+    \tkzDefMidPoint(D,A1)   \tkzGetPoint{A2}
+    \tkzInterLL(A2,B2)(L2,R2)  \tkzGetPoint{O2}
+
+    \tkzDefMidPoint(A2,O2)  \tkzGetPoint{L3}
+    \tkzDefMidPoint(O2,R2)  \tkzGetPoint{B3}
+    \tkzDefMidPoint(R2,D)   \tkzGetPoint{R3}
+    \tkzDefMidPoint(D,A2)   \tkzGetPoint{A3}
+    \tkzInterLL(A3,B3)(L3,R3)  \tkzGetPoint{O3}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A1,B1  L1,R1)
+    \tkzDrawSegments(A2,B2  L2,R2)
+    \tkzDrawSegments(A3,B3  L3,R3)
+    \tkzFillPolygon[pattern={mylines[angle=45, distance={2pt}]}](A3,O3,R3,D)
+
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+
