@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{4}
+    \pgfmathsetmacro{\b}{2}
+    \pgfmathsetmacro{\c}{3}
+    \pgfmathsetmacro{\d}{2.5}
+
+    \begin{scope}
+        \tkzDefPoints{0/0/d1, \d/0/d2, 0/0.8/c1, \c/0.8/c2, 0/1.6/b1, \b/1.6/b2, 0/2.4/a1, \a/2.4/a2}
+        \tkzDrawSegments[xianduan={below=0pt}](a1,a2  b1,b2  c1,c2  d1,d2)
+        \tkzLabelSegment[above](a1,a2){$a$}
+        \tkzLabelSegment[above](b1,b2){$b$}
+        \tkzLabelSegment[above](c1,c2){$c$}
+        \tkzLabelSegment[above](d1,d2){$d$}
+    \end{scope}
+
+    \begin{scope}[xshift=6cm]
+        % 1
+        \pgfmathsetmacro{\ae}{\a - \b}
+        \tkzDefPoints{0/0/A, \ae/0/E}
+        \tkzInterCC[R](A,\c)(E,\d)  \tkzGetFirstPoint{D}
+        \tkzDrawSegments(A,D  A,E)
+        \tkzDrawSegments[dashed](D,E)
+        \tkzLabelSegment[left](A,D){$c$}
+        \tkzLabelPoints[above](D)
+        \tkzLabelPoints[left](A)
+        \tkzLabelPoints[below](E)
+
+        % 2
+        \tkzDefPoints{\a/0/B}
+        \tkzDrawSegments(E,B)
+        \tkzLabelSegment[above right](A,B){$a$}
+        \tkzLabelPoints[right](B)
+
+        % 3
+        \tkzInterCC[R](B,\d)(D,\b)  \tkzGetSecondPoint{C}
+        \tkzCompasss(B,C  D,C)
+        \tkzLabelPoints[above right](C)
+
+        % 4
+        \tkzDrawSegments(B,C  D,C)
+        \tkzLabelSegment[right](B,C){$d$}
+        \tkzLabelSegment[above](D,C){$b$}
+    \end{scope}
+\end{tikzpicture}
+

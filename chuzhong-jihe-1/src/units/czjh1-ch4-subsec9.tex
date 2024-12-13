@@ -1,0 +1,143 @@
+\subsection{梯形}\label{subsec:czjh1-4-9}
+
+前面，我们研究的平行四边形是两组对边分别平行的特殊四边形。
+现在，我们研究只有一组对边平行的另一种特殊四边形。
+
+一组对边平行而另一组对边不平行的四边形叫做\zhongdian{梯形}（图 \ref{fig:czjh1-4-36}）。
+平行的两边叫做\zhongdian{梯形的底}（通常把较短的底叫做上底，较长的底叫做下底），
+不平行的两边叫做\zhongdian{梯形的腰}，两底的距离叫做\zhongdian{梯形的高}。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch4-36}
+        \caption{}\label{fig:czjh1-4-36}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch4-37}
+        \caption{}\label{fig:czjh1-4-37}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch4-38}
+        \caption{}\label{fig:czjh1-4-38}
+    \end{minipage}
+\end{figure}
+
+一腰垂直于底的梯形叫做\zhongdian{直角梯形}（图 \ref{fig:czjh1-4-37}），
+两腰相等的梯形叫做\zhongdian{等腰梯形}（图 \ref{fig:czjh1-4-38}）。
+
+直角梯形和等腰梯形都是特殊的梯形。
+
+下面研究等腰梯形的性质：
+
+\begin{dingli}[等腰梯形性质定理]
+    等腰梯形在同一底上的两个角相等。
+\end{dingli}
+
+已知： 如图 \ref{fig:czjh1-4-39}， 在梯形 $ABCD$ 中，$AD \pingxing BC$， $AB = DC$。
+
+求证： $\angle B = \angle C$。
+
+分析： 我们学过 “等腰三角形两底角相等”。 如果能将等腰梯形在同一底上的两个角，
+转化成等腰三角形的两个底角，定理就容易证明了。
+
+\zhengming 过点 $D$ 作 $DE \pingxing AB$， 交 $BC$ 于点 $E$， 得到等腰三角形 $DEC$。
+
+$\because$ \quad $AD \pingxing BC$， $DE \pingxing AB$，
+
+$\therefore$ \quad $AB = DE$ （夹在两平行线间的平行线段相等）。
+
+$\because$ \quad $AB = DC$，
+
+$\therefore$ \quad $DE = DC$。
+
+$\therefore$ \quad $\angle 1 = \angle C$。
+
+$\because$ \quad $\angle 1 = \angle B$，
+
+$\therefore$ \quad $\angle B = \angle C$。
+
+反过来，如果梯形在同一底上的两个角相等，两腰是否相等呢？
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch4-39}
+        \caption{}\label{fig:czjh1-4-39}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh1-ch4-40}
+        \caption{}\label{fig:czjh1-4-40}
+    \end{minipage}
+\end{figure}
+
+如图 \ref{fig:czjh1-4-40}， 在梯形 $ABCD$ 中，$\angle B = \angle C$， 如果延长 $BA$、$CD$ 交于点 $E$，
+那么由 $\angle B = \angle C$， $AD \pingxing BC$ 可以推出 $\triangle BCE$ 与
+$\triangle ADE$ 都是等腰三角形， 得 $\angle E$ 的平分线 $EF$ 垂直平分 $AD$ 和 $BC$，
+所以梯形 $ABCD$ 是以 $EF$ 为轴的对称图形， 因此 $AB = DC$， 由此得到：
+
+\begin{dingli}[等腰梯形判定定理]
+    在同一底上的两个角相等的梯形是等腰梯形。
+\end{dingli}
+
+由定理的推导过程可知， 等腰梯形是轴对称图形，经过两底中点的直线是它的对称轴。
+
+
+\liti[0] 已知梯形的两底和两腰，作梯形。
+
+已知：线段 $a$、$b$、$c$、$d$， 其中 $a > b$ （图\ref{fig:czjh1-4-41}）。
+
+求作：梯形 $ABCD$， 使 $AB \pingxing DC$， $AB = a$， $DC = b$， $DA = c$， $CB = d$。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czjh1-ch4-41}
+    \caption{}\label{fig:czjh1-4-41}
+\end{figure}
+
+分析：假定梯形 $ABCD$ 已经作出。 作 $DE \pingxing CB$ 交 $AB$ 于点 $E$，
+可得平行四边形 $EBCD$， 于是 $DE = CB = d$， $EB = DC = b$， $AE = a - b$。
+又 $DA = c$， 已知三边可以作出 $\triangle AED$， 再作平行四边形 $DEBC$，
+就可以得到所求的梯形， 问题就解决了。
+
+\zuofa 1. 作 $\triangle AED$， 使 $AE = a - b$， $DA = c$， $DE = d$。
+
+2. 延长 $AE$ 到点 $B$， 使 $EB = b$。
+
+3. 分别以点 $B$、$D$ 为圆心， $d$、$b$ 为半径作弧， 两弧相交于点 $C$。
+
+4. 连结 $CB$、$CD$。
+
+四边形 $ABCD$ 就是所求的梯形。
+
+\zhengming 根据作法，$AB = (a - b) + b = a$， $CD = b$， $DA = c$， $CB = d$。
+
+又因四边形 $EBCD$ 是平行四边形（对边相等）， $AB \pingxing CD$。
+
+所以，四边形 $ABCD$ 是所求的梯形。
+
+
+讨论： 三条线段 $(a - b)$、$c$、$d$ 符合三角形三边关系定理时，作图题才有解。
+
+
+\begin{lianxi}
+
+\xiaoti{（口答） 一个四边形有一组对边平行但不相等，它是梯形吗？为什么？}
+
+\xiaoti{求证：
+    （1） \zhongdian{等腰梯形的对角线相等；}
+    （2） 对角线相等的梯形是等腰梯形。
+}
+
+\xiaoti{求证：等腰梯形上底的中点与下底两端点距离相等。}
+
+\end{lianxi}
+

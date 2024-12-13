@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, 3/0/C, 0.8/1.5/A, 2.2/1.5/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](D,C)
+
+    \tkzInterLL(B,A)(C,D)  \tkzGetPoint{E}
+    \tkzDefLine[bisector](B,E,C)  \tkzGetPoint{f}
+    \tkzInterLL(E,f)(B,C)  \tkzGetPoint{F}
+    \tkzInterLL(E,f)(A,D)  \tkzGetPoint{G}
+    \tkzDrawSegments[dashed](A,E  D,E)
+    \tkzDrawSegments(E,F)
+    \tkzMarkRightAngle(A,G,E)
+    \tkzMarkRightAngle(B,F,E)
+    \tkzLabelPoints[above](E)
+    \tkzLabelPoints[below](F)
+\end{tikzpicture}
+

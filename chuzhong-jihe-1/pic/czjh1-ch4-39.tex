@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, 3/0/C, 0.8/1.5/A, 2.2/1.5/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](D,C)
+
+    \tkzDefLine[parallel=through D](A,B)  \tkzGetPoint{e}
+    \tkzInterLL(D,e)(B,C)  \tkzGetPoint{E}
+    \tkzDrawSegment[dashed](D,E)
+    \extkzLabelAngel[0.3](C,E,D){$1$}
+    \tkzLabelPoints[below](E)
+\end{tikzpicture}
+
