@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{3}
+    \pgfmathsetmacro{\b}{2.5}
+    \pgfmathsetmacro{\c}{4}
+
+    \tkzDefPoints{0/0/c1, \c/0/c2, 0/0.8/b1, \b/0.8/b2, 0/1.6/a1, \a/1.6/a2}
+    \tkzDrawSegments[xianduan={below=0pt}](a1,a2  b1,b2  c1,c2)
+    \tkzLabelSegment[above](a1,a2){$a$}
+    \tkzLabelSegment[above](b1,b2){$b$}
+    \tkzLabelSegment[above](c1,c2){$c$}
+\end{tikzpicture}
+
