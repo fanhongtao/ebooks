@@ -1,0 +1,125 @@
+\subsection{平行线等分线段}\label{subsec:czjh1-4-10}
+
+为了进一步研究梯形的性质，我们来证明下面的定理：
+
+\begin{dingli}[平行线等分线段定理]
+    如果一组平行线在一条直线上截得的线段相等，那么在其他直线上截得的线段也相等。
+\end{dingli}
+
+我们仅对三条平行线的情形进行证明。
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh1-ch4-42}
+    \caption{}\label{fig:czjh1-4-42}
+\end{wrapfigure}
+
+
+已知： 如图 \ref{fig:czjh1-4-42}， $AB \pingxing CD \pingxing EF$， $AC = CE$。
+
+求证： $BD = DF$。
+
+\zhengming  过点 $B$、$D$ 分别作 $GH$ 的平行线 $BM$、$DN$，
+分别交 $CD$、$EF$ 于点 $M$、$N$，得 $\pxsbx ACMB$、$\pxsbx CEND$。
+
+$\therefore$ \quad $BM = AC$， $DN = CE$， $BM \pingxing DN$。
+
+$\because$ \quad $AC = CE$，
+
+$\therefore$ \quad $BM = DN$。
+
+又 $\because$ \quad $BM \pingxing DN$， $MD \pingxing NF$，
+
+$\therefore$ \quad $\angle 1 = \angle 2$， $\angle 3 = \angle 4$。
+
+$\therefore$ \quad $\triangle BMD \quandeng \triangle DNF$。
+
+$\therefore$ \quad $BD = DF$。
+
+从这个定理， 可以推出下面推论：
+
+\begin{tuilun}[推论1]
+    经过梯形一个腰的中点与底平行的直线，必平分另一腰。
+\end{tuilun}
+
+如图 \ref{fig:czjh1-4-43}， 在梯形 $ABCD$ 中， 如果 $E$ 是腰 $AB$ 的中点，
+$EF \pingxing AD$， 交 $DC$ 于点 $F$， 那么 $DF = FC$。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch4-43}
+        \caption{}\label{fig:czjh1-4-43}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch4-44}
+        \caption{}\label{fig:czjh1-4-44}
+    \end{minipage}
+\end{figure}
+
+如图 \ref{fig:czjh1-4-44}， $E$ 是 $\triangle ABC$ 的 $AB$ 边的中点， $EF \pingxing BC$，交 $AC$ 于点 $F$，
+过顶点 $A$ 引直线 $MN \pingxing BC$。由上面的定理可知：$AF = FC$，由此得到下面的推论：
+
+\begin{tuilun}[推论2]
+    经过三角形一边的中点与另一边平行的直线必平分第三边。
+\end{tuilun}
+
+应用平行线等分线段定理，我们可以任意等分一条线段。
+
+\liti[0] 已知：线段 $AB$ （图 \ref{fig:czjh1-4-45}）。
+
+求作： 线段 $AB$ 的五等分点。
+
+\zuofa 1. 作射线 $AC$。
+
+2. 在射线 $AC$ 上以任意长顺次截取 $AD = DE = EF = FG = GH$。
+
+3. 连结 $HB$。
+
+4. 过点 $G$、$F$、$E$、$D$ 分别作 $HB$ 的平行线 $GL$、$FK$、$EJ$、$DI$，
+分别交 $AB$ 于点 $L$、$K$、$J$、$I$。
+
+$I$、$J$、$K$、$L$ 就是所求的五等分点。
+
+\zhengming  过点 $A$ 作 $MN \pingxing HB$。
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $MN \pingxing DI \pingxing EJ \pingxing FK \pingxing GL \pingxing HB$， \\
+    $AD = DE = EF = FG = GH$，
+\end{zmtblr}
+
+$\therefore$ \quad $AI = IJ = JK = KL = LB$ （平行线等分线段定理）。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch4-45}
+        \caption{}\label{fig:czjh1-4-45}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch4-subsec10-lx-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+\end{figure}
+
+\begin{lianxi}
+
+\xiaoti{练习本上的横格是平行且等距的， 用横将 $10\;\limi$ 长的线绳五等分、七等分、九等分，
+    分别用不同色笔在绳上画上等分点。
+}
+
+\xiaoti{画出一条线段， 用直尺、圆规将它分成三等分。}
+
+\xiaoti{如图，已知：$l_1 \pingxing l_2$， $AC = CB$。
+    求证：$DC = CE$。
+}
+
+\end{lianxi}
+
+

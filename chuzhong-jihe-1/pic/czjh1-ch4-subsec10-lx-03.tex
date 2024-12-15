@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/2/l11, 4/2/l12, 0/0/l21, 4/0/l22}
+    \tkzDrawSegments(l11,l12  l21,l22)
+    \tkzLabelLine[pos=1,right](l11,l12){$l_1$}
+    \tkzLabelLine[pos=1,right](l21,l22){$l_2$}
+
+    \tkzDefPointOnLine[pos=0.1](l11,l12)  \tkzGetPoint{A}
+    \tkzDefPointOnLine[pos=0.8](l11,l12)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=0.9](l21,l22)  \tkzGetPoint{B}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{C}
+    \tkzInterLL(D,C)(l21,l22)  \tkzGetPoint{E}
+    \tkzDrawSegments(A,B  E,D)
+    \tkzDrawPoint(C)
+    \tkzLabelPoints[above](A,D)
+    \tkzLabelPoints[below](B,E)
+    \tkzLabelPoints[right,xshift=.5em](C)
+\end{tikzpicture}
+

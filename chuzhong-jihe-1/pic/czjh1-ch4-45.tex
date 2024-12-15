@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 5/0/B}
+    \tkzDrawSegment(A,B)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below](B)
+
+    % 1
+    \tkzDefPoints{5.2/3/C}
+    \tkzDrawSegment[dashed](A,C)
+    \tkzLabelPoints[above](C)
+
+    % 2
+    \foreach \n [count=\i] in {D,E,F,G,H} {
+        \pgfmathsetmacro{\pos}{0.15*\i}
+        \tkzDefPointOnLine[pos=\pos](A,C)  \tkzGetPoint{\n}
+        \tkzLabelPoints[above](\n)
+    }
+
+    % 3
+    \tkzDrawSegment[dashed](B,H)
+
+    % 4
+    \foreach \n/\m in {G/L, F/K, E/J, D/I} {
+        \tkzDefLine[parallel=through \n](B,H)  \tkzGetPoint{tmp}
+        \tkzInterLL(\n,tmp)(A,B)  \tkzGetPoint{\m}
+        \tkzDrawSegment[dashed](\n,\m)
+        \tkzLabelPoints[below](\m)
+    }
+
+    %
+    \tkzDefLine[parallel=through A,normed](B,H)  \tkzGetPoint{M}
+    \tkzDefPointOnLine[pos=2](M,A)  \tkzGetPoint{N}
+    \tkzDrawSegment[dashed](M,N)
+    \tkzLabelPoints[left](M,N)
+\end{tikzpicture}
+
