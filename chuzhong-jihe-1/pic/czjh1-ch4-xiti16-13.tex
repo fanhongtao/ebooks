@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B_0, 4/0/C_0, 3/3/A_0}
+    \tkzDrawPolygon(A_0,B_0,C_0)
+    \foreach \n [count=\i] in {1,...,4} {
+        \pgfmathsetmacro{\p}{int(\i-1)}
+        \tkzDefMidPoint(A_\p,B_\p)  \tkzGetPoint{A_\i}
+        \tkzDefMidPoint(B_\p,C_\p)  \tkzGetPoint{B_\i}
+        \tkzDefMidPoint(C_\p,A_\p)  \tkzGetPoint{C_\i}
+        \tkzDrawPolygon(A_\i,B_\i,C_\i)
+    }
+    \tkzLabelPoint[above](A_0){$A$}
+    \tkzLabelPoint[left](B_0){$B$}
+    \tkzLabelPoint[right](C_0){$C$}
+\end{tikzpicture}
+

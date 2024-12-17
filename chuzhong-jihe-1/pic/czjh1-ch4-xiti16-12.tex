@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C, 0.8/2/A, 2.6/2/D}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{E}
+    \tkzDefMidPoint(C,D)  \tkzGetPoint{F}
+    \tkzInterLL(B,D)(E,F)  \tkzGetPoint{G}
+    \tkzInterLL(A,C)(E,F)  \tkzGetPoint{H}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D  E,F)
+    \tkzLabelPoints[left](A,B,E)
+    \tkzLabelPoints[right](C,D,F)
+    \tkzLabelPoints[below](G,H)
+\end{tikzpicture}
+
