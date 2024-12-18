@@ -1,0 +1,50 @@
+\begin{tikzpicture}[
+    >=Stealth,
+    tixing/.style={draw, minimum height=1.2cm, trapezium, trapezium stretches=true,},
+]
+    %\node (SBX) [tixing, trapezium left angle=75, trapezium right angle=45] at (0, 0) {四边形};
+    \node (SBX) [rectangle, minimum height=1.2cm] at (0, 0) {四边形};       % 不绘制 node 的 shape
+    \draw (-0.6, 0.6) -- (0.8, 0.3) -- (1.0, -0.5) -- (-1, -0.5) -- cycle; % 自己绘制一个不规则的四边形
+
+    \node (PXSBX) [tixing, trapezium left angle=75, trapezium right angle=-75] at (3,2.5) {平行四边形};
+    \node (JX)    [draw, rectangle, minimum height=1.2cm, minimum width=2cm] at (7,4.5) {矩形};
+    \node (LX)    [draw, diamond, minimum height=1.2cm, aspect=2] at (7,1.5) {菱形};
+    \node (ZFX)   [draw, rectangle, minimum height=1.5cm, minimum width=1.5cm] at (12,3) {正方形};
+    \node (TX)    [tixing, trapezium left angle=75, trapezium right angle=45] at (5, -2.0) {梯形};
+    \node (DYTX)  [tixing] at (12,  0.5) {等腰梯形};
+    \node (ZJTX)  [tixing, trapezium left angle=90, trapezium right angle=45] at (12, -2.0) {直角梯形};
+
+    \draw [->] ($(SBX.north) + (0.2,-0.1)$) -- ($(PXSBX.south) - (0.2,0.2)$)
+        node [pos=0.4, above, rotate=30] {两组对边}
+        node [midway, below, rotate=30] {分别平行}
+    ;
+    \draw [->] ($(PXSBX.70)  + (0.2,0.2)$) -- ($(JX.160) - (0.2,0.2)$)
+        node [midway, above, rotate=30] {有一个角}
+        node [midway, below, rotate=30] {是直角}
+    ;
+    \draw [->] ($(JX.east) + (0.2,0.2)$) -- ($(ZFX.west) - (0.2,0.2)$)
+        node [midway, above, rotate=-40] {有一组邻}
+        node [midway, below, rotate=-40] {边相等}
+    ;
+    \draw [->] ($(PXSBX.east) + (0.2,0.2)$) -- ($(LX.north west) + (-0.2,0.2)$)
+        node [midway, above, rotate=-20] {有一组邻}
+        node [midway, below, rotate=-20] {边相等}
+    ;
+    \draw [->] ($(LX.east) + (0.2,0.2)$) -- ($(ZFX.south west) - (0.2,0)$)
+        node [midway, above, rotate=10] {有一个角}
+        node [midway, below, rotate=10] {是直角}
+    ;
+
+    \draw [->] ($(SBX.south east) + (0.2,-0.2)$) -- ($(TX.west) - (0.2,-0.2)$)
+        node [midway, above, rotate=-20] {有且仅有一}
+        node [midway, below, rotate=-20] {组对边平行}
+    ;
+    \draw [->] ($(TX.30) + (0.2,0)$) -- ($(DYTX.bottom left corner) - (0.2,0)$)
+        node [midway, above, rotate=15] {两腰相等}
+    ;
+    \draw [->] ($(TX.east) + (0.2,0)$) -- ($(ZJTX.west) - (0.2,0)$)
+        node [midway, above] {有一个角}
+        node [midway, below] {是直角}
+    ;
+\end{tikzpicture}
+
