@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 1.5/0/B, 0.5/2/D, 2.0/2/C}
+    \tkzDefTriangle[two angles=60 and 60](C,B)  \tkzGetPoint{E}
+    \tkzDefTriangle[two angles=60 and 60](A,D)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,F  D,F  B,E  C,E)
+    \tkzDrawSegments[dashed](B,D  E,F)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[above](D,C)
+    \tkzLabelPoints[left](F)
+    \tkzLabelPoints[right](E)
+\end{tikzpicture}
+

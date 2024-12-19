@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 5/0/D, 0/2/A, 5/2/B}
+    \foreach \x in {1,...,4} {
+        \tkzDefPointOnLine[pos=0.22*\x](A,B)  \tkzGetPoint{A_\x}
+        \tkzDefPointOnLine[pos=0.22*\x](D,C)  \tkzGetPoint{B_\x}
+    }
+
+    \tkzDrawSegments(B,A  A,D  D,C)
+    \foreach \x in {1,...,4} {
+        \pgfmathsetmacro{\y}{int(5-\x)}
+        \tkzDrawSegments[dashed](A_\x,B_\y)
+        \tkzLabelPoints[above](A_\x)
+        \tkzLabelPoints[below](B_\y)
+    }
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B,D)
+\end{tikzpicture}
+
