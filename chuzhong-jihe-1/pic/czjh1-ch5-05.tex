@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=0.8]
+    \pgfmathsetmacro{\a}{4/3}
+    \tkzDefPoints{0/0/A, 4/0/B, 4/4/C, 0/4/D}
+    \tkzDefPoints{0/\a/E, 3/\a/F, 3/4/G}
+
+    \tkzFillPolygon[pattern={mylines[angle=65, distance={4pt}]}](E,F,G,D)
+    \foreach \x in {0,...,4} {
+        \tkzDefPoints{\x/0/X1, \x/4/X2}
+        \tkzDrawSegments(X1,X2)
+    }
+    \foreach \y in {0,4/3,4/3*2,4} {
+        \tkzDefPoints{0/\y/Y1, 4/\y/Y2}
+        \tkzDrawSegments(Y1,Y2)
+    }
+
+    \tkzLabelSegment[below](A,B){$1$}
+    \tkzLabelSegment[right](B,C){$1$}
+    \tkzLabelSegment[above](G,D){$\exdfrac{3}{4}$}
+    \tkzLabelSegment[left](E,D){$\exdfrac{2}{3}$}
+\end{tikzpicture}
+

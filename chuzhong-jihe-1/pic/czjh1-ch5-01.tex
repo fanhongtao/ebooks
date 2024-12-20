@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \begin{scope}[xshift=-2cm]
+        \tkzDefPoints{0/0/A, 1/0/B, 1/1/C, 0/1/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzLabelSegment[below](A,B){$1$}
+        \tkzLabelSegment[right](B,C){$1$}
+    \end{scope}
+
+    \begin{scope}
+        \tkzDefPoints{0/0/A, 7/0/B, 5/4/C, 0/4/D}
+        \tkzClipPolygon(A,B,C,D)
+        \foreach \x in {0,...,7} {
+            \tkzDefPoints{\x/0/X1, \x/4/X2}
+            \tkzDrawSegments(X1,X2)
+        }
+        \foreach \y in {0,...,4} {
+            \tkzDefPoints{0/\y/Y1, 7/\y/Y2}
+            \tkzDrawSegments(Y1,Y2)
+        }
+        \tkzDrawPolygon[very thick](A,B,C,D)
+    \end{scope}
+\end{tikzpicture}
+

@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/0/B, 3.8/2/C, 0.8/2/D}
+    \tkzDefPointOnLine[pos=0.65](B,D)  \tkzGetPoint{P}
+
+    \tkzDefLine[parallel=through P](A,D)  \tkzGetPoint{e}
+    \tkzInterLL(P,e)(A,B)  \tkzGetPoint{E}
+    \tkzInterLL(P,e)(C,D)  \tkzGetPoint{F}
+
+    \tkzDefLine[parallel=through P](A,B)  \tkzGetPoint{g}
+    \tkzInterLL(P,g)(A,D)  \tkzGetPoint{G}
+    \tkzInterLL(P,g)(B,C)  \tkzGetPoint{H}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(B,D  E,F  G,H)
+
+    \tkzLabelPoints[left](A,G)
+    \tkzLabelPoints[right](B,H)
+    \tkzLabelPoints[above](C,D,F)
+    \tkzLabelPoints[below](E)
+    \tkzLabelPoints[below,yshift=-.5em](P)
+\end{tikzpicture}
+

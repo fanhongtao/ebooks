@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \foreach \x in {0,...,5} {
+        \tkzDefPoints{\x/0/X1, \x/3/X2}
+        \tkzDrawSegments(X1,X2)
+    }
+    \foreach \y in {0,...,3} {
+        \tkzDefPoints{0/\y/Y1, 5/\y/Y2}
+        \tkzDrawSegments(Y1,Y2)
+    }
+    \tkzDefPoints{0/0/A, 5/0/B, 5/3/C}
+    \tkzLabelSegment[below](A,B){$5$}
+    \tkzLabelSegment[right](B,C){$3$}
+\end{tikzpicture}
+

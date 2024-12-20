@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{1.5}
+    \pgfmathsetmacro{\b}{2}
+    \begin{scope}
+        \tkzDefPoints{0/0/A, \a/0/B, \a/\b/C, 0/\b/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegment(A,C)
+    \end{scope}
+
+    \begin{scope}[xshift=2.5cm]
+        \tkzDefPoints{0/0/A, \a/0/B, 2*\a/\b/C, \a/\b/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegment(B,D)
+    \end{scope}
+\end{tikzpicture}
+
