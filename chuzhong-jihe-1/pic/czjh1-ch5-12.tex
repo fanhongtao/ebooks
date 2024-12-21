@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2/0.3/C, 3/1/D, -1.5/1/A}
+    \tkzDefPointBy[projection=onto A--D](B)  \tkzGetPoint{N}
+    \tkzDefPointBy[projection=onto A--D](C)  \tkzGetPoint{Q}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments[dashed](B,N  C,Q)
+    \tkzLabelPoints[above](N,Q)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](D)
+\end{tikzpicture}
+

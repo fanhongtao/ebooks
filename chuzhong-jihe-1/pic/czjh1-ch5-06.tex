@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 2/0/B, 3.2/2/C, 1.2/2/D, 2/2/E, 0/2/F}
+
+    \tkzDrawPolygon[dashed](A,B,E,F)
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[above](C,D,E,F)
+    \tkzLabelPoints[below](A,B)
+\end{tikzpicture}
+

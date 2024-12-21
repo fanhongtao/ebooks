@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 1/2/D, 3.5/2/C}
+    \tkzDefPointBy[projection=onto A--B](D)  \tkzGetPoint{H}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(D,H)
+    \tkzDrawSegments[dashed](B,D)
+    \tkzLabelPoints[above](C,D)
+    \tkzLabelPoints[below](A,B,H)
+\end{tikzpicture}
+
