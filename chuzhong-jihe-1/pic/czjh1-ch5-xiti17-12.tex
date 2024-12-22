@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+    \draw (0, 0) node [above] {$0$} -- (10, 0) node [above] {$10$ m};
+    \foreach \y [count=\i from 1, remember=\y as \lasty (initially 0.00)] in {0.65, 0.90, 1.50, 1.85, 2.40, 2.35, 1.75, 1.25, 0.60, 0.00} {
+        \draw [dashed] (\i, 0) -- (\i, -\y);
+        \draw (\i-1, -\lasty) -- (\i, -\y);
+    }
+\end{tikzpicture}
+

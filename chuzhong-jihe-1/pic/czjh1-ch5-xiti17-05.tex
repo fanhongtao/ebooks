@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.03}
+    \pgfmathsetmacro{\ab}{125 * \factor}
+    \pgfmathsetmacro{\bc}{72.5 * \factor}
+
+    % 原题中 AL= 114.6
+    % 这里为了让 B、L 两字母之间有较明显的间隔，修改了数据
+    % 图仅供参考，不影响计算
+    \pgfmathsetmacro{\al}{110 * \factor}
+
+    \tkzDefPoints{0/0/A, \ab/0/B, \ab/\bc/C, 0/\bc/D, \al/0/L, \ab-\al/\bc/K}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawPolygon[pattern={mylines[angle=0, distance={3pt}]}](L,B,K,D)
+    \tkzLabelPoints[above](C,D,K)
+    \tkzLabelPoints[below](A,B,L)
+\end{tikzpicture}
+
