@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=0.4]
+    \pgfmathsetmacro{\a}{4}
+    \pgfmathsetmacro{\b}{3}
+    \pgfmathsetmacro{\c}{5}
+
+    \tkzDefPoints{0/0/A,  \c/0/B}
+    \tkzInterCC[R](A,\b)(B,\a)  \tkzGetFirstPoint{C}
+    \tkzLabelPoints[above=.5em](C)
+    \tkzLabelPoints[below left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelSegment[above right](B,C){$a$}
+    \tkzLabelSegment[above left](A,C){$b$}
+    \tkzLabelSegment[below](A,B){$c$}
+    % \tkzDrawPolygon(A,B,C)
+
+    \tkzDefSquare(B,A)
+    \tkzDrawPolygon(B,A,tkzFirstPointResult,tkzSecondPointResult)
+
+    \tkzDefSquare(A,C)
+    \tkzDrawPolygon(A,C,tkzFirstPointResult,tkzSecondPointResult)
+
+    \tkzDefSquare(C,B)
+    \tkzDrawPolygon(C,B,tkzFirstPointResult,tkzSecondPointResult)
+\end{tikzpicture}
+

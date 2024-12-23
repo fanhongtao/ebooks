@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{2}
+    \tkzDefPoints{0/0/A, \a/0/B, \a/\a/C, 0/\a/D, 0/\a+\a/E, \a/\a+\a/F}
+    \tkzInterLL(D,F)(C,E)  \tkzGetPoint{O}
+    \tkzDefTriangle[two angles=45 and 45](D,E)  \tkzGetPoint{G}
+    \tkzDefTriangle[two angles=45 and 45](F,C)  \tkzGetPoint{H}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawPolygon(D,G,E,O)
+    \tkzDrawPolygon(C,H,F,O)
+    \tkzDrawSegments[dashed](A,C  B,D  D,E  C,F)
+\end{tikzpicture}
+

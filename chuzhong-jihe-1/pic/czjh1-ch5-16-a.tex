@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.5}
+    \pgfmathsetmacro{\a}{4 * \factor}
+    \pgfmathsetmacro{\b}{3 * \factor}
+    \pgfmathsetmacro{\c}{5 * \factor}
+
+    \tkzDefPoints{0/0/C, \b/0/A, 0/\a/B}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[right](A)
+    \tkzLabelSegment[below](C,A){$b$}
+    \tkzLabelSegment[left](C,B){$a$}
+    \tkzLabelSegment[right](A,B){$c$}
+\end{tikzpicture}
+

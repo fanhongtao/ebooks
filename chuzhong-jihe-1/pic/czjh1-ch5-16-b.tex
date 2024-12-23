@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.5}
+    \pgfmathsetmacro{\a}{4 * \factor}
+    \pgfmathsetmacro{\b}{3 * \factor}
+    \pgfmathsetmacro{\c}{5 * \factor}
+
+    \tkzDefPoints{0/0/A, \a+\b/0/B, \a+\b/\a+\b/C, 0/\a+\b/D}
+    \tkzDefPoints{\a/0/E, \a+\b/\a/F, \a/\a+\b/G, 0/\a/H}
+    \tkzInterLL(E,G)(F,H)  \tkzGetPoint{O}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzFillPolygon[gray!20](D,H,O,G)
+    \tkzFillPolygon[gray!20](E,B,F,O)
+    \tkzDrawSegments(E,G  F,H  D,O  B,O)
+
+    \tkzLabelSegment[above](D,G){$a$}
+    \tkzLabelSegment[above](G,C){$b$}
+    \tkzLabelSegment[left](A,H){$a$}
+    \tkzLabelSegment[left](H,D){$b$}
+
+    \tkzLabelSegment(A,O){I}
+    \tkzLabelSegment(O,C){II}
+\end{tikzpicture}
+

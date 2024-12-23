@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.5}
+    \pgfmathsetmacro{\a}{3 * \factor}
+    \pgfmathsetmacro{\b}{4 * \factor}
+    \pgfmathsetmacro{\c}{5 * \factor}
+
+    \begin{scope}
+        \tkzDefPoints{0/0/B, \a/0/C, \a/\b/A}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelSegment[right](C,A){$b$}
+        \tkzLabelSegment[below](C,B){$a$}
+        \tkzLabelSegment[left](A,B){$c$}
+    \end{scope}
+
+    \begin{scope}[xshift=4cm]
+        \tkzDefPoints{0/0/B', \a/0/C', \a/\b/A'}
+
+        \tkzDrawPolygon[dashed](A',B',C')
+        \tkzLabelPoints[above](A')
+        \tkzLabelPoints[left](B')
+        \tkzLabelPoints[right](C')
+        \tkzLabelSegment[right](C',A'){$b$}
+        \tkzLabelSegment[below](C',B'){$a$}
+        \tkzLabelSegment[left](A',B'){$c$}
+        \tkzMarkRightAngle(A',C',B')
+    \end{scope}
+\end{tikzpicture}
+
