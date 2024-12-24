@@ -1,0 +1,50 @@
+\begin{tikzpicture}[scale=0.4]
+    \pgfmathsetmacro{\a}{3}
+    \pgfmathsetmacro{\b}{4}
+    \pgfmathsetmacro{\c}{5}
+
+    \tkzDefPoints{0/0/A,  \c/0/B}
+    \tkzInterCC[R](A,\b)(B,\a)  \tkzGetFirstPoint{C}
+    % \tkzMarkRightAngle(A,C,B)
+    \tkzLabelPoints[above=.5em](C)
+    \tkzLabelPoints[below left](A)
+    \tkzLabelPoints[below right](B)
+
+    \tkzDefSquare(B,A)  \tkzGetPoints{D}{E}
+    % \tkzDrawPolygon(B,A,D,E)  % 移到 tkzFillPolygon 后
+    \tkzLabelPoints[below](D,E)
+
+    \tkzDefSquare(A,C)  \tkzGetPoints{G}{F}
+    % \tkzDrawPolygon(A,C,G,F)  % 移到 tkzFillPolygon 后
+    \tkzLabelPoints[above](G)
+    \tkzLabelPoints[left](F)
+
+    \tkzDefSquare(C,B)  \tkzGetPoints{K}{J}
+    \tkzDrawPolygon(C,B,K,J)
+    \tkzLabelPoints[right](K)
+    \tkzLabelPoints[above](J)
+
+    %====================================
+    \tkzDefPointBy[projection=onto A--B](C)  \tkzGetPoint{H}
+    \tkzInterLL(D,E)(C,H)  \tkzGetPoint{I}
+    % \tkzDrawSegment(C,I)  % 移到 tkzFillPolygon 后
+    \tkzLabelPoints[below right](H)
+    \tkzLabelPoints[below](I)
+
+    %
+    \tkzFillPolygon[gray!20](A,B,F)
+    \tkzFillPolygon[gray!20](A,D,C)
+    \tkzDrawSegments[dashed](B,F  C,D)
+
+    % 称位后的代码
+    \tkzDrawPolygon(B,A,D,E)
+    \tkzDrawPolygon(A,C,G,F)
+    \tkzDrawSegment(C,I)
+
+    % 标记两个相等的角
+    \tkzMarkAngle[size=0.7cm](B,A,F)
+    \tkzMarkAngle[size=1.0cm](D,A,C)
+
+    \tkzMarkRightAngle(A,C,B)
+\end{tikzpicture}
+

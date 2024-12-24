@@ -1,0 +1,111 @@
+\subsection{勾股定理的例题}\label{subsec:czjh1-5-4}
+
+\liti 求图 \ref{fig:czjh1-5-18} 所示矩形零件上两孔中心 $A$ 和 $B$ 的距离（精确到 $0.1\;\haomi$）。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czjh1-ch5-18}
+    \caption{}\label{fig:czjh1-5-18}
+\end{figure}
+
+\jie $\because$ \quad $\triangle ABC$ 是直角三角形，根据勾股定理，得
+
+\qquad $AB^2 = AC^2 + BC^2$。
+
+$\therefore$ \quad $AB = \sqrt{AC^2 + BC^2}$。
+
+$\because$ \quad $AC = 40 - 21 = 19$， $BC = 60 - 21 = 39$，
+
+$\therefore$ \quad $AB = \sqrt{19^2 + 39^2} = \sqrt{1882}$。
+
+查表，得
+
+\qquad $AB = 43.4 \; (\haomi)$。
+
+答：两孔中心距离约为 $43.4 \;\haomi$。
+
+
+\liti 从直角三角形的直角顶点到斜边上的垂线，将斜边上的正方形分成两个矩形。
+求证：这两个矩形的面积分别等于两个直角边上的正方形的面积。
+
+已知；如图 \ref{fig:czjh1-5-19}， $Rt \triangle ABC$ 中，$\angle C = 90^\circ$，
+四边形 $ADEB$、$BKJC$、$CGFA$ 分别是 $\triangle ABC$ 三边上的正方形。
+$CI \perp AB$， 垂足为 $H$，交 $DE$ 于 $I$。
+
+求证： $S_{\text{正方形} CGFA} = S_{\text{矩形} ADIH}$， $S_{\text{正方形} BKJC} = S_{\text{矩形} HIEB}$。
+
+\zhengming 连结 $BF$、 $CD$。
+
+$\because$ \quad $\triangle ABF \quandeng \triangle ADC$ （$SAS$），
+
+$\therefore$ \quad $S_{\triangle ABF} = S_{\triangle ADC}$。
+
+$\because$ \quad \begin{zmtblr}[t]{}
+    $S_{\text{正方形} CGFA} = 2 S_{\triangle ABF}$， \\
+    $S_{\text{矩形} ADIH} = 2 S_{\triangle ADC}$（等底等高）， \\
+\end{zmtblr}
+
+$\therefore$ \quad $S_{\text{正方形} CGFA} = S_{\text{矩形} ADIH}$。
+
+同理可得，
+
+\qquad $S_{\text{正方形} BKJC} = S_{\text{矩形} HIEB}$。
+
+
+古代希腊数学家欧几里得曾把毕达哥拉斯定理编写在他所著的《几何原本》一书中，用上面的方法证明了这个定理。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch5-19}
+        \caption{}\label{fig:czjh1-5-19}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh1-ch5-20}
+        \caption{}\label{fig:czjh1-5-20}
+    \end{minipage}
+\end{figure}
+
+
+\liti 作长为 $\sqrt{2}$、$\sqrt{3}$、…、$\sqrt{7}$ 的各线段.
+
+分析：由勾股定理，
+直角边长为 $1$ 的直角三角形，斜边长就等于 $\sqrt{2}$、
+直角边长为 $\sqrt{2}$、$1$ 的直角三角形的斜边长就是 $\sqrt{3}$。
+以此类推，由此得到作法。
+
+
+\zuofa 1. 作直角边长为 $1$ 的等腰直角三角形 $ACB_1$ （图 \ref{fig:czjh1-5-20} ）。
+
+2. 以斜边 $AB_1$ 为一直角边， 作另一直角边长为 $1$ 的直角三角形 $AB_1B_2$。
+
+3. 顺次这样作下去，最后作到直角三角形 $AB_5B_6$， 这时斜边 $AB_1$、$AB_2$、…、$AB_6$
+的长度就是 $\sqrt{2}$、$\sqrt{3}$、…、$\sqrt{7}$。
+
+\zhengming 根据勾股定理， 在 $Rt \triangle ACB_1$ 中，
+
+$AB_1^2 = AC^2 + B_1C^2 = 1^2 + 1^2 = 2$。
+
+$\because$ \quad $AB_1 > 0$，
+
+$\therefore$ \quad $AB_1 = \sqrt{2}$。
+
+其他同理可证。
+
+
+\begin{lianxi}
+
+
+\xiaoti{已知 $CD$ 是 $Rt \triangle ABC$ 斜边 $AB$ 上的高，$BD = 1$， $\angle A = 30^\circ$。
+    求 $\triangle ABC$ 的面积。
+}
+
+\xiaoti{证明：在四边形 $ABCD$ 中，如果对角 $AC \perp BD$，那么
+    $$ AB^2 + CD^2 = AD^2 + BC^2 \juhao $$
+}
+
+\end{lianxi}
+

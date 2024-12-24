@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.06}
+    \pgfmathsetmacro{\a}{80*\factor} % 矩形的长
+    \pgfmathsetmacro{\b}{60*\factor} % 矩形的宽（高）
+    \pgfmathsetmacro{\r}{10*\factor}
+
+    \tkzDefPoints{
+        21*\factor/40*\factor/A,
+        60*\factor/21*\factor/B,
+        21*\factor/21*\factor/C,
+        0/0/O,
+        \a/0/P,
+        \a/\b/Q,
+        0/\b/R,
+        21*\factor/\b/Ax,
+        0/40*\factor/Ay,
+        60*\factor/0/Bx,
+        \a/21*\factor/By}
+
+    %
+    \tkzDrawPolygon(O,P,Q,R)
+    \tkzDrawPolygon[dashed](A,B,C)
+    \tkzMarkRightAngle(B,C,A)
+
+    \tkzDefShiftPoint[A](10*\factor,0){A'}
+    \tkzDefShiftPoint[B](10*\factor,0){B'}
+    \tkzDrawCircle[black](A,A')
+    \tkzDrawCircle[black](B,B')
+
+    \tkzDrawLine[add=0 and 0](A, Ax)
+    \tkzDrawSegments[dim={$21$,10pt,}](R,Ax)
+
+    \tkzDrawLine[add=0.7 and 0](A, Ay)
+    \tkzDrawSegments[dim={$40$,10pt,rotate=90}](O,Ay)
+
+    \tkzDrawLine[add=0.7 and 0](B, Bx)
+    \tkzDrawSegments[dim={$60$,-10pt,}](O,Bx)
+
+    \tkzDrawLine[add=0 and 0](B, By)
+    \tkzDrawSegments[dim={$21$,-10pt,rotate=90}](P,By)
+
+    \tkzLabelPoints[above right](A,B)
+    \tkzLabelPoints[below left](C)
+
+    % \begin{scope}[>=Stealth, every node/.style={fill=white, inner sep=1pt}]
+    %     \draw [<->] ($(O) + (0,-.5)$) to [xianduan={above=4cm}] node {$60$} ($(Bx) + (0,-.5)$);
+    %     \draw [<->] ($(R) + (0, .5)$) to [xianduan={below=3cm}] node {$20$} ($(Ax) + (0, .5)$);
+    % \end{scope}
+\end{tikzpicture}
+

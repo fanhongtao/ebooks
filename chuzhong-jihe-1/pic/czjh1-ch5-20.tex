@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 1/0/A, 0/1/B_1}
+    \tkzDrawPolygon(A,C,B_1)
+    \tkzLabelSegment[below](C,A){$1$}
+    \tkzLabelSegment[left](C,B_1){$1$}
+    \tkzLabelPoints[below](A,C)
+    \tkzLabelPoints[above left](B_1)
+
+    %
+    \foreach \n [remember=\n as \lastn (initially 1)] in {2,...,6} {
+        \tkzDefLine[perpendicular=through B_\lastn, normed](B_\lastn,A)  \tkzGetPoint{B_\n}
+        \tkzDrawPolygon(A,B_\lastn,B_\n)
+        \tkzAutoLabelPoints[center=A,dist=.1,above](B_\n)
+    }
+    \tkzLabelSegment[above left](B_1,B_2){$1$}
+\end{tikzpicture}
+
