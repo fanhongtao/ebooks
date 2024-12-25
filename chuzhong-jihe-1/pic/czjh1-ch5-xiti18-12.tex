@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\abc}{30} % 角 ABC 的度数
+    \pgfmathsetmacro{\c}{4}
+
+    \tkzDefPoints{0/0/B, \c/0/C, \c/\c/D}
+    \tkzDefPointBy[rotation=center B angle \abc](C)  \tkzGetPoint{a}
+    \tkzDefPointBy[projection=onto B--a](C)  \tkzGetPoint{A}
+    \tkzDrawPolygon[fill=gray!20](A,B,C)
+
+    \tkzDefPointOnLine[pos=.5](B,D)  \tkzGetPoint{O}
+    \foreach \n in {90, 180, 270} {
+        \tkzDefPointBy[rotation=center O angle \n](A)  \tkzGetPoint{A'}
+        \tkzDefPointBy[rotation=center O angle \n](B)  \tkzGetPoint{B'}
+        \tkzDefPointBy[rotation=center O angle \n](C)  \tkzGetPoint{C'}
+        \tkzDrawPolygon[fill=gray!20](A',B',C')
+    }
+
+    \tkzLabelSegment[below left](A,C){$b$}
+    \tkzLabelSegment[below right](A,B){$a$}
+    \tkzLabelSegment[below](B,C){$c$}
+    \tkzLabelSegment[right](C,D){$c$}
+\end{tikzpicture}
+

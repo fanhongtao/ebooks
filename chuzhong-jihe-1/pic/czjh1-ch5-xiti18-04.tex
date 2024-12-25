@@ -1,0 +1,53 @@
+\begin{tikzpicture}[scale=0.04]
+    \pgfmathsetmacro{\r}{134}
+
+    \tkzDefPoints{0/0/B, 77/0/C}
+    \tkzDefLine[perpendicular=through C](B,C)  \tkzGetPoint{a}
+    \tkzInterLC[R](C,a)(B,\r)  \tkzGetPoint{A}
+
+    \tkzDrawPolygon[densely dash dot](A,B,C)
+
+    \tkzDefShiftPoint[A](2,0){A'}
+    \tkzDefShiftPoint[B](2,0){B'}
+    \tkzDrawCircle[black](A,A')
+    \tkzDrawCircle[black](B,B')
+
+    \tkzLabelPoints[below right,xshift=-.4em](A)
+    \tkzLabelPoints[above right, xshift=1em](B)
+    \tkzLabelPoints[above left](C)
+
+    \tkzDefLine[perpendicular=through A, K=0.1](B,A)  \tkzGetPoint{A1}
+    \tkzDefLine[perpendicular=through B, K=0.1](B,A)  \tkzGetPoint{B2}
+    % \tkzDrawSegments(A1,B2)
+
+    \tkzDefLine[perpendicular=through B, K=-0.1](B,C)  \tkzGetPoint{B1}
+    \tkzDefLine[perpendicular=through C, K=-0.1](B,C)  \tkzGetPoint{C2}
+    % \tkzDrawSegments(B1,C2)
+
+    \tkzDefLine[perpendicular=through C, K=-0.1](C,A)  \tkzGetPoint{C1}
+    \tkzDefLine[perpendicular=through A, K=-0.1](C,A)  \tkzGetPoint{A2}
+    % \tkzDrawSegments(C1,A2)
+
+    \tkzFindAngle(C,B,A)  \tkzGetAngle{cba}
+    \pgfmathsetmacro{\stopangle}{\cba + 80}
+    \draw % [red]
+        (A2)
+        arc [radius=9.6, start angle=0,  end angle=\stopangle]
+        -- (B2)
+        arc [radius=8.5, start angle=\stopangle, end angle=270]
+        -- (C2)
+        arc [radius=7.8, start angle=270, end angle=360]
+        -- (A2)
+        ;
+
+    %
+    \tkzDrawSegments(A,A1 B,B2)
+    \tkzDrawSegments[dim={$134$,-10pt,rotate=\cba}](A1,B2)
+
+    \tkzDrawSegments(B,B1 C,C2)
+    \tkzDrawSegments[dim={$77$,-10pt,}](B1,C2)
+
+    \tkzDrawSegments(C,C1 A,A2)
+    \tkzDrawSegments[dim={$x$,-10pt,rotate=90}](C1,A2)
+\end{tikzpicture}
+

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=0.7]
+    \pgfmathsetmacro{\a}{3}
+    \pgfmathsetmacro{\b}{1.5}
+    \pgfmathsetmacro{\d}{-10}
+
+    \coordinate (A) at (0,\b,0);
+    \coordinate (B) at (\a,0,0);
+    \coordinate (C) at (0,0,0);
+    \coordinate (A') at (0,\b,\d);
+    \coordinate (B') at (\a,0,\d);
+    % \coordinate (C') at (0,0,\d);
+
+    \draw (A) -- (B) -- (C) -- (A);
+    \draw (A) -- (A') -- (B') -- (B);
+
+    \foreach \n [count=\i] in {0.3,0.6,0.9} {
+        \coordinate (X\i) at ($(A)!\n!(B)$);
+        \coordinate (X{\i}') at ($(A')!\n!(B')$);
+        \draw (X\i) -- (X{\i}');
+    }
+
+    \foreach \n [count=\i] in {0.33,0.66} {
+        \coordinate (Y\i) at ($(A)!\n!(A')$);
+        \coordinate (Y{\i}') at ($(B)!\n!(B')$);
+        \draw (Y\i) -- (Y{\i}');
+    }
+
+    \node [below] at ($(B)!.5!(C)$) {$a$};
+    \node [left]  at ($(A)!.5!(C)$) {$b$};
+    \node [below right] at ($(B)!.5!(B')$) {$d$};
+\end{tikzpicture}
+

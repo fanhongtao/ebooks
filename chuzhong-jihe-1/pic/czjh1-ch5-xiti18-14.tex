@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 5/2/C, 1/2/D}
+    \tkzDefLine[altitude](A,D,B)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](A,C,B)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \tkzDrawSegments[dashed](D,E)
+    \tkzDrawSegments[dashed](C,F  F,B)
+
+    \tkzLabelSegment[below](A,B){$a$}
+    \tkzLabelSegment[above left](A,D){$b$}
+    \tkzLabelSegment[pos=0.7, above](A,C){$m$}
+    \tkzLabelSegment[pos=0.7, above](B,D){$n$}
+
+    \tkzLabelPoints[below](A,B,E,F)
+    \tkzLabelPoints[above](C,D)
+\end{tikzpicture}
+

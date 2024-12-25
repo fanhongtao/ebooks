@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 4/0/B, 4/3/A}
+    \tkzDrawSegments(A,C)
+    \tkzDrawSegments[dashed](A,B)
+    \tkzDrawLine[add=0 and 0.2](C,B)
+    \tkzMarkRightAngle[size=0.2](A,B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[left](C)
+
+    %
+    \tkzDefPointOnLine[pos=0.5](A,B)  \tkzGetPoint{O}
+    \tkzDrawEllipse[
+        pattern={mylines[angle=65, distance={4pt}]},
+        decorate, decoration={random steps,segment length=3pt,amplitude=1pt}
+    ](O,0.5,1.2,0)
+\end{tikzpicture}
+
