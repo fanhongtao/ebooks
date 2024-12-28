@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\begin{scope}
+		\pgfmathsetmacro{\a}{2}
+		\pgfmathsetmacro{\b}{1}
+		\pgfmathsetmacro{\c}{1}
+		\draw [dashed] (0,0,0) -- (0,0,-\c) -- (0,\b,-\c);
+		\draw [dashed] (0,0,-\c) -- (\a,0,-\c);
+		\draw (0,0,0) -- (\a,0,0) -- (\a,\b,0) -- (0,\b,0) -- cycle;
+		\draw (\a,0,0) -- (\a,\b,0) -- (\a,\b,-\c) -- (\a,0,-\c) --cycle;
+		\draw (0,\b,0) -- (0,\b,-\c) -- (\a,\b,-\c) -- (\a,\b,0) -- cycle;
+	\end{scope}
+
+	\tdplotsetmaincoords{60}{0}
+	\begin{scope}[tdplot_main_coords, scale=0.7, xshift=6cm]
+		\pgfmathsetmacro{\r}{1}
+		\pgfmathsetmacro{\h}{2}
+
+		\draw plot[smooth,variable=\t,domain=\tdplotmainphi:\tdplotmainphi-180]
+				({\r*cos(\t)},{\r*sin(\t)},\h)
+			-- plot[smooth,variable=\t,domain=\tdplotmainphi-180:\tdplotmainphi]
+				({\r*cos(\t)},{\r*sin(\t)},0) -- cycle;
+		\draw plot[smooth,variable=\t,domain=0:360] ({\r*cos(\t)},{\r*sin(\t)},\h);
+		\draw [dashed] plot[smooth,variable=\t,domain=0:360] ({\r*cos(\t)},{\r*sin(\t)},0);
+	\end{scope}
+\end{tikzpicture}
+
