@@ -1,0 +1,36 @@
+% 将本书的 pic/ 目录下所有图片，按文件名顺序显示出来。
+% 方便快速查找图片，以便借鉴其实现。
+\documentclass[UTF8, 11pt, oneside]{ctexbook}
+\input{../src/czjh1-styles}
+\input{../src/czjh1-symbols}
+\input{../src/czjh1-tikz-snippets}
+
+\begin{document}
+
+% czjh1-ch1-subsec6 中的定义
+% 这种提前定义的写法，会使绘图的 .tex 文件更简洁，
+% 但换一个地方使用，又需要自行定义。后期尽量不这样写。
+\def\baseabc{
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(0:2){A}
+    \tkzDefPoint(40:2){B}
+    \tkzDrawSegments(O,A  O,B)
+    \tkzLabelPoints[below](O, A)
+    \tkzLabelPoints[right](B)
+}
+\def\comparedabc{
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(0:2){A}
+    \tkzDefPoint(40:2){B}
+    \tkzDrawSegments(O,A  O,B)
+    \tkzLabelPoint[below](O){$(O)$}
+    \tkzLabelPoint[below](A){$(A)$}
+
+    \tkzLabelPoint[above](O){$O'$}
+    \tkzLabelPoint[above](A){$A'$}
+}
+
+% all_pics.tex 文件由根目录下的 create_all_pics.sh 生成
+\input{all_pics.tex}
+
+\end{document}
