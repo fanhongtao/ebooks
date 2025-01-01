@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C}
+    \tkzInterCC[R](B,4)(C,2.8)  \tkzGetFirstPoint{A}
+    \tkzDefPointOnLine[pos=15/40](A,B)  \tkzGetPoint{D}
+    \tkzDefLine[parallel=through D](B,C)  \tkzGetPoint{e}
+    \tkzInterLL(A,C)(D,e)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(D,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[right](C,E)
+\end{tikzpicture}
+

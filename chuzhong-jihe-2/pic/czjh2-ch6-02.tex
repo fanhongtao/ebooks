@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{3}
+    \pgfmathsetmacro{\b}{1.2}
+    \pgfmathsetmacro{\c}{2}
+    \pgfmathsetmacro{\d}{0.8}
+
+    \begin{scope}
+        \tkzDefPoints{0/0/A, \a/0/B, \a/\c/C, 0/\c/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments[dim={$a$,-10pt,}](A,B)
+        \tkzDrawSegments[dim={$c$, 10pt,rotate=90}](A,D)
+    \end{scope}
+
+    \begin{scope}[xshift=4cm]
+        \tkzDefPoints{0/0/A, \b/0/B, \b/\d/C, 0/\d/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments[dim={$b$,-10pt,}](A,B)
+        \tkzDrawSegments[dim={$d$,-10pt,rotate=90}](B,C)
+    \end{scope}
+\end{tikzpicture}
+

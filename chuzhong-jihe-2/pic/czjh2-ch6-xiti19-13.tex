@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/xa1, 3/0/xa2, 0/1.5/xb1, 3/1.5/xb2, 0/2.5/xc1, 3/2.5/xc2}
+    \tkzDefPoints{1.1/3/ya1, 0.5/-0.5/ya2, 1.6/3/yb1, 2.5/-0.5/yb2}
+
+    \tkzInterLL(xc1,xc2)(ya1,ya2)  \tkzGetPoint{A}
+    \tkzInterLL(xc1,xc2)(yb1,yb2)  \tkzGetPoint{C}
+    \tkzInterLL(xb1,xb2)(ya1,ya2)  \tkzGetPoint{E}
+    \tkzInterLL(xb1,xb2)(yb1,yb2)  \tkzGetPoint{F}
+    \tkzInterLL(xa1,xa2)(ya1,ya2)  \tkzGetPoint{B}
+    \tkzInterLL(xa1,xa2)(yb1,yb2)  \tkzGetPoint{D}
+
+    \tkzDrawSegments(xa1,xa2  xb1,xb2  xc1,xc2)
+    \tkzDrawSegments(ya1,ya2  yb1,yb2)
+    \tkzLabelPoints[above left](A,B,E)
+    \tkzLabelPoints[above right](C,D,F)
+\end{tikzpicture}
+

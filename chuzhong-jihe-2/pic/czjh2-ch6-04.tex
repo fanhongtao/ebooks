@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\l}{4}
+
+    % 0
+    \tkzDefPoints{0/0/A, \l/0/B}
+    \tkzDrawSegments(A,B)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+
+    % 1
+    \tkzDefPointOnLine[pos=0.5](A,B)  \tkzGetPoint{d1}
+    \tkzDefLine[perpendicular=through B](A,B)  \tkzGetPoint{d2}
+    \tkzInterLC(B,d2)(B,d1)  \tkzGetSecondPoint{D}
+    \tkzDrawSegment(B,D)
+    \tkzLabelPoints[right](D)
+
+    % 2
+    \tkzDrawSegment(A,D)
+    \tkzInterLC(A,D)(D,B)  \tkzGetFirstPoint{E}
+    \tkzDrawArc[towards](D,E)(B)
+    \tkzLabelPoints[above](E)
+
+    % 3
+    \tkzInterLC(A,B)(A,E)  \tkzGetSecondPoint{C}
+    \tkzDrawArc[towards](A,C)(E)
+    \tkzLabelPoints[below](C)
+\end{tikzpicture}
+

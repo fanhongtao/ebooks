@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=0.12]
+    \tkzDefPoints{0/0/B, 15/0/C}
+    \tkzDefPointOnLine[pos=0.7](B,C)  \tkzGetPoint{H}
+    \tkzDefShiftPoint[H](0,6){G}  % GH = 6
+    \tkzDefShiftPoint[H](0,30){A} % 计算得到 AH = 30
+    \tkzDefLine[parallel=through G](B,C)  \tkzGetPoint{d}
+    \tkzInterLL(G,d)(A,B)  \tkzGetPoint{D}
+    \tkzInterLL(G,d)(A,C)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(D,E  A,H)
+    \tkzMarkRightAngle[size=2](C,H,A)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[right](C,E)
+    \tkzLabelPoints[below](H)
+    \tkzLabelPoints[above left](G)
+
+    % \tkzCalcLength(D,E)  \tkzGetLength{de}
+    % \tkzLabelSegment(D,E){\de}
+\end{tikzpicture}
+

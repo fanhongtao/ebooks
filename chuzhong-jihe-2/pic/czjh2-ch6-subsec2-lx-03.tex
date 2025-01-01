@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.3]
+    \begin{scope}
+        \pgfmathsetmacro{\a}{8}
+        \pgfmathsetmacro{\b}{6}
+        \tkzDefPoints{0/0/A, \a/0/B, \a/\b/C, 0/\b/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments[dim={$\a$,-10pt,}](A,B)
+        \tkzDrawSegments[dim={$\b$, 10pt,rotate=90}](A,D)
+    \end{scope}
+
+    \begin{scope}[xshift=11cm]
+        \pgfmathsetmacro{\a}{8}
+        \pgfmathsetmacro{\b}{4}
+        \tkzDefPoints{0/0/A, \a/0/B, \a/\b/C, 0/\b/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments[dim={$\a$,-10pt,}](A,B)
+        \tkzDrawSegments[dim={$\b$, 10pt,rotate=90}](A,D)
+    \end{scope}
+
+    \begin{scope}[xshift=22cm]
+        \pgfmathsetmacro{\a}{6}
+        \pgfmathsetmacro{\b}{4.5}
+        \tkzDefPoints{0/0/A, \a/0/B, \a/\b/C, 0/\b/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments[dim={$\a$,-10pt,}](A,B)
+        \tkzDrawSegments[dim={$\b$, 10pt,rotate=90}](A,D)
+    \end{scope}
+\end{tikzpicture}
+

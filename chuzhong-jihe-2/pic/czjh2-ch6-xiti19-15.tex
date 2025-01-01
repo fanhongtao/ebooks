@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3.6/0/C}
+    \tkzInterCC[R](B,2.8)(C,3.5)  \tkzGetFirstPoint{A}
+    \tkzDefPointOnLine[pos=4/9](B,C)  \tkzGetPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(A,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](D)
+\end{tikzpicture}
+
