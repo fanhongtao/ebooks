@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/xa1, 3/0/xa2, 0/0.6/xb1, 3/0.6/xb2, 0/1.2/xc1, 3/1.2/xc2, 0/1.8/xd1, 3/1.8/xd2, 0/2.4/xe1, 3/2.4/xe2}
+    \tkzDefPoints{0.5/2.46/xxa1, 2/2.46/xxa2, 0.5/2.52/xxb1, 2/2.52/xxb2, 0.5/2.58/xxc1, 2/2.58/xxc2, 0/2.64/xxd1, 2.5/2.64/xxd2}
+    \tkzDefPoints{1.1/3/ya1, 0.5/-0.5/ya2, 1.6/3/yb1, 2.5/-0.5/yb2}
+
+    \tkzInterLL(xxd1,xxd2)(ya1,ya2)  \tkzGetPoint{A}
+    \tkzInterLL(xxd1,xxd2)(yb1,yb2)  \tkzGetPoint{D}
+    \tkzInterLL(xe1,xe2)(ya1,ya2)  \tkzGetPoint{G}
+    \tkzInterLL(xb1,xb2)(ya1,ya2)  \tkzGetPoint{B}
+    \tkzInterLL(xb1,xb2)(yb1,yb2)  \tkzGetPoint{E}
+    \tkzInterLL(xa1,xa2)(ya1,ya2)  \tkzGetPoint{C}
+    \tkzInterLL(xa1,xa2)(yb1,yb2)  \tkzGetPoint{F}
+
+    \tkzDrawSegments(xa1,xa2  xb1,xb2  xc1,xc2  xd1,xd2  xe1,xe2)
+    \tkzDrawSegments(xxa1,xxa2  xxb1,xxb2  xxc1,xxc2  xxd1,xxd2)
+    \tkzDrawSegments(ya1,ya2  yb1,yb2)
+    \tkzLabelSegment[pos=1, right](xxd1,xxd2){$l_1$}
+    \tkzLabelSegment[pos=1, right](xd1,xd2){$l'$}
+    \tkzLabelSegment[pos=1, right](xc1,xc2){$l''$}
+    \tkzLabelSegment[pos=1, right](xb1,xb2){$l_2$}
+    \tkzLabelSegment[pos=1, right](xa1,xa2){$l_3$}
+    \tkzLabelSegment[pos=0, above](ya1,ya2){$a$}
+    \tkzLabelSegment[pos=0, above](yb1,yb2){$b$}
+    \tkzLabelPoints[above left](A,B,C)
+    \tkzLabelPoints[above right](D,E,F)
+    \tkzLabelPoints[below left](G)
+\end{tikzpicture}
+

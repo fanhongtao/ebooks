@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.3] % 复杂
+    % 原题中并没有给出三条平行线的间隔
+    % 但 M 点能连接 A、B、C、D，所以将 M 点设置为原点。
+    \tkzDefPoints{0/0/M, 1/0/m}
+    % AM=3，所以 l_1 的 y 值小于3，这里任意取为 2.8
+    % EF = 15, E在M点右上方，同时还得考虑：l_1 和 l_2 之间的间距要小于 l_2 和 l_3 之间的间距(原图中能看出)
+    % 所以将 E 点的 x 坐标设置成 8
+    \tkzDefPoints{0/2.8/xa1, 1/2.8/xa2, 8/2.8/E}
+    \tkzInterLC[R](xa1,xa2)(M,3)    \tkzGetSecondPoint{A}  % AM = 3
+    \tkzInterLC[R](xa1,xa2)(M,4.5)  \tkzGetSecondPoint{C}  % CM = 4.5
+    \tkzDefPointOnLine[pos=8/3](A,M)  \tkzGetPoint{B}      % AB = AM + BM = 3 + 5 = 8
+    \tkzDefLine[parallel=through B](M,m)  \tkzGetPoint{b}
+    \tkzInterLC[R](B,b)(E,15)    \tkzGetFirstPoint{F}      % EF= 15
+    \tkzInterLL(C,M)(B,b)  \tkzGetPoint{D}
+    \tkzInterLL(E,F)(M,m)  \tkzGetPoint{K}
+
+    \tkzDrawLine[add=6 and 9](xa1,xa2) \tkzLabelSegment[pos=12,left](xa1,xa2){$l_1$}
+    \tkzDrawLine[add=6 and 9](M,m)     \tkzLabelSegment[pos=12,left](M,m){$l_2$}
+    \tkzDrawLine[add=8 and 7](B,b)     \tkzLabelSegment[pos=10,left](B,b){$l_3$}
+    \tkzDrawPoints(M,K)
+    % \tkzDrawSegments(M,A  M,B  M,C  M,D  E,F)
+    \tkzDrawLine[add=0.2 and 0.2](A,B)
+    \tkzDrawLine[add=0.2 and 0.2](C,D)
+    \tkzDrawLine[add=0.2 and 0.2](E,F)
+    \tkzLabelPoints[above](C,E,F,D)
+    \tkzLabelPoints[above, xshift=.5em](A)
+    \tkzLabelPoints[below right](B)
+    \tkzLabelPoints[below](K)
+    \tkzLabelPoints[below left](M)
+\end{tikzpicture}
+

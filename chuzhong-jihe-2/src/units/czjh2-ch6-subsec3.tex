@@ -1,0 +1,195 @@
+\subsection{平行线分线段成比例定理}\label{subsec:czjh2-6-3}
+\begin{enhancedline}
+
+\begin{wrapfigure}[9]{r}{4.5cm}
+    \centering
+    \input{../pic/czjh2-ch6-05}
+    \caption{}\label{fig:czjh2-6-5}
+\end{wrapfigure}
+
+在四边形一章里，我们学过平行线分线段定理。如图 \ref{fig:czjh2-6-5}， $l_1 \pingxing l_2 \pingxing l_3$，
+如果 $AB = BC$，那么 $DE = EF$。
+
+由于 $\dfrac{AB}{BC} = 1$， $\dfrac{DE}{EF} = 1$，我们可得比例：
+$$ \dfrac{AB}{BC} = \dfrac{DE}{EF} \juhao $$
+
+这就是说，平行线等分线段时，分得的线段成比例。
+
+下面我们来研究平行线不等分线段的情形。如图 \ref{fig:czjh2-6-6}， $l_1 \pingxing l_2 \pingxing l_3$，
+如果 $AB \neq BC$，那么四条线段 $AB$、$BC$、$DE$、$EF$ 是否也有比例关系。
+
+以 $B$ 为起点，在 $BA$ 上顺次截取和 $BC$ 相等的线段，有以下几种可能情形：
+
+（1）如果截取 3 次正好截尽，这些分点和点 $B$ 四等分线段 $AC$（图 \ref{fig:czjh2-6-6} 甲），
+这时 $\dfrac{AB}{BC} = 3$。经过分点分别作 $l'$、$l''$ 平行 $l_1$。
+根据平行线等分线段定理，$l'$、$l''$ 和 $l_2$ 也等分线段 $DF$，
+即 $DE = 3EF$， $\dfrac{DE}{EF} = 3$。这就得到
+$$ \dfrac{AB}{BC} = \dfrac{DE}{EF} \juhao $$
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh2-ch6-06-a}
+        \caption*{甲}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh2-ch6-06-b}
+        \caption*{乙}
+    \end{minipage}
+    \caption{}\label{fig:czjh2-6-6}
+\end{figure}
+
+
+（2）如果截取三次后还剩余一条小于 $BC$ 的线段 $GA$（图 \ref{fig:czjh2-6-6} 乙），
+那么再以 $G$ 为起点，在 $GA$ 上顺次截取等于 $\dfrac{BC}{10}$ 的线段，
+截 4 次正好截尽，这时 $\dfrac{AB}{BC} = 3.4$。
+运用（1）中那样作平行线的方法，可以得到 $\dfrac{DE}{EF} = 3.4$，
+因此也有
+$$ \dfrac{AB}{BC} = \dfrac{DE}{EF} \juhao $$
+
+（3）如果 $\dfrac{AB}{BC} = 3.47$，同样也有 $\dfrac{DE}{EF} = 3.47$；
+如果 $\dfrac{AB}{BC} = 3.476$，也有 $\dfrac{DE}{EF} = 3.476$；
+如果 $\dfrac{AB}{BC} = 3.476\cdots$，也有 $\dfrac{DE}{EF} = 3.476\cdots$。
+
+这样，对于 $\dfrac{AB}{BC}$ 是任何实数，都可得
+$$ \dfrac{AB}{BC} = \dfrac{DE}{EF} \juhao $$
+
+利用合比性质，可得
+$$ \dfrac{AB}{AC} = \dfrac{DE}{DF} \juhao $$
+
+
+这样,我们就得到
+
+\begin{dingli}[平行线分线段成比例定理]
+    三条平行线截两条直线，所得的对应线段成比例。
+\end{dingli}
+
+如图 \ref{fig:czjh2-6-7}，在 $\triangle ABC$ 中，已知 $DE \pingxing BC$。
+过点 $A$ 作 $MN \pingxing DE$，依据上述定理得：
+$$ \dfrac{AD}{DB} = \dfrac{AE}{EC}  \quad \text{或} \quad  \dfrac{AD}{AB} = \dfrac{AE}{AC} \juhao $$
+
+这样,就得到
+
+\begin{tuilun}[推论]
+    平行于三角形一边的直线截其他两边，所得的对应线段成比例。
+\end{tuilun}
+
+利用比例的性质，从推论还可以得到图 \ref{fig:czjh2-6-7} 中对应线段的各种比例。
+例如 $\dfrac{AD}{AE} = \dfrac{DB}{EC} = \dfrac{AB}{AC}$ 等。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-07}
+        \caption{}\label{fig:czjh2-6-7}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-08}
+        \caption{}\label{fig:czjh2-6-8}
+    \end{minipage}
+\end{figure}
+
+
+\liti \zhongdian{作已知线段 $a$、$b$、$c$ 的第四比例项。}
+
+已知：线段 $a$、$b$、$c$。
+
+求作：线段 $x$，使 $a:b = c:x$。
+
+\zuofa 如图 \ref{fig:czjh2-6-8}。
+
+1. 作以点 $O$ 为端点的射线 $OM$ 和 $ON$。
+
+2. 在 $OM$ 上依次截取 $OA = a$， $AB = b$； 在 $ON$ 上截取 $OC = c$。
+
+3. 连结 $AC$。 过点 $B$ 作 $BD \pingxing AC$，交 $ON$ 于点 $D$。
+
+$CD$ 就是所求的线段 $x$。
+
+证明略。
+
+
+\liti \begin{dingli}
+    平行于三角形的一边，并且和其他两边相交的直线，所截得的三角形的三边与原三角形三边对应成比例。
+\end{dingli}
+
+已知： $\triangle ABC$ 中， $DE \pingxing BC$， 分别交 $AB$、$AC$ 于 $D$、$E$（图 \ref{fig:czjh2-6-9}）。
+
+求证： $\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{AE}{BC}$。
+
+分析：由本节定理的推论可以直接得到
+$$ \dfrac{AD}{AB} = \dfrac{AE}{AC} \juhao $$
+
+$\dfrac{DE}{BC}$ 中的 $DE$ 不在 $\triangle ABC$ 的边 $BC$ 上，我们不能直接利用前面所学的定理。
+但从比例 $\dfrac{AD}{AB} = \dfrac{DE}{BC}$ 可以看出，除 $DE$ 以外，其他线段都在 $\triangle ABC$ 的边上，
+因此，我们只要将 $DE$ 移到 $BC$ 边上去，得 $CF = DE$，然后再证明 $\dfrac{AD}{AB} = \dfrac{CF}{BC}$ 就可以了。
+这只要过点 $D$ 作 $DF \pingxing AC$，交 $BC$ 于点 $F$， $CF$ 就是平移 $DE$ 所得的线段。
+
+\zhengming 过点 $D$ 作 $DE \pingxing AC$，交 $BC$ 于点 $F$。
+
+$\left. \begin{aligned}
+    & \left. \begin{aligned}
+        DE \pingxing BC \\
+        DF \pingxing AC
+    \end{aligned} \right\} \tuichu DE = FC \\
+    & DF \pingxing AC  \tuichu \dfrac{AD}{AB} = \dfrac{FC}{BC}
+\end{aligned} \; \right\} \tuichu \dfrac{AD}{AB} = \dfrac{DE}{BC} \juhao$
+
+$DE \pingxing BC  \tuichu \dfrac{AD}{AB} = \dfrac{AE}{AC}$。
+
+$\therefore$ \quad $\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}$。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-09}
+        \caption{}\label{fig:czjh2-6-9}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec3-lx-01}
+        \caption*{（第 1 题）}
+    \end{minipage}
+\end{figure}
+
+
+\begin{lianxi}
+
+\xiaoti{已知：如图， $l_1 \pingxing l_2 \pingxing l_3$。
+    $AM = 3$ 厘米，$BM = 5$ 厘米，$CM = 4.5$ 厘米，$EF = 15$ 厘米。
+    求 $DM$、$EK$、$FK$ 的长。
+}
+
+\xiaoti{已知：线段 $a$、$b$。求作： 线段 $a$、$b$ 的第三比例线段
+    （即求作 $x$，使 $a:b = b:x$）。
+}
+
+\xiaoti{平行于 $\triangle ABC$ 的边 $BC$ 的直线，与另两边 $AB$、$AC$
+    （或 $BA$、$CA$）的延长线相交于点 $D$、$E$，画出图形，并说出图中所有的成比例线段。
+}
+
+\xiaoti{已知：如图 \ref{fig:czjh2-6-9}， $DE \pingxing BC$， $DF \pingxing AC$。
+    判断下列比例是否正确，不对的加以改正：
+}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$\dfrac{AD}{BD} = \dfrac{DE}{BC}$；}
+            & \xxt{$\dfrac{AE}{EC} = \dfrac{BF}{FC}$；}
+            & \xxt{$\dfrac{DF}{AC} = \dfrac{DE}{BC}$。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\end{lianxi}
+
+\end{enhancedline}
+

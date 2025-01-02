@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{1.6}
+    \pgfmathsetmacro{\b}{2}
+    \pgfmathsetmacro{\c}{1.3}
+
+    \begin{scope}[yshift=2cm]
+        \tkzDefPoints{0/0/c1, \c/0/c2, 0/0.6/b1, \b/0.6/b2, 0/1.2/a1, \a/1.2/a2}
+        % \tkzDrawSegments[xianduan={above=3pt,below=3pt}](a1,a2)
+        % \tkzDrawSegments[xianduan={above=3pt,below=3pt}](b1,b2)
+        % \tkzDrawSegments[xianduan={above=3pt,below=3pt}](c1,c2)
+        % \tkzLabelSegment[above](a1,a2){$a$}
+        \foreach \x in {a,b,c} {
+            \tkzDrawSegments[xianduan={above=3pt,below=3pt}](\x1,\x2)
+            \tkzLabelSegment[above](\x1,\x2){$\x$}
+        }
+    \end{scope}
+
+    \begin{scope}
+        % 1
+        \tkzDefPoints{0/0/O, 4/0/M, 3.5/2/N}
+        \tkzDrawSegments(O,M  O,N)
+        \tkzLabelPoints[left](O)
+        \tkzLabelPoints[right](M,N)
+
+        % 2
+        \tkzInterLC[R](O,M)(O,\a)  \tkzGetSecondPoint{A}
+        \tkzInterLC[R](O,M)(A,\b)  \tkzGetSecondPoint{B}
+        \tkzLabelSegment[below](O,A){$a$}
+        \tkzLabelSegment[below](A,B){$b$}
+        \tkzLabelPoints[below](A,B)
+
+        \tkzInterLC[R](O,N)(O,\c)  \tkzGetSecondPoint{C}
+        \tkzLabelSegment[above](O,C){$c$}
+        \tkzLabelPoints[above](C)
+
+        % 3
+        \tkzDrawSegment(A,C)
+        \tkzDefLine[parallel=through B](A,C)  \tkzGetPoint{d}
+        \tkzInterLL(O,N)(B,d)  \tkzGetPoint{D}
+        \tkzDrawSegment(B,D)
+        \tkzLabelSegment[above](C,D){$x$}
+        \tkzLabelPoints[above](D)
+    \end{scope}
+\end{tikzpicture}
+

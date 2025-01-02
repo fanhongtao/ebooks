@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C, 2/1.5/A}
+    \tkzDefPoints{0/1.5/M, 3/1.5/N}
+    \tkzDefPointOnLine[pos=0.6](A,B)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=0.6](A,C)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(D,E)
+    \tkzDrawSegment[dashed](M,N)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D,M)
+    \tkzLabelPoints[right](C,E,N)
+\end{tikzpicture}
+
