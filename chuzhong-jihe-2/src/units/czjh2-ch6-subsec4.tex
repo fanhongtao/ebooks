@@ -1,0 +1,83 @@
+\subsection{三角形一边的平行线的判定}\label{subsec:czjh2-6-4}
+\begin{enhancedline}
+
+上一节我们研究了平行于三角形一边的直线截三角形另两边所得对应线段成比例。下面，我们来研究它的逆命题是否成立。
+
+\begin{wrapfigure}[6]{r}{4.5cm}
+    \centering
+    \input{../pic/czjh2-ch6-10}
+    \caption{}\label{fig:czjh2-6-10}
+\end{wrapfigure}
+
+如图 \ref{fig:czjh2-6-10}， 在 $\triangle ABC$ 中，$\dfrac{AD}{AB} = \dfrac{AE}{AC}$ ，那么 $DE$ 和 $BC$ 是不是平行呢？
+
+以前，我们判定两条直线平行，一般要用到角相等或线段相等，但现在的问题里没有这样的条件，所以需要考虑另外的途径。
+
+我们来看，假如在已知条件下 $BC$ 和 $DE$ 不平行会发生什么情况。
+过点 $B$ 作直线 $BC' \pingxing DE$，交直线 $AC$ 于点 $C'$。
+这时 $C'$ 和 $C$ 是不同的两点，因而 $AC' \neq AC$。但是，
+
+$$ \left. \begin{aligned}
+    BC' \pingxing DE \tuichu & \dfrac{AD}{AB} = \dfrac{AE}{AC'} \\
+                             & \dfrac{AD}{AB} = \dfrac{AE}{AC}
+\end{aligned} \right\} \tuichu AC' = AC \juhao
+$$
+
+这样就出现 $AC' \neq AC$ 和 $AC' = AC$ 两种相矛盾的结果。
+出现矛盾的原因就是我们作了假设 $BC$ 和 $DE$ 不平行造成的，这说明我们所做的假设是错误的。
+因此，$BC \pingxing DE$。由此得到下面的定理：
+
+\begin{dingli}[定理]
+    如果一条直线截三角形的两边，其中一边上截得的一条线段和这边与另一边上截得的对应线段和另一边成比例，那么，这条直线平行于第三边。
+\end{dingli}
+
+根据比例的性质，我们很容易得到下面的推论：
+
+\begin{tuilun}[推论]
+    如果一条直线截三角形的两边所得的对应线段成比例，那么这条直线平行于三角形的第三边。
+\end{tuilun}
+
+例如，图 \ref{fig:czjh2-6-10} 中，如果 $\dfrac{AB}{AD} = \dfrac{AC}{AE}$ 或 $\dfrac{AD}{DB} = \dfrac{AE}{EC}$，那么 $DE \pingxing BC$。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-11}
+        \caption{}\label{fig:czjh2-6-11}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec4-lx-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+\end{figure}
+
+\liti[0] 已知：如图 \ref{fig:czjh2-6-11}， $AB \pingxing A'B'$， $BC \pingxing B'C'$。
+
+求证： $AC \pingxing A'C'$。
+
+$\left. \begin{aligned}
+    \text{\zhengming}
+    AB \pingxing A'B'  \tuichu  \dfrac{OA}{OA'} = \dfrac{OB}{OB'} \\
+    BC \pingxing B'C'  \tuichu  \dfrac{OC}{OC'} = \dfrac{OB}{OB'}
+\end{aligned}\right\} \tuichu \dfrac{OA}{OA'} = \dfrac{OC}{OC'}  \tuichu  AC \pingxing A'C' \juhao$
+
+
+\begin{lianxi}
+
+\xiaoti{一条直线交 $\triangle ABC$ 的边 $AB$ 于点 $D$，交边 $AC$ 于点 $E$。如果 \\
+    （1） $AD = 3$ 厘米， $BD = 4$ 厘米， $AE = 1.8$ 厘米， $CE = 2.4$ 厘米； \\
+    （2） $AB = 11$ 厘米， $BD = 6$ 厘米， $AC = 4.4$ 厘米， $AE = 2.1$ 厘米；\\
+    $DE$ 和 $BC$ 是否平行？
+}
+
+\xiaoti{$D$、$E$ 分别是 $\triangle ABC$ 两边 $AB$、$AC$ 上的点，哪些线段成比例能推出 $DE \pingxing BC$。}
+
+\xiaoti{已知：如图， $\dfrac{OA}{OA'} = \dfrac{OB}{OB'}$。 求证： $\angle A = \angle A'$， $\angle B = \angle B'$。}
+
+\end{lianxi}
+\end{enhancedline}
+
