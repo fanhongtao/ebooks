@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2/0/C, 1.8/1.2/A}
+    \tkzDefLine[bisector out](B,A,C)  \tkzGetPoint{d}
+    \tkzInterLL(A,d)(B,C)  \tkzGetPoint{D}
+    \tkzDefLine[parallel=through C](A,D)  \tkzGetPoint{e}
+    \tkzInterLL(C,e)(B,A)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=1.5](B,A)  \tkzGetPoint{X}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D A,X)
+    \tkzDrawLine[add=0 and 0.2](C,D)
+    \tkzDrawSegments[dashed](C,E)
+    \extkzLabelAngel[0.3](D,A,X){$1$}
+    \extkzLabelAngel[0.4](C,A,D){$2$}
+    %\extkzLabelAngel[0.3](A,C,E){$3$}
+    %\extkzLabelAngel[0.3](C,E,A){$4$}
+    \tkzMarkAngle[size=0.3](A,C,E)
+    \tkzLabelAngle[pos=0.5](A,C,E){$3$}
+    \tkzMarkAngle[size=0.3](C,E,A)
+    \tkzLabelAngle[pos=0.5](C,E,A){$4$}
+
+    \tkzLabelPoints[above](A,E)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[below](C,D)
+\end{tikzpicture}
+
