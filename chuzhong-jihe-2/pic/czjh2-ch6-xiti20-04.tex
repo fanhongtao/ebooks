@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.8] % 复杂
+    \tkzDefPoints{0/0/C, 2/0/P, 1.7/1.0/B}
+    \tkzDefPointOnLine[pos=3](P,B)  \tkzGetPoint{A}
+    \tkzDefPointBy[translation=from B to A](C)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=3](A,D)  \tkzGetPoint{Q}
+    \tkzDrawPolygon(C,B,P)
+    \tkzDrawSegments(P,A  C,D A,Q P,Q)
+
+    \tkzLabelPoints[above](A,D)
+    \tkzLabelPoints[left](Q)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[right](P,B)
+\end{tikzpicture}
+

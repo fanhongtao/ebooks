@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 1/-1/B, 4/-0.3/C, 4.2/1.5/D, 0.8/1.8/E}
+    \tkzDefPointOnLine[pos=2/3](A,B)  \tkzGetPoint{B'}
+    \foreach \x [remember=\x as \lastx (initially B)] in {C,D,E} {
+        \tkzDefLine[parallel=through \lastx'](\lastx,\x)  \tkzGetPoint{t}
+        \tkzInterLL(\lastx',t)(A,\x)  \tkzGetPoint{\x'}
+        \tkzDrawSegment(\lastx',\x')
+    }
+    \tkzDrawSegment(E',B')
+
+    \tkzDrawPolygon(A,...,E)
+    \tkzDrawSegments(A,C A,D B,E)
+    \tkzLabelPoints[left](A,B,B',E')
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above](E,D')
+    \tkzLabelPoints[above left](C')
+\end{tikzpicture}
+

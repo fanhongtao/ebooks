@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O,  4/0/D, 3.2/2.5/E}
+    \tkzDefPointOnLine[pos=0.3](O,E)  \tkzGetPoint{A}
+    \tkzDefPointOnLine[pos=0.3](O,D)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=0.55](O,D)  \tkzGetPoint{F}
+    \tkzDefLine[parallel=through B](E,F)  \tkzGetPoint{c}
+    \tkzInterLL(B,c)(O,E)  \tkzGetPoint{C}
+
+    \tkzDrawLines[add=0 and 0.2](O,D  O,E)
+    \tkzDrawSegments(A,B B,C C,D D,E E,F F,A)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[above,xshift=-.3em](A,C,E)
+    \tkzLabelPoints[below](B,D,F)
+\end{tikzpicture}
+

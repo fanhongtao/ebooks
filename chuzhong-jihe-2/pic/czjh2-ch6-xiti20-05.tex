@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    % AE:EF = FD:CD，即 AE:BD = BE:CD，计算得出 BD = 2.1
+    \tkzDefPoints{0/0/B, 2.1/0/D, 3.5/0/C}
+    \tkzDefPoint(45:3.0){A}
+    \tkzDefPoint(45:1.2){E}
+    \tkzDefLine[parallel=through E](B,C)  \tkzGetPoint{f}
+    \tkzInterLL(E,f)(A,C)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(E,F  F,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,E)
+    \tkzLabelPoints[right](C,F)
+    \tkzLabelPoints[below](D)
+\end{tikzpicture}
+
