@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 2.2/1.6/A}
+    \tkzDefPointOnLine[pos=1.5](B,A)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=1.5](C,A)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A,E,F)
+    \tkzLabelPoints[left=.5em](A)
+    \tkzLabelPoints[left](B,F)
+    \tkzLabelPoints[right](C,E)
+\end{tikzpicture}
+

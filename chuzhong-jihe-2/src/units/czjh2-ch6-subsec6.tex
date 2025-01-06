@@ -1,0 +1,135 @@
+\subsection{相似三角形}\label{subsec:czjh2-6-6}
+\begin{enhancedline}
+
+前面我们学过，有一些图形的形状相同，但大小不一定相同。
+我们知道两个全等三角形的形状相同，大小也相同。
+有些三角形的形状是相同的，但大小不一定相同。
+如图 \ref{fig:czjh2-6-16} 中， $\triangle ABC$， $\triangle A'B'C'$， $\triangle A''B''C''$
+就是形状相同大小不同的三角形。
+
+\begin{figure}[htbp]
+    \centering
+    \input{../pic/czjh2-ch6-16}
+    \caption{}\label{fig:czjh2-6-16}
+\end{figure}
+
+
+仅依靠观察是不能确定两个三角形的形状是否相同的。
+因而，必须研究两个形状相同的三角形之间有什么关系。
+为此，我们来测量 $\triangle ABC$ 与 $\triangle A'B'C'$ 的各边和各角，可以得出：
+\begin{gather*}
+    \angle A = \angle A' \douhao \angle B = \angle B' \douhao \angle C = \angle C' \douhao \\
+    \dfrac{AB}{A'B'} = \dfrac{BC}{B'C'} = \dfrac{CA}{C'A'} \juhao
+\end{gather*}
+这就是说，这两个三角形的对应角都相等，对应边都成比例。
+
+两个对应角相等，对应边成比例的三角形，叫做\zhongdian{相似三角形}。
+相似用符号“$\xiangsi$”来表示，读作“相似于”。
+如图 \ref{fig:czjh2-6-16} 中的 $\triangle ABC$ 与 $\triangle A'B'C'$ 相似，记作
+$$ \triangle ABC \xiangsi \triangle A'B'C' \juhao $$
+
+和记两个三角形全等一样，在记两个三角形相似时，通常把表示对应顶点的字母写在对应的位置上，
+这使得我们可以比较容易地找出相似三角形的对应角和对应边。
+
+现在我们来研究下面两个图形。
+
+如图 \ref{fig:czjh2-6-17}， $\triangle ABC$ 中， $EF \pingxing BC$，可得
+
+$\left.\begin{aligned}
+    EF \pingxing BC \tuichu & \left\{\begin{aligned}
+                                & \dfrac{AE}{AB} = \dfrac{AF}{AC} = \dfrac{EF}{BC} \\
+                                & \angle 1 = \angle B \\
+                                & \angle 2 = \angle C
+                              \end{aligned}\right. \\
+                            & \quad \angle A = \angle A
+\end{aligned}\right\} \tuichu \triangle AEF \xiangsi \triangle ABC$。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-17}
+        \caption{}\label{fig:czjh2-6-17}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-18}
+        \caption{}\label{fig:czjh2-6-18}
+    \end{minipage}
+\end{figure}
+
+类似地，可以证明图 \ref{fig:czjh2-6-18} 中，当 $EF \pingxing BC$ 时， $\triangle AEF \xiangsi \triangle ABC$。
+
+由此，可以得到下面的定理：
+
+\begin{dingli}[定理]
+    平等于三角形一边的直线和其他两边（或两边的延长线）相交，所构成的三角形与原三角形相似。
+\end{dingli}
+
+相似三角形对应边的比，叫做两个相似三角形的\zhongdian{相似比}（或\zhongdian{相似系数}）。
+但要注意，如图 \ref{fig:czjh2-6-16}， $\triangle ABC$ 与 $\triangle A'B'C'$ 的相似比是 $k_1$，
+$\triangle A'B'C'$ 与 $\triangle ABC$ 的相似比是 $k_2$，$k_1 = \dfrac{1}{k_2}$。
+只有当 $\triangle ABC \quandeng \triangle A'B'C'$ 时，相似比 $k_1 = k_2 = 1$。
+
+
+\begin{lianxi}
+
+\xiaoti{}%
+\begin{xiaoxiaotis}%
+    \xxt[\xxtsep]{所有的等腰三角形都相似吗？所有的等边三角形呢？为什么？}
+
+    \xxt{所有的直角三角形都相似吗？所有的等腰直角三角形呢？为什么？}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{已知：如图，}
+\begin{xiaoxiaotis}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec6-lx-02-a}
+        \caption*{（1）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec6-lx-02-b}
+        \caption*{（2）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec6-lx-02-c}
+        \caption*{（3）}
+    \end{minipage}
+    \caption*{（第 2 题）}
+\end{figure}
+
+    \xxt{$\triangle ABC \xiangsi \triangle ADE$，其中 $DE \pingxing BC$；}
+
+    \xxt{$\triangle OAB \xiangsi \triangle OA'B'$，其中 $A'B' \pingxing AB$；}
+
+    \xxt{$\triangle ABC \xiangsi \triangle ADE$，其中 $\angle ADE = \angle B$。}
+
+    \qquad 写出各组相似三角形的对应边的比例式。
+
+\end{xiaoxiaotis}
+
+
+
+\xiaoti{$\triangle ABC$ 中， $BC = 52$ 厘米，$CA = 46$ 厘米， $AB = 63$ 厘米。
+    另一个和它相似的三角形的最短边为 12 厘米，求其余两边的长度。
+}
+
+\xiaoti{已知： $\triangle ABC \xiangsi \triangle A_1B_1C_1$，
+    $\triangle A_1B_1C_1 \xiangsi \triangle A_2B_2C_2$。
+    求证：$\triangle ABC \xiangsi \triangle A_2B_2C_2$。
+}
+
+\end{lianxi}
+\end{enhancedline}
+
