@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/0/C, 3/3/B, 4/0/A', 6/0/C', 6/2/B'}
+    \tkzDefPointBy[translation=from C' to A'](C)  \tkzGetPoint{A_1}
+    \tkzDefPointBy[translation=from C' to B'](C)  \tkzGetPoint{B_1}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A',B',C')
+    \tkzDrawSegment[dashed](A_1,B_1)
+    \tkzMarkRightAngle(B,C,A)
+    \tkzMarkRightAngle(B',C',A')
+    \tkzLabelPoints[above](B,B')
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](C,C',B_1)
+    \tkzLabelPoints[below](A',A_1)
+\end{tikzpicture}
+

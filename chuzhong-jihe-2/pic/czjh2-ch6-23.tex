@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 3/2.5/A}
+    \tkzDefPointOnLine[pos=0.5](A,C)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=0.5](A,B)  \tkzGetPoint{F}
+    \tkzDefPointOnLine[pos=0.5](B,C)  \tkzGetPoint{D}
+    \tkzInterLL(B,E)(C,F)  \tkzGetPoint{G}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(B,E  C,F  A,D)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,F)
+    \tkzLabelPoints[right](C,E)
+    \tkzLabelPoints[below](D)
+    \tkzLabelPoints[above,xshift=-.2em](G)
+\end{tikzpicture}
+

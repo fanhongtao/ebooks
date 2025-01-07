@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C, 4/0/B', 5.5/0/C'}
+    \tkzDefTriangle[two angles=50 and 70](B,C)  \tkzGetPoint{A}
+    \tkzDefTriangle[two angles=50 and 70](B',C')  \tkzGetPoint{A'}
+    \tkzDefPointBy[translation=from A' to B'](A)  \tkzGetPoint{D}
+    \tkzDefPointBy[translation=from A' to C'](A)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A',B',C')
+    \tkzDrawSegment[dashed](D,E)
+    \tkzLabelPoints[above](A,A')
+    \tkzLabelPoints[left](B,D,B')
+    \tkzLabelPoints[right](C,E,C')
+\end{tikzpicture}
+

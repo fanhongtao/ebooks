@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C}
+    \tkzDefTriangle[two angles=45 and 60](B,C)  \tkzGetPoint{A}
+    \tkzDefPointBy[rotation=center C angle 45](A)  \tkzGetPoint{a}
+    \tkzInterLL(C,a)(A,B)  \tkzGetPoint{P}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegment(C,P)
+    \extkzLabelAngel[0.5](A,C,P){$1$}
+    \extkzLabelAngel[0.5](C,P,A){$2$}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,P)
+    \tkzLabelPoints[right](C)
+\end{tikzpicture}
+

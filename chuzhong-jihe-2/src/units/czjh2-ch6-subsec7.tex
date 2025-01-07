@@ -1,0 +1,289 @@
+\subsection{三角形相似的判定}\label{subsec:czjh2-6-7}
+\begin{enhancedline}
+
+我们知道，全等三角形是相似三角形的特殊情形。
+判定两个三角形全等的方法有 “$SAS$”、 “$ASA$”、\\ “$SSS$”、 “$HL$” 等，
+那么判定两个三角形相似是否也有类似的方法呢？下面，我们来研究这个问题。
+
+\begin{wrapfigure}[6]{r}{6.8cm}
+    \centering
+    \input{../pic/czjh2-ch6-19}
+    \caption{}\label{fig:czjh2-6-19}
+\end{wrapfigure}
+
+如图 \ref{fig:czjh2-6-19}， $\triangle ABC$ 与 $\triangle A'B'C'$ 中，如果
+$\dfrac{AB}{A'B'} = \dfrac{AC}{A'C'}$， $\angle A = \angle A'$，
+我们看 $\triangle ABC$ 与 $\triangle A'B'C'$ 是否相似。
+
+我们知道，如果在 $\triangle ABC$ 的边 $AB$、$AC$（或延长线）上，
+分别截取 $AD = A'B'$、$AE = A'C'$，连结 $DE$，
+就得到与 $\triangle A'B'C'$ 全等的 $\triangle ADE$。
+这相当于把 $\triangle A'B'C'$ 搬到 $\triangle ABC$ 中去。
+因而只要证明 $\triangle ADE \xiangsi \triangle ABC$ 就可以了。
+
+$\left.\begin{aligned}
+    \dfrac{AB}{A'B'} = \dfrac{AC}{A'C'} \\
+    AD = A'B' \\
+    AE = A'C'
+\end{aligned}\right\} \tuichu \dfrac{AB}{AD} = \dfrac{AC}{AE}$
+
+\qquad $\left.\begin{aligned}
+    \tuichu BC \pingxing DE \tuichu \triangle ABC \xiangsi \triangle ADE \\
+    \left.\begin{aligned}
+        AD = A'B' \\
+        AE = A'C' \\
+        \angle A = \angle A'
+    \end{aligned}\right\} \tuichu \triangle ADE \quandeng \triangle A'B'C'
+\end{aligned}\right\} \tuichu \triangle ABC \xiangsi \triangle A'B'C'$
+
+
+这样，我们就得到下面的定理：
+
+\begin{dingli}[三角形相似的判定定理1]
+    如果一个三角形的两条边和另一个三角形的两条边对应成比例，并且夹角相等，那么这两个三角形相似。
+\end{dingli}
+
+类似地，我们可以得到下面的判定定理：
+
+\begin{dingli}[三角形相似的判定定理2]
+    如果一个三角形的两个角和另一个三角形的两个角对应等，那么这两个三角形相似。
+\end{dingli}
+
+如图 \ref{fig:czjh2-6-19}， $\triangle ABC$ 与 $\triangle A'B'C'$ 中，
+如果 $\angle A = \angle A'$，$\angle B = \angle B'$，
+那么 $\triangle ABC \xiangsi \triangle A'B'C'$。
+
+\begin{dingli}[三角形相似的判定定理3]
+    如果一个三角形的三条边和另一个三角形的三条边对应成比例，那么这两个三角形相似。
+\end{dingli}
+
+如图 \ref{fig:czjh2-6-19}， $\triangle ABC$ 与 $\triangle A'B'C'$ 中，
+如果 $\dfrac{AB}{A'B'} = \dfrac{BC}{B'C'} = \dfrac{CA}{C'A'}$，
+那么 $\triangle ABC \xiangsi \triangle A'B'C'$。
+
+关于直角三角形的相似，还有下面的判定定理：
+
+\begin{dingli}[定理]
+    如果一个直角三角形的斜边和一条直角边与另一个直角三角形的斜边和一条直角边对应成比例，那么这两个直角三角形相似。
+\end{dingli}
+
+已知： $Rt \triangle ABC$ 与 $Rt \triangle A'B'C'$ 中，
+$\angle C = \angle C' = Rt \angle$， $\dfrac{AB}{A'B'} = \dfrac{AC}{A'C'}$ （图 \ref{fig:czjh2-6-20}）。
+
+\begin{wrapfigure}[5]{r}{7.3cm}
+    \centering
+    \input{../pic/czjh2-ch6-20}
+    \caption{}\label{fig:czjh2-6-20}
+\end{wrapfigure}
+
+求证： $Rt \triangle ABC \xiangsi Rt \triangle A'B'C'$。
+
+\zhengming 在 $CA$（或延长线）上，截取 $CA_1 = C'A'$，
+过点 $A_1$ 作 $A_1B_1 \pingxing AB$，交 $CB$（或延长线）于点 $B_1$。
+
+$\left.\begin{aligned}
+    AB \pingxing A_1B_1 \tuichu & \dfrac{AB}{A_1B_1} = \dfrac{AC}{A_1C} \\
+                             & A_1C = A'C'
+\end{aligned}\right\}$
+
+\qquad $\left.\begin{aligned}
+    \tuichu & \dfrac{AB}{A_1B_1} = \dfrac{AC}{A'C'} \\
+            & \dfrac{AB}{A'B'} = \dfrac{AC}{A'C'}
+\end{aligned}\right\} \tuichu \dfrac{AB}{A_1B_1} = \dfrac{AB}{A'B'}$
+
+\qquad $\left.\begin{aligned}
+    \tuichu A_1B_1 = A'B' \\
+    \angle C = \angle C' = Rt \angle \\
+    A_1C = A'C'
+\end{aligned}\right\} \tuichu Rt \triangle A_1B_1C \quandeng Rt \triangle A'B'C' \juhao$
+
+又 \quad $AB \pingxing A_1B_1 \tuichu \triangle ABC \xiangsi \triangle A_1B_1C$，
+
+$\therefore$ \quad $Rt \triangle ABC \xiangsi Rt \triangle A'B'C'$。
+
+
+\begin{lianxi}
+
+\xiaoti{证明三角形相似的判定定理2。}
+
+\xiaoti{依据下列各组条件，判定 $\triangle ABC$ 和 $\triangle A'B'C'$ 是否相似，并说明为什么？}
+\begin{xiaoxiaotis}
+
+    \xxt{$\angle A = 45^\circ$， $AB = 12$ 厘米， $AC = 15$ 厘米， \\
+         $\angle A' = 45^\circ$， $A'B' = 16$ 厘米， $A'C' = 20$ 厘米；
+    }
+
+    \xxt{$\angle A = 68^\circ$， $\angle B = 40^\circ$，
+        $\angle A' = 68^\circ$， $\angle C' = 72^\circ$；
+    }
+
+    \xxt{$AB = 12$ 厘米， $BC = 15$ 厘米， $AC = 24$ 厘米，\\
+         $A'B' = 20$ 厘米， $B'C' = 25$ 厘米， $A'C' = 40$ 厘米。
+    }
+
+\end{xiaoxiaotis}
+
+\xiaoti{两个三角形中，一个三角形的两边分别是 $1.5\;\limi$  和 $2\;\limi$，
+    另一个三角形的两边分别是 $2.8\;\limi$  和 $2.1\;\limi$，
+    且夹角均为 $47^\circ$。这两个三角形是否相似？为什么？
+}
+
+\xiaoti{（口答）判定两个三角形全等和两个三角形相似的条件有什么相同和不同？
+    为什么三角形全等的判定 “$ASA$” 中有对应边相等，而三角形相似的判定中只要两个角对应相等就可以了？
+}
+
+\end{lianxi}
+
+
+
+\liti \zhongdian{直角三角形被斜边上的高分成的两个直角三角形和原三角形都相似。}
+
+已知： $Rt \triangle ABC$ 中， $CD$ 是斜边上的高（图 \ref{fig:czjh2-6-21}）。
+
+求证： $\triangle ABC \xiangsi \triangle CBD \xiangsi \triangle ACD$。
+
+$\left.\begin{aligned}
+    \text{\zhengming} && \angle B = \angle B \\
+    && Rt \angle ACB = Rt \angle CDB
+\end{aligned}\right\} \tuichu \triangle ABC \xiangsi \triangle CBD$。
+
+同理可证 \quad $\triangle ABC \xiangsi \triangle ACD$。
+
+$\therefore$ \quad $\triangle ABC \xiangsi \triangle CBD \xiangsi \triangle ACD$。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-21}
+        \caption{}\label{fig:czjh2-6-21}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-22}
+        \caption{}\label{fig:czjh2-6-22}
+    \end{minipage}
+\end{figure}
+
+\liti 已知：如图 \ref{fig:czjh2-6-22}，$BE$、$CF$ 是 $\triangle ABC$ 的中线，它们相交于点 $G$。
+求证：$\dfrac{GE}{GB} = \dfrac{GF}{GC} = \exdfrac{1}{2}$。
+
+分析：要证明四条线段成比例，一般是证明这四条线段分别是某两个相似三角形的对应边。
+从图中可以看到，$GF$、$GB$ 在 $\triangle FGB$ 中，$GE$、$GC$ 在 $\triangle EGC$ 中，
+但是，即使 $\triangle FGB$ 与 $\triangle EGC$ 相似，由于 $\angle FGB = \angle EGC$，
+可能得到的比例 $\dfrac{GE}{GC} = \dfrac{GF}{GB}$ 或 $\dfrac{GE}{GC} = \dfrac{GB}{GF}$
+也不符合要求，因而只能另找办法。考虑到点 $E$、$F$ 是 $AB$、$AC$ 的中点，
+如果连结 $EF$，那么 $EF \pingxing BC$， 又 $GF$、$GE$ 在 $\triangle FGE$ 中，
+$GB$、$GC$ 在 $\triangle BGC$ 中，这样就可以证明比例成立了。
+
+\zhengming 连结 $EF$。
+
+$\left.\begin{aligned}
+    AE = EC \\
+    AF = FB
+\end{aligned}\right\} \tuichu \left\{\begin{aligned}
+    & FE = \exdfrac{1}{2}BC \tuichu BG = 2EF \\
+    & FE \pingxing BC \tuichu \dfrac{GE}{GB} = \dfrac{GF}{GC} = \dfrac{EF}{BC}
+\end{aligned}\right\} \tuichu  \dfrac{GE}{GB} = \dfrac{GF}{GC} = \exdfrac{1}{2} \juhao$
+
+如果 $AD$ 是图 \ref{fig:czjh2-6-22} 中 $\triangle ABC$ 的另一条中线（图 \ref{fig:czjh2-6-23}），
+同样可以证明它和 $BE$ 的交点也分别内分 $AD$、$BE$ 为 $2:1$，
+即 $AD$ 和 $BE$ 的交点也是 $BE$ 和 $CF$ 的交点 $G$。
+就是说，三角形三条中线交于一点。三角形三条中线的交点叫做\zhongdian{三角形的重心}。
+由以上证明可以得到
+
+\begin{xingzhi}
+    三角形重心与顶点的距离等于它与对边中点的距离的两倍。
+\end{xingzhi}
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-23}
+        \caption{}\label{fig:czjh2-6-23}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-24}
+        \caption{}\label{fig:czjh2-6-24}
+    \end{minipage}
+\end{figure}
+
+\liti 已知 $\triangle ABC$， $P$ 是 $AB$ 上的一点，连结 $CP$。
+满足什么条件时，$\triangle ACP$ 与 $\triangle ABC$ 相似。
+
+分析：从图形 \ref{fig:czjh2-6-24} 可以看出，两个三角形有一个公共角 $\angle A$。
+根据三角形相似的判定定理，只要还有另一对对应角相等，或夹 $\angle A$ 的对应边成比例，
+两个三角形相似。因为 $\angle 2 > \angle B$， $\angle 1 < \angle ACB$，
+所以 $AP$ 与 $AB$、$AC$ 与 $AC$ 不可能是对应边。
+只能是 $\angle 1 = \angle B$ 与 $\angle 2 = \angle ACB$。
+
+$\left.\begin{aligned}
+    \text{\jie} \quad & \angle 1 = \angle B \\
+                      & \angle A = \angle A
+\end{aligned}\right\} \tuichu \triangle ACP \xiangsi \triangle ABC \fenhao$
+
+\qquad $\left.\begin{aligned}
+    \angle 2 = \angle ACB \\
+    \angle A = \angle A
+\end{aligned}\right\} \tuichu \triangle ACP \xiangsi \triangle ABC \fenhao$
+
+\qquad $\left.\begin{aligned}
+    \dfrac{AB}{AC} = \dfrac{AC}{AP} \\
+    \angle A = \angle A
+\end{aligned}\right\} \tuichu \triangle ACP \xiangsi \triangle ABC \juhao$
+
+又因 $\dfrac{AB}{AC} = \dfrac{AC}{AP} \dengjiayu AC^2 = AB \cdot AP$，因此，得
+
+当 $\angle 1 = \angle B$， 或 $\angle 2 = \angle ACB$， 或 $AC^2 = AB \cdot AP$ 时，
+$\triangle ACP \xiangsi \triangle ABC$。
+
+
+\begin{lianxi}
+
+\xiaoti{已知： $D$、$E$、$F$ 分别是 $\triangle ABC$ 的三边 $BC$、$CA$、$AB$ 的中点。
+    求证： $\triangle DEF \xiangsi \triangle ABC$。
+}
+
+\xiaoti{如图，$D$、$E$ 是 $\triangle ABC$ 的边 $AC$、$AB$ 上的点。证明：}
+\begin{xiaoxiaotis}
+
+    \xxt{如果 $\angle 1 = \angle B$，那么 $AD \cdot AC = AE \cdot AB$；}
+
+    \xxt{如果 $AD \cdot AC = AE \cdot AB$，那么 $\angle 1 = \angle B$。}
+
+\end{xiaoxiaotis}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec7-lx2-02}
+        \caption*{（第 2 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-subsec7-lx2-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+\end{figure}
+
+
+\xiaoti{如图，$\triangle ABC$ 中， $P$ 是 $AB$ 边上的点，$\angle 1 = \angle B$。
+    求证： $CP = \dfrac{AC \cdot BC}{AB}$。
+}
+
+\xiaoti{已知：$P$ 是正方形 $ABCD$ 的边 $BC$ 上的点，且 $BP = 3 PC$，$Q$ 是 $CD$ 的中点。
+    求证：$\triangle ADQ \xiangsi \triangle QCP$。
+}
+
+\end{lianxi}
+
+\end{enhancedline}
+
