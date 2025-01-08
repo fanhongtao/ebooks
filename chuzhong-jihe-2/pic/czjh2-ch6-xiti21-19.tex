@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=.8]
+    \tkzDefPoints{0/0/B, 6/0/C, 3/2/A}
+    \tkzDefPoints{1/0/D, 2/0/E, 3/0/F, 4/0/G, 5/0/H}
+    \foreach \x/\y/\z in {D/M/B, E/N/B, G/K/C, H/L/C} {
+        \tkzDefLine[perpendicular=through \x](B,C)  \tkzGetPoint{t}
+        \tkzInterLL(\x,t)(A,\z)  \tkzGetPoint{\y}
+        \tkzDrawSegment(\x,\y)
+        \tkzMarkRightAngle(C,\x,\y)
+    }
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,F M,E  N,F  K,F  L,G)
+    \tkzMarkRightAngle(C,F,A)
+    \tkzLabelPoints[above](A,M,N,K,L)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](D,E,F,G,H)
+\end{tikzpicture}
+

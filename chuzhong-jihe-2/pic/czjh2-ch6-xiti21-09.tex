@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/C, 1.8/0.4/E, 1.8/0/M, 1.8/2.4/D}
+    \tkzDefTriangle[two angles=40 and 90](A,C)  \tkzGetPoint{B}
+    \tkzDefTriangle[two angles=40 and 50](D,E)  \tkzGetPoint{F}
+    \tkzInterLL(D,F)(A,B)  \tkzGetPoint{N}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(D,E,F)
+    \tkzDrawSegment(E,M)
+    \tkzMarkRightAngle(B,C,A)
+    \tkzMarkRightAngle(D,F,E)
+    \tkzMarkRightAngle(D,M,A)
+    \tkzMarkRightAngle(B,N,D)
+    \tkzLabelPoints[above](B,D)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](C,F)
+    \tkzLabelPoints[above left](E)
+\end{tikzpicture}
+

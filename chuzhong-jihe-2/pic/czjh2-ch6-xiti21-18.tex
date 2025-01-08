@@ -1,0 +1,23 @@
+
+\begin{tikzpicture}[scale=0.6]
+    \pgfmathsetmacro{\a}{6}
+    \pgfmathsetmacro{\h}{5}
+    \foreach \x in {0,...,\a} {
+        \tkzDefPoints{\x/0/X1, \x/\h/X2}
+        \tkzDrawSegments(X1,X2)
+    }
+    \foreach \y in {0,...,\h} {
+        \tkzDefPoints{0/\y/Y1, \a/\y/Y2}
+        \tkzDrawSegments(Y1,Y2)
+    }
+
+    \tkzDefPoints{3/2/A_1, 1/1/B_1, 6/1/C_1}
+    \tkzDefPoints{4/3/A_2, 3/4/B_2, 6/3/C_2}
+    \tkzDrawPolygon[thick](A_1,B_1,C_1)
+    \tkzDrawPolygon[thick](A_2,B_2,C_2)
+    \tkzLabelPoints[above left](A_1,B_2)
+    \tkzLabelPoints[above,xshift=-.6em](C_2)
+    \tkzLabelPoints[below left](B_1,C_1)
+    \tkzLabelPoints[below,xshift=-.1em](A_2)
+\end{tikzpicture}
+

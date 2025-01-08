@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 3/0/C, 4/1.5/B, 2/2.5/A}
+    \tkzDefPointOnLine[pos=0.5](O,A)  \tkzGetPoint{A'}
+    \tkzDefLine[parallel=through A'](A,B)  \tkzGetPoint{b'}
+    \tkzInterLL(A',b')(O,B)  \tkzGetPoint{B'}
+    \tkzDefLine[parallel=through B'](B,C)  \tkzGetPoint{c'}
+    \tkzInterLL(B',c')(O,C)  \tkzGetPoint{C'}
+
+    \tkzDrawPolygon(O,A,B,C)
+    \tkzDrawSegments(O,B  A,C)
+    \tkzDrawPolygon(A',B',C')
+    \tkzLabelPoints[above](A,B')
+    \tkzLabelPoints[left](O,A')
+    \tkzLabelPoints[right](C,B)
+    \tkzLabelPoints[below](C')
+\end{tikzpicture}
+

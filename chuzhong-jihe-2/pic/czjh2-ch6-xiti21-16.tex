@@ -1,0 +1,15 @@
+\begin{tikzpicture} % 复杂
+    \tkzDefPoints{0/0/B, 4/0/C, 3.6/2/E}
+    \tkzDefTriangle[two angles=50 and 60](B,C)  \tkzGetPoint{A} % 设 b、c、a 三个角分别为 50、60、70 度
+    \tkzDefTriangle[two angles=25 and 25](A,B)  \tkzGetPoint{D} % 确保角 ADB = 130度（因为 ADE = b = 50 度），其它两个角相加为 50 度即可，不一定非得 25、25 度
+    \tkzDefTriangle[two angles=70 and 50](A,D)  \tkzGetPoint{E} % 绘制 ABC 的相似三角形 ADE
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A,D,E)
+    \tkzDrawSegments(A,D  B,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C,E)
+    \tkzLabelPoints[below](D)
+\end{tikzpicture}
+
