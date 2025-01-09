@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \begin{scope}[scale=1.5]
+        \tkzDefPoints{0/0/B, 2/0/C, 1.5/1/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,C)
+    \end{scope}
+
+    \begin{scope}[xshift=4cm]
+        \tkzDefPoints{0/0/B', 2/0/C', 1.5/1/A'}
+        \tkzDrawPolygon(A',B',C')
+        \tkzLabelPoints[above](A')
+        \tkzLabelPoints[below](B',C')
+    \end{scope}
+\end{tikzpicture}
+

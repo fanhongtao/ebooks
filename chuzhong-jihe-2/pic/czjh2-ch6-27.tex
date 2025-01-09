@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{.03}
+    \tkzDefPoints{0/0/B, 120*\factor/0/C}
+    \tkzDefPointOnLine[pos=0.6](B,C)  \tkzGetPoint{D}
+    \tkzDefShiftPoint[D](0, 80*\factor){A}
+    \tkzDefShiftPoint[D](0, 48*\factor){E}
+    \tkzDefLine[parallel=through E](B,C)  \tkzGetPoint{e}
+    \tkzInterLL(E,e)(A,B)  \tkzGetPoint{P}
+    \tkzInterLL(E,e)(A,C)  \tkzGetPoint{N}
+    \tkzDefPointBy[projection= onto B--C](P)  \tkzGetPoint{Q}
+    \tkzDefPointBy[projection= onto B--C](N)  \tkzGetPoint{M}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(P,Q,M,N)
+    \tkzDrawSegments(A,D)
+    \tkzMarkRightAngle(C,D,A)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,P)
+    \tkzLabelPoints[right](C,N)
+    \tkzLabelPoints[below](Q,D,M)
+    \tkzLabelPoints[above,xshift=-.5em](E)
+\end{tikzpicture}
+

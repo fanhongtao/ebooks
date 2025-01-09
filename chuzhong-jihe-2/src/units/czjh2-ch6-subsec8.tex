@@ -1,0 +1,150 @@
+\subsection{相似三角形的性质}\label{subsec:czjh2-6-8}
+\begin{enhancedline}
+
+两个三角形相似，根据定义可知它们具有对应角相等，对应边成比例这些性质。下面我们来研究其它性质。
+
+已知 $\triangle ABC \xiangsi \triangle A'B'C'$， 相似比为 $k$， $AD$、$A'D'$ 是对应高（图 \ref{fig:czjh2-6-25}）。
+那么在 $\triangle ABD$ 和 $\triangle A'B'D'$ 中， $\angle B = \angle B'$，
+$\angle ADB = \angle A'D'B' = Rt \angle$， 所以
+
+$\triangle ABD \xiangsi \triangle A'B'D'  \tuichu  \dfrac{AD}{A'D'} = \dfrac{AB}{A'B'} = k$。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-25}
+        \caption{}\label{fig:czjh2-6-25}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-26}
+        \caption{}\label{fig:czjh2-6-26}
+    \end{minipage}
+\end{figure}
+
+类似地，可以推得两个相似三角形对应中线的比，对应角平分线的比也等于相似比。就是
+
+\begin{dingli}
+    相似三角形对应高的比，对应中线的比和对应角平分线的比都等于相似比。
+\end{dingli}
+
+如图 \ref{fig:czjh2-6-26}， $\triangle ABC \xiangsi \triangle A'B'C'$，相似比是 $k$。
+
+$\triangle ABC \xiangsi \triangle A'B'C'  \tuichu  \dfrac{AB}{A'B'} = \dfrac{BC}{B'C'} = \dfrac{CA}{C'A'} = k  \tuichu \dfrac{AB + BC + CA}{A'B' + B'C' + C'A'} = k$。
+
+由此可得
+
+\begin{dingli}
+    相似三角形周长的比等于相似比。
+\end{dingli}
+
+如图 \ref{fig:czjh2-6-25}， $\triangle ABC \xiangsi \triangle A'B'C'$，相似比是 $k$，
+$AD$、$A'D'$ 分别是两个三角形的高。那么
+
+$\dfrac{S_{\triangle ABC}}{S_{\triangle A'B'C'}} = \dfrac{\exdfrac{1}{2} AD \cdot BC}{\exdfrac{1}{2} A'D' \cdot B'C'} = \dfrac{AD}{A'D'} \cdot \dfrac{BC}{B'C'} = k \cdot k = k^2$。
+
+由此得到下面的定理：
+
+\begin{dingli}[定理]
+    相似三角形面积的比等于相似比的平方。
+\end{dingli}
+
+
+\liti 有一块三角形余料 $ABC$，它的边 $BC = 120$ 毫米， 高 $AD = 80$ 毫米（图 \ref{fig:czjh2-6-27}），
+要把它加工成正方形零件，使正方形的一边在 $BC$ 上，其余两个顶点分别在 $AB$、$AC$ 上。
+加工成的正方形零件的边长为多少毫米？
+
+\begin{wrapfigure}[6]{r}{5cm}
+    \centering
+    \input{../pic/czjh2-ch6-27}
+    \caption{}\label{fig:czjh2-6-27}
+\end{wrapfigure}
+
+\jie 设正方形 $PQMN$ 为加工成的正方形。边 $QM$ 在 $BC$ 上，顶点 $P$、$N$ 分别在 $AB$、$AC$ 上，
+高 $AD$ 与边 $PN$ 相交于点 $E$。设正方形的边长为 $x$ 毫米，则有
+
+\qquad $PN \pingxing BC  \tuichu \triangle APN \xiangsi \triangle ABC  \tuichu  \dfrac{AE}{AD} = \dfrac{PN}{BC}$。
+
+因此，可以列出方程：
+
+\qquad $\dfrac{80 - x}{80} = \dfrac{x}{120}$。
+
+解得 \quad $x = 48$（毫米）。
+
+
+
+\liti 已知：如图 \ref{fig:czjh2-6-28}， $DE \pingxing BC$， $\dfrac{AD}{AB} = \exdfrac{3}{5}$，
+$S_{\triangle ABC} = S$。求 $S_{\triangle ADE}$。
+
+$\left.\begin{aligned}
+    \text{\jie} DE \pingxing BC \tuichu \triangle ADE \xiangsi \triangle ABC \tuichu \dfrac{S_{\triangle ADE}}{S_{\triangle ABC}} = \dfrac{AD^2}{AB^2} \\
+    \dfrac{AD}{AB} = \exdfrac{3}{5}
+\end{aligned}\right\}$
+
+\quad $\left.\begin{aligned}
+    \tuichu \dfrac{S_{\triangle ADE}}{S_{\triangle ABC}} = \exdfrac{3^2}{5^2}  \tuichu S_{\triangle ADE} = \dfrac{9}{25} S_{\triangle ABC} \\
+    S_{\triangle ABC} = S
+\end{aligned}\right\}  \tuichu  S_{\triangle ADE} = \dfrac{9}{25} S \juhao$
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-28}
+        \caption{}\label{fig:czjh2-6-28}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-29}
+        \caption{}\label{fig:czjh2-6-29}
+    \end{minipage}
+\end{figure}
+
+\liti 已知： $\triangle ABC$ 与 $\triangle A'B'C'$ 中
+$AD$、$BE$ 是 $\triangle ABC$ 的高，
+$A'D'$、$B'E'$ 是 $\triangle A'B'C'$ 的高，
+且 $\dfrac{AB}{AD} = \dfrac{A'B'}{A'D'}$， $\angle C = \angle C'$ （图 \ref{fig:czjh2-6-29}）。
+求证： $\dfrac{AD}{BE} = \dfrac{A'D'}{B'E'}$。
+
+分析：从图形可知，求证的四条成比例线段不分别在两个三角形中，所以不能用直接证两个三角形相似得出。
+但我们知道这四条线段分别是 $\triangle ABC$ 和 $\triangle A'B'C'$ 的高，
+如果能证明 $\triangle ABC \xiangsi \triangle A'B'C'$，那么比例就成立了。
+可是由题设不能直接证得这两个三角形相似，但可证得 $\triangle ABD \xiangsi \triangle A'B'D'$，
+得 $\angle ABC = \angle A'B'C'$，从而 $\triangle ABC \xiangsi \triangle A'B'C'$。
+
+$\left.\begin{aligned}
+    \text{\zhengming} && \dfrac{AB}{AD} = \dfrac{A'B'}{A'D'} \\
+                      && \angle ADB = \angle A'D'B' = 90^\circ
+\end{aligned}\right\}  \tuichu Rt \triangle ABD \xiangsi Rt \triangle A'B'D'$
+
+\qquad $\left.\begin{aligned}
+    \tuichu \angle ABC = \angle A'B'C' \\
+    \angle C = \angle C'
+\end{aligned}\right\}  \tuichu \triangle ABC \xiangsi \triangle A'B'C'$
+
+\qquad $\tuichu \dfrac{AB}{A'B'} = \dfrac{BE}{B'E'} = \dfrac{AD}{A'D'}  \tuichu  \dfrac{AD}{BE} = \dfrac{A'D'}{B'E'}$。
+
+
+\begin{lianxi}
+
+\xiaoti{证明：两个相似三角形的对应中线的比等于相似比。}
+
+\xiaoti{已知：点 $M$、$N$、$P$ 分别是 $\triangle ABC$ 的中线 $AD$、$BE$、$CF$ 的中点。
+    求 $\triangle ABC$ 与 $\triangle MNP$ 面积的比。
+}
+
+\xiaoti{把一个三角形改成和它相似的三角形。}
+\begin{xiaoxiaotis}
+
+    \xxt{如果边长扩大为原来的 100 倍，那么面积扩大为原来的多少倍？}
+
+    \xxt{如果面积扩大为原来的 100 倍，那么边长扩大为原来的多少倍？}
+
+\end{xiaoxiaotis}
+
+\end{lianxi}
+\end{enhancedline}
+

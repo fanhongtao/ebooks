@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \def\drawingcode{
+        \tkzDefTriangle[two angles=40 and 65](B,C)  \tkzGetPoint{A}
+        \tkzDefLine[altitude](B,A,C)  \tkzGetPoint{D}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+        \tkzMarkRightAngle(A,D,B)
+    }
+
+    \begin{scope}
+        \tkzDefPoints{0/0/B, 2/0/C}
+        \drawingcode
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](B,D,C)
+    \end{scope}
+
+    \begin{scope}[xshift=3cm]
+        \tkzDefPoints{0/0/B, 3/0/C}
+        \drawingcode
+        \tkzLabelPoint[above](A){$A'$}
+        \foreach \x in {B,C,D} {
+            \tkzLabelPoint[below](\x){$\x'$}
+        }
+    \end{scope}
+\end{tikzpicture}
+
