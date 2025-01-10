@@ -1,0 +1,117 @@
+\subsection{直角三角形中成比例的线段}\label{subsec:czjh2-6-9}
+\begin{enhancedline}
+
+从一点到一条直线所作垂线的垂足，叫做\zhongdian{这点在这条直线上的正射影}。
+图 \ref{fig:czjh2-6-30} 中，点 $P_1'$、$P_2'$、$P_3'$ 分别是点 $P_1$、$P_2$、$P_3$ 在直线 $MN$ 上的正射影。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{5.5cm}
+        \centering
+        \input{../pic/czjh2-ch6-30}
+        \caption{}\label{fig:czjh2-6-30}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{8.5cm}
+        \centering
+        \input{../pic/czjh2-ch6-31}
+        \caption{}\label{fig:czjh2-6-31}
+    \end{minipage}
+\end{figure}
+
+一条线段的两个端点在一条直线上的正射影之间的线段，叫做\zhongdian{这条线段在这条直线上的正射影}。
+图 \ref{fig:czjh2-6-31} 中的那些线段 $A'B'$ 都是对应的线段 $AB$ 在直线 $MN$ 上的正射影
+（当 $AB \perp MN$ 时， $A'B'$ 缩为一个点）。
+
+点、线段在一条直线上的正射影，简称\zhongdian{射影}。
+
+\begin{dingli}[定理]
+    直角三角形中，斜边上的高是两条直角边在斜边上的射影的比例中项；
+    每一条直角边是这条直角边在斜边上的射影和斜边的比例中项。
+\end{dingli}
+
+已知：图 \ref{fig:czjh2-6-32} 中， $AB$ 是 $Rt \triangle ABC$ 的斜边， $CD$ 是高。
+
+求证：\begin{tblr}[t]{colsep=0pt}
+    （1）$CD^2 = AD \cdot BD$； \\
+    （2）$AC^2 = AD \cdot AB$， $BC^2 = BD \cdot AB$。
+\end{tblr}
+
+$\left.\begin{aligned}
+    \text{\zhengming （1）} && \angle ACB = 90^\circ \\
+                            && CD \perp AB
+\end{aligned}\right\} \tuichu  \triangle ACD \xiangsi \triangle CBD  \tuichu \dfrac{CD}{AD} = \dfrac{BD}{CD}  \tuichu CD^2 = AD \cdot BD \juhao$
+
+（2）的证明由同学自己写出。
+
+在第五章中，我们曾用面积割补法证明了勾股定理，现在利用上面的定理很容易证明勾股定理。
+把上面的定理中 （2） 的两个关系式的两边分别相加，得
+
+$AC^2 + BC^2 = AD \cdot AB + BD \cdot AB = AB(AD + BD) = AB^2$。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-32}
+        \caption{}\label{fig:czjh2-6-32}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch6-33}
+        \caption{}\label{fig:czjh2-6-33}
+    \end{minipage}
+\end{figure}
+
+\liti 已知：$\triangle ABC$ 中，$\angle ACB = 90^\circ$， $CD$ 是高， $CE$ 是角平分线，
+$AC = 9\;\limi$， $BC = 12\;\limi$ （图 \ref{fig:czjh2-6-33}）。求 $CD$、$CE$ 的长。
+
+\jie 由勾股定理可得
+
+$AB = \sqrt{AC^2 + BC^2} = 15 \;\limi$。
+
+$\therefore$ \quad \begin{tblr}[t]{colsep=0pt, rowsep=.5em}
+    $BD = \dfrac{BC^2}{AB} = \dfrac{144}{15} = \dfrac{48}{5} \;(\limi)$， \\
+    $AD = AB - BD = \dfrac{27}{5} \;(\limi)$； \\
+    $CD = \sqrt{BD \cdot AD} = \dfrac{36}{5} \;(\limi)$。
+\end{tblr}
+
+$\because$ \quad $\angle ACE = \angle BCE$，
+
+$\therefore$ \quad $\dfrac{AC}{AE} = \dfrac{BC}{BE} = \dfrac{AC + BC}{AE + BE}$。
+
+得 \quad \begin{tblr}[t]{colsep=0pt, rowsep=.5em}
+    $BE = \dfrac{BC \cdot AB}{AC + BC} = \dfrac{12 \times 15}{9 + 12} = \dfrac{60}{7} \;(\limi)$； \\
+    $DE = BD - BE = \dfrac{48}{5} - \dfrac{60}{7} = \dfrac{36}{35} \;(\limi)$。
+\end{tblr}
+
+$\therefore$ \quad $CD = \sqrt{CD^2 + DE^2} = \sqrt{\left(\dfrac{36}{5}\right)^2 + \left(\dfrac{36}{35}\right)^2} = \dfrac{36\sqrt{2}}{7} \;(\limi)$。
+
+
+\begin{lianxi}
+
+\xiaoti{证明本节定理（2）。}
+
+\xiaoti{$CD$ 是 $Rt \triangle ABC$ 的斜边 $AB$ 上的高。}
+\begin{xiaoxiaotis}
+
+    \xxt{已知 $AD = 9$ 厘米，$DB = 4$ 厘米。求 $CD$ 和 $AC$；}
+
+    \xxt{已知 $AB = 25$ 厘米，$BC = 15$ 厘米。求 $DB$ 和 $CD$。}
+
+\end{xiaoxiaotis}
+
+
+\xiaoti{设 $CD$ 是 $Rt \triangle ABC$ 的斜边 $AB$ 上的高。求证：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\dfrac{AC^2}{CB^2} = \dfrac{AD}{DB}$；}
+    \xxt{$CA \cdot CD = CB \cdot AD$。}
+
+\end{xiaoxiaotis}
+
+\end{lianxi}
+
+\end{enhancedline}
+

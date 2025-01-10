@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 5/0/B}
+    \tkzInterCC[R](A,3)(B,4)  \tkzGetFirstPoint{C}
+    \tkzDefLine[altitude](A,C,B)  \tkzGetPoint{D}
+    \tkzDefLine[bisector](A,C,B)  \tkzGetPoint{e}
+    \tkzInterLL(C,e)(A,B)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(C,D  C,E)
+    \tkzMarkRightAngle(C,D,A)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[below](D,E)
+\end{tikzpicture}
+

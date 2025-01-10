@@ -1,0 +1,54 @@
+\begin{tikzpicture}
+    \def\drawProjection{%
+        \tkzDefPointBy[projection= onto M--N](A)  \tkzGetPoint{A'}
+        \tkzDefPointBy[projection= onto M--N](B)  \tkzGetPoint{B'}
+        \tkzDrawSegment[thick](A,B)
+        \tkzDrawSegments[dashed](A,A' B,B')
+    }
+
+    \tkzDefPoints{0/0/M, 6.8/0/N}
+    \tkzDrawSegment(M,N)
+    \tkzLabelPoints[left](M)
+    \tkzLabelPoints[right,yshift=.3em](N)
+
+    \begin{scope}
+        \tkzDefPoints{0.2/1/A, 0.8/1/B}
+        \drawProjection
+        \tkzLabelPoints[above](A,B)
+        \tkzLabelPoints[below](A',B')
+    \end{scope}
+
+    \begin{scope}
+        \tkzDefPoints{1.5/1.3/A, 2.3/1/B}
+        \drawProjection
+        \tkzLabelPoints[above](A,B)
+        \tkzLabelPoints[below](A',B')
+    \end{scope}
+
+    \begin{scope}
+        \tkzDefPoints{3.0/0.8/A, 4.0/-0.8/B}
+        \drawProjection
+        \tkzLabelPoints[above](A,B')
+        \tkzLabelPoints[below](A',B)
+    \end{scope}
+
+    \begin{scope}
+        \tkzDefPoints{4.7/0.8/A, 5.5/0/B}
+        \drawProjection
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[above right](B)
+        \tkzLabelPoints[below](A')
+        \tkzLabelPoint[below](B'){$(B')$}
+    \end{scope}
+
+    \begin{scope}
+        \tkzDefPoints{6.2/1.3/A, 6.2/0.5/B}
+        \tkzDrawPoints(A,B)
+        \tkzDefPointBy[projection= onto M--N](A)  \tkzGetPoint{A'}
+        \tkzDrawSegments[dashed](A,A')
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[right](B)
+        \tkzLabelPoint[below,xshift=1em](A'){$A' \; (B')$}
+    \end{scope}
+\end{tikzpicture}
+
