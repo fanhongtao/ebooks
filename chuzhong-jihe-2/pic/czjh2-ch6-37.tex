@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \def\drawingcode#1#2#3#4{
+        \tkzDrawPolygon(#1,#2,#3,#4)
+        \tkzDrawSegments(#1,#3 #2,#4)
+        \tkzInterLL(#1,#3)(#2,#4)  \tkzGetPoint{O}
+        \tkzLabelPoints[left](#4)
+        \tkzLabelPoints[right](#3)
+        \tkzLabelPoints[below](#1,#2)
+    }
+
+    \begin{scope}
+        \tkzDefPoints{0/0/A, 3/0/B, 2.5/2.5/C, 0.5/1.5/D}
+        \drawingcode{A}{B}{C}{D}
+        \tkzLabelPoints[below=.3em](O)
+        \extkzLabelAngel[0.5](B,A,C){$1$}
+        \extkzLabelAngel[0.5](D,B,A){$2$}
+    \end{scope}
+
+    \begin{scope}[xshift=4cm, scale=0.7]
+        \tkzDefPoints{0/0/A', 3/0/B', 2.5/2.5/C', 0.5/1.5/D'}
+        \drawingcode{A'}{B'}{C'}{D'}
+        \tkzLabelPoint[right=.3em,yshift=.2em](O){$O'$}
+        \extkzLabelAngel[0.5](B',A',C'){$3$}
+        \extkzLabelAngel[0.5](D',B',A'){$4$}
+    \end{scope}
+\end{tikzpicture}
+

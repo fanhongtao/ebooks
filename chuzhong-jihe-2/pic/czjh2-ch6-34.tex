@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \begin{scope}
+        \tkzDefPoints{0/0/A, 2/0/B, 1.8/1/C, 0.8/1.5/D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzLabelPoints[above](D)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[below](A,B)
+    \end{scope}
+
+    \begin{scope}[xshift=3cm,scale=1.5]
+        \tkzDefPoints{0/0/A', 2/0/B', 1.8/1/C', 0.8/1.5/D'}
+        \tkzDrawPolygon(A',B',C',D')
+        \tkzLabelPoints[above](D')
+        \tkzLabelPoints[right](C')
+        \tkzLabelPoints[below](A',B')
+    \end{scope}
+\end{tikzpicture}
+
