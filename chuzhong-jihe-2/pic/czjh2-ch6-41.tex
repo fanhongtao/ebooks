@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/0/B, 2.7/1.4/C, 1.5/2/D, 0.8/2.1/E, -0.5/1/O}
+    \foreach \n in {A,B,C,D,E} {
+        \tkzDefPointOnLine[pos=1.5](\n,O)  \tkzGetPoint{\n'}
+    }
+
+    \tkzDrawPolygon(A,B,C,D,E)
+    \tkzDrawPolygon(A',B',C',D',E')
+    \tkzDrawSegments[dashed](A,A'  B,B'  C,C'  D,D'  E,E')
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[above](D,E)
+    \tkzLabelPoints[above=.2em, xshift=.2em](O)
+    \tkzLabelPoints[above](A')
+    \tkzLabelPoints[left](B')
+    \tkzLabelPoints[left](C')
+    \tkzLabelPoints[below left](D')
+    \tkzLabelPoints[below](E')
+\end{tikzpicture}
+

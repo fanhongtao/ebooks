@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 2.5/2.5/A}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+
+    % 1
+    \tkzDefPointOnLine[pos=0.7](A,B)  \tkzGetPoint{G_1}
+    \tkzDefLine[altitude](B,G_1,C)  \tkzGetPoint{D_1}
+    \tkzDrawSegment(G_1,D_1)
+    \tkzLabelPoints[left](G_1)
+    \tkzLabelPoints[below,xshift=-.3em](D_1)
+
+    % 2
+    \tkzDefPointBy[rotation=center D_1 angle -90](G_1)  \tkzGetPoint{x}
+    \tkzDefPointOnLine[pos=2](D_1,x)  \tkzGetPoint{E_1}
+    \tkzLabelPoints[below](E_1)
+
+    % 3
+    \tkzDefPointBy[translation=from D_1 to E_1](G_1)  \tkzGetPoint{F_1}
+    \tkzDrawPolygon(D_1,E_1,F_1,G_1)
+    \tkzLabelPoints[below right](F_1)
+
+    % 4
+    \tkzInterLL(B,F_1)(A,C)  \tkzGetPoint{F}
+    \tkzDrawSegment[dashed](B,F)
+    \tkzLabelPoints[right](F)
+
+    % 5
+    \tkzDefLine[parallel=through F](F_1,E_1)  \tkzGetPoint{e}
+    \tkzInterLL(F,e)(B,C)  \tkzGetPoint{E}
+    \tkzDefLine[parallel=through F](F_1,G_1)  \tkzGetPoint{g}
+    \tkzInterLL(F,g)(A,B)  \tkzGetPoint{G}
+    \tkzDefLine[parallel=through G](G_1,D_1)  \tkzGetPoint{d}
+    \tkzInterLL(G,d)(B,C)  \tkzGetPoint{D}
+    \tkzDrawPolygon(D,E,F,G)
+    \tkzLabelPoints[below](D,E)
+    \tkzLabelPoints[left](G)
+\end{tikzpicture}
+
