@@ -1,0 +1,25 @@
+\begin{tikzpicture}[
+    river/.style={decorate, decoration={random steps,segment length=3pt,amplitude=2pt}},
+]
+    \tkzDefPoints{0/0/A, 3.9/0/B}
+    \tkzDefTriangle[two angles=47 and 80](A,B)  \tkzGetPoint{C}
+    \tkzDefTriangle[two angles=87 and 41](A,B)  \tkzGetPoint{D}
+    \tkzDrawSegments[thick](A,B  C,D)
+    \tkzDrawPolygon[dashed](A,C,B,D)
+    \extkzLabelAngel[0.4](B,A,C){$1$}
+    \extkzLabelAngel[0.5](C,A,D){$2$}
+    \extkzLabelAngel[0.4](D,B,A){$3$}
+    \extkzLabelAngel[0.5](C,B,D){$4$}
+    \tkzLabelPoints[left](A,D)
+    \tkzLabelPoints[right](B,C)
+
+    \begin{scope}[xshift=-.5cm, yshift=1.1cm]
+        \foreach \x in {1, ..., 5} {
+            \coordinate (X) at (0, \x/5);
+            \draw [river]
+                (X) to [out=10, in=160] +(2.5, -0.1)
+                to [out=10, in=170] +(5, 0.3);
+        }
+    \end{scope}
+\end{tikzpicture}
+

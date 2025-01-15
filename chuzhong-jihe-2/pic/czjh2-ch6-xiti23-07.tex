@@ -1,0 +1,21 @@
+\begin{tikzpicture}[
+    river/.style={decorate, decoration={random steps,segment length=3pt,amplitude=2pt}},
+]
+    \tkzDefPoints{0/0/A, 4.5/0/B}
+    \tkzDefTriangle[two angles=55 and 65](A,B)  \tkzGetPoint{C}
+    \tkzDrawSegment[thick](A,B)
+    \tkzDrawSegments[dashed](A,C  B,C)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above](C)
+
+    \begin{scope}[yshift=1.1cm]
+        \foreach \x in {1, ..., 5} {
+            \coordinate (X) at (0, \x/5);
+            \draw [river]
+                (X) to [out=10, in=160] +(2.5, -0.1)
+                to [out=10, in=170] +(5, 0.3);
+        }
+    \end{scope}
+\end{tikzpicture}
+
