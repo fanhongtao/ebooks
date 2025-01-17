@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/D, 2/0/C}
+    \tkzDefTriangle[two angles=105 and 40](D,C)  \tkzGetPoint{A}
+    \tkzDefTriangle[two angles=75  and 40](D,A)  \tkzGetPoint{B}
+    \tkzDefLine[bisector](D,A,C)  \tkzGetPoint{e}
+    \tkzInterLL(A,e)(D,C)  \tkzGetPoint{E}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(A,D  A,E)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[below](D,E)
+\end{tikzpicture}
+

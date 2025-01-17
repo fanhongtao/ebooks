@@ -1,0 +1,15 @@
+\begin{tikzpicture} % 本图线段不成比例，仅供参考示意
+    \tkzDefPoints{0/0/B, 0/2/A, 1.5/0/D, 1.5/0.5/C, 3.5/0/F, 3.5/0.5/E}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{G}
+    \tkzInterLL(A,E)(B,D)  \tkzGetPoint{H}
+    \tkzInterLL(E,C)(A,B)  \tkzGetPoint{K}
+
+    \tkzDrawSegments(A,B  C,D  E,F A,G  A,H B,H)
+    \tkzDrawSegment[dashed](E,K)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,K)
+    \tkzLabelPoints[below](D,G,F)
+    \tkzLabelPoints[right](H)
+    \tkzLabelPoints[above,xshift=.3em](C,E)
+\end{tikzpicture}
+

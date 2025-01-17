@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 2/0/C, 0.4/2/A}
+    \tkzInterLC[R, near](A,B)(B,1.5)  \tkzGetFirstPoint{D}
+    \tkzInterLC[R, near](A,C)(C,1.5)  \tkzGetFirstPoint{E}
+    \tkzInterLL(D,E)(B,C)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments(D,F  C,F)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[above,xshift=.3em](E)
+    \tkzLabelPoints[left](B,D)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[right](F)
+\end{tikzpicture}
+

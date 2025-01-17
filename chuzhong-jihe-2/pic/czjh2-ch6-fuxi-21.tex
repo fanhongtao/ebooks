@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{1.5}
+    \tkzDefPoints{0/0/B, \a/0/E, 2*\a/0/F, 3*\a/0/C}
+    \tkzDefPoints{0/\a/A, \a/\a/G, 2*\a/\a/H, 3*\a/\a/D}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(G,E H,F A,E A,F A,C)
+    \tkzLabelPoints[left](A,B)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above](G,H)
+    \tkzLabelPoints[below](E,F)
+\end{tikzpicture}
+

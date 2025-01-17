@@ -1,0 +1,20 @@
+\begin{tikzpicture} % 本图线段不成比例，仅供参考示意
+    \pgfmathsetmacro{\a}{1.5}
+    \tkzDefPoints{0/0/E, \a/0/F, \a/\a/G, 0/\a/D}
+    \tkzDefMidPoint(D,G)  \tkzGetPoint{H}
+    \tkzDefMidPoint(E,F)  \tkzGetPoint{K}
+    \tkzDefShiftPoint[H](0,0.5){A}
+    \tkzDefShiftPoint[K](0,-0.4){C}
+    \tkzDefShiftPoint[C](-0.1,0){b}
+    \tkzInterLL(A,D)(C,b)  \tkzGetPoint{B}
+
+    \tkzDrawPolygon[pattern={mylines[angle=45, distance={4pt}]}](E,F,G,D)
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B,D,E)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[right](F,G)
+    \tkzLabelPoints[above right](H)
+    \tkzLabelPoints[below right](K)
+\end{tikzpicture}
+

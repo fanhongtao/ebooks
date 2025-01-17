@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/Q, 2/0/R}
+    \tkzDefTriangle[equilateral](Q,R)  \tkzGetPoint{P}
+    \tkzDefTriangle[two angles=120 and 20](Q,P)  \tkzGetPoint{A}
+    \tkzDefTriangle[two angles=35 and 120](P,R)  \tkzGetPoint{B}
+
+    \tkzDrawPolygon(P,Q,R)
+    \tkzDrawPolygon(A,P,Q)
+    \tkzDrawPolygon(B,P,Q)
+    \tkzLabelPoints[above](P)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[below](Q,R)
+\end{tikzpicture}
+
