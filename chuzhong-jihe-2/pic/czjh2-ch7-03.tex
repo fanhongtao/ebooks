@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, -1.5/0/A, 1.5/0/B}
+    \tkzDefPoint(200:1.5){C}
+    \tkzDefPoint(290:1.5){D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(A,B  C,D)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[below right](D)
+    \tkzLabelPoints[below](O)
+\end{tikzpicture}
+

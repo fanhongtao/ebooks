@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \def\drawingcode{
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoint(35:1.0){A}
+        \tkzDrawCircle[thick](O,A)
+        \tkzDrawSegment(O,A)
+        \tkzDrawPoint(O)
+        \tkzLabelSegment[above](O,A){$r$}
+    }
+
+    \begin{scope}
+        \drawingcode
+        \tkzLabelPoint[below](O){$O_1$}
+    \end{scope}
+
+    \begin{scope}[xshift=2.5cm]
+        \drawingcode
+        \tkzLabelPoint[below](O){$O_2$}
+    \end{scope}
+\end{tikzpicture}
+

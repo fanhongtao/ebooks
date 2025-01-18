@@ -32,6 +32,28 @@
 \newcommand{\tuichu}{\Longrightarrow}  % 推出
 \newcommand{\dengjiayu}{\Longleftrightarrow} % 等价于
 
+\newcommand*\Odot[1][1.1]{
+    \mathord{%
+        \tikz[baseline,scale=#1]
+        {\draw(0,0.32em) circle(0.35em);
+        \fill(0,0.32em) circle(0.7pt);}
+    }
+}
+
+\newcommand*\yuan{% 圆
+    \mathchoice{\Odot}{\Odot}{\Odot[0.7]}{\Odot[0.7]}
+}
+
+\newcommand*\yuanhu[1]{% 圆弧
+    \mathord{
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (a) {$#1$};
+            \fill (a.north west)[bend left=25] to (a.north east) [bend right=33] to (a.north west);
+        \end{tikzpicture}
+    }
+}
+
+
 %特殊符号
 \newcommand{\nsep}{,\quad}% 连续的数字之间的分隔符
 \newcommand{\douhao}{\mathord{\text{，}}}%（中文的）逗号
