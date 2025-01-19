@@ -1,0 +1,122 @@
+\subsection{经过三点的圆}\label{subsec:czjh2-7-2}
+
+我们知道，经过一个点 $A$ 作圆很容易，只要以点 $A$ 以外的任意一点为圆心，
+以这一点与点 $A$ 的距离为半径就可以作出。这样的圆有无数多个（图 \ref{fig:czjh2-7-7}）。
+如果要作通过两个点 $A$、$B$ 的圆，那就要找这样一个点作圆心，
+使它与点 $A$、$B$ 的距离都相等，这样的点在线段 $AB$ 的垂直平分线上。
+因此，以线段 $AB$ 的垂直平分线上任意一点为圆心，以这一点与点 $A$ 或点 $B$ 的距离为半径就可以作出。
+这样的圆也有无数多个（图 \ref{fig:czjh2-7-8}）。
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4cm}
+        \centering
+        \input{../pic/czjh2-ch7-07}
+        \caption{}\label{fig:czjh2-7-7}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh2-ch7-08}
+        \caption{}\label{fig:czjh2-7-8}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh2-ch7-09}
+        \caption{}\label{fig:czjh2-7-9}
+    \end{minipage}
+\end{figure}
+
+现在来讨论，经过三个已知点的圆。
+
+\zhongdian{作圆，使它经过不在同一直线上的三个已知点。}
+
+已知：不在同一直线上的三点 $A$、$B$、$C$（图 \ref{fig:czjh2-7-9}）。
+
+求作: $\yuan \, O$，使它经过点 $A$、$B$、$C$。
+
+分析：要作一个圆经过三个已知点 $A$、$B$、$C$，就要确定一个点作圆心，使它到这三点的距离相等。
+以前我们学过，三角形三边的垂直平分线相交于一点，这个点到三角形三个顶点的距离相等。
+因此可以把 $\triangle ABC$ 三边的垂直平分线的交点作为圆心。
+
+\zuofa 1. 连结 $AB$，作线段 $AB$ 的垂直平分线 $DE$。
+
+2. 连结 $BC$，作线段 $BC$ 的垂直平分线 $FG$，交 $DE$ 于点 $O$。
+
+3. 以 $O$ 为圆心， $OB$ 为半径作圆。
+
+$\yuan\,O$ 就是所求作的圆。
+
+\zhengming 因为 $\yuan\,O$ 的半径等于 $OB$，所以点 $B$ 在 $\yuan\,O$ 上， 就是 $\yuan\,O$ 经过点 $B$。
+
+因为 $O$ 在 $AB$ 的垂直平分线上，所以 $OA = OB$，因此 $\yuan\,O$ 经过点 $A$。
+同样可证 $\yuan\,O$ 经过点 $C$。
+
+我们知道，过 $A$、$B$ 两点的圆和过 $B$、$C$两点的圆， 它们的圆心分别在 $AB$ 和 $BC$ 的垂直平分线上。
+从上面的作法又可以知道：当已知点 $A$、$B$、$C$ 不在同一直线上时，
+$\triangle ABC$ 三边的垂直平分线有一个且只有一个交点，
+所以经过点 $A$、$B$、$C$ 可以作一个且只可作一个圆，这就得到：
+
+\begin{dingli}[定理]
+    不在同一直线上的三个点确定一个圆。
+\end{dingli}
+
+当点 $A$、$B$、$C$ 在同一直线上时，不能作一个圆经过这三点。（为什么？）
+
+由定理可知，经过三角形三个顶点可以作一个圆。
+经过三角形各顶点的圆叫做\zhongdian{三角形的外接圆}，
+外接圆的圆心叫做\zhongdian{三角形的外心}，
+这个三角形叫做这个\zhongdian{圆的内接三角形}。
+
+一般地，如果一个圆经过多边形的各顶点，这个圆叫做\zhongdian{多边形的外接圆}，
+这个多边形叫做这个\zhongdian{圆的内接多边形}。
+
+图 \ref{fig:czjh2-7-10} 中，四边形 $ABCD$ 是 $\yuan\,O$ 的内接四边形；
+$\yuan\,O$ 是四边形 $ABCD$ 的外接圆。
+
+注意：经过任意四点不一定能作一个圆，所以多于三边的多边形不一定有外接圆。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{4cm}
+        \centering
+        \input{../pic/czjh2-ch7-10}
+        \caption{}\label{fig:czjh2-7-10}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{5cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec2-lx-01}
+        \caption*{（第 1 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.5cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec2-lx-04}
+        \caption*{（第 4 题）}
+    \end{minipage}
+\end{figure}
+
+\begin{lianxi}
+
+\xiaoti{（口答）如图， $CD$ 所在直线垂直平分线段 $AB$。为什么使用这样的工具可以找到圆形工件的圆心。}
+
+\xiaoti{作边长分别为 2 厘米、 2.5 厘米、3 厘米的三角形，再作出这个三角形的外接圆，量出这个圆的直径（精确到 0.1 厘米）。}
+
+\xiaoti{作一个直角三角形，作它的外接圆；作一个钝角三角形，作它的外接圆。这两个三角形的外心的位置各是怎样的？}
+
+\xiaoti{按图填空：}
+\begin{xiaoxiaotis}
+
+    \xxt{$\triangle ABC$ 是 $\yuan\,O$ 的 \xhx[1cm] 接三角形；}
+
+    \xxt{$\yuan\,O$ 是 $\triangle ABC$ 的 \xhx[1cm] 接圆。}
+
+\end{xiaoxiaotis}
+
+\end{lianxi}
+
+
+

@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(60:1.5){A}
+    \tkzDefPoint(205:1.5){B}
+    \tkzDefPoint(335:1.5){C}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C,O)
+\end{tikzpicture}
+

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0.5/A, 0/-0.5/B, -1/0/O_1, 0.5/0/O_2, 1.3/0/O_3}
+
+    \tkzDrawLine[add=.7 and .8](O_1, O_3)
+    \tkzDrawCircle[thick](O_1,A)
+    \tkzDrawCircle[thick](O_2,A)
+    \tkzDrawCircle[thick](O_3,A)
+    \tkzDrawPoints(O_1, O_2, O_3, A, B)
+    \tkzLabelPoints[above=.5em](A)
+    \tkzLabelPoints[below=.5em](B)
+    \tkzLabelPoints[below](O_1, O_2, O_3)
+\end{tikzpicture}
+

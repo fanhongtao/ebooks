@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(135:1.5){A}
+    \tkzDefPoint(45:1.5){B}
+    \tkzDefShiftPoint[A](0,-.4){E}
+    \tkzDefShiftPoint[B](0,-.4){F}
+    \tkzDefLine[mediator](A,B)  \tkzGetPoints{c}{d}
+    \tkzInterLL(E,F)(c,d)  \tkzGetPoint{C}
+    \tkzDefShiftPoint[C](0,-2.5){D}
+    \tkzDefShiftPoint[C](-0.4,0){G}
+    \tkzDefShiftPoint[G](0,-2.5){H}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygon[fill=white](A,B,F,C,D,H,G,E) % 为了遮挡住 D 点附近的圆弧
+    \tkzDrawPolygon[pattern={mylines[angle=45, distance={4pt}]}](A,B,F,C,D,H,G,E)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B,D)
+    \tkzLabelPoints[below right](C)
+\end{tikzpicture}
+

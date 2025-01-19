@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 3/0/C, 2/2/A}
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+
+    % 1
+    \tkzDefLine[mediator, K=.5](A,B)  \tkzGetPoints{E}{D}
+    \tkzCompasss(A,D  B,D  A,E  B,E)
+    \tkzDrawSegments(A,B  D,E)
+    \tkzLabelPoints[above right](D,E)
+
+    % 2
+    \tkzDefLine[mediator, K=.5](B,C)  \tkzGetPoints{F}{G}
+    \tkzInterLL(D,E)(F,G)  \tkzGetPoint{O}
+    \tkzCompasss(B,F  C,F  B,G  C,G)
+    \tkzDrawSegments(B,C  F,G)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[right](F)
+    \tkzLabelPoints[below](G)
+    \tkzLabelPoints[below left](O)
+
+    % 3
+    \tkzDrawCircle[thick](O,B)
+
+    % ex
+    \tkzDrawSegment(A,C)
+\end{tikzpicture}
+
