@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth,]
+    \pgfmathsetmacro{\factor}{0.1}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:27.9*\factor){C}
+    \tkzDefPointOnLine[pos=7.2/37.4](C,O)  \tkzGetPoint{D}
+    \tkzDefLine[perpendicular=through D](O,C)  \tkzGetPoint{a}
+    \tkzInterLC(D,a)(O,C)  \tkzGetPoints{B}{A}
+
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSegments[dashed](O,C A,B B,O O,A)
+    \tkzMarkRightAngle[size=0.2](A,D,O)
+    \tkzLabelSegment[below left](O,A){$R$}
+    \tkzLabelPoints[below,xshift=-.3em](A)
+    \tkzLabelPoints[below right](B)
+    \tkzLabelPoints[below right](C)
+    \tkzLabelPoints[below right](D)
+    \tkzLabelPoints[below](O)
+
+    %
+    \tkzDefPointBy[translation=from D to C](A)  \tkzGetPoint{E}
+    \tkzDefShiftPoint[A](-0.5,0){Ha}
+    \tkzDefPointBy[translation=from A to Ha](E)  \tkzGetPoint{He}
+    \tkzDefShiftPoint[Ha](0,-0.3){Has}
+    \tkzDefShiftPoint[He](0, 0.3){Hes}
+    \tkzDrawLine[add=0 and 0.4](A,Ha)  \tkzDrawSegments(C,E)
+    \tkzDrawLine[add=0 and 0.4](E,He)
+    \tkzDrawSegment[-latex](Has,Ha)
+    \tkzDrawSegment[-latex](Hes,He)
+    \tkzLabelSegment[rotate=90,yshift=.5em](Ha,He){\footnotesize $7.2$}
+
+    \tkzDefShiftPoint[A](0, 0.9){Wa}
+    \tkzDefShiftPoint[B](0, 0.9){Wb}
+    \tkzDrawLines[add=0 and 0.3](A,Wa  B,Wb)
+    \tkzDrawSegment[latex-latex](Wa,Wb)
+    \tkzLabelSegment[yshift=.5em,fill=white, inner sep=1pt](Wa,Wb){$37.4$}
+    % \draw [latex-latex] (Wa) to [xianduan] node [fill=white, inner sep=1pt]{$30$} (Wb);
+    % \tkzDrawSegment[dim={$37.4$,10pt,}](Wa,Wb)
+\end{tikzpicture}
+

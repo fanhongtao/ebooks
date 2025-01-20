@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(160:1.5){A}
+    \tkzDefPoint(20:1.5){B}
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+
+    % 1
+    \tkzDrawSegment(A,B)
+
+    % 2
+    \tkzDefLine[mediator,K=.7](A,B)  \tkzGetPoints{C}{D}
+    \tkzInterLC(C,D)(O,A)  \tkzGetFirstPoint{E}
+    \tkzCompasss(A,C  B,C  A,D  B,D)
+    \tkzDrawLine[add=0.1 and 0.1](C,D)
+    \tkzDrawPoint(E)
+    \tkzLabelPoints[right](C,D)
+    \tkzLabelPoints[above right](E)
+\end{tikzpicture}
+

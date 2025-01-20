@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:1.5){C}
+    \tkzDefPoint(270:1.5){D}
+    \tkzDefPoint(230:1.5){A}
+    \tkzDefLine[perpendicular=through A](C,D)  \tkzGetPoint{a}
+    \tkzInterLC[common=A](A,a)(O,A)  \tkzGetFirstPoint{A'}
+    \tkzInterLL(A,A')(C,D)  \tkzGetPoint{M}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawLine[add=0.2 and 0.2](C,D)
+    \tkzDrawSegment(A,A')
+    \tkzDrawSegments[dashed](O,A  O,A')
+    \tkzMarkRightAngle(A',M,C)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left,xshift=-.3em](A)
+    \tkzLabelPoints[right](A', O)
+    \tkzLabelPoints[above left](C)
+    \tkzLabelPoints[below left](D)
+    \tkzLabelPoints[above, xshift=-.6em](M)
+\end{tikzpicture}
+

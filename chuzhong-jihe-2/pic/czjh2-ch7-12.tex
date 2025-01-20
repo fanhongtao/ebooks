@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:1.5){M}
+    \tkzDefPoint(270:1.5){N}
+    \tkzDefPoint(160:1.5){A}
+    \tkzDefPoint(20:1.5){B}
+    \tkzDefPoint(130:1.5){C}
+    \tkzDefPoint(50:1.5){D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(M,N  A,B  C,D)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B,D,O)
+    \tkzLabelPoints[above](M)
+    \tkzLabelPoints[below](N)
+\end{tikzpicture}
+
