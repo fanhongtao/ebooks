@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(285:1.5){A}
+    \tkzDefPoint(105:1.5){B}
+    \tkzDefPoint(230:1.5){D}
+    \tkzDefPoint(50:1.5){E}
+    \tkzDefLine[parallel=through A](D,E)  \tkzGetPoint{c}
+    \tkzInterLC[common=A](A,c)(O,A)  \tkzGetFirstPoint{C}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(A,B  D,E)
+    \tkzDrawSegments(A,C  C,E  E,B)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[below](A,D)
+    \tkzLabelPoints[above](B,E)
+    \tkzLabelPoints[right](C)
+\end{tikzpicture}
+

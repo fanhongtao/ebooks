@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:1.5){A}
+    \tkzDefPoint(50:1.5){B}
+    \tkzDefPoint(80:1.5){A'}
+    \tkzDefPoint(130:1.5){B'}
+    \tkzDefLine[altitude](A,O,B)  \tkzGetPoint{M}
+    \tkzDefLine[altitude](A',O,B')  \tkzGetPoint{M'}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments     (O,A   O,B   A,B    O,M)
+    \tkzDrawSegments[red](O,A'  O,B'  A',B'  O,M')
+    \tkzMarkAngle[size=.6, -latex](A,O,A')
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[below left](O)
+    \tkzLabelPoints[right](A)
+    \tkzLabelPoints[above right](B)
+    \tkzLabelPoints[above](A')
+    \tkzLabelPoints[above](B')
+    \tkzLabelPoints[below, xshift=-.4em](M)
+    \tkzLabelPoints[below, xshift=-.3em](M')
+\end{tikzpicture}
+

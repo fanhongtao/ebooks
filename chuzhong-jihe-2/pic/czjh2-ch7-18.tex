@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(-40:1.5){A}
+    \tkzDefPoint(20:1.5){B}
+    \tkzDefPoint(50:1.5){C}
+    \tkzDefPoint(51:1.5){D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(O,A  O,B  O,C  O,D)
+    \tkzMarkAngle[size=.6](A,O,B)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](A,B)
+
+    %
+    \tkzDefPoint(-20:0.6){e1}  % End point
+    \tkzDefPoint(-20:1.8){b1}  % Begin point
+    \tkzDrawSegment[-latex](b1,e1)
+    \tkzLabelSegment[pos=0, right](b1,e1){$n^\circ$圆心角}
+
+    \tkzDefPoint(5:1.5){e2}
+    \tkzDefPoint(5:1.8){b2}
+    \tkzDrawSegment[-latex](b2,e2)
+    \tkzLabelSegment[pos=0, right](b2,e2){$n^\circ$弧}
+
+    \tkzDefPoint(50.5:1.2){e3}
+    \tkzDefPoint(30:1.8){b3}
+    \tkzDrawSegment[-latex](b3,e3)
+    \tkzLabelSegment[pos=0, right](b3,e3){$1^\circ$圆心角}
+
+    \tkzDefPoint(50.5:1.5){e4}
+    \tkzDefPoint(45:1.8){b4}
+    \tkzDrawSegment[-latex](b4,e4)
+    \tkzLabelSegment[pos=0, right, yshift=.3em](b4,e4){$1^\circ$弧}
+\end{tikzpicture}
+

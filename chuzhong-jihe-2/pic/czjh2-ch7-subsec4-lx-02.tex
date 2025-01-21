@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/P,  3/0/O,  4.5/0/M}
+    \tkzDefPoint(15:5){E}
+    \tkzDefPoint(-15:5){F}
+    \tkzInterLC(P,E)(O,M)  \tkzGetPoints{B}{A}
+    \tkzInterLC(P,F)(O,M)  \tkzGetPoints{C}{D}
+
+    \tkzDrawSegments(P,E  P,F)
+    \tkzDrawLine[add=0 and .8](P,O)
+    \tkzDrawCircle(O,M)
+    \tkzDrawPoint(O)
+    \tkzMarkAngle[size=.6, arc=ll](F,P,O)
+    \tkzMarkAngle[size=.8, arc=ll](O,P,E)
+
+    \tkzLabelPoints[left](P)
+    \tkzLabelPoints[right](E,F)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[above,xshift=-.3em](A)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[below,xshift=-.3em](C)
+    \tkzLabelPoints[below](D)
+\end{tikzpicture}
+

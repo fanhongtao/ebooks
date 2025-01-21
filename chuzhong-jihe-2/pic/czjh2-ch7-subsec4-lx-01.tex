@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(315:1.5){A}
+    \tkzDefPoint(45:1.5){B}
+    \tkzDefPoint(110:1.5){C}
+    \tkzDefPoint(160:1.5){D}
+    \tkzDefLine[altitude](A,O,B)  \tkzGetPoint{M}
+    \tkzDefLine[altitude](C,O,D)  \tkzGetPoint{N}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments[dashed](O,A  O,B  O,C  O,D)
+    \tkzDrawSegments(A,B  C,D  O,M  O,N)
+    \tkzMarkRightAngle(B,M,O)
+    \tkzMarkRightAngle(O,N,C)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right,xshift=-.3em](M)
+    \tkzLabelPoints[below=.2em](N)
+\end{tikzpicture}
+

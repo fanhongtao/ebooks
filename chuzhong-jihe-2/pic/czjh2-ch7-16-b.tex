@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:1.5){A}
+    \tkzDefPoint(40:1.5){B}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(O,A  O,B)
+    \tkzMarkAngle[size=.6, -latex](A,O,B)
+    \tkzLabelAngle[pos=.8](A,O,B){$\alpha$}
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](A,B)
+\end{tikzpicture}
+
