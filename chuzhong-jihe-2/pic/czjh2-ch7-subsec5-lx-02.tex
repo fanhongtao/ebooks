@@ -1,0 +1,24 @@
+\begin{tikzpicture} % 复杂
+    % 利用：90度的圆周角所对的弦是直径
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(60:1.5){B}
+    \tkzDefPoint(190:2.0){D}
+    \tkzDefTriangle[two angles=90 and 45](B,D)  \tkzGetPoint{E}
+    \tkzInterLC[common=B](B,D)(O,B)  \tkzGetFirstPoint{A}
+    \tkzInterLC[common=B](B,E)(O,B)  \tkzGetFirstPoint{C}
+
+    \tkzDefLine[altitude](D,B,E)  \tkzGetPoint{H}
+    \tkzDefPointOnLine[pos=0.3](B,H)  \tkzGetPoint{B'}
+    \tkzDefPointBy[translation=from B to A](B')  \tkzGetPoint{d}
+    \tkzDefPointOnLine[pos=0.6](B',d)  \tkzGetPoint{D'}
+    \tkzDefTriangle[two angles=90 and 45](B',D')  \tkzGetPoint{E'}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygon[dashed](B,D,E)
+    \tkzDrawPolygon[dashed](B',D',E')
+    \tkzDrawSegments(A,C)
+    \tkzLabelPoints[above left](A)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[above right](C)
+\end{tikzpicture}
+

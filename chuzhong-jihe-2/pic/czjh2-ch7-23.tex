@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:1.5){A}
+    \tkzDefPoint(0:1.5){B}
+    \tkzDefPoint(70:1.5){C}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(A,B)
+    \tkzDrawSegments(A,C  B,C  O,C)
+    \tkzDrawPoint(O)
+    \tkzMarkRightAngle(A,C,B)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above](C)
+\end{tikzpicture}
+

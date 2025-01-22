@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(210:1.5){A}
+    \tkzDefPoint(330:1.5){B}
+    \tkzDefPoint(80:1.5){M}
+    \tkzDefPoint(160:1.0){P}
+    \tkzDefPoint(35:2.0){Q}
+    \tkzInterLC[common=A](A,P)(O,A)  \tkzGetFirstPoint{P'}
+    \tkzInterLC[common=A](A,Q)(O,A)  \tkzGetFirstPoint{Q'}
+
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSegments(A,B  A,P  A,Q  B,P  B,Q)
+    \tkzDrawSegments[dashed](P,P'  B,P'  B,Q')
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B, Q)
+    \tkzLabelPoints[above](M, P')
+    \tkzLabelPoints[above, xshift=.2em](Q')
+    \tkzLabelPoints[left](P)
+\end{tikzpicture}
+
