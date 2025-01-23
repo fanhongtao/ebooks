@@ -1,0 +1,263 @@
+\subsection{圆的内接四边形}\label{subsec:czjh2-7-6}
+\begin{enhancedline}
+
+我们知道，圆的内接四边形的四个顶点都在同一个圆上，所以它的四个内角都是圆周角。
+这样，我们就可以利用圆周角定理，来研究圆的内接四边形的角。
+
+\begin{wrapfigure}[9]{r}{4.5cm}
+    \centering
+    \input{../pic/czjh2-ch7-27}
+    \caption{}\label{fig:czjh2-7-27}
+\end{wrapfigure}
+
+如图 \ref{fig:czjh2-7-27}， 四边形 $ABCD$ 是 $\yuan\,O$ 的内接四边形。
+
+$\because$ \quad $\yuanhu{BAD}$ 和 $\yuanhu{BCD}$ 所对的圆心角的和是周角。
+
+$\therefore$ \quad $\angle A + \angle BCD = 180^\circ$。
+
+同理 $\angle B + \angle D = 180^\circ$。
+
+如果延长 $BC$ 到 $E$，那么 $\angle BCD + \angle DCE = 180^\circ$，所以
+
+$\angle A = \angle DCE$。
+
+$\angle A$ 是与 $\angle DCE$ 相邻的内角 $\angle DCB$ 的对角（简称为 $\angle DCE$ 的内对角），
+于是我们得到圆的内接四边形的性质定理。
+
+\begin{dingli}[定理]
+    圆的内接四边形的对角互补，并且任何一个外角都等于它的内对角。
+\end{dingli}
+
+
+\liti 如图 \ref{fig:czjh2-7-28}， $\yuan\,O_1$ 和 $\yuan\,O_2$ 相交于 $A$、$B$ 两点，
+经过点 $A$ 的直线 $CD$ 与 $\yuan\,O_1$ 交于点 $C$，与 $\yuan\,O_2$ 交于点 $D$。
+经过点 $B$ 的直线 $EF$， 与 $\yuan\,O_1$ 交于点 $E$，与 $\yuan\,O_2$ 交于点 $F$。
+
+求证： $CE \pingxing DF$。
+
+\zhengming 连结 $AB$。
+
+$\because$ \quad $ABEC$ 是 $\yuan\,O_1$ 的内接四边形，
+
+$\therefore$ \quad $\angle BAD = \angle E$。
+
+又 $\because$ \quad $ADFB$ 是 $\yuan\,O_2$ 的内接四边形，
+
+$\therefore$ \quad $\angle BAD + \angle F = 180^\circ$。
+
+$\therefore$ \quad $\angle E + \angle F = 180^\circ$。
+
+$\therefore$ \quad $CD \pxqdy DF$。
+
+
+$\therefore$ \quad $AB \cdot AC = AE \cdot AD$。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7.5cm}
+        \centering
+        \input{../pic/czjh2-ch7-28}
+        \caption{}\label{fig:czjh2-7-28}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec6-lx1-02}
+        \caption*{（第 2 题）}
+    \end{minipage}
+\end{figure}
+
+
+\begin{lianxi}
+
+\xiaoti{求证：圆内接平行四边形是矩形。}
+
+\xiaoti{如图，经过圆外一点 $P$ 的两条直线与 $\yuan\,O$ 相交于 $A$、$B$ 和 $C$、$D$ 四点，
+    在图中有几对相似三角形？为什么？
+}
+
+\end{lianxi}
+
+
+圆的内接四边形的性质定理有下面的逆定理:
+
+\begin{dingli}[定理]
+    如果一个四边形的一组对角互补，那么这个四边形内接于圆。
+\end{dingli}
+
+已知：四边形 $ABCD$ 中， $\angle B + \angle D = 180^\circ$。
+
+求证：四边形 $ABCD$ 内接于圆。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh2-ch7-29-a}
+        \caption*{甲}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{6cm}
+        \centering
+        \input{../pic/czjh2-ch7-29-b}
+        \caption*{乙}
+    \end{minipage}
+    \caption{}\label{fig:czjh2-7-29}
+\end{figure}
+
+分析：要证明四边形 $ABCD$ 内接于圆，就是要证明 $A$、$B$、$C$、$D$ 四点在同一个圆上。
+因为 $A$、$B$、$C$ 三点不在同一直线上，可以确定一个圆，
+所以只要证明第四点 $D$ 也在这个圆上就可以了。
+但直接证明点 $D$ 在圆上比较困难。现在我们采用一种间接证明的方法，
+就是假设点 $D$ 不在圆上，经过推理论证，得出错误的结论，
+这说明假设点 $D$ 不在圆上是错误的，从而证明点 $D$ 在圆上。
+
+\zhengming 经过四边形三个顶点 $A$、$B$、$C$ 作 $\yuan\,O$。
+
+假设点 $D$ 不在圆上，那么只有两种情况：（1）点 $D$ 在圆外； （2）点 $D$ 在圆内。
+
+（1）所设点 $D$ 在圆外（图 \ref{fig:czjh2-7-29} 甲）。连结 $BD$ 交 $\yuan\,O$ 于点 $D'$。连结 $AD'$、$CD'$。
+
+$\because$ \quad $\angle AD'B$、 $BD'C$ 分别是 $\triangle AD'D$、 $CD'D$ 的外角，
+
+$\therefore$ \quad \begin{zmtblr}[t]{}
+    $\angle AD'B > \angle ADB$， \\
+    $\angle BD'C > \angle BDC$。
+\end{zmtblr}
+
+$\therefore$ \quad $\angle AD'B + \angle BD'C > \angle ADB + \angle BDC$，
+
+即 \quad $\angle AD'C > \angle ADC$。
+
+又 $\because$ \quad $\angle ADC + \angle ABC = 180^\circ$，
+
+$\therefore$ \quad $\angle AD'C + \angle ABC > 180^\circ$。
+
+这与圆内接四边形性质定理矛盾。
+
+所以点 $D$ 不能在圆外。
+
+（2） 同 （1） 类似可证明点 $D$ 不能在圆内（图 \ref{fig:czjh2-7-29} 乙）。
+
+$\therefore$ \quad 点 $D$ 在 $\yuan\,O$ 上，
+
+即四边形 $ABCD$ 是 $\yuan\,O$ 的内接四边形。
+
+
+这个定理的证明，不是直接去证明命题的结论，而是先提出与结论相反（相排斥）的假设，
+然后推导出和已经证明的定理或公理、定义、题设等相矛盾的结果，
+这样就证明了与结论相反的假设不能成立，从而肯定了原来的结论必定成立，
+这种间接证明命题的方法叫做\zhongdian{反证法}。
+
+用反证法证明命题一般有下面三个步骤：
+
+（1）假设命题的结论不成立；
+
+（2）从这个假设出发，经过推理论证，得出矛盾；
+
+（3）由矛盾判定假设不正确，从而肯定命题的结论正确。
+
+
+
+\liti 求证：圆的两条相交弦（直径除外）不能互相平分。
+
+已知：如图 \ref{fig:czjh2-7-30}，弦 $AB$、$OD$ 相交于点 $P$。
+
+求证：$AB$、$CD$ 不能互相平分。
+
+证明：用反证法。
+
+假设 $AB$ 与 $CD$ 互相平分。
+
+因为 $AB$、$CD$ 不是直径，所以点 $P$ 与 $O$ 不重合，连结 $OP$。
+
+$\because$ \quad $AP = PB$，
+
+$\therefore$ \quad $OP \perp AB$。
+
+同理 $OP \perp CD$。
+
+这就是说过点 $P$ 有两条直线 $AB$、$CD$ 都垂直于 $OP$，
+这与过一点只有一条直线与已知直线垂直相矛盾。
+
+所以 $AB$ 和 $CD$ 不能互相平分。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-30}
+        \caption{}\label{fig:czjh2-7-30}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-31}
+        \caption{}\label{fig:czjh2-7-31}
+    \end{minipage}
+\end{figure}
+
+\liti \zhongdian{如果两个三角形有一条公共边，这条边所对的角相等，并且在公共边的同侧，
+    那么这两个三角形有公共的外接圆。
+}
+
+已知： 如图 \ref{fig:czjh2-7-31}， $\angle C$、$\angle D$ 在 $AB$ 同侧， $\angle C = \angle D$。
+
+求证： $\triangle ABC$ 和 $\triangle ABD$ 有公共外接圆。
+
+证明：用反证法。
+
+假设 $\triangle ABC$ 和 $\triangle ABD$ 没有公共外接圆，
+即  $A$、$B$、$C$、$D$ 四点不在同一个圆上。
+
+过 $A$、$B$、$C$ 三点作 $\yuan\,O$， 则点 $D$ 不在 $\yuan\,O$ 上。
+同 7.5 节例 2 的证明一样可得，
+$$ \angle ADB \neq \angle ACB \juhao $$
+
+这与题设相矛盾。
+
+$\therefore$ \quad  $\triangle ABC$ 和 $\triangle ABD$ 有公共外接圆。
+
+
+
+\begin{lianxi}
+
+\xiaoti{按照图 \ref{fig:czjh2-7-29} 乙，证明定理。}
+
+\xiaoti{否定下列各结论，并写出由此可能出现的情况：}
+\begin{xiaoxiaotis}
+
+    \begin{tblr}{columns={12em, colsep=0pt}}
+        \xxt{$a = b$；} & \xxt{$\angle A > 60^\circ$；} & \xxt{$AB \pingxing CD$；} \\
+        \xxt{点 $A$ 在 $\yuan\,O$ 上；} &  \xxt{点 $A$ 在直线 $a$ 上。}
+    \end{tblr}
+\end{xiaoxiaotis}
+
+\xiaoti{已知：如图， $\pxsbx ABCD$ 中，过点 $A$、$B$ 的圆与 $AD$、$BC$ 分别交于点 $E$、$F$。
+    求证：$C$、$D$、$E$、$F$ 四点在同一个圆上。
+}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec6-lx2-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec6-lx2-04}
+        \caption*{（第 4 题）}
+    \end{minipage}
+\end{figure}
+
+\xiaoti{已知：如图，$BE$ 和 $CF$ 是 $\triangle ABC$ 的高。
+    求证：$F$、$B$、$C$、$E$ 四点在同一个圆上。
+}
+
+\end{lianxi}
+
+\end{enhancedline}
+

@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(110:1.5){A}
+    \tkzDefPoint(200:1.5){B}
+    \tkzDefPoint(340:1.5){C}
+    \tkzDefPoint(45:1.5){D'}
+    \tkzDefPointOnLine[pos=1.2](B,D')  \tkzGetPoint{D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments[dashed](A,D'  C,D'  B,D)
+    \tkzLabelPoints[above left](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[right](D)
+    \tkzLabelPoints[below, xshift=-.5em, yshift=-.5em](D')
+\end{tikzpicture}
+

@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 2.5/0/B}
+    % C 和 D 的角相等
+    \tkzDefTriangle[two angles=95 and 25](A,B)  \tkzGetPoint{C}
+    \tkzDefTriangle[two angles=40 and 80](A,B)  \tkzGetPoint{D}
+    \tkzDefCircle[circum](A,B,C)  \tkzGetPoints{O}{R}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A,B,D)
+    \tkzDrawCircle[thick,dashed](O,R)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[right](O)
+    \tkzLabelPoints[below left](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[above left](C)
+    \tkzLabelPoints[above](D)
+\end{tikzpicture}
+

@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O_1, 3/0/O_2}
+    \tkzInterCC[R](O_1,1.5)(O_2,2)  \tkzGetPoints{A}{B}
+    \tkzDefPoint(170:1.5){C}
+    \tkzDefPoint(220:1.5){E}
+    \tkzInterLC[common=A](C,A)(O_2,A)  \tkzGetFirstPoint{D}
+    \tkzInterLC[common=B](E,B)(O_2,B)  \tkzGetFirstPoint{F}
+
+    \tkzDrawCircle[thick](O_1,A)
+    \tkzDrawCircle[thick](O_2,A)
+    \tkzDrawPolygon(C,D,F,E)
+    \tkzDrawSegments[dashed](A,B)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzLabelPoints[right](O_1, O_2)
+    \tkzLabelPoints[above, yshift=.3em](A)
+    \tkzLabelPoints[below, yshift=-.3em](B)
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[above right](D)
+    \tkzLabelPoints[below left](E)
+    \tkzLabelPoints[right](F)
+\end{tikzpicture}
+
