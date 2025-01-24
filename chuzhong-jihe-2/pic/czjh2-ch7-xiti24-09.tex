@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.025}
+    \pgfmathsetmacro{\R}{130*\factor/2}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\R){C}
+    \tkzDefPoint(0:\R){D}
+    \tkzDefPoint(90:\R){E}
+    \tkzDefPointOnLine[pos=32/65](O,E)  \tkzGetPoint{F}
+    \tkzDefLine[parallel=through F](C,D)  \tkzGetPoint{a}
+    \tkzInterLC(F,a)(O,C)  \tkzGetPoints{B}{A}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawArc[pattern={mylines[angle=65, distance={4pt}]}](O,B)(A)
+    \tkzDrawSegments(A,B)
+    \tkzDrawSegment[latex-latex](C,D)  \tkzLabelSegment[below](C,D){$\phi 130$}
+    \tkzDrawPoint(O)
+
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[above, xshift=.5em](B)
+
+    %
+    \tkzDefPointOnLine[pos=1.4](F,B)  \tkzGetPoint{G}
+    \tkzDefPointBy[translation=from F to G](E)  \tkzGetPoint{H}
+    \tkzDefShiftPoint[G](0,-0.4){g}
+    \tkzDefShiftPoint[H](0, 0.4){h}
+    \tkzDrawLines[add=0 and 0.1](E,H  F,G)
+    \tkzLabelSegment[rotate=90, yshift=.5em](G,H){$32$}  \tkzDrawSegments[-latex](g,G  h,H)
+\end{tikzpicture}
+
