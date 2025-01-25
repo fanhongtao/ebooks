@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:1.5){A}
+    \tkzDefPoint(270:1.0){P}
+    \tkzDefLine[perpendicular=through P,normed](O,P)  \tkzGetPoint{q}
+    \tkzDefPointOnLine[pos=2.0](P,q)  \tkzGetPoint{Q}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegment(O,P)
+    \tkzDrawLine[add=0 and 1](Q,P)
+    \tkzMarkRightAngle[size=.2](O,P,Q)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[below](P)
+    \tkzLabelSegment[pos=1, right](P,Q){$l$}
+
+    % 通过显示一个无色的 "P"，实现三张图片的 “圆点” 在同一水平线。
+    \tkzDefPoint(270:1.8){P}
+    \tkzLabelPoints[below,transparent](P)
+\end{tikzpicture}
+
