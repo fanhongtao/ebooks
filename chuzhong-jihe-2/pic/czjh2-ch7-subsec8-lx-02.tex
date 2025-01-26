@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:1.5){A}
+    \tkzDefPoint(0:1.5){B}
+    \tkzDefPointOnLine[pos=2](O,B)  \tkzGetPoint{D}
+    \tkzDefPoint(60:1.5){C}  % OD = 2OC, 再根据结论：DC 是切线，角OCD = 90度，所以，角 CDO = 30 度，即：角 DOC = 60 度
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegments(A,C  A,D)
+    \tkzDrawLine[add=0 and 0.6](D,C)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below,xshift=.5em](B)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below,xshift=-.5em](D)
+\end{tikzpicture}
+

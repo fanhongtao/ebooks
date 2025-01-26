@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:1.5){A}
+    \tkzDefPoint(0:1.5){B}
+    \tkzDefLine[perpendicular=through B,normed](O,B)  \tkzGetPoint{c}
+    \tkzDefPointOnLine[pos=2.0](B,c)  \tkzGetPoint{C}
+    \tkzDefLine[parallel=through A](O,C)  \tkzGetPoint{d}
+    \tkzInterLC[common=A](A,d)(O,A)  \tkzGetFirstPoint{D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(A,B  A,D  O,C)
+    \tkzDrawLine[add=0 and .7](C,B)
+    \tkzDrawLine[add=0 and .7](C,D)
+    \tkzDrawSegment[dashed](O,D)
+    \extkzLabelAngel[0.4](O,A,D){$1$}
+    \extkzLabelAngel[0.4](A,D,O){$2$}
+    \extkzLabelAngel[0.5](B,O,C){$3$}
+    \extkzLabelAngel[0.4](C,O,D){$4$}
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B,C)
+    \tkzLabelPoints[above](D)
+\end{tikzpicture}
+

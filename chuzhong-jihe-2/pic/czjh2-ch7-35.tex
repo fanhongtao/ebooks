@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:1.5){A}
+    \tkzDefLine[perpendicular=through A,normed](O,A)  \tkzGetPoint{T}
+    \tkzDefPointOnLine[pos=2.0](A,T)  \tkzGetPoint{T}
+    \tkzDefPointOnLine[pos=.4](A,T)  \tkzGetPoint{M}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegment(O,A)
+    \tkzDrawLine[add=0 and 1](T,A)
+    \tkzDrawSegment[dashed](O,M)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[below](A,M)
+    \tkzLabelPoints[right](T)
+\end{tikzpicture}
+

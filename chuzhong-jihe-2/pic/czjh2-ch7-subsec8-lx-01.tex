@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:1.5){A}
+    \tkzDefPoint(90:1.5){B}
+    \tkzDefTriangle[two angles=90 and 45](A,B)  \tkzGetPoint{T}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygon(A,B,T)
+    \tkzDrawPoint(O)
+    \tkzMarkAngle[size=.5](T,B,A)
+    \tkzLabelPoints[right](O)
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[below](T)
+\end{tikzpicture}
+

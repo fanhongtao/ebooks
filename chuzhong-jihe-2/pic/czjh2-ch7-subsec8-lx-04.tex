@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(70:3.5){A}
+    \tkzDefPoint(0:3.5){B}
+    \tkzDefPoint(35:4.5){C}
+    \tkzDefPointOnLine[pos=.55](O,C)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](A,D,O)  \tkzGetPoint{E}
+
+    \tkzDrawCircle[thick](D,E)
+    \tkzDrawPoint(D)
+    \tkzDrawSegments(O,A  O,B  O,C)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[above left](D)
+    \tkzLabelPoints[left](E)
+\end{tikzpicture}
+
