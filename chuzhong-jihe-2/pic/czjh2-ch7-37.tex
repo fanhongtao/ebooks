@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:1.5){P}
+    \tkzDefLine[perpendicular=through P,normed](O,P)  \tkzGetPoint{b}
+    \tkzDefPointOnLine[pos=2.0](P,b)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=2.0](B,P)  \tkzGetPoint{C}
+
+    \tkzDrawCircle[thick](O,P)
+    \tkzDrawPoint(O)
+    \tkzDrawSegments(O,P  B,C)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](B,C,P)
+\end{tikzpicture}
+

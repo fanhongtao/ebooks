@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 1.1/0/R, 3/0/P}
+    \tkzDrawCircle[thick](O,R)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[below=.2em, xshift=.3em](P)
+
+    % 1
+    \tkzDrawSegment(O,P)
+
+    % 2
+    \tkzDefMidPoint(O,P)  \tkzGetPoint{C}
+    \tkzDrawCircle[thick](C,O)
+    \tkzDrawPoint(C)
+    \tkzInterCC(O,R)(C,O)  \tkzGetPoints{A}{B}
+    \tkzLabelPoints[above, xshift=-.2em](A)
+    \tkzLabelPoints[below, xshift=-.2em](B)
+    \tkzLabelPoints[below](C)
+
+    % 3
+    \tkzDrawLines[add=0.2 and 0.2](P,A  P,B)
+    \tkzDrawSegments[dashed](O,A  O,B)
+\end{tikzpicture}
+
