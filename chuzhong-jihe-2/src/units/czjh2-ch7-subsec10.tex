@@ -1,0 +1,126 @@
+\subsection{三角形的内切圆}\label{subsec:czjh2-7-10}
+
+从一块三角形的材料上裁下一块圆形的用料，怎样才能使圆的半径尽可能大呢？这实际是下面的问题。
+
+\zhongdian{作圆，使它和已知三角形的各边都相切。}
+
+已知： $\triangle ABC$ （图 \ref{fig:czjh2-7-39}）。
+
+求作： 和 $\triangle ABC$ 的各边都相切的圆。
+
+分析：要作一个圆与  $\triangle ABC$ 三边都相切，就是要求出一点作为圆心，使它到三边的距离相等。
+以前我们学过三角形三个内角的平分线相交于一点，这一点到三边的距离相等。由此可得三角形内切圆的作法。
+
+\zuofa 1. 作 $\angle B$、$\angle C$ 的平分线 $BM$ 和 $CN$，交点为 $I$。
+
+2. 过点 $I$ 作 $ID \perp BC$，垂足为 $D$。
+
+3. 以 $I$ 为圆心， $ID$ 为半径作 $\yuan\,I$。
+
+$\yuan\,I$ 就是所求的圆。
+
+\zhengming 过点 $I$ 分别作 $CA$、$AB$ 的垂线，垂足为 $E$、$F$。
+
+$\because$ \quad  $I$ 在 $\angle ABC$、$\angle ACB$ 的平分线上，
+
+$\therefore$ \quad $IF = ID$，$IE = ID$。
+
+$\therefore$ \quad $D$、$E$、$F$ 都在 $\yuan\,I$ 上。
+
+又因为 $BC$、$CA$、$AB$ 经过点 $D$、$E$、$F$， 且 $BC \perp ID$、$CA \perp IE$、$AB \perp IF$，
+所以 $\triangle ABC$ 的三边 $BC$、$CA$、$AB$ 都与 $\yuan\,I$ 相切。
+
+因为三角形的三条角平分线有一个且只有一个交点，所以，
+和三角形的各边都相切的圆可以作出一个且只可以作出一个。
+
+和三角形各边都相切的圆叫做\zhongdian{三角形的内切圆}，
+内切圆的圆心叫做三角形的\zhongdian{内心}，
+这个三角形叫做\zhongdian{圆的外切三角形}。
+
+一般地，和多边形的各边都相切的圆叫做\zhongdian{多边形的内切圆}，
+这个多边形叫做\zhongdian{圆的外切多边形}。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-39}
+        \caption{}\label{fig:czjh2-7-39}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-40}
+        \caption{}\label{fig:czjh2-7-40}
+    \end{minipage}
+\end{figure}
+
+图 \ref{fig:czjh2-7-40} 中， $\yuan\,O$ 是四边形 $ABCD$ 的内切圆，四边形 $ABCD$ 是 $\yuan\,O$ 的外切四边形。
+
+
+\liti[0] \zhongdian{圆的外切四边形的两组对边的和相等。}
+
+已知：四边形 $ABCD$ 的边 $AB$、$BC$、$CD$、$DA$ 和 $\yuan\,O$
+分别相切于点 $L$、$M$、$N$、$P$（图 \ref{fig:czjh2-7-40}）。
+
+求证： $AB + CD = AD + BC$。
+
+证明： 因为 $AB$、$BC$、$CD$、$DA$ 都与 $\yuan\,O$ 相切，$L$、$M$、$N$、$P$ 是切点，
+
+$\therefore$ \quad $AL = AP$， $LB = MB$， $DN = DP$， $NC = MC$。
+
+$\therefore$ \quad $\begin{aligned}[t]
+      & AL + LB + DN + NC \\
+    = & AP + MB + DP + MC \\
+    = & AP + DP + MB + MC \douhao
+\end{aligned}$
+
+即 \quad $AB + CD = AD + BC$。
+
+
+\begin{lianxi}
+
+\xiaoti{设 $\triangle ABC$ 的内切圆 $I$ 和各边分别相切于点 $D$、$E$、$F$，
+    $\angle DIE = 118^\circ$， $\angle FID = 144^\circ$。
+    求 $\triangle ABC$ 各内角的度数。
+}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{5.6cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec10-lx-01}
+        \caption*{（第 1 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.6cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec10-lx-02}
+        \caption*{（第 2 题）}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{4.9cm}
+        \centering
+        \input{../pic/czjh2-ch7-subsec10-lx-03}
+        \caption*{（第 3 题）}
+    \end{minipage}
+\end{figure}
+
+\xiaoti{设 $\triangle ABC$ 的边 $BC = a$、 $CA = b$、 $AB = c$， $s = \exdfrac{1}{2} (a + b + c)$，
+    内切圆 $I$ 和 $BC$、$AC$、$AB$ 分别相切于点 $D$、$E$、$F$。求证：
+    \begin{gather*}
+        AB = AF = s - a \douhao \\
+        BF = BD = s - b \douhao \\
+        CD = CE = s - c \juhao
+    \end{gather*}
+}
+
+\xiaoti{$\triangle ABC$ 中， $\angle C$ 是直角， 内切圆 $I$ 和边 $BC$、$CA$、$AB$ 分别相切于点 $D$、$E$、$F$。}
+\begin{xiaoxiaotis}
+
+    \xxt{求证：四边形 $CDIE$ 是正方形。}
+
+    \xxt{设 $BC = a$、 $CA = b$。 用 $a$、$b$ 表示内切圆半径 $r$。}
+\end{xiaoxiaotis}
+
+\end{lianxi}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 3.5/2.5/A}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[right](C)
+
+    % 1
+    \tkzDefLine[bisector](C,B,A)  \tkzGetPoint{M}
+    \tkzDefLine[bisector](A,C,B)  \tkzGetPoint{N}
+    \tkzInterLL(B,M)(C,N)  \tkzGetPoint{I}
+    \tkzDrawSegments(B,M  C,N)
+    \tkzLabelPoints[above](I)
+    \tkzLabelPoints[left,yshift=.5em](M)
+    \tkzLabelPoints[left,xshift=.3em](N)
+
+    % 2
+    \tkzDefLine[altitude](B,I,C)  \tkzGetPoint{D}
+    \tkzDrawSegment(I,D)
+    \tkzMarkRightAngle[size=.2](I,D,B)
+    \tkzLabelPoints[below](D)
+
+    % 3
+    \tkzDrawCircle[thick](I,D)
+
+    % 证明
+    \tkzDefLine[altitude](C,I,A)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](A,I,B)  \tkzGetPoint{F}
+    \tkzDrawSegments[dashed](I,E  I,F)
+    \tkzLabelPoints[right](E)
+    \tkzLabelPoints[above left](F)
+\end{tikzpicture}
+

@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 3/2.5/A}
+    \tkzDefLine[bisector](B,A,C)  \tkzGetPoint{a}
+    \tkzDefLine[bisector](C,B,A)  \tkzGetPoint{b}
+    \tkzInterLL(A,a)(B,b)  \tkzGetPoint{I}
+    \tkzDefLine[altitude](B,I,C)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](C,I,A)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](A,I,B)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawCircle[thick](I,D)
+    \tkzDrawSegments[dashed](I,D  I,E  I,F)
+
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[above, xshift=.2em](I)
+    \tkzLabelPoints[below](B,C,D)
+    \tkzLabelPoints[right, yshift=.5em](E)
+    \tkzLabelPoints[left, yshift=.5em](F)
+\end{tikzpicture}
+

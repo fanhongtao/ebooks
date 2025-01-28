@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 5/0/C}
+    \tkzDefTriangle[two angles=36 and 62](B,C)  \tkzGetPoint{A}
+    \tkzDefLine[bisector](B,A,C)  \tkzGetPoint{a}
+    \tkzDefLine[bisector](C,B,A)  \tkzGetPoint{b}
+    \tkzInterLL(A,a)(B,b)  \tkzGetPoint{I}
+    \tkzDefLine[altitude](B,I,C)  \tkzGetPoint{D}
+    \tkzDefLine[altitude](C,I,A)  \tkzGetPoint{E}
+    \tkzDefLine[altitude](A,I,B)  \tkzGetPoint{F}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawCircle[thick](I,D)
+    \tkzDrawSegments(I,D  I,E  I,F)
+    \extkzLabelAngel[0.4](F,I,D){$144^\circ$}
+    \extkzLabelAngel[0.3](D,I,E){$118^\circ$}
+
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[above, xshift=.2em](I)
+    \tkzLabelPoints[below](B,C,D)
+    \tkzLabelPoints[right, yshift=.5em](E)
+    \tkzLabelPoints[left, yshift=.5em](F)
+\end{tikzpicture}
+

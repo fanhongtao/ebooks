@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    % 圆的外切四边形的两组对边的和相等
+    % AB + CD  = AD  + BC
+    % 4  + 2.5 = 3.5 + 3
+    \tkzDefPoints{0/0/A, 4/0/B}
+    \tkzDefPoint(70:3.5){D}
+    \tkzInterCC[R](D,2.5)(B,3)  \tkzGetFirstPoint{C}
+
+    % 切线长定理
+    \tkzDefLine[bisector](B,A,D)  \tkzGetPoint{a}
+    \tkzDefLine[bisector](C,B,A)  \tkzGetPoint{b}
+    \tkzInterLL(A,a)(B,b)  \tkzGetPoint{O}
+    \tkzDefLine[altitude](A,O,B)  \tkzGetPoint{L}
+    \tkzDefLine[altitude](B,O,C)  \tkzGetPoint{M}
+    \tkzDefLine[altitude](C,O,D)  \tkzGetPoint{N}
+    \tkzDefLine[altitude](D,O,A)  \tkzGetPoint{P}
+
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawCircle[thick](O,L)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[left](A,D,P)
+    \tkzLabelPoints[right](B,C,M)
+    \tkzLabelPoints[above](N)
+    \tkzLabelPoints[below](L,O)
+\end{tikzpicture}
+
