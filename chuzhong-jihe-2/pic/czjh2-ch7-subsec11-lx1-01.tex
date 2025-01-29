@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(210:1.5){A}
+    \tkzDefPoint(330:1.5){B}
+    \tkzDefPoint(50:1.5){T}
+    \tkzDefLine[perpendicular=through T,normed](O,T)  \tkzGetPoint{c}
+    \tkzInterLL(T,c)(A,B)  \tkzGetPoint{C}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegments(A,C  A,T  B,T)
+    \tkzDrawLine[add=0 and .3](C,T)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[above right](T)
+\end{tikzpicture}
+

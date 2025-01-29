@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(200:1.5){A}
+    \tkzDefPoint(340:1.5){B}
+    \tkzDefPoint(90:1.5){M}
+    \tkzDefLine[perpendicular=through M,normed](O,M)  \tkzGetPoint{c}
+    \tkzDefPointOnLine[pos=1.5](M,c)  \tkzGetPoint{C}
+    \tkzDefPointOnLine[pos=2.0](C,M)  \tkzGetPoint{D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawPolygon(A,B,M)
+    \tkzDrawSegments(C,D)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[left](A,C)
+    \tkzLabelPoints[right](B,D)
+    \tkzLabelPoints[above](M)
+\end{tikzpicture}
+

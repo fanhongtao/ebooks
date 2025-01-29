@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:1.5){A}
+    \tkzDefPoint(90:1.5){Q}
+    \tkzDefPoint(140:1.5){C}
+    \tkzDefPoint(230:1.5){P}
+    \tkzDefPoint(20:1.5){m}
+    \tkzDefLine[perpendicular=through A,normed](O,A)  \tkzGetPoint{b}
+    \tkzDefPointOnLine[pos=2.0](A,b)  \tkzGetPoint{B}
+    \tkzDefPointOnLine[pos=1.8](B,A)  \tkzGetPoint{D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawPolygon(A,C,P)
+    \tkzDrawSegment(B,D) %\tkzDrawLine[add=0 and 1](B,A)
+    \tkzDrawSegments[dashed](A,Q  C,Q)
+    \tkzMarkRightAngle[](A,C,Q)
+    \tkzLabelPoints[right](O)
+    \tkzLabelPoints[below](A,D)
+    \tkzLabelPoints[right](B,m)
+    \tkzLabelPoints[above](Q,C)
+    \tkzLabelPoints[left, yshift=-.3em](P)
+\end{tikzpicture}
+

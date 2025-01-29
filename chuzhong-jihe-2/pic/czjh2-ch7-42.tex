@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{2}
+    \pgfmathsetmacro{\r}{1.5}
+    \tkzDefPoints{0/0/O, 2.6/0/O'}
+    \tkzInterCC[R](O,\r)(O',\R)  \tkzGetPoints{A}{B}
+    \tkzDefLine[perpendicular=through A](O',A)  \tkzGetPoint{c}
+    \tkzInterLC[R,common=A](A,c)(O,\r)  \tkzGetFirstPoint{C}
+    \tkzDefLine[perpendicular=through A](O,A)  \tkzGetPoint{d}
+    \tkzInterLC[R,common=A](A,d)(O',\R)  \tkzGetFirstPoint{D}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawCircle[thick](O',A)
+    \tkzDrawPoints(O, O')
+    \tkzDrawLine[add=0 and .4](C,A)
+    \tkzDrawLine[add=0 and .4](D,A)
+    \tkzDrawSegments(A,B  B,C  B,D)
+    \extkzLabelAngel[0.4](B,A,D){$1$}
+    \extkzLabelAngel[0.5](C,A,B){$2$}
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](O')
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[below left](C)
+    \tkzLabelPoints[below right](D)
+\end{tikzpicture}
+

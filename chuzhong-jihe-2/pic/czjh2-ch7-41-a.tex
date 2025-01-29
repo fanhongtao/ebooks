@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:1.5){A}
+    \tkzDefPoint(90:1.5){C}
+    \tkzDefPoint(220:1.5){P}
+    \tkzDefPoint(20:1.5){m}
+    \tkzDefLine[perpendicular=through A,normed](O,A)  \tkzGetPoint{b}
+    \tkzDefPointOnLine[pos=2.0](A,b)  \tkzGetPoint{B}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawPolygon(A,C,P)
+    \tkzDrawLine[add=0 and .8](B,A)
+    \tkzMarkRightAngle[](A,P,C)
+    \tkzLabelPoints[right](O)
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[right](B,m)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[left](P)
+\end{tikzpicture}
+

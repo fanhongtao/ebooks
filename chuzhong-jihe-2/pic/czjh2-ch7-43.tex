@@ -1,0 +1,54 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\a}{45}
+
+    \begin{scope}[xshift=-2cm]
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoint(0:1.0){A}
+        \tkzDefPoint(\a:1.0){B}
+
+        \tkzDrawSegments(O,A  O,B)
+        \extkzLabelAngel[0.5](A,O,B){$\alpha$}
+    \end{scope}
+
+    \tkzDefPoints{0/0/A, 2.5/0/B}
+    \tkzDrawSegment(A,B)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](B)
+
+    % 1
+    \tkzDefLine[mediator, K=.9](A,B)  \tkzGetPoints{M}{N}
+    \tkzDrawSegment(M,N)
+    \tkzLabelPoints[above](M)
+    \tkzLabelPoints[below](N)
+
+    % 2
+    \tkzDefPointBy[rotation=center B angle \a](A)  \tkzGetPoint{d}
+    \tkzDefPointOnLine[pos=.5](B,d)  \tkzGetPoint{D}
+    \tkzDrawSegment(B,D)
+    \extkzLabelAngel[0.5](A,B,D){$\alpha$}
+    \tkzLabelPoints[below right](D)
+
+    % 3
+    \tkzDefLine[perpendicular=through B, K=2](D,B)  \tkzGetPoint{E}
+    \tkzInterLL(B,E)(M,N)  \tkzGetPoint{O}
+    \tkzDrawSegments(B,E)
+    \tkzDrawPoint(O)
+    \tkzMarkRightAngle(E,B,D)
+    \tkzLabelPoints[left](E)
+    \tkzLabelPoints[right](O)
+
+    % 4
+    \tkzCalcLength(O,A)  \tkzGetLength{rOA}
+    \tkzDefShiftPoint[O](130:\rOA){m}
+    \tkzDefShiftPoint[O](60:\rOA){P} % \tkzDefPointBy[rotation=center O angle 105](B)  \tkzGetPoint{P}
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSegments[thick](A,P  B,P)
+    \extkzLabelAngel[0.5](A,P,B){$\alpha$}
+    \tkzLabelPoints[above](P)
+    \tkzLabelPoints[above, rotate=30](m)
+
+    % 另一个弧
+    \tkzDefPointBy[reflection=over A--B](O)  \tkzGetPoint{O'}
+    \tkzDrawArc[thick](O',A)(B)
+\end{tikzpicture}
+
