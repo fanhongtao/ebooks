@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(120:1.5){A}
+    \tkzDefPoint(350:1.5){B}
+    \tkzDefPoint(240:1.5){C}
+    \tkzDefPoint(40:1.5){D}
+    \tkzInterLL(A,B)(C,D)  \tkzGetPoint{P}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegments(A,B  C,D)
+    \tkzDrawSegments[dashed](A,C  B,D)
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[right](B)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[right](D)
+    \tkzLabelPoints[below=.3em](P)
+\end{tikzpicture}
+

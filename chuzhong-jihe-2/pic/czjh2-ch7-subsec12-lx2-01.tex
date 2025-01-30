@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 4/3/A}
+    \tkzDefMidPoint(A,C)  \tkzGetPoint{O}
+    \tkzInterLC[common=A](B,A)(O,A)   \tkzGetFirstPoint{D}
+
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left](B)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[above left](D)
+    \tkzLabelPoints[right](O)
+\end{tikzpicture}
+

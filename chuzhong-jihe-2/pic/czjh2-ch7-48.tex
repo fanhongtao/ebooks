@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0.5/B, 0/-0.5/A, -1/0/O_1, 0.5/0/O_2, 1.3/0/O_3}
+
+    \tkzDrawCircle[thick](O_1,A)
+    \tkzDrawCircle[thick](O_2,A)
+    \tkzDrawCircle[thick](O_3,A)
+    \tkzDrawPoints(O_1, O_2, O_3, A, B)
+    \tkzLabelPoints[left=.5em](A)
+    \tkzLabelPoints[left=.5em](B)
+    \tkzLabelPoints[below](O_1, O_2)
+    \tkzLabelPoints[below, xshift=.2em](O_3)
+
+    % 过点P作切线
+    \tkzDefPointOnLine[pos=2.5](A,B)  \tkzGetPoint{P}
+    \tkzDrawLine[add=0 and 0.1](A,P)
+    \tkzLabelPoints[left](P)
+
+    \tkzDefMidPoint(O_1,P)  \tkzGetPoint{Q}
+    \tkzInterCC(O_1,A)(Q,P)  \tkzGetFirstPoint{C}
+    \tkzDrawPoint(C)
+    \tkzDrawLine[add=0 and 0.3](P,C)
+    \tkzLabelPoints[above](C)
+
+    \tkzDefMidPoint(O_2,P)  \tkzGetPoint{Q}
+    \tkzInterCC(O_2,A)(Q,P)  \tkzGetSecondPoint{D}
+    \tkzDrawPoint(D)
+    \tkzDrawLine[add=0 and 0.3](P,D)
+    \tkzLabelPoints[above, xshift=.2em](D)
+
+    \tkzDefMidPoint(O_3,P)  \tkzGetPoint{Q}
+    \tkzInterCC(O_3,A)(Q,P)  \tkzGetSecondPoint{E}
+    \tkzDrawPoint(E)
+    \tkzDrawLine[add=0 and 0.3](P,E)
+    \tkzLabelPoints[above](E)
+\end{tikzpicture}
+

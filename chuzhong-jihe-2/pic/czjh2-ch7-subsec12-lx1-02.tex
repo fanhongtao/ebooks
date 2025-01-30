@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:1.5){C}
+    \tkzDefPoint(0:1.5){D}
+    \tkzDefPointOnLine[pos=2/10](D,C)  \tkzGetPoint{P}  % 由 AP=4, PD=2, 得 CP=8
+    \tkzDefLine[perpendicular=through P](C,D)  \tkzGetPoint{a}
+    \tkzInterLC(P,a)(O,C)  \tkzGetPoints{B}{A}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzDrawSegments(A,B  C,D)
+    \tkzMarkRightAngle[size=.2](D,P,A)
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[left](C)
+    \tkzLabelPoints[right](D)
+    \tkzLabelPoints[below left](P)
+\end{tikzpicture}
+
