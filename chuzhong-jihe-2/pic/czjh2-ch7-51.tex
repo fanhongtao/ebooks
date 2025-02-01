@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.9]
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{1.2}
+
+    \tkzDefPoints{0/0/O_1, 2.2/0/O_2}
+    \tkzDefPoint(60:\R){M}
+    \tkzDefShiftPoint[O_2](60:\r){N}
+    \tkzInterCC(O_1,M)(O_2,N)  \tkzGetPoints{A}{B}
+
+    \tkzDrawCircle[thick](O_1,M)
+    \tkzDrawCircle[thick](O_2,N)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzDrawLine[add=.8 and .8](O_1,O_2)
+    \tkzDrawSegments(A,B)
+    \tkzLabelPoints[below](O_1)
+    \tkzLabelPoints[below](O_2)
+    \tkzLabelPoints[above=.5em](A)
+    \tkzLabelPoints[below=.5em](B)
+\end{tikzpicture}
+

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=.8]
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{1.2}
+
+    \tkzDefPoints{0/0/O_1, 0/0/O_2} % O_1 = O_2
+    \tkzDefPoint(15:\R){M}
+    \tkzDefShiftPoint[O_2](60:\r){N}
+
+    \tkzDrawCircle[thick](O_1,M)
+    \tkzDrawCircle[thick](O_2,N)
+    \tkzDrawSegments(O_1,M  O_2,N)
+    \tkzLabelSegment[midway, below](O_1,M){$R$}
+    \tkzLabelSegment[midway, left](O_2,N){$r$}
+    \tkzLabelPoint[left](O_1){$O$}
+\end{tikzpicture}
+

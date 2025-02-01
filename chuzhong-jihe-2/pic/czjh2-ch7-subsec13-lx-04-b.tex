@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=.9]
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{1.0}
+
+    \tkzDefPoints{0/0/O_1, \R-\r/0/O_2, -\r/0/T}
+    \tkzDefPoint(60:\r){A}
+    \tkzInterLC[common=T](A,T)(O_2,T)  \tkzGetFirstPoint{B}
+
+    \tkzDrawCircle[thick](O_1,T)
+    \tkzDrawCircle[thick](O_2,T)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzDrawSegments(O_1,A  O_2,B  T,B)
+    \tkzLabelPoints[below, xshift=-.5em](O_1)
+    \tkzLabelPoints[below](O_2)
+    \tkzLabelPoints[above, xshift=-.2em](A)
+    \tkzLabelPoints[above right](B)
+    \tkzLabelPoints[left](T)
+\end{tikzpicture}
+

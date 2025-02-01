@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=.9]
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O_1, \R/0/O_2}
+    \tkzInterCC[R](O_1,\R)(O_2,\R)  \tkzGetPoints{A}{B}
+
+    \tkzDrawCircle[thick](O_1,A)
+    \tkzDrawCircle[thick](O_2,A)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzDrawSegments(O_1,O_2  A,B  O_1,A  O_2,A)
+    \tkzLabelPoints[left](O_1)
+    \tkzLabelPoints[right](O_2)
+    \tkzLabelPoints[above=.2em](A)
+    \tkzLabelPoints[below=.2em](B)
+\end{tikzpicture}
+
