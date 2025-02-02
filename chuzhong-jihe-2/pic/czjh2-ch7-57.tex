@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{1.0}
+
+    \tkzDefPoints{0/0/O_1, \R/0/A, \R+\r/0/O_2}
+    \tkzDrawCircle[very thick](O_1,A)
+    \tkzDrawCircle[very thick](O_2,A)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzLabelPoints[right](O_1, O_2)
+    \tkzLabelPoints[left](A)
+
+    % 绘制外公切线 BC
+    \tkzDefSimilitudeCenter[ext](O_1,A)(O_2,A)  \tkzGetPoint{J}
+    \tkzDefLine[tangent from = J](O_1,A)  \tkzGetSecondPoint{B}
+    \tkzDefLine[tangent from = J](O_2,A)  \tkzGetSecondPoint{C}
+    \tkzDrawLine[very thick, add=0.5 and 0.4](B,C)
+    \tkzLabelPoints[above](B,C)
+
+    %
+    \tkzDrawSegments[very thick](A,B  A,C)
+
+    % 辅助线
+    \tkzDefShiftPoint[A](0,1){a}
+    \tkzInterLL(A,a)(B,C)  \tkzGetPoint{O}
+    \tkzDrawLine[dashed, add=1.5 and 0.5](A,O)
+    \tkzLabelPoints[right, yshift=.5em](O)
+\end{tikzpicture}
+

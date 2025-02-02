@@ -1,0 +1,60 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \tkzDefPoints{0/0/O_1, 4/0/O_2}
+    \tkzDefPoint(210:\R){M}
+    \tkzDefShiftPoint[O_2](50:\r){N}
+    \tkzDrawCircle[very thick](O_1,M)
+    \tkzDrawCircle[very thick](O_2,N)
+    \tkzDrawSegment[dashed](O_1,O_2)
+    \tkzLabelPoints[below=.3em](O_1)
+    \tkzLabelPoints[below=.2em, xshift=.2em](O_2)
+
+    % 1 以 O_1 为圆心，R+r 为半径作圆，O_2E 为切线
+    \tkzDefPoint(0:\R+\r){T1}
+    \tkzDrawCircle(O_1,T1)
+    \tkzDefMidPoint(O_1,O_2)  \tkzGetPoint{T2}
+    \tkzInterCC(O_1,T1)(T2,O_1)  \tkzGetPoints{E}{F}
+    \tkzDrawLine[add=0.3 and 0.3](O_2,E)
+    \tkzLabelPoints[above right](E)
+
+    % 2
+    \tkzInterLC(O_1,E)(O_1,M)  \tkzGetSecondPoint{A}
+    \tkzDrawSegment(O_1,E)
+    \tkzLabelPoints[above=.2em](A)
+
+    % 3 O_2B 平行于 O_1A
+    \tkzDefLine[parallel=through O_2](O_1,A)  \tkzGetPoint{b}
+    \tkzInterLC(O_2,b)(O_2,N)  \tkzGetFirstPoint{B}
+    \tkzDrawSegment(O_2,B)
+    \tkzLabelPoints[below](B)
+
+    % 4
+    \tkzDrawLine[very thick, add=0.3 and 0.2](A,B)
+
+    % ex-1
+    \tkzDrawLine[dashed, add=0.3 and 0.3](O_2,F)
+    \tkzLabelPoints[below=.2em, xshift=-.2em](F)
+
+    % ex-2
+    \tkzInterLC(O_1,F)(O_1,M)  \tkzGetSecondPoint{C}
+    \tkzDrawLine[dashed, add=0 and 0.2](O_1,F)
+    \tkzLabelPoints[below=.2em, xshift=-.2em](C)
+
+    % ex-3
+    \tkzDefLine[parallel=through O_2](O_1,C)  \tkzGetPoint{d}
+    \tkzInterLC(O_2,d)(O_2,N)  \tkzGetSecondPoint{D}
+    \tkzDrawSegment[dashed](O_2,D)
+    \tkzLabelPoints[above](D)
+
+    % ex-4
+    \tkzDrawLine[very thick, add=0.3 and 0.2](C,D)
+
+    % 标注半径
+    \tkzDrawSegment[thick](O_1,M)
+    \tkzLabelSegment[pos=.5, left, yshift=.3em](O_1,M){$R$}
+    \tkzDrawSegment[thick](O_2,N)
+    \tkzLabelSegment[pos=.6, left](O_2,N){$r$}
+\end{tikzpicture}
+

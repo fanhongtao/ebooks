@@ -1,0 +1,63 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{0.7}
+
+    \tkzDefPoints{0/0/O_1, 4/0/O_2}
+    \tkzDefPoint(0:\R){M}
+    \tkzDefShiftPoint[O_2](0:\r){N}
+    \tkzDrawCircle[very thick](O_1,M)
+    \tkzDrawCircle[very thick](O_2,N)
+    \tkzDrawSegment[dashed](O_1,O_2)
+    \tkzLabelPoints[left](O_1)
+    \tkzLabelPoints[right](O_2)
+
+    % 1
+    \tkzDefPoint(0:\R-\r){T1}
+    \tkzDrawCircle(O_1,T1)
+    \tkzDefMidPoint(O_1,O_2)  \tkzGetPoint{T2}
+    \tkzInterCC(O_1,T1)(T2,O_1)  \tkzGetPoints{E}{F}
+    \tkzDrawSegment(O_2,E)
+    \tkzLabelPoints[above left](E)
+
+    % 2
+    \tkzInterLC(O_1,E)(O_1,M)  \tkzGetSecondPoint{A}
+    \tkzDrawSegment(O_1,A)
+    \tkzLabelPoints[above](A)
+
+    % 3
+    \tkzDefLine[parallel=through O_2](O_1,A)  \tkzGetPoint{b}
+    \tkzInterLC(O_2,b)(O_2,N)  \tkzGetSecondPoint{B}
+    \tkzDrawSegment(O_2,B)
+    \tkzLabelPoints[above](B)
+
+    % 4
+    \tkzDrawLine[very thick, add=0.3 and 0.2](A,B)
+
+    % ex-1
+    \tkzDrawSegment[dashed](O_2,F)
+    \tkzLabelPoints[below left](F)
+
+    % ex-2
+    \tkzInterLC(O_1,F)(O_1,M)  \tkzGetSecondPoint{C}
+    \tkzDrawSegment[dashed](O_1,C)
+    \tkzLabelPoints[below](C)
+
+    % ex-3
+    \tkzDefLine[parallel=through O_2](O_1,C)  \tkzGetPoint{d}
+    \tkzInterLC(O_2,d)(O_2,N)  \tkzGetSecondPoint{D}
+    \tkzDrawSegment[dashed](O_2,D)
+    \tkzLabelPoints[below](D)
+
+    % ex-4
+    \tkzDrawLine[very thick, add=0.3 and 0.2](C,D)
+
+    % 标注半径
+    \tkzLabelSegment[pos=.5, right](O_1,C){$R$}
+    \tkzLabelSegment[pos=.5, left](O_2,B){$r$}
+
+    \tkzDefMidPoint(O_1,E)  \tkzGetPoint{X1}
+    \tkzDefPoint(150:\R-\r){X2}
+    \tkzDrawSegment[-latex](X2,X1)
+    \tkzLabelSegment[pos=.05, left](X2,X1){$R-r$}
+\end{tikzpicture}
+
