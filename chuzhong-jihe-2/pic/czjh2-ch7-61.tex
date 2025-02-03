@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{0.9}
+
+    \begin{scope}[xshift=2cm, yshift=1.6cm]
+        \tkzDefPoints{0/0/a1, \r/0/a2}
+        \tkzDrawSegments[xianduan={below=0pt}](a1,a2)
+        \tkzLabelSegment[above](a1,a2){$R_2$}
+    \end{scope}
+
+    \tkzDefPoints{0/0/O_1, \R/0/A}
+    \tkzDefPoint(120:\R){B}
+    \tkzDefPoint(60:\R){M}
+
+    \tkzDrawPoint(O_1)
+    \tkzDrawArc[thick](O_1,A)(B)
+    \tkzDrawSegment[red](O_1,M)
+    \tkzLabelSegment[pos=.7, below, xshift=.3em](O_1,M){$R_1$}
+    \tkzLabelPoints[below](O_1)
+    \tkzLabelPoints[below left](A)
+    \tkzLabelPoints[above](B)
+
+    % 1
+    \tkzDefPoints{\R+\r/0/O_2}
+    \tkzDrawSegment(O_1, O_2)
+    \tkzDrawPoint(O_2)
+    \tkzLabelPoints[below](O_2)
+
+    % 2
+    \tkzDefShiftPoint[O_2](320:\r){C}
+    \tkzDrawArc[thick](O_2,A)(C)
+    \tkzLabelPoints[below](C)
+\end{tikzpicture}
+

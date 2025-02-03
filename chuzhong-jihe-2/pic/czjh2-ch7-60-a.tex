@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{0.8}
+
+    \tkzDefPoints{0/0/O_1, \R+\r/0/O_2, \R/0/A}
+    \tkzDefPoint(70:\R){B}
+    \tkzDefPoint(60:\R){M}
+    \tkzDefShiftPoint[O_2](270:\r){C}
+    \tkzDefShiftPoint[O_2](60:\r){N}
+    \tkzDefLine[perpendicular=through A, normed](O_1,O_2)  \tkzGetPoint{a}
+
+    \tkzDrawPoint(O_1)
+    \tkzDrawArc[thick](O_1,A)(B)
+    \tkzDrawArc[dashed](O_1,B)(A)
+    \tkzDrawSegment[red](O_1,M)
+    \tkzLabelSegment[pos=.7, below, xshift=.3em](O_1,M){$R_1$}
+    \tkzLabelPoints[below](O_1)
+    \tkzLabelPoints[above](B)
+
+    \tkzDrawPoint(O_2)
+    \tkzDrawArc[thick](O_2,A)(C)
+    \tkzDrawArc[dashed](O_2,C)(A)
+    \tkzDrawSegment[red](O_2,N)
+    \tkzLabelSegment[pos=.8, below, xshift=.3em](O_2,N){$R_2$}
+    \tkzLabelPoints[below](O_2)
+    \tkzLabelPoints[below](C)
+
+    \tkzDrawLine[dashed, add=.8 and .5](O_1,O_2)
+    \tkzDrawLine[dashed, add=2 and 1](A,a)
+    \tkzLabelPoints[below, xshift=-1em](A)
+\end{tikzpicture}
+

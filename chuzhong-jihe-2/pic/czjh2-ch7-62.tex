@@ -1,0 +1,52 @@
+\begin{tikzpicture}
+    % 1
+    \tkzDefPoints{0/0/F, 0/3/E}
+    \tkzDrawSegment(E,F)
+    \tkzLabelPoints[above](E)
+    \tkzLabelPoints[below](F)
+
+    \tkzDefTriangle[equilateral](E,F)  \tkzGetPoint{C}
+    \tkzDefTriangle[equilateral](F,E)  \tkzGetPoint{D}
+    \tkzDrawPolygon(E,F,C)
+    \tkzDrawPolygon(E,F,D)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[left](D)
+
+    % 2
+    \tkzDefMidPoint(C,F)  \tkzGetPoint{K}
+    \tkzDefMidPoint(C,E)  \tkzGetPoint{L}
+    \tkzInterLL(E,K)(F,L)  \tkzGetPoint{O_1}
+    \tkzDrawSegments(E,K  F,L)
+    \tkzLabelPoints[below right](K)
+    \tkzLabelPoints[above right](L)
+    \tkzLabelPoints[left, yshift=.5em](O_1)
+
+    % 3
+    \tkzDefMidPoint(D,F)  \tkzGetPoint{N}
+    \tkzDefMidPoint(D,E)  \tkzGetPoint{M}
+    \tkzInterLL(E,N)(F,M)  \tkzGetPoint{O_2}
+    \tkzDrawSegments(E,N  F,M)
+    \tkzLabelPoints[below left](N)
+    \tkzLabelPoints[above left](M)
+    \tkzLabelPoints[right, yshift=.5em](O_2)
+
+    % 4
+    \tkzDrawSegment(C,D)
+    \tkzCalcLength(O_1,K)  \tkzGetLength{rOK}
+    \tkzInterLC[R](C,D)(O_1,\rOK)  \tkzGetFirstPoint{A}
+    \tkzInterLC[R](C,D)(O_2,\rOK)  \tkzGetSecondPoint{A'}
+    \tkzDrawArc[R with nodes](O_1,\rOK)(K,L)
+    \tkzDrawArc[R with nodes](O_2,\rOK)(M,N)
+    \tkzLabelPoints[left, yshift=.5em](A)
+    \tkzLabelPoints[right=-.2em, yshift=.5em](A')
+
+    % 5
+    \tkzCalcLength(E,K)  \tkzGetLength{rEK}
+    \tkzInterLC[R](E,F)(F,\rEK)  \tkzGetFirstPoint{B}
+    \tkzInterLC[R](E,F)(E,\rEK)  \tkzGetSecondPoint{B'}
+    \tkzDrawArc[R with nodes](E,\rEK)(N,K)
+    \tkzDrawArc[R with nodes](F,\rEK)(L,M)
+    \tkzLabelPoints[below, xshift=-.5em](B)
+    \tkzLabelPoints[above, xshift=.5em](B')
+\end{tikzpicture}
+
