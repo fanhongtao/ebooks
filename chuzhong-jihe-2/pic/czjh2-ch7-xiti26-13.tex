@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=.9] % 复杂
+    \pgfmathsetmacro{\a}{0.6}
+
+    % 绘制“正方形的渐开线”
+    \tkzDefPoints{0/0/p0, -\a/0/p1, -\a/\a/p2, 0/\a/p3}
+    \foreach \i in {4,5, ..., 8} {
+        \pgfmathsetmacro{\o}{int(mod(\i, 4))}
+        \pgfmathsetmacro{\s}{int(\i - 1)}
+        \tkzDefPointBy[rotation=center {p\o} angle -90]({p\s})  \tkzGetPoint{{p\i}}
+        \tkzDrawArc({p\o},{p\i})({p\s})
+    }
+    % 绘制最后的一小节
+    \tkzDefPointBy[rotation=center p0 angle -50](p8)  \tkzGetPoint{X}
+    \tkzDrawArc({p0},X)(p8)
+
+    % 绘制正方形及其延长线
+    \tkzDrawLine[add=0 and 0.2](p0, p7)
+    \tkzDrawLine[add=0 and 0.2](p1, p8)
+    \tkzDrawLine[add=0 and 0.2](p2, p5)
+    \tkzDrawLine[add=0 and 0.2](p3, p6)
+
+    % 显示坐标点
+    \tkzLabelPoint[below](p0){$A$}
+    \tkzLabelPoint[left](p1){$B$}
+    \tkzLabelPoint[above](p2){$C$}
+    \tkzLabelPoint[above right](p3){$D$}
+    \tkzLabelPoint[below right](p4){$E$}
+    \tkzLabelPoint[below right](p5){$F$}
+    \tkzLabelPoint[below left](p6){$G$}
+    \tkzLabelPoint[above right](p7){$H$}
+    \tkzLabelPoint[below right](p8){$K$}
+\end{tikzpicture}
+

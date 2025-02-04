@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    % 由各圆两两相切，得： (R - r)^2 + (R/2)^2 = (R/2 + r)^2
+    % 解得: r = R/3
+
+    % 大圆
+    \pgfmathsetmacro{\R}{3}
+    \tkzDefPoints{0/0/A, \R/0/O, 2*\R/0/B}
+    \tkzDrawSegment[thick](A,B)
+    \tkzDrawArc[very thick](O,B)(A)
+    \tkzDrawPoint(O)
+
+    % 左侧的小圆 A
+    \tkzDefPoints{0.5*\R/0/O_1}
+    \tkzDrawArc[very thick](O_1,O)(A)
+    \tkzDrawPoint(O_1)
+
+    % 右侧的小圆 B
+    \tkzDefPoints{1.5*\R/0/O_2}
+    \tkzDrawArc[very thick](O_2,B)(O)
+    \tkzDrawPoint(O_2)
+
+    % 上方的小圆 C
+    \pgfmathsetmacro{\r}{\R/3}
+    \tkzDefPoints{\R/\R-\r/O_3, \R/\R/C}
+    \tkzDrawCircle[very thick](O_3,C)
+    \tkzDrawPoint(O_3)
+\end{tikzpicture}
