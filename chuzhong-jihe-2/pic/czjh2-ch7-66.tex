@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\n}{5} % 5 边形
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:\R){A}
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \tkzDrawPolygon(P1,P...,P\n)
+    \foreach \i in {1,...,\n} {
+        \tkzDrawLine[add=0.2 and 1.2](P\i,O)
+    }
+    \tkzLabelPoints[above, xshift=-.5em](O)
+\end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \tkzDefPoints{0/0/O, 0/-1.5/A}
+%     \tkzDefRegPolygon[center,sides=5,name=P](O,A)
+%     \tkzDrawPolygon(P1,P...,P5)
+%     \foreach \i in {1,...,5} {
+%         \tkzDrawLine[add=0.2 and 1.2](P\i,O)
+%     }
+%     \tkzLabelPoints[above, xshift=-.5em](O)
+% \end{tikzpicture}
+

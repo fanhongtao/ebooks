@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+    % 绘制已知的 正五边形
+    \tkzDefPoints{0/0/A, 2/0/B}
+    \tkzDefRegPolygon[side,sides=5,name=P](A,B)
+    \tkzDrawPolygon[thick](P1,P...,P5)
+    \coordinate (C) at (P3); % 后面还会用到这些点，所以将其命名为 C、D、E
+    \coordinate (D) at (P4);
+    \coordinate (E) at (P5);
+    \tkzLabelPoint[left,  yshift=-.3em](A){$A$}
+    \tkzLabelPoint[right, yshift=-.3em](B){$B$}
+    \tkzLabelPoint[right](C){$C$}
+    \tkzLabelPoint[above](D){$D$}
+    \tkzLabelPoint[left](E){$E$}
+
+    % 绘制外接圆
+    \tkzDefLine[mediator](A,B)   \tkzGetPoints{a}{b}
+    \tkzDefLine[mediator](C,D)  \tkzGetPoints{c}{d}
+    \tkzInterLL(a,b)(c,d)  \tkzGetPoint{O}
+    \tkzDrawCircle[very thick](O,A)
+    \tkzLabelPoint[left](O){$O$}
+
+    % 绘制内切圆
+    \tkzDefPointBy[projection= onto A--B](O)  \tkzGetPoint{H}
+    \tkzDrawCircle[very thick](O,H)
+
+    % 其它
+    \tkzDrawSegments[dashed](O,A  O,B  O,C  O,D)
+    \extkzLabelAngel[0.5](C,B,O){$1$}
+    \extkzLabelAngel[0.5](O,C,B){$2$}
+    \extkzLabelAngel[0.7](O,B,A){$3$}
+    \extkzLabelAngel[0.7](D,C,O){$4$}
+\end{tikzpicture}
+

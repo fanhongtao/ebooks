@@ -1,0 +1,167 @@
+\subsection{正多边形和圆}\label{subsec:czjh2-7-16}
+
+各边相等、各角也相等的多边形叫做\zhongdian{正多边形}。
+例如等边三角形是正三角形，正方形是正四边形。
+在工程技术和实用图案等方面，常常要用到正多边形（图 \ref{fig:czjh2-7-63}）。
+其中正三角形、正方形、正五边形、正六边形、正八边形等应用较多。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=7cm]{../pic/czjh2-ch7-63.png}
+    \caption{}\label{fig:czjh2-7-63}
+\end{figure}
+
+
+正多边形和圆有非常密切的关系。
+我们只要把一个圆分成几条相等的弧，就可以作出这个圆的内接或外切正 $n$ 边形。
+下面我们来研究这个问题。
+
+\begin{dingli}[定理]
+    把圆分成 $n \; (n \geqslant 3)$ 等份：
+
+    （1）依次连结各分点所得的多边形是这个圆的内接正 $n$ 边形；
+
+    （2）经过各分点作圆的切线，以相邻切线的交点为顶点的多边形是这个圆的外切正 $n$ 边形。
+
+\end{dingli}
+
+我们以 $n = 5$ 的情况为例来进行证明。
+
+已知： $\yuan\,O$ 中， $\yuanhu{AB} = \yuanhu{BC} = \yuanhu{CD} = \yuanhu{DE} = \yuanhu{EA}$，
+$TP$、 $PQ$、$QR$、$RS$、$ST$ 分别是经过分点 $A$、$B$、$C$、$D$、$E$ 的 $\yuan\,O$ 的切线（图 \ref{fig:czjh2-7-64}）。
+
+求证：（1） 五边形 $ABCDE$ 是 $\yuan\,O$ 的内接正五边形；
+
+（2） 五边形 $PQRST$ 是 $\yuan\,O$ 的外切正五边形。
+
+\zhengming
+
+（1） $\yuanhu{AB} = \yuanhu{BC} = \cdots = \yuanhu{EA}$
+
+\quad $\tuichu \left\{\begin{aligned}
+    AB = BC = \cdots = EA \\
+    \yuanhu{BCE} = \yuanhu{CDA} = \cdots = \yuanhu{ABD} \quad \tuichu \quad \angle EAB = \angle ABC = \cdots = \angle DEA
+\end{aligned}\right\}$
+
+\quad $\tuichu$ 五边形 $ABCDE$ 是 $\yuan\,O$ 的内接正五边形。
+
+
+（2） $\yuanhu{AB} = \yuanhu{BC} = \cdots = \yuanhu{EA}$
+
+\quad $\tuichu \left\{\begin{aligned}
+    AB = BC = \cdots = EA \\
+    \angle PAB = \angle PBA = \angle QBC = \angle QCB = \cdots = \angle TEA = \angle TAE
+\end{aligned}\right\}$
+
+\quad $\tuichu$ $\triangle PAB$、$\triangle QBC$、 $\cdots$ $\triangle TEA$ 是全等的等腰三角形
+
+\quad $\tuichu$ 五边形 $PQRST$ 是各边相等、各角相等
+
+\quad $\tuichu$ 五边形 $PQRST$ 是 $\yuan\,O$ 的外切正五边形。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-64}
+        \caption{}\label{fig:czjh2-7-64}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7.2cm}
+        \centering
+        \input{../pic/czjh2-ch7-65}
+        \caption{}\label{fig:czjh2-7-65}
+    \end{minipage}
+\end{figure}
+
+反过来，是不是每一个正多边形都有一个外接圆和一个内切圆呢？
+我们仍以正五边形 $ABCDE$ 为例来研究这个问题。
+
+经过顶点 $A$、$B$、$C$ 作 $\yuan\,O$， 连结 $OA$、$OB$、$OC$、$OD$ （图 \ref{fig:czjh2-7-65} ）。
+
+$\left.\begin{aligned}
+    OB = OC \tuichu \angle 1 = \angle 2 \\
+    \angle ABC = \angle BCD
+\end{aligned}\right\}$
+
+\qquad $\left.\begin{aligned}
+    \tuichu \quad \angle 4 = \angle 3 \\
+    OC = OB \\
+    CD = BA
+\end{aligned}\right\}$
+
+\qquad $\tuichu \triangle ODC \quandeng \triangle OAB$
+
+\qquad $\tuichu OD = OA \tuichu  $ 点 $D$ 在 $\yuan\,O$ 上。
+
+同理，点 $E$ 在 $\yuan\,O$ 上。
+
+所以正五边形 $ABCDE$ 有一个外接圆 $\yuan\,O$。
+
+因为正多边形 $ABCDE$ 的各边都相等，所以它的外接圆的圆心 $O$ 到各边的距离都相等。
+以 $O$ 为圆心，以这个距离为半径的圆和各边都相切。
+所以，正五边形 $ABCDE$ 有一个内切圆。它的圆心就是外接圆的圆心。 于是得到：
+
+\begin{dingli}[定理]
+    任何正多边形都有一个外接圆和一个内切圆，这两个圆是同心圆。
+\end{dingli}
+
+正多边形的外接圆（或内切圆）的圆心叫做\zhongdian{正多边形的中心}，
+外接圆的半径叫做\zhongdian{正多边形的半径}，
+内切圆的半径叫做\zhongdian{正多边形的边心距}。
+正多边形各边所对的外接圆的圆心角都相等。
+正多边形每一边所对的外接圆的圆心角叫做\zhongdian{正多边形的中心角}。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-66}
+        \caption{}\label{fig:czjh2-7-66}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-67}
+        \caption{}\label{fig:czjh2-7-67}
+    \end{minipage}
+\end{figure}
+
+正多边形都是轴对称图形， 一个正 $n$ 边形共有 $n$ 条对称轴，（为什么？）
+每条对称轴都通过正 $n$ 边形的中心（图 \ref{fig:czjh2-7-66}）。
+如果正多边形有偶数条边，那么它又是中心对称图形，它的中心就是对称中心（图 \ref{fig:czjh2-7-67} ）。
+
+边数相同的正多边形相似。所以它们的周长的比等于它们的边长（或半径、边心距）的比，
+它们的面积的比等于它们的边长（或半径、边心距）平方的比，
+
+
+\begin{lianxi}
+
+\xiaoti{（口答）矩形是正多边形吗？菱形是正多边形吗？为什么？}
+
+\xiaoti{求证：}
+\begin{xiaoxiaotis}
+
+    \xxt{各边相等的圆内接多边形是正多边形；}
+
+    \xxt{各角相等的圆外切多边形是正多边形。}
+
+\end{xiaoxiaotis}
+
+
+\begin{enhancedline}
+\xiaoti{证明： 在正 $n$ 边形中，}
+\begin{xiaoxiaotis}
+
+    \xxt{中心角等于 $\dfrac{360^\circ}{n}$；}
+    \xxt{中心角与外角相等。}
+
+\end{xiaoxiaotis}
+
+\xiaoti{（口答）一个正五边形，要绕它的中心至少转多少角度，才能和原来的正五边形重合？
+    在不超过 $360^\circ$ 的范围内，这样的角度有几个？ 正 $n$ 边形呢？
+}
+\end{enhancedline}
+
+\end{lianxi}
+

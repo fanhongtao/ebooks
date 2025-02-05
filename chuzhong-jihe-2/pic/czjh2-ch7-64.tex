@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 0/1.5/A}
+    \tkzDrawCircle(O,A)
+    \tkzDrawPoint(O)
+
+    % 内接正五边形
+    \tkzDefRegPolygon[center,sides=5,name=P](O,A)
+    \tkzDrawPolygon(P1,P...,P5)
+    \tkzLabelPoint[right](O){$O$}
+    \tkzLabelPoint[above](P1){$A$}
+    \tkzLabelPoint[left](P2){$B$}
+    \tkzLabelPoint[left,  yshift=-.3em](P3){$C$}
+    \tkzLabelPoint[right, yshift=-.3em](P4){$D$}
+    \tkzLabelPoint[right](P5){$E$}
+
+    % 外切正五边形
+    \tkzDefLine[tangent at=P1](O)  \tkzGetPoint{p1}
+    \tkzDefLine[tangent at=P2](O)  \tkzGetPoint{p2}
+    \tkzInterLL(P1,p1)(P2,p2)  \tkzGetPoint{P}
+    \tkzDefRegPolygon[center,sides=5,name=N](O,P)
+    \tkzDrawPolygon(N1,N...,N5)
+    \tkzLabelPoint[left](N1){$P$}
+    \tkzLabelPoint[left](N2){$Q$}
+    \tkzLabelPoint[below](N3){$R$}
+    \tkzLabelPoint[right](N4){$S$}
+    \tkzLabelPoint[right](N5){$T$}
+\end{tikzpicture}
+
