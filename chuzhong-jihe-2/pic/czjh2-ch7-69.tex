@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{2}
+    \pgfmathsetmacro{\n}{6}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(240:\R){A} % 270 - 360/6/2 = 270 - 30 = 240
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \foreach \P [count=\i from 2] in {B,C,...,F} {
+        \coordinate (\P) at (P\i);
+    }
+    \tkzDefLine[altitude](A,O,B)  \tkzGetPoint{G}
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon(P1,P...,P\n)
+    \tkzDrawSegments[dim={$a_6$,-1.2em,}](A,B)
+    \tkzDrawSegments(O,A  O,B  O,G)
+
+    \tkzMarkRightAngle[size=.2](B,G,O)
+    \tkzLabelSegment[right](O,B){$R$}
+    \tkzLabelSegment[pos=.3, xshift=-.5em](O,G){$r_6$}
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[left,  yshift=-.3em](A)
+    \tkzLabelPoints[right, yshift=-.3em](B)
+    \tkzAutoLabelPoints[center=O, centered, dist= .2](C,...,F)
+    \tkzLabelPoints[above, xshift=-.5em](G)
+\end{tikzpicture}
+

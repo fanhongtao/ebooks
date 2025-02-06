@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{2}
+    \pgfmathsetmacro{\n}{8}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(247.5:\R){A} % 270 - 360/8/2 = 270 - 22.5 = 247.5
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \coordinate (B) at (P2);
+
+    \tkzDefLine[altitude](A,O,B)  \tkzGetPoint{G}
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawSegments(B,P3  P8,A)
+    \tkzDrawSegments[dim={$a_n$,-1em,}](A,B)
+    \tkzDrawSegments[dashed](O,A  O,B  O,G)
+
+    \tkzMarkRightAngle[size=.2](B,G,O)
+    \extkzLabelAngel[0.5](A,O,B){$\alpha_n$}
+    \tkzLabelSegment[right](O,B){$R$}
+    \tkzLabelSegment[pos=.8, left, xshift=.2em](O,G){$r_n$}
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[left,  yshift=-.3em](A)
+    \tkzLabelPoints[right, yshift=-.3em](B)
+\end{tikzpicture}
+

@@ -1,0 +1,74 @@
+\subsection{正多边形的有关计算}\label{subsec:czjh2-7-17}
+
+\begin{enhancedline}
+
+我们知道，多边形的内角和等于 $(n - 2) \cdot 180^\circ$。
+因为正多边形的各角都相等，所以它的每个内角都等于
+$$ \dfrac{(n - 2) \cdot 180}{n}  \juhao $$
+
+下面研究正多边形的其他计算问题。
+
+正 $n$ 边形的 $n$ 条半径把它分成了 $n$ 个等腰三角形，如图 \ref{fig:czjh2-7-68} ，
+这些等腰三角形底边上的高，又把它们分成 $2n$ 个直角三角形，
+而这些直角三角形的斜边恰好都是正 $n$ 边形的半径，
+一条直角边是正 $n$ 边形的边心距，
+另一条直角边是正 $n$ 边形边长的一半，
+显然这些直角三角形是全等的。 因而得到：
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-68}
+        \caption{}\label{fig:czjh2-7-68}
+    \end{minipage}
+    \qquad
+    \begin{minipage}[b]{7cm}
+        \centering
+        \input{../pic/czjh2-ch7-69}
+        \caption{}\label{fig:czjh2-7-69}
+    \end{minipage}
+\end{figure}
+
+
+\begin{dingli}[定理]
+    正 $n$ 边形的半径和边心距把正 $n$ 边形分成 $2n$ 个全等的直角三角形。
+\end{dingli}
+
+由于正 $n$ 边形的中心角 $\alpha_n = \dfrac{360^\circ}{n}$，我们应用上面定理，
+就可以把正 $n$ 边形的边长 $a_n$， 边心距 $r_n$， 周长 $p_n$ 和面积 $S_n$
+等的计算问题归结为有关直角三角形的计算问题。
+
+
+
+\liti[0] 已知正六边形 $ABCDEF$ 的半径为 $R$，求这个正六边形的边长 $a_6$；
+周长 $p_6$ 和面积 $S_6$。
+
+\jie 连结半径 $OA$、$OB$， 作 $\triangle OAB$ 的高 $OG$，得 $Rt \triangle OGB$（图 \ref{fig:czjh2-7-69}）。
+
+$\because$ \quad $\angle GOB = \dfrac{360^\circ}{2n} = 30^\circ$，
+
+$\therefore$ \quad $a_6 = 2 R \sin 30^\circ = 2 \cdot \exdfrac{R}{2} = R$。
+
+$\therefore$ \quad $p_6 = 6 \cdot a_6 = 6 R$。
+
+$\because$ \quad $r_6 = R \cos 30^\circ = \dfrac{\sqrt{3}}{2} R$，
+
+$\therefore$ \quad $S_6 = 6 \cdot \exdfrac{1}{2} \cdot r_6 \cdot a_6 = \dfrac{3\sqrt{3}}{2} R^2$。
+
+
+\begin{lianxi}
+
+\xiaoti{已知圆的半径为 $R$，求它的内接正三角形、正方形的边长、边心距及面积。}
+
+\xiaoti{在半径为 20 cm 的圆中，利用三角函数表，计算内接正九边形的边长、边心距、周长及面积（保留四个有效数字）。}
+
+\xiaoti{一个正七边形的边长为 12 cm， 利用三角函数表，计算它的面积（保留三个有效数字）。}
+
+\xiaoti{设正三角形的边长为 $a$，求它的边心距、半径和高。并证明：
+    $\text{边心距} : \text{半径} : \text{高} = 1 : 2 : 3$。
+}
+
+\end{lianxi}
+
+\end{enhancedline}
