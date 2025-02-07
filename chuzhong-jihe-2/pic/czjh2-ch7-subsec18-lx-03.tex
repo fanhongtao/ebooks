@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:\R){A}
+    \tkzDefRegPolygon[center,sides=6,name=P](O,A)
+    \foreach \P [count=\i from 2] in {B,C,...,F} {
+        \coordinate (\P) at (P\i);
+    }
+    \tkzLabelPoints[above, xshift=.5em](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,B,...,F)
+
+    % 1
+    \tkzDefPoint(180:\R){M}
+    \tkzDefPoint(0:\R){N}
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawSegments(A,D  M,N)
+    \tkzLabelPoints[above, xshift=.6em](M)
+    \tkzLabelPoints[below, xshift=-.6em](N)
+
+    % 2
+    \tkzInterLL(D,B)(M,N)  \tkzGetPoint{O_1}
+    \tkzInterLL(D,F)(M,N)  \tkzGetPoint{O_2}
+    \tkzDrawSegments(D,B  D,F)
+    \tkzLabelPoints[above, xshift=.4em](O_1)
+    \tkzLabelPoints[above, xshift=-.4em](O_2)
+
+    % 3
+    \tkzCalcLength(O_1,B)    \tkzGetLength{rOB}
+    \tkzDrawArc[red, thick, R with nodes](O_1,\rOB)(B,C)  %\tkzDrawArc(O_1,B)(C)
+    \tkzDrawArc[red, thick, R with nodes](O_2,\rOB)(E,F)  %\tkzDrawArc(O_2,E)(F)
+
+    \tkzCalcLength(D,B)    \tkzGetLength{rDB}
+    \tkzDrawArc[red, thick, R with nodes](A,\rDB)(C,E)
+    \tkzDrawArc[red, thick, R with nodes](D,\rDB)(F,B)
+\end{tikzpicture}
+

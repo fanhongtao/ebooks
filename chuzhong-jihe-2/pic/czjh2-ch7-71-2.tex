@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(240:\R){A}
+    \tkzDefRegPolygon[center,sides=6,name=P](O,A)
+    \foreach \P [count=\i from 2] in {B,C,...,F} {
+        \coordinate (\P) at (P\i);
+    }
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon[red, thick](A,C,E)
+    \tkzDrawPoint(O)
+    \foreach \P in {B, D, F} {
+        \tkzDefPointOnLine[pos=0.1](\P, O)  \tkzGetPoint{a}
+        \tkzDefPointOnLine[pos=2](a, \P)  \tkzGetPoint{b}
+        \tkzDrawSegment(a,b)
+    }
+    \tkzLabelPoints[below](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,B,...,F)
+\end{tikzpicture}
+

@@ -1,0 +1,42 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(240:\R){A}
+    \tkzDefRegPolygon[center,sides=6,name=P](O,A)
+    \foreach \P [count=\i from 2] in {B,C,...,F} {
+        \coordinate (\P) at (P\i);
+    }
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon[red, thick](A,...,F)
+    \tkzDrawSegments(C,F)
+    \tkzDrawArc(F,A)(E)
+    \tkzDrawArc(C,D)(B)
+    \tkzLabelPoints[above right](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,B,...,F)
+\end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \pgfmathsetmacro{\R}{1.5}
+%     \tkzDefPoints{0/0/O}
+%     \tkzDefPoint(0:\R){C}
+%     \tkzDefPoint(60:\R){D}
+%     \tkzDefPoint(120:\R){E}
+%     \tkzDefPoint(180:\R){F}
+%     \tkzDefPoint(240:\R){A}
+%     \tkzDefPoint(300:\R){B}
+
+%     \tkzDrawCircle[very thick](O,A)
+%     \tkzDrawPolygon[red, thick](A,...,F)
+%     \tkzDrawSegments(C,F)
+%     \tkzDrawArc(F,A)(E)
+%     \tkzDrawArc(C,D)(B)
+%     \tkzLabelPoints[above right](O)
+%     \tkzLabelPoints[below left](A)
+%     \tkzLabelPoints[below right](B)
+%     \tkzLabelPoints[right](C)
+%     \tkzLabelPoints[above right](D)
+%     \tkzLabelPoints[above left](E)
+%     \tkzLabelPoints[left](F)
+% \end{tikzpicture}
+

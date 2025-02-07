@@ -1,0 +1,56 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:\R){T1}
+    \tkzDrawCircle[very thick](O,T1)
+
+    \tkzDefRegPolygon[center,sides=10,name=P](O,T1)
+    \tkzDrawPolygon[thick,red](P1,P...,P10)
+
+    \coordinate (A) at (P8);
+    \coordinate (B) at (P9);
+    \coordinate (C) at (P10);
+
+    \foreach \n in {-36, 0, ..., 216} {
+        \tkzDefPoint(\n:\R){P}
+        \tkzDefPointOnLine[pos=0.1](P, O)  \tkzGetPoint{a}
+        \tkzDefPointOnLine[pos=2](a, P)  \tkzGetPoint{b}
+        \tkzDrawSegment(a,b)
+    }
+
+
+    \tkzDefLine[bisector](O,B,A)  \tkzGetPoint{m}
+    \tkzInterLL(B,m)(O,A)  \tkzGetPoint{M}
+    \tkzDrawSegments[dashed](O,A  O,B  B,M)
+
+    \tkzMarkAngle[size=.3](A,O,B)
+    \tkzDefPoint(270:.3){x}
+    \tkzDefShiftPoint[x](-.3,.2){y}
+    \tkzDefShiftPoint[y](-.4,0){z}
+    \tkzDrawSegment[green](x,y)
+    \tkzDrawSegment[green,thick](y,z)
+    \tkzLabelSegment[above](y,z){\small $36^\circ$}
+
+    \tkzMarkAngle[size=.3](O,B,M)
+    \tkzDefShiftPoint[B](120:.3){x}
+    \tkzDefShiftPoint[x](.3,.5){y}
+    \tkzDefShiftPoint[y](.4,0){z}
+    \tkzDrawSegment[green](x,y)
+    \tkzDrawSegment[green,thick](y,z)
+    \tkzLabelSegment[above](y,z){\small $36^\circ$}
+
+    \tkzMarkAngle[size=.2](B,A,O)
+    \tkzDefShiftPoint[A](45:.2){x}
+    \tkzDefShiftPoint[x](-.4,.5){y}
+    \tkzDefShiftPoint[y](-.4,0){z}
+    \tkzDrawSegment[green](x,y)
+    \tkzDrawSegment[green,thick](y,z)
+    \tkzLabelSegment[above](y,z){\small $72^\circ$}
+
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[below right](C)
+    \tkzLabelPoints[xshift=-.5em, yshift=1.2em](M)
+\end{tikzpicture}
+

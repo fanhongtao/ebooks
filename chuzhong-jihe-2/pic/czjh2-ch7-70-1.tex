@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\R){A}
+    \tkzDefPoint(270:\R){B}
+    \tkzDefPoint(0:\R){C}
+    \tkzDefPoint(90:\R){D}
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon[red, thick](A,B,C,D)
+    \tkzDrawSegments(A,C  B,D)
+    \tkzLabelPoints[above right](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[above](D)
+\end{tikzpicture}
+

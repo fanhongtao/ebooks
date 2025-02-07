@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:\R){A}
+    \tkzDefRegPolygon[center,sides=5,name=P](O,A)
+    \foreach \P [count=\i from 2] in {E,D,...,B} {
+        \coordinate (\P) at (P\i);
+    }
+    \tkzDefPoint(180:\R){X}
+    \tkzDefPoint(0:\R){Y}
+    \tkzDefPoint(270:\R){Z}
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon[red, thick](A,B,...,E)
+    \tkzDrawSegments(A,Z  X,Y)
+    \tkzMarkRightAngle[size=.2](A,O,X)
+
+    \tkzLabelPoints[above right](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,B,...,E,X,Y,Z)
+
+    %
+    \tkzDefMidPoint(O,X)  \tkzGetPoint{M}
+    \tkzInterLC(O,Y)(M,A)  \tkzGetSecondPoint{N}
+    \tkzDrawSegment[dashed](M,A)
+    \tkzDrawArc(M,N)(A)
+    \tkzLabelPoints[below](M,N)
+
+    % \tkzInterCC(A,N)(O,A)  \tkzGetFirstPoint{B}
+    \tkzDrawSegment[dashed](A,N)
+    \tkzDrawArc(A,N)(B)
+\end{tikzpicture}
+

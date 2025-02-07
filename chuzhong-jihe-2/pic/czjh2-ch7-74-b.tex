@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:\R){A}
+    \tkzDefRegPolygon[center,sides=5,name=P](O,A)
+    \foreach \P [count=\i from 2] in {E,D,...,B} {
+        \coordinate (\P) at (P\i);
+    }
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawPolygon[red, thick](A,C,E,B,D)
+
+    \tkzDefPoint(270:\R){Z}
+    \tkzLabelPoints[white,below](Z)
+\end{tikzpicture}
+

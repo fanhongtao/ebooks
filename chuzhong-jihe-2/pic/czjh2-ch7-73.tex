@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\halfR}{\R/2}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:\R){A}
+    \tkzDrawCircle[very thick](O,A)
+
+    \tkzDefRegPolygon[center,sides=10,name=P](O,A)
+    \tkzDrawPolygon[thick,red](P1,P...,P10)
+    \foreach \P [count=\i from 2] in {B,C,...,J} {
+        \coordinate (\P) at (P\i);
+    }
+    \tkzAutoLabelPoints[center=O, centered, dist= .2](A,B,...,J)
+    \tkzLabelPoints[above](O)
+
+    %------ 黄金分割
+    \tkzDrawSegment[dashed](O,A)
+
+    % 1
+    \tkzDefPointOnLine[pos=0.5](O,A)  \tkzGetPoint{p1}
+    \tkzDefLine[perpendicular=through A](O,A)  \tkzGetPoint{p2}
+    \tkzInterLC(A,p2)(A,p1)  \tkzGetFirstPoint{P}
+    \tkzDrawSegment[dashed](A,P)
+    \tkzLabelPoints[below](P)
+
+    % 2
+    \tkzDrawSegment[dashed](O,P)
+    \tkzInterLC(O,P)(P,A)  \tkzGetFirstPoint{N}
+    \tkzDrawArc[towards](P,A)(N)
+    % \tkzDrawPoint(N)
+
+    % 3
+    \tkzInterLC(O,A)(O,N)  \tkzGetSecondPoint{M}
+    \tkzDrawArc[towards](O,N)(M)
+    \tkzDrawPoint(M)
+    \tkzLabelPoints[right](M)
+\end{tikzpicture}
+
