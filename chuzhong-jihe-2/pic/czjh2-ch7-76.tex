@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{.03}
+    \pgfmathsetmacro{\R}{65*\factor}
+    \pgfmathsetmacro{\r}{24*\factor}
+    \pgfmathsetmacro{\Oo}{210*\factor}
+
+    \tkzDefPoints{0/0/O1, \Oo/0/O2}
+    \tkzDefCircle[R](O1,\R)  \tkzGetPoint{o1}
+    \tkzDefCircle[R](O2,\r)  \tkzGetPoint{o2}
+    \tkzDefSimilitudeCenter[ext](O1,o1)(O2,o2)  \tkzGetPoint{J}
+    \tkzDefLine[tangent from = J](O1,o1)  \tkzGetPoints{D}{A}
+    \tkzDefLine[tangent from = J](O2,o2)  \tkzGetPoints{C}{B}
+    \tkzDefLine[altitude](A,O2,O1)  \tkzGetPoint{E}
+
+    \tkzDrawCircle[very thick](O1, o1)
+    \tkzDrawCircle[very thick](O2, o2)
+    \tkzDrawSegments[thick](A,B  C,D)
+    \tkzDrawSegments[dashed](O1,A  O1,D  O2,B  O2,C  O2,E  O1,O2)
+
+    \extkzLabelAngel[0.5](O2,O1,A){$\alpha$}
+
+    % \extkzLabelAngel[0.7](A,O1,D){$\alpha_1$}
+    \tkzMarkAngle[size=0.7, latex-latex](A,O1,D)
+    \tkzLabelAngle[pos=.7, fill=white, inner sep=1pt](A,O1,D){$\alpha_1$}
+
+    %\extkzLabelAngel[0.4](C,O2,B){$\alpha_2$}
+    \tkzMarkAngle[size=0.4, latex-latex](C,O2,B)
+    \tkzLabelAngle[pos=.4, fill=white, inner sep=1pt](C,O2,B){$\alpha_2$}
+
+    \tkzLabelPoints[above](A,B)
+    \tkzLabelPoints[below](C,D)
+    \tkzLabelPoints[left](E)
+    \tkzLabelPoints[below right](O1)
+    \tkzLabelPoints[above, xshift=-.6em](O2)
+
+    \tkzDefPoint(180:\R){m}
+    \tkzDefShiftPoint[O2](0:\r){n}
+    \tkzLabelPoints[left](m)
+    \tkzLabelPoints[right](n)
+\end{tikzpicture}
+

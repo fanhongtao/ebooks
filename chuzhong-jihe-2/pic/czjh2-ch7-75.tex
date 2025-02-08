@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{.025}
+
+    \tkzDefPoints{0/0/O}
+    \foreach \n [count=\i] in {110, 90, 70} {
+        \ifnum\i=2\relax
+            \def\linestyle{densely dash dot}
+        \else
+            \def\linestyle{very thick}
+        \fi
+
+        \pgfmathsetmacro{\R}{\n*\factor}
+
+        \tkzDefPoint(40:\R){A\i}
+        \tkzDefPoint(140:\R){B\i}
+        \tkzDrawArc[\linestyle](O,A\i)(B\i)
+
+        \tkzDefLine[perpendicular=through A\i, normed](A\i,O)  \tkzGetPoint{c\i}
+        \tkzDefPointOnLine[pos=70*\factor](A\i,c\i)  \tkzGetPoint{C\i}
+        \tkzDrawSegment[\linestyle](A\i,C\i)
+
+        \tkzDefLine[perpendicular=through B\i, normed](O,B\i)  \tkzGetPoint{d\i}
+        \tkzDefPointOnLine[pos=70*\factor](B\i,d\i)  \tkzGetPoint{D\i}
+        \tkzDrawSegment[\linestyle](B\i,D\i)
+    }
+    \tkzDrawSegments[very thick](C3,C1  D3,D1)
+
+    %
+    \tkzLabelPoints[below](O)
+    \extkzLabelAngel[0.5](A2,O,B2){$100^\circ$}
+    \tkzDrawSegment[-Latex](O,A2)
+    \tkzLabelSegment[pos=.4, rotate=45](O,A2){$R\;90$}
+
+    \tkzDefPoint(90:90*\factor){l}
+    \tkzLabelPoints[centered, fill=white, inner sep=1pt](l)
+
+    \tkzDrawLines[add=0 and 0.2](O,A1   O,B1)
+    \tkzDrawLines[add=0 and 0.5](C3,C1  D3,D1)
+
+    \tkzDrawSegments[sloped, dim={$70$,1em,}](A1,C1)
+    \tkzDrawSegments[sloped, dim={$70$,1em,}](D1,B1)
+\end{tikzpicture}
+
