@@ -1,0 +1,94 @@
+\subsection{圆、扇形、弓形的面积}\label{subsec:czjh2-7-20}
+
+\begin{enhancedline}
+
+\subsubsection{圆面积}
+
+我们知道，圆面积 $S$ 与半径 $R$ 之间有下面的关系（详见\hyperref[sec:czjh2-7-fulu]{附录}）：
+
+\begin{center}
+    \framebox[8em]{\zhongdian{$\bm{S = \pi R^2$}。}}
+\end{center}
+
+
+\subsubsection{扇形面积}
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh2-ch7-77}
+    \caption{}\label{fig:czjh2-7-77}
+\end{wrapfigure}
+
+
+一条弧和经过这条弧的端点的两条半径所组成的图形叫做\zhongdian{扇形}。
+
+在半径为 $R$ 的圆中，因为圆心角是 $360^\circ$ 的扇形面积就是圆面积 $S = \pi R^2$，
+所以圆心角是 $1^\circ$ 的扇形面积是 $\dfrac{\pi R^2}{360}$。
+这样，在半径为 $R$ 的圆中（图 \ref{fig:czjh2-7-77}）， 圆心角为 $n^\circ$ 的扇形面积的计算公式是
+$$ S_\text{扇形} = \dfrac{n}{360} \pi R^2 \juhao $$
+
+又因为，扇形的弧长 $l = \dfrac{n \pi R}{180}$， 扇形面积 $\dfrac{n}{360} \pi R^2$
+可以写成 $\exdfrac{1}{2} \cdot \dfrac{n \pi R}{180} \cdot R$， 所以，又得到
+$$ S_\text{扇形} = \exdfrac{1}{2} l R \juhao $$
+
+
+\subsubsection{弓形面积}
+
+从图 \ref{fig:czjh2-7-78} 中可以看出，把扇形 $OAmB$ 的面积以及 $\triangle OAB$ 的面积计算出来，
+就可以得到弓形 $AmB$ 的面积。
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{5cm}
+        \input{../pic/czjh2-ch7-78-1}
+    \end{minipage}
+    \begin{minipage}[b]{5cm}
+        \input{../pic/czjh2-ch7-78-2}
+    \end{minipage}
+    \begin{minipage}[b]{5cm}
+        \input{../pic/czjh2-ch7-78-3}
+    \end{minipage}
+    \caption{}\label{fig:czjh2-7-78}
+\end{figure}
+
+\liti[0] 水平放着的圆柱形排水管的截面半径是 12 cm，其中水面高为 6 cm，
+求截面上有水的弓形的面积（精确到 $1\,\pflm$）。
+
+\begin{wrapfigure}[8]{r}{5cm}
+    \centering
+    \input{../pic/czjh2-ch7-79}
+    \caption{}\label{fig:czjh2-7-79}
+\end{wrapfigure}
+
+
+\jie 如图 \ref{fig:czjh2-7-79}， 连结 $OA$、$OB$， 作弦 $AB$ 的垂直平分线 $OD$，
+垂足为 $D$， 交 $\yuanhu{AB}$ 于点 $C$。已知半径 $OA = 12$ cm，
+$DC = 6$ cm。 那么
+
+$OD = OC - DC = 12 - 6 = 6$ (cm)，
+
+$AD = \sqrt{OA^2 - OD^2} = \sqrt{12^2 - 6^2} = 6\sqrt{3}$ (cm)，
+
+$\angle AOD = 60^\circ$。
+
+$\begin{aligned}
+    S_{\text{弓形}ACB} &= S_{\text{扇形}OACB} - S_{\triangle OAD} \\
+        &= \dfrac{120}{360} \times \pi \times 12^2 - \exdfrac{1}{2} \times 12\sqrt{3} \times 6 \\
+        &= 48 \pi - 36\sqrt{3} \approx 88 (\pflm) \juhao
+\end{aligned}$
+
+答： 截面上有水的弓形的面积约为 $88\,\pflm$。
+
+
+\begin{lianxi}
+
+\xiaoti{设圆周长为 $C$， 圆面积为 $S$。 求证： $S = \dfrac{C^2}{4 \pi}$。}
+
+\xiaoti{已知扇形的圆心角为 $150^\circ$， 弧长为 $20 \pi$ cm。求扇形的面积。}
+
+\xiaoti{在本节的例中，设水面高为 7 cm， 其他条件不变， 利用三角函数解同样的问题。}
+
+\end{lianxi}
+
+\end{enhancedline}
+

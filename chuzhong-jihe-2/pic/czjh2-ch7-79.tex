@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(210:\R){A}
+    \tkzDefPoint(330:\R){B}
+    \tkzDefPoint(270:\R){C}
+    \tkzInterLL(A,B)(O,C)  \tkzGetPoint{D}
+
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawArc[very thick, pattern={mylines[angle=55, distance={4pt}]}](O,A)(B)
+    \tkzDrawSegments[very thick](A,B  O,C)
+    \tkzDrawSegments[dashed](O,A  O,B)
+    \tkzMarkRightAngle[size=.2](B,D,O)
+
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[above right](B)
+    \tkzLabelPoints[below](C)
+    \tkzLabelPoints[above left](D)
+
+    \tkzDefPointOnLine[pos=1.5](D,B)  \tkzGetPoint{b}
+    \tkzDefPointBy[translation=from D to b](C)  \tkzGetPoint{c}
+    \tkzDefShiftPoint[b](0,.5){b'}
+    \tkzDefShiftPoint[c](0,-.5){c'}
+
+    \tkzLabelSegment[above, rotate=30](O,A){\small 12cm}
+
+    \tkzDrawLines[add=0 and 0.1](D,b  C,c)
+    \tkzDrawSegments[-Latex](b',b  c',c)
+    \tkzLabelSegment[centered, rotate=90](c,b){\small 6cm}
+\end{tikzpicture}
+

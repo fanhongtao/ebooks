@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(140:\R){A}
+    \tkzDefPoint(40:\R){B}
+    \tkzDefPoint(270:\R){m}
+
+    \tkzDrawSegment[very thick](A,B)
+    \tkzDrawArc[very thick, pattern={mylines[angle=55, distance={4pt}]}](O,A)(B)
+    \tkzDrawArc[dashed](O,B)(A)
+    \tkzDrawSegments[dashed](O,A  O,B)
+
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[below](m)
+    \tkzLabelPoints[left=.3em](A)
+    \tkzLabelPoints[right=.3em](B)
+\end{tikzpicture}
+

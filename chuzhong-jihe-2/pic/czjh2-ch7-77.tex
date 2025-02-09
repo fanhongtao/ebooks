@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(270:\R){A}
+    \tkzDefPoint(230:\R){B}
+    \tkzDefPoint(310:\R){C}
+
+    \tkzDrawCircle[very thick](O,B)
+    \tkzDrawSector[pattern={mylines[angle=55, distance={4pt}]}](O,B)(C)
+    \tkzDrawLines[add=0 and 0.3](O,B  O,C)
+    \tkzMarkAngle[size=0.7, latex-latex](B,O,C)
+    \tkzLabelAngle[pos=.7, fill=white, inner sep=0pt](B,O,C){$n^\circ$}
+    \tkzMarkAngle[size=1.8, latex-latex](B,O,C)
+    \tkzLabelAngle[pos=1.8, fill=white, inner sep=0pt](B,O,C){$l$}
+    \tkzLabelSegment[right](O,C){$R$}
+
+    \tkzLabelPoints[above](O)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[left=.3em](B)
+    \tkzLabelPoints[right=.3em](C)
+\end{tikzpicture}
+
