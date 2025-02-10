@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4.8/0/B, 2.4/1.2/C, 2.4/0/D, 4.8/1.2/E}
+    \tkzDefCircle[circum](A,B,C)  \tkzGetPoint{O}
+
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSegment[thick](A,B)
+    \tkzDrawSegment[dashed](C,D)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[below right](B)
+    \tkzLabelPoints[above](C)
+
+    \tkzDrawSegments[dim={$b$,-1em,}](A,B)
+
+    \tkzDrawSegment(C,E)
+    \tkzDrawSegments[white, dim={$h$,-1em,},
+        dim style/.append style={black,sloped},
+        dim fence style/.append style={black}
+    ](B,E)
+\end{tikzpicture}
+

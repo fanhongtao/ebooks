@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\OO}{2}
+    \tkzDefPoints{0/0/O, \OO/0/O'}
+
+    \foreach \n [count=\i] in {0.7, 1, 1.3} {
+        \ifnum\i=2\relax
+            \def\linestyle{densely dash dot}
+        \else
+            \def\linestyle{very thick}
+        \fi
+
+        \pgfmathsetmacro{\R}{\n}
+        \tkzDefPoint(90:\R){B\i}
+        \tkzDefPoint(0:\R){C\i}
+        \tkzDefShiftPoint[O'](270:\OO-\R){D\i}
+        \tkzDefShiftPoint[B\i](-3,0){A\i}
+
+        \tkzDrawArc[\linestyle](O,C\i)(B\i)
+        \tkzDrawArc[\linestyle](O',C\i)(D\i)
+        \tkzDrawSegment[\linestyle](A\i,B\i)
+    }
+
+    %
+    \tkzDrawSegment[very thick](O,O')
+    \tkzDrawSegments(O',D1  O,B3  A1,A3)
+    \tkzLabelPoints[left](O)
+    \tkzLabelPoints[right](O')
+
+    \tkzDrawSegments[dim={$3000$,1em,}](A3,B3)
+
+    \tkzDefShiftPoint[O](45:1){x1}
+    \tkzDefShiftPoint[O](45:2){y1}
+    \tkzDefShiftPoint[y1](1,0){z1}
+    \tkzDrawSegment[-Latex, thick](O,x1)
+    \tkzDrawSegments[green](x1,y1  y1,z1)
+    \tkzLabelSegment[above](y1,z1){$R1000$}
+
+    \tkzDefShiftPoint[O'](225:1){x2}
+    \tkzDefShiftPoint[O'](225:2){y2}
+    \tkzDefShiftPoint[y2](-1,0){z2}
+    \tkzDrawSegment[-Latex, thick](O',x2)
+    \tkzDrawSegments[green](x2,y2  y2,z2)
+    \tkzLabelSegment[above](y2,z2){$R1000$}
+\end{tikzpicture}
+

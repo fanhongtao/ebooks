@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.1}
+    \pgfmathsetmacro{\R}{30*\factor}
+    \pgfmathsetmacro{\r}{18*\factor}
+
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(60:\r){A}
+    \tkzDefPoint(0:\r){B}
+    \tkzDefPoint(60:\R){C}
+    \tkzDefPoint(0:\R){D}
+
+    \tkzFillSector[pattern={mylines[angle=45, distance={3pt}]}](O,D)(C)
+    \tkzFillSector[white](O,B)(A)
+
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSector[thick](O,D)(C)
+    \tkzLabelPoints[left](O,A,C)
+    \tkzLabelPoints[below](B,D)
+\end{tikzpicture}
+

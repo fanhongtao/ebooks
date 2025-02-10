@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.01}
+    \pgfmathsetmacro{\R}{100*\factor}
+    \pgfmathsetmacro{\r}{25*\factor}
+    \pgfmathsetmacro{\n}{7}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\R){A}
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \foreach \i in {1,...,\n} {
+        \tkzDefCircle[R](P\i, \r)  \tkzGetPoint{x}
+        \tkzDrawCircle[very thick](P\i,x)
+        \tkzDrawPoint(P\i)
+    }
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[right](O)
+
+    \pgfmathsetmacro{\RR}{180*\factor} % 题中给的数据是 330，但以 330 绘图，会太大，故修改为较小的值
+    \tkzDefCircle[R](O, \RR)  \tkzGetPoint{x}
+    \tkzDrawCircle[very thick](O,x)
+\end{tikzpicture}
+

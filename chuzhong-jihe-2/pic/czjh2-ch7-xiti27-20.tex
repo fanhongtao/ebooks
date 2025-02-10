@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=.8]
+    \pgfmathsetmacro{\factor}{0.03}
+    \pgfmathsetmacro{\OO}{210 * \factor}
+    \pgfmathsetmacro{\R}{65 * \factor}
+    \pgfmathsetmacro{\r}{24 * \factor}
+
+    \tkzDefPoints{0/0/O1, \OO/0/O2}
+    \tkzDefCircle[R](O1,\R)  \tkzGetPoint{o1}
+    \tkzDefCircle[R](O1,\R-.15)  \tkzGetPoint{o1'}
+    \tkzDefCircle[R](O2,\r)  \tkzGetPoint{o2}
+    \tkzDefCircle[R](O2,\r-.15)  \tkzGetPoint{o2'}
+    \tkzDrawCircles[very thick](O1,o1  O1,o1')
+    \tkzDrawCircles[very thick](O2,o2  O2,o2')
+
+    \tkzDefSimilitudeCenter[int](O1,o1)(O2,o2)  \tkzGetPoint{I}
+    \tkzDefLine[tangent from = I](O1,o1)      \tkzGetPoints{D}{E}
+    \tkzDefLine[tangent from = I](O2,o2)      \tkzGetPoints{D'}{E'}
+    \tkzDrawSegments[thick](D,D'  E,E')
+
+    % 大圆内的 6 个小圆
+    \begin{scope}
+        \pgfmathsetmacro{\n}{6}
+        \tkzDefPoint(90:\R-.8){A}
+        \tkzDefRegPolygon[center,sides=\n,name=P](O1,A)
+        \foreach \i in {1,...,\n} {
+            \tkzDefCircle[R](P\i, .3)  \tkzGetPoint{x}
+            \tkzDrawCircle[very thick](P\i,x)
+        }
+        \tkzDrawCircle[dashed](O1,A)
+    \end{scope}
+
+    % 两个圆的圆心处的部件
+    \begin{scope}
+        \foreach \P in {O1, O2} {
+            \tkzDefShiftPoint[\P](110:.3){A}
+            \tkzDefShiftPoint[\P](70:.3){B}
+            \tkzDrawArc[thick](\P,A)(B)
+            \tkzDefGoldenRectangle(A,B)  \tkzGetPoints{C}{D}
+            \tkzDrawPolygon[thick](A,B,C,D)
+        }
+    \end{scope}
+\end{tikzpicture}
+

@@ -1,0 +1,34 @@
+\begin{tikzpicture} % 复杂
+    \pgfmathsetmacro{\R}{1}
+    \pgfmathsetmacro{\RR}{sqrt(2)*\R}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:\R){A}
+    \tkzDefRegPolygon[center,sides=4,name=P](O,A)
+    \tkzDefPoint(45:\RR){B}
+    \tkzDefRegPolygon[center,sides=4,name=Q](O,B)
+    % \tkzLabelPoints[centered](P1,P...,P4)
+    % \tkzLabelPoints[centered](Q1,Q...,Q4)
+
+    % \tkzDrawSegments[dashed](P1,P3  P2,P4)
+    \tkzDrawPolygon[thick](Q1,Q...,Q4)
+
+    \foreach \i in {1,...,4} {
+        \ifnum\i=4\relax
+            \pgfmathsetmacro{\n}{1}
+        \else
+            \pgfmathsetmacro{\n}{int(\i+1)}
+        \fi
+
+        \begin{scope}
+            \tkzClipSector(P\i,Q\i)(O)
+            \tkzClipSector(P\n,O)(Q\i)
+            \tkzFillPolygon[pattern={mylines[angle=65, distance={3pt}]}](P\i,Q\i,P\n,O)
+            \tkzDrawArc[thick](P\i,Q\i)(O)
+            \tkzDrawArc[thick](P\n,O)(Q\i)
+        \end{scope}
+    }
+
+    \tkzDrawSegments[dim={$a$,-1em,}](Q3,Q4)
+\end{tikzpicture}
+

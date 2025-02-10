@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=.7]
+    \pgfmathsetmacro{\r}{0.2}
+
+    % 设小圆的圆心为 O， OD 垂直于 O_1O_2， 垂足为 D。
+    % 则，在直角三角形 DOO_1
+    % OO1 = R + r
+    % 因为：DO_1O = 30 度，所以， OD = OO1/2 = (R + r)/2
+    %   R^ + [(R + r)/2]^2 = (R + r)^2
+    % 化简得
+    %   R^2 - 6Rr - 3r^2 = 0
+    % 代入 r = 0.2 得
+    %   R = 1.29
+    \pgfmathsetmacro{\R}{1.29}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(210:\R+\r){O_1}
+    \tkzDefPoint(330:\R+\r){O_2}
+    \tkzDefPoint(90:\R+\r){O_3}
+
+    \tkzDefCircle[R](O,\r)  \tkzGetPoint{o}
+    \tkzDrawCircle[very thick](O, o)
+    \foreach \n in {1,2,3} {
+        \tkzDefCircle[R](O_\n,\R)  \tkzGetPoint{o_\n}
+        \tkzDrawCircle[very thick](O_\n, o_\n)
+    }
+    \tkzDrawPolygon[dashed](O_1,O_2,O_3)
+    \tkzDrawSegments[dashed](O,O_1)
+
+    \tkzLabelPoints[left](O_1)
+    \tkzLabelPoints[right](O_2)
+    \tkzLabelPoints[above](O_3)
+\end{tikzpicture}
+

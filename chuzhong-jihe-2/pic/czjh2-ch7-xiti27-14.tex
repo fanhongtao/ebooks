@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\n}{5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(234:\R){A} % 90 + 360/5*2
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \foreach \P [count=\i from 2] in {B,...,E} {
+        \coordinate (\P) at (P\i);
+    }
+    \tkzInterLL(A,C)(B,E)  \tkzGetPoint{M}
+
+    \tkzDrawPolygon[thick](A,...,E)
+    \tkzDrawPolygon[thick](A,C,E,B,D)
+    \tkzLabelPoints[below=.2em](M)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,B,...,E)
+\end{tikzpicture}
+

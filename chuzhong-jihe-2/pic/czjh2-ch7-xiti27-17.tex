@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\n}{6}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\R){A}
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \foreach \P [count=\i from 2] in {F,...,B} {
+        \coordinate (\P) at (P\i);
+    }
+
+    \tkzDrawCircle[very thick](O,A)
+    \foreach \i in {1,...,\n} {
+        \tkzDrawSegment[dashed](O,P\i)
+    }
+    \tkzLabelPoints[above=.5em](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](A,...,F)
+
+    %
+    \pgfmathsetmacro{\n}{5}
+    \tkzDefRegPolygon[center,sides=\n,name=P](O,A)
+    \foreach \P [count=\i from 2] in {H,M,L,K} {
+        \coordinate (\P) at (P\i);
+    }
+    \foreach \i in {1,...,\n} {
+        \tkzDrawSegment[dashed](O,P\i)
+    }
+    \tkzAutoLabelPoints[center=O, centered, dist= .25](H,M,L,K)
+\end{tikzpicture}
+

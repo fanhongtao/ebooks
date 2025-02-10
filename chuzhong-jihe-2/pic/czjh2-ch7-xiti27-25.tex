@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 3/0/B}
+    \tkzDefTriangle[two angles=55 and 35](A,B)  \tkzGetPoint{C}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{Oc}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{Oa}
+    \tkzDefMidPoint(C,A)  \tkzGetPoint{Ob}
+    % \tkzLabelPoints[centered](Oa,Ob,Oc)
+
+    \tkzFillSector[pattern={mylines[angle=-45, distance={3pt}]}](Ob,C)(A)
+    \tkzFillSector[pattern={mylines[angle=45, distance={3pt}]}](Oa,B)(C)
+    \tkzFillSector[white](Oc,B)(A)
+
+    \tkzDrawArc[thick](Ob,C)(A)
+    \tkzDrawArc[thick](Oa,B)(C)
+    \tkzDrawArc[thick](Oc,B)(A)
+    \tkzDrawPolygon[thick](A,B,C)
+    \tkzMarkRightAngle[size=.2](A,C,B)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[above](C)
+\end{tikzpicture}
+
