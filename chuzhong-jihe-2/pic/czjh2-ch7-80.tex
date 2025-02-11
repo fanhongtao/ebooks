@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth,
+    box/.style = {draw, rectangle, align=center, minimum width=2cm},
+]
+    \node (YMT)  [box] at (0,3) {原命题   \\ $A \tuichu B$};
+    \node (NMT)  [box] at (5,3) {逆命题   \\ $B \tuichu A$};
+    \node (FMT)  [box] at (0,0) {否命题   \\ $\buji{A} \tuichu \buji{B}$};
+    \node (NFMT) [box] at (5,0) {逆否命题 \\ $\buji{B} \tuichu \buji{A}$};
+
+    \draw [<->] (YMT.east) -- (NMT.west)  node [midway, above] {互逆};
+    \draw [<->] (FMT.east) -- (NFMT.west) node [midway, below] {互逆};
+
+    \draw [<->] (YMT.south) -- (FMT.north)
+        node [midway, left, align=center] {互\\[-0.5em]否}
+    ;
+    \draw [<->] (NMT.south) -- (NFMT.north)
+        node [midway, right, align=center] {互\\[-0.5em]否}
+    ;
+
+    \draw [<->] (YMT.south east) -- (NFMT.north west)
+        node [pos=.2, above, rotate=-30] {互为}
+        node [pos=.8, above, rotate=-30] {逆否}
+    ;
+    \draw [<->] (FMT.north east) -- (NMT.south west)
+        node [pos=.2, above, rotate=30] {互为}
+        node [pos=.8, above, rotate=30] {逆否}
+    ;
+\end{tikzpicture}
+
