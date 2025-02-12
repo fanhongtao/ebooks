@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\b}{1}
+    \pgfmathsetmacro{\c}{2.3}
+    \pgfmathsetmacro{\d}{4}
+
+    \tkzDefPoints{0/0/A,    \b/0/B,    \c/0/C,    \d/0/D}
+    \tkzDefPoints{0/1/A',   \b/1/B',   \c/1/C',   \d/1/D'}
+    \tkzDefPoints{0/-1/A'', \b/-1/B'', \c/-1/C'', \d/-1/D''}
+
+    \tkzDrawSegments(A,D  A',D'  A'',D'')
+    \tkzLabelSegment[pos=1, right](A,D){$l$}
+    \tkzLabelSegment[pos=1, right](A',D'){$l'$}
+    \tkzLabelSegment[pos=1, right](A'',D''){$l''$}
+
+    \tkzDrawSegments(B,B''  C,C')
+    \tkzLabelSegment[right](B,B''){$d$}
+    \tkzLabelSegment[right](C,C'){$d$}
+    \tkzMarkRightAngle[size=.2](A,B,B'')
+    \tkzMarkRightAngle[size=.2](D,C,C')
+
+    \tkzLabelPoint[above](C'){$P$}
+    \tkzLabelPoint[below](B''){$P'$}
+\end{tikzpicture}
+

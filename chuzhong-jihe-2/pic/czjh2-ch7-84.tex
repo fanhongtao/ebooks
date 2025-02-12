@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \begin{scope}[xshift=3.5cm,yshift=3.3cm]
+        \tkzDefPoints{0/0/r1, \R/0/r2}
+        \tkzDrawSegments[xianduan={below=0pt}](r1,r2)
+        \tkzLabelSegment[above](r1,r2){$R$}
+    \end{scope}
+
+    \tkzDefPoints{0/0/O, 5/0/A, 2/3.5/B}
+    % \tkzDefPoint(50:5){B}
+    \tkzDrawSegments(O,A  O,B)
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[left](B,O)
+
+    % 1
+    \tkzDefLine[bisector, normed](A,O,B)  \tkzGetPoint{c}
+    \tkzDefPointOnLine[pos=5](O,c)  \tkzGetPoint{C}
+    \tkzDrawSegment(O,C)
+    \tkzLabelPoints[right](C)
+
+    % 2
+    \tkzDefShiftPoint[O](90:\R){D}
+    \tkzDefLine[parallel=through D](O,A)  \tkzGetPoint{E}
+    \tkzDrawSegment(D,E)
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right](E)
+
+    \tkzInterLL(D,E)(O,C)  \tkzGetPoint{F}
+    \tkzLabelPoints[above](F)
+
+    % 3
+    \tkzDefShiftPoint[F](270:\R){G}
+    \tkzDrawCircle[thick](F,G)
+    \tkzDrawSegment(F,G)
+    \tkzLabelSegment[right](F,G){$R$}
+\end{tikzpicture}
+

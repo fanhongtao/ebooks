@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{2}
+
+    \begin{scope}[xshift=1.2cm,yshift=-2cm]
+        \tkzDefPoints{0/0/r1, \R/0/r2}
+        \tkzDrawSegments[xianduan={below=0pt}](r1,r2)
+        \tkzLabelSegment[above](r1,r2){$R$}
+    \end{scope}
+
+    \tkzDefPoints{0/0/O_1, 3.5/0/O_2}
+    \tkzDefCircle[R](O_1, 1.5)  \tkzGetPoint{o_1}
+    \tkzDefCircle[R](O_2, 1)  \tkzGetPoint{o_2}
+    \tkzDrawCircles[thick](O_1,o_1  O_2,o_2)
+    \tkzDrawPoints(O_1, O_2)
+    \tkzLabelPoints[below](O_1, O_2)
+\end{tikzpicture}
+

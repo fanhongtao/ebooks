@@ -1,0 +1,48 @@
+\begin{tikzpicture} % 参考 czjh2-ch7-84
+    \tkzDefPoints{0/0/A, 3/0/a, -1.3/0.6/B, -3/3/b}
+    \tkzDrawSegments(A,a B,b)
+    \tkzLabelSegment[pos=1, right](A,a){$l_1$}
+    \tkzLabelSegment[pos=1, above left](B,b){$l_2$}
+    \tkzLabelPoints[below](A)
+    \tkzLabelPoints[left](B)
+
+    \tkzInterLL(A,a)(B,b)  \tkzGetPoint{X}
+    \tkzDrawSegments[dashed](A,X  B,X)
+    % \tkzAutoLabelPoints[center=X, centered, dist= .4](A,B)
+
+    % ---------
+    \pgfmathsetmacro{\R}{1.5}
+
+    % 1
+    \tkzDefLine[bisector](A,X,B)  \tkzGetPoint{C}
+
+    % 2
+    \tkzDefShiftPoint[X](90:\R){D}
+    \tkzDefLine[parallel=through D](X,A)  \tkzGetPoint{E}
+    \tkzInterLL(D,E)(X,C)  \tkzGetPoint{O}
+    \tkzDrawSegments(O,X)
+    \tkzDrawPoint(O)
+    \tkzLabelPoints[right](O)
+
+    % 3
+    \tkzDrawArc(O,B)(A)
+    \tkzDrawSegments[-Latex](O,B)
+    \tkzLabelSegment[pos=.3, left, yshift=.3em](O,B){$R$}
+
+    % ---------
+    \pgfmathsetmacro{\d}{.5}
+    \foreach \i in {1,-1} {
+        \pgfmathsetmacro{\r}{\R+\i*\d}
+        \tkzDefPointOnLine[pos=\r/\R](O,A)  \tkzGetPoint{A'}
+        \tkzDefPointOnLine[pos=\r/\R](O,B)  \tkzGetPoint{B'}
+        \tkzDrawArc[thick](O,B')(A')
+
+
+        \tkzDefPointBy[translation=from A to a](A')  \tkzGetPoint{a'}
+        \tkzDrawSegment[thick](A',a')
+
+        \tkzDefPointBy[translation=from B to b](B')  \tkzGetPoint{b'}
+        \tkzDrawSegment[thick](B',b')
+    }
+\end{tikzpicture}
+

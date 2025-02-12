@@ -1,0 +1,45 @@
+\begin{tikzpicture} % 参考 czjh2-ch7-43
+    \pgfmathsetmacro{\a}{45}
+
+    \begin{scope}[xshift=-2cm]
+        \tkzDefPoints{0/0/O}
+        \tkzDefPoint(0:1.0){A}
+        \tkzDefPoint(\a:1.0){B}
+
+        \tkzDrawSegments(O,A  O,B)
+        \extkzLabelAngel[0.5](A,O,B){$\alpha$}
+    \end{scope}
+
+    \tkzDefPoints{0/0/A, 2.5/0/B}
+    \tkzDrawSegment(A,B)
+    \tkzLabelPoints[left=.2em](A)
+    \tkzLabelPoints[right=.2em](B)
+
+    % 1
+    \tkzDefLine[mediator, K=.9](A,B)  \tkzGetPoints{C}{D}
+
+    % 2
+    \tkzDefPointBy[rotation=center B angle \a](A)  \tkzGetPoint{e}
+    \tkzDefPointOnLine[pos=.5](B,e)  \tkzGetPoint{E}
+
+    % 3
+    \tkzDefLine[perpendicular=through B, K=2](E,B)  \tkzGetPoint{F}
+    \tkzInterLL(B,F)(C,D)  \tkzGetPoint{O}
+
+    % 4
+    \tkzCalcLength(O,A)  \tkzGetLength{rOA}
+    \tkzDefShiftPoint[O](60:\rOA){M}
+    \tkzDrawArc[thick](O,B)(A)
+    \tkzDrawSegments[dashed](A,M  B,M)
+    \extkzLabelAngel[0.5](A,M,B){$\alpha$}
+    \tkzLabelPoints[above](M)
+
+    % 另一个弧
+    \tkzDefPointBy[reflection=over A--B](O)  \tkzGetPoint{O'}
+    \tkzDefShiftPoint[O'](-90:\rOA){N}
+    \tkzDrawArc[thick](O',A)(B)
+    \tkzDrawSegments[dashed](A,N  B,N)
+    \extkzLabelAngel[0.5](B,N,A){$\alpha$}
+    \tkzLabelPoints[below](N)
+\end{tikzpicture}
+
