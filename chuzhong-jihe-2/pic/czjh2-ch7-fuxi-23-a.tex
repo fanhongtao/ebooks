@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \pgfmathsetmacro{\r}{\R/2}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(180:\R){A}
+    \tkzDefPoint(0:\R){B}
+    \tkzDefPoint(180:\r){O_1}
+    \tkzDefPoint(0:\r){O_2}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawArc(O_1,O)(A)
+    \tkzDrawArc(O_2,O)(B)
+    \tkzDrawSegment[dashed](A,B)
+\end{tikzpicture}
+

@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(70:\R){A}
+    \tkzDefPoint(210:\R){B}
+    \tkzDefPoint(330:\R){C}
+    \tkzDefPoint(150:\R){D} % CD 为直径
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawSegments[dashed](B,D  C,D)
+    \tkzDrawPoint(O)
+
+    \tkzMarkAngle[size=.4](B,A,C)
+    \tkzMarkAngle[size=.4](B,D,C)
+    \tkzLabelSegment[below](B,C){$a$}
+    \tkzLabelPoints[above](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .2](A,B,C)
+\end{tikzpicture}
+

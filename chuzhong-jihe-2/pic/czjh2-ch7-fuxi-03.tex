@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(170:\R){A}
+    \tkzDefPoint(110:\R){C}
+    \tkzDefPoint(50:\R){B}
+    \tkzDefMidPoint(O,A)  \tkzGetPoint{D}
+    \tkzDefMidPoint(O,B)  \tkzGetPoint{E}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments(O,A  O,B  C,D  C,E)
+
+    \tkzLabelPoints[below](O)
+    \tkzAutoLabelPoints[center=O, centered, dist= .2](A,B,C)
+    \tkzLabelPoints[below](D)
+    \tkzLabelPoints[right](E)
+\end{tikzpicture}
+

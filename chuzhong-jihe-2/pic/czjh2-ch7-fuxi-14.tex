@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 1.5/0/B, 1.2/1/C}
+    \tkzDefPointOnLine[pos=2.0](A,B)  \tkzGetPoint{D}
+    \tkzDefPointOnLine[pos=2.0](A,C)  \tkzGetPoint{E}
+    \tkzDefPointOnLine[pos=2.8](B,C)  \tkzGetPoint{F}
+    \tkzDefPointOnLine[pos=2.3](B,A)  \tkzGetPoint{G}
+    \tkzDefPointOnLine[pos=2.3](C,A)  \tkzGetPoint{H}
+    \tkzDefPointOnLine[pos=2.8](C,B)  \tkzGetPoint{K}
+    \tkzDrawSegments(D,G  E,H  F,K)
+    \tkzLabelPoints[left=1em, yshift=-.5em](A)
+    \tkzLabelPoints[right, yshift=-.5em](B)
+    \tkzLabelPoints[above=.2em, xshift=.3em](C)
+    % \tkzLabelPoints[](D,...,H,K)
+
+    \tkzDefCircle[in](A,B,C)  \tkzGetPoints{I}{R}
+    \tkzDrawCircle[thick](I,R)
+
+    \tkzDefLine[bisector](D,B,C)  \tkzGetPoint{x}
+    \tkzDefLine[bisector](B,C,E)  \tkzGetPoint{y}
+    \tkzInterLL(B,x)(C,y)  \tkzGetPoint{I_a}
+    \tkzDefLine[altitude](B,I_a,C)  \tkzGetPoint{R_a}
+    \tkzDrawCircle[thick](I_a,R_a)
+
+    \tkzDefLine[bisector](F,C,A)  \tkzGetPoint{x}
+    \tkzDefLine[bisector](C,A,G)  \tkzGetPoint{y}
+    \tkzInterLL(C,x)(A,y)  \tkzGetPoint{I_b}
+    \tkzDefLine[altitude](C,I_b,A)  \tkzGetPoint{R_b}
+    \tkzDrawCircle[thick](I_b,R_b)
+
+    \tkzDefLine[bisector](H,A,B)  \tkzGetPoint{x}
+    \tkzDefLine[bisector](A,B,K)  \tkzGetPoint{y}
+    \tkzInterLL(A,x)(B,y)  \tkzGetPoint{I_c}
+    \tkzDefLine[altitude](A,I_c,B)  \tkzGetPoint{R_c}
+    \tkzDrawCircle[thick](I_c,R_c)
+
+    \tkzDrawPoints(I, I_a, I_b, I_c)
+    \tkzLabelPoints[right=-.2em](I)
+    \tkzLabelPoints[right](I_a, I_b, I_c)
+\end{tikzpicture}
+

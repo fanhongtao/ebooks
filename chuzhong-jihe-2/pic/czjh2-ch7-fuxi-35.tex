@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.1}
+
+    % 坐标
+    \tkzDefPoints{-15*\factor/0/x1, 50*\factor/0/x2, 0/-15*\factor/y1, 0/22*\factor/y2}
+    \tkzDrawSegments[-|Latex](x1,x2  y1,y2)
+    \tkzLabelSegment[pos=1, below](x1,x2){$x$}
+    \tkzLabelSegment[pos=1, left](y1,y2){$y$}
+
+    % 圆 O
+    \pgfmathsetmacro{\Ra}{10*\factor}
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(100:\Ra){L}
+    \tkzDrawCircle[thick](O,L)
+    \tkzDrawSegment[-Latex](O,L)
+    \tkzLabelSegment[pos=.3, left](O,L){$R10$}
+    \tkzLabelPoints[below left](O)
+
+    % 圆 O_1
+    \pgfmathsetmacro{\Rb}{8*\factor}
+    \tkzDefPoint(35*\factor,0){O_1}
+    \tkzDefShiftPoint[O_1](100:\Rb){M}
+    \tkzDrawCircle[thick](O_1,M)
+    \tkzDrawSegment[-Latex](O_1,M)
+    \tkzLabelSegment[right=-.2em](O_1,M){$R8$}
+    \tkzLabelPoints[below](O_1)
+
+
+    % 点 P 及弧线
+    \pgfmathsetmacro{\Rc}{27*\factor}
+    \tkzDefPoint(31.90*\factor,18.75*\factor){P}
+    \tkzDefShiftPoint[P](240:\Rc){N}
+    \tkzInterLC[R](O,P)(O,\Ra)  \tkzGetSecondPoint{A}
+    \tkzInterLC[R](O_1,P)(O_1,\Rb)  \tkzGetSecondPoint{B}
+    \tkzDrawArc[dashed](P,A)(B)
+    \tkzDrawSegment[-Latex](P,N)
+    \tkzLabelSegment[above, sloped](P,N){$R27$}
+    \tkzDrawPoint(P)
+    \tkzLabelPoints[right](A)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoint[right](P){$P(x,y)$}
+\end{tikzpicture}
+

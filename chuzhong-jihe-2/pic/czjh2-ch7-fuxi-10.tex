@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(120:\R){A}
+    \tkzDefPoint(260:\R){B}
+    \tkzDefPoint(310:\R){C}
+    \tkzDefPoint(25:\R){D}
+    \tkzInterLL(A,B)(D,C)  \tkzGetPoint{M}
+    \tkzInterLL(A,D)(B,C)  \tkzGetPoint{N}
+    \tkzDefLine[bisector](D,M,A)  \tkzGetPoint{h}
+    \tkzDefLine[bisector](A,N,B)  \tkzGetPoint{e}
+    \tkzInterLL(N,e)(A,B)  \tkzGetPoint{E}
+    \tkzInterLL(N,e)(C,D)  \tkzGetPoint{G}
+    \tkzInterLL(M,h)(A,D)  \tkzGetPoint{H}
+    \tkzInterLL(M,H)(B,C)  \tkzGetPoint{F}
+    \tkzInterLL(M,H)(N,E)  \tkzGetPoint{K}
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawPolygons(A,M,D  A,B,N)
+    \tkzDrawSegments(M,H  N,E)
+
+    \extkzLabelAngel[0.3](M,E,N){$1$}
+    \extkzLabelAngel[0.3](E,G,M){$2$}
+    \tkzAutoLabelPoints[center=O, centered, dist= .2](A,C,D)
+    \tkzLabelPoints[below, xshift=-.5em](B)
+    \tkzLabelPoints[below](M)
+    \tkzLabelPoints[right](N)
+    \tkzLabelPoints[left](E)
+    \tkzLabelPoints[above, xshift=.4em](F)
+    \tkzLabelPoints[above, xshift=-.5em](G)
+    \tkzLabelPoints[above](H)
+    \tkzLabelPoints[above, xshift=-.5em](K)
+\end{tikzpicture}
+

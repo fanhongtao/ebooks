@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/C}
+    \tkzDefPointOnLine[pos=0.4](A,C)  \tkzGetPoint{B}
+    \tkzDefMidPoint(A,C)  \tkzGetPoint{O}
+    \tkzDefMidPoint(A,B)  \tkzGetPoint{O1}
+    \tkzDefMidPoint(B,C)  \tkzGetPoint{O2}
+    \tkzDefLine[perpendicular=through B](A,C)  \tkzGetPoint{d}
+    \tkzInterLC(B,d)(O,A)  \tkzGetFirstPoint{D}
+    \tkzDefMidPoint(B,D)  \tkzGetPoint{O3}
+
+    \tkzFillSector[pattern={mylines[angle=45, distance={3pt}]}](O,C)(A)
+    \tkzFillSector[fill=white](O1,B)(A)
+    \tkzFillSector[fill=white](O2,C)(B)
+    \tkzDrawArc[thick](O,C)(A)
+    \tkzDrawArc[thick](O1,B)(A)
+    \tkzDrawArc[thick](O2,C)(B)
+    \tkzDrawCircle[very thick](O3,B)
+    \tkzDrawSegments[thick](A,C  B,D)
+    \tkzLabelPoints[below](A,B,C)
+    \tkzLabelPoints[above](D)
+\end{tikzpicture}
+

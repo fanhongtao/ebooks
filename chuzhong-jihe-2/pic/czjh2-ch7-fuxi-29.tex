@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{3}
+    \pgfmathsetmacro{\r}{2}
+
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(130:\R){A}
+    \tkzDefPoint(130:\r){A'}
+    \tkzDefPoint(60:\R){B}
+    \tkzDefPoint(60:\r){B'}
+
+    \tkzFillSector[pattern={mylines[angle=45, distance={3pt}]}](O,B)(A)
+    \tkzFillSector[fill=white](O,B')(A')
+    \tkzDrawSector[thick](O,B)(A)
+    \tkzDrawArc[thick](O,B')(A')
+    \tkzLabelArc[above](O,B,A){$l$}
+    \tkzLabelArc[below](O,B',A'){$l'$}
+    \tkzLabelSegment[centered, rotate=40, xshift=-.6em](A,A'){$d$}
+    \tkzLabelPoints[below](O)
+    \tkzLabelPoints[below left](A,A')
+    \tkzLabelPoints[right](B,B')
+\end{tikzpicture}
+

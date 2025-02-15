@@ -1,0 +1,30 @@
+\begin{tikzpicture} % 复杂
+    \pgfmathsetmacro{\R}{1.2}
+    \pgfmathsetmacro{\RR}{sqrt(2)*\R}
+    \pgfmathsetmacro{\r}{\RR/2}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:\R){A}
+    \tkzDefRegPolygon[center,sides=4,name=P](O,A)
+    \tkzDefPoint(45:\RR){B}
+    \tkzDefRegPolygon[center,sides=4,name=Q](O,B)
+    \tkzDefPoint(45:\r){C}
+    \tkzDefRegPolygon[center,sides=4,name=O](O,C)
+    % \tkzLabelPoints[centered](P1,P...,P4)
+    % \tkzLabelPoints[centered](Q1,Q...,Q4)
+    % \tkzLabelPoints[centered](O1,O...,O4)
+
+    \tkzDrawSegments[dashed](P1,P3  P2,P4)
+    \tkzDrawPolygon[dashed](Q1,Q...,Q4)
+
+    \foreach \i in {1,...,4} {
+        \ifnum\i=4\relax
+            \pgfmathsetmacro{\n}{1}
+        \else
+            \pgfmathsetmacro{\n}{int(\i+1)}
+        \fi
+
+        \tkzDrawArc[R with nodes](O\i,\r)(P\i,P\n)
+    }
+\end{tikzpicture}
+

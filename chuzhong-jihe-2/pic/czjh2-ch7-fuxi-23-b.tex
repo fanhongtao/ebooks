@@ -1,0 +1,27 @@
+\begin{tikzpicture} % 复杂
+    \pgfmathsetmacro{\R}{1}
+
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(0:\R){A}
+    \tkzDefRegPolygon[center,sides=4,name=P](O,A)
+    \tkzCalcLength(P1,P2)  \tkzGetLength{PP}
+    \tkzInterCC[R](P1,\PP)(P2,\PP)  \tkzGetSecondPoint{B}
+    \tkzDefRegPolygon[center,sides=4,name=Q](O,B)
+    % \tkzLabelPoints[centered](P1,P...,P4)
+    % \tkzLabelPoints[centered](Q1,Q...,Q4)
+
+    \tkzDrawCircle[thick](O,A)
+    \tkzDrawSegments[dashed](P1,P3  P2,P4)
+
+    \foreach \i in {1,...,4} {
+        \ifnum\i=4\relax
+            \pgfmathsetmacro{\n}{1}
+        \else
+            \pgfmathsetmacro{\n}{int(\i+1)}
+        \fi
+
+        \tkzDrawArc[R with nodes](P\n,\PP)(P\i,Q\i)
+        \tkzDrawArc[R with nodes](P\i,\PP)(Q\i,P\n)
+    }
+\end{tikzpicture}
+

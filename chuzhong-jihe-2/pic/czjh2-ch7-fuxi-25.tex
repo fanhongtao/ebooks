@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\factor}{0.25}
+
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(5*\factor,0){A}
+    \tkzDefPoint(8*\factor,9.5*\factor){B}
+    \tkzDefPoint(0,(9.5+5.9)*\factor){C}
+    \tkzDefPoint(-8*\factor,9.5*\factor){D}
+    \tkzDefPoint(-5*\factor,0){E}
+    \tkzDefPoint(0,9.5*\factor){F}
+    % \tkzLabelPoints[centered](A,...,F,O)
+
+    \tkzDrawPolygon(A,...,E)
+    \tkzDrawSegments(B,D  O,C)
+    \tkzLabelSegment[above, sloped](O,F){9.5寸}
+    \tkzLabelSegment[pos=.4, above, sloped](F,C){5.9寸}
+    \tkzLabelSegment[below](F,B){8寸}
+    \tkzLabelSegment[below](F,D){8寸}
+    \tkzLabelSegment[below](O,A){5寸}
+    \tkzLabelSegment[below](O,E){5寸}
+\end{tikzpicture}
+
