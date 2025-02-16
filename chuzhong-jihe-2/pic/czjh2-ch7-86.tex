@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\R}{1.5}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(60:\R){A}
+    \tkzDrawCircle[very thick](O,A)
+    \tkzDrawSegment(O,A)
+    \tkzDrawPoint(O)
+    \tkzLabelSegment[right](O,A){$R$}
+    \tkzLabelPoints[left](O)
+
+    \tkzDefRegPolygon[center,sides=6,name=P](O,A)
+    \tkzDrawPolygon[thick,red](P1,P...,P6)
+
+    \tkzDefRegPolygon[center,sides=12,name=P](O,A)
+    \tkzDrawPolygon[thick,blue](P1,P...,P12)
+\end{tikzpicture}
+
