@@ -29,15 +29,6 @@
 | 3 | 代数 第三册 | 完成 (2022-03-19 ~ 2022-06-08) |
 | 4 | 立体几何 全一册 | 录入中 (2022-06-13 ~ )  |
 
-
-# 其它
-
-* 本项目依赖于 [TexLive](http://tug.org/texlive/) 2023，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
-* 需要先将各书本目录的 `pic-pdf` 子目录下的 `tex` 文件编译成 `pdf` 文件，才能编译书本。
-* 由俄罗斯的**特别军事行动**所引发的一系列后果，推测 GitHub 在某天不能访问会是大概率事件。所以启用 [备用库](https://gitee.com/fhtao/ebooks)
-
----
-
 [james](https://github.com/jamesfang8499/) 完成了
 
 * [物理 第一册](https://github.com/jamesfang8499/physics1)
@@ -64,6 +55,8 @@
 | 5 | 初中代数 第三册 | 完成（2024-04-22 ~ 2024-06-07） |
 | 6 | 初中代数 第四册 | 完成（2024-06-08 ~ 2024-08-06） |
 | 7 | 初中化学 全一册 | 完成（2024-08-07 ~ 2024-10-10） |
+| 8 | 初中几何 第一册 | 完成（2024-10-11 ~ 2024-12-28） |
+| 9 | 初中几何 第二册 | 完成（2024-12-29 ~ 2025-02-24） |
 
 
 # PDF下载
@@ -71,4 +64,11 @@
 对于非 LaTeX 爱好者，直接通过 [Release](https://github.com/fanhongtao/ebooks/releases) 下载编译好的 PDF 文件。
 
 没有必要去折腾 LaTeX。
+
+
+# 其它
+
+* 本项目依赖于 [TexLive](http://tug.org/texlive/) 2023，建议先从 [Acquiring TeX Live as an ISO image](http://tug.org/texlive/acquire-iso.html) 下载 ISO 文件，再进行安装。
+* 需要先将各书本目录的 `pic-pdf` 子目录下的 `tex` 文件编译成 `pdf` 文件，才能编译书本。
+* 由俄罗斯的**特别军事行动**所引发的一系列后果，推测 GitHub 在某天不能访问会是大概率事件。所以启用 [备用库](https://gitee.com/fhtao/ebooks)
 
