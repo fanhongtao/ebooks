@@ -4,9 +4,9 @@
   chapter = {
     pagestyle = headings,
   },
-  section = {
-     aftername={、},
-  }
+  % section = {
+  %    aftername={、},
+  % }
 }
 
 \usepackage{array}
@@ -121,7 +121,7 @@
 \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}\;}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thetable}{\thechapter{}-\arabic{table}}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 
