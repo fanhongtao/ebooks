@@ -1,21 +1,28 @@
 % 定义本书中使用到的格式
 
-\ctexset {chapter = {pagestyle = headings}}
+\ctexset {
+  chapter = {
+    pagestyle = headings,
+  },
+  section = {
+     aftername={、},
+  }
+}
 
 \usepackage{array}
-\usepackage{amsmath}
+\usepackage{mathtools} % 会自动加载宏包 'amsmath'
 \allowdisplaybreaks[1]
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{calc}
 \usepackage{caption}
 \captionsetup[figure]{labelsep=none}
-
 \usepackage{cases}
-\usepackage{diagbox}
-\usepackage[shortlabels]{enumitem}
-\usepackage{etoolbox}
+
+\usepackage{CJKfntef}
+\usepackage{enumitem}
 \usepackage{extarrows}
+\usepackage{etoolbox}
 \usepackage{float}
 \usepackage[stable]{footmisc}
 \usepackage{geometry}
@@ -24,38 +31,80 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=red}
 
-\usepackage{longdivision}
-\usepackage{longtable}
-\setlength\LTleft\parindent
-\setlength\LTright\fill
-
-\usepackage{makecell}
-\usepackage{mathtools}
-\usepackage{multirow}
-\usepackage{nicematrix}
-\usepackage{polynom}
-\usepackage[figuresright]{rotating}
 \usepackage{scalerel}
-\usepackage{tablefootnote}
+
+\usepackage{tabularray}
+\UseTblrLibrary{counter}
+\UseTblrLibrary{diagbox}
+\UseTblrLibrary{siunitx}
+
 \usepackage{tikz}
 \usetikzlibrary{
+  3d,
+  angles,
   arrows.meta,
   calc,
   decorations.pathmorphing,
   decorations.pathreplacing,
+  math,
+  graphs,
   intersections,
   patterns,
   patterns.meta,
-  through,
+  positioning,
+  quotes,
+  shapes.geometric,
 }
+\usepackage{tikz-3dplot}
 
 \usepackage{wrapfig}
-\usepackage{xlop}
 \usepackage{xparse}
+\usepackage{xpinyin}
+
+\usepackage{tkz-euclide}
+\tkzSetUpPoint[fill=black]
+\tkzSetUpCompass[color=orange,line width=.3 pt]
+
+% 《几何》中的公理、定理、推论，有的有编号，有的又没有。
+%  而内容中，有的部分是黑体，又或间隔有（用于解释的）普通文本。
+%  所以很难统一规则。
+%  为了最大限度的复原原课本，故不采用 \newtheorem 定义的环境，
+%     \newtheorem{theorem}{定理}[subsection]
+%  而是自己定义一些简单的环境。
+\NewDocumentEnvironment{xingzhi}{o}{% 性质
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+
+\NewDocumentEnvironment{gongli}{o}{% 公理
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+\NewDocumentEnvironment{dingli}{o}{% 定理
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+\NewDocumentEnvironment{tuilun}{o}{% 推论
+  \bfseries
+  \IfNoValueF {#1}
+    {#1　}%
+}{}
+
 
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
-\setlength{\lineskip}{\baselineskip-\ccwd}
-\setlength{\lineskiplimit}{2.5pt}
+% 参数1: 最后一行需要额外增加的高度（用于调整和后继行的间隔）
+\NewDocumentEnvironment{enhancedline}{o}{
+  \setlength{\lineskip}{\baselineskip-\ccwd}
+  \setlength{\lineskiplimit}{2.5pt}
+}{
+  \IfValueT{#1}{
+    \vspace{#1}
+  }
+  \par
+}
 
 % 绘制带圈的数字
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
@@ -65,16 +114,6 @@
 \robustify{\circled}
 \newcommand{\tc}[1]{\text{\circled{#1}}}
 
-% 罗马数字
-\makeatletter
-\newcommand{\rmnum}[1]{\romannumeral #1}
-\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
-\makeatother
-
-\newcommand{\gongshishangyi}{\setlength\abovedisplayskip{-1.5em}} % 当 “解:” 后直接写公式时，为了“解”与公式水平对齐所需要的偏移。
-\newcommand{\lianxi}{\hspace{1em}\par \textbf{练\quad 习}}
-\newcommand{\xhx}[1][2em]{\underline{\hspace{#1}}}
-
 \counterwithout*{subsection}{section}
 \counterwithin*{subsection}{chapter}
 \setcounter{secnumdepth}{3}
@@ -82,7 +121,8 @@
 \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
 
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}\;}
+\renewcommand{\thetable}{\thechapter{}-\arabic{table}}
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 
 % 在不改变 counter 值的情况下，重置 counter 的子 counter
@@ -91,7 +131,8 @@
 \newenvironment{starred}{
   \ctexset {
     chapter/name={*第,章},
-    section/name={*}
+    section/name={*},
+    subsection/name={*},
   }
 }{}
 
@@ -121,39 +162,75 @@
 
 % （编号前）带星号的 subsection
 % 参数1: subsection 的标题
-\NewDocumentCommand{\starredsubsection}{o m}{
-  \refstepcounter{subsection}
-  \subsection*{*\thesubsection\quad #2}
-  \IfNoValueTF{#1}
-    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
-    {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
-}
+% \NewDocumentCommand{\starredsubsection}{o m}{
+%   \refstepcounter{subsection}
+%   \subsection*{*\thesubsection\quad #2}
+%   \IfNoValueTF{#1}
+%     {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #2}}
+%     {\addcontentsline{toc}{subsection}{\makebox{*}\thesubsection\qquad #1}}
+% }
 
-\newcounter{cntliti}[subsubsection]           % 例题的计数器
-\newcommand{\liti}{ % 例题的标题
-  \stepcounter{cntliti}
-  \textbf{例\thecntliti}
+\newcounter{cntliti}[subsection]           % 例题的计数器
+\NewDocumentCommand{\liti}{o}{ % 例题的标题
+  \IfNoValueTF{#1} {
+    \stepcounter{cntliti}
+    \textbf{例 \thecntliti}
+  } {
+    \textbf{例}
+  }
+  \;
 }
 
 \newcommand{\jie}{\textbf{解: }}
 \newcommand{\zhengming}{\textbf{证明: }}
 
-\newcounter{cntxiti}                       % “习题”的计数器
+\newcounter{huafa}
+\NewDocumentCommand{\huafa}{o} {
+  \IfNoValueTF{#1}
+    {\textbf{画法：}}
+    {\setcounter{huafa}{#1} \textbf{画法\chinese{huafa}：}}
+}
+\newcommand*\zuofa{\textbf{作法：}}
+
+
+\newenvironment{lianxi}{
+  \vspace*{1em}
+  {\large\textbf{练 \; 习}}\par
+  \setcounter{cntxiaoti}{0}
+  \begin{xiaotis}
+}{
+  \end{xiaotis}
+  \vspace*{1em}
+}
+
+\newcounter{cntxiti}               % “习题”的计数器
 \newcommand{\xiti}{%
   \stepcounter{cntxiti}
   \vspace{1em}
-  {\centering \nonumsubsection{\labelxiti}}
+  {\centering \nonumsubsection{\labelxiti}}%在目录中显示“习题”
 }
 \newcommand{\labelxiti}{习题 \chinese{cntxiti}}
 
+
 \newcommand{\xiaojie}{%
-  \nonumsection[\labelxiaojie]{\huge \labelxiaojie}
+  \nonumsection[\labelxiaojie]{\Large \labelxiaojie}
 }
 \newcommand{\labelxiaojie}{小 \hspace{2em} 结}
 
+
+\newcounter{cntfuxiti}                       % “复习参考题”的计数器
+\newcommand{\fuxiti}{%
+  \stepcounter{cntfuxiti}
+  \nonumsection[\labelfuxiti]{\Large \labelfuxiti}
+}
+\newcommand{\labelfuxiti}{复习参考题\chinese{cntfuxiti}}
+
 \newcounter{cntxiaoti}[subsubsection]      % 小题的计数器
 \newcounter{cntxiaoxiaoti}[cntxiaoti]      % 小小题的计数器
+\counterwithin*{cntxiaoti}{cntxiti}
+\counterwithin*{cntxiaoti}{cntfuxiti}
 \counterwithin*{cntxiaoxiaoti}{cntliti}
+\newcommand{\resetxxt}{\setcounter{cntxiaoxiaoti}{0}} % 重置 小小题的计数器
 
 \newlength{\lenLabel}                     % 内部变量：用于计算题目前编号所占的长度
 \newlength{\lenParent}                    % 内部变量：用于记录父题目编号所占的长度
@@ -173,6 +250,10 @@
       }%
   }%
   \newcommand{\labelxiaoti}{\arabic{cntxiaoti}. }% 1. 2. 3. ……
+  \newenvironment{withstar}{%
+    \renewcommand{\labelxiaoti}{*\arabic{cntxiaoti}. }% 1. 2. 3. ……
+  }{%
+  }
 }{%
 }
 
@@ -187,13 +268,17 @@
     \setlength{\lenLabel}{\widthof{\labelxiaoxiaoti}}%
     \IfNoValueTF{##1}%
       {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{\lenParent}~\labelxiaoxiaoti ##2}}%
-      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{~\labelxiaoxiaoti ##2}}%
+      {\hangafter 1\setlength{\hangindent}{\parindent + \lenParent + \lenLabel + 0.5em}{\hspace{##1}~\labelxiaoxiaoti ##2}}%
   }%
   \newcommand{\labelxiaoxiaoti}{（\arabic{cntxiaoxiaoti}）}% （1） （2） （3） ……
   % 小小题 与 小题 同行时的默认缩进。调用形式为: \xiaoxiaoti[\xxtsep]{小小题的内容}
   \newcommand{\xxtsep}{0em}%
+  \def\xxt{\xiaoxiaoti}%定义一个缩写。因为在表格中，如果总写 \xiaoxiaoti，字数太多。影响阅读。
 }{%
 }
+
+\newcommand{\ewkh}[1][2em]{(\hspace{#1})}%英文括号
+\newcommand{\xhx}[1][2em]{\CJKunderline{\hspace{#1}}}%下划线
 
 \newcommand{\twoInLine}  [3][10em] {\begin{tabular}[t]{*{2}{@{}p{#1}}} #2 & #3\end{tabular}}
 \newcommand{\threeInLine}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} #2 & #3 & #4\end{tabular}}
@@ -203,8 +288,10 @@
 \newcommand{\threeInLineXxt}[4][10em] {\begin{tabular}[t]{*{3}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4}\end{tabular}}
 \newcommand{\fourInLineXxt} [5][10em] {\begin{tabular}[t]{*{4}{@{}p{#1}}} \xiaoxiaoti{#2} & \xiaoxiaoti{#3} & \xiaoxiaoti{#4} & \xiaoxiaoti{#5}\end{tabular}}
 
+\newcommand{\shangyihang}{\vspace{-1.2em}} % 上移一行
 \newcommand{\jiange}{\vspace{0.5em}} % 手工调整垂直间隔（测试发现 0.5em 比较合适。不支持参数，特殊情况直接使用 \vspace{} 命令。）
-\newcommand{\shangyihang}{\vspace{-1.5em}} % 上移一行
+\newcommand{\lianxijiange}{\vspace{2em}} % “练习” 与后继内容之间的间隔
+\newcommand{\huitui}{\hspace*{-1em}} % 回退。
 
 % 修改数学公式与上下文的距离
 \makeatletter
@@ -214,60 +301,11 @@
 }
 \makeatother
 
-
-%----------------------------------
-% （重）定义一些数学符号
-%  一是为了使用/记忆上的方便，二是如果以后有变动，只需要修改一处。
-\newcommand{\kongji}{\varnothing}      % 空集
-\newcommand{\buji}{\overline}          % 补集
-\newcommand*\pxdy{%                    % 平行且等于
-    \mathrel{\hspace{.03555em}\text{\tikz[baseline]
-            \draw (.1em,0ex) -- (.9em,0ex)
-            (.1em,.3ex) -- (.9em,.3ex)
-            (.375em,.4ex) -- (.675em,1.8ex)
-            (.55em,.4ex) -- (.85em,1.8ex);}\hspace{.03555em}}%
-}
-\newcommand*\xiangsi{%                 % 相似 (如果不在意有些不同，可以使用 \backsim )
-    \mathrel{\text{%
-            \tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
-}}}
-\newcommand*\quandeng{%                % 全等
-    \mathrel{\text{%\small%
-            \tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
-}}}
-\newcommand{\arccot}{\mathrm{arccot}\,} % 反余切函数
-\newcommand{\celsius}{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}} % 摄氏度
-
-% 绘制 弧度 符号。代码来自
-%    https://tex.stackexchange.com/questions/96680/
-\makeatletter
-\DeclareFontFamily{U}{tipa}{}
-\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
-\newcommand{\hudu@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
-
-\newcommand{\hudu}[1]{\mathpalette\hudu@hudu{#1}}
-
-\newcommand{\hudu@hudu}[2]{%
-  \sbox0{$\m@th#1#2$}%
-  \vbox{
-    \hbox{\resizebox{\wd0}{\height}{\hudu@char}}
-    \nointerlineskip
-    \box0
-  }%
-}
-\makeatother
-
-%----------------------------------
-\newlength{\defaultParIndent}  % 页面缺省的 \parindent 长度。
-\setlength{\defaultParIndent}{\parindent}
+\newcommand{\exdfrac}[2]{\dfrac{\; #1 \;}{#2}}% \dfrac{a}{b}这样只有一个字符的式子，分数线太短。本命令通过 \; 来增加分数线的长度。
 
 %----------------------------------
 \counterwithin*{equation}{subsection}
 \renewcommand{\theequation}{\arabic{equation}}
-%\newtheorem{theorem}{定理}[subsection]
-%\renewcommand\thetheorem{\arabic{theorem}}
-%\newtheorem{corollary}{推论}[theorem]
-%\renewcommand\thecorollary{\arabic{corollary}}
 
 \makeatletter
 % 创建指定名字的标签
@@ -287,29 +325,6 @@
 }%
 \makeatother
 
-% 创建定理环境
-% 参数1: 环境名称
-% 参数2: 环境的标题
-% 参数3: 环境的counter对应的父counter
-% 参数4: 创建label时，所写内容的模板（一般要包含环境名称对应计数器）
-% 注：前3个参数，就是 \newtheorem{foo3}{bar}[section] 中的三个参数。
-\newcommand{\createtheorem}[4]{
-  \newcounter{#1}[#3]
-  \newtheorem{inner#1}[#1]{#2}
-  \expandafter\renewcommand\csname the#1\endcsname{\arabic{#1}}
-  \newenvironment{#1}{
-    \expandafter\renewcommand{\label}[1]{\namedlabel{####1}{#4}}
-    \begin{inner#1}
-  }{
-    \end{inner#1}
-  }
-}
-
-\createtheorem{theorem}{定理}{subsection}{定理 \thetheorem}
-\createtheorem{corollary}{推论}{theorem}{定理 \thetheorem 推论 \thecorollary}
-
-\newcommand{\eqnameref}[1]{(\nameref{#1})}
-
 %----------------------------------
 \newcounter{mylabel}
 % 针对计数器 mylabel 创建（指定名字）标签
@@ -325,34 +340,74 @@
 }
 
 
-%
-% 创建计数器及其同名的生成label的命令模板。
-% 参数1: 计数器的名称（同时也是为计数器创建 label 的命令的名字）
-% 参数2: （可选）\the<counter> 显示的内容。默认为 \arabic{<counter>}
-% 参数3: （可选）上级计数器的名字。默认为没有上级计数器。
-\NewDocumentCommand{\createcounter}{m o o}{
-  \IfValueTF{#3}
-    {\newcounter{#1}[#3]}
-    {\newcounter{#1}}
-  \IfValueT{#2}
-    {\expandafter\renewcommand\csname the#1\endcsname{#2}}
-  \expandafter\newcommand\expandafter*\csname #1\endcsname[1]{
-    \refstepcounter{#1} \label{##1}}
+%----------------------------------
+% 实现类似如下效果：
+%  name1 .............. value1
+%  another-name2 .......... v2
+\makeatletter
+\newcommand \cdotfill {\leavevmode \cleaders \hb@xt@ .33em{\hss $\cdot$ \hss }\hfill \kern \z@}
+\makeatother
+
+\newenvironment{dottedlist}[2]{%
+    \newcommand{\pair}[2]{\item ##1 \cdotfill ##2}
+    \begin{itemize}[nosep, leftmargin=#1, rightmargin=#2]
+        \renewcommand{\labelitemi}{}
+}{%
+    \end{itemize}
 }
 
-\createcounter{fangchengzu}[\Roman{fangchengzu}]
 
 %---------------------------
-% 在数学的长符号（如：\xlongrightarrow）添加脚注时，遇到脚注重复的问题。
-% 下面的代码用于避免脚注重复。
-% 注意：不建议在数学公式中使用脚注，这里是为了尽可能展现原书的内容。
-\makeatletter
-\newif\ifext@arrow@measuring@
-\let\saved@ext@arrow\ext@arrow % 保存原始定义
-\def\fake@footnotemark{\textsuperscript{\the\numexpr\value{footnote}+1\relax}}
-\patchcmd\ext@arrow{\mathop}{\ext@arrow@measuring@true\mathop}{}{}
-\patchcmd\ext@arrow{\limits}{\ext@arrow@measuring@false\limits}{}{}
-\def\arrowmeasuring#1#2{\ifext@arrow@measuring@#1\else#2\fi}
-\makeatother
-\def\mytablefootnote#1{\arrowmeasuring{\csname fake@footnotemark\endcsname}{\tablefootnote{#1}}}
+\newcommand{\zhuyi}{\textbf{注意} \hspace{1em}}
+\newcommand{\zhongdian}[1]{\textbf{#1}} % 重点（内容）
 
+\newcommand{\shushi}[3]{% 竖式。
+    % 注意，不要在 tblr 中调用此命令。只能在 tabular 中使用。
+    \renewcommand\arraystretch{0.8}
+    $\begin{array}[t]{r@{\;}r@{\quad}r}
+        && #1 \\[-0.3em]
+        #2 &  \vstretch{1.1}{\big)}\mkern-7.3mu & #3 \\
+        \cline{2-3}
+    \end{array}$
+}
+
+% 分隔
+% 主要用于实现将 ∵ （或 ∴）符号 与 居中的数学公式显示在同一行。
+% 参数1: (可选) 右侧的宽度。缺省为 0.9\textwidth
+% 参数2: 左侧要显示的内容。一般为 $\because$ 或 $\therefore$
+% 参数3: 右侧要显示的（居中的）数学公式。
+% 示例：
+% \fenge{$\because$}{$$ \text{左边} \neq \text{右边} $$}
+% \fenge{$\therefore$}{\begin{equation} a=b \end{equation}}
+\newcommand{\fenge}[3][0.9\textwidth]{
+  #2 \begin{minipage}{#1}
+    #3
+  \end{minipage}
+}
+\newcommand{\fengeYinwei}[1]{\fenge{$\because$}{$$#1$$}}
+\newcommand{\fengeSuoyi}[1]{\fenge{$\therefore$}{$$#1$$}}
+
+
+%------------------------
+\NewTblrTheme{nocaption}{
+  \DefTblrTemplate{caption}{default}{}
+  \DefTblrTemplate{caption-tag}{default}{}
+  \DefTblrTemplate{caption-sep}{default}{}
+  \DefTblrTemplate{contfoot-text}{default}{未完待续}
+  \DefTblrTemplate{conthead-text}{default}{（续表）}
+}
+
+
+\NewTblrEnviron{datatblr}
+\SetTblrInner[datatblr]{rows={mode=math, r, rowsep=0pt}}
+\newenvironment{data}{
+  \vspace*{-0.5em}\begin{center}
+}{
+  \end{center}\vspace*{-0.5em}
+}
+
+\NewTblrEnviron{statisticstblr}
+\SetTblrInner[statisticstblr]{hlines, vlines, rows={mode=math, c}, row{1}={mode=text}, column{2}={mode=text, l}, columns={colsep=1em}}
+
+\NewTblrEnviron{zmtblr}% 证明用的 tblr
+\SetTblrInner[zmtblr]{colsep=0pt, rowsep=0pt}
