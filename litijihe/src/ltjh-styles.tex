@@ -71,27 +71,22 @@
 %  为了最大限度的复原原课本，故不采用 \newtheorem 定义的环境，
 %     \newtheorem{theorem}{定理}[subsection]
 %  而是自己定义一些简单的环境。
-\NewDocumentEnvironment{xingzhi}{o}{% 性质
-  \bfseries
-  \IfNoValueF {#1}
-    {#1　}%
-}{}
+\newcommand{\dingyihuanjing}[1]{% 定义一个新的数学环境。参数1: 环境名
+  \NewDocumentEnvironment{#1}{o o}{% 参数1: 显示的名字。参数2:环境编号。
+    \bfseries
+    \IfValueTF{##2}
+      {\mylabel{##2}[##1]##1　}%
+      {%
+        \IfValueT{##1}
+          {##1　}%
+      }%
+  }{}
+}
 
-\NewDocumentEnvironment{gongli}{o}{% 公理
-  \bfseries
-  \IfNoValueF {#1}
-    {#1　}%
-}{}
-\NewDocumentEnvironment{dingli}{o}{% 定理
-  \bfseries
-  \IfNoValueF {#1}
-    {#1　}%
-}{}
-\NewDocumentEnvironment{tuilun}{o}{% 推论
-  \bfseries
-  \IfNoValueF {#1}
-    {#1　}%
-}{}
+\dingyihuanjing{xingzhi}% 性质
+\dingyihuanjing{gongli}% 公理
+\dingyihuanjing{dingli}% 定理
+\dingyihuanjing{tuilun}% 推论
 
 
 % 确保 有行内公式 的行，与其上、下行之间，有足够的行距
